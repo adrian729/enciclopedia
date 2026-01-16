@@ -1,47 +1,51 @@
-<!-- vscode-markdown-toc -->
-* 1. [Recognizing systems](#Recognizingsystems)
-	* 1.1. [Distributed Systems](#DistributedSystems)
-	* 1.2. [Common System Components](#CommonSystemComponents)
-* 2. [Requirements](#Requirements)
-	* 2.1. [Core elements](#Coreelements)
-		* 2.1.1. [Example: TODO app Requirements](#Example:TODOappRequirements)
-		* 2.1.2. [Strategy](#Strategy)
-		* 2.1.3. [Functional Requirements](#FunctionalRequirements)
-		* 2.1.4. [CAP Theorem](#CAPTheorem)
-		* 2.1.5. [System Quality](#SystemQuality)
-		* 2.1.6. [Non-Functional Requirements](#Non-FunctionalRequirements)
-* 3. [Modeling](#Modeling)
-	* 3.1. [TODO App Modeling](#TODOAppModeling)
-* 4. [Protocols](#Protocols)
-	* 4.1. [HTTP](#HTTP)
-		* 4.1.1. [Characteristics](#Characteristics)
-		* 4.1.2. [Common Use Cases](#CommonUseCases)
-	* 4.2. [WebSockets](#WebSockets)
-		* 4.2.1. [Characteristics](#Characteristics-1)
-		* 4.2.2. [Common Use Cases](#CommonUseCases-1)
-	* 4.3. [Server-Sent Events](#Server-SentEvents)
-		* 4.3.1. [Characteristics](#Characteristics-1)
-		* 4.3.2. [Common Use Cases](#CommonUseCases-1)
-	* 4.4. [gRPC](#gRPC)
-		* 4.4.1. [Characteristics](#Characteristics-1)
-		* 4.4.2. [Common Use Cases](#CommonUseCases-1)
-	* 4.5. [REST](#REST)
-		* 4.5.1. [Characteristics](#Characteristics-1)
-		* 4.5.2. [Common Use Cases](#CommonUseCases-1)
-	* 4.6. [GraphQL](#GraphQL)
-		* 4.6.1. [Characteristics](#Characteristics-1)
-		* 4.6.2. [Common Use Cases](#CommonUseCases-1)
-	* 4.7. [Protocol Cheat Sheet](#ProtocolCheatSheet)
+# System Design
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
+## Table of contents
 
-# <a name='SystemDesign'></a>system-design
+* [1. Recognizing systems](#1-recognizing-systems)
+    * [1.1. Distributed Systems](#11-distributed-systems)
+    * [1.2. Common System Components](#12-common-system-components)
+* [2. Requirements](#2-requirements)
+    * [2.1. Core elements](#21-core-elements)
+        * [2.1.1. Example: TODO app Requirements](#211-example-todo-app-requirements)
+        * [2.1.2. Strategy](#212-strategy)
+        * [2.1.3. Functional Requirements](#213-functional-requirements)
+            * [TODO App Functional Requirements](#todo-app-functional-requirements)
+        * [2.1.4. CAP Theorem](#214-cap-theorem)
+            * [Quality](#quality)
+            * [CAP Theorem Problem](#cap-theorem-problem)
+            * [Trade-offs](#trade-offs)
+            * [Scenarios](#scenarios)
+            * [Takeaways](#takeaways)
+        * [2.1.5. System Quality](#215-system-quality)
+        * [2.1.6. Non-Functional Requirements](#216-non-functional-requirements)
+            * [Key Metrics / Requirements](#key-metrics--requirements)
+            * [TODO App Non-Functional Requirements](#todo-app-non-functional-requirements)
+* [3. Modeling](#3-modeling)
+    * [3.1. TODO App Modeling](#31-todo-app-modeling)
+* [4. Protocols](#4-protocols)
+    * [4.1. HTTP](#41-http)
+        * [4.1.1. Characteristics](#411-characteristics)
+        * [4.1.2. Common Use Cases](#412-common-use-cases)
+    * [4.2. WebSockets](#42-websockets)
+        * [4.2.1. Characteristics](#421-characteristics)
+        * [4.2.2. Common Use Cases](#422-common-use-cases)
+    * [4.3. Server-Sent Events](#43-server-sent-events)
+        * [4.3.1. Characteristics](#431-characteristics)
+        * [4.3.2. Common Use Cases](#432-common-use-cases)
+    * [4.4. gRPC](#44-grpc)
+        * [4.4.1. Characteristics](#441-characteristics)
+        * [4.4.2. Common Use Cases](#442-common-use-cases)
+    * [4.5. REST](#45-rest)
+        * [4.5.1. Characteristics](#451-characteristics)
+        * [4.5.2. Common Use Cases](#452-common-use-cases)
+    * [4.6. GraphQL](#46-graphql)
+        * [4.6.1. Characteristics](#461-characteristics)
+        * [4.6.2. Common Use Cases](#462-common-use-cases)
+    * [4.7. Protocol Cheat Sheet](#47-protocol-cheat-sheet)
+* [Questions / things to check](#questions--things-to-check)
 
-##  1. <a name='Recognizingsystems'></a>Recognizing systems
+##  1. Recognizing systems
 
 - Breaking down system design problem into steps
     - Understanding what the stakeholders need to know 
@@ -55,13 +59,13 @@
 
 Important to make sure the requirements and scope (boundaries) are clear and well defined
 
-###  1.1. <a name='DistributedSystems'></a>Distributed Systems
+###  1.1. Distributed Systems
 
 - Components separated
 - Need to work together
 - Design needs to handle **failure** and **scale** across multiple locations
 
-###  1.2. <a name='CommonSystemComponents'></a>Common System Components
+###  1.2. Common System Components
 
 - **Client**: sends requests, displays data to users
 - **Database**: stores, updates, and retrieves data
@@ -70,16 +74,16 @@ Important to make sure the requirements and scope (boundaries) are clear and wel
 - **Cache**: makes things faster by temp storing data
 
 
-##  2. <a name='Requirements'></a>Requirements
+##  2. Requirements
 
-###  2.1. <a name='Coreelements'></a>Core elements
+###  2.1. Core elements
 
 - Translating business requirements
     - What are we trying to solve?
 - Designing API and architecture
 - Understanding technology and trade-offs
 
-####  2.1.1. <a name='Example:TODOappRequirements'></a>Example: TODO app Requirements
+####  2.1.1. Example: TODO app Requirements
 
     - create todo
     - read todo
@@ -90,13 +94,13 @@ Important to make sure the requirements and scope (boundaries) are clear and wel
     - Is it for myself? For several users?
     - Do we need persisting data or it's just for the moment?
 
-####  2.1.2. <a name='Strategy'></a>Strategy
+####  2.1.2. Strategy
 
 1. Scope the problem (REALLY IMPORTANT!)
 2. Design the high-level architecture
 3. Address key challenges and trade-offs (Details)
 
-####  2.1.3. <a name='FunctionalRequirements'></a>Functional Requirements
+####  2.1.3. Functional Requirements
 
 Describes WHAT the system should do.
 
@@ -125,7 +129,7 @@ Describes WHAT the system should do.
 - ~~... sharing a list~~ (maybe not this one, adds a lot of complexity)
 - ... create account and login with email and password
 
-####  2.1.4. <a name='CAPTheorem'></a>CAP Theorem
+####  2.1.4. CAP Theorem
 
 CAP theorem is about distributive systems and trade-offs you make
 
@@ -174,7 +178,7 @@ Any distributed system can only `guarantee` 2 out of the 3 -  `C` `A` `P` - at t
     - Always available
 - No perfect system exists, trade-offs are necessary
 
-####  2.1.5. <a name='SystemQuality'></a>System Quality
+####  2.1.5. System Quality
 
 - Reliability
     - Availability
@@ -185,7 +189,7 @@ Any distributed system can only `guarantee` 2 out of the 3 -  `C` `A` `P` - at t
 - Scalability
 - 
 
-####  2.1.6. <a name='Non-FunctionalRequirements'></a>Non-Functional Requirements
+####  2.1.6. Non-Functional Requirements
 
 Describe HOW the system should behave/perform.
 
@@ -218,14 +222,14 @@ Describe HOW the system should behave/perform.
 - The system must support a total of 1000 registered users, and 10 concurrent users
 - All user data must be transmitted over HTTPS
 
-##  3. <a name='Modeling'></a>Modeling
+##  3. Modeling
 
 1. `Requirements`: functional / non-functional
 2. `Entity Modeling`: define the main functional elements
 3. `API Design`: define the actions and operations of the system
 4. `Endpoints (Optional)`: 
 
-###  3.1. <a name='TODOAppModeling'></a>TODO App Modeling
+###  3.1. TODO App Modeling
 
 1. `Requirements`
     - Tasks can be only text
@@ -260,102 +264,102 @@ Describe HOW the system should behave/perform.
 3. `API`
 
 
-##  4. <a name='Protocols'></a>Protocols
+##  4. Protocols
 
-###  4.1. <a name='HTTP'></a>HTTP
+###  4.1. HTTP
 
 `H`yper`T`ext `T`ransport `P`rotocol
 
-####  4.1.1. <a name='Characteristics'></a>Characteristics
+####  4.1.1. Characteristics
 
 - simple
 - human readable
 - supported by all browsers
 - stateless
 
-####  4.1.2. <a name='CommonUseCases'></a>Common Use Cases
+####  4.1.2. Common Use Cases
 
 - Web Browsers
 
-###  4.2. <a name='WebSockets'></a>WebSockets
+###  4.2. WebSockets
 
-####  4.2.1. <a name='Characteristics-1'></a>Characteristics
+####  4.2.1. Characteristics
 
 - bi-directional communication
 - persistent connection
 - low-latency
 - stateful
 
-####  4.2.2. <a name='CommonUseCases-1'></a>Common Use Cases
+####  4.2.2. Common Use Cases
 
 - chat apps
 - live dashboards
 - collaborative editing
 
-###  4.3. <a name='Server-SentEvents'></a>Server-Sent Events 
+###  4.3. Server-Sent Events 
 
-####  4.3.1. <a name='Characteristics-1'></a>Characteristics
+####  4.3.1. Characteristics
 
 - one-way communication (server to client)
 - human readable
 
-####  4.3.2. <a name='CommonUseCases-1'></a>Common Use Cases
+####  4.3.2. Common Use Cases
 
 - news feeds
 - status updates
 - stock tickers
 
-###  4.4. <a name='gRPC'></a>gRPC
+###  4.4. gRPC
 
 `R`emote `P`rocedure `C`all
 
-####  4.4.1. <a name='Characteristics-1'></a>Characteristics
+####  4.4.1. Characteristics
 
 - binary protocol (HTTP/2)
 - strongly-typed contracts (proto buffs)
 - requires code generation
 
-####  4.4.2. <a name='CommonUseCases-1'></a>Common Use Cases
+####  4.4.2. Common Use Cases
 
 - microservice communication
 - performance critical systems
 - IoT devices
 
-###  4.5. <a name='REST'></a>REST
+###  4.5. REST
 
 `RE`presentational `S`tate `T`ransfer
 
-####  4.5.1. <a name='Characteristics-1'></a>Characteristics
+####  4.5.1. Characteristics
 
 - multiple endpoints
 - human readable
 - supported by all browsers
 - stateless
 
-####  4.5.2. <a name='CommonUseCases-1'></a>Common Use Cases
+####  4.5.2. Common Use Cases
 
 - single-sources of data
 - CRUD apps
 - easily cached data
 
-###  4.6. <a name='GraphQL'></a>GraphQL
+###  4.6. GraphQL
 
 `Graph` `Q`uery `L`anguage
 
-####  4.6.1. <a name='Characteristics-1'></a>Characteristics
+####  4.6.1. Characteristics
 
 - single endpoint
 - precise data retrieval
 - self-documenting API
 - strongly typed
 
-####  4.6.2. <a name='CommonUseCases-1'></a>Common Use Cases
+####  4.6.2. Common Use Cases
 
 - complex or multiple sources of data (Facebook Homepage)
 - apps supporting multiple client types
 - decoupling FE from BE development
 
-###  4.7. <a name='ProtocolCheatSheet'></a>Protocol Cheat Sheet
+###  4.7. Protocol Cheat Sheet
 
 Advice on chosing the proper protocol
 
