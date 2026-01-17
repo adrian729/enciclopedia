@@ -1,5 +1,15 @@
 # Category Theory
 
+## Table of contents
+
+- [1. What is a Category?](#1-what-is-a-category)
+  - [1.1. Abstraction](#11-abstraction)
+  - [1.2. Category](#12-category)
+  - [1.3. Composition](#13-composition)
+  - [1.4. Identity](#14-identity)
+  - [1.5. Associativity](#15-associativity)
+  - [1.6. Example: category theory in programming](#16-example-category-theory-in-programming)
+
 ## 1. What is a Category?
 
 ### 1.1. Abstraction
@@ -94,7 +104,7 @@ We can say that `h∘(g∘f)` and `(h∘g)∘f` are isomorphic
 h∘(g∘f) = (h∘g)∘f = h∘g∘f
 ```
 
-### Category theory in programming
+### 1.6. Example: category theory in programming
 
 An example of category in programming: `types` and `methods`.
 
