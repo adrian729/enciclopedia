@@ -307,7 +307,61 @@ The rules count towards the `context window`! So it's important to include only 
 
 **Use cases**
 
+- Codebase analysis and documentation
+  - _f.e. explain this section of code to me_
+  - _f.e. add JSDoc annotations to @a.tsx and @b.tsx_
+- Codebase-wide chores and maintenance
+  - _f.e. keep comments/naming conventions accross the repo consistent_
+- Predictable bug fixes or design tweaks
+  - _f.e. accessibility audit_
+  - _f.e. adding dark-mode_
 
+**Limitations and considerations**
 
+- They use `Max Mode-compatible` models. So `MORE EXPENSIVE`.
+- Work better with simple tasks.
+- Need to turn off `Privacy Mode`.
+- Can be inconsistent.
+- No official API (**yet**).
+- User not in the loop to provide immediate feedback.
 
+### Model Context Protocol (MCP)
 
+MCP Server is a way to extend the functionality of Large Language Models by connecting them to external services and APIs, allowing them to perform actions like pulling GitHub issues, accessing databases, web scraping, or interacting with tools like Figma and Notion.
+
+- Open standard that enables AI applications to safely and efficiently connect with external tools, data sources, and APIs.
+- Universal _plug-and-play_ framework for AI interaction, reducing the number of integrations needed.
+- Cursor and other tools (f.e. Claude) integrate MCP as a core extensibility mechanism.
+
+**Components**
+
+- **Host** (f.e. Cursor) 
+  - Manage clients
+  - Enforce policies
+  - Present auth prompts
+  - Aggregates context for the LLM
+- **Client** (inside Cursor) 
+  - Establishes and manages stateful, one-to-one session with a specific MCP server. 
+  - Can run multiple instances simultaneously.
+- **Server** (external program) 
+  - Lightweight program acting as standardized wrapper/bridge to an external system (f.e. Git repo, API, filesystem).
+  - Exposes capabilities (functions and data) to an MCP-compliant Client.
+
+**Usage**
+
+- Integrate with Jira/GitHub to pull in stories/issues.
+- Add/manage integration with Postgress or Supabase for db access.
+  - Carefull, you can destroy your database, dropping tables or db instances...
+- Add integration with Playwright, Puppeteer, or Firecrawl so it can drive a browser.
+- Pull in documentation as needed.
+
+**Limitations**
+
+- `Tool limit`: there is a maximum of how many tools you can have installed (context window limitation). Currently ~40.
+- `Context Window Overhead`: each alive MCP connection and its tool description consume tokens in the LLM context window.
+- `Cost`: MCP servers might incur additional costs depending on models and usage.
+
+**Examples**
+
+- [Github MCP Server](https://github.com/github/github-mcp-server)
+- [Context7 MCP Server](https://github.com/upstash/context7) - Up-to-date Code Docs For Any Prompt
