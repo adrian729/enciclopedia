@@ -1,6 +1,6 @@
 # Category Theory
 
-## Table of contents
+## Table of Contents
 
 - [1. What is a Category?](#1-what-is-a-category)
   - [1.1. Abstraction](#11-abstraction)

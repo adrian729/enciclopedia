@@ -1,6 +1,6 @@
 # AI Tools
 
-## Table Of Contents
+## Table of Contents
 
 - [1. The Tools](#1-the-tools)
   - [1.1 Cursor](#11-cursor)
@@ -295,4 +295,19 @@ The rules count towards the `context window`! So it's important to include only 
 
 ### 3.7 Background Agents
 
-...
+`Asynchronous remote agents` in Cursor operate in a remote environment, allowing to spawn tasks that edit and run code independently in the background.
+
+**How?**
+
+- `Clone the repository` and work on a `separate branch`.
+- Work `without` direct `supervision`.
+- Generates a `pull request`.
+- `Remote access`: you can access and check on them via the `progressive web application`.
+- `Parallel processing`: you can have multiple background agents running simultaneously.
+
+**Use cases**
+
+
+
+
+
