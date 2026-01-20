@@ -9,6 +9,11 @@
   - [1.4. Identity](#14-identity)
   - [1.5. Associativity](#15-associativity)
   - [1.6. Example: category theory in programming](#16-example-category-theory-in-programming)
+- [2. Functions](#2-functions)
+  - [2.1. What are functions?](#21-what-are-functions)
+  - [2.2. Functions in Category Theory](#22-functions-in-category-theory)
+    - [2.2.1. Epic Morphisms: Epimorphism](#221-epic-morphisms-epimorphism)
+    - [2.2.2. Monic Morphisms: Monomorphism](#222-monic-morphisms-monomorphism)
 
 ## 1. What is a Category?
 
@@ -116,7 +121,7 @@ When working with category theory, we need to forget the properties of sets and 
 
 ## 2. Functions
 
-### 2.1 What are functions?
+### 2.1. What are functions?
 
 (We will start focusing on mapping sets into each other to make it easier).
 
@@ -186,9 +191,9 @@ So, if a function is `injective` and `surjective`, it is an `isomorphism` (anoth
 
 This definitions work with sets. The issue is that in `category theory` we can't talk in terms of the elements of a category to define its properties!
 
-### 2.2 Functions in Category Theory
+### 2.2. Functions in Category Theory
 
-#### Epic Morphisms: Epimorphism
+#### 2.2.1. Epic Morphisms: Epimorphism
 
 Having `f :: a -> b` and `g :: b -> c`,
 
@@ -203,7 +208,7 @@ then <code>g<sub>1</sub> = g<sub>2</sub></code>
 Analog to `surjective` functions for category theory.
 
 
-#### Monic Morphisms: Monomorphism
+#### 2.2.2. Monic Morphisms: Monomorphism
 
 ---
 
