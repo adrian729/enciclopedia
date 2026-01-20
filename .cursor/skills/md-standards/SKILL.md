@@ -18,5 +18,5 @@ alwaysApply: false
 - **H5+ (Details):** No numbering. Exclude from TOC.
 - **TOC Specs:**
   - Section: `## Table of Contents` (self-exclude) directly after H1.
-  - Links: Use `[Title](#slug)` format.
+  - Links: Use `[Number. Title](#slug)` format (e.g., `[1.1. Title](#11-title)`).
   
