@@ -214,7 +214,7 @@ Having `f :: a -> b` and `h :: z -> a`
 
 For all objects `z` and all morphisms <code>h<sub>1</sub></code>, <code>h<sub>2</sub> :: z -> a</code>,
 
-if <code>f∘h<sub>1</sub> = f∘g<sub>2</sub></code>,
+if <code>f∘h<sub>1</sub> = f∘h<sub>2</sub></code>,
 
 then <code>h<sub>1</sub> = h<sub>2</sub></code>
 
