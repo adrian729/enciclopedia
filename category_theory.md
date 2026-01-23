@@ -197,7 +197,7 @@ This definitions work with sets. The issue is that in `category theory` we can't
 
 Having `f :: a -> b` and `g :: b -> c`,
 
-If for all objects `c` and all morphisms <code>g<sub>1</sub></code>, <code>g<sub>2</sub> :: b -> c</code>
+For all objects `c` and all morphisms <code>g<sub>1</sub></code>, <code>g<sub>2</sub> :: b -> c</code>,
 
 if <code>g<sub>1</sub>∘f = g<sub>2</sub>∘f</code>,
 
@@ -210,7 +210,32 @@ Analog to `surjective` functions for category theory.
 
 #### 2.2.2. Monic Morphisms: Monomorphism
 
+Having `f :: a -> b` and `h :: z -> a`
+
+For all objects `z` and all morphisms <code>h<sub>1</sub></code>, <code>h<sub>2</sub> :: z -> a</code>,
+
+if <code>f∘h<sub>1</sub> = f∘g<sub>2</sub></code>,
+
+then <code>h<sub>1</sub> = h<sub>2</sub></code>
+
 ---
 
 Analog to `injective` functions for category theory.
 
+#### Disclaimer: isomorphism in category theory
+
+For sets, if a function is `injective` and `surjective`, then we can say it is an `isomorphism`.
+
+The same can't be said for a category if it is a `monomorphism` and an `epimorphism`!
+
+That is not enough to say it is an `isomorphism`!
+
+#### Haskell objects and function examples
+
+- `void`: type in haskell that represents _nothing_
+- `absurd :: void -> a`
+- `unit`: `() :: ()` in haskell.
+- `unit :: a -> ()`: haskell unit function (gets anything, returns unit).
+- `() -> a`: since it's pure functions, for each element `a` we need a different function.
+  - f.e. `one :: () -> 1`, `two :: () -> 2`, `three :: () -> 3`, etc..
+  - f.e. `True :: () -> true`, `False :: () -> false`
