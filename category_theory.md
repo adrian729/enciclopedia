@@ -14,6 +14,16 @@
   - [2.2. Functions in Category Theory](#22-functions-in-category-theory)
     - [2.2.1. Epic Morphisms: Epimorphism](#221-epic-morphisms-epimorphism)
     - [2.2.2. Monic Morphisms: Monomorphism](#222-monic-morphisms-monomorphism)
+    - [2.2.3. Disclaimer: isomorphism in category theory](#223-disclaimer-isomorphism-in-category-theory)
+    - [2.2.4. Haskell objects and function examples](#224-haskell-objects-and-function-examples)
+- [3. Categories](#3-categories)
+  - [3.1. Zero](#31-zero)
+  - [3.2. One object](#32-one-object)
+  - [3.3. Graph (more objects)](#33-graph-more-objects)
+  - [3.4. Orders](#34-orders)
+    - [3.4.1. Pre-Order](#341-pre-order)
+    - [3.4.2. Partial-Order](#342-partial-order)
+    - [3.4.3. Total-Order](#343-total-order)
 
 ## 1. What is a Category?
 
@@ -222,7 +232,7 @@ then <code>h<sub>1</sub> = h<sub>2</sub></code>
 
 Analog to `injective` functions for category theory.
 
-#### Disclaimer: isomorphism in category theory
+#### 2.2.3. Disclaimer: isomorphism in category theory
 
 For sets, if a function is `injective` and `surjective`, then we can say it is an `isomorphism`.
 
@@ -230,7 +240,7 @@ The same can't be said for a category if it is a `monomorphism` and an `epimorph
 
 That is not enough to say it is an `isomorphism`!
 
-#### Haskell objects and function examples
+#### 2.2.4. Haskell objects and function examples
 
 - `void`: type in haskell that represents _nothing_
 - `absurd :: void -> a`
@@ -239,3 +249,74 @@ That is not enough to say it is an `isomorphism`!
 - `() -> a`: since it's pure functions, for each element `a` we need a different function.
   - f.e. `one :: () -> 1`, `two :: () -> 2`, `three :: () -> 3`, etc..
   - f.e. `True :: () -> true`, `False :: () -> false`
+
+## 3. Categories
+
+### 3.1. Zero
+
+Category with no objects.
+
+It fulfills the conditions because "for every pair of objects there is an arrow", since there are no objects (or arrows) it fullfils.
+
+### 3.2. One object
+
+Category with one object.
+
+Will have a single object, and a single arrow, the identity `Id: a -> a`.
+
+### 3.3. Graph (more objects)
+
+After one object, we can start adding objects and arrows.
+
+But is any graph a category? No it is not, but we can transform any graph into a category by adding arrows:
+
+1. Add the `Identity` arrows for each object.
+2. Adding composition arrows:
+<br>
+If we have `f: a -> b` and `g: b -> c`,
+<br>
+there should exist an arrow `g∘f: a -> c`
+3. Adding the composition arrows of the compositions we just added (and keep going for the new arrows generated, until all compositions are satisfied).
+
+With this we create a `free category` from the graph (only following the rules to satisfy the definition of category).
+
+### 3.4. Orders
+
+In a category that is an order, arrows don't represent functions, they represent relations.
+
+`f: a -> b` means `a` less or equal to `b`, `a ≤ b`
+
+Depending on which conditions they fulfill we can have different types of order.
+
+#### 3.4.1. Pre-Order
+
+Order that satisfies just the minimum of conditons:
+
+**Reflexibity**
+
+`a ≤ a` (Identity)
+
+**Composition**
+
+So if `a ≤ b` and `b ≤ c`,
+<br>
+then `a ≤ c`
+
+**Associativity**
+
+If `a ≤ b`, `b ≤ c`, and `c ≤ d`,
+<br>
+then `(a ≤ b) ≤ c` is the same as `a ≤ (b ≤ c)`
+
+A `pre-order` is the same as a `thin category`.
+
+The set of arrows between any two objects is called the `hom-set`.
+
+It's a set of arrows. A `thin category` is one in which every `hom-set` is either an `empty set` or a `singleton set`.
+
+
+#### 3.4.2. Partial-Order
+
+
+#### 3.4.3. Total-Order
+
