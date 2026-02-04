@@ -24,8 +24,8 @@ How can we:
 
 What we will be doing most of the time is:
 
-1. Deciding a `chunck` size.
-2. Read and send one `chunck` at a time, until we are finished with the file.
+1. Deciding a `chunk` size.
+2. Read and send one `chunk` at a time, until we are finished with the file.
 3. Close / free the file so others can interact with it!
 
 ### 1.2. Reading from the internet
@@ -34,7 +34,7 @@ The file reading example is similar to how an internet connection will work.
 
 A file represents some contiguous `piece` of data. An internet connection is also a contiguous `stream` of data!
 
-The difference is, working with a file, we determine how much you read from the file. A connection in the other hand `pushes` data towards you.
+The difference is, working with a file, we determine how much you read from the file. A connection on the other hand `pushes` data towards you.
 
 - You `pull` data from a file.
 - An internet connection `pushes` data towards you.
@@ -43,7 +43,7 @@ The difference is, working with a file, we determine how much you read from the 
 
 A protocol is a `design` or `spec` for one computer or device to communicate to another.
 
-It descrives how you break down the data, how exactly is it formatted, the header packets, etc... so that the other side can re-construct messages sent across the wire.
+It describes how you break down the data, how exactly is it formatted, the header packets, etc... so that the other side can re-construct messages sent across the wire.
 
 ### 1.4. Transmission Control Protocol (TCP)
 
@@ -59,9 +59,9 @@ Having 8 packets `[1, 2, 3, 4, 5, 6, 7, 9]`, with TCP we would have a `sliding w
 
 Let's pretend we have a sliding window of 4.
 
-1. `[1, 2, 3, 4]` <- 4 packets in the `sliding window` can be sent to destination.
-2. `1` will be sent. When the receiver needs to send an acknowledgement (ACK).
-3. When the `ACK` for packet `1` is received by the sender, the `sliding window` can proceed further [2, 3, 4, 5], so now packet `5` can also be send.
+1. `[1, 2, 3, 4]` ← 4 packets in the `sliding window` can be sent to destination.
+2. Packet `1` is sent; the receiver then sends an acknowledgement (ACK).
+3. When the `ACK` for packet `1` is received by the sender, the `sliding window` can advance to [2, 3, 4, 5], so packet `5` can also be sent.
 
 This is how TCP is in order and reliable:
 
