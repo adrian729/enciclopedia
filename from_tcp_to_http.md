@@ -55,7 +55,7 @@ When data is sent over a network, it is sent in [packets](https://en.wikipedia.o
 
 **TCP example**
 
-Having 8 packets `[1, 2, 3, 4, 5, 6, 7, 9]`, with TCP we would have a `sliding window` that will contain how many packets can we have out in flight at one time.
+Having 8 packets `[1, 2, 3, 4, 5, 6, 7, 8]`, with TCP we would have a `sliding window` that will contain how many packets can we have out in flight at one time.
 
 Let's pretend we have a sliding window of 4.
 
@@ -82,17 +82,17 @@ User Datagram Protocol (UDP) is often compared to TCP, as they are both transpor
 
 TCP establishes a connection between sender and receiver with a [handshake](https://en.wikipedia.org/wiki/Handshake_(computing)), and ensures that all the data is sent in order. UDP yeets the data to the receiver and hopes they can make sense of it.
 
-UDP is faster, but also a lot more complex. You need to decide:
+UDP is faster, but also a lot more complex if you need reliability. You need to decide:
 
 - How to break up the data.
 - How to organize it.
 - How to reconstruct it at destination.
-- How does the receiver know it's missing a packet and send a `NACK` so that the sender sends it again.
+- How the receiver detects missing packets and requests retransmission (e.g., sending a `NACK`), since UDP doesn't do this for you.
 
 That's the same reason it is more performant:
 
 - With TCP we need to wait for ACK to continue sending data.
-- With UDP we can just send all at once and only care when we get a `NACK` back.
+- With raw UDP we can just send all at once without waiting for acknowledgement.
 
 ## 2. HTTP
 
