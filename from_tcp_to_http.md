@@ -96,3 +96,93 @@ That's the same reason it is more performant:
 
 ## 2. HTTP
 
+### HTTP vs TCP
+
+- **TCP** ensures reliable, ordered delivery of bytes between two endpoints, but it doesn't describe what those bytes represent.
+- **HTTP** (HyperText Transfer Protocol) is an application layer protocol that defines how messages are formatted and transmitted, as well as how web servers and browsers should respond. It allows you to specify the *type* and *purpose* of the data (e.g., JSON, HTML, images).
+
+### What makes up an HTTP request?
+
+An HTTP request wraps data into a structured message with standardized sections:
+
+- **Host**: The intended destination server (e.g., `example.com`).
+- **Path/Resource**: The specific resource requested (e.g., `/activities`, `/cats`).
+- **Method**: The desired action (`GET`, `POST`, etc.).
+- **Headers**: Key-value pairs that provide metadata (e.g., `Accept`, `Content-Type`).
+- **Body**: The actual content sent (mainly with `POST`, `PUT`, etc.).
+
+This structure provides context and allows versatile communication over the simple byte stream that TCP provides.
+
+### HTTP/1.1
+
+- **RFC 9110**: Specifies the semantics of HTTP (applies to all versions, including HTTP/1.1).
+- **RFC 9112**: Defines the specifics of the HTTP/1.1 protocol, including how messages are formatted and transmitted over TCP.
+
+### Structure of an HTTP Message
+
+An HTTP message consists of:
+
+```
+METHOD /resource-path HTTP/version\r\n
+Header-Name: value\r\n
+Header-Name: value\r\n
+...\r\n
+\r\n
+[optional body]
+```
+
+- **Request line:** The HTTP method, path, and protocol version.
+- **Headers:** Each line is a key-value pair with metadata about the request.
+- **Blank line:** Separates headers from the optional body.
+- **Body:** The actual data sent with the request (common in POST/PUT).
+
+#### Indicating the Body Length
+
+HTTP uses two primary ways to signal the body size:
+
+- **Content-Length:** Exact number of bytes in the body.
+- **Transfer-Encoding: chunked:** Body is sent in pieces (“chunks”), each preceded by its length in hex.
+
+**Example: Fixed Content-Length**
+
+```
+POST /cats HTTP/1.1\r\n
+Host: meowtown.cat\r\n
+User-Agent: MysticOwl/3.14\r\n
+Accept: application/json\r\n
+Content-Length: 122\r\n
+\r\n
+{
+    "observer": "Whisker Watcher",
+    "favourite_breed": "Maine Coon",
+    "location": "Sunlit Window",
+    "status": "Curled up, judging you"
+}
+```
+
+**Example: Chunked Transfer-Encoding**
+
+```
+POST /cats HTTP/1.1\r\n
+Host: meowtown.cat\r\n
+User-Agent: MysticOwl/3.14\r\n
+Accept: application/json\r\n
+Transfer-Encoding: chunked\r\n
+\r\n
+1F\r\n
+{\r\n
+14\r\n
+    "observer": "Whisker Watcher",\r\n
+16\r\n
+    "favourite_breed": "Maine Coon",\r\n
+15\r\n
+    "location": "Sunlit Window",\r\n
+1D\r\n
+    "status": "Curled up, judging you"\r\n
+0\r\n
+}\r\n
+\r\n
+```
+
+- Each chunk starts with its hexadecimal length, then the data, ending with `\r\n`.
+- Final chunk is `0\r\n`.
