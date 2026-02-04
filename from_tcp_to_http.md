@@ -136,6 +136,8 @@ Header-Name: value\r\n
 - **Blank line:** Separates headers from the optional body.
 - **Body:** The actual data sent with the request (common in POST/PUT).
 
+> **Note:** `CRLF` (`\r\n`) is used to separate lines, as required by the HTTP specification.
+
 #### Indicating the Body Length
 
 HTTP uses two primary ways to signal the body size:
