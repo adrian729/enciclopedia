@@ -115,8 +115,10 @@ This structure provides context and allows versatile communication over the simp
 
 ### HTTP/1.1
 
-- **RFC 9110**: Specifies the semantics of HTTP (applies to all versions, including HTTP/1.1).
-- **RFC 9112**: Defines the specifics of the HTTP/1.1 protocol, including how messages are formatted and transmitted over TCP.
+- **RFC 7231**: Defines the semantics and core concepts of HTTP/1.1, covering request methods, status codes, and headers.
+- **RFC 9110**: Specifies HTTP semantics for all major HTTP versions, including message structure and protocol behavior.
+- **RFC 9112**: Covers the HTTP/1.1 protocol specifically—details how messages are composed, handled, and delivered over TCP.
+- **RFC 2616**: The original HTTP/1.1 specification (now obsolete, replaced by RFC 7230–7235 and RFC 9110/9112), but still referenced in legacy documents for historical context.
 
 ### Structure of an HTTP Message
 
@@ -188,3 +190,19 @@ Transfer-Encoding: chunked\r\n
 
 - Each chunk starts with its hexadecimal length, then the data, ending with `\r\n`.
 - Final chunk is `0\r\n`.
+
+### cURL
+
+Command-line tool to send HTTP requests and see responses.
+
+```bash
+curl -v -X POST https://meowtown.cat/cats \
+  -H "Content-Type: application/json" \
+  -d '{"observer": "Whisker Watcher"}'
+```
+
+- `-v`: Verbose (see raw request/response)
+- `-X`: HTTP Method
+- `-H`: Header
+- `-d`: Data body
+
