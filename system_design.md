@@ -351,7 +351,7 @@ Describe HOW the system should behave/perform.
 - apps supporting multiple client types
 - decoupling FE from BE development
 
-###  4.7. Protocol Cheat Sheet
+### 4.7. Protocol Cheat Sheet
 
 Advice on chosing the proper protocol
 

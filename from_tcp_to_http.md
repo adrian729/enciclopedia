@@ -9,6 +9,12 @@
   - [1.4. Transmission Control Protocol (TCP)](#14-transmission-control-protocol-tcp)
   - [1.5. TCP vs UDP](#15-tcp-vs-udp)
 - [2. HTTP](#2-http)
+  - [2.1. HTTP vs TCP](#21-http-vs-tcp)
+  - [2.2. What makes up an HTTP request?](#22-what-makes-up-an-http-request)
+  - [2.3. HTTP/1.1](#23-http11)
+  - [2.4. Structure of an HTTP Message](#24-structure-of-an-http-message)
+    - [2.4.1. Indicating the Body Length](#241-indicating-the-body-length)
+  - [2.5. cURL](#25-curl)
 
 
 ## 1. TCP
@@ -96,12 +102,12 @@ That's the same reason it is more performant:
 
 ## 2. HTTP
 
-### HTTP vs TCP
+### 2.1. HTTP vs TCP
 
 - **TCP** ensures reliable, ordered delivery of bytes between two endpoints, but it doesn't describe what those bytes represent.
 - **HTTP** (HyperText Transfer Protocol) is an application layer protocol that defines how messages are formatted and transmitted, as well as how web servers and browsers should respond. It allows you to specify the *type* and *purpose* of the data (e.g., JSON, HTML, images).
 
-### What makes up an HTTP request?
+### 2.2. What makes up an HTTP request?
 
 An HTTP request wraps data into a structured message with standardized sections:
 
@@ -113,14 +119,14 @@ An HTTP request wraps data into a structured message with standardized sections:
 
 This structure provides context and allows versatile communication over the simple byte stream that TCP provides.
 
-### HTTP/1.1
+### 2.3. HTTP/1.1
 
 - **RFC 7231**: Defines the semantics and core concepts of HTTP/1.1, covering request methods, status codes, and headers.
 - **RFC 9110**: Specifies HTTP semantics for all major HTTP versions, including message structure and protocol behavior.
 - **RFC 9112**: Covers the HTTP/1.1 protocol specifically—details how messages are composed, handled, and delivered over TCP.
 - **RFC 2616**: The original HTTP/1.1 specification (now obsolete, replaced by RFC 7230–7235 and RFC 9110/9112), but still referenced in legacy documents for historical context.
 
-### Structure of an HTTP Message
+### 2.4. Structure of an HTTP Message
 
 An HTTP message consists of:
 
@@ -140,7 +146,7 @@ Header-Name: value\r\n
 
 > **Note:** `CRLF` (`\r\n`) is used to separate lines, as required by the HTTP specification.
 
-#### Indicating the Body Length
+#### 2.4.1. Indicating the Body Length
 
 HTTP uses two primary ways to signal the body size:
 
@@ -191,7 +197,7 @@ Transfer-Encoding: chunked\r\n
 - Each chunk starts with its hexadecimal length, then the data, ending with `\r\n`.
 - Final chunk is `0\r\n`.
 
-### cURL
+### 2.5. cURL
 
 Command-line tool to send HTTP requests and see responses.
 

@@ -9,14 +9,11 @@ alwaysApply: false
 
 # Markdown Standards
 
-## 1. Headers & TOC
-- **H1 (Title):** No numbering. Exclude from TOC.
-- **H2-H4 (Numbered):** Required in TOC. Use hierarchical numbering:
-  - `##` → `1.`
-  - `###` → `1.1.`
-  - `####` → `1.1.1.`
-- **H5+ (Details):** No numbering. Exclude from TOC.
-- **TOC Specs:**
-  - Section: `## Table of Contents` (self-exclude) directly after H1.
-  - Links: Use `[Number. Title](#slug)` format (e.g., `[1.1. Title](#11-title)`).
-  
+## Headers & TOC
+- **H1:** Title only. **No** numbering. **No** TOC.
+- **H2-H4:** Hierarchical numbering (`1.` → `1.1.` → `1.1.1.`).
+- **H5+:** Bold text or simple header. **No** numbering. **No** TOC.
+- **TOC:** Insert `## Table of Contents` after H1. **self-exclude**.
+
+## Example (Strict)
+`### 1.1. My Title` → TOC: `[1.1. My Title](#11-my-title)`
