@@ -164,3 +164,106 @@ word to search for / word to replace it with
 | `:q!`           | Quit without saving         |
 | `:e <filename>` | Open a new file             |
 | `:vsplit`       | Split the screen vertically |
+
+## Registers (`"`)
+
+In Neovim, you have 36+ "Registers." Think of them as Lockers or Slots where you can store text.
+
+If you copy (yank) something, it goes into a specific locker. If you delete something, it goes into another. You can even choose which locker to use manually.
+
+### Formula
+
+`"` + `[Register Name]` + `[Action]`
+
+**Examples**
+| Command    | Action                          |
+| :--------- | :------------------------------ |
+| `"ayw`     | Yank (copy) word to register a  |
+| `"ap`      | Paste from register a           |
+| `"bdd`     | Delete line to register b       |
+
+### Types of Lockers (Registers)
+
+| Locker Name      | Type               | How it behaves                                                                                         |
+| :--------------- | :----------------- | :----------------------------------------------------------------------------------------------------- |
+| `"` (default)    | The Unnamed        | Your "main" clipboard. Most yanks and deletes go here.                                                 |
+| `0`              | The Yank Locker    | Stores the last thing you copied (yanked). It doesn't store deletes!                                   |
+| `1` – `9`        | The History        | Stores your last 9 deletions. `1` is the newest, `9` is the oldest.                                    |
+| `a` – `z`        | Custom Lockers     | Your personal slots. Neovim never touches these; only you can put things here intentionally.           |
+| `*` and `+`      | System Clipboard   | Bridge to the outside world (copying between Neovim and other apps like Chrome or Slack).              |
+| `_`              | Black Hole         | Anything sent here is deleted forever and not saved anywhere (like /dev/null).                         |
+| `%`              | Filename Register  | Contains the name of the current file (`%p` to paste the filename).                                    |
+| `.`              | Last Inserted Text | Contains the last inserted text.                                                                       |
+| `/`              | Last Search        | Contains the last search pattern.                                                                      |
+
+### Check the Lockers (`:reg`)
+
+`:reg` will show all registers and what is stored in them
+
+## Macros
+
+A Macro is like a "Screen Recorder" for your keystrokes. You record a sequence of actions once, and then you can play it back 10, 100, or 1,000 times.
+
+Macros are stored inside registers.
+
+| Step      | Key            | Action                                                    |
+| :-------- | :------------- | :-------------------------------------------------------- |
+| Start     | `q` + [letter] | Start recording into a specific locker (e.g., `qa`).      |
+| Action    | (Do anything)  | Perform your edits, jumps, and searches.                  |
+| Stop      | `q`            | Stop the recording.                                       |
+| Play      | `@` + [letter] | Play the macro stored in that locker.                     |
+| Repeat    | `@@`           | Play the last used macro again.                           |
+
+Macros need to be **repeatable**.
+
+- **BAD**: Using `llll`, this moves 4 characters, if the next line is shorter it won't work.
+- **GOOD**: Using `f(` or `0`.
+| Command    | Action                                |
+| :--------- | :------------------------------------ |
+| `"ayw`     | Yank (copy) word to register `a`      |
+| `"ap`      | Paste from register `a`               |
+| `"bdd`     | Delete line to register `b`           |
+
+#### Register Types
+
+| Register Name      | Type               | Behavior                                                                                              |
+| :----------------- | :---------------- | :---------------------------------------------------------------------------------------------------- |
+| `"` (default)      | Unnamed           | Main clipboard; most yanks and deletes go here                                                        |
+| `0`                | Yank               | Stores *last yanked* text (copies only)                                                               |
+| `1` – `9`          | History            | Last 9 deletions; `1` = newest, `9` = oldest                                                          |
+| `a` – `z`          | Custom             | Only updated *intentionally* by you; Neovim never overrides                                           |
+| `*`, `+`           | System Clipboard   | Shared with other apps: bridges Neovim ↔ OS clipboard                                                 |
+| `_`                | Black Hole         | Like `/dev/null`: text sent here is permanently discarded                                             |
+| `%`                | Filename           | Name of current file (`%p` pastes filename)                                                           |
+| `.`                | Last Inserted      | Last inserted text                                                                                    |
+| `/`                | Last Search        | Last search pattern                                                                                   |
+
+#### Viewing Registers
+
+Use `:reg` (or `:registers`) to list all registers and their current contents.
+
+---
+
+### 2.4. Macros
+
+A **Macro** is like a keystroke recorder. It captures a series of actions, letting you replay them over and over—great for repetitive editing jobs.
+
+Macros are stored in registers.
+
+#### 2.4.1. Macro Workflow
+
+| Step      | Key Sequence        | Description                                 |
+| :-------- | :----------------- | :------------------------------------------ |
+| Start     | `q` + [register]   | Begin recording into a register (e.g. `qa`) |
+| Action    | any keys           | Perform your editing/commands                |
+| Stop      | `q`                | Stop recording                              |
+| Play      | `@` + [register]   | Play macro from a register                   |
+| Repeat    | `@@`               | Play last-used macro again                   |
+
+**Macros should be repeatable:**
+
+- **BAD:** Using `llll` (moves 4 right: fails on short lines)
+- **GOOD:** Use `f(` or `0` (find character or move to start of line)
+
+---
+
