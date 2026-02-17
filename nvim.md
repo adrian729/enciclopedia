@@ -16,6 +16,12 @@
     - [2.1.1. Search](#211-search)
     - [2.1.2. Search & Replace (`:s`)](#212-search--replace-s)
   - [2.2. File Management (system)](#22-file-management-system)
+- [3. Registers (`"`)](#3-registers-)
+  - [3.1. Formula](#31-formula)
+  - [3.2. Types of Lockers (Registers)](#32-types-of-lockers-registers)
+  - [3.3. Check the Lockers (`:reg`)](#33-check-the-lockers-reg)
+- [4. Macros](#4-macros)
+  - [4.1. Macro Workflow](#41-macro-workflow)
 
 ## 1. The Language
 
@@ -206,7 +212,7 @@ A **Macro** is like a "*Screen Recorder*" for your keystrokes. You record a sequ
 
 Macros are stored inside registers.
 
-### 4.1 Macro Workflow
+### 4.1. Macro Workflow
 
 | Step      | Key            | Action                                                    |
 | :-------- | :------------- | :-------------------------------------------------------- |
