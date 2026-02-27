@@ -27,30 +27,30 @@
 
 ### 1.1. Fundamentals
 
-| Key                 | Action              | Context                                        |
-| :------------------ | :------------------ | :--------------------------------------------- |
-| `h`, `j`, `k`, `l` | Left, Down, Up, Right | Home row – basic movement                    |
-| `i`                 | Enter Insert mode   |                                                |
-| `<Esc>`             | Back to Normal mode | Returns to the "command" state                 |
-| `:`                 | Enter Command mode  | Opens prompt at bottom (save/quit/shell, etc.) |
-| `u`                 | Undo                |                                                |
-| `<C-r>`             | Redo                |                                                |
+| Key                | Action                | Context                                        |
+| :----------------- | :-------------------- | :--------------------------------------------- |
+| `h`, `j`, `k`, `l` | Left, Down, Up, Right | Home row – basic movement                      |
+| `i`                | Enter Insert mode     |                                                |
+| `<Esc>`            | Back to Normal mode   | Returns to the "command" state                 |
+| `:`                | Enter Command mode    | Opens prompt at bottom (save/quit/shell, etc.) |
+| `u`                | Undo                  |                                                |
+| `<C-r>`            | Redo                  |                                                |
 
 ### 1.2. Text Objects (nouns)
 
 To identify `what` to change. Combine with operators.
 
-| Key              | Text Object         | Description                                                            |
-| :--------------- | :------------------ | :--------------------------------------------------------------------- |
-| `w` / `W`        | word                | `w`: stops at `.`, `-`, or `_` / `W`: stops at whitespace |
-| `s`              | sentence            | A sentence                                                             |
-| `p`              | paragraph           | A paragraph                                                            |
-| `t`              | tag                 | A tag (like `<div>` in HTML)                                           |
-| `b` / `(` / `)`  | block (parentheses) | Inside parentheses `()`                                                |
-| `B` / `{` / `}`  | block (curly braces)| Inside curly braces `{}`                                               |
-| `"`              | double quotes       | Inside double quotes `"`                                               |
-| `'`              | single quotes       | Inside single quotes `'`                                               |
-| `[` / `]`        | square brackets     | Inside square brackets `[]`                                            |
+| Key             | Text Object          | Description                                               |
+| :-------------- | :------------------- | :-------------------------------------------------------- |
+| `w` / `W`       | word                 | `w`: stops at `.`, `-`, or `_` / `W`: stops at whitespace |
+| `s`             | sentence             | A sentence                                                |
+| `p`             | paragraph            | A paragraph                                               |
+| `t`             | tag                  | A tag (like `<div>` in HTML)                              |
+| `b` / `(` / `)` | block (parentheses)  | Inside parentheses `()`                                   |
+| `B` / `{` / `}` | block (curly braces) | Inside curly braces `{}`                                  |
+| `"`             | double quotes        | Inside double quotes `"`                                  |
+| `'`             | single quotes        | Inside single quotes `'`                                  |
+| `[` / `]`       | square brackets      | Inside square brackets `[]`                               |
 
 #### 1.2.1. Modifiers
 
@@ -73,26 +73,26 @@ Actions to perform on the nouns.
 | `p` | Paste           | Paste after the cursor                                  |
 | `v` | Visual mode     | Highlight text in visual mode                           |
 | `s` | Substitute      | Delete character under the cursor and enter Insert mode |
-| `S` | Substitute line | Delete the whole line and enter Insert mode              |
+| `S` | Substitute line | Delete the whole line and enter Insert mode             |
 | `>` | Indent          | Indent                                                  |
-| `=` | Auto-format     | Auto-format (very useful in 0.11 with LSP/Tree-sitter) |
+| `=` | Auto-format     | Auto-format (very useful in 0.11 with LSP/Tree-sitter)  |
 
 ### 1.4. Navigation
 
 #### 1.4.1. The Jumps
 
-| Keys        | Movement / Action               | Nickname (Mnemonic) |
-| :---------- | :------------------------------ | :------------------ |
-| `l` / `h`   | Move by character              | The Step            |
-| `w` / `b`   | Move by word                   | The Stride          |
-| `(` / `)`   | Move by sentence               | The Leap            |
-| `{` / `}`   | Move by paragraph              | The Flight          |
-| `gg` / `G`  | Move to start/end of file      | The Teleport        |
-| `:[num]`    | Go to line number              | The Elevator        |
-| `0`         | Jump to first character        | Absolute Zero       |
-| `^`         | Jump to first non-blank char   | First Content       |
-| `$`         | Jump to end of line            | The End             |
-| `%`         | Jump between matching brackets | The Bridge          |
+| Keys       | Movement / Action              | Nickname (Mnemonic) |
+| :--------- | :----------------------------- | :------------------ |
+| `l` / `h`  | Move by character              | The Step            |
+| `w` / `b`  | Move by word                   | The Stride          |
+| `(` / `)`  | Move by sentence               | The Leap            |
+| `{` / `}`  | Move by paragraph              | The Flight          |
+| `gg` / `G` | Move to start/end of file      | The Teleport        |
+| `:[num]`   | Go to line number              | The Elevator        |
+| `0`        | Jump to first character        | Absolute Zero       |
+| `^`        | Jump to first non-blank char   | First Content       |
+| `$`        | Jump to end of line            | The End             |
+| `%`        | Jump between matching brackets | The Bridge          |
 
 #### 1.4.2. The Snippers
 
@@ -107,8 +107,8 @@ Actions to perform on the nouns.
 
 ### 1.5. Examples
 
-| Command | Action                         | Common Use Case                                                          |
-| :------ | :----------------------------- | :----------------------------------------------------------------------- |
+| Command | Action                        | Common Use Case                                                          |
+| :------ | :---------------------------- | :----------------------------------------------------------------------- |
 | `dap`   | `D`elete `A`round `P`aragraph | Deletes an entire block of code and the blank line after it.             |
 | `yip`   | `Y`ank `I`nner `P`aragraph    | Copies just the code inside a block without the surrounding empty lines. |
 | `cip`   | `C`hange `I`nner `P`aragraph  | Clears a block of text and starts Insert mode so you can rewrite it.     |
@@ -141,7 +141,7 @@ Actions to perform on the nouns.
 | :--------- | :------------------------------------------------------------------------------------------- |
 | (no range) | Only the line the cursor is currently on.                                                    |
 | `%`        | The entire file (The most common usage).                                                     |
-| `'<,'>`    | The current visual selection (automatically added if you hit `:` while text is highlighted).  |
+| `'<,'>`    | The current visual selection (automatically added if you hit `:` while text is highlighted). |
 | `.`        | Current line (default).                                                                      |
 
 ##### pattern/replacement
@@ -154,7 +154,7 @@ word to search for / word to replace it with
 | :--- | :------------ | :------------------------------------------------------------------------------------------------- | :--------------- |
 | g    | Global        | Replaces all occurrences on a line. Without this, Neovim only replaces the first one it finds.     | `:%s/cat/dog/g`  |
 | c    | Confirm       | Asks for permission before each replacement. Highly recommended to avoid "oops" moments.           | `:%s/cat/dog/gc` |
-| i    | Ignore Case   | Makes the search case-insensitive. Finds "Cat", "CAT", and "cat".                                 | `:%s/cat/dog/gi` |
+| i    | Ignore Case   | Makes the search case-insensitive. Finds "Cat", "CAT", and "cat".                                  | `:%s/cat/dog/gi` |
 | I    | Inert Case    | Forces case-sensitivity. (Usually the default, but useful if you've changed your global settings). | `:%s/cat/dog/gI` |
 | e    | Error silence | Prevents Neovim from showing an "Error: Pattern not found" message if there are no matches.        | `:%s/cat/dog/ge` |
 | n    | Number        | Report only. It tells you how many matches were found but doesn't actually replace anything.       | `:%s/cat/dog/gn` |
@@ -182,25 +182,25 @@ If you copy (yank) something, it goes into a specific locker. If you delete some
 `"` + `[Register Name]` + `[Action]`
 
 **Examples**
-| Command    | Action                          |
+| Command | Action |
 | :--------- | :------------------------------ |
-| `"ayw`     | Yank (copy) word to register a  |
-| `"ap`      | Paste from register a           |
-| `"bdd`     | Delete line to register b       |
+| `"ayw` | Yank (copy) word to register a |
+| `"ap` | Paste from register a |
+| `"bdd` | Delete line to register b |
 
 ### 3.2. Types of Lockers (Registers)
 
-| Locker Name      | Type               | How it behaves                                                                                         |
-| :--------------- | :----------------- | :----------------------------------------------------------------------------------------------------- |
-| `"` (default)    | The Unnamed        | Your "main" clipboard. Most yanks and deletes go here.                                                 |
-| `0`              | The Yank Locker    | Stores the last thing you copied (yanked). It doesn't store deletes!                                   |
-| `1` – `9`        | The History        | Stores your last 9 deletions. `1` is the newest, `9` is the oldest.                                    |
-| `a` – `z`        | Custom Lockers     | Your personal slots. Neovim never touches these; only you can put things here intentionally.           |
-| `*` and `+`      | System Clipboard   | Bridge to the outside world (copying between Neovim and other apps like Chrome or Slack).              |
-| `_`              | Black Hole         | Anything sent here is deleted forever and not saved anywhere (like /dev/null).                         |
-| `%`              | Filename Register  | Contains the name of the current file (`%p` to paste the filename).                                    |
-| `.`              | Last Inserted Text | Contains the last inserted text.                                                                       |
-| `/`              | Last Search        | Contains the last search pattern.                                                                      |
+| Locker Name   | Type               | How it behaves                                                                               |
+| :------------ | :----------------- | :------------------------------------------------------------------------------------------- |
+| `"` (default) | The Unnamed        | Your "main" clipboard. Most yanks and deletes go here.                                       |
+| `0`           | The Yank Locker    | Stores the last thing you copied (yanked). It doesn't store deletes!                         |
+| `1` – `9`     | The History        | Stores your last 9 deletions. `1` is the newest, `9` is the oldest.                          |
+| `a` – `z`     | Custom Lockers     | Your personal slots. Neovim never touches these; only you can put things here intentionally. |
+| `*` and `+`   | System Clipboard   | Bridge to the outside world (copying between Neovim and other apps like Chrome or Slack).    |
+| `_`           | Black Hole         | Anything sent here is deleted forever and not saved anywhere (like /dev/null).               |
+| `%`           | Filename Register  | Contains the name of the current file (`%p` to paste the filename).                          |
+| `.`           | Last Inserted Text | Contains the last inserted text.                                                             |
+| `/`           | Last Search        | Contains the last search pattern.                                                            |
 
 ### 3.3. Check the Lockers (`:reg`)
 
@@ -208,19 +208,19 @@ If you copy (yank) something, it goes into a specific locker. If you delete some
 
 ## 4. Macros
 
-A **Macro** is like a "*Screen Recorder*" for your keystrokes. You record a sequence of actions once, and then you can play it back 10, 100, or 1,000 times.
+A **Macro** is like a "_Screen Recorder_" for your keystrokes. You record a sequence of actions once, and then you can play it back 10, 100, or 1,000 times.
 
 Macros are stored inside registers.
 
 ### 4.1. Macro Workflow
 
-| Step      | Key            | Action                                                    |
-| :-------- | :------------- | :-------------------------------------------------------- |
-| Start     | `q` + [letter] | Start recording into a specific locker (e.g., `qa`).      |
-| Action    | (Do anything)  | Perform your edits, jumps, and searches.                  |
-| Stop      | `q`            | Stop the recording.                                       |
-| Play      | `@` + [letter] | Play the macro stored in that locker.                     |
-| Repeat    | `@@`           | Play the last used macro again.                           |
+| Step   | Key            | Action                                               |
+| :----- | :------------- | :--------------------------------------------------- |
+| Start  | `q` + [letter] | Start recording into a specific locker (e.g., `qa`). |
+| Action | (Do anything)  | Perform your edits, jumps, and searches.             |
+| Stop   | `q`            | Stop the recording.                                  |
+| Play   | `@` + [letter] | Play the macro stored in that locker.                |
+| Repeat | `@@`           | Play the last used macro again.                      |
 
 **Macros should be `repeatable`:**
 

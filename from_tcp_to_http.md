@@ -16,7 +16,6 @@
     - [2.4.1. Indicating the Body Length](#241-indicating-the-body-length)
   - [2.5. cURL](#25-curl)
 
-
 ## 1. TCP
 
 ### 1.1. Reading from a file example
@@ -80,13 +79,13 @@ This is how TCP is in order and reliable:
 User Datagram Protocol (UDP) is often compared to TCP, as they are both transport layer protocols. Here are the high-level differences between the two:
 
 |                | TCP | UDP |
-| :---           | :-- | :-- |
+| :------------- | :-- | :-- |
 | Connection     | Yes | No  |
 | Handshake      | Yes | No  |
 | In Order       | Yes | No  |
 | Blazingly Fast | No  | Yes |
 
-TCP establishes a connection between sender and receiver with a [handshake](https://en.wikipedia.org/wiki/Handshake_(computing)), and ensures that all the data is sent in order. UDP yeets the data to the receiver and hopes they can make sense of it.
+TCP establishes a connection between sender and receiver with a [handshake](<https://en.wikipedia.org/wiki/Handshake_(computing)>), and ensures that all the data is sent in order. UDP yeets the data to the receiver and hopes they can make sense of it.
 
 UDP is faster, but also a lot more complex if you need reliability. You need to decide:
 
@@ -105,7 +104,7 @@ That's the same reason it is more performant:
 ### 2.1. HTTP vs TCP
 
 - **TCP** ensures reliable, ordered delivery of bytes between two endpoints, but it doesn't describe what those bytes represent.
-- **HTTP** (HyperText Transfer Protocol) is an application layer protocol that defines how messages are formatted and transmitted, as well as how web servers and browsers should respond. It allows you to specify the *type* and *purpose* of the data (e.g., JSON, HTML, images).
+- **HTTP** (HyperText Transfer Protocol) is an application layer protocol that defines how messages are formatted and transmitted, as well as how web servers and browsers should respond. It allows you to specify the _type_ and _purpose_ of the data (e.g., JSON, HTML, images).
 
 ### 2.2. What makes up an HTTP request?
 
@@ -211,4 +210,3 @@ curl -v -X POST https://meowtown.cat/cats \
 - `-X`: HTTP Method
 - `-H`: Header
 - `-d`: Data body
-

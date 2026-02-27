@@ -336,15 +336,15 @@ MCP Server is a way to extend the functionality of Large Language Models by conn
 
 **Components**
 
-- **Host** (f.e. Cursor) 
+- **Host** (f.e. Cursor)
   - Manage clients
   - Enforce policies
   - Present auth prompts
   - Aggregates context for the LLM
-- **Client** (inside Cursor) 
-  - Establishes and manages stateful, one-to-one session with a specific MCP server. 
+- **Client** (inside Cursor)
+  - Establishes and manages stateful, one-to-one session with a specific MCP server.
   - Can run multiple instances simultaneously.
-- **Server** (external program) 
+- **Server** (external program)
   - Lightweight program acting as standardized wrapper/bridge to an external system (f.e. Git repo, API, filesystem).
   - Exposes capabilities (functions and data) to an MCP-compliant Client.
 

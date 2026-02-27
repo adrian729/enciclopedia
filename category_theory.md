@@ -24,6 +24,11 @@
     - [3.4.1. Pre-Order](#341-pre-order)
     - [3.4.2. Partial-Order](#342-partial-order)
     - [3.4.3. Total-Order](#343-total-order)
+  - [3.5. Monoid](#35-monoid)
+  - [3.6. Kleisli Category](#36-kleisli-category)
+    - [3.6.1. Arrows: Embellished Functions](#361-arrows-embellished-functions)
+    - [3.6.2. Composition](#362-composition)
+    - [3.6.3. Identity](#363-identity)
 
 ## 1. What is a Category?
 
@@ -150,7 +155,7 @@ Functions are defined in mathematics as special kinds of relations between eleme
 
 `f :: a -> b` is `invertible`
 
-if there exists a function 
+if there exists a function
 
 `g :: b -> a`
 
@@ -173,15 +178,15 @@ An `invertible` function is called an `isomorphism`.
 Reasons some (or most) functions are not `isomorphisms`:
 
 - The function collapses (several elements from the `domain` map to the same element in the `codomain`).
-- Not all elements of the `codomain` are part of the `image` of the `domain` (_the `codomain` is "bigger" than the `domain`_). 
+- Not all elements of the `codomain` are part of the `image` of the `domain` (_the `codomain` is "bigger" than the `domain`_).
 
-___
+---
 
 **Definition: injective function**
 
 If a function does NOT collapse, it is injective.
 
-For all <code>x<sub>1</sub></code> <code>x<sub>2</sub></code>: <code>f x<sub>1</sub> !=  f x<sub>2</sub></code>.
+For all <code>x<sub>1</sub></code> <code>x<sub>2</sub></code>: <code>f x<sub>1</sub> != f x<sub>2</sub></code>.
 
 ---
 
@@ -216,7 +221,6 @@ then <code>g<sub>1</sub> = g<sub>2</sub></code>
 ---
 
 Analog to `surjective` functions for category theory.
-
 
 #### 2.2.2. Monic Morphisms: Monomorphism
 
@@ -272,10 +276,10 @@ But is any graph a category? No it is not, but we can transform any graph into a
 
 1. Add the `Identity` arrows for each object.
 2. Adding composition arrows:
-<br>
-If we have `f: a -> b` and `g: b -> c`,
-<br>
-there should exist an arrow `g∘f: a -> c`
+   <br>
+   If we have `f: a -> b` and `g: b -> c`,
+   <br>
+   there should exist an arrow `g∘f: a -> c`
 3. Adding the composition arrows of the compositions we just added (and keep going for the new arrows generated, until all compositions are satisfied).
 
 With this we create a `free category` from the graph (only following the rules to satisfy the definition of category).
@@ -308,15 +312,97 @@ If `a ≤ b`, `b ≤ c`, and `c ≤ d`,
 <br>
 then `(a ≤ b) ≤ c` is the same as `a ≤ (b ≤ c)`
 
-A `pre-order` is the same as a `thin category`.
+A `category` which is a `pre-order` is called a `thin category`.
+
+---
+
+##### hom-set
 
 The set of arrows between any two objects is called the `hom-set`.
 
-It's a set of arrows. A `thin category` is one in which every `hom-set` is either an `empty set` or a `singleton set`.
+A `thin category` is one in which every `hom-set` is either an `empty set` or a `singleton set`.
 
+A `hom-set` for example from `a` to `b` is represented as `C(a, b)`.
 
 #### 3.4.2. Partial-Order
 
+A `partial-order` is a `pre-order` where there is no _loops_.
 
 #### 3.4.3. Total-Order
 
+A `total-order` is a `partial-order` in which there is an **arrow** between any two **objects**.
+
+#### monomorphisms, epimorphisms, isomorphism!?
+
+In previous sections it was said that `isomorphism` in **category theory** is a bit different than when talking about **sets**.
+
+Having a category that is both a `monomorphism` and an `epimorphism` is not enough.
+
+Now we can show an example!
+
+In a `thin category`, since there aren't any pairs of arrows, we will satisfy both.
+
+But it is not necessarily invertible. And if we have a `partial order`, then definitely it is **not** invertible, we can't have arrows back since we have no loops!
+
+Therefore it will be a `monomorphism` and an `epimorphism`, but not an `isomorphism`!
+
+### 3.5. Monoid
+
+Any category that consists of a `single object` and as many arrows, is called a `monoid`.
+
+A `monoid` will have `reflexibity` (identity), `composition` (single element, all arrows will be composable), and `associativity`.
+
+The `hom-set` of a `monoid` **M** can be represented as `M(m, m)`.
+
+**Examples of monoids**
+
+- Multiplication of integers
+- Addition of integers
+- Concaquenating strings
+- Appending lists
+
+### 3.6. Kleisli Category
+
+A **Kleisli category** is a category based on another existing category (like the category of types and functions in programming), but where the arrows have a special modification or "embellishment".
+
+In our programming example (Section 1.6), we had:
+- **Objects**: Types.
+- **Arrows**: Functions `a -> b`.
+
+In a **Kleisli category**, we keep the same objects, but redefine the arrows and their composition.
+
+#### 3.6.1. Arrows: Embellished Functions
+
+The arrows in a Kleisli category from object `a` to object `b` correspond to functions `a -> M(b)` in the underlying category, where `M` represents some "embellishment" or "wrapper".
+
+**Example: The Writer Category**
+
+Imagine functions that return a value but also write to a log (a string). Strings form a **Monoid** (Section 3.5) with concatenation and an empty string.
+
+- Standard function: `Number -> Number`
+- Embellished function: `Number -> (Number, String)`
+
+Here, the arrow from `Number` to `Number` in the Kleisli category is actually implemented as a function returning a pair.
+
+#### 3.6.2. Composition
+
+Standard function composition (`g ∘ f`) doesn't work because the types don't match.
+
+- `f: a -> (b, String)`
+- `g: b -> (c, String)`
+
+The output of `f` is `(b, String)`, but the input of `g` expects just `b`.
+
+In a Kleisli category, we define a new composition operator (often called the "fish" operator `>=>`) that handles the "wrapping":
+
+1. Execute `f` to get `(b, s1)`.
+2. Pass `b` to `g` to get `(c, s2)`.
+3. Combine the logs (`s1 + s2`) using the Monoid operation (concatenation) and return `(c, s1 + s2)`.
+
+#### 3.6.3. Identity
+
+The identity arrow for an object `a` must be a function `a -> (a, String)` that doesn't change the value and produces an "empty" log (the Monoid identity).
+
+- `id: a -> (a, "")`
+
+This structure (Objects, Embellished Arrows, Special Composition, Identity) forms a valid Category known as the Kleisli Category.
