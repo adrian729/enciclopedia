@@ -24,6 +24,7 @@
     - [3.4.1. Pre-Order](#341-pre-order)
     - [3.4.2. Partial-Order](#342-partial-order)
     - [3.4.3. Total-Order](#343-total-order)
+    - [3.4.4. Epimorphisms, Monomorphisms and Isomorphisms](#344-epimorphisms-monomorphisms-and-isomorphisms)
   - [3.5. Monoid](#35-monoid)
   - [3.6. Kleisli Category](#36-kleisli-category)
     - [3.6.1. Arrows: Embellished Functions](#361-arrows-embellished-functions)
@@ -48,7 +49,7 @@ f: a -> b
 
 ### 1.2. Category
 
-Bunch of `objects`, and for each pair of objects 0 or more `arrows` between one and another or from one object to itself.
+A collection of `objects`, and for each pair of objects 0 or more `arrows` between one and another or from one object to itself.
 
 ### 1.3. Composition
 
@@ -300,7 +301,7 @@ Order that satisfies just the minimum of conditons:
 
 `a ≤ a` (Identity)
 
-**Composition**
+**Composition (Transitivity)**
 
 So if `a ≤ b` and `b ≤ c`,
 <br>
@@ -314,6 +315,14 @@ then `(a ≤ b) ≤ c` is the same as `a ≤ (b ≤ c)`
 
 A `category` which is a `pre-order` is called a `thin category`.
 
+**Definition 2**
+
+`C` is a `pre-order category`
+<br>
+_if, and only if_, for **all** objects `a`, `b` of `C`,
+<br>
+there is **at most** one morphism `f: a -> b`.
+
 ---
 
 ##### hom-set
@@ -326,25 +335,34 @@ A `hom-set` for example from `a` to `b` is represented as `C(a, b)`.
 
 #### 3.4.2. Partial-Order
 
-A `partial-order` is a `pre-order` where there is no _loops_.
+A `partial-order` is a `pre-order` that also satisfies **Antisymmetry**:
+
+If `a ≤ b` and `b ≤ a`, then `a = b`.
+
+This means there are no loops between distinct objects.
 
 #### 3.4.3. Total-Order
 
-A `total-order` is a `partial-order` in which there is an **arrow** between any two **objects**.
+A `total-order` (or _linear order_) is a `partial-order` in which there is an **arrow** between any two objects: every pair of objects is comparable.
 
-#### monomorphisms, epimorphisms, isomorphism!?
+For any two objects `a` and `b`, either `a ≤ b` or `b ≤ a`.
+
+#### 3.4.4. Epimorphisms, Monomorphisms, Isomorphisms!?
 
 In previous sections it was said that `isomorphism` in **category theory** is a bit different than when talking about **sets**.
 
-Having a category that is both a `monomorphism` and an `epimorphism` is not enough.
+Having a morphism that is both `monic` (monomorphism) and `epic` (epimorphism) is not enough to be an `isomorphism` (invertible).
 
 Now we can show an example!
 
-In a `thin category`, since there aren't any pairs of arrows, we will satisfy both.
+In a `thin category` (preorder), since there is at most one arrow between any two objects, every arrow is both **monic** and **epic**.
 
-But it is not necessarily invertible. And if we have a `partial order`, then definitely it is **not** invertible, we can't have arrows back since we have no loops!
+However, an arrow `f: a -> b` is an **isomorphism** only if there is an inverse `g: b -> a`. This would require `a ≤ b` and `b ≤ a`.
 
-Therefore it will be a `monomorphism` and an `epimorphism`, but not an `isomorphism`!
+- In a general **pre-order**, we might have cycles between distinct objects that are isomorphic.
+- In a **partial-order**, due to antisymmetry (`a ≤ b` and `b ≤ a` implies `a = b`), the only isomorphisms are the identity arrows (from an object to itself).
+
+Therefore, in a partial order, a morphism `a -> b` where `a != b` is a `monomorphism` and an `epimorphism`, but **not** an `isomorphism`!
 
 ### 3.5. Monoid
 
@@ -358,7 +376,7 @@ The `hom-set` of a `monoid` **M** can be represented as `M(m, m)`.
 
 - Multiplication of integers
 - Addition of integers
-- Concaquenating strings
+- Concatenating strings
 - Appending lists
 
 ### 3.6. Kleisli Category
@@ -366,6 +384,7 @@ The `hom-set` of a `monoid` **M** can be represented as `M(m, m)`.
 A **Kleisli category** is a category based on another existing category (like the category of types and functions in programming), but where the arrows have a special modification or "embellishment".
 
 In our programming example (Section 1.6), we had:
+
 - **Objects**: Types.
 - **Arrows**: Functions `a -> b`.
 
