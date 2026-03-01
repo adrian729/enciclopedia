@@ -23,7 +23,11 @@
 - [4. Macros](#4-macros)
   - [4.1. Macro Workflow](#41-macro-workflow)
 
+<a id="1-the-language"></a>
+
 ## 1. The Language
+
+<a id="11-fundamentals"></a>
 
 ### 1.1. Fundamentals
 
@@ -35,6 +39,8 @@
 | `:`                | Enter Command mode    | Opens prompt at bottom (save/quit/shell, etc.) |
 | `u`                | Undo                  |                                                |
 | `<C-r>`            | Redo                  |                                                |
+
+<a id="12-text-objects-nouns"></a>
 
 ### 1.2. Text Objects (nouns)
 
@@ -52,6 +58,8 @@ To identify `what` to change. Combine with operators.
 | `'`             | single quotes        | Inside single quotes `'`                                  |
 | `[` / `]`       | square brackets      | Inside square brackets `[]`                               |
 
+<a id="121-modifiers"></a>
+
 #### 1.2.1. Modifiers
 
 Modifiers let you choose how much of an object is affected by an operator: just the inside (inner) or the whole thing (around).
@@ -60,6 +68,8 @@ Modifiers let you choose how much of an object is affected by an operator: just 
 | :------- | :-------------------------------------------------------- | :------------------------- |
 | `i`      | Inner – targets only the content inside the object        | `ciw` = Change Inner Word  |
 | `a`      | Around – targets the object plus whitespace or delimiters | `daw` = Delete Around Word |
+
+<a id="13-operations-verbs"></a>
 
 ### 1.3. Operations (verbs)
 
@@ -77,7 +87,11 @@ Actions to perform on the nouns.
 | `>` | Indent          | Indent                                                  |
 | `=` | Auto-format     | Auto-format (very useful in 0.11 with LSP/Tree-sitter)  |
 
+<a id="14-navigation"></a>
+
 ### 1.4. Navigation
+
+<a id="141-the-jumps"></a>
 
 #### 1.4.1. The Jumps
 
@@ -94,6 +108,8 @@ Actions to perform on the nouns.
 | `$`        | Jump to end of line            | The End             |
 | `%`        | Jump between matching brackets | The Bridge          |
 
+<a id="142-the-snippers"></a>
+
 #### 1.4.2. The Snippers
 
 | Key | Name      | Action/Direction | Result / Description                            |
@@ -104,6 +120,8 @@ Actions to perform on the nouns.
 | `T` | Till Back | Backward         | `Tx` **AFTER** the prev character `x`           |
 | `;` | Repeat    | Forward          | Repeat the last jump in the same direction.     |
 | `,` | Repeat    | Backward         | Repeat the last jump in the opposite direction. |
+
+<a id="15-examples"></a>
 
 ### 1.5. Examples
 
@@ -116,9 +134,15 @@ Actions to perform on the nouns.
 | `dt)`   | `D`elete `T`ill `)`           | Deletes everything inside the parentheses but keeps the bracket itself.  |
 | `df)`   | `D`elete `F`ind `)`           | Deletes everything including the bracket.                                |
 
+<a id="2-command-mode-"></a>
+
 ## 2. Command Mode (`:`)
 
+<a id="21-search"></a>
+
 ### 2.1. Search
+
+<a id="211-search"></a>
 
 #### 2.1.1. Search
 
@@ -130,6 +154,8 @@ Actions to perform on the nouns.
 | `#` | Search Word Under Cursor Backward | The Backward Seeker |
 | `n` | Next Match                        |                     |
 | `N` | Previous Match                    |                     |
+
+<a id="212-search--replace-s"></a>
 
 #### 2.1.2. Search & Replace (`:s`)
 
@@ -160,6 +186,8 @@ word to search for / word to replace it with
 | n    | Number        | Report only. It tells you how many matches were found but doesn't actually replace anything.       | `:%s/cat/dog/gn` |
 | p    | Print         | Prints the last line that was changed.                                                             | `:%s/cat/dog/gp` |
 
+<a id="22-file-management-system"></a>
+
 ### 2.2. File Management (system)
 
 | Command         | Description                 |
@@ -171,11 +199,15 @@ word to search for / word to replace it with
 | `:e <filename>` | Open a new file             |
 | `:vsplit`       | Split the screen vertically |
 
+<a id="3-registers-"></a>
+
 ## 3. Registers (`"`)
 
 In Neovim, you have 36+ "Registers." Think of them as Lockers or Slots where you can store text.
 
 If you copy (yank) something, it goes into a specific locker. If you delete something, it goes into another. You can even choose which locker to use manually.
+
+<a id="31-formula"></a>
 
 ### 3.1. Formula
 
@@ -187,6 +219,8 @@ If you copy (yank) something, it goes into a specific locker. If you delete some
 | `"ayw` | Yank (copy) word to register a |
 | `"ap` | Paste from register a |
 | `"bdd` | Delete line to register b |
+
+<a id="32-types-of-lockers-registers"></a>
 
 ### 3.2. Types of Lockers (Registers)
 
@@ -202,15 +236,21 @@ If you copy (yank) something, it goes into a specific locker. If you delete some
 | `.`           | Last Inserted Text | Contains the last inserted text.                                                             |
 | `/`           | Last Search        | Contains the last search pattern.                                                            |
 
+<a id="33-check-the-lockers-reg"></a>
+
 ### 3.3. Check the Lockers (`:reg`)
 
 `:reg` will show all registers and what is stored in them
+
+<a id="4-macros"></a>
 
 ## 4. Macros
 
 A **Macro** is like a "_Screen Recorder_" for your keystrokes. You record a sequence of actions once, and then you can play it back 10, 100, or 1,000 times.
 
 Macros are stored inside registers.
+
+<a id="41-macro-workflow"></a>
 
 ### 4.1. Macro Workflow
 

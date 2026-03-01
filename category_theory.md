@@ -31,7 +31,11 @@
     - [3.6.2. Composition](#362-composition)
     - [3.6.3. Identity](#363-identity)
 
+<a id="1-what-is-a-category"></a>
+
 ## 1. What is a Category?
+
+<a id="11-abstraction"></a>
 
 ### 1.1. Abstraction
 
@@ -47,9 +51,13 @@ f: a -> b
 - objects `a` and `b`
 - `f` arrow/morphism from `a` to `b`
 
+<a id="12-category"></a>
+
 ### 1.2. Category
 
 A collection of `objects`, and for each pair of objects 0 or more `arrows` between one and another or from one object to itself.
+
+<a id="13-composition"></a>
 
 ### 1.3. Composition
 
@@ -72,6 +80,8 @@ g∘f: a -> c
 And `g∘f` is identical to the **composition** of `f` and `g`.
 
 \* _There can be any number of other arrows `a -> c`, but if `f: a -> b` and `g: b -> c` then `g∘f` EXISTS._
+
+<a id="14-identity"></a>
 
 ### 1.4. Identity
 
@@ -109,6 +119,8 @@ f∘id<sub>a</sub>: a -> a -> b
 
 where <code>f∘id<sub>a</sub> = f</code>
 
+<a id="15-associativity"></a>
+
 ### 1.5. Associativity
 
 Having
@@ -125,6 +137,8 @@ We can say that `h∘(g∘f)` and `(h∘g)∘f` are isomorphic
 h∘(g∘f) = (h∘g)∘f = h∘g∘f
 ```
 
+<a id="16-example-category-theory-in-programming"></a>
+
 ### 1.6. Example: category theory in programming
 
 An example of category in programming: `types` and `methods`.
@@ -135,7 +149,11 @@ We can see `types` as `sets of values` and `methods` as `functions` between sets
 
 When working with category theory, we need to forget the properties of sets and functions. We are building an abstraction on top of it, all we care about is `objects` and `arrows`.
 
+<a id="2-functions"></a>
+
 ## 2. Functions
+
+<a id="21-what-are-functions"></a>
 
 ### 2.1. What are functions?
 
@@ -207,7 +225,11 @@ So, if a function is `injective` and `surjective`, it is an `isomorphism` (anoth
 
 This definitions work with sets. The issue is that in `category theory` we can't talk in terms of the elements of a category to define its properties!
 
+<a id="22-functions-in-category-theory"></a>
+
 ### 2.2. Functions in Category Theory
+
+<a id="221-epic-morphisms-epimorphism"></a>
 
 #### 2.2.1. Epic Morphisms: Epimorphism
 
@@ -223,6 +245,8 @@ then <code>g<sub>1</sub> = g<sub>2</sub></code>
 
 Analog to `surjective` functions for category theory.
 
+<a id="222-monic-morphisms-monomorphism"></a>
+
 #### 2.2.2. Monic Morphisms: Monomorphism
 
 Having `f :: a -> b`,
@@ -237,6 +261,8 @@ then <code>h<sub>1</sub> = h<sub>2</sub></code>
 
 Analog to `injective` functions for category theory.
 
+<a id="223-disclaimer-isomorphism-in-category-theory"></a>
+
 #### 2.2.3. Disclaimer: isomorphism in category theory
 
 For sets, if a function is `injective` and `surjective`, then we can say it is an `isomorphism`.
@@ -244,6 +270,8 @@ For sets, if a function is `injective` and `surjective`, then we can say it is a
 The same can't be said for a category if it is a `monomorphism` and an `epimorphism`!
 
 That is not enough to say it is an `isomorphism`!
+
+<a id="224-haskell-objects-and-function-examples"></a>
 
 #### 2.2.4. Haskell objects and function examples
 
@@ -255,7 +283,11 @@ That is not enough to say it is an `isomorphism`!
   - f.e. `one :: () -> 1`, `two :: () -> 2`, `three :: () -> 3`, etc
   - f.e. `True :: () -> true`, `False :: () -> false`
 
+<a id="3-categories"></a>
+
 ## 3. Categories
+
+<a id="31-zero"></a>
 
 ### 3.1. Zero
 
@@ -263,11 +295,15 @@ Category with no objects.
 
 It fulfills the conditions because "for every pair of objects there is an arrow", since there are no objects (or arrows) it fullfils.
 
+<a id="32-one-object"></a>
+
 ### 3.2. One object
 
 Category with one object.
 
 Will have a single object, and a single arrow, the identity `Id: a -> a`.
+
+<a id="33-graph-more-objects"></a>
 
 ### 3.3. Graph (more objects)
 
@@ -285,6 +321,8 @@ But is any graph a category? No it is not, but we can transform any graph into a
 
 With this we create a `free category` from the graph (only following the rules to satisfy the definition of category).
 
+<a id="34-orders"></a>
+
 ### 3.4. Orders
 
 In a category that is an order, arrows don't represent functions, they represent relations.
@@ -292,6 +330,8 @@ In a category that is an order, arrows don't represent functions, they represent
 `f: a -> b` means `a` less or equal to `b`, `a ≤ b`
 
 Depending on which conditions they fulfill we can have different types of order.
+
+<a id="341-pre-order"></a>
 
 #### 3.4.1. Pre-Order
 
@@ -333,6 +373,8 @@ A `thin category` is one in which every `hom-set` is either an `empty set` or a 
 
 A `hom-set` for example from `a` to `b` is represented as `C(a, b)`.
 
+<a id="342-partial-order"></a>
+
 #### 3.4.2. Partial-Order
 
 A `partial-order` is a `pre-order` that also satisfies **Antisymmetry**:
@@ -341,13 +383,17 @@ If `a ≤ b` and `b ≤ a`, then `a = b`.
 
 This means there are no loops between distinct objects.
 
+<a id="343-total-order"></a>
+
 #### 3.4.3. Total-Order
 
 A `total-order` (or _linear order_) is a `partial-order` in which there is an **arrow** between any two objects: every pair of objects is comparable.
 
 For any two objects `a` and `b`, either `a ≤ b` or `b ≤ a`.
 
-#### 3.4.4. Epimorphisms, Monomorphisms, Isomorphisms!?
+<a id="344-epimorphisms-monomorphisms-and-isomorphisms"></a>
+
+#### 3.4.4. Epimorphisms, Monomorphisms and Isomorphisms
 
 In previous sections it was said that `isomorphism` in **category theory** is a bit different than when talking about **sets**.
 
@@ -364,6 +410,8 @@ However, an arrow `f: a -> b` is an **isomorphism** only if there is an inverse 
 
 Therefore, in a partial order, a morphism `a -> b` where `a != b` is a `monomorphism` and an `epimorphism`, but **not** an `isomorphism`!
 
+<a id="35-monoid"></a>
+
 ### 3.5. Monoid
 
 Any category that consists of a `single object` and as many arrows, is called a `monoid`.
@@ -379,6 +427,8 @@ The `hom-set` of a `monoid` **M** can be represented as `M(m, m)`.
 - Concatenating strings
 - Appending lists
 
+<a id="36-kleisli-category"></a>
+
 ### 3.6. Kleisli Category
 
 A **Kleisli category** is a category based on another existing category (like the category of types and functions in programming), but where the arrows have a special modification or "embellishment".
@@ -389,6 +439,8 @@ In our programming example (Section 1.6), we had:
 - **Arrows**: Functions `a -> b`.
 
 In a **Kleisli category**, we keep the same objects, but redefine the arrows and their composition.
+
+<a id="361-arrows-embellished-functions"></a>
 
 #### 3.6.1. Arrows: Embellished Functions
 
@@ -402,6 +454,8 @@ Imagine functions that return a value but also write to a log (a string). String
 - Embellished function: `Number -> (Number, String)`
 
 Here, the arrow from `Number` to `Number` in the Kleisli category is actually implemented as a function returning a pair.
+
+<a id="362-composition"></a>
 
 #### 3.6.2. Composition
 
@@ -417,6 +471,8 @@ In a Kleisli category, we define a new composition operator (often called the "f
 1. Execute `f` to get `(b, s1)`.
 2. Pass `b` to `g` to get `(c, s2)`.
 3. Combine the logs (`s1 + s2`) using the Monoid operation (concatenation) and return `(c, s1 + s2)`.
+
+<a id="363-identity"></a>
 
 #### 3.6.3. Identity
 
