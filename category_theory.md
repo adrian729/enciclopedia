@@ -30,6 +30,10 @@
     - [3.6.1. Arrows: Embellished Functions](#361-arrows-embellished-functions)
     - [3.6.2. Composition](#362-composition)
     - [3.6.3. Identity](#363-identity)
+  - [3.7. Monad](#37-monad)
+  - [3.8. Universal Constructions](#38-universal-constructions)
+    - [3.8.1. Terminal Object](#381-terminal-object)
+    - [3.8.2. Initial Object](#382-initial-object)
 
 <a id="1-what-is-a-category"></a>
 
@@ -468,9 +472,11 @@ The output of `f` is `(b, String)`, but the input of `g` expects just `b`.
 
 In a Kleisli category, we define a new composition operator (often called the "fish" operator `>=>`) that handles the "wrapping":
 
-1. Execute `f` to get `(b, s1)`.
+`g >=> f` applied to `a`:
+
+1. Execute `f(a)` to get `(b, s1)`.
 2. Pass `b` to `g` to get `(c, s2)`.
-3. Combine the logs (`s1 + s2`) using the Monoid operation (concatenation) and return `(c, s1 + s2)`.
+3. Combine the logs using the Monoid operation (concatenation) and return `(c, s1 + s2)`.
 
 <a id="363-identity"></a>
 
@@ -481,3 +487,60 @@ The identity arrow for an object `a` must be a function `a -> (a, String)` that 
 - `id: a -> (a, "")`
 
 This structure (Objects, Embellished Arrows, Special Composition, Identity) forms a valid Category known as the Kleisli Category.
+
+<a id="37-monad"></a>
+
+### 3.7. Monad
+
+A **Monad** is the structure that makes a Kleisli category work. It is defined by the three things we already saw in Section 3.6: the embellishment `M` (Section 3.6.1), the Kleisli composition (Section 3.6.2), and the identity (Section 3.6.3).
+
+Since a Kleisli category is a category, it must satisfy the category laws (Sections 1.3–1.5). These are the **Monad laws**:
+
+- **Associativity** (Section 1.5): composing three embellished arrows with `>=>` must give the same result regardless of grouping: `(f >=> g) >=> h = f >=> (g >=> h)`.
+- **Identity** (Section 1.4): composing any embellished arrow with the identity from Section 3.6.3 must return the same arrow: `id >=> f = f` and `f >=> id = f`.
+
+<a id="38-universal-constructions"></a>
+
+### 3.8. Universal Constructions
+
+<a id="381-terminal-object"></a>
+
+#### 3.8.1. Terminal Object
+
+A **terminal object** in a category is an object that has a unique arrow coming from any other object.
+
+Not all categories have a terminal object.
+
+**contidion 1**
+
+For all object `a`,
+<br>
+there _exists_ an `f: a -> ()`
+
+**condition 2**
+
+For every two functions,
+<br>
+if `f: a -> ()`, `g: a -> ()`
+<br>
+then `f = g`
+
+<a id="382-initial-object"></a>
+
+#### 3.8.2. Initial Object
+
+An **initial object** in a category is an object that has a unique outgoing arrow to every other object.
+
+**condition 1**
+
+For all object `a`,
+<br>
+there **exists** and `f: void -> a`
+
+**condition 2**
+
+For every two functions,
+<br>
+if `f: () -> a`, `g: () -> b`
+<br>
+then `f = g`
