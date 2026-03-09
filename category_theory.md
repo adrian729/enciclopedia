@@ -511,7 +511,7 @@ A **terminal object** in a category is an object that has a unique arrow coming 
 
 Not all categories have a terminal object.
 
-**contidion 1**
+**condition 1**
 
 For all object `a`,
 <br>
@@ -529,18 +529,18 @@ then `f = g`
 
 #### 3.8.2. Initial Object
 
-An **initial object** in a category is an object that has a unique outgoing arrow to every other object.
+An **initial object** in a category is an object that has a unique outgoing arrow to every object.
 
 **condition 1**
 
 For all object `a`,
 <br>
-there **exists** and `f: void -> a`
+there **exists** an `f: void -> a`
 
 **condition 2**
 
 For every two functions,
 <br>
-if `f: () -> a`, `g: () -> b`
+if `f: void -> a`, `g: void -> a`
 <br>
 then `f = g`
