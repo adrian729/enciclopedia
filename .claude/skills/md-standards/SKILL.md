@@ -1,11 +1,12 @@
 ---
 name: md-standards
-description: Markdown standards and TOC rules for .md files (exclude README.md).
+description: Markdown standards and TOC rules. Use with .md files (exclude README.md).
 ---
 
 # Markdown Standards
 
 ## Headers & TOC
+
 - **H1:** Title only. **No** numbering. **No** TOC.
 - **H2-H4:** Hierarchical numbering (`1.` → `1.1.` → `1.1.1.`).
 - **Anchors:** Place explicit HTML anchors on their own line **above** every H2-H4 header, separated by a blank line.
