@@ -3,35 +3,42 @@
 ## Table of Contents
 - [1. Creational](#1-creational)
   - [1.1. Singleton](#11-singleton)
-    - [1.1.1. Benefits](#111-benefits)
-    - [1.1.2. Trade-offs](#112-trade-offs)
-    - [1.1.3. Examples](#113-examples)
+    - [1.1.1. Paradigm Fit](#111-paradigm-fit)
+    - [1.1.2. Benefits](#112-benefits)
+    - [1.1.3. Trade-offs](#113-trade-offs)
+    - [1.1.4. Examples](#114-examples)
   - [1.2. Builder](#12-builder)
-    - [1.2.1. Benefits](#121-benefits)
-    - [1.2.2. Trade-offs](#122-trade-offs)
-    - [1.2.3. Examples](#123-examples)
+    - [1.2.1. Paradigm Fit](#121-paradigm-fit)
+    - [1.2.2. Benefits](#122-benefits)
+    - [1.2.3. Trade-offs](#123-trade-offs)
+    - [1.2.4. Examples](#124-examples)
   - [1.3. Factory](#13-factory)
-    - [1.3.1. Benefits](#131-benefits)
-    - [1.3.2. Trade-offs](#132-trade-offs)
-    - [1.3.3. Examples](#133-examples)
+    - [1.3.1. Paradigm Fit](#131-paradigm-fit)
+    - [1.3.2. Benefits](#132-benefits)
+    - [1.3.3. Trade-offs](#133-trade-offs)
+    - [1.3.4. Examples](#134-examples)
 - [2. Structural](#2-structural)
   - [2.1. Facade](#21-facade)
-    - [2.1.1. Benefits](#211-benefits)
-    - [2.1.2. Trade-offs](#212-trade-offs)
-    - [2.1.3. Examples](#213-examples)
+    - [2.1.1. Paradigm Fit](#211-paradigm-fit)
+    - [2.1.2. Benefits](#212-benefits)
+    - [2.1.3. Trade-offs](#213-trade-offs)
+    - [2.1.4. Examples](#214-examples)
   - [2.2. Adapter](#22-adapter)
-    - [2.2.1. Benefits](#221-benefits)
-    - [2.2.2. Trade-offs](#222-trade-offs)
-    - [2.2.3. Examples](#223-examples)
+    - [2.2.1. Paradigm Fit](#221-paradigm-fit)
+    - [2.2.2. Benefits](#222-benefits)
+    - [2.2.3. Trade-offs](#223-trade-offs)
+    - [2.2.4. Examples](#224-examples)
 - [3. Behavioral](#3-behavioral)
   - [3.1. Strategy](#31-strategy)
-    - [3.1.1. Benefits](#311-benefits)
-    - [3.1.2. Trade-offs](#312-trade-offs)
-    - [3.1.3. Examples](#313-examples)
+    - [3.1.1. Paradigm Fit](#311-paradigm-fit)
+    - [3.1.2. Benefits](#312-benefits)
+    - [3.1.3. Trade-offs](#313-trade-offs)
+    - [3.1.4. Examples](#314-examples)
   - [3.2. Observer](#32-observer)
-    - [3.2.1. Benefits](#321-benefits)
-    - [3.2.2. Trade-offs](#322-trade-offs)
-    - [3.2.3. Examples](#323-examples)
+    - [3.2.1. Paradigm Fit](#321-paradigm-fit)
+    - [3.2.2. Benefits](#322-benefits)
+    - [3.2.3. Trade-offs](#323-trade-offs)
+    - [3.2.4. Examples](#324-examples)
 
 <a id="1-creational"></a>
 
@@ -63,26 +70,38 @@ Thread safety is the primary implementation concern. In a concurrent environment
 
 Singleton is sometimes considered an anti-pattern because it introduces hidden global state, makes unit testing harder (shared state leaks between tests), and obscures dependencies. Prefer dependency injection when possible, and reserve Singleton for genuinely shared, stateless, or infrastructure-level resources (loggers, configuration, connection pools).
 
-<a id="111-benefits"></a>
+<a id="111-paradigm-fit"></a>
 
-#### 1.1.1. Benefits
+#### 1.1.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Uncommon** — global mutable state conflicts with purity; module-level constants or managed effects are preferred. |
+| Data-Oriented | **Uncommon** — global state contradicts the "data lives in tables/arrays" model; shared resources are system-level parameters. |
+| OOP | **Natural fit** — private constructor and static accessor is the canonical form. |
+| Procedural | **Workable** — global variable behind an initialization-guard function. |
+| Reactive | **Uncommon** — reactive systems favor injected shared services; `shareReplay`/`BehaviorSubject` serve similar sharing purposes within the stream. |
+
+<a id="112-benefits"></a>
+
+#### 1.1.2. Benefits
 
 - Guarantees exactly one instance — no accidental duplicates or conflicting copies.
 - Lazy initialization defers resource allocation until the instance is actually needed.
 - Provides a well-known global access point, simplifying discovery of shared infrastructure.
 
-<a id="112-trade-offs"></a>
+<a id="113-trade-offs"></a>
 
-#### 1.1.2. Trade-offs
+#### 1.1.3. Trade-offs
 
 - Hidden global state makes dependencies implicit and the call graph harder to reason about.
 - Shared mutable state leaks between tests, causing order-dependent failures.
 - Tight coupling to the concrete class makes substitution difficult; mocking in tests often requires workarounds.
 - Concurrency requires explicit thread-safety measures (locking, `Lazy<T>`, `OnceLock`, etc.).
 
-<a id="113-examples"></a>
+<a id="114-examples"></a>
 
-#### 1.1.3. Examples
+#### 1.1.4. Examples
 
 ##### Rust
 
@@ -191,26 +210,38 @@ The key participants are the **product** (the complex object being built), the *
 
 Builder is especially valuable when objects have many optional fields, construction invariants that must hold at creation time, or when the same construction process should produce different representations.
 
-<a id="121-benefits"></a>
+<a id="121-paradigm-fit"></a>
 
-#### 1.2.1. Benefits
+#### 1.2.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Adapts well** — pipelines of chained transformations over immutable intermediate values achieve the same goal, though named/default parameters and record update syntax often eliminate the need. |
+| Data-Oriented | **Workable** — archetype-builders can batch-initialize component arrays, but per-object ceremony conflicts with bulk-data thinking. |
+| OOP | **Natural fit** — mutable builder object with fluent method chaining. |
+| Procedural | **Workable** — struct-population helpers, but no fluent chaining. |
+| Reactive | **Adapts well** — fluent builder chains mirror operator pipelines; builders can configure stream topologies and subscription options. |
+
+<a id="122-benefits"></a>
+
+#### 1.2.2. Benefits
 
 - Eliminates telescoping constructors — each step is a named method, making construction self-documenting.
 - Enforces invariants at build time rather than relying on post-creation validation.
 - The same construction process can produce different representations by swapping builder implementations.
 - Method chaining provides a fluent, discoverable API that IDEs can autocomplete.
 
-<a id="122-trade-offs"></a>
+<a id="123-trade-offs"></a>
 
-#### 1.2.2. Trade-offs
+#### 1.2.3. Trade-offs
 
 - Adds a parallel class (the builder) for every product — more code to maintain.
 - Builder fields mirror the product's fields; changes to the product must be reflected in both.
 - For simple objects with few required parameters, a plain constructor or factory method is simpler and less ceremony.
 
-<a id="123-examples"></a>
+<a id="124-examples"></a>
 
-#### 1.2.3. Examples
+#### 1.2.4. Examples
 
 ##### Rust
 
@@ -422,25 +453,37 @@ The key participants are the **product interface** (the abstraction all created 
 
 A simpler variant — sometimes called Simple Factory — uses a single function with a discriminator (e.g., an enum or string) to decide which concrete type to return. This trades extensibility for convenience: adding a new product requires modifying the factory function rather than adding a new creator class.
 
-<a id="131-benefits"></a>
+<a id="131-paradigm-fit"></a>
 
-#### 1.3.1. Benefits
+#### 1.3.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Natural fit** — factory functions, closures, and higher-order functions returning values. |
+| Data-Oriented | **Adapts well** — archetype factories batch-create entities with the correct component layout in a single allocation pass. |
+| OOP | **Natural fit** — polymorphic creation through interfaces and subclass overrides. |
+| Procedural | **Workable** — dispatch functions (switch/if) returning concrete structs. |
+| Reactive | **Adapts well** — factories produce observables/streams or select concrete operators based on runtime configuration. |
+
+<a id="132-benefits"></a>
+
+#### 1.3.2. Benefits
 
 - Decouples client code from concrete product classes — clients depend only on the product interface.
 - New products can be added by implementing the interfaces, without modifying existing client code (Open/Closed Principle).
 - Centralizes creation logic, making it straightforward to enforce constraints, add logging, or swap implementations.
 
-<a id="132-trade-offs"></a>
+<a id="133-trade-offs"></a>
 
-#### 1.3.2. Trade-offs
+#### 1.3.3. Trade-offs
 
 - Each new product typically requires a new concrete creator class — class proliferation.
 - Adds indirection: the reader must trace through the factory to discover which concrete type is created.
 - The Simple Factory variant re-introduces modification when adding products, losing the Open/Closed benefit.
 
-<a id="133-examples"></a>
+<a id="134-examples"></a>
 
-#### 1.3.3. Examples
+#### 1.3.4. Examples
 
 ##### Rust
 
@@ -607,25 +650,37 @@ The key participants are the **facade** (the simplified entry point), the **subs
 
 Facade promotes loose coupling between the client and the subsystem, reduces the learning curve for new developers, and provides a natural boundary for layering an architecture. It is not about adding new functionality — it is about simplifying access to existing functionality.
 
-<a id="211-benefits"></a>
+<a id="211-paradigm-fit"></a>
 
-#### 2.1.1. Benefits
+#### 2.1.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Natural fit** — a module exporting simple functions that compose complex internal operations. |
+| Data-Oriented | **Natural fit** — modules that hide cache-friendly data transformations behind a clean query API. |
+| OOP | **Natural fit** — facade object wrapping and orchestrating subsystem instances. |
+| Procedural | **Natural fit** — wrapper functions that sequence subsystem calls behind a simple API. |
+| Reactive | **Natural fit** — exposes simple subscribe/observe entry points over complex internal pipelines. |
+
+<a id="212-benefits"></a>
+
+#### 2.1.2. Benefits
 
 - Reduces coupling — the client depends on one facade rather than many subsystem classes.
 - Lowers the learning curve by exposing only the operations most clients need.
 - Provides a natural layering boundary; the subsystem can evolve internally without breaking clients.
 
-<a id="212-trade-offs"></a>
+<a id="213-trade-offs"></a>
 
-#### 2.1.2. Trade-offs
+#### 2.1.3. Trade-offs
 
 - Risk of becoming a "god object" if the facade accumulates too many responsibilities over time.
 - May hide functionality that advanced clients need, forcing them to bypass the facade and couple to the subsystem directly.
 - Adds an extra layer of indirection between the client and the actual work.
 
-<a id="213-examples"></a>
+<a id="214-examples"></a>
 
-#### 2.1.3. Examples
+#### 2.1.4. Examples
 
 ##### Rust
 
@@ -798,25 +853,37 @@ There are two variants. An **object adapter** uses composition: it holds a refer
 
 Adapter is especially useful when integrating third-party libraries, legacy systems, or external APIs whose interfaces you cannot change but need to conform to your application's contracts.
 
-<a id="221-benefits"></a>
+<a id="221-paradigm-fit"></a>
 
-#### 2.2.1. Benefits
+#### 2.2.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Natural fit** — function wrappers and composition translate one signature to another. |
+| Data-Oriented | **Workable** — transform functions convert between data layouts (AoS ↔ SoA), but less formalized as a named pattern. |
+| OOP | **Natural fit** — wrapper class implementing the target interface, delegating to the adaptee. |
+| Procedural | **Workable** — wrapper functions that translate calls and data between interfaces. |
+| Reactive | **Natural fit** — operators like `map`/`flatMap` are adapters that translate one stream type to another. |
+
+<a id="222-benefits"></a>
+
+#### 2.2.2. Benefits
 
 - Enables reuse of existing classes without modifying their source code.
 - Isolates translation logic in one place — client code stays clean of conversion details.
 - Can adapt entire class hierarchies: an object adapter works with the adaptee and all its subclasses.
 
-<a id="222-trade-offs"></a>
+<a id="223-trade-offs"></a>
 
-#### 2.2.2. Trade-offs
+#### 2.2.3. Trade-offs
 
 - Adds a wrapper layer with delegation overhead (negligible in most cases, noticeable in hot paths).
 - One adapter per incompatible interface can lead to many small wrapper classes.
 - If the adaptee's interface changes, the adapter must change too — maintenance coupling shifts rather than disappears.
 
-<a id="223-examples"></a>
+<a id="224-examples"></a>
 
-#### 2.2.3. Examples
+#### 2.2.4. Examples
 
 ##### Rust
 
@@ -958,25 +1025,37 @@ The key participants are the **strategy interface** (the contract all algorithms
 
 New algorithms are added by implementing the strategy interface, leaving existing code untouched (Open/Closed Principle). Strategy is a common alternative to subclassing: instead of creating a subclass for each variant, you compose the context with a strategy at runtime.
 
-<a id="311-benefits"></a>
+<a id="311-paradigm-fit"></a>
 
-#### 3.1.1. Benefits
+#### 3.1.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Natural fit** — first-class functions and closures are strategies by definition; the pattern is implicit. |
+| Data-Oriented | **Workable** — system dispatch selects different processing functions for the same component data. |
+| OOP | **Natural fit** — strategy interface with interchangeable concrete implementations. |
+| Procedural | **Workable** — function pointers or callback parameters. |
+| Reactive | **Natural fit** — swappable operators or stream transformations selected at subscription time. |
+
+<a id="312-benefits"></a>
+
+#### 3.1.2. Benefits
 
 - Eliminates conditional blocks (`if`/`else`, `switch`) — each algorithm is self-contained and independently testable.
 - New algorithms are added without modifying existing code (Open/Closed Principle).
 - Context and strategies vary independently, promoting composition over inheritance.
 
-<a id="312-trade-offs"></a>
+<a id="313-trade-offs"></a>
 
-#### 3.1.2. Trade-offs
+#### 3.1.3. Trade-offs
 
 - Clients must know the available strategies and choose between them — the decision logic moves to the caller.
 - One class per algorithm can lead to many small classes for a family of simple variants.
 - Adds indirection: behavior is delegated rather than inline, which can obscure straightforward logic when only two variants exist.
 
-<a id="313-examples"></a>
+<a id="314-examples"></a>
 
-#### 3.1.3. Examples
+#### 3.1.4. Examples
 
 ##### Rust
 
@@ -1174,26 +1253,38 @@ There are two notification models. In the **push model** (shown below), the subj
 
 Observer is foundational to event-driven architectures, GUI frameworks (click handlers, data binding), reactive programming (`Observable`/`Subject` in Rx), and messaging systems. The pattern trades simplicity for decoupling: debugging notification chains can be harder because the flow of control is implicit rather than explicit.
 
-<a id="321-benefits"></a>
+<a id="321-paradigm-fit"></a>
 
-#### 3.2.1. Benefits
+#### 3.2.1. Paradigm Fit
+
+| Paradigm | Compatibility |
+|----------|---------------|
+| FP | **Adapts well** — reactive streams and event combinators express the same idea declaratively. |
+| Data-Oriented | **Uncommon** — favors polling and system iteration over push-based notification; change detection is query-based. |
+| OOP | **Natural fit** — subject/observer interfaces with dynamic subscription lists. |
+| Procedural | **Workable** — callback registration with manual lifecycle management. |
+| Reactive | **Natural fit** — Observer is the foundational primitive; `Observable`/`Subject` is the pattern formalized as a first-class construct. |
+
+<a id="322-benefits"></a>
+
+#### 3.2.2. Benefits
 
 - Loose coupling — subject and observers depend only on abstractions, not on each other's concrete types.
 - Dynamic subscription: observers can register and unregister at any point during runtime.
 - Supports broadcast communication — a single state change notifies all interested parties.
 
-<a id="322-trade-offs"></a>
+<a id="323-trade-offs"></a>
 
-#### 3.2.2. Trade-offs
+#### 3.2.3. Trade-offs
 
 - Notification order is generally undefined and may vary between runs or implementations.
 - Lapsed listener problem: forgetting to detach an observer can cause memory leaks and phantom updates.
 - Cascading notifications (one observer's update triggers another subject change) create hard-to-debug chains.
 - Update cost scales linearly with observer count — each state change invokes every registered observer.
 
-<a id="323-examples"></a>
+<a id="324-examples"></a>
 
-#### 3.2.3. Examples
+#### 3.2.4. Examples
 
 ##### Rust
 
