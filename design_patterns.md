@@ -3,21 +3,35 @@
 ## Table of Contents
 - [1. Creational](#1-creational)
   - [1.1. Singleton](#11-singleton)
-    - [1.1.1. Examples](#111-examples)
+    - [1.1.1. Benefits](#111-benefits)
+    - [1.1.2. Trade-offs](#112-trade-offs)
+    - [1.1.3. Examples](#113-examples)
   - [1.2. Builder](#12-builder)
-    - [1.2.1. Examples](#121-examples)
+    - [1.2.1. Benefits](#121-benefits)
+    - [1.2.2. Trade-offs](#122-trade-offs)
+    - [1.2.3. Examples](#123-examples)
   - [1.3. Factory](#13-factory)
-    - [1.3.1. Examples](#131-examples)
+    - [1.3.1. Benefits](#131-benefits)
+    - [1.3.2. Trade-offs](#132-trade-offs)
+    - [1.3.3. Examples](#133-examples)
 - [2. Structural](#2-structural)
   - [2.1. Facade](#21-facade)
-    - [2.1.1. Examples](#211-examples)
+    - [2.1.1. Benefits](#211-benefits)
+    - [2.1.2. Trade-offs](#212-trade-offs)
+    - [2.1.3. Examples](#213-examples)
   - [2.2. Adapter](#22-adapter)
-    - [2.2.1. Examples](#221-examples)
+    - [2.2.1. Benefits](#221-benefits)
+    - [2.2.2. Trade-offs](#222-trade-offs)
+    - [2.2.3. Examples](#223-examples)
 - [3. Behavioral](#3-behavioral)
   - [3.1. Strategy](#31-strategy)
-    - [3.1.1. Examples](#311-examples)
+    - [3.1.1. Benefits](#311-benefits)
+    - [3.1.2. Trade-offs](#312-trade-offs)
+    - [3.1.3. Examples](#313-examples)
   - [3.2. Observer](#32-observer)
-    - [3.2.1. Examples](#321-examples)
+    - [3.2.1. Benefits](#321-benefits)
+    - [3.2.2. Trade-offs](#322-trade-offs)
+    - [3.2.3. Examples](#323-examples)
 
 <a id="1-creational"></a>
 
@@ -35,9 +49,8 @@ Creational patterns abstract the instantiation process, making systems independe
 
 ### 1.1. Singleton
 
-| | |
-|----------|--------|
 | **Who**  | Applications that need a single shared instance (e.g., configuration managers, logging services, connection pools). |
+|----------|--------|
 | **What** | Ensures a class has exactly one instance and provides a global point of access to it. |
 | **When** | When exactly one object is needed to coordinate access to a shared resource, and uncontrolled instantiation would cause inconsistency or waste. |
 | **Where**| Infrastructure or service layers where a single point of control is required (logging, caching, configuration, thread pools). |
@@ -50,9 +63,26 @@ Thread safety is the primary implementation concern. In a concurrent environment
 
 Singleton is sometimes considered an anti-pattern because it introduces hidden global state, makes unit testing harder (shared state leaks between tests), and obscures dependencies. Prefer dependency injection when possible, and reserve Singleton for genuinely shared, stateless, or infrastructure-level resources (loggers, configuration, connection pools).
 
-<a id="111-examples"></a>
+<a id="111-benefits"></a>
 
-#### 1.1.1. Examples
+#### 1.1.1. Benefits
+
+- Guarantees exactly one instance — no accidental duplicates or conflicting copies.
+- Lazy initialization defers resource allocation until the instance is actually needed.
+- Provides a well-known global access point, simplifying discovery of shared infrastructure.
+
+<a id="112-trade-offs"></a>
+
+#### 1.1.2. Trade-offs
+
+- Hidden global state makes dependencies implicit and the call graph harder to reason about.
+- Shared mutable state leaks between tests, causing order-dependent failures.
+- Tight coupling to the concrete class makes substitution difficult; mocking in tests often requires workarounds.
+- Concurrency requires explicit thread-safety measures (locking, `Lazy<T>`, `OnceLock`, etc.).
+
+<a id="113-examples"></a>
+
+#### 1.1.3. Examples
 
 ##### Rust
 
@@ -147,9 +177,8 @@ print(s1.get_info())
 
 ### 1.2. Builder
 
-| | |
-|----------|--------|
 | **Who**  | Clients that need to construct complex objects with many optional or conditional parameters. |
+|----------|--------|
 | **What** | Separates the construction of a complex object from its representation, allowing the same construction process to create different representations. |
 | **When** | When an object has many optional fields, when construction involves multiple steps in a specific order, or when a constructor would need too many parameters to remain readable. |
 | **Where**| Commonly used in APIs that configure objects (HTTP clients, query builders, UI component configuration, domain object assembly). |
@@ -162,9 +191,26 @@ The key participants are the **product** (the complex object being built), the *
 
 Builder is especially valuable when objects have many optional fields, construction invariants that must hold at creation time, or when the same construction process should produce different representations.
 
-<a id="121-examples"></a>
+<a id="121-benefits"></a>
 
-#### 1.2.1. Examples
+#### 1.2.1. Benefits
+
+- Eliminates telescoping constructors — each step is a named method, making construction self-documenting.
+- Enforces invariants at build time rather than relying on post-creation validation.
+- The same construction process can produce different representations by swapping builder implementations.
+- Method chaining provides a fluent, discoverable API that IDEs can autocomplete.
+
+<a id="122-trade-offs"></a>
+
+#### 1.2.2. Trade-offs
+
+- Adds a parallel class (the builder) for every product — more code to maintain.
+- Builder fields mirror the product's fields; changes to the product must be reflected in both.
+- For simple objects with few required parameters, a plain constructor or factory method is simpler and less ceremony.
+
+<a id="123-examples"></a>
+
+#### 1.2.3. Examples
 
 ##### Rust
 
@@ -362,9 +408,8 @@ req = (
 
 ### 1.3. Factory
 
-| | |
-|----------|--------|
 | **Who**  | Clients that need to create objects without specifying the exact class to instantiate. |
+|----------|--------|
 | **What** | Defines an interface for creating an object, but lets subclasses (or trait implementors) decide which concrete class to instantiate, deferring creation to them. |
 | **When** | When a class cannot anticipate the type of objects it must create, or when you want to isolate client code from concrete product classes. |
 | **Where**| Frameworks, plugin systems, and libraries where the concrete classes are determined by configuration, user choice, or extension code. |
@@ -377,9 +422,25 @@ The key participants are the **product interface** (the abstraction all created 
 
 A simpler variant — sometimes called Simple Factory — uses a single function with a discriminator (e.g., an enum or string) to decide which concrete type to return. This trades extensibility for convenience: adding a new product requires modifying the factory function rather than adding a new creator class.
 
-<a id="131-examples"></a>
+<a id="131-benefits"></a>
 
-#### 1.3.1. Examples
+#### 1.3.1. Benefits
+
+- Decouples client code from concrete product classes — clients depend only on the product interface.
+- New products can be added by implementing the interfaces, without modifying existing client code (Open/Closed Principle).
+- Centralizes creation logic, making it straightforward to enforce constraints, add logging, or swap implementations.
+
+<a id="132-trade-offs"></a>
+
+#### 1.3.2. Trade-offs
+
+- Each new product typically requires a new concrete creator class — class proliferation.
+- Adds indirection: the reader must trace through the factory to discover which concrete type is created.
+- The Simple Factory variant re-introduces modification when adding products, losing the Open/Closed benefit.
+
+<a id="133-examples"></a>
+
+#### 1.3.3. Examples
 
 ##### Rust
 
@@ -532,9 +593,8 @@ Structural patterns deal with the composition of classes and objects, using inhe
 
 ### 2.1. Facade
 
-| | |
-|----------|--------|
 | **Who**  | Clients that need a simple interface to a complex subsystem. |
+|----------|--------|
 | **What** | Provides a unified, higher-level interface to a set of interfaces in a subsystem, making the subsystem easier to use. |
 | **When** | When a subsystem has many interdependent classes and clients only need a subset of its capabilities, or when you want to layer your architecture with clean entry points. |
 | **Where**| Between client code and complex subsystems (e.g., a multimedia framework, a business services layer, OS kernel APIs). |
@@ -547,9 +607,25 @@ The key participants are the **facade** (the simplified entry point), the **subs
 
 Facade promotes loose coupling between the client and the subsystem, reduces the learning curve for new developers, and provides a natural boundary for layering an architecture. It is not about adding new functionality — it is about simplifying access to existing functionality.
 
-<a id="211-examples"></a>
+<a id="211-benefits"></a>
 
-#### 2.1.1. Examples
+#### 2.1.1. Benefits
+
+- Reduces coupling — the client depends on one facade rather than many subsystem classes.
+- Lowers the learning curve by exposing only the operations most clients need.
+- Provides a natural layering boundary; the subsystem can evolve internally without breaking clients.
+
+<a id="212-trade-offs"></a>
+
+#### 2.1.2. Trade-offs
+
+- Risk of becoming a "god object" if the facade accumulates too many responsibilities over time.
+- May hide functionality that advanced clients need, forcing them to bypass the facade and couple to the subsystem directly.
+- Adds an extra layer of indirection between the client and the actual work.
+
+<a id="213-examples"></a>
+
+#### 2.1.3. Examples
 
 ##### Rust
 
@@ -708,9 +784,8 @@ computer.start()
 
 ### 2.2. Adapter
 
-| | |
-|----------|--------|
 | **Who**  | Clients that need to use an existing class whose interface does not match the one they require. |
+|----------|--------|
 | **What** | Converts the interface of an existing class into another interface clients expect, letting incompatible classes work together. |
 | **When** | When you want to reuse an existing class but its interface does not match what your code requires, and modifying the class is impossible or undesirable. |
 | **Where**| Wrappers around third-party libraries, legacy code, or external APIs that must conform to your application's interface contracts. |
@@ -723,9 +798,25 @@ There are two variants. An **object adapter** uses composition: it holds a refer
 
 Adapter is especially useful when integrating third-party libraries, legacy systems, or external APIs whose interfaces you cannot change but need to conform to your application's contracts.
 
-<a id="221-examples"></a>
+<a id="221-benefits"></a>
 
-#### 2.2.1. Examples
+#### 2.2.1. Benefits
+
+- Enables reuse of existing classes without modifying their source code.
+- Isolates translation logic in one place — client code stays clean of conversion details.
+- Can adapt entire class hierarchies: an object adapter works with the adaptee and all its subclasses.
+
+<a id="222-trade-offs"></a>
+
+#### 2.2.2. Trade-offs
+
+- Adds a wrapper layer with delegation overhead (negligible in most cases, noticeable in hot paths).
+- One adapter per incompatible interface can lead to many small wrapper classes.
+- If the adaptee's interface changes, the adapter must change too — maintenance coupling shifts rather than disappears.
+
+<a id="223-examples"></a>
+
+#### 2.2.3. Examples
 
 ##### Rust
 
@@ -853,9 +944,8 @@ Behavioral patterns focus on communication and responsibility between objects, d
 
 ### 3.1. Strategy
 
-| | |
-|----------|--------|
 | **Who**  | Clients that need to select an algorithm at runtime without changing the code that uses it. |
+|----------|--------|
 | **What** | Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. |
 | **When** | When you have multiple variants of an algorithm and want to switch between them at runtime without modifying client code. |
 | **Where**| Contexts where different behaviors are needed depending on configuration or user input (sorting, compression, validation, pricing, routing). |
@@ -868,9 +958,25 @@ The key participants are the **strategy interface** (the contract all algorithms
 
 New algorithms are added by implementing the strategy interface, leaving existing code untouched (Open/Closed Principle). Strategy is a common alternative to subclassing: instead of creating a subclass for each variant, you compose the context with a strategy at runtime.
 
-<a id="311-examples"></a>
+<a id="311-benefits"></a>
 
-#### 3.1.1. Examples
+#### 3.1.1. Benefits
+
+- Eliminates conditional blocks (`if`/`else`, `switch`) — each algorithm is self-contained and independently testable.
+- New algorithms are added without modifying existing code (Open/Closed Principle).
+- Context and strategies vary independently, promoting composition over inheritance.
+
+<a id="312-trade-offs"></a>
+
+#### 3.1.2. Trade-offs
+
+- Clients must know the available strategies and choose between them — the decision logic moves to the caller.
+- One class per algorithm can lead to many small classes for a family of simple variants.
+- Adds indirection: behavior is delegated rather than inline, which can obscure straightforward logic when only two variants exist.
+
+<a id="313-examples"></a>
+
+#### 3.1.3. Examples
 
 ##### Rust
 
@@ -1054,9 +1160,8 @@ sorter.sort(data)
 
 ### 3.2. Observer
 
-| | |
-|----------|--------|
 | **Who**  | Objects that need to be notified of state changes in another object (e.g., UI elements, logging services, cache invalidators). |
+|----------|--------|
 | **What** | Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. |
 | **When** | When a change to one object requires updating others, and you don't want to hard-code those dependencies. |
 | **Where**| Event handling systems, MVC/MVVM frameworks, GUI toolkits, reactive streams, and any publish-subscribe scenario. |
@@ -1069,9 +1174,26 @@ There are two notification models. In the **push model** (shown below), the subj
 
 Observer is foundational to event-driven architectures, GUI frameworks (click handlers, data binding), reactive programming (`Observable`/`Subject` in Rx), and messaging systems. The pattern trades simplicity for decoupling: debugging notification chains can be harder because the flow of control is implicit rather than explicit.
 
-<a id="321-examples"></a>
+<a id="321-benefits"></a>
 
-#### 3.2.1. Examples
+#### 3.2.1. Benefits
+
+- Loose coupling — subject and observers depend only on abstractions, not on each other's concrete types.
+- Dynamic subscription: observers can register and unregister at any point during runtime.
+- Supports broadcast communication — a single state change notifies all interested parties.
+
+<a id="322-trade-offs"></a>
+
+#### 3.2.2. Trade-offs
+
+- Notification order is generally undefined and may vary between runs or implementations.
+- Lapsed listener problem: forgetting to detach an observer can cause memory leaks and phantom updates.
+- Cascading notifications (one observer's update triggers another subject change) create hard-to-debug chains.
+- Update cost scales linearly with observer count — each state change invokes every registered observer.
+
+<a id="323-examples"></a>
+
+#### 3.2.3. Examples
 
 ##### Rust
 
