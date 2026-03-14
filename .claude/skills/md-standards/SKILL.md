@@ -7,10 +7,11 @@ description: Markdown standards and TOC rules. Use with .md files (exclude READM
 
 ## Headers & TOC
 
-- **H1:** Title only. **No** numbering. **No** TOC.
-- **H2-H4:** Hierarchical numbering (`1.` → `1.1.` → `1.1.1.`).
-- **Anchors:** Place explicit HTML anchors on their own line **above** every H2-H4 header, separated by a blank line.
-- **H5+:** Bold text or simple header. **No** numbering. **No** TOC.
-- **TOC:** Insert `## Table of Contents` after H1. **self-exclude**.
+- **H1:** Title only. No numbering/TOC.
+- **H2-H4:** Numbered (`1.` → `1.1.` → `1.1.1.`).
+- **Anchors:** `<a id="">` own line above H2-H4, blank line between. ID: dot-stripped number + slug (`111-deep-dive`).
+- **H5+:** `#####` header or inline **bold**. No numbering/TOC.
+- **Nesting:** Never skip levels (H3 → H5 ✗, H3 → H4 ✓).
+- **TOC:** `## Table of Contents` after H1. Self-exclude.
 
-**Note:** For strict formatting of hierarchical anchors and TOC links, read `examples.md`.
+See `examples.md` for anchor/TOC formatting details.
