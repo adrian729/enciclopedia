@@ -108,6 +108,7 @@ Compare: **Hunde** [ˈhʊndə] (voiced — d before vowel) vs. **Hund** [hʊnt] 
 | v | "f" | [f] | Vater, viel |
 | w | "v" | [v] | Wasser, wir |
 | z | "ts" in *cats* | [ts] | Zeit, zehn |
+| ß (Eszett) | always voiceless "s" (after long vowel/diphthong) | [s] | groß, Straße, heiß |
 | j | "y" in *yes* | [j] | ja, jung |
 | r (before vowels) | uvular | [ʁ] | rot, Bruder |
 | r (after vowels / syllable-final) | vocalized | [ɐ] | Vater, wir |
@@ -185,7 +186,7 @@ Every German noun has a grammatical gender (masculine, feminine, or neuter) and 
 
 ### 2.2. Verbs (40)
 
-Verbs are listed in the infinitive form. Irregular conjugation patterns are covered in Section 4.5.
+Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have) — the two most fundamental verbs — are covered with full conjugation charts in Sections 4.2–4.3. Irregular conjugation patterns for other verbs are covered in Section 4.5.
 
 ##### Daily Routine
 1. aufstehen — to get up
@@ -234,6 +235,8 @@ Verbs are listed in the infinitive form. Irregular conjugation patterns are cove
 38. meinen — to mean, think
 39. finden — to find
 40. hoffen — to hope
+
+Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conjugation (*ich stehe auf*, not ~~ich aufstehe~~). Separable verbs are fully explained in Week 5; for now, learn it as vocabulary.
 
 <a id="23-adjectives-35"></a>
 
@@ -513,7 +516,13 @@ For regular verbs, remove **-en** from the infinitive to get the stem, then add 
 | ihr | -t | spielt | macht | lernt |
 | sie/Sie | -en | spielen | machen | lernen |
 
-If the stem ends in **-t** or **-d**, add an **-e-** before -st and -t for pronunciation: *arbeit-en* → du arbeit**e**st, er arbeit**e**t.
+If the stem ends in **-t** or **-d**, add an **-e-** before -st and -t for pronunciation:
+
+| Person | arbeiten (work) | finden (find) |
+|--------|-----------------|---------------|
+| du | arbeit**e**st | find**e**st |
+| er/sie/es | arbeit**e**t | find**e**t |
+| ihr | arbeit**e**t | find**e**t |
 
 <a id="45-key-irregular-verbs-in-präsens-with-vowel-changes"></a>
 
@@ -531,6 +540,8 @@ Seven high-frequency verbs change their stem vowel in the **du** and **er/sie/es
 | sie/Sie | sehen | essen | sprechen | laufen | nehmen | geben | helfen |
 
 Note: *nehmen* also changes its consonant (h drops, m doubles: du n**imm**st, er n**imm**t).
+
+Other vocabulary verbs with vowel changes: **fahren** (a→ä: du f**ä**hrst, er f**ä**hrt), **schlafen** (a→ä: du schl**ä**fst, er schl**ä**ft), **lesen** (e→ie: du l**ie**st, er l**ie**st), **fallen** (a→ä: du f**ä**llst, er f**ä**llt). Also fully irregular: **wissen** (ich **weiß**, du **weißt**, er **weiß**, wir wissen).
 
 <a id="5-nominative-case-the-subject"></a>
 
@@ -789,7 +800,7 @@ Read each sentence aloud, focusing on vowel length, final devoicing, and ch soun
 4. Sie trinkt kalte Milch. [ziː tʁɪŋkt kaltə mɪlç]
 5. Der Vater arbeitet viel. [deːɐ̯ faːtɐ ˈaʁbaɪ̯tət fiːl]
 6. Wir gehen in die Schule. [viːɐ̯ ˈɡeːən ɪn diː ˈʃuːlə]
-7. Er sieht den großen Baum. [eːɐ̯ ziːt deːn ˈɡʁoːsn̩ baʊ̯m]
+7. Der Baum ist groß und schön. [deːɐ̯ baʊ̯m ɪst ɡʁoːs ʊnt ʃøːn]
 8. Die Blume ist schön. [diː ˈbluːmə ɪst ʃøːn]
 9. Ich bin müde und hungrig. [ɪç bɪn ˈmyːdə ʊnt ˈhʊŋʁɪç]
 10. Das Kind schläft im Bett. [das kɪnt ʃlɛːft ɪm bɛt]
@@ -812,28 +823,28 @@ Fill in the correct Präsens form of the verb in parentheses.
 10. Sie (sg.) ___ (laufen) schnell.
 11. Wir ___ (sein) müde.
 12. Du ___ (nehmen) das Buch.
-13. Er ___ (geben) mir das Brot.
-14. Ich ___ (helfen) der Frau.
+13. Es ___ (geben) hier einen Park.
+14. Du ___ (helfen) gern.
 15. Ihr ___ (haben) einen Hund.
 
 <a id="103-case-identification"></a>
 
 ### 10.3. Case Identification
 
-Fill in the correct article and label each noun phrase as Nominative (Nom) or Accusative (Acc).
+The nominative form of the article is given in parentheses. Write the correct form for each position and label each noun phrase as Nominative (Nom) or Accusative (Acc). Remember: only masculine articles change in the accusative (der→den, ein→einen).
 
-1. ___ Mann sieht ___ Kind.
-2. ___ Frau kauft ___ Apfel.
-3. ___ Kind trinkt ___ Suppe.
-4. ___ Freund liest ___ Buch.
-5. ___ Mutter findet ___ Schlüssel.
-6. ___ Bruder nimmt ___ Stuhl.
-7. ___ Schwester hat ___ Hund.
-8. ___ Vater kennt ___ Frau.
-9. ___ Kind braucht ___ Bett.
-10. ___ Mann kauft ___ Ei.
-11. ___ Freundin sieht ___ Baum.
-12. ___ Frau nimmt ___ Brot.
+1. ___ (der) Mann sieht ___ (das) Kind.
+2. ___ (die) Frau kauft ___ (ein) Apfel.
+3. ___ (das) Kind trinkt ___ (die) Suppe.
+4. ___ (der) Freund liest ___ (ein) Buch.
+5. ___ (die) Mutter findet ___ (der) Schlüssel.
+6. ___ (der) Bruder nimmt ___ (der) Stuhl.
+7. ___ (die) Schwester hat ___ (ein) Hund.
+8. ___ (der) Vater kennt ___ (die) Frau.
+9. ___ (ein) Kind braucht ___ (ein) Bett.
+10. ___ (der) Mann kauft ___ (ein) Ei.
+11. ___ (eine) Freundin sieht ___ (der) Baum.
+12. ___ (die) Frau nimmt ___ (das) Brot.
 
 <a id="104-word-order-drill"></a>
 
@@ -927,8 +938,8 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 10. Sie **läuft** schnell. (She runs fast.)
 11. Wir **sind** müde. (We are tired.)
 12. Du **nimmst** das Buch. (You take the book.)
-13. Er **gibt** mir das Brot. (He gives me the bread.)
-14. Ich **helfe** der Frau. (I help the woman.)
+13. Es **gibt** hier einen Park. (There is [lit. it gives] here a park.)
+14. Du **hilfst** gern. (You help gladly.)
 15. Ihr **habt** einen Hund. (You all have a dog.)
 
 ##### 10.3. Case Identification
