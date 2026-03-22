@@ -2,245 +2,259 @@
 
 ## Table of Contents
 
-- [1. Week 1: Foundations – Pronunciation, Core Vocabulary, and Sentence Structure](#1-week-1-foundations--pronunciation-core-vocabulary-and-sentence-structure)
-- [2. Week 2: Nominative Case & Simple Present Tense (sein, haben, regular verbs)](#2-week-2-nominative-case--simple-present-tense-sein-haben-regular-verbs)
-- [3. Week 3: Accusative Case & Direct Objects](#3-week-3-accusative-case--direct-objects)
-- [4. Week 4: Word Order Basics – V2 Rule in Simple Statements](#4-week-4-word-order-basics--v2-rule-in-simple-statements)
-- [5. Week 5: Dative Case & Indirect Objects](#5-week-5-dative-case--indirect-objects)
-- [6. Week 6: Possessive Articles & Negation (kein/keine)](#6-week-6-possessive-articles--negation-keinkeine)
-- [7. Week 7: Modal Verbs (können, wollen, müssen) & Infinitive Placement](#7-week-7-modal-verbs-können-wollen-müssen--infinitive-placement)
-- [8. Week 8: Past Tense (Perfekt) with “haben”](#8-week-8-past-tense-perfekt-with-haben)
-- [9. Week 9: Past Tense (Perfekt) with “sein” & Time Expressions](#9-week-9-past-tense-perfekt-with-sein--time-expressions)
-- [10. Week 10: Adjective Endings – Nominative & Accusative (Weak & Strong)](#10-week-10-adjective-endings--nominative--accusative-weak--strong)
-- [11. Week 11: Prepositions with Accusative & Dative (Two‑Way) – Spatial Logic](#11-week-11-prepositions-with-accusative--dative-two-way--spatial-logic)
-- [12. Week 12: Sentence Connectors (und, aber, denn, weil) & Question Formation](#12-week-12-sentence-connectors-und-aber-denn-wie--question-formation)
+- [1. Week 1: Foundations & Core A1 Grammar (A1)](#1-week-1-foundations-core-a1-grammar-a1)
+- [2. Week 2: A1 Completion — Dative, Modals, Perfekt, Prepositions & Connectors (A1)](#2-week-2-a1-completion-dative-modals-perfekt-prepositions-connectors-a1)
+- [3. Week 3: Präteritum, Reflexive Verbs & Full Adjective Declension (A2)](#3-week-3-präteritum-reflexive-verbs-full-adjective-declension-a2)
+- [4. Week 4: Genitive Case, Comparative/Superlative & N-Declension (A2)](#4-week-4-genitive-case-comparativesuperlative-n-declension-a2)
+- [5. Week 5: Separable/Inseparable Verbs, Imperative, Indirect Questions & Expanded Conjunctions (A2)](#5-week-5-separableinseparable-verbs-imperative-indirect-questions-expanded-conjunctions-a2)
+- [6. Week 6: Futur I, werden Three Functions, zu + Infinitiv & Relative Clauses (B1)](#6-week-6-futur-i-werden-three-functions-zu-infinitiv-relative-clauses-b1)
+- [7. Week 7: Plusquamperfekt, Konjunktiv II & Vorgangspassiv (B1)](#7-week-7-plusquamperfekt-konjunktiv-ii-vorgangspassiv-b1)
+- [8. Week 8: Double Infinitive, Verb/Adjective-Preposition Combos, Adverbial Clauses & Two-Part Conjunctions (B1)](#8-week-8-double-infinitive-verbadjective-preposition-combos-adverbial-clauses-two-part-conjunctions-b1)
+- [9. Week 9: Konjunktiv I Introduction, Futur II, Verb Valency & Discourse Cohesion (B1)](#9-week-9-konjunktiv-i-introduction-futur-ii-verb-valency-discourse-cohesion-b1)
+- [10. Week 10: Zustandspassiv, Passive Alternatives, Participial Constructions & Konjunktiv II Past (B2)](#10-week-10-zustandspassiv-passive-alternatives-participial-constructions-konjunktiv-ii-past-b2)
+- [11. Week 11: Full Konjunktiv I, N-Declension Review & Nominalstil (B2)](#11-week-11-full-konjunktiv-i-n-declension-review-nominalstil-b2)
+- [12. Week 12: Advanced Structures & Full System Integration (B2)](#12-week-12-advanced-structures-full-system-integration-b2)
 
-This roadmap is designed for absolute beginners who need clear, incremental, logic‑based explanations. Each week builds directly on the previous one, introducing only the new grammatical element needed to express a broader range of ideas. By the end of week 12 the learner will have covered all A1‑B2 core structures and will be able to produce and understand complex sentences.
+This is an intensive 12-week roadmap designed to take a learner from absolute zero to B2 proficiency. It compresses A1 into two weeks, covers A2 in weeks 3–5, builds B1 in weeks 6–9, and reaches B2 in weeks 10–12. Each week contains a self-contained prompt that a language model or tutor can follow to generate a full lesson with explanations, tables, examples, and practice exercises. The vocabulary strategy targets approximately 3,300 words by week 12, with thematic grouping and word-formation patterns integrated at every stage. Every exercise provides instructions in English, expects German production, and includes an answer key with the German answer and an English literal gloss.
 
 ---
 
-<a id="1-week-1-foundations--pronunciation-core-vocabulary-and-sentence-structure"></a>
+<a id="1-week-1-foundations-core-a1-grammar-a1"></a>
 
-## 1. Week 1: Foundations – Pronunciation, Core Vocabulary, and Sentence Structure
+## 1. Week 1: Foundations & Core A1 Grammar (A1)
 
-**Goal:** Master German sounds, learn 100 high‑frequency nouns/verbs/adjectives, and produce simple declarative sentences in the nominative case.
+**Goal:** Master German pronunciation, learn 150 high-frequency words (including numbers, days, months), conjugate sein/haben/regular/key irregular verbs in Präsens, use nominative and accusative cases, apply V2 word order, form questions, negate sentences, and use es gibt and impersonal es.
 
 **The Prompt:**
 
-> Act as a German phonetics and vocabulary coach. Provide:
-> 1. A concise guide to German pronunciation (vowels, consonants, umlauts, ch, sch, sp/st) with IPA examples and audio‑like descriptions.
-> 2. A list of 100 essential words grouped by category (25 nouns, 25 verbs, 25 adjectives, 25 adverbs/pronouns) with English translations and gender/plural info for nouns.
-> 3. Explain the basic sentence structure: Subject (Nominative) + Verb + Object (if any). Show how to turn a list of words into a grammatical sentence using “der/die/das” as definite articles.
-> 4. Give 10 simple English sentences (e.g., “The dog runs.”) and ask the learner to translate them into German using only the vocabulary provided, then show the correct German version with article‑noun‑verb order.
-> 5. Include a short pronunciation drill: read aloud the 10 sentences focusing on clear vowel length and final devoicing.
+> Act as a German pronunciation, vocabulary, and grammar coach. Generate a comprehensive Week 1 lesson covering:
+> 1. **German Pronunciation Guide** — Cover short & long vowels (a/ä, e, i, o/ö, u/ü) with IPA transcriptions, consonants & final devoicing (b→p, d→t, g→k at word end), special combinations (ch [x]/[ç], sch [ʃ], sp/st [ʃp/ʃt], v [f], w [v], z [ts], j [j], r [ʁ/ɐ]), and diphthongs (au [aʊ], ei/ai [aɪ], eu/äu [ɔʏ], ie [iː]).
+> 2. **Essential Vocabulary (150 Words)** — Provide 40 nouns with gender (der/die/das) & plural grouped into Family/People (10), Food/Drink (10), Home/Objects (10), Places/Nature (10); 40 verbs grouped into Daily Routine (10), Communication (10), Movement (10), Cognitive (10); 35 adjectives grouped into Description (10), Emotion/State (10), Size/Quantity (8), Quality (7); 15 adverbs of time & frequency (heute, morgen, gestern, jetzt, immer, oft, manchmal, selten, nie, bald, gerade, schon, noch, wieder, zuerst); 10 adverbs of place & manner (hier, dort, oben, unten, links, rechts, sehr, zu, auch, gern); 10 common phrases & particles (ja, nein, bitte, danke, bitte schön, entschuldigung, und, oder, aber, nicht).
+> 3. **Numbers & Calendar** — Cardinal numbers 0–100 (spelling patterns: dreizehn, dreißig, einundzwanzig), 100–1,000,000 (compound formation rules), ordinal numbers (erste, zweite, dritte, vierte + adjective ending -te/-ste; am + -ten/-sten), days of the week (Montag–Sonntag — all masculine; am Montag), months (Januar–Dezember — all masculine; im Januar), and seasons (Frühling, Sommer, Herbst, Winter — im Sommer).
+> 4. **Personal Pronouns & Present Tense (Präsens)** — List all personal pronouns (ich, du, er, sie, es, wir, ihr, sie, Sie) with English equivalents; provide full conjugation charts for sein (bin, bist, ist, sind, seid, sind) and haben (habe, hast, hat, haben, habt, haben); explain the regular (weak) verb pattern (stem + -e, -st, -t, -en, -t, -en) with 3 example verbs (spielen, machen, lernen); and conjugate 7 key irregular verbs with vowel changes (sehen [ie], essen [i], sprechen [i], laufen [äu], nehmen [i], geben [i], helfen [i]).
+> 5. **Nominative Case — The Subject** — Definite articles (der, die, das, die — gender + plural chart), indefinite articles (ein, eine, ein — no plural indefinite), and identifying the subject with "wer?" (who?) / "was?" (what?).
+> 6. **Accusative Case — Direct Objects** — Accusative articles (den, die, das, die / einen, eine, ein — highlight: only masculine changes), 10 transitive verbs that take accusative (haben, sehen, essen, trinken, kaufen, lesen, finden, nehmen, brauchen, kennen), and recognizing direct objects with "wen?" (whom?) / "was?" (what?).
+> 7. **Word Order — The V2 Rule & Questions** — Verb-Second in main clauses (define "element" as a grammatical chunk), subject-verb inversion when position 1 ≠ subject (3 examples: time, place, adverb in position 1), yes/no questions — V1 (verb moves to position 1; 3 examples), and W-questions (W-word in position 1 + verb in position 2; wer, was, wo, wann, warum, wie, woher, wohin).
+> 8. **Negation** — nicht (negating verbs, adjectives & whole clauses with placement rules: before predicate adjective, before prepositional phrase, at clause end), kein/keine (declension: same endings as ein; replaces ein/eine/ein or bare noun), and nicht vs. kein decision rule (noun with ein → kein; everything else → nicht; 4 contrastive pairs).
+> 9. **es gibt & Impersonal es** — es gibt + accusative (there is / there are — 5 example sentences), weather expressions (Es regnet, Es schneit, Es ist kalt/warm/sonnig), and fixed impersonal phrases (Es geht mir gut/schlecht, Es tut mir leid, Es freut mich).
+> 10. **Practice Exercises** — Include: (a) Pronunciation drill (10 sentences with IPA transcription focusing on vowel length, final devoicing, ch sounds), (b) Conjugation drill (15 sentences — fill in correct Präsens form of sein, haben, regular & irregular verbs), (c) Case identification (12 sentences — label each noun phrase as Nominative or Accusative, select correct article), (d) Word order drill (8 sentences — rearrange elements for correct V2; 4 with time phrase first), (e) Question formation (5 yes/no + 5 W-questions from given statements), (f) Negation transformation (10 affirmative → negative using nicht or kein), (g) Translation exercises (15 English → German using only Week 1 grammar & vocabulary), (h) Answer key with German answers + literal English gloss.
 
 ---
 
-<a id="2-week-2-nominative-case--simple-present-tense-sein-haben-regular-verbs"></a>
+<a id="2-week-2-a1-completion-dative-modals-perfekt-prepositions-connectors-a1"></a>
 
-## 2. Week 2: Nominative Case & Simple Present Tense (sein, haben, regular verbs)
+## 2. Week 2: A1 Completion — Dative, Modals, Perfekt, Prepositions & Connectors (A1)
 
-**Goal:** Conjugate sein, haben, and regular verbs in the present tense; use them in nominative‑only sentences.
+**Goal:** Master the dative case, all six modal verbs with infinitive placement, the Perfekt tense with haben and sein, possessive articles, der-words (dieser/jeder/welcher), all preposition groups, adjective endings in nominative/accusative, telling time, and basic clause linking with coordinating and subordinating conjunctions.
 
 **The Prompt:**
 
-> Act as a German grammar tutor. Explain:
-> 1. The present‑tense conjugation of **sein** (ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind) and **haben** (ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben) with a memor‑friendly pattern chart.
-> 2. The conjugation pattern for **regular (weak) verbs** (stem + -e, -st, -t, -en, -t, -en) using three examples (spielen, machen, lernen).
-> 3. How the nominative case marks the sentence subject; show that the subject can be a pronoun (ich, du, er…) or a noun phrase with der/die/das.
-> 4. Provide 15 English sentences that use only nominative subjects and the verbs sein, haben, or a regular verb (e.g., “I am a student.”, “She has a book.”, “We play soccer.”). Ask the learner to conjugate the verb correctly and place the subject in nominative, then give the answer key.
-> 5. Include a quick tip on subject‑verb inversion for yes/no questions (Verb‑Subject‑…).
+> Act as a German grammar tutor. Generate a comprehensive Week 2 lesson covering:
+> 1. **Dative Case — Indirect Objects** — Dative article forms (dem, der, dem, den+n / einem, einer, einem — full chart), 10 common dative verbs (geben, zeigen, erklären, helfen, bringen, schenken, sagen, empfehlen, erzählen, antworten), identifying indirect objects with "wem?" (to whom?), and word order with two objects (Dat before Acc for nouns; pronoun always first; 4 example pairs).
+> 2. **Possessive Articles & Der-Words** — Possessive articles (mein, dein, sein, ihr, sein, unser, euer, ihr, Ihr — declension table in Nom/Acc/Dat, same endings as ein), der-words: dieser/diese/dieses (this), jeder/jede/jedes (every), welcher/welche/welches (which), der-word declension table (Nom/Acc/Dat — same endings as definite article), and examples using possessives & der-words in all three cases (6 sentences each).
+> 3. **Modal Verbs (All Six)** — Conjugation charts for können, wollen, müssen, sollen, dürfen, mögen/möchten (all 6 with full paradigms, highlighting vowel changes in singular), meaning & nuance (können=ability, wollen=intention [≠English "will"], müssen=necessity, sollen=expectation/advice, dürfen=permission, mögen=liking, möchten=would like), sentence structure (modal in V2 + main verb infinitive at end; 4 examples), and word order with time phrase first (Time + Modal + Subject + ... + Infinitive; 3 examples).
+> 4. **Perfekt — Conversational Past Tense** — Structure (haben/sein conjugated in V2 + Partizip II at end), Partizip II of weak verbs (ge- + stem + -t: gemacht, gespielt, gelernt — 10 examples), Partizip II of strong verbs (ge- + stem + -en with vowel change: gesehen, gegessen, getrunken — 20 high-frequency verbs listed), verbs without ge- (-ieren verbs: studiert, telefoniert; inseparable prefixes: verstanden, bekommen — 8 examples), haben vs. sein auxiliary rules (haben = most verbs; sein = movement verbs + change of state + bleiben/sein), and a table of 30 essential strong verb participles (Infinitiv → Partizip II → Auxiliary).
+> 5. **Prepositions** — Accusative-only (durch, für, gegen, ohne, um — mnemonic + 5 examples), dative-only (aus, bei, mit, nach, seit, von, zu — mnemonic + 7 examples), two-way prepositions (an, auf, hinter, in, neben, über, unter, vor, zwischen — 9 prepositions), and two-way logic: accusative = direction "wohin?" vs. dative = location "wo?" (visual analogy + 6 contrastive pairs).
+> 6. **Telling Time (Uhrzeit)** — Formal time (24-hour system; 5 examples), informal time (halb drei, Viertel nach/vor, fünf nach/vor, kurz vor/nach — 8 examples), questions & answers (Wie spät ist es? / Um wie viel Uhr...? — 4 Q&A pairs), and prepositions with time (am + day, im + month/season, um + clock time, von...bis — 6 examples).
+> 7. **Adjective Endings — Nominative & Accusative** — Weak endings after der-words (Nom: all -e; Acc: masc -en, rest -e — 2×4 table), strong endings without article (2×4 table), the signal rule (if article shows case signal → weak -e/-en; if no signal → adjective carries it), and 10 example noun phrases (5 with der-word, 5 without article).
+> 8. **Sentence Connectors** — Coordinating conjunctions (und, aber, oder, denn, sondern — no word order change; 5 examples), subordinating conjunctions (weil, dass, wenn, obwohl — verb goes to end; 4 examples with clause diagrams), main clause after subordinate clause — verb first (3 examples), and man as impersonal subject (4 examples).
+> 9. **Vocabulary Expansion (150 New Words → 300 Cumulative)** — Thematic groups: Daily Routines (20 words with examples), School & Work (20), Transport & City (20), Shopping & Money (15), Time Expressions (15 items: vorgestern, übermorgen, letzte/nächste Woche, letzten/nächsten Monat, letztes/nächstes Jahr, am Morgen/Nachmittag/Abend, in der Nacht, gerade, bald, früh, spät), Collocations & Fixed Expressions (10 phrases: zum Beispiel, auf jeden Fall, es kommt darauf an, etc.), and Word Formation: Compound Nouns (how German builds nouns: das Haus + die Tür = die Haustür — 10 examples with gender rule: last noun determines gender).
+> 10. **Practice Exercises** — Include: (a) Dative case drill (10 sentences — identify indirect object, select correct dative article), (b) Der-word & possessive drill (8 sentences), (c) Modal verb translation (10 English → German), (d) Perfekt transformation (12 sentences Präsens → Perfekt), (e) Preposition gap-fill (12 sentences — 4 acc-only, 4 dat-only, 4 two-way), (f) Time telling (6 clock images → formal + informal time), (g) Adjective ending drill (10 noun phrases), (h) Clause linking (8 sentence pairs → join with conjunction, apply correct word order), (i) Answer key with German answers + literal English gloss.
 
 ---
 
-<a id="3-week-3-accusative-case--direct-objects"></a>
+<a id="3-week-3-präteritum-reflexive-verbs-full-adjective-declension-a2"></a>
 
-## 3. Week 3: Accusative Case & Direct Objects
+## 3. Week 3: Präteritum, Reflexive Verbs & Full Adjective Declension (A2)
 
-**Goal:** Identify direct objects, master accusative article endings, and build sentences with subject‑verb‑object order.
+**Goal:** Narrate in the simple past using Präteritum for sein/haben/modals and 20 high-frequency strong verbs, use reflexive verbs with accusative and dative pronouns, apply all three adjective declension types (weak/mixed/strong) across all four cases, and use indefinite pronouns.
 
 **The Prompt:**
 
-> Act as a German syntax expert. Explain:
-> 1. What a direct object is (the entity receiving the action of a transitive verb) and why German marks it with the accusative case.
-> 2. The accusative forms of the definite articles (den, die, das, die) and indefinite articles (einen, eine, ein, keine) – highlight that only masculine changes (der → den, ein → einen).
-> 3. How to recognise transitive verbs from the vocabulary list (e.g., haben, sehen, essen, trinken, kaufen) and which verbs take an accusative object.
-> 4. Word order in a simple declarative sentence: Subject (Nom) + Verb + Object (Acc). Show that the verb stays in position 2 even when the object is moved to the front for emphasis.
-> 5. Provide 12 English sentences with a clear subject, verb, and direct object (e.g., “I see the man.”, “She buys a book.”). Ask the learner to: (a) identify subject and object, (b) choose correct accusative article, (c) place verb in position 2, then give the German translation. Include an answer key.
-> 6. Add a short exercise: rewrite three sentences by moving the accusative object to the front (e.g., “Den Mann sehe ich.”) and explain why the verb remains second.
+> Act as a German grammar instructor. Generate a comprehensive Week 3 lesson covering:
+> 1. **Präteritum — Simple Past / Narrative Past** — Full conjugation charts for sein (war, warst...), haben (hatte, hattest...), and all six modal verbs (konnte, wollte, musste, sollte, durfte, mochte — note: no umlaut in Präteritum); weak verb pattern (stem + -te, -test, -te, -ten, -tet, -ten — 5 examples: machte, spielte, lernte, arbeitete, redete); Präteritum of 20 strong verbs (full table: gehen→ging, kommen→kam, sehen→sah, sprechen→sprach, geben→gab, nehmen→nahm, finden→fand, stehen→stand, liegen→lag, schreiben→schrieb, lesen→las, fahren→fuhr, tragen→trug, schlafen→schlief, rufen→rief, fliegen→flog, helfen→half, sterben→starb, ziehen→zog, trinken→trank); and Perfekt vs. Präteritum usage guide (spoken=Perfekt usually, written=Präteritum; sein/haben/modals use Präteritum even in speech — decision flowchart).
+> 2. **Reflexive Verbs** — Accusative reflexive pronouns (mich, dich, sich, uns, euch, sich — chart), 10 common accusative reflexive verbs (sich waschen, sich setzen, sich freuen, sich fühlen, sich erinnern, sich interessieren, sich ärgern, sich entscheiden, sich bewegen, sich treffen), dative reflexive pronouns (mir, dir, sich, uns, euch, sich — note: only 1st/2nd person differ), 8 common dative reflexive verbs (sich etwas vorstellen, wünschen, leisten, merken, ansehen, Sorgen machen, Mühe geben, überlegen), and word order rules (reflexive pronoun immediately after verb in main clause, after subject in subordinate clause — 4 examples each).
+> 3. **Indefinite Pronouns** — man (always 3rd person singular; 4 examples), jemand/niemand (optional -(e)n in Acc/Dat; 4 examples), etwas/nichts (+ adjective as neuter noun: etwas Schönes, nichts Neues; 4 examples), and alle/jeder/manche/einige (declension as der-words; 4 examples).
+> 4. **Full Adjective Declension — All Cases, All Types** — Weak endings after der-words (4×4 table: Nom/Acc/Dat/Gen × Masc/Fem/Neut/Pl; pattern: -e in Nom + Fem/Neut Acc, -en everywhere else), mixed endings after ein-words (4×4 table; key difference: Nom Masc -er, Nom/Acc Neut -es), strong endings without article (4×4 table; full case signals), the signal concept summarized (decision tree), and 12 worked examples (4 per type showing decision process step by step).
+> 5. **Vocabulary Expansion (200 New Words → 500 Cumulative)** — Thematic groups: Feelings & Emotions (25), Health & Body (25), Weather (20), Hobbies & Free Time (25), Travel & Directions (25), and Word Formation: Verb → Noun patterns (spielen → das Spiel — 10 pairs).
+> 6. **Applied Skills** — A short A2 narrative reading (150 words, past tense) with 5 comprehension questions, and a writing prompt: "Mein letzter Urlaub" (8-10 sentences using Präteritum & Perfekt).
+> 7. **Practice Exercises** — Include: (a) Präteritum conjugation drill (15 sentences — Präsens → Präteritum for sein, haben, modals, strong & weak verbs), (b) Perfekt vs. Präteritum choice (10 contexts — justify), (c) Reflexive verb translation (10 English → German — choose acc vs. dat), (d) Indefinite pronoun gap-fill (8 sentences), (e) Adjective ending gap-fill (20 noun phrases — 5 weak, 5 mixed, 5 strong, 5 mixed contexts across all cases), (f) Mixed translation (12 English → German), (g) Answer key.
 
 ---
 
-<a id="4-week-4-word-order-basics--v2-rule-in-simple-statements"></a>
+<a id="4-week-4-genitive-case-comparativesuperlative-n-declension-a2"></a>
 
-## 4. Week 4: Word Order Basics – V2 Rule in Simple Statements
+## 4. Week 4: Genitive Case, Comparative/Superlative & N-Declension (A2)
 
-**Goal:** Internalise the Verb‑Second (V2) constraint as the core of German main‑clause word order.
+**Goal:** Express possession with the genitive case (including proper names), master genitive prepositions, form comparisons with comparative and superlative adjectives (regular and irregular), and correctly decline weak masculine nouns (N-Deklination).
 
 **The Prompt:**
 
-> Act as a German linguist. Explain:
-> 1. The V2 rule: In a main clause, the conjugated verb must always be the second grammatical element (not necessarily the second word). Define “element” as a chunk (subject, time phrase, adverbial, etc.).
-> 2. How to identify the first element: it can be a nominative subject, a time expression (heute, morgen), a place phrase (in der Schule), or an adverb (leider, vielleicht). Show that whatever occupies position 1, the verb moves to position 2.
-> 3. The concept of “inversion”: when something other than the subject starts the sentence, the subject moves immediately after the verb (position 3). Give the formula: [Element] + Verb + Subject + Rest.
-> 4. Provide 10 German sentences where the first element varies (subject, time, place, adverb). Ask the learner to label each element, verify the verb is in position 2, and translate to English. Then give the answer key.
-> 5. Include a transformation drill: take 5 simple SVO sentences and rewrite them with a time phrase first, a place phrase first, and an adverb first, demonstrating the subject‑verb inversion each time.
+> Act as a German grammar specialist. Generate a comprehensive Week 4 lesson covering:
+> 1. **Genitive Case — Possession & Attribution** — Genitive article forms (des, der, des, der / eines, einer, eines — full chart), masculine & neuter nouns add -(e)s in genitive (rules for -es vs. -s), genitive for possession (6 examples), genitive with proper names (Annas Buch — apostrophe only after -s/-x/-z: Thomas' Buch), genitive prepositions (wegen, trotz, während, statt/anstatt, innerhalb, außerhalb — 6 examples), and a complete four-case article table (Nom/Acc/Dat/Gen × Masc/Fem/Neut/Pl — definite, indefinite, and possessive articles).
+> 2. **Comparative & Superlative** — Comparative formation (stem + -er; umlaut for monosyllabic: alt→älter, groß→größer, jung→jünger — 10 regular + 5 with umlaut), superlative formation (am + stem + -sten / der/die/das + stem + -ste; -esten after -d/-t/-s/-z — 10 examples), irregular forms table (gut→besser→am besten, viel→mehr→am meisten, gern→lieber→am liebsten, hoch→höher→am höchsten, nah→näher→am nächsten), comparison structures: als, so...wie, je...desto (3 examples each), and comparative/superlative with adjective endings before nouns (6 examples).
+> 3. **N-Deklination (Weak Masculine Nouns)** — What N-declension is (masculine nouns adding -(e)n in Acc/Dat/Gen; only Nom is bare), full declension pattern chart, 15 common N-declension nouns (der Junge, der Herr [Herrn], der Mensch, der Student, der Nachbar, der Kollege, der Kunde, der Polizist, der Tourist, der Journalist, der Architekt, der Affe, der Löwe, der Name, das Herz [irregular: des Herzens]), and recognition patterns (endings -e for living beings, -ent/-ant/-ist/-at/-oge/-graf for professions of Latin/Greek origin).
+> 4. **Vocabulary Expansion (200 New Words → 700 Cumulative)** — Thematic groups: City & Directions (25), Clothing & Appearance (25), Describing People (25), Nature & Animals (25), and Word Formation: Adjective → Noun with -heit/-keit (schön→die Schönheit, möglich→die Möglichkeit — 10 pairs).
+> 5. **Applied Skills** — An A2 descriptive text reading (150 words, comparing two cities) with 5 comprehension questions, and a writing prompt: Compare two things (8-10 sentences using comparative/superlative + genitive).
+> 6. **Practice Exercises** — Include: (a) Genitive case drill (10 sentences — express possession with correct articles and noun endings), (b) Genitive preposition gap-fill (8 sentences), (c) Comparative & superlative transformation (12 sentences — form comparative or superlative in context), (d) N-declension gap-fill (8 sentences — decline weak masculine nouns in all four cases), (e) Mixed translation (12 English → German), (f) Answer key.
 
 ---
 
-<a id="5-week-5-dative-case--indirect-objects"></a>
+<a id="5-week-5-separableinseparable-verbs-imperative-indirect-questions-expanded-conjunctions-a2"></a>
 
-## 5. Week 5: Dative Case & Indirect Objects
+## 5. Week 5: Separable/Inseparable Verbs, Imperative, Indirect Questions & Expanded Conjunctions (A2)
 
-**Goal:** Understand the dative as the case for indirect objects, learn dative article endings, and construct sentences with both direct and indirect objects.
+**Goal:** Handle separable and inseparable prefix verbs across all learned tenses, form commands with the imperative, construct indirect questions with ob and W-words, use expanded subordinating conjunctions, and apply coordinating adverbs with inversion.
 
 **The Prompt:**
 
-> Act as a German grammar instructor. Explain:
-> 1. What an indirect object is (the recipient of the direct object) and why German uses the dative case to mark it. Give verbs that commonly take a dative indirect object (geben, zeigen, erklären, bringen, schenken).
-> 2. The dative forms of the definite articles (dem, der, dem, den) and indefinite articles (einem, einer, einem, keinen) – note the pattern: masculine/neuter → -em, feminine → -er, plural → -en.
-> 3. How to distinguish accusative vs. dative objects in a sentence: ask “wen?” (whom? – accusative) vs. “wem?” (to whom? – dative).
-> 4. Word order in a sentence with both objects: Subject (Nom) + Verb + Indirect Object (Dat) + Direct Object (Acc). Show that the dative usually precedes the accusative when both are nouns; if one is a pronoun, it comes first.
-> 5. Provide 10 English sentences containing a subject, verb, indirect object, and direct object (e.g., “I give the woman the book.”). Ask the learner to: (a) identify Nom, Dat, Acc, (b) select correct articles, (c) place verb in position 2, then give the German translation. Include answer key.
-> 6. Add a short exercise: rewrite three sentences by moving the dative object to the front for emphasis and show the resulting word order.
+> Act as a German grammar tutor. Generate a comprehensive Week 5 lesson covering:
+> 1. **Separable Prefix Verbs** — List separable prefixes (ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, zurück-, weg-, her-, hin-), separable verbs in Präsens with prefix at end (5 examples), Perfekt with ge- between prefix and stem (aufgestanden, angefangen, mitgenommen, eingekauft, zugehört — 10 Partizip II forms), separable verbs in subordinate clauses where prefix reunites (4 examples), and a table of 20 high-frequency separable verbs (aufstehen, anfangen, aufhören, ankommen, aufmachen, zumachen, einkaufen, mitnehmen, zurückkommen, ausgehen, einladen, anrufen, aufräumen, umziehen, abfahren, einschlafen, vorstellen, vorbereiten, teilnehmen, stattfinden).
+> 2. **Inseparable Prefix Verbs** — List inseparable prefixes (be-, emp-, ent-, er-, ge-, miss-, ver-, zer- — always unstressed), no ge- in Partizip II (10 examples: verstanden, bekommen, empfohlen, erzählt, begonnen, entschieden, vergessen, zerstört...), 15 high-frequency inseparable verbs table, and the stress rule for distinguishing (separable: prefix stressed [ÁNfangen]; inseparable: stem stressed [verSTEHen]).
+> 3. **Imperative Mood** — du-form (stem only, drop -st; irregular: Sei ruhig! Hab Geduld!), ihr-form (same as ihr-Präsens), Sie-form (infinitive + Sie; Seien Sie ruhig!), and imperative of separable verbs (Steh auf! Steht auf! Stehen Sie auf! — 4 examples).
+> 4. **Indirect Questions (Indirekte Fragen)** — Indirect yes/no questions with ob (5 examples), indirect W-questions (5 examples), word order: verb-final in indirect questions, and reporting verbs (fragen, wissen, sich fragen, verstehen, erklären, sagen — 4 examples).
+> 5. **Expanded Conjunctions & Adverbs** — Temporal conjunctions (als, wenn, nachdem, bevor, während, seitdem, bis, sobald — 8 examples, one per conjunction), causal & conditional (da, falls — 4 examples), verb-final rule summary chart for all subordinating conjunctions, main clause after subordinate clause with verb first (4 examples), coordinating adverbs (deshalb, trotzdem, deswegen, darum, außerdem, also — position 1 + inversion; 6 examples), and position of nicht in complex sentences (5 rules with examples).
+> 6. **Vocabulary Expansion (200 New Words → 900 Cumulative)** — Thematic groups: Workplace & Professions (30), Technology & Media (25), Household & Chores (25), Collocations with Separable Verbs (15 phrases: einen Termin ausmachen, Bescheid sagen, etc.), and Word Formation: Verb Prefixes Change Meaning (stehen→aufstehen→verstehen→bestehen→entstehen — 8 verb families).
+> 7. **Applied Skills** — An A2 dialogue reading with indirect questions (150 words) with 5 comprehension questions, and a writing prompt: Write a set of instructions (8-10 imperative sentences for a recipe or daily routine).
+> 8. **Practice Exercises** — Include: (a) Separable verb drill (12 sentences — form Präsens, Perfekt, and subordinate clause variants for 4 verbs), (b) Inseparable verb Partizip II formation (10 infinitives → Partizip II), (c) Imperative transformation (8 statements → imperative in du, ihr, and Sie forms), (d) Indirect question formation (8 direct → indirect using ob or W-word), (e) Conjunction clause-linking (10 sentence pairs → join with correct conjunction and word order), (f) Mixed translation (12 English → German), (g) Answer key.
 
 ---
 
-<a id="6-week-6-possessive-articles--negation-keinkeine"></a>
+<a id="6-week-6-futur-i-werden-three-functions-zu-infinitiv-relative-clauses-b1"></a>
 
-## 6. Week 6: Possessive Articles & Negation (kein/keine)
+## 6. Week 6: Futur I, werden Three Functions, zu + Infinitiv & Relative Clauses (B1)
 
-**Goal:** Express possession and negation accurately using possessive adjectives and the negation word “kein”.
+**Goal:** Express future intentions with Futur I, distinguish werden's three functions (become/future/passive), build infinitive constructions with zu, and add descriptive detail to nouns using relative clauses with pronouns in all four cases.
 
 **The Prompt:**
 
-> Act as a German grammar coach. Explain:
-> 1. Possessive adjectives (mein, dein, sein/ihr/sein, unser, euer, ihr/Ihr) and how they follow the same endings as the indefinite article “ein” in nominative, accusative, and dative cases. Provide a compact table showing endings for each case/gender.
-> 2. How to express “my book”, “your dog”, “their house” in nominative, accusative, and dative contexts, with examples.
-> 3. The negation word **kein** (keine, kein, keinen, keiner, keinem, keinen) as the negative counterpart of “ein”. Explain its declension pattern (same as possessive adjectives) and its use to negate nouns (“Kein Hunger”, “Keine Zeit”).
-> 4. Contrast “nicht” (negates verbs, adjectives, whole clauses) with “kein” (negates only nouns). Give rules for placement: “kein” + noun usually appears where the affirmative noun would be; “nicht” usually goes toward the end of the clause, before the infinitive or past participle.
-> 5. Provide 12 English sentences mixing possession and negation (e.g., “I have no time.”, “She does not have a car.”, “They are not students.”). Ask the learner to translate them into German, choosing the correct possessive or “kein” form and placing “nicht” correctly. Include answer key.
-> 6. Add a short drill: transform five affirmative sentences into negative ones using “kein” where appropriate, and five using “nicht”.
+> Act as a German B1 grammar instructor. Generate a comprehensive Week 6 lesson covering:
+> 1. **werden — Three Functions** — werden as main verb "to become" (conjugation review + 5 examples), werden as future auxiliary (preview), werden as passive auxiliary (preview — full treatment in Week 7), and context clues for distinguishing (infinitive at end = future; Partizip II at end = passive; no other verb = "become" — decision flowchart with 6 identification examples).
+> 2. **Futur I — Future Tense** — Formation (werden conjugated in V2 + infinitive at end), full conjugation of werden (werde, wirst, wird, werden, werdet, werden), Futur I for prediction, intention & speculation (3 contrastive pairs with Präsens showing when each is preferred), and Futur I in subordinate clauses (werden goes to end; 3 examples).
+> 3. **zu + Infinitiv Constructions** — Basic structure (5 examples), 10 verbs requiring zu + Infinitiv (versuchen, beginnen, aufhören, vorhaben, hoffen, planen, vergessen, versprechen, scheinen, brauchen), adjective/noun + zu + Infinitiv (5 examples), um...zu (purpose — 4 examples), ohne...zu (without doing — 3 examples), anstatt/statt...zu (instead of — 3 examples), and zu with separable verbs — zu inserted between prefix and verb (aufzustehen, anzufangen, mitzunehmen — 5 examples).
+> 4. **Relative Clauses (Relativsätze)** — Definition (adjective clause modifying a noun; comma-separated), relative pronoun declension table (Nom/Acc/Dat/Gen including denen, dessen, deren), two rules: gender/number from antecedent, case from function in clause (4 worked examples), word order: relative pronoun + ... + verb at end (4 examples), relative clauses with prepositions (preposition before relative pronoun; 5 examples), and relative clauses with wo (places), was (indefinites/superlatives), wer (whoever) — 4 examples.
+> 5. **Vocabulary Expansion (250 New Words → 1,150 Cumulative)** — Thematic groups: Society & Community (30), Environment & Sustainability (30), Education & Learning (25), Opinions & Arguments (25 — meiner Meinung nach, ich bin der Ansicht, etc.), and Word Formation: Noun → Adjective with -lich/-ig/-isch/-bar (Freund→freundlich, Hunger→hungrig, Europa→europäisch, trink→trinkbar — 10 pairs).
+> 6. **Applied Skills** — A B1 informational text reading (200 words, with relative clauses and future statements) with 5 comprehension questions, and a writing prompt: "Meine Pläne für die Zukunft" (10-12 sentences using Futur I, zu+Infinitiv, and relative clauses).
+> 7. **Practice Exercises** — Include: (a) werden function identification (8 sentences — label as "become" / "future" / "passive"), (b) Futur I transformation (8 sentences Präsens → Futur I, including 2 in subordinate clauses), (c) zu + Infinitiv sentence completion (10 sentences), (d) um...zu / ohne...zu / anstatt...zu drill (8 sentences), (e) Relative clause construction (12 sentences — two sentences → one with relative clause; supply correct pronoun + verb placement), (f) Mixed translation (12 English → German), (g) Answer key.
 
 ---
 
-<a id="7-week-7-modal-verbs-können-wollen-müssen--infinitive-placement"></a>
+<a id="7-week-7-plusquamperfekt-konjunktiv-ii-vorgangspassiv-b1"></a>
 
-## 7. Week 7: Modal Verbs (können, wollen, müssen) & Infinitive Placement
+## 7. Week 7: Plusquamperfekt, Konjunktiv II & Vorgangspassiv (B1)
 
-**Goal:** Express ability, desire, and necessity using modal verbs, and place the main verb infinitive at the end of the clause.
+**Goal:** Narrate sequenced past events with Plusquamperfekt, express hypothetical/polite statements with Konjunktiv II (würde-form, wäre/hätte, modal synthetics), form basic process passive constructions, and use impersonal passive.
 
 **The Prompt:**
 
-> Act as a German modal‑verb specialist. Explain:
-> 1. The present‑tense conjugations of **können** (can/to be able), **wollen** (to want), **müssen** (must/to have to) – note the vowel change in ich/du/er/sie/es forms (kann, willst, muss) and the regular pattern for wir/ihr/sie/Sie.
-> 2. The syntactic rule: In a clause with a modal verb, the conjugated modal occupies position 2 (V2) and the main verb appears in its infinitive form at the very end of the clause (or after any objects/predicatives).
-> 3. How to distinguish the nuances: *können* = ability/possibility, *wollen* = intention/desire (note: false friend to English “will”), *müssen* = objective necessity (external obligation) vs. *sollen* (subjective expectation – introduced later).
-> 4. Word order examples: Subject + Modal + (Object) + ... + Main Verb (infinitive). Show placement when there is a time phrase first (Time + Modal + Subject + ... + Inf).
-> 5. Provide 10 English sentences that require a modal verb (e.g., “I can swim.”, “She wants to learn German.”, “We must go now.”). Ask the learner to: (a) choose the correct modal, (b) conjugate it for the subject, (c) place the main verb infinitive at the end, then give the German translation. Include answer key.
-> 6. Include a transformation drill: take five simple sentences and rewrite them with a time phrase first, demonstrating that the infinitive stays at the end.
+> Act as a German B1 grammar tutor. Generate a comprehensive Week 7 lesson covering:
+> 1. **Plusquamperfekt — Past Perfect** — Formation (hatte/war + Partizip II at end), when to use: event before another past event (timeline diagram), temporal sequencing with nachdem (nachdem + Plusquamperfekt, main clause in Präteritum/Perfekt — 5 examples), and contrast: Perfekt vs. Präteritum vs. Plusquamperfekt on a timeline (3-event narrative).
+> 2. **Konjunktiv II — Subjunctive for Hypotheticals & Politeness** — würde + Infinitiv (standard form for most verbs; 5 examples), synthetic forms of sein → wäre, haben → hätte (full conjugation charts; 5 examples each), synthetic forms of modal verbs (könnte, dürfte, müsste, sollte — full charts; 4 examples), polite requests (Könnten Sie mir helfen? Ich hätte gern... — 6 examples), wishes (Wenn ich reich wäre... — 5 examples), unreal conditions Type 2 (Wenn ich Zeit hätte, würde ich kommen. — 6 examples), and word order in wenn-clauses (verb-final; wenn omission → V1: Hätte ich Zeit, würde ich kommen. — 3 examples).
+> 3. **Vorgangspassiv — Process Passive** — Formation (werden + Partizip II), passive in Präsens (4 examples), Präteritum (4 examples), Perfekt (ist + Partizip II + worden — 4 examples), agent with von + Dativ (4 examples), instrument with mit + Dativ / cause with durch + Akkusativ (3 examples each), and impersonal passive with es (Es wird hier nicht geraucht. — 4 examples; es drops when another element is in position 1).
+> 4. **Vocabulary Expansion (300 New Words → 1,450 Cumulative)** — Thematic groups: Politics & Government (30), Economy & Finance (30), Relationships & Social Life (25), Abstract Concepts (25 — die Freiheit, die Verantwortung, die Gerechtigkeit, etc.), Collocations & Fixed Expressions (20 phrases: Bescheid geben, in Frage kommen, etc.), and Word Formation: Prefix ver- changes meaning (kaufen→verkaufen, stehen→verstehen, sprechen→versprechen — 10 pairs).
+> 5. **Applied Skills** — A B1 opinion article reading (200 words, using Konjunktiv II and passive) with 5 comprehension questions, and a writing prompt: "Was würde ich tun, wenn...?" (10-12 sentences mixing hypotheticals and passive).
+> 6. **Practice Exercises** — Include: (a) Plusquamperfekt sequencing (8 sentence pairs — use nachdem to combine), (b) Konjunktiv II transformation (10 real → hypothetical sentences), (c) Polite request reformulation (6 direct → polite), (d) Active → passive conversion (12 sentences — 4 Präsens, 4 Präteritum, 4 Perfekt), (e) Impersonal passive formation (4 sentences — with and without es), (f) Mixed translation (12 English → German), (g) Answer key.
 
 ---
 
-<a id="8-week-8-past-tense-perfekt-with-haben"></a>
+<a id="8-week-8-double-infinitive-verbadjective-preposition-combos-adverbial-clauses-two-part-conjunctions-b1"></a>
 
-## 8. Week 8: Past Tense (Perfekt) with “haben”
+## 8. Week 8: Double Infinitive, Verb/Adjective-Preposition Combos, Adverbial Clauses & Two-Part Conjunctions (B1)
 
-**Goal:** Form the Perfekt (present perfect) with the auxiliary “haben” for most verbs, and correctly place the past participle at the end.
+**Goal:** Master the double infinitive construction with modals in Perfekt, use verbs and adjectives with fixed prepositions and their da-/wo-compound replacements, form adverbial clauses with indem, and link ideas with two-part conjunctions.
 
 **The Prompt:**
 
-> Act as a German past‑tense tutor. Explain:
-> 1. The Perfekt construction: conjugated form of **haben** (or sein, covered next week) in position 2 + past participle (Partizip II) at the end of the clause.
-> 2. How to build the past participle for **weak (regular) verbs**: ge‑ + stem + ‑t (e.g., gemacht, gespielt, gelernt). Highlight the exception of verbs ending in ‑ieren (studieren → studiert, no ge‑).
-> 3. How to build the past participle for **strong (irregular) verbs**: ge‑ + stem + ‑en (often with vowel change, e.g., gesehen, gegessen, gefahren). Provide a list of 20 high‑frequency strong verbs from the vocabulary.
-> 4. Explain why most verbs use **haben** as the auxiliary: they are transitive or describe actions without a change of location/state (the “haben‑rule”).
-> 5. Word order: Subject + haben (conjugated) + (objects/adverbials) + past participle. Show that when a time phrase starts the sentence, the structure is: Time + habe(n) + Subject + … + past participle.
-> 6. Provide 12 English sentences in the simple past (e.g., “I played soccer yesterday.”, “She has bought a book.”) that clearly take “haben” in German. Ask the learner to: (a) pick the correct past participle, (b) conjugate haben for the subject, (c) place everything correctly, then give the German translation. Include answer key.
-> 7. Add a short exercise: rewrite three sentences by moving a time expression to the front and show the resulting word order.
+> Act as a German B1 grammar instructor. Generate a comprehensive Week 8 lesson covering:
+> 1. **Double Infinitive with Modals in Perfekt** — The rule: modal in Perfekt uses infinitive instead of Partizip II (Er hat kommen können, NOT *gekonnt), word order in main clause (Subject + hat/ist + ... + Infinitive + Modal Infinitive — 6 examples, one per modal), double infinitive in subordinate clauses — exception to verb-final (hat moves before the double infinitive; 4 examples), and double infinitive with lassen and perception verbs (hat machen lassen, hat kommen sehen — 3 examples).
+> 2. **Verbs with Fixed Prepositions** — 12 verb + accusative preposition combos (warten auf, sich freuen auf, denken an, sich gewöhnen an, sich interessieren für, bitten um, sich bewerben um, sich kümmern um, achten auf, reagieren auf, verzichten auf, glauben an), 12 verb + dative preposition combos (Angst haben vor, gehören zu, träumen von, sprechen mit, sprechen über+Acc, teilnehmen an, leiden unter, sich beschäftigen mit, sich erkundigen nach, bestehen aus, abhängen von, warnen vor), da-compounds for things/clauses (darauf, daran, dafür, davon, darüber, damit, davor, dazu — 8 examples), wo-compounds in questions (worauf, woran, wofür, wovon, worüber — 5 Q&A pairs), and da-/wo- vs. preposition + pronoun for people (4 contrastive pairs).
+> 3. **Adjectives with Fixed Prepositions** — Adj + auf + Acc (stolz, neugierig, gespannt, wütend, neidisch — 5 examples), Adj + für + Acc (bereit, verantwortlich, dankbar, typisch — 4 examples), Adj + mit + Dat (zufrieden, einverstanden, verheiratet, beschäftigt — 4 examples), Adj + von + Dat (abhängig, überzeugt, begeistert, enttäuscht — 4 examples), Adj + über + Acc (froh, überrascht, erstaunt, traurig — 4 examples), and da-compounds with adjectives connecting to dass-clauses (4 examples).
+> 4. **Adverbial Clause with indem** — Structure: indem + subordinate clause (4 examples), and indem vs. durch + nominalized verb (3 contrastive pairs; connection to Nominalstil in Week 11).
+> 5. **Two-Part (Correlative) Conjunctions** — sowohl...als auch (2 examples), weder...noch (2 examples), entweder...oder (2 examples; note: entweder in position 0 or 1), nicht nur...sondern auch (2 examples), zwar...aber (2 examples), and word order summary table for all pairs.
+> 6. **Vocabulary Expansion (300 New Words → 1,750 Cumulative)** — Thematic groups: Culture & Arts (30), Science & Research (30), Formal Expressions (20 phrases — mit freundlichen Grüßen, Bezug nehmend auf, etc.), Verb-Preposition Collocations as Vocabulary (20 pairs with examples), and Word Formation: Prefix un- for negation (zufrieden→unzufrieden, möglich→unmöglich — 10 pairs).
+> 7. **Applied Skills** — A B1 news report reading (250 words, with passive and verb-preposition combos) with 5 comprehension questions, and a writing prompt: Write a formal email expressing an opinion (10-12 sentences using two-part conjunctions and da-compounds).
+> 8. **Practice Exercises** — Include: (a) Double infinitive formation (8 sentences — Präsens with modal → Perfekt), (b) Double infinitive in subordinate clauses (6 sentences), (c) Verb-preposition matching (15 verbs — supply correct preposition + case), (d) Da-/wo-compound replacement (10 sentences), (e) Adjective-preposition gap-fill (8 sentences), (f) indem clause construction (4 sentences), (g) Two-part conjunction sentence building (8 sentence pairs → combine), (h) Mixed translation (10 English → German), (i) Answer key.
 
 ---
 
-<a id="9-week-9-past-tense-perfekt-with-sein--time-expressions"></a>
+<a id="9-week-9-konjunktiv-i-introduction-futur-ii-verb-valency-discourse-cohesion-b1"></a>
 
-## 9. Week 9: Past Tense (Perfekt) with “sein” & Time Expressions
+## 9. Week 9: Konjunktiv I Introduction, Futur II, Verb Valency & Discourse Cohesion (B1)
 
-**Goal:** Use “sein” as the auxiliary for verbs of movement and change of state, and refine expression of past time.
+**Goal:** Report what others have said using basic Konjunktiv I, express completed future actions with Futur II, understand verb valency patterns, develop paragraph-level writing with discourse connectors, and review the complete six-tense system.
 
 **The Prompt:**
 
-> Act as a German past‑tense coach. Explain:
-> 1. The Perfekt with **sein**: conjugated sein (bin, bist, ist, sind, seid, sind) in position 2 + past participle at the end.
-> 2. The “movement or change of state” rule: verbs indicating a change of location (gehen, kommen, fahren, fliegen, laufen) or a change of condition (aufwachen, einschlafen, sterben, werden, bleiben) take **sein** as auxiliary. Provide a list of 30 such verbs.
-> 3. Past participle formation for these verbs (same ge‑…‑t/‑en rules as week 8, with attention to vowel changes in strong forms).
-> 4. Time expressions in the past: gestern, vorgestern, letzte Woche, letztes Jahr, um … Uhr, früher, früher einmal. Show how they integrate into the V2 structure (Time + sein‑conjugated + Subject + … + past participle).
-> 5. Word order drills: Subject + sein + … + past participle vs. Time + sein + Subject + … + past participle.
-> 6. Provide 10 English sentences that require “sein” in the Perfekt (e.g., “I went to Berlin.”, “She became tired.”, “We arrived early.”). Ask the learner to: (a) decide whether the verb takes haben or sein, (b) build the correct past participle, (c) conjugate sein, (d) place everything correctly, then give the German translation. Include answer key.
-> 7. Include a mixed exercise: five sentences with haben auxiliaries, five with sein auxiliaries, requiring the learner to choose the correct auxiliary.
+> Act as a German B1 grammar tutor. Generate a comprehensive Week 9 lesson covering:
+> 1. **Indirect Speech & Konjunktiv I Introduction** — Direct vs. indirect speech (4 contrastive pairs), Konjunktiv I Präsens key forms (sei, habe, könne, müsse, wolle, werde, gehe, komme — 3rd person singular focus + full sein paradigm), dass-clause alternative (3 examples), when K1 = indicative → substitute K2 (4 examples), and common reporting verbs (sagen, meinen, behaupten, erklären, berichten, betonen, hinzufügen — 5 examples).
+> 2. **Futur II — Future Perfect** — Formation (werden + Partizip II + haben/sein), completed future actions (4 examples), speculation about completed past (4 examples), and Futur II vs. Futur I vs. Perfekt usage guide (3 contrastive triplets).
+> 3. **Verb Valency Patterns (Verbvalenz)** — Verbs with dative only (helfen, danken, gratulieren, folgen, begegnen, widersprechen, gehören, ähneln — 8 verbs), verbs with Dat + Acc review & expansion (9 verbs), verbs with two accusatives (nennen, kosten, lehren — 3 verbs), and verbs governing dass-clauses vs. zu-infinitive (decision guide with 6 contrastive pairs).
+> 4. **Discourse Connectors & Text Cohesion** — Sequencing (erstens, zweitens, drittens, zunächst, dann, anschließend, danach, schließlich, zuletzt — 9 connectors in a model paragraph), contrast (einerseits...andererseits, hingegen, dennoch, allerdings, im Gegensatz dazu, dagegen — 6 connectors), addition & emphasis (außerdem, darüber hinaus, vor allem, besonders, zudem — 5 connectors), cause & consequence (folglich, infolgedessen, daher, aus diesem Grund, demzufolge — 5 connectors), summary & conclusion (zusammenfassend, insgesamt, abschließend, alles in allem, im Großen und Ganzen — 5 connectors), and appositions with comma rules (4 examples).
+> 5. **Complete Tense System Review** — All six tenses chart (Präsens, Perfekt, Präteritum, Plusquamperfekt, Futur I, Futur II — formation + example), tense usage guide (decision flowchart), and ASCII timeline visualization with example sentences placed on it.
+> 6. **Vocabulary Expansion (350 New Words → 2,100 Cumulative)** — Thematic groups: News & Current Events (40), Academic Vocabulary (40), Discourse Connectors as Vocabulary (30 items with usage notes), Collocations & Fixed Expressions (20 phrases), and Word Formation: Nominalization preview (-ung from verbs: die Entwicklung, die Bedeutung — 10 pairs).
+> 7. **Applied Skills** — A B1 news summary reading with indirect speech (250 words) with 5 comprehension questions, and a writing prompt: Summarize an article in indirect speech (10-12 sentences using K1 and discourse connectors).
+> 8. **Practice Exercises** — Include: (a) Direct → indirect speech conversion (10 sentences — use K1 where possible, K2 as substitute), (b) Futur II formation (8 sentences), (c) Verb valency drill (8 sentences — choose correct case/structure), (d) Discourse connector gap-fill (2 short paragraphs with 4 blanks each), (e) Tense identification & transformation (12 sentences — name tense, convert to specified tense), (f) Paragraph writing (2 prompts — 6-8 sentence paragraphs using connectors, indirect speech, varied tenses), (g) Answer key.
 
 ---
 
-<a id="10-week-10-adjective-endings--nominative--accusative-weak--strong"></a>
+<a id="10-week-10-zustandspassiv-passive-alternatives-participial-constructions-konjunktiv-ii-past-b2"></a>
 
-## 10. Week 10: Adjective Endings – Nominative & Accusative (Weak & Strong)
+## 10. Week 10: Zustandspassiv, Passive Alternatives, Participial Constructions & Konjunktiv II Past (B2)
 
-**Goal:** Apply adjective endings correctly when the noun is preceded by a definite article (weak ending) or no article (strong ending), focusing on nominative and accusative cases.
+**Goal:** Distinguish process vs. state passive, form passive with modals and use passive alternatives (man, sich lassen, sein + zu), create participial adjectives and extended participial phrases, and express past counterfactuals with Konjunktiv II.
 
 **The Prompt:**
 
-> Act as a German adjective‑ending specialist using the “signal” concept. Explain:
-> 1. **Weak endings**: used when the noun is preceded by a definite article (der, die, das, die) or a word that already shows case (dieser, jener, welcher). Provide the full weak ending table:
->    - Nominative: masc ‑e, fem ‑e, neut ‑e, pl ‑en
->    - Accusative: masc ‑en, fem ‑e, neut ‑e, pl ‑en
->    - Dative: all ‑en
->    - Genitive: all ‑en
-> 2. **Strong endings**: used when there is no article (or after ein‑words that do not show case in that position). The ending carries the full case information. Provide the strong ending table for nominative and accusative:
->    - Nominative: masc ‑er, fem ‑e, neut ‑es, pl ‑e
->    - Accusative: masc ‑en, fem ‑e, neut ‑es, pl ‑e
-> 3. How to decide: (a) Is there a definite article or a der‑word? → weak. (b) Is there an indefinite article (ein, eine, kein, etc.)? → mixed (covered later). (c) Is there no article? → strong.
-> 4. Provide 20 noun‑adjective pairs (e.g., guter Tag, schönes Buch, alte Frau) and ask the learner to supply the correct adjective ending in nominative or accusative depending on the sentence context (subject vs. direct object). Show the article/noun/adjective order.
-> 5. Include 10 English sentences that require an adjective in nominative (predicate) or accusative (object). Ask the learner to translate, choosing correct article, noun, adjective ending, and verb placement. Provide answer key.
-> 6. Add a short drill: given a noun with article, produce the adjective form for all four cases (Nom, Acc, Dat, Gen) – focusing this week on Nom and Acc only.
+> Act as a German B2 grammar specialist. Generate a comprehensive Week 10 lesson covering:
+> 1. **Zustandspassiv — State Passive** — Formation (sein + Partizip II), Vorgangspassiv vs. Zustandspassiv (5 contrastive pairs), and Zustandspassiv across tenses (Präsens: ist geschlossen, Präteritum: war geschlossen, Futur: wird geschlossen sein — chart + 3 examples).
+> 2. **Advanced Passive Constructions** — Passive with modal verbs (6 examples, one per modal), passive alternative: man + active (4 pairs), passive alternative: sich lassen + Infinitiv (4 pairs showing equivalence), passive alternative: sein + zu + Infinitiv (4 pairs), and choosing the right construction (decision guide with 4 context-based exercises).
+> 3. **Participial Adjectives** — Partizip I as adjective (Infinitiv + d + ending: schlafend → das schlafende Kind — 6 examples), Partizip II as adjective (Partizip II + ending: geschrieben → das geschriebene Buch — 6 examples), and Partizip I = active/ongoing vs. Partizip II = passive/completed (4 contrastive pairs).
+> 4. **Extended Participial Constructions (Erweiterte Partizipialattribute)** — Structure (article + modifiers + Partizip + ending + noun), left-branching: all modifiers between article and noun (6 examples of increasing complexity), converting relative clause → extended participial phrase (5 pairs), converting extended participial phrase → relative clause (5 pairs), and when to use which (formal/written → participial; spoken → relative clause).
+> 5. **Konjunktiv II — Past (Irreale Vergangenheit)** — Formation (hätte/wäre + Partizip II), past counterfactual conditions Type 3 (6 examples), past wishes (4 examples), and all three conditional types side by side (Type 0, Type 2, Type 3 — 3 complete triplets on different topics).
+> 6. **Vocabulary Expansion (400 New Words → 2,500 Cumulative)** — Thematic groups: Law & Justice (30), Business & Commerce (30), Formal Correspondence (25 phrases), Common Idioms (25 idioms: die Daumen drücken, den Nagel auf den Kopf treffen, etc.), and Word Formation: Partizip I/II as established adjectives (anstrengend, überraschend, begeistert, enttäuscht — 10 examples).
+> 7. **Applied Skills** — A B2 academic excerpt reading (300 words, with extended participial phrases and passive) with 6 comprehension questions, and a writing prompt: "Was hätte ich anders gemacht?" (12-15 sentences using Type 3 conditionals, passive, and participial adjectives).
+> 8. **Practice Exercises** — Include: (a) Vorgangspassiv vs. Zustandspassiv identification (10 sentences — label and justify), (b) Active → passive with modals (8 sentences), (c) Passive alternatives reformulation (8 sentences — rewrite using man / sich lassen / sein + zu), (d) Partizip I & II adjective formation (10 noun phrases), (e) Relative clause ↔ extended participial phrase conversion (6 pairs each direction), (f) Past counterfactual sentences (8 Type 3 conditionals), (g) Mixed translation (10 English → German), (h) Answer key.
 
 ---
 
-<a id="11-week-11-prepositions-with-accusative--dative-two-way--spatial-logic"></a>
+<a id="11-week-11-full-konjunktiv-i-n-declension-review-nominalstil-b2"></a>
 
-## 11. Week 11: Prepositions with Accusative & Dative (Two‑Way) – Spatial Logic
+## 11. Week 11: Full Konjunktiv I, N-Declension Review & Nominalstil (B2)
 
-**Goal:** Master the two‑way (Wechsel) prepositions and understand their accusative (movement) vs. dative (location) distinction.
+**Goal:** Master the complete Konjunktiv I paradigm for extended indirect speech (Präsens, Perfekt, Futur), review N-declension comprehensively, and convert between verbal and nominal style for formal/academic register.
 
 **The Prompt:**
 
-> Act as a German preposition‑logic instructor. Explain:
-> 1. What two‑way prepositions are: an, auf, hinter, in, neben, über, unter, vor, zwischen – they can take either accusative or dative depending on meaning.
-> 2. The **locative (static) sense** answers “wo?” (where?) and takes the **dative** case. Example: *in der Schule* = in the school (location).
-> 3. The **directional (dynamic) sense** answers “wohin?” (where to?) and takes the **accusative** case. Example: *in die Schule* = into the school (movement toward).
-> 4. Provide a visual/spatial analogy: think of dative as “inside a zone” and accusative as “crossing the border into a zone”.
-> 5. Word order rules: prepositional phrase behaves as an adverbial; it can occupy position 1 (triggering V2 inversion) or appear later in the clause.
-> 6. Provide 12 English sentences that require a two‑way preposition (e.g., “The book is on the table.”, “She puts the book on the table.”, “He hangs the picture above the sofa.”). Ask the learner to: (a) decide whether the sense is location or direction, (b) choose the correct preposition, (c) put the noun in the correct case (dative/accusative) with proper article, (d) place the phrase correctly in the sentence (showing V2 if it starts), then give the German translation. Include answer key.
-> 7. Add a short exercise: take six sentences and flip the meaning from static to dynamic (or vice versa) by switching case and preposition, illustrating the logic.
+> Act as a German B2 grammar specialist. Generate a comprehensive Week 11 lesson covering:
+> 1. **Konjunktiv I — Complete System** — Full conjugation table for all persons (stem + -e, -est, -e, -en, -et, -en — for sein, haben, werden, können, gehen; all persons, highlighting where K1 = indicative), K1 in Perfekt for past indirect speech (er sei gekommen, er habe gesagt — 6 examples), K1 in Futur for future indirect speech (er werde kommen — 4 examples), substitution rule: K1 = indicative → use K2 (full chart showing which persons require K2), extended indirect speech in newspaper style (model paragraph: 8 sentences mixing K1 Präsens, K1 Perfekt, K1 Futur, and K2 substitutions), and Imperativ in indirect speech (Er sagte, sie solle kommen. Man nehme 200g Mehl... — 3 examples).
+> 2. **N-Deklination — Comprehensive Review** — Full declension tables singular & plural (regular and Herr/Name/Herz special cases), complete list of 20 common N-declension nouns grouped by ending pattern (-e for male beings, -ent/-ant, -ist, -at/-oge/-graf, irregulars), and recognition patterns summary (4 decision-rule examples).
+> 3. **Nominalstil — Nominal Style for Formal Register** — What Nominalstil is (converting verbal phrases to noun phrases for formal/academic text), common nominalization suffixes (-ung, -heit/-keit, -schaft, -nis, -tum — 15 examples with gender rules: -ung/-heit/-keit/-schaft = feminine, -nis = neuter, -tum = neuter), converting verbal → nominal phrases (8 conversion pairs), genitive chains in Nominalstil (4 examples of increasing complexity), converting nominal → verbal phrases (6 pairs), and when to use which register (4 context examples).
+> 4. **Vocabulary Expansion (400 New Words → 2,900 Cumulative)** — Thematic groups: Academic Writing (40 — die These, die Hypothese, belegen, widerlegen, etc.), Nuanced Synonyms (30 synonym groups — sagen: behaupten/meinen/betonen/erklären/hinzufügen), Collocations for Formal Writing (30 phrases — in Betracht ziehen, zum Ausdruck bringen, etc.), and Nominalized Vocabulary (20 noun-verb pairs).
+> 5. **Applied Skills** — A B2 newspaper report reading with indirect speech (300 words) with 6 comprehension questions, and a writing prompt: Transform a direct interview into a newspaper report (10-12 sentences using K1, discourse connectors, and Nominalstil).
+> 6. **Practice Exercises** — Include: (a) Direct → indirect speech in K1 (10 sentences — including past and future; apply K2 substitution where needed), (b) Extended indirect speech passage (transform 5-sentence direct quote into newspaper-style reported speech), (c) N-declension gap-fill (10 sentences — all four cases in context), (d) Verbalstil → Nominalstil conversion (8 sentences), (e) Nominalstil → Verbalstil conversion (6 sentences), (f) Mixed translation — formal register (10 English → German using K1, N-declension, and Nominalstil), (g) Answer key.
 
 ---
 
-<a id="12-week-12-sentence-connectors-und-aber-denn-wie--question-formation"></a>
+<a id="12-week-12-advanced-structures-full-system-integration-b2"></a>
 
-## 12. Week 12: Sentence Connectors (und, aber, denn, weil) & Question Formation
+## 12. Week 12: Advanced Structures & Full System Integration (B2)
 
-**Goal:** Link clauses with coordinating and subordinating conjunctions, and form yes/no and w‑questions correctly.
+**Goal:** Handle all remaining advanced structures — nested clauses, als ob, brauchen + zu, lassen + Infinitiv, subjective modals — and demonstrate full A1–B2 command through integrated production exercises (essay, formal letter, argumentation, reading comprehension).
 
 **The Prompt:**
 
-> Act as a German discourse‑and‑question coach. Explain:
-> 1. **Coordinating conjunctions** (und, aber, denn, beziehungsweise): they do NOT affect word order; each clause maintains independent V2 structure. Provide meaning and usage notes (und = and, aber = but, denn = because – note: denn is coordinating, unlike weil).
-> 2. **Subordinating conjunctions** (weil, dass, wenn, obwohl): they send the conjugated verb to the **end** of the clause. Explain the meaning of each (weil = because, dass = that, wenn = if/when, obwohl = although) and give examples of main + subordinate clause word order.
-> 3. Provide 10 sentence pairs that need to be joined with a conjunction (e.g., “I am tired.” + “I went to bed early.” → “Ich bin müde, deshalb ging ich früh schlafen.” – note: deshalb is a Position 1 adverb, not a pure conjunction; adjust examples accordingly). Ask the learner to: (a) pick the correct conjunction, (b) apply the correct word order (V2 for coordinating, verb‑final for subordinating), then give the combined German sentence. Include answer key.
-> 4. **Question formation**:
->    - Yes/no questions: invert subject and verb → Verb‑Subject‑… (V1). Example: *Kommt sie morgen?* – explain that the verb moves to position 1.
->    - W‑questions (who, what, where, when, why, how): place the w‑word first, then verb, then subject → W‑Word‑Verb‑Subject‑… (still V2 because the w‑word counts as position 1). Provide examples: *Wann kommt der Zug?*, *Woher kommst du?*.
-> 5. Provide 5 English yes/no questions and 5 English w‑questions. Ask the learner to translate them into German, applying the correct inversion/placement, then give the answer key.
-> 6. Include a short synthesis exercise: take a short paragraph (3‑4 sentences) and ask the learner to (a) identify all conjunctions used, (b) note any question forms, (c) explain the word‑order rule for each clause, then rewrite the paragraph in German using correct syntax.
+> Act as a German B2 master tutor. Generate a comprehensive Week 12 lesson covering:
+> 1. **Advanced Word Order** — Nested subordinate clauses (4 examples of 2-deep nesting with verb placement diagrams), verb placement in stacked clauses (structural diagram), and infinitive clauses vs. dass-clauses (same subject → zu+Inf preferred; different subjects → dass required; 4 contrastive pairs).
+> 2. **als ob / als wenn + Konjunktiv II** — Present comparison (Er tut, als ob er nichts wüsste. — 4 examples), short form without ob with V2 after als (3 examples), and past comparison with als ob + K2 Past (3 examples).
+> 3. **brauchen + zu + Infinitiv** — Negative modal-like construction (Du brauchst nicht zu kommen = Du musst nicht kommen — 4 examples), with nur (3 examples), and brauchen vs. müssen (brauchen only in negative/restrictive contexts; 3 contrastive pairs).
+> 4. **lassen + Infinitiv** — Causative lassen (Ich lasse das Auto reparieren — 4 examples), permissive lassen (Lass mich gehen! — 4 examples), sich lassen as passive alternative review (3 examples; cross-reference Week 10), and lassen in Perfekt with double infinitive (3 examples; cross-reference Week 8).
+> 5. **Subjective Use of Modal Verbs** — sollen for hearsay (3 examples), wollen for self-claim (3 examples), müssen for logical deduction (3 examples), dürfte for probability (3 examples), können for possibility (3 examples), and subjective modals in past: modal + Partizip II + haben/sein (4 examples).
+> 6. **Conditional Sentences — Complete Review** — Type 0 real/general (3 examples), Type 2 present unreal (3 examples), Type 3 past unreal (3 examples), and mixed conditionals: past condition + present result and vice versa (4 examples in both directions).
+> 7. **Integrated Production Exercises** — Essay writing (2 prompts, 150-200 words each — one argumentative, one descriptive; use Konjunktiv II, passive, participial phrases, discourse connectors, and Nominalstil), formal letter (1 prompt — complaint or job application with correct register), oral argumentation outline (1 debate topic — pro/contra with 3 arguments each side using subjective modals and concessive structures), and reading comprehension (1 B2 text, 300 words — identify 2 relative clauses, 2 passive constructions, 1 K1 sentence, 1 participial phrase; answer 6 content questions).
+> 8. **Complete Grammar Reference Tables** — All four cases summary (4×4 table with definite article, indefinite article, personal pronoun, example noun phrase), all six tenses summary (formation + example + primary usage), Konjunktiv I & II summary (side-by-side formation, usage, example), active & passive voice summary (Vorgangspassiv, Zustandspassiv, 3 alternatives — each tense), clause types & word order summary (main V2, subordinate verb-final, question V1, relative verb-final — diagrams), and all conjunctions & connectors master list (coordinating, subordinating, correlative, adverbial — with word order effect).
+> 9. **Vocabulary Expansion (400 New Words → 3,300 Cumulative)** — Thematic groups: Advanced Idioms & Proverbs (30 items with literal + figurative meaning), Register Variation (20 formal/informal pairs: anfragen/fragen, sich befinden/sein, etc.), False Friends (20 German-English pairs: bekommen≠become, Gift≠gift, etc.), Academic & Professional (25 words), and Supplementary Learning Recommendations (graded readers B1-B2, Anki decks, podcasts, news sources).
+> 10. **Answer Key & Model Texts** — For all exercises in sections 7.1-7.4.
 
 ---
 
-This completes the revised 12‑week roadmap. Each week now contains a precise, self‑contained prompt that a language‑model or tutor can follow to generate a full lesson, complete with explanations, tables, examples, and practice exercises. The progression is strictly incremental: starting with pronunciation and core vocabulary, then building case by case, tense by tense, and finally linking ideas with conjunctions and forming questions. By the end of week 12 the learner will have covered all essential A1‑B2 grammatical structures and be able to produce and understand complex German texts. 
+This completes the intensive 12-week roadmap from A1 to B2. Each week contains a precise, self-contained prompt that a language model or tutor can follow to generate a full lesson with explanations, conjugation tables, example sentences, and graded exercises. The progression compresses A1 foundations into two weeks, builds A2 across weeks 3–5, develops B1 competence in weeks 6–9, and reaches B2 proficiency in weeks 10–12. By the end of week 12 the learner will command approximately 3,300 words, all four cases, six tenses, both subjunctive moods, active and passive voice, and the full range of clause types needed to read, write, and argue at the upper-intermediate level.
