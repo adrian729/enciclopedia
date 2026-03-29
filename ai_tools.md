@@ -32,6 +32,7 @@
     - [3.6.1. Applying the rules](#361-applying-the-rules)
   - [3.7. Background Agents](#37-background-agents)
   - [3.8. Model Context Protocol (MCP)](#38-model-context-protocol-mcp)
+- [4. Claude](#4-claude)
 
 <a id="1-the-tools"></a>
 
@@ -426,3 +427,42 @@ MCP Server is a way to extend the functionality of Large Language Models by conn
 
 - [Github MCP Server](https://github.com/github/github-mcp-server)
 - [Context7 MCP Server](https://github.com/upstash/context7) - Up-to-date Code Docs For Any Prompt
+
+**Security**
+
+Developers should be careful about supply chain attacks when using MCP.
+
+- Verify source code
+- Consider auditing the code
+- Beware that adding external tools introduces potential security vulnerabilities
+
+<a id="4-claude"></a>
+
+## 4. Claude
+
+Verify the claude code installation is correct with `claude doctor`.
+
+**One-shot mode**: run a single claude command without entering the interactive terminal (f.e. `claude -b "Fix linting"`)
+
+**Models (`/model`)**
+
+More or less powerful. More powerful ones will spend more tokens per question, but also may solve the task correctly faster spending less tokens in the end.
+
+- **Sonnet (default)**: generial tasks, daily code
+- **Opus**: complex tasks/code, planning
+- **Haiku**: quick answers, editing comments and documentation
+
+Example usage:
+
+- **Opus** to define a really good plan
+- Once the plan is really well defined, use a cheaper model (**Sonnet**) to do the implementation
+
+**Effort (`/effort`)**
+
+More effort better results but more tokens spend.
+
+- auto
+- low
+- medium
+- high
+- Max
