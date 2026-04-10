@@ -40,7 +40,7 @@ docs/sub/page.md     => /#/sub/page
 ```
 
 - Links are relative to `docs/`.
-- `subMaxLevel: 2` auto-generates in-page TOC from H2s.
+- `subMaxLevel: 0` — sidebar auto-TOC is disabled; all sidebar navigation is manual.
 - Nested sidebars: a `_sidebar.md` in a subdirectory overrides the root one for that path. Falls back to parent if absent.
 
 ## Adding pages
@@ -48,14 +48,6 @@ docs/sub/page.md     => /#/sub/page
 1. Create `docs/page_name.md`.
 2. Add entry to `docs/_sidebar.md`.
 3. Link between pages with relative paths: `[text](other_page.md)`.
-
-## Ignoring headers in TOC
-
-```markdown
-## Visible Header
-## Hidden Header <!-- {docsify-ignore} -->
-# Page Title <!-- {docsify-ignore-all} -->
-```
 
 ## Plugins
 

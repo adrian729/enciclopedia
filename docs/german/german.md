@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-- [1. Week 1: Foundations & Core A1 Grammar (A1)](#1-week-1-foundations-core-a1-grammar-a1)
-- [2. Week 2: A1 Completion — Dative, Modals, Perfekt, Prepositions & Connectors (A1)](#2-week-2-a1-completion-dative-modals-perfekt-prepositions-connectors-a1)
-- [3. Week 3: Präteritum, Reflexive Verbs & Full Adjective Declension (A2)](#3-week-3-präteritum-reflexive-verbs-full-adjective-declension-a2)
+- [1. Week 1: Foundations & Core A1 Grammar (A1)](german/week_1)
+- [2. Week 2: A1 Completion — Dative, Modals, Perfekt, Prepositions & Connectors (A1)](german/week_2)
+- [3. Week 3: Präteritum, Reflexive Verbs & Full Adjective Declension (A2)](german/week_3)
 - [4. Week 4: Genitive Case, Comparative/Superlative & N-Declension (A2)](#4-week-4-genitive-case-comparativesuperlative-n-declension-a2)
 - [5. Week 5: Separable/Inseparable Verbs, Imperative, Indirect Questions & Expanded Conjunctions (A2)](#5-week-5-separableinseparable-verbs-imperative-indirect-questions-expanded-conjunctions-a2)
 - [6. Week 6: Futur I, werden Three Functions, zu + Infinitiv & Relative Clauses (B1)](#6-week-6-futur-i-werden-three-functions-zu-infinitiv-relative-clauses-b1)

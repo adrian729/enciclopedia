@@ -14,7 +14,8 @@
     window.$docsify = {
       name: 'Enciclopedia',
       loadSidebar: true,
-      subMaxLevel: 2,
+      auto2top: true,
+      subMaxLevel: 0,
       plugins: [
         function fixHeadingIds(hook) {
           function scrollToId(id) {
@@ -37,7 +38,7 @@
             // Fix sidebar auto-generated links
             document.querySelectorAll('.sidebar-nav a').forEach(function(a) {
               var href = a.getAttribute('href');
-              if (href) a.setAttribute('href', href.replace(/#_(\d)/, '#$1'));
+              if (href) a.setAttribute('href', href.replace(/#_(\d)/, '#$1').replace(/([?&]id=)_(\d)/g, '$1$2'));
             });
             // Scroll on page load / cross-page navigation
             scrollToId(getIdFromHash());
