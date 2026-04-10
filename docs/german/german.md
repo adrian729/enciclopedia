@@ -19,8 +19,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="1-week-1-foundations-core-a1-grammar-a1"></a>
-
 ## 1. Week 1: Foundations & Core A1 Grammar (A1)
 
 **Goal:** Master German pronunciation, learn 150 high-frequency words (including numbers, days, months), conjugate sein/haben/regular/key irregular verbs in Präsens, use nominative and accusative cases, apply V2 word order, form questions, negate sentences, and use es gibt and impersonal es.
@@ -40,8 +38,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 > 10. **Practice Exercises** — Include: (a) Pronunciation drill (10 sentences with IPA transcription focusing on vowel length, final devoicing, ch sounds), (b) Conjugation drill (15 sentences — fill in correct Präsens form of sein, haben, regular & irregular verbs), (c) Case identification (12 sentences — label each noun phrase as Nominative or Accusative, select correct article), (d) Word order drill (8 sentences — rearrange elements for correct V2; 4 with time phrase first), (e) Question formation (5 yes/no + 5 W-questions from given statements), (f) Negation transformation (10 affirmative → negative using nicht or kein), (g) Translation exercises (15 English → German using only Week 1 grammar & vocabulary), (h) Answer key with German answers + literal English gloss.
 
 ---
-
-<a id="2-week-2-a1-completion-dative-modals-perfekt-prepositions-connectors-a1"></a>
 
 ## 2. Week 2: A1 Completion — Dative, Modals, Perfekt, Prepositions & Connectors (A1)
 
@@ -63,8 +59,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="3-week-3-präteritum-reflexive-verbs-full-adjective-declension-a2"></a>
-
 ## 3. Week 3: Präteritum, Reflexive Verbs & Full Adjective Declension (A2)
 
 **Goal:** Narrate in the simple past using Präteritum for sein/haben/modals and 20 high-frequency strong verbs, use reflexive verbs with accusative and dative pronouns, apply all three adjective declension types (weak/mixed/strong) across all four cases, and use indefinite pronouns.
@@ -82,8 +76,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="4-week-4-genitive-case-comparativesuperlative-n-declension-a2"></a>
-
 ## 4. Week 4: Genitive Case, Comparative/Superlative & N-Declension (A2)
 
 **Goal:** Express possession with the genitive case (including proper names), master genitive prepositions, form comparisons with comparative and superlative adjectives (regular and irregular), and correctly decline weak masculine nouns (N-Deklination).
@@ -99,8 +91,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 > 6. **Practice Exercises** — Include: (a) Genitive case drill (10 sentences — express possession with correct articles and noun endings), (b) Genitive preposition gap-fill (8 sentences), (c) Comparative & superlative transformation (12 sentences — form comparative or superlative in context), (d) N-declension gap-fill (8 sentences — decline weak masculine nouns in all four cases), (e) Mixed translation (12 English → German), (f) Answer key.
 
 ---
-
-<a id="5-week-5-separableinseparable-verbs-imperative-indirect-questions-expanded-conjunctions-a2"></a>
 
 ## 5. Week 5: Separable/Inseparable Verbs, Imperative, Indirect Questions & Expanded Conjunctions (A2)
 
@@ -120,8 +110,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="6-week-6-futur-i-werden-three-functions-zu-infinitiv-relative-clauses-b1"></a>
-
 ## 6. Week 6: Futur I, werden Three Functions, zu + Infinitiv & Relative Clauses (B1)
 
 **Goal:** Express future intentions with Futur I, distinguish werden's three functions (become/future/passive), build infinitive constructions with zu, and add descriptive detail to nouns using relative clauses with pronouns in all four cases.
@@ -139,8 +127,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="7-week-7-plusquamperfekt-konjunktiv-ii-vorgangspassiv-b1"></a>
-
 ## 7. Week 7: Plusquamperfekt, Konjunktiv II & Vorgangspassiv (B1)
 
 **Goal:** Narrate sequenced past events with Plusquamperfekt, express hypothetical/polite statements with Konjunktiv II (würde-form, wäre/hätte, modal synthetics), form basic process passive constructions, and use impersonal passive.
@@ -156,8 +142,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 > 6. **Practice Exercises** — Include: (a) Plusquamperfekt sequencing (8 sentence pairs — use nachdem to combine), (b) Konjunktiv II transformation (10 real → hypothetical sentences), (c) Polite request reformulation (6 direct → polite), (d) Active → passive conversion (12 sentences — 4 Präsens, 4 Präteritum, 4 Perfekt), (e) Impersonal passive formation (4 sentences — with and without es), (f) Mixed translation (12 English → German), (g) Answer key.
 
 ---
-
-<a id="8-week-8-double-infinitive-verbadjective-preposition-combos-adverbial-clauses-two-part-conjunctions-b1"></a>
 
 ## 8. Week 8: Double Infinitive, Verb/Adjective-Preposition Combos, Adverbial Clauses & Two-Part Conjunctions (B1)
 
@@ -177,8 +161,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="9-week-9-konjunktiv-i-introduction-futur-ii-verb-valency-discourse-cohesion-b1"></a>
-
 ## 9. Week 9: Konjunktiv I Introduction, Futur II, Verb Valency & Discourse Cohesion (B1)
 
 **Goal:** Report what others have said using basic Konjunktiv I, express completed future actions with Futur II, understand verb valency patterns, develop paragraph-level writing with discourse connectors, and review the complete six-tense system.
@@ -196,8 +178,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 > 8. **Practice Exercises** — Include: (a) Direct → indirect speech conversion (10 sentences — use K1 where possible, K2 as substitute), (b) Futur II formation (8 sentences), (c) Verb valency drill (8 sentences — choose correct case/structure), (d) Discourse connector gap-fill (2 short paragraphs with 4 blanks each), (e) Tense identification & transformation (12 sentences — name tense, convert to specified tense), (f) Paragraph writing (2 prompts — 6-8 sentence paragraphs using connectors, indirect speech, varied tenses), (g) Answer key.
 
 ---
-
-<a id="10-week-10-zustandspassiv-passive-alternatives-participial-constructions-konjunktiv-ii-past-b2"></a>
 
 ## 10. Week 10: Zustandspassiv, Passive Alternatives, Participial Constructions & Konjunktiv II Past (B2)
 
@@ -217,8 +197,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 ---
 
-<a id="11-week-11-full-konjunktiv-i-n-declension-review-nominalstil-b2"></a>
-
 ## 11. Week 11: Full Konjunktiv I, N-Declension Review & Nominalstil (B2)
 
 **Goal:** Master the complete Konjunktiv I paradigm for extended indirect speech (Präsens, Perfekt, Futur), review N-declension comprehensively, and convert between verbal and nominal style for formal/academic register.
@@ -234,8 +212,6 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 > 6. **Practice Exercises** — Include: (a) Direct → indirect speech in K1 (10 sentences — including past and future; apply K2 substitution where needed), (b) Extended indirect speech passage (transform 5-sentence direct quote into newspaper-style reported speech), (c) N-declension gap-fill (10 sentences — all four cases in context), (d) Verbalstil → Nominalstil conversion (8 sentences), (e) Nominalstil → Verbalstil conversion (6 sentences), (f) Mixed translation — formal register (10 English → German using K1, N-declension, and Nominalstil), (g) Answer key.
 
 ---
-
-<a id="12-week-12-advanced-structures-full-system-integration-b2"></a>
 
 ## 12. Week 12: Advanced Structures & Full System Integration (B2)
 

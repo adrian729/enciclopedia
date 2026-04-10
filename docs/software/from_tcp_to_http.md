@@ -16,11 +16,7 @@
     - [2.4.1. Indicating the Body Length](#241-indicating-the-body-length)
   - [2.5. cURL](#25-curl)
 
-<a id="1-tcp"></a>
-
 ## 1. TCP
-
-<a id="11-reading-from-a-file-example"></a>
 
 ### 1.1. Reading from a file example
 
@@ -37,8 +33,6 @@ What we will be doing most of the time is:
 2. Read and send one `chunk` at a time, until we are finished with the file.
 3. Close / free the file so others can interact with it!
 
-<a id="12-reading-from-the-internet"></a>
-
 ### 1.2. Reading from the internet
 
 The file reading example is similar to how an internet connection will work.
@@ -50,15 +44,11 @@ The difference is, working with a file, we determine how much you read from the 
 - You `pull` data from a file.
 - An internet connection `pushes` data towards you.
 
-<a id="13-protocols"></a>
-
 ### 1.3. Protocols
 
 A protocol is a `design` or `spec` for one computer or device to communicate to another.
 
 It describes how you break down the data, how exactly is it formatted, the header packets, etc... so that the other side can re-construct messages sent across the wire.
-
-<a id="14-transmission-control-protocol-tcp"></a>
 
 ### 1.4. Transmission Control Protocol (TCP)
 
@@ -83,8 +73,6 @@ This is how TCP is in order and reliable:
 - The window allows to send several packets at once.
 - Packets will have some kind of ID so that the receiver can reconstruct the message in order.
 - With the ID we are also able to know if we are missing some packet, and if the sender doesn't get an `ACK` it can try re-sending it.
-
-<a id="15-tcp-vs-udp"></a>
 
 ### 1.5. TCP vs UDP
 
@@ -111,18 +99,12 @@ That's the same reason it is more performant:
 - With TCP we need to wait for ACK to continue sending data.
 - With raw UDP we can just send all at once without waiting for acknowledgement.
 
-<a id="2-http"></a>
-
 ## 2. HTTP
-
-<a id="21-http-vs-tcp"></a>
 
 ### 2.1. HTTP vs TCP
 
 - **TCP** ensures reliable, ordered delivery of bytes between two endpoints, but it doesn't describe what those bytes represent.
 - **HTTP** (HyperText Transfer Protocol) is an application layer protocol that defines how messages are formatted and transmitted, as well as how web servers and browsers should respond. It allows you to specify the _type_ and _purpose_ of the data (e.g., JSON, HTML, images).
-
-<a id="22-what-makes-up-an-http-request"></a>
 
 ### 2.2. What makes up an HTTP request?
 
@@ -136,16 +118,12 @@ An HTTP request wraps data into a structured message with standardized sections:
 
 This structure provides context and allows versatile communication over the simple byte stream that TCP provides.
 
-<a id="23-http11"></a>
-
 ### 2.3. HTTP/1.1
 
 - **RFC 7231**: Defines the semantics and core concepts of HTTP/1.1, covering request methods, status codes, and headers.
 - **RFC 9110**: Specifies HTTP semantics for all major HTTP versions, including message structure and protocol behavior.
 - **RFC 9112**: Covers the HTTP/1.1 protocol specifically—details how messages are composed, handled, and delivered over TCP.
 - **RFC 2616**: The original HTTP/1.1 specification (now obsolete, replaced by RFC 7230–7235 and RFC 9110/9112), but still referenced in legacy documents for historical context.
-
-<a id="24-structure-of-an-http-message"></a>
 
 ### 2.4. Structure of an HTTP Message
 
@@ -166,8 +144,6 @@ Header-Name: value\r\n
 - **Body:** The actual data sent with the request (common in POST/PUT).
 
 > **Note:** `CRLF` (`\r\n`) is used to separate lines, as required by the HTTP specification.
-
-<a id="241-indicating-the-body-length"></a>
 
 #### 2.4.1. Indicating the Body Length
 
@@ -219,8 +195,6 @@ Transfer-Encoding: chunked\r\n
 
 - Each chunk starts with its hexadecimal length, then the data, ending with `\r\n`.
 - Final chunk is `0\r\n`.
-
-<a id="25-curl"></a>
 
 ### 2.5. cURL
 

@@ -180,8 +180,6 @@
     - [4.7.4. Trade-offs](#474-trade-offs)
     - [4.7.5. Examples](#475-examples)
 
-<a id="1-creational"></a>
-
 ## 1. Creational
 
 Creational patterns abstract the instantiation process, making systems independent of how their objects are created, composed, and represented.
@@ -194,8 +192,6 @@ Creational patterns abstract the instantiation process, making systems independe
 | [Abstract Factory](#14-abstract-factory) | Creating families of related objects without specifying their concrete classes. |
 | [Prototype](#15-prototype) | Creating new objects by cloning an existing instance instead of constructing from scratch. |
 | [Object Pool](#16-object-pool) | Reusing expensive-to-create objects instead of repeated creation and destruction. |
-
-<a id="11-singleton"></a>
 
 ### 1.1. Singleton
 
@@ -213,8 +209,6 @@ Thread safety is the primary implementation concern. In a concurrent environment
 
 Singleton is sometimes considered an anti-pattern because it introduces hidden global state, makes unit testing harder (shared state leaks between tests), and obscures dependencies. Prefer dependency injection when possible, and reserve Singleton for genuinely shared, stateless, or infrastructure-level resources (loggers, configuration, connection pools).
 
-<a id="111-paradigm-fit"></a>
-
 #### 1.1.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -225,15 +219,11 @@ Singleton is sometimes considered an anti-pattern because it introduces hidden g
 | Procedural | **Workable** — global variable behind an initialization-guard function. |
 | Reactive | **Uncommon** — reactive systems favor injected shared services; `shareReplay`/`BehaviorSubject` serve similar sharing purposes within the stream. |
 
-<a id="112-benefits"></a>
-
 #### 1.1.2. Benefits
 
 - Guarantees exactly one instance — no accidental duplicates or conflicting copies.
 - Lazy initialization defers resource allocation until the instance is actually needed.
 - Provides a well-known global access point, simplifying discovery of shared infrastructure.
-
-<a id="113-trade-offs"></a>
 
 #### 1.1.3. Trade-offs
 
@@ -241,8 +231,6 @@ Singleton is sometimes considered an anti-pattern because it introduces hidden g
 - Shared mutable state leaks between tests, causing order-dependent failures.
 - Tight coupling to the concrete class makes substitution difficult; mocking in tests often requires workarounds.
 - Concurrency requires explicit thread-safety measures (locking, `Lazy<T>`, `OnceLock`, etc.).
-
-<a id="114-examples"></a>
 
 #### 1.1.4. Examples
 
@@ -335,8 +323,6 @@ assert s1 is s2
 print(s1.get_info())
 ```
 
-<a id="12-builder"></a>
-
 ### 1.2. Builder
 
 | **Who**  | Clients that need to construct complex objects with many optional or conditional parameters. |
@@ -353,8 +339,6 @@ The key participants are the **product** (the complex object being built), the *
 
 Builder is especially valuable when objects have many optional fields, construction invariants that must hold at creation time, or when the same construction process should produce different representations. In Rust, a popular variant is the **typestate builder**, which uses generic type parameters to track which required fields have been set — shifting the "missing field" check from runtime to compile time.
 
-<a id="121-paradigm-fit"></a>
-
 #### 1.2.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -365,8 +349,6 @@ Builder is especially valuable when objects have many optional fields, construct
 | Procedural | **Workable** — struct-population helpers, but no fluent chaining. |
 | Reactive | **Adapts well** — fluent builder chains mirror operator pipelines; builders can configure stream topologies and subscription options. |
 
-<a id="122-benefits"></a>
-
 #### 1.2.2. Benefits
 
 - Eliminates telescoping constructors — each step is a named method, making construction self-documenting.
@@ -374,15 +356,11 @@ Builder is especially valuable when objects have many optional fields, construct
 - The same construction process can produce different representations by swapping builder implementations.
 - Method chaining provides a fluent, discoverable API that IDEs can autocomplete.
 
-<a id="123-trade-offs"></a>
-
 #### 1.2.3. Trade-offs
 
 - Adds a parallel class (the builder) for every product — more code to maintain.
 - Builder fields mirror the product's fields; changes to the product must be reflected in both.
 - For simple objects with few required parameters, a plain constructor or factory method is simpler and less ceremony.
-
-<a id="124-examples"></a>
 
 #### 1.2.4. Examples
 
@@ -578,8 +556,6 @@ req = (
 )
 ```
 
-<a id="13-factory"></a>
-
 ### 1.3. Factory
 
 | **Who**  | Clients that need to create objects without specifying the exact class to instantiate. |
@@ -596,8 +572,6 @@ The key participants are the **product interface** (the abstraction all created 
 
 A simpler variant — sometimes called Simple Factory — uses a single function with a discriminator (e.g., an enum or string) to decide which concrete type to return. This trades extensibility for convenience: adding a new product requires modifying the factory function rather than adding a new creator class.
 
-<a id="131-paradigm-fit"></a>
-
 #### 1.3.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -608,23 +582,17 @@ A simpler variant — sometimes called Simple Factory — uses a single function
 | Procedural | **Workable** — dispatch functions (switch/if) returning concrete structs. |
 | Reactive | **Adapts well** — factories produce observables/streams or select concrete operators based on runtime configuration. |
 
-<a id="132-benefits"></a>
-
 #### 1.3.2. Benefits
 
 - Decouples client code from concrete product classes — clients depend only on the product interface.
 - New products can be added by implementing the interfaces, without modifying existing client code (Open/Closed Principle).
 - Centralizes creation logic, making it straightforward to enforce constraints, add logging, or swap implementations.
 
-<a id="133-trade-offs"></a>
-
 #### 1.3.3. Trade-offs
 
 - Each new product typically requires a new concrete creator class — class proliferation.
 - Adds indirection: the reader must trace through the factory to discover which concrete type is created.
 - The Simple Factory variant re-introduces modification when adding products, losing the Open/Closed benefit.
-
-<a id="134-examples"></a>
 
 #### 1.3.4. Examples
 
@@ -764,8 +732,6 @@ shape = factory.create_shape()
 shape.draw()
 ```
 
-<a id="14-abstract-factory"></a>
-
 ### 1.4. Abstract Factory
 
 | **Who**  | Systems that must create families of related or dependent objects without coupling to their concrete classes. |
@@ -782,8 +748,6 @@ The key participants are the **abstract factory** (declares creation methods for
 
 A common question is when to prefer Abstract Factory over Factory Method. Factory Method concerns itself with creating one product type and uses inheritance (subclass overrides a method); Abstract Factory concerns itself with creating a coherent family of products and uses composition (the client holds a factory object). When the number of product families grows, consider combining Abstract Factory with a registry or configuration map that selects the concrete factory at startup.
 
-<a id="141-paradigm-fit"></a>
-
 #### 1.4.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -794,23 +758,17 @@ A common question is when to prefer Abstract Factory over Factory Method. Factor
 | Procedural | **Workable** — a struct of function pointers (one per product kind) passed to client code; switching the struct switches the family. |
 | Reactive | **Adapts well** — factory-selected streams or operators can produce family-consistent event pipelines; configuration determines which factory feeds the reactive graph. |
 
-<a id="142-benefits"></a>
-
 #### 1.4.2. Benefits
 
 - Guarantees product compatibility — objects from a single factory are always designed to work together.
 - Isolates concrete classes from client code; the client never mentions a specific product implementation.
 - Swapping an entire product family requires changing only the concrete factory supplied at the composition root.
 
-<a id="143-trade-offs"></a>
-
 #### 1.4.3. Trade-offs
 
 - Adding a new product kind to the family forces changes across every concrete factory — the interface expands, and all implementations must follow.
 - Class proliferation: each family multiplies the number of concrete product classes.
 - The additional abstraction layer can be overkill when the system only has one product family or when families are unlikely to change.
-
-<a id="144-examples"></a>
 
 #### 1.4.4. Examples
 
@@ -1024,8 +982,6 @@ checkbox = factory.create_checkbox()
 print(f"{button.render()}, {checkbox.render()}")
 ```
 
-<a id="15-prototype"></a>
-
 ### 1.5. Prototype
 
 | **Who**  | Systems that need to create new objects by copying existing instances rather than constructing from scratch. |
@@ -1042,8 +998,6 @@ The key participants are the **prototype interface** (declares the clone method)
 
 Deep versus shallow copying is the central implementation concern. A shallow copy shares references with the original, meaning mutations to nested objects propagate to both copies. A deep copy recursively duplicates the entire object graph. Most Prototype usages require deep copies to guarantee independence; choosing the wrong strategy introduces subtle aliasing bugs.
 
-<a id="151-paradigm-fit"></a>
-
 #### 1.5.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -1054,23 +1008,17 @@ Deep versus shallow copying is the central implementation concern. A shallow cop
 | Procedural | **Workable** — struct copy plus manual deep-copy of heap-allocated fields; no polymorphism required if types are known statically. |
 | Reactive | **Uncommon** — streams and observables are typically constructed via operators, not cloned; however, snapshot-and-fork of stream state can serve similar purposes. |
 
-<a id="152-benefits"></a>
-
 #### 1.5.2. Benefits
 
 - Avoids expensive re-initialization — cloning a pre-built object is often faster than constructing one from scratch.
 - Eliminates subclass proliferation — new variants are created by cloning and modifying, not by writing new factory classes.
 - Decouples the client from concrete product classes — the client only knows the prototype interface.
 
-<a id="153-trade-offs"></a>
-
 #### 1.5.3. Trade-offs
 
 - Deep cloning complex object graphs (circular references, file handles, sockets) can be difficult to implement correctly.
 - Each concrete prototype must support cloning — retrofitting clone into an existing hierarchy may require touching every class.
 - Shallow-copy defaults in many languages silently share mutable state, introducing aliasing bugs when deep copy was intended.
-
-<a id="154-examples"></a>
 
 #### 1.5.4. Examples
 
@@ -1247,8 +1195,6 @@ circle.y = 30.0
 print(circle)
 ```
 
-<a id="16-object-pool"></a>
-
 ### 1.6. Object Pool
 
 | **Who**  | Infrastructure and server code that repeatedly acquires and releases expensive-to-create resources. |
@@ -1265,13 +1211,9 @@ The key participants are the **pool** (manages the collection of reusable object
 
 Choosing the right pool policy is critical. A fixed-size pool blocks (or errors) when exhausted, providing backpressure; an elastic pool grows under load but risks unbounded resource consumption. Most production pools combine a core idle set with a maximum cap, and add health-checking (evict broken connections) and idle-timeout eviction (shrink during quiet periods). RAII wrappers or `try-with-resources` / `using` blocks ensure resources are returned even if the client throws an exception.
 
-<a id="161-domain-context"></a>
-
 #### 1.6.1. Domain Context
 
 Object Pool is primarily relevant in infrastructure and server contexts — database connection pools, HTTP client pools, thread pools, and GPU buffer management. It is rarely encountered in simple CLI tools, scripts, or applications where object creation is cheap and the allocation rate is low.
-
-<a id="162-paradigm-fit"></a>
 
 #### 1.6.2. Paradigm Fit
 
@@ -1283,23 +1225,17 @@ Object Pool is primarily relevant in infrastructure and server contexts — data
 | Procedural | **Adapts well** — a fixed-size array plus an index or free-list; straightforward to implement without objects. |
 | Reactive | **Adapts well** — resource acquisition can be modeled as an observable that emits a resource, with disposal triggering return to the pool; backpressure maps naturally to pool exhaustion. |
 
-<a id="163-benefits"></a>
-
 #### 1.6.3. Benefits
 
 - Amortizes expensive initialization — the cost of creating a connection or thread is paid once, not per request.
 - Bounds resource consumption with a fixed maximum pool size, providing natural backpressure.
 - Reduces garbage-collection pressure by reusing allocations instead of creating short-lived objects.
 
-<a id="164-trade-offs"></a>
-
 #### 1.6.4. Trade-offs
 
 - State leakage between borrowers if the reset mechanism is incomplete — a returned object may carry dirty state.
 - Pool sizing requires tuning: too small starves throughput, too large wastes memory and OS resources.
 - Added complexity for health-checking (evicting broken resources), idle-timeout eviction, and thread-safe checkout/return.
-
-<a id="165-examples"></a>
 
 #### 1.6.5. Examples
 
@@ -1480,7 +1416,6 @@ from collections import deque
 from collections.abc import Callable, Generator
 from contextlib import contextmanager
 
-
 class Pool[T]:
     def __init__(self, max_size: int, create: Callable[[], T]) -> None:
         self._idle: deque[T] = deque()
@@ -1517,8 +1452,6 @@ with pool.acquire() as buf:
     print(f"Reused resource length: {len(buf)}")
 ```
 
-<a id="2-structural"></a>
-
 ## 2. Structural
 
 Structural patterns deal with the composition of classes and objects, using inheritance and composition to form larger structures while keeping them flexible and efficient.
@@ -1532,8 +1465,6 @@ Structural patterns deal with the composition of classes and objects, using inhe
 | [Composite](#25-composite) | Treating individual objects and groups uniformly in tree structures. |
 | [Bridge](#26-bridge) | Separating abstraction from implementation so both vary independently. |
 | [Flyweight](#27-flyweight) | Sharing common state across many fine-grained objects to save memory. |
-
-<a id="21-facade"></a>
 
 ### 2.1. Facade
 
@@ -1551,8 +1482,6 @@ The key participants are the **facade** (the simplified entry point), the **subs
 
 Facade promotes loose coupling between the client and the subsystem, reduces the learning curve for new developers, and provides a natural boundary for layering an architecture. It is not about adding new functionality — it is about simplifying access to existing functionality.
 
-<a id="211-paradigm-fit"></a>
-
 #### 2.1.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -1563,23 +1492,17 @@ Facade promotes loose coupling between the client and the subsystem, reduces the
 | Procedural | **Natural fit** — wrapper functions that sequence subsystem calls behind a simple API. |
 | Reactive | **Natural fit** — exposes simple subscribe/observe entry points over complex internal pipelines. |
 
-<a id="212-benefits"></a>
-
 #### 2.1.2. Benefits
 
 - Reduces coupling — the client depends on one facade rather than many subsystem classes.
 - Lowers the learning curve by exposing only the operations most clients need.
 - Provides a natural layering boundary; the subsystem can evolve internally without breaking clients.
 
-<a id="213-trade-offs"></a>
-
 #### 2.1.3. Trade-offs
 
 - Risk of becoming a "god object" if the facade accumulates too many responsibilities over time.
 - May hide functionality that advanced clients need, forcing them to bypass the facade and couple to the subsystem directly.
 - Adds an extra layer of indirection between the client and the actual work.
-
-<a id="214-examples"></a>
 
 #### 2.1.4. Examples
 
@@ -1736,8 +1659,6 @@ computer = ComputerFacade()
 computer.start()
 ```
 
-<a id="22-adapter"></a>
-
 ### 2.2. Adapter
 
 | **Who**  | Clients that need to use an existing class whose interface does not match the one they require. |
@@ -1754,8 +1675,6 @@ There are two variants. An **object adapter** uses composition: it holds a refer
 
 Adapter is especially useful when integrating third-party libraries, legacy systems, or external APIs whose interfaces you cannot change but need to conform to your application's contracts.
 
-<a id="221-paradigm-fit"></a>
-
 #### 2.2.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -1766,23 +1685,17 @@ Adapter is especially useful when integrating third-party libraries, legacy syst
 | Procedural | **Workable** — wrapper functions that translate calls and data between interfaces. |
 | Reactive | **Natural fit** — operators like `map`/`flatMap` are adapters that translate one stream type to another. |
 
-<a id="222-benefits"></a>
-
 #### 2.2.2. Benefits
 
 - Enables reuse of existing classes without modifying their source code.
 - Isolates translation logic in one place — client code stays clean of conversion details.
 - Can adapt entire class hierarchies: an object adapter works with the adaptee and all its subclasses.
 
-<a id="223-trade-offs"></a>
-
 #### 2.2.3. Trade-offs
 
 - Adds a wrapper layer with delegation overhead (negligible in most cases, noticeable in hot paths).
 - One adapter per incompatible interface can lead to many small wrapper classes.
 - If the adaptee's interface changes, the adapter must change too — maintenance coupling shifts rather than disappears.
-
-<a id="224-examples"></a>
 
 #### 2.2.4. Examples
 
@@ -1897,8 +1810,6 @@ logger: Logger = LegacyLoggerAdapter(LegacyLogger())
 logger.info("Adapter works!")
 ```
 
-<a id="23-decorator"></a>
-
 ### 2.3. Decorator
 
 | **Who**  | Clients that need to extend an object's behavior at runtime without altering its class or affecting other instances. |
@@ -1915,8 +1826,6 @@ The key participants are the **Component** interface, the **ConcreteComponent** 
 
 A common point of confusion is the distinction between Decorator and Proxy. Both wrap another object behind the same interface, but their intent differs: Decorator adds behavior, while Proxy controls access. In practice, a decorator chain is typically assembled by the client, whereas a proxy is usually created by the system and presented in place of the real subject.
 
-<a id="231-paradigm-fit"></a>
-
 #### 2.3.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -1927,23 +1836,17 @@ A common point of confusion is the distinction between Decorator and Proxy. Both
 | Procedural | **Workable** — function pointer chains or wrapper functions provide similar layering, though without polymorphic dispatch. |
 | Reactive | **Adapts well** — operators like `map`, `tap`, `retry` are decorators on a stream, each adding behavior around the data flow. |
 
-<a id="232-benefits"></a>
-
 #### 2.3.2. Benefits
 
 - Extends behavior at runtime without modifying existing code or creating subclass explosions.
 - Each decorator is a small, single-responsibility class that is easy to test and reason about.
 - Decorators compose freely — any combination and ordering of layers is possible.
 
-<a id="233-trade-offs"></a>
-
 #### 2.3.3. Trade-offs
 
 - Deep decorator stacks produce many small objects, making debugging and stack traces harder to follow.
 - The order of wrapping matters and is implicit — swapping two decorators can silently change behavior.
 - Identity checks (`obj == original`) break because the outermost wrapper is a different object than the original component.
-
-<a id="234-examples"></a>
 
 #### 2.3.4. Examples
 
@@ -2061,16 +1964,13 @@ notifier.Send("Server is down!");
 ```python
 from abc import ABC, abstractmethod
 
-
 class Notifier(ABC):
     @abstractmethod
     def send(self, message: str) -> None: ...
 
-
 class BaseNotifier(Notifier):
     def send(self, message: str) -> None:
         print(f"[Email] {message}")
-
 
 class NotifierDecorator(Notifier):
     def __init__(self, inner: Notifier) -> None:
@@ -2079,12 +1979,10 @@ class NotifierDecorator(Notifier):
     def send(self, message: str) -> None:
         self._inner.send(message)
 
-
 class SmsDecorator(NotifierDecorator):
     def send(self, message: str) -> None:
         super().send(message)
         print(f"[SMS] {message}")
-
 
 class SlackDecorator(NotifierDecorator):
     def send(self, message: str) -> None:
@@ -2098,8 +1996,6 @@ class SlackDecorator(NotifierDecorator):
 notifier = SlackDecorator(SmsDecorator(BaseNotifier()))
 notifier.send("Server is down!")
 ```
-
-<a id="24-proxy"></a>
 
 ### 2.4. Proxy
 
@@ -2117,8 +2013,6 @@ The most common variants are the **virtual proxy** (delays expensive creation un
 
 The key distinction from Decorator is intent. A Decorator augments the wrapped object's behavior with additional responsibilities while preserving the same interface; a Proxy controls access to the existing behavior. In practice, a virtual proxy that lazy-loads a heavy resource is the canonical example — the client calls a method, the proxy checks whether the real object exists, creates it if not, then forwards the call.
 
-<a id="241-paradigm-fit"></a>
-
 #### 2.4.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -2129,23 +2023,17 @@ The key distinction from Decorator is intent. A Decorator augments the wrapped o
 | Procedural | **Workable** — guard functions that check conditions before calling the real function; opaque handles act as proxies. |
 | Reactive | **Adapts well** — `shareReplay` caches emissions (caching proxy), `defer` delays subscription (virtual proxy), access control operators gate streams. |
 
-<a id="242-benefits"></a>
-
 #### 2.4.2. Benefits
 
 - Defers costly initialization until the object is actually needed, saving resources in cases where it may never be used.
 - Centralizes cross-cutting concerns (logging, caching, access control) without modifying the real subject.
 - Transparent to the client — the proxy shares the subject's interface, so no calling code needs to change.
 
-<a id="243-trade-offs"></a>
-
 #### 2.4.3. Trade-offs
 
 - Adds an indirection layer that can increase response latency, especially if the proxy performs locking or network calls.
 - Lazy initialization introduces first-access latency spikes that can be surprising in latency-sensitive paths.
 - The proxy must stay in sync with the real subject's interface — any change to the subject requires a corresponding update.
-
-<a id="244-examples"></a>
 
 #### 2.4.4. Examples
 
@@ -2261,11 +2149,9 @@ image.Display();
 ```python
 from abc import ABC, abstractmethod
 
-
 class Image(ABC):
     @abstractmethod
     def display(self) -> None: ...
-
 
 class RealImage(Image):
     def __init__(self, filename: str) -> None:
@@ -2274,7 +2160,6 @@ class RealImage(Image):
 
     def display(self) -> None:
         print(f"Displaying {self._filename}")
-
 
 class ProxyImage(Image):
     def __init__(self, filename: str) -> None:
@@ -2296,8 +2181,6 @@ image.display()
 image.display()
 ```
 
-<a id="25-composite"></a>
-
 ### 2.5. Composite
 
 | **Who**  | Clients that need to treat individual objects and groups of objects uniformly through a single interface. |
@@ -2314,8 +2197,6 @@ The key participants are the **Component** interface (declaring operations that 
 
 A design tension exists around which operations belong on the component interface. Putting child-management methods (`add`, `remove`) on the base interface maximizes transparency — clients never need to know whether they hold a leaf or composite — but means leaves must handle operations that make no sense for them. The alternative places child-management only on the composite, requiring a downcast when the client wants to add children. Most modern implementations favor the safer approach: child-management on the composite only.
 
-<a id="251-paradigm-fit"></a>
-
 #### 2.5.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -2326,23 +2207,17 @@ A design tension exists around which operations belong on the component interfac
 | Procedural | **Workable** — tree nodes as structs with tagged unions; recursive functions switch on the node type. |
 | Reactive | **Adapts well** — composite streams (`merge`, `combineLatest`) unify multiple sources into one, mirroring the part-whole concept. |
 
-<a id="252-benefits"></a>
-
 #### 2.5.2. Benefits
 
 - Clients treat single objects and compositions uniformly — no conditional branching on type.
 - New leaf or composite types can be added without changing client code that operates on the component interface.
 - Recursive operations (size, render, search) propagate naturally through the tree with minimal boilerplate.
 
-<a id="253-trade-offs"></a>
-
 #### 2.5.3. Trade-offs
 
 - The uniform interface may expose operations on leaves that are meaningless (e.g., `add_child` on a file), requiring no-op or error implementations.
 - Deep trees with many small nodes can be expensive to traverse and difficult to debug.
 - Enforcing constraints (e.g., "a composite can only hold certain leaf types") is hard when the interface is fully generic.
-
-<a id="254-examples"></a>
 
 #### 2.5.4. Examples
 
@@ -2468,7 +2343,6 @@ Console.WriteLine($"Total size: {root.Size}B");
 ```python
 from abc import ABC, abstractmethod
 
-
 class FsEntry(ABC):
     def __init__(self, name: str) -> None:
         self.name = name
@@ -2478,7 +2352,6 @@ class FsEntry(ABC):
 
     @abstractmethod
     def print_tree(self, indent: int = 0) -> None: ...
-
 
 class File(FsEntry):
     def __init__(self, name: str, size: int) -> None:
@@ -2490,7 +2363,6 @@ class File(FsEntry):
 
     def print_tree(self, indent: int = 0) -> None:
         print(f"{' ' * indent}- {self.name} ({self._size}B)")
-
 
 class Directory(FsEntry):
     def __init__(self, name: str) -> None:
@@ -2522,8 +2394,6 @@ root.print_tree()
 print(f"Total size: {root.size()}B")
 ```
 
-<a id="26-bridge"></a>
-
 ### 2.6. Bridge
 
 | **Who**  | Developers who face a combinatorial explosion of subclasses because two or more independent dimensions of variation are entangled in a single hierarchy. |
@@ -2540,8 +2410,6 @@ The key participants are the **Abstraction** (high-level API the client calls), 
 
 Bridge differs from Strategy in scope: Strategy swaps one algorithm within a class, while Bridge separates two entire hierarchies so both sides can grow independently. Bridge is often established early in design to prevent a hierarchy from splitting along two axes, whereas Adapter is applied retroactively to make incompatible interfaces work together.
 
-<a id="261-paradigm-fit"></a>
-
 #### 2.6.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -2552,23 +2420,17 @@ Bridge differs from Strategy in scope: Strategy swaps one algorithm within a cla
 | Procedural | **Workable** — struct holding a function-pointer table (vtable) for the implementation; abstractions call through the table. |
 | Reactive | **Adapts well** — the abstraction emits events; the implementor subscribes and performs platform-specific work, decoupling the stream topology from the effect execution. |
 
-<a id="262-benefits"></a>
-
 #### 2.6.2. Benefits
 
 - Eliminates M × N subclass explosion — each dimension grows independently.
 - Implementation can be swapped or selected at runtime without altering abstraction code.
 - Hides implementation details from the client, strengthening encapsulation across the boundary.
 
-<a id="263-trade-offs"></a>
-
 #### 2.6.3. Trade-offs
 
 - Adds structural complexity with two parallel hierarchies and an indirection between them.
 - The right split point between abstraction and implementation must be identified early; refactoring later is costly.
 - Over-engineering risk when only one implementation exists or the two axes are unlikely to vary independently.
-
-<a id="264-examples"></a>
 
 #### 2.6.4. Examples
 
@@ -2728,14 +2590,12 @@ foreach (var shape in shapes)
 ```python
 from abc import ABC, abstractmethod
 
-
 class Renderer(ABC):
     @abstractmethod
     def render_circle(self, x: float, y: float, radius: float) -> None: ...
 
     @abstractmethod
     def render_rect(self, x: float, y: float, w: float, h: float) -> None: ...
-
 
 class VectorRenderer(Renderer):
     def render_circle(self, x: float, y: float, radius: float) -> None:
@@ -2744,7 +2604,6 @@ class VectorRenderer(Renderer):
     def render_rect(self, x: float, y: float, w: float, h: float) -> None:
         print(f"Vector rect at ({x},{y}) {w}x{h}")
 
-
 class RasterRenderer(Renderer):
     def render_circle(self, x: float, y: float, radius: float) -> None:
         print(f"Raster circle at ({x},{y}) r={radius}")
@@ -2752,14 +2611,12 @@ class RasterRenderer(Renderer):
     def render_rect(self, x: float, y: float, w: float, h: float) -> None:
         print(f"Raster rect at ({x},{y}) {w}x{h}")
 
-
 class Shape(ABC):
     def __init__(self, renderer: Renderer) -> None:
         self._renderer = renderer
 
     @abstractmethod
     def draw(self) -> None: ...
-
 
 class Circle(Shape):
     def __init__(self, x: float, y: float, radius: float, renderer: Renderer) -> None:
@@ -2770,7 +2627,6 @@ class Circle(Shape):
 
     def draw(self) -> None:
         self._renderer.render_circle(self._x, self._y, self._radius)
-
 
 class Rectangle(Shape):
     def __init__(self, x: float, y: float, w: float, h: float, renderer: Renderer) -> None:
@@ -2800,8 +2656,6 @@ for shape in shapes:
     shape.draw()
 ```
 
-<a id="27-flyweight"></a>
-
 ### 2.7. Flyweight
 
 | **Who**  | Systems that manage a very large number of fine-grained objects with substantial shared state. |
@@ -2818,8 +2672,6 @@ A **flyweight factory** manages the pool of shared flyweight objects. When a cli
 
 Flyweight is most impactful when the number of objects is large and the ratio of shared to unique state is high. If each object's data is mostly unique, there is little to share and the pattern adds complexity without meaningful savings. The pattern also requires intrinsic state to be immutable — if shared state changes, every object referencing it is affected. Modern languages provide built-in flyweight mechanisms: string interning, symbol tables, and `Rc`/`Arc` shared pointers all embody the same principle.
 
-<a id="271-paradigm-fit"></a>
-
 #### 2.7.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -2830,23 +2682,17 @@ Flyweight is most impactful when the number of objects is large and the ratio of
 | Procedural | **Workable** — shared lookup tables indexed by ID; each instance stores an index rather than a copy. |
 | Reactive | **Adapts well** — shared reference data (`shareReplay`, interned config streams) avoids duplicating constant data across subscribers. |
 
-<a id="272-benefits"></a>
-
 #### 2.7.2. Benefits
 
 - Dramatically reduces memory usage when many objects share most of their state.
 - The flyweight factory ensures identity-based sharing — the same intrinsic data is never duplicated.
 - Intrinsic immutability simplifies concurrency: shared flyweights require no synchronization.
 
-<a id="273-trade-offs"></a>
-
 #### 2.7.3. Trade-offs
 
 - Splits state into intrinsic and extrinsic, spreading what was a single object across two locations and increasing code complexity.
 - CPU cost increases because extrinsic state must be supplied or looked up on every method call rather than stored locally.
 - Identifying the correct split between intrinsic and extrinsic state requires careful analysis; a wrong split yields little benefit or breaks encapsulation.
-
-<a id="274-examples"></a>
 
 #### 2.7.4. Examples
 
@@ -2999,7 +2845,6 @@ trees.ForEach(t => t.Draw());
 ```python
 from dataclasses import dataclass
 
-
 @dataclass(frozen=True)
 class TreeType:
     name: str
@@ -3008,7 +2853,6 @@ class TreeType:
 
     def draw(self, x: float, y: float) -> None:
         print(f"Draw '{self.name}' (color={self.color}, texture={self.texture}) at ({x},{y})")
-
 
 class TreeFactory:
     def __init__(self) -> None:
@@ -3023,7 +2867,6 @@ class TreeFactory:
     @property
     def unique_types(self) -> int:
         return len(self._cache)
-
 
 class Tree:
     def __init__(self, x: float, y: float, tree_type: TreeType) -> None:
@@ -3049,8 +2892,6 @@ for tree in trees:
     tree.draw()
 ```
 
-<a id="3-behavioral"></a>
-
 ## 3. Behavioral
 
 Behavioral patterns focus on communication and responsibility between objects, defining how they interact and distribute work.
@@ -3071,8 +2912,6 @@ Behavioral patterns focus on communication and responsibility between objects, d
 | [Null Object](#312-null-object) | Providing a do-nothing default object to eliminate null checks. |
 | [Dependency Injection](#313-dependency-injection) | Externally supplying dependencies instead of creating them internally. |
 
-<a id="31-strategy"></a>
-
 ### 3.1. Strategy
 
 | **Who**  | Clients that need to select an algorithm at runtime without changing the code that uses it. |
@@ -3089,8 +2928,6 @@ The key participants are the **strategy interface** (the contract all algorithms
 
 New algorithms are added by implementing the strategy interface, leaving existing code untouched (Open/Closed Principle). Strategy is a common alternative to subclassing: instead of creating a subclass for each variant, you compose the context with a strategy at runtime.
 
-<a id="311-paradigm-fit"></a>
-
 #### 3.1.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -3101,23 +2938,17 @@ New algorithms are added by implementing the strategy interface, leaving existin
 | Procedural | **Workable** — function pointers or callback parameters. |
 | Reactive | **Natural fit** — swappable operators or stream transformations selected at subscription time. |
 
-<a id="312-benefits"></a>
-
 #### 3.1.2. Benefits
 
 - Eliminates conditional blocks (`if`/`else`, `switch`) — each algorithm is self-contained and independently testable.
 - New algorithms are added without modifying existing code (Open/Closed Principle).
 - Context and strategies vary independently, promoting composition over inheritance.
 
-<a id="313-trade-offs"></a>
-
 #### 3.1.3. Trade-offs
 
 - Clients must know the available strategies and choose between them — the decision logic moves to the caller.
 - One class per algorithm can lead to many small classes for a family of simple variants.
 - Adds indirection: behavior is delegated rather than inline, which can obscure straightforward logic when only two variants exist.
-
-<a id="314-examples"></a>
 
 #### 3.1.4. Examples
 
@@ -3299,8 +3130,6 @@ sorter.set_strategy(InsertionSort())
 sorter.sort(data)
 ```
 
-<a id="32-observer"></a>
-
 ### 3.2. Observer
 
 | **Who**  | Objects that need to be notified of state changes in another object (e.g., UI elements, logging services, cache invalidators). |
@@ -3317,8 +3146,6 @@ There are two notification models. In the **push model** (shown below), the subj
 
 Observer is foundational to event-driven architectures, GUI frameworks (click handlers, data binding), reactive programming (`Observable`/`Subject` in Rx), and messaging systems. The pattern trades simplicity for decoupling: debugging notification chains can be harder because the flow of control is implicit rather than explicit.
 
-<a id="321-paradigm-fit"></a>
-
 #### 3.2.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -3329,15 +3156,11 @@ Observer is foundational to event-driven architectures, GUI frameworks (click ha
 | Procedural | **Workable** — callback registration with manual lifecycle management. |
 | Reactive | **Natural fit** — Observer is the foundational primitive; `Observable`/`Subject` is the pattern formalized as a first-class construct. |
 
-<a id="322-benefits"></a>
-
 #### 3.2.2. Benefits
 
 - Loose coupling — subject and observers depend only on abstractions, not on each other's concrete types.
 - Dynamic subscription: observers can register and unregister at any point during runtime.
 - Supports broadcast communication — a single state change notifies all interested parties.
-
-<a id="323-trade-offs"></a>
 
 #### 3.2.3. Trade-offs
 
@@ -3345,8 +3168,6 @@ Observer is foundational to event-driven architectures, GUI frameworks (click ha
 - Lapsed listener problem: forgetting to detach an observer can cause memory leaks and phantom updates. Weak references (`weakref` in Python, `WeakReference<T>` in C#) mitigate this by allowing garbage collection of unsubscribed observers.
 - Cascading notifications (one observer's update triggers another subject change) create hard-to-debug chains.
 - Update cost scales linearly with observer count — each state change invokes every registered observer.
-
-<a id="324-examples"></a>
 
 #### 3.2.4. Examples
 
@@ -3616,8 +3437,6 @@ station.detach(stats_display)
 station.set_measurements(28.0, 70.0, 1012.0)
 ```
 
-<a id="33-command"></a>
-
 ### 3.3. Command
 
 | **Who**  | Systems that need to decouple the issuer of a request from the object that performs it (e.g., GUI toolkits, job schedulers, macro recorders). |
@@ -3634,8 +3453,6 @@ The key participants are the **Command** interface (declaring `execute` and opti
 
 Commands are naturally composable: a **MacroCommand** can hold a list of sub-commands and execute them sequentially, enabling complex multi-step operations to be built from simple primitives. The pattern also supports deferred execution (job queues), logging (serialize the command stream for replay), and transactional semantics (roll back a batch if one command fails).
 
-<a id="331-paradigm-fit"></a>
-
 #### 3.3.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -3646,23 +3463,17 @@ Commands are naturally composable: a **MacroCommand** can hold a list of sub-com
 | Procedural | **Workable** — function pointers paired with argument structs; undo requires explicit state snapshots. |
 | Reactive | **Adapts well** — commands map to events in a stream; undo/redo becomes stream rewinding or event replay. |
 
-<a id="332-benefits"></a>
-
 #### 3.3.2. Benefits
 
 - Decouples the object that invokes an operation from the one that knows how to perform it.
 - Enables undo/redo by storing executed commands in a history stack with inverse operations. A redo stack (cleared on each new command) completes the model, though the examples below show only undo for brevity.
 - Commands can be serialized, queued, logged, and composed into macros, supporting deferred and batch execution.
 
-<a id="333-trade-offs"></a>
-
 #### 3.3.3. Trade-offs
 
 - Introduces a class for every operation, increasing the total number of types in the system.
 - Undo state management adds complexity — each command must capture and restore enough context to reverse its effect.
 - Indirection between the invoker and the receiver can make the control flow harder to trace during debugging.
-
-<a id="334-examples"></a>
 
 #### 3.3.4. Examples
 
@@ -3869,14 +3680,12 @@ Console.WriteLine(editor.Text); // Hello, world!
 ```python
 from abc import ABC, abstractmethod
 
-
 class Command(ABC):
     @abstractmethod
     def execute(self) -> None: ...
 
     @abstractmethod
     def undo(self) -> None: ...
-
 
 class TypeCommand(Command):
     def __init__(self, doc: list[str], text: str) -> None:
@@ -3888,7 +3697,6 @@ class TypeCommand(Command):
 
     def undo(self) -> None:
         self._doc.pop()
-
 
 class DeleteCommand(Command):
     def __init__(self, doc: list[str], count: int) -> None:
@@ -3904,7 +3712,6 @@ class DeleteCommand(Command):
 
     def undo(self) -> None:
         self._doc.append(self._deleted)
-
 
 class Editor:
     def __init__(self) -> None:
@@ -3939,8 +3746,6 @@ editor.undo()
 print(editor.text)  # Hello, world!
 ```
 
-<a id="34-state"></a>
-
 ### 3.4. State
 
 | **Who**  | Objects whose behavior must change based on internal state (e.g., media players, network connections, document workflows, vending machines). |
@@ -3957,8 +3762,6 @@ The key participants are the **State** interface (declaring every action the con
 
 State is closely related to Strategy — both use composition to delegate behavior — but differs in intent: Strategy selects an algorithm chosen by the client, while State transitions autonomously as part of the object's lifecycle. The pattern is especially valuable when modeling finite state machines: each state class maps directly to a state in the diagram, and transitions become method calls that swap the delegate.
 
-<a id="341-paradigm-fit"></a>
-
 #### 3.4.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -3969,23 +3772,17 @@ State is closely related to Strategy — both use composition to delegate behavi
 | Procedural | **Workable** — function-pointer tables indexed by state enum, or explicit switch blocks. |
 | Reactive | **Adapts well** — state machines can be modeled as `scan`/`reduce` over event streams, emitting new states. |
 
-<a id="342-benefits"></a>
-
 #### 3.4.2. Benefits
 
 - Eliminates large conditional blocks — each state's behavior is isolated in its own class, improving readability.
 - Adding new states requires only a new class with no changes to the context or existing states.
 - State transitions are explicit and localized, making the state machine easy to visualize and verify.
 
-<a id="343-trade-offs"></a>
-
 #### 3.4.3. Trade-offs
 
 - Increases the number of classes — one per state — which can be excessive for simple state machines.
 - Distributed transitions (states deciding the next state) can scatter transition logic, making the overall machine harder to see at a glance.
 - State objects that need access to the context's internals may require exposing fields that would otherwise be private.
-
-<a id="344-examples"></a>
 
 #### 3.4.4. Examples
 
@@ -4198,7 +3995,6 @@ Console.WriteLine(player.Status); // Stopped
 ```python
 from abc import ABC, abstractmethod
 
-
 class PlayerState(ABC):
     @abstractmethod
     def play(self, player: "MediaPlayer") -> "PlayerState": ...
@@ -4208,7 +4004,6 @@ class PlayerState(ABC):
 
     @abstractmethod
     def stop(self, player: "MediaPlayer") -> "PlayerState": ...
-
 
 class Stopped(PlayerState):
     def play(self, player: "MediaPlayer") -> PlayerState:
@@ -4220,7 +4015,6 @@ class Stopped(PlayerState):
 
     def stop(self, player: "MediaPlayer") -> PlayerState:
         return self
-
 
 class Playing(PlayerState):
     def play(self, player: "MediaPlayer") -> PlayerState:
@@ -4234,7 +4028,6 @@ class Playing(PlayerState):
         player.status = "Stopped"
         return Stopped()
 
-
 class Paused(PlayerState):
     def play(self, player: "MediaPlayer") -> PlayerState:
         player.status = "Playing"
@@ -4246,7 +4039,6 @@ class Paused(PlayerState):
     def stop(self, player: "MediaPlayer") -> PlayerState:
         player.status = "Stopped"
         return Stopped()
-
 
 class MediaPlayer:
     def __init__(self) -> None:
@@ -4279,8 +4071,6 @@ player.stop()
 print(player.status)  # Stopped
 ```
 
-<a id="35-template-method"></a>
-
 ### 3.5. Template Method
 
 | **Who**  | Framework and library authors who define algorithmic skeletons that client subclasses customize by overriding specific steps. |
@@ -4297,8 +4087,6 @@ The key participants are the **AbstractClass**, which defines the template metho
 
 Template Method is the inheritance-based counterpart to Strategy: where Strategy delegates an entire algorithm to a composed object, Template Method lets subclasses replace individual steps within a fixed algorithm. The pattern is prevalent in frameworks — any time a framework says "override this method to customize behavior," it is using Template Method. The main tension is its reliance on inheritance, which can lead to deep class hierarchies and tight coupling between base and derived classes.
 
-<a id="351-paradigm-fit"></a>
-
 #### 3.5.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -4309,23 +4097,17 @@ Template Method is the inheritance-based counterpart to Strategy: where Strategy
 | Procedural | **Workable** — a top-level function accepts function pointers for the customizable steps. |
 | Reactive | **Workable** — a fixed pipeline of operators with configurable transformation stages, though composition is more idiomatic. |
 
-<a id="352-benefits"></a>
-
 #### 3.5.2. Benefits
 
 - Maximizes code reuse — the invariant algorithm lives in one place; only varying steps are overridden.
 - Enforces a consistent algorithmic structure across all variants, preventing subclasses from accidentally breaking the workflow.
 - Hook methods provide optional customization points with sensible defaults, minimizing the burden on subclasses.
 
-<a id="353-trade-offs"></a>
-
 #### 3.5.3. Trade-offs
 
 - Relies on inheritance, which can lead to deep hierarchies and tight coupling between base and derived classes.
 - Subclasses must understand the base class's control flow to override steps correctly — a form of fragile base class problem.
 - Adding a new step to the template method can require changes across all existing subclasses.
-
-<a id="354-examples"></a>
 
 #### 3.5.4. Examples
 
@@ -4445,7 +4227,6 @@ Console.WriteLine(json.Parse("data.json")); // {json_processed(data.json)}
 ```python
 from abc import ABC, abstractmethod
 
-
 class DataParser(ABC):
     def parse(self, source: str) -> str:
         raw = self.read_data(source)
@@ -4461,14 +4242,12 @@ class DataParser(ABC):
     def format_output(self, processed: str) -> str:
         return processed
 
-
 class CsvParser(DataParser):
     def read_data(self, source: str) -> str:
         return f"csv_raw({source})"
 
     def process_data(self, raw: str) -> str:
         return raw.upper()
-
 
 class JsonParser(DataParser):
     def read_data(self, source: str) -> str:
@@ -4491,8 +4270,6 @@ json = JsonParser()
 print(json.parse("data.json"))  # {json_processed(data.json)}
 ```
 
-<a id="36-iterator"></a>
-
 ### 3.6. Iterator
 
 | **Who**  | Any code that needs to traverse a collection without depending on its internal structure (arrays, trees, graphs, lazy sequences). |
@@ -4509,8 +4286,6 @@ The key participants are the **Iterator** interface (typically a single `next` m
 
 Because iterators decouple production from consumption, they naturally support lazy evaluation — elements can be computed or fetched on demand rather than materialized upfront. Iterator combinators (`map`, `filter`, `take`, `zip`) compose into pipelines that process data without intermediate allocations, which is why Rust and Python lean heavily on iterator chains for data transformation.
 
-<a id="361-paradigm-fit"></a>
-
 #### 3.6.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -4521,23 +4296,17 @@ Because iterators decouple production from consumption, they naturally support l
 | Procedural | **Workable** — index-based loops or opaque cursor structs advanced by a `next` function. |
 | Reactive | **Adapts well** — push-based streams are the dual of pull-based iterators; conversion between the two is well-defined. |
 
-<a id="362-benefits"></a>
-
 #### 3.6.2. Benefits
 
 - Decouples traversal logic from collection internals, letting both evolve independently.
 - Supports multiple simultaneous traversals over the same collection with independent iterator instances.
 - Enables lazy evaluation — elements are produced on demand, avoiding unnecessary computation or memory allocation.
 
-<a id="363-trade-offs"></a>
-
 #### 3.6.3. Trade-offs
 
 - Simple collections (plain arrays) gain little from a dedicated iterator; the abstraction adds overhead without clear benefit.
 - External iterators expose traversal state that can become stale if the collection is mutated mid-iteration.
 - Custom iterators for complex structures (graphs, trees) can be difficult to implement correctly, especially when the traversal must be resumable.
-
-<a id="364-examples"></a>
 
 #### 3.6.4. Examples
 
@@ -4639,7 +4408,6 @@ Python's iterator protocol (`__iter__`/`__next__`) integrates directly with `for
 ```python
 from collections.abc import Iterator
 
-
 class RangeIter(Iterator[int]):
     def __init__(self, start: int, end: int, step: int = 1) -> None:
         self._current = start
@@ -4668,8 +4436,6 @@ total = sum(x for x in RangeIter(1, 6) if x % 2 == 0)
 print(total)  # 6
 ```
 
-<a id="37-chain-of-responsibility"></a>
-
 ### 3.7. Chain of Responsibility
 
 | **Who**  | Systems where a request must pass through multiple processors, each deciding whether to handle it or forward it (e.g., middleware stacks, event propagation, approval workflows). |
@@ -4686,8 +4452,6 @@ The key participants are the **Handler** interface (declaring a method to handle
 
 Chain of Responsibility is the backbone of HTTP middleware frameworks (Express, ASP.NET, Actix-web): each middleware function receives the request and a `next` callback, optionally transforms the request or response, and decides whether to continue the chain. The pattern makes it trivial to reorder, add, or remove handlers without touching the others, but debugging long chains can be challenging because the processing path is determined at runtime.
 
-<a id="371-paradigm-fit"></a>
-
 #### 3.7.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -4698,23 +4462,17 @@ Chain of Responsibility is the backbone of HTTP middleware frameworks (Express, 
 | Procedural | **Workable** — a list of function pointers iterated in sequence, each receiving the request and a continue flag. |
 | Reactive | **Adapts well** — operators in a stream pipeline are a natural chain; `filter`, `map`, and `takeWhile` model handler decisions. |
 
-<a id="372-benefits"></a>
-
 #### 3.7.2. Benefits
 
 - Decouples the sender from all receivers — the client sends the request without knowing which handler will process it.
 - Handlers can be added, removed, or reordered at runtime without modifying existing handlers or the client.
 - Each handler addresses a single concern, promoting the Single Responsibility Principle and clean separation of cross-cutting logic.
 
-<a id="373-trade-offs"></a>
-
 #### 3.7.3. Trade-offs
 
 - No guarantee of handling — if no handler in the chain processes the request, it falls through silently unless a catch-all is added.
 - Long chains can be difficult to debug because the processing path is assembled at runtime and not visible in static code analysis.
 - Performance can degrade with many handlers if every request must traverse the entire chain even when early termination is rare.
-
-<a id="374-examples"></a>
 
 #### 3.7.4. Examples
 
@@ -4903,7 +4661,6 @@ Console.WriteLine(auth.Handle("auth:valid body:empty"));   // 400 Bad Request
 ```python
 from abc import ABC, abstractmethod
 
-
 class Handler(ABC):
     def __init__(self) -> None:
         self._next: Handler | None = None
@@ -4920,19 +4677,16 @@ class Handler(ABC):
             return self._next.handle(request)
         return "200 OK"
 
-
 class AuthHandler(Handler):
     def handle(self, request: str) -> str:
         if "auth:valid" not in request:
             return "401 Unauthorized"
         return self.forward(request)
 
-
 class LoggingHandler(Handler):
     def handle(self, request: str) -> str:
         print(f"[LOG] Processing: {request}")
         return self.forward(request)
-
 
 class ValidationHandler(Handler):
     def handle(self, request: str) -> str:
@@ -4955,8 +4709,6 @@ print(auth.handle("auth:missing"))             # 401 Unauthorized
 print(auth.handle("auth:valid body:empty"))    # 400 Bad Request
 ```
 
-<a id="38-mediator"></a>
-
 ### 3.8. Mediator
 
 | **Who**  | Objects that communicate through complex many-to-many relationships (UI components, services, subsystems). |
@@ -4973,8 +4725,6 @@ The key participants are the **Mediator** interface (declares the notification m
 
 The main risk is that the mediator itself can become a "god object" — a single class that knows too much and does too much. If the coordination logic grows complex, consider splitting it into sub-mediators or using event-based mediation. Mediator is closely related to Observer (the mediator often observes its colleagues) and to Facade (both centralize communication, but Facade simplifies a subsystem's interface while Mediator manages peer-to-peer interaction).
 
-<a id="381-paradigm-fit"></a>
-
 #### 3.8.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -4985,23 +4735,17 @@ The main risk is that the mediator itself can become a "god object" — a single
 | Procedural | **Workable** — a central function or module receives notifications and dispatches calls to relevant subsystems. |
 | Reactive | **Natural fit** — a central subject/bus merges streams from multiple sources and routes events to subscribers. |
 
-<a id="382-benefits"></a>
-
 #### 3.8.2. Benefits
 
 - Reduces coupling between communicating objects — each colleague depends only on the mediator, not on every other colleague.
 - Centralizes interaction logic in one place, making complex coordination easier to understand and modify.
 - Adding new colleagues requires updating the mediator, not every existing colleague.
 
-<a id="383-trade-offs"></a>
-
 #### 3.8.3. Trade-offs
 
 - The mediator can become a monolithic god object if too much logic accumulates in it.
 - Adds a layer of indirection — tracing the flow from one colleague to another requires reading through the mediator.
 - Single point of failure: all interaction passes through the mediator, so a bug there affects the entire group.
-
-<a id="384-examples"></a>
 
 #### 3.8.4. Examples
 
@@ -5140,14 +4884,12 @@ Console.WriteLine(string.Join(", ", carol.Inbox));
 ```python
 from abc import ABC, abstractmethod
 
-
 class ChatMediator(ABC):
     @abstractmethod
     def send_message(self, sender: str, message: str) -> None: ...
 
     @abstractmethod
     def add_user(self, user: "User") -> None: ...
-
 
 class User:
     def __init__(self, name: str, mediator: ChatMediator) -> None:
@@ -5160,7 +4902,6 @@ class User:
 
     def receive(self, sender: str, message: str) -> None:
         self.inbox.append(f"[{sender}]: {message}")
-
 
 class ChatRoom(ChatMediator):
     def __init__(self) -> None:
@@ -5194,8 +4935,6 @@ print(bob.inbox)   # ['[Alice]: Hello everyone!']
 print(carol.inbox)  # ['[Alice]: Hello everyone!', '[Bob]: Hey Alice!']
 ```
 
-<a id="39-memento"></a>
-
 ### 3.9. Memento
 
 | **Who**  | Objects whose internal state needs to be saved and restored (text editors, games, transaction systems). |
@@ -5212,8 +4951,6 @@ The three participants are the **Originator** (the object whose state is being s
 
 In practice, the memento can be a simple data class, a serialized blob, or even a closure that captures state. For large objects, incremental or diff-based mementos can reduce memory usage. Languages with inner-class or friend access (C#'s `internal`, C++ `friend`) can enforce the "only the originator reads the memento" rule at compile time; in others, convention enforces it.
 
-<a id="391-paradigm-fit"></a>
-
 #### 3.9.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -5224,23 +4961,17 @@ In practice, the memento can be a simple data class, a serialized blob, or even 
 | Procedural | **Workable** — struct copies or serialized snapshots stored in an array serve as mementos. |
 | Reactive | **Adapts well** — state replay (e.g., `BehaviorSubject` history or event-sourced streams) achieves the same goal within a reactive pipeline. |
 
-<a id="392-benefits"></a>
-
 #### 3.9.2. Benefits
 
 - Preserves encapsulation — the originator's internal structure is not exposed to the caretaker or any other external object.
 - Undo/redo becomes straightforward: push mementos onto a stack and pop to restore.
 - Mementos are immutable snapshots, safe to store, serialize, or transmit.
 
-<a id="393-trade-offs"></a>
-
 #### 3.9.3. Trade-offs
 
 - Memory cost can grow quickly if the originator's state is large and snapshots are taken frequently.
 - The originator must expose a way to produce and consume mementos, which can be awkward to design if the state is complex.
 - The caretaker must manage memento lifecycle (when to discard old mementos) to avoid unbounded memory growth.
-
-<a id="394-examples"></a>
 
 #### 3.9.4. Examples
 
@@ -5407,12 +5138,10 @@ Console.WriteLine(editor.Content); // ""
 ```python
 from dataclasses import dataclass
 
-
 @dataclass(frozen=True)
 class EditorMemento:
     content: str
     cursor: int
-
 
 class TextEditor:
     def __init__(self) -> None:
@@ -5435,7 +5164,6 @@ class TextEditor:
     def restore(self, memento: EditorMemento) -> None:
         self._content = memento.content
         self._cursor = memento.cursor
-
 
 class History:
     def __init__(self) -> None:
@@ -5473,8 +5201,6 @@ editor.restore(memento)
 print(editor.content)  # ""
 ```
 
-<a id="310-visitor"></a>
-
 ### 3.10. Visitor
 
 | **Who**  | Systems with a stable set of element types that need to support many evolving operations (compilers, document processors, scene graphs). |
@@ -5491,8 +5217,6 @@ The key participants are the **Visitor** interface (declares a `visit` method fo
 
 Visitor's fundamental trade-off is the opposite of subclassing: adding new operations is easy (write a new visitor), but adding new element types is hard (every existing visitor must be updated). This makes Visitor ideal for stable hierarchies with evolving operations (AST nodes, document elements), and a poor fit for structures where new types are added frequently.
 
-<a id="3101-paradigm-fit"></a>
-
 #### 3.10.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -5503,23 +5227,17 @@ Visitor's fundamental trade-off is the opposite of subclassing: adding new opera
 | Procedural | **Workable** — a switch/case on a type tag achieves the same dispatch, though it scatters less cleanly than a visitor object. |
 | Reactive | **Workable** — streams can map elements through transform functions keyed by type, but the pattern's dispatch structure isn't a natural reactive idiom. |
 
-<a id="3102-benefits"></a>
-
 #### 3.10.2. Benefits
 
 - New operations are added by writing a new visitor — no modification to element classes (Open/Closed for operations).
 - Related behavior for a single operation is consolidated in one visitor class instead of scattered across element types.
 - Visitors can accumulate state as they traverse the structure, enabling complex cross-element computations.
 
-<a id="3103-trade-offs"></a>
-
 #### 3.10.3. Trade-offs
 
 - Adding a new element type requires updating every existing visitor — the pattern is closed for new types.
 - Double dispatch adds indirection that can be confusing for developers unfamiliar with the pattern.
 - Visitors may need access to element internals, which can weaken encapsulation if elements must expose state they would otherwise keep private.
-
-<a id="3104-examples"></a>
 
 #### 3.10.4. Examples
 
@@ -5704,7 +5422,6 @@ Console.WriteLine(text); // (3 + (4 * 5))
 from abc import ABC, abstractmethod
 from typing import Any
 
-
 class ExprVisitor(ABC):
     @abstractmethod
     def visit_number(self, value: float) -> Any: ...
@@ -5712,11 +5429,9 @@ class ExprVisitor(ABC):
     @abstractmethod
     def visit_binary(self, left: "Expr", op: str, right: "Expr") -> Any: ...
 
-
 class Expr(ABC):
     @abstractmethod
     def accept(self, visitor: ExprVisitor) -> Any: ...
-
 
 class NumberExpr(Expr):
     def __init__(self, value: float) -> None:
@@ -5724,7 +5439,6 @@ class NumberExpr(Expr):
 
     def accept(self, visitor: ExprVisitor) -> Any:
         return visitor.visit_number(self.value)
-
 
 class BinaryExpr(Expr):
     def __init__(self, left: Expr, op: str, right: Expr) -> None:
@@ -5734,7 +5448,6 @@ class BinaryExpr(Expr):
 
     def accept(self, visitor: ExprVisitor) -> Any:
         return visitor.visit_binary(self.left, self.op, self.right)
-
 
 class Evaluator(ExprVisitor):
     def visit_number(self, value: float) -> float:
@@ -5749,7 +5462,6 @@ class Evaluator(ExprVisitor):
             case "*": return l * r
             case "/": return l / r
             case _: raise ValueError(f"unknown operator: {op}")
-
 
 class Printer(ExprVisitor):
     def visit_number(self, value: float) -> str:
@@ -5777,8 +5489,6 @@ text = expr.accept(Printer())
 print(text)  # (3.0 + (4.0 * 5.0))
 ```
 
-<a id="311-interpreter"></a>
-
 ### 3.11. Interpreter
 
 | **Who**  | Systems that need to evaluate or process sentences in a defined language (rule engines, query parsers, DSL evaluators). |
@@ -5795,13 +5505,9 @@ The key participants are the **AbstractExpression** (declares the `interpret` me
 
 Interpreter works well for small, simple grammars where the overhead of a full parser generator is unjustified. For complex grammars, the class explosion (one class per rule) becomes unmanageable, and tools like parser combinators, ANTLR, or hand-written recursive-descent parsers are preferred. The pattern is closely related to Composite (the expression tree is a composite structure) and Visitor (an external visitor can replace the `interpret` method to add new operations over the grammar).
 
-<a id="3111-domain-context"></a>
-
 #### 3.11.1. Domain Context
 
 Primarily relevant in language tooling, DSLs, rule engines, and compilers. Rarely encountered in general application code that doesn't need to parse or evaluate expressions.
-
-<a id="3112-paradigm-fit"></a>
 
 #### 3.11.2. Paradigm Fit
 
@@ -5813,23 +5519,17 @@ Primarily relevant in language tooling, DSLs, rule engines, and compilers. Rarel
 | Procedural | **Workable** — tagged unions with a switch-based evaluator achieve the same result without a class hierarchy. |
 | Reactive | **Uncommon** — expression evaluation is typically a synchronous tree walk, not a stream-based process. |
 
-<a id="3113-benefits"></a>
-
 #### 3.11.3. Benefits
 
 - Grammar is explicit in the class structure — each rule is a self-contained, testable class.
 - Easy to extend with new expressions by adding new classes without modifying existing ones.
 - Expression trees can be composed, reused, and transformed programmatically.
 
-<a id="3114-trade-offs"></a>
-
 #### 3.11.4. Trade-offs
 
 - One class per grammar rule leads to class explosion for complex grammars.
 - Recursive interpretation can be slow for large expression trees compared to compiled or bytecode-based evaluation.
 - Building the expression tree typically requires a separate parser, adding complexity.
-
-<a id="3115-examples"></a>
 
 #### 3.11.5. Examples
 
@@ -5995,11 +5695,9 @@ Console.WriteLine(expr.Interpret(ctx)); // True: (x AND y) OR (NOT z)
 ```python
 from abc import ABC, abstractmethod
 
-
 class BoolExpr(ABC):
     @abstractmethod
     def interpret(self, context: dict[str, bool]) -> bool: ...
-
 
 class Constant(BoolExpr):
     def __init__(self, value: bool) -> None:
@@ -6008,14 +5706,12 @@ class Constant(BoolExpr):
     def interpret(self, context: dict[str, bool]) -> bool:
         return self._value
 
-
 class Variable(BoolExpr):
     def __init__(self, name: str) -> None:
         self._name = name
 
     def interpret(self, context: dict[str, bool]) -> bool:
         return context.get(self._name, False)
-
 
 class And(BoolExpr):
     def __init__(self, left: BoolExpr, right: BoolExpr) -> None:
@@ -6025,7 +5721,6 @@ class And(BoolExpr):
     def interpret(self, context: dict[str, bool]) -> bool:
         return self._left.interpret(context) and self._right.interpret(context)
 
-
 class Or(BoolExpr):
     def __init__(self, left: BoolExpr, right: BoolExpr) -> None:
         self._left = left
@@ -6033,7 +5728,6 @@ class Or(BoolExpr):
 
     def interpret(self, context: dict[str, bool]) -> bool:
         return self._left.interpret(context) or self._right.interpret(context)
-
 
 class Not(BoolExpr):
     def __init__(self, operand: BoolExpr) -> None:
@@ -6055,8 +5749,6 @@ ctx = {"x": True, "y": False, "z": False}
 print(expr.interpret(ctx))  # True: (x AND y) OR (NOT z)
 ```
 
-<a id="312-null-object"></a>
-
 ### 3.12. Null Object
 
 | **Who**  | Any client code that would otherwise need null checks before invoking an object's methods. |
@@ -6073,8 +5765,6 @@ The key participants are the **AbstractObject** (the interface or base class tha
 
 Null Object is different from Optional/Maybe types, which make the absence of a value explicit and force the caller to handle it. Null Object hides the absence by providing a valid stand-in — this is its strength (simple client code) and its risk (silent failures if the null object masks a genuine configuration error). Use Null Object when "do nothing" is genuinely correct default behavior, not when the absence of a dependency indicates a bug.
 
-<a id="3121-paradigm-fit"></a>
-
 #### 3.12.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -6085,23 +5775,17 @@ Null Object is different from Optional/Maybe types, which make the absence of a 
 | Procedural | **Workable** — a no-op function or struct with zeroed fields serves as the null stand-in. |
 | Reactive | **Adapts well** — `EMPTY` observables or no-op subscribers represent the absence of a real producer/consumer. |
 
-<a id="3122-benefits"></a>
-
 #### 3.12.2. Benefits
 
 - Eliminates pervasive null checks — client code calls methods unconditionally, reducing boilerplate and NullPointerException risk.
 - Simplifies client logic by guaranteeing that every collaborator is a valid, callable object.
 - Null objects are trivially testable and can serve as safe defaults in dependency injection.
 
-<a id="3123-trade-offs"></a>
-
 #### 3.12.3. Trade-offs
 
 - Silent no-ops can mask configuration errors — if a real dependency was expected but a null object was supplied, failures go undetected.
 - Every interface change requires updating the null object alongside the real implementations.
 - Can obscure program flow: debugging is harder when "nothing happens" without any explicit indication of why.
-
-<a id="3124-examples"></a>
 
 #### 3.12.4. Examples
 
@@ -6220,14 +5904,12 @@ quietService.PlaceOrder("Gadget"); // no logging output
 ```python
 from abc import ABC, abstractmethod
 
-
 class Logger(ABC):
     @abstractmethod
     def info(self, message: str) -> None: ...
 
     @abstractmethod
     def error(self, message: str) -> None: ...
-
 
 class ConsoleLogger(Logger):
     def info(self, message: str) -> None:
@@ -6236,14 +5918,12 @@ class ConsoleLogger(Logger):
     def error(self, message: str) -> None:
         print(f"[ERROR] {message}")
 
-
 class NullLogger(Logger):
     def info(self, message: str) -> None:
         pass
 
     def error(self, message: str) -> None:
         pass
-
 
 class OrderService:
     def __init__(self, logger: Logger | None = None) -> None:
@@ -6265,8 +5945,6 @@ quiet_service = OrderService()
 quiet_service.place_order("Gadget")  # no logging output
 ```
 
-<a id="313-dependency-injection"></a>
-
 ### 3.13. Dependency Injection
 
 | **Who**  | Any class or module that depends on external services, repositories, or collaborators. |
@@ -6285,8 +5963,6 @@ DI is not the same as a DI container or IoC framework — those are tools that a
 
 The examples below show constructor injection — the most common form. **Setter injection** (assigning dependencies via properties after construction) is useful for optional dependencies that have sensible defaults, but makes the dependency graph harder to reason about since objects can exist in a partially configured state.
 
-<a id="3131-paradigm-fit"></a>
-
 #### 3.13.1. Paradigm Fit
 
 | Paradigm | Compatibility |
@@ -6297,23 +5973,17 @@ The examples below show constructor injection — the most common form. **Setter
 | Procedural | **Workable** — passing struct pointers or function pointers to procedures achieves the same decoupling. |
 | Reactive | **Adapts well** — services and data sources are injected into stream pipelines as external dependencies; Angular's DI system is a prominent example. |
 
-<a id="3132-benefits"></a>
-
 #### 3.13.2. Benefits
 
 - Explicit dependency graph — every dependency is visible in the constructor, eliminating hidden coupling.
 - Testability — injecting mocks, stubs, or fakes replaces real dependencies without modifying the class under test.
 - Flexibility — swapping implementations (e.g., switching payment gateways, swapping a cache backend) requires changing only the composition root.
 
-<a id="3133-trade-offs"></a>
-
 #### 3.13.3. Trade-offs
 
 - Constructor parameter lists can grow long in deeply dependent classes, signaling a need to refactor responsibilities.
 - Indirection increases — the reader must trace through the composition root or container configuration to understand which concrete types are wired.
 - IoC containers add framework complexity, magic (auto-resolution, convention-based binding), and potential runtime errors if bindings are misconfigured.
-
-<a id="3134-examples"></a>
 
 #### 3.13.4. Examples
 
@@ -6437,16 +6107,13 @@ Console.WriteLine(testService.PlaceOrder("Gadget", 9.99m));
 ```python
 from abc import ABC, abstractmethod
 
-
 class PaymentGateway(ABC):
     @abstractmethod
     def charge(self, amount: float) -> str: ...
 
-
 class StripeGateway(PaymentGateway):
     def charge(self, amount: float) -> str:
         return f"Stripe charged ${amount:.2f}"
-
 
 class MockGateway(PaymentGateway):
     def __init__(self, *, should_fail: bool = False) -> None:
@@ -6456,7 +6123,6 @@ class MockGateway(PaymentGateway):
         if self._should_fail:
             raise RuntimeError("Payment declined")
         return f"Mock charged ${amount:.2f}"
-
 
 class OrderService:
     def __init__(self, gateway: PaymentGateway) -> None:
@@ -6483,8 +6149,6 @@ except RuntimeError as e:
     print(e)  # Payment declined
 ```
 
-<a id="4-architectural"></a>
-
 ## 4. Architectural
 
 Architectural patterns address system-level concerns — how components, services, and data flows are organized across application boundaries. Unlike creational, structural, and behavioral patterns which operate at the object level, architectural patterns shape the overall topology and communication style of a system.
@@ -6498,8 +6162,6 @@ Architectural patterns address system-level concerns — how components, service
 | [Circuit Breaker](#45-circuit-breaker) | Preventing cascading failures by short-circuiting calls to unhealthy services. |
 | [Saga](#46-saga) | Managing distributed transactions across multiple services with compensating rollbacks. |
 | [Specification](#47-specification) | Composing reusable business rules as combinable boolean predicates. |
-
-<a id="41-repository"></a>
 
 ### 4.1. Repository
 
@@ -6517,13 +6179,9 @@ The key participants are the **repository interface** (the contract domain code 
 
 Repository is often paired with Unit of Work to coordinate multi-entity transactions. A common pitfall is "repository bloat" — accumulating dozens of query methods. This can be mitigated by combining Repository with Specification (for composable queries) or by keeping repositories focused on aggregate roots rather than every entity.
 
-<a id="411-domain-context"></a>
-
 #### 4.1.1. Domain Context
 
 Primarily relevant in applications with persistent data storage (databases, file systems, external APIs). Rarely encountered in stateless utilities, CLI tools, or applications without a data layer.
-
-<a id="412-system-fit"></a>
 
 #### 4.1.2. System Fit
 
@@ -6534,23 +6192,17 @@ Primarily relevant in applications with persistent data storage (databases, file
 | Serverless | **Adapts well** — repository instances are short-lived but still decouple handler logic from storage. |
 | Event-Driven | **Adapts well** — repositories persist aggregates while events flow through separate channels. |
 
-<a id="413-benefits"></a>
-
 #### 4.1.3. Benefits
 
 - Decouples domain logic from storage technology — switching from PostgreSQL to DynamoDB requires only a new concrete repository.
 - Enables unit testing of domain logic with in-memory or mock repositories, eliminating database dependencies in tests.
 - Centralizes data access logic, making query optimizations and caching strategies easier to apply consistently.
 
-<a id="414-trade-offs"></a>
-
 #### 4.1.4. Trade-offs
 
 - Adds an abstraction layer that may be unnecessary for simple CRUD applications with no domain logic.
 - Repository interfaces can bloat with query methods; discipline is needed to keep them focused on aggregate roots.
 - Leaky abstractions emerge when storage-specific concepts (pagination cursors, query hints) bleed into the interface.
-
-<a id="415-examples"></a>
 
 #### 4.1.5. Examples
 
@@ -6724,8 +6376,6 @@ if user:
 repo.remove(1)
 ```
 
-<a id="42-unit-of-work"></a>
-
 ### 4.2. Unit of Work
 
 | **Who**  | Applications performing multiple related data modifications that must succeed or fail together. |
@@ -6742,13 +6392,9 @@ The key participants are the **Unit of Work** itself (which tracks the change se
 
 The pattern reduces the number of database round-trips (one batched write instead of many individual ones), ensures atomicity without requiring the caller to manage transactions manually, and prevents the inconsistency that arises when some writes succeed and others fail within a single business operation. A closely related concept is the **Identity Map**, which ensures each entity is loaded only once per UoW scope — preventing duplicate in-memory instances from diverging. Most ORM frameworks bundle an Identity Map into their UoW implementation.
 
-<a id="421-domain-context"></a>
-
 #### 4.2.1. Domain Context
 
 Primarily relevant in applications performing multiple related data modifications that must succeed or fail together. Uncommon in read-heavy or single-write applications where atomic batching adds no value.
-
-<a id="422-system-fit"></a>
 
 #### 4.2.2. System Fit
 
@@ -6759,23 +6405,17 @@ Primarily relevant in applications performing multiple related data modification
 | Serverless | **Workable** — short function lifetimes suit small units of work, but connection pooling needs care. |
 | Event-Driven | **Adapts well** — commit can atomically persist changes and publish domain events (transactional outbox). |
 
-<a id="423-benefits"></a>
-
 #### 4.2.3. Benefits
 
 - Guarantees atomicity — all changes within a business operation succeed or fail together.
 - Reduces database round-trips by batching inserts, updates, and deletes into a single flush.
 - Centralizes transaction management, removing explicit begin/commit/rollback calls from service code.
 
-<a id="424-trade-offs"></a>
-
 #### 4.2.4. Trade-offs
 
 - Adds complexity to track entity states (new, dirty, removed) and detect changes.
 - Long-lived units of work can hold database locks or accumulate large change sets, increasing conflict risk.
 - Implicit change tracking can surprise developers when modifications are flushed at unexpected times.
-
-<a id="425-examples"></a>
 
 #### 4.2.5. Examples
 
@@ -6969,8 +6609,6 @@ uow.register_removed(3)
 uow.commit()
 ```
 
-<a id="43-cqrs"></a>
-
 ### 4.3. CQRS
 
 | **Who**  | Systems with asymmetric read/write loads or complex domain models that benefit from independent optimization. |
@@ -6987,13 +6625,9 @@ The key participants are **commands** (data structures representing write intent
 
 CQRS adds significant structural complexity and is overkill for simple CRUD applications. It shines in systems where reads vastly outnumber writes (or vice versa), where the read shape differs dramatically from the write shape, or where independent scaling of read and write workloads is required. It pairs naturally with Event Sourcing, where the event log serves as the write model and projections build the read model.
 
-<a id="431-domain-context"></a>
-
 #### 4.3.1. Domain Context
 
 Primarily relevant in systems with asymmetric read/write loads or complex domain models where a single model cannot efficiently serve both reads and writes. Overkill for simple CRUD applications with balanced read/write patterns and straightforward data shapes.
-
-<a id="432-system-fit"></a>
 
 #### 4.3.2. System Fit
 
@@ -7004,23 +6638,17 @@ Primarily relevant in systems with asymmetric read/write loads or complex domain
 | Serverless | **Adapts well** — command and query handlers map naturally to separate functions with independent scaling. |
 | Event-Driven | **Natural fit** — events bridge the write and read models; projections consume events to build read stores. |
 
-<a id="433-benefits"></a>
-
 #### 4.3.3. Benefits
 
 - Independent optimization — the write model can be normalized for consistency while the read model is denormalized for performance.
 - Read and write workloads scale independently, each provisioned for its actual load.
 - Simplifies complex domains by letting each side model only the concerns it handles.
 
-<a id="434-trade-offs"></a>
-
 #### 4.3.4. Trade-offs
 
 - Eventual consistency between write and read models requires the application and users to tolerate stale reads.
 - Doubles the number of models, handlers, and synchronization code — significant structural overhead.
 - Debugging requires tracing through command handlers, events, and projections rather than a single code path.
-
-<a id="435-examples"></a>
 
 #### 4.3.5. Examples
 
@@ -7262,8 +6890,6 @@ if view:
     print(f"{view.name}: {view.quantity} in stock (available: {view.available})")
 ```
 
-<a id="44-event-sourcing"></a>
-
 ### 4.4. Event Sourcing
 
 | **Who**  | Systems that require a complete audit trail, temporal queries, or the ability to replay history to rebuild state. |
@@ -7282,13 +6908,9 @@ Event Sourcing provides a complete audit trail by construction, supports tempora
 
 The examples below use floating-point types for monetary amounts for simplicity. Production financial systems should use exact decimal types (`Decimal` in C#/Python, or a fixed-point library in Rust) to avoid rounding errors.
 
-<a id="441-domain-context"></a>
-
 #### 4.4.1. Domain Context
 
 Primarily relevant in audit-heavy systems, financial applications, and domains requiring temporal queries or event replay. Adds significant complexity to simple CRUD applications where only current state matters.
-
-<a id="442-system-fit"></a>
 
 #### 4.4.2. System Fit
 
@@ -7299,23 +6921,17 @@ Primarily relevant in audit-heavy systems, financial applications, and domains r
 | Serverless | **Workable** — functions can append events and trigger projections, but replay across cold starts needs care. |
 | Event-Driven | **Natural fit** — events are the native communication primitive; the event store is the system's source of truth. |
 
-<a id="443-benefits"></a>
-
 #### 4.4.3. Benefits
 
 - Complete audit trail by construction — every state change is recorded as an immutable event.
 - Temporal queries are trivial: replay events up to any point in time to reconstruct past states.
 - Enables bug fixes by correcting projection logic and reprocessing the event stream, without losing data.
 
-<a id="444-trade-offs"></a>
-
 #### 4.4.4. Trade-offs
 
 - Event schema evolution is hard — renaming or restructuring events requires versioning and upcasting strategies.
 - Rebuilding state from long event streams is slow without snapshotting, adding implementation complexity.
 - Fundamentally different mental model from CRUD; steep learning curve for teams unfamiliar with the approach.
-
-<a id="445-examples"></a>
 
 #### 4.4.5. Examples
 
@@ -7528,8 +7144,6 @@ account = BankAccount.replay(store.load("acc-1"))
 print(f"{account.owner}: balance = {account.balance:.2f} (v{account.version})")
 ```
 
-<a id="45-circuit-breaker"></a>
-
 ### 4.5. Circuit Breaker
 
 | **Who**  | Distributed systems making remote calls to services that can fail, hang, or become unresponsive. |
@@ -7548,13 +7162,9 @@ Circuit Breaker is essential in microservice architectures where a single unheal
 
 The examples below transition from Half-Open to Closed on a single successful probe. Production implementations often require a configurable **success threshold** — N consecutive successes in Half-Open before fully closing — to avoid re-closing prematurely on a single lucky call.
 
-<a id="451-domain-context"></a>
-
 #### 4.5.1. Domain Context
 
 Primarily relevant in distributed systems and microservice architectures where remote calls can fail or hang. Rarely encountered in single-process applications without external dependencies.
-
-<a id="452-system-fit"></a>
 
 #### 4.5.2. System Fit
 
@@ -7565,23 +7175,17 @@ Primarily relevant in distributed systems and microservice architectures where r
 | Serverless | **Workable** — useful for external API calls, but per-invocation state requires shared storage for the breaker state. |
 | Event-Driven | **Adapts well** — protects event consumers from unhealthy downstream processors or external services. |
 
-<a id="453-benefits"></a>
-
 #### 4.5.3. Benefits
 
 - Prevents cascading failures — a single unhealthy dependency cannot exhaust the caller's resources.
 - Fail-fast behavior frees threads and connections immediately instead of blocking on doomed calls.
 - Gives the failing service time to recover by stopping traffic during the open state.
 
-<a id="454-trade-offs"></a>
-
 #### 4.5.4. Trade-offs
 
 - Legitimate requests are rejected during the open state, even if the remote service has partially recovered.
 - Tuning thresholds and timeouts requires production traffic analysis; poor defaults cause premature tripping or delayed detection.
 - Adds state management complexity, especially when shared across multiple instances (distributed circuit breaker state).
-
-<a id="455-examples"></a>
 
 #### 4.5.5. Examples
 
@@ -7829,8 +7433,6 @@ for _ in range(4):
         print(f"Error: {e}, State: {breaker.state}")
 ```
 
-<a id="46-saga"></a>
-
 ### 4.6. Saga
 
 | **Who**  | Distributed systems where a business process spans multiple services, each with its own database. |
@@ -7847,13 +7449,9 @@ There are two orchestration styles. In **choreography**, each service publishes 
 
 Sagas provide eventual consistency rather than immediate consistency. Between steps, the system is in a partially completed state that other operations may observe. This requires careful design of compensating actions (they must be idempotent and handle partial states) and tolerance for intermediate inconsistency in the business domain. In production, the orchestrator's state (which steps have completed, which compensations are pending) must be **persisted** so that if the process crashes mid-saga, recovery can resume compensation from the last known checkpoint rather than leaving the system in an irrecoverable partial state.
 
-<a id="461-domain-context"></a>
-
 #### 4.6.1. Domain Context
 
 Primarily relevant in distributed systems where a business process spans multiple services. Unnecessary in monolithic applications with single-database ACID transactions, where a simple Unit of Work suffices.
-
-<a id="462-system-fit"></a>
 
 #### 4.6.2. System Fit
 
@@ -7864,23 +7462,17 @@ Primarily relevant in distributed systems where a business process spans multipl
 | Serverless | **Adapts well** — step functions or durable workflows (AWS Step Functions, Azure Durable Functions) implement the orchestrator. |
 | Event-Driven | **Natural fit** — choreography sagas are event-driven by definition; events trigger steps and compensations. |
 
-<a id="463-benefits"></a>
-
 #### 4.6.3. Benefits
 
 - Achieves cross-service consistency without distributed locks or two-phase commit.
 - Each service retains full autonomy over its local database and transactions.
 - Compensating actions provide a structured rollback mechanism that handles partial failures gracefully.
 
-<a id="464-trade-offs"></a>
-
 #### 4.6.4. Trade-offs
 
 - Eventual consistency means intermediate states are visible to other operations during saga execution.
 - Compensating actions must be idempotent and carefully designed — some operations (sending an email, charging a card) are difficult to "undo."
 - Debugging failures across a multi-step, multi-service saga is significantly harder than debugging a single transaction.
-
-<a id="465-examples"></a>
 
 #### 4.6.5. Examples
 
@@ -8129,8 +7721,6 @@ except RuntimeError as e:
     print(f"Saga failed: {e}")
 ```
 
-<a id="47-specification"></a>
-
 ### 4.7. Specification
 
 | **Who**  | Domain-driven applications that need to compose complex filtering, validation, or selection rules dynamically. |
@@ -8147,13 +7737,9 @@ The key participants are the **specification interface** (declares `is_satisfied
 
 Specification is especially valuable in domain-driven design where the same business rules appear in different contexts — filtering a repository query, validating an entity, or determining eligibility. Each rule is tested in isolation, and new rules are added without touching existing code. The trade-off is verbosity: simple cases that would be a one-line lambda become a class hierarchy. Use Specification when rules are reused, composed dynamically, or complex enough to warrant the abstraction.
 
-<a id="471-domain-context"></a>
-
 #### 4.7.1. Domain Context
 
 Primarily relevant in domain-driven design and business rule engines where complex filtering, validation, or selection logic must be composed dynamically. Less common in applications with simple, static query logic that a single predicate or SQL clause can express.
-
-<a id="472-system-fit"></a>
 
 #### 4.7.2. System Fit
 
@@ -8164,23 +7750,17 @@ Primarily relevant in domain-driven design and business rule engines where compl
 | Serverless | **Workable** — specifications work within function logic but the composable class hierarchy may be heavier than inline predicates. |
 | Event-Driven | **Adapts well** — specifications filter or route events, determining which consumers should process which messages. |
 
-<a id="473-benefits"></a>
-
 #### 4.7.3. Benefits
 
 - Business rules are reusable, testable units — each specification can be validated independently.
 - Complex predicates are built by composition rather than modification, adhering to the Open/Closed Principle.
 - The same specification can serve multiple purposes: repository filtering, entity validation, and UI display logic.
 
-<a id="474-trade-offs"></a>
-
 #### 4.7.4. Trade-offs
 
 - Class proliferation — each business rule becomes its own specification class, which is verbose for simple predicates.
 - Translating in-memory specifications into efficient database queries (e.g., SQL WHERE clauses) requires additional infrastructure.
 - Deeply nested composite specifications can be hard to debug when `is_satisfied_by` returns an unexpected result.
-
-<a id="475-examples"></a>
 
 #### 4.7.5. Examples
 

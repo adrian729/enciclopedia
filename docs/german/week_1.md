@@ -57,11 +57,7 @@
   - [10.7. Translation Exercises](#107-translation-exercises)
   - [10.8. Answer Key](#108-answer-key)
 
-<a id="1-german-pronunciation-guide"></a>
-
 ## 1. German Pronunciation Guide
-
-<a id="11-vowels-short-long"></a>
 
 ### 1.1. Vowels — Short & Long
 
@@ -80,8 +76,6 @@ Every German vowel has a **short** and a **long** form. Long vowels are tense an
 
 Unstressed **e** at the end of a word or in prefixes (ge-, be-) reduces to schwa [ə]: *Blume* [ˈbluːmə], *gesehen* [ɡəˈzeːən].
 
-<a id="12-consonants-final-devoicing"></a>
-
 ### 1.2. Consonants & Final Devoicing
 
 Most consonants sound like English. The key difference is **Auslautverhärtung** (final devoicing): voiced consonants become voiceless at the end of a word or syllable.
@@ -93,8 +87,6 @@ Most consonants sound like English. The key difference is **Auslautverhärtung**
 | g [ɡ] | → k [k] | Tag | [taːk] |
 
 Compare: **Hunde** [ˈhʊndə] (voiced — d before vowel) vs. **Hund** [hʊnt] (devoiced — d at end).
-
-<a id="13-special-combinations"></a>
 
 ### 1.3. Special Combinations
 
@@ -113,8 +105,6 @@ Compare: **Hunde** [ˈhʊndə] (voiced — d before vowel) vs. **Hund** [hʊnt] 
 | r (before vowels) | uvular | [ʁ] | rot, Bruder |
 | r (after vowels / syllable-final) | vocalized | [ɐ] | Vater, wir |
 
-<a id="14-diphthongs"></a>
-
 ### 1.4. Diphthongs
 
 | Spelling | Sound | IPA | Example |
@@ -124,11 +114,7 @@ Compare: **Hunde** [ˈhʊndə] (voiced — d before vowel) vs. **Hund** [hʊnt] 
 | eu, äu | "oy" in *boy* | [ɔʏ̯] | neu, Bäume |
 | ie | long "ee" (not a true diphthong) | [iː] | Liebe, spielen |
 
-<a id="2-essential-vocabulary-150-words"></a>
-
 ## 2. Essential Vocabulary (150 Words)
-
-<a id="21-nouns-40-with-gender-derdiedas-plural"></a>
 
 ### 2.1. Nouns (40) — with Gender (der/die/das) & Plural
 
@@ -181,8 +167,6 @@ Every German noun has a grammatical gender (masculine, feminine, or neuter) and 
 38. der See (-n) — lake
 39. die Sonne (-n) — sun
 40. der Hund (-e) — dog
-
-<a id="22-verbs-40"></a>
 
 ### 2.2. Verbs (40)
 
@@ -238,8 +222,6 @@ Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have
 
 Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conjugation (*ich stehe auf*, not ~~ich aufstehe~~). Separable verbs are fully explained in Week 5; for now, learn it as vocabulary.
 
-<a id="23-adjectives-35"></a>
-
 ### 2.3. Adjectives (35)
 
 ##### Description (10)
@@ -285,8 +267,6 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 34. leise — quiet
 35. stark — strong
 
-<a id="24-adverbs-of-time-frequency-15"></a>
-
 ### 2.4. Adverbs of Time & Frequency (15)
 
 | # | German | English |
@@ -307,8 +287,6 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 | 14 | wieder | again |
 | 15 | zuerst | first, at first |
 
-<a id="25-adverbs-of-place-manner-10"></a>
-
 ### 2.5. Adverbs of Place & Manner (10)
 
 | # | German | English |
@@ -323,8 +301,6 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 | 8 | zu | too (excessive) |
 | 9 | auch | also, too |
 | 10 | gern | gladly, with pleasure |
-
-<a id="26-common-phrases-particles-10"></a>
 
 ### 2.6. Common Phrases & Particles (10)
 
@@ -341,11 +317,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 | 9 | aber | but |
 | 10 | nicht | not |
 
-<a id="3-numbers-calendar"></a>
-
 ## 3. Numbers & Calendar
-
-<a id="31-cardinal-numbers-0-100"></a>
 
 ### 3.1. Cardinal Numbers 0–100
 
@@ -371,8 +343,6 @@ zwanzig (20), **dreißig** (30, not ~~dreizig~~ — the only tens form with -ßi
 
 Read right to left: **einundzwanzig** (21, lit. "one-and-twenty"), zweiunddreißig (32), dreiundvierzig (43), vierundfünfzig (54), fünfundsechzig (65), sechsundsiebzig (76), siebenundachtzig (87), achtundneunzig (98).
 
-<a id="32-cardinal-numbers-100-1000000"></a>
-
 ### 3.2. Cardinal Numbers 100–1,000,000
 
 Numbers above 100 are built by compounding — written as **one word** (no spaces) up to 999,999:
@@ -389,8 +359,6 @@ Numbers above 100 are built by compounding — written as **one word** (no space
 | 2,000,000 | zwei Millionen |
 | 1,000,000,000 | eine Milliarde |
 
-<a id="33-ordinal-numbers"></a>
-
 ### 3.3. Ordinal Numbers
 
 Ordinals are formed by adding **-te** (1st–19th) or **-ste** (20th+) to the cardinal stem, plus an adjective ending. Three irregulars: **erste** (1st), **dritte** (3rd), **achte** (8th, not ~~achtte~~).
@@ -406,8 +374,6 @@ Ordinals are formed by adding **-te** (1st–19th) or **-ste** (20th+) to the ca
 | 20th | zwanzigste | am zwanzigsten |
 | 100th | hundertste | am hundertsten |
 
-<a id="34-days-of-the-week"></a>
-
 ### 3.4. Days of the Week
 
 All days are **masculine** (der). Use **am** + day for "on [day]."
@@ -422,8 +388,6 @@ All days are **masculine** (der). Use **am** + day for "on [day]."
 | der Samstag | Saturday | am Samstag |
 | der Sonntag | Sunday | am Sonntag |
 
-<a id="35-months"></a>
-
 ### 3.5. Months
 
 All months are **masculine** (der). Use **im** + month for "in [month]."
@@ -431,8 +395,6 @@ All months are **masculine** (der). Use **im** + month for "in [month]."
 der Januar, der Februar, der März, der April, der Mai, der Juni, der Juli, der August, der September, der Oktober, der November, der Dezember
 
 *Im März beginnt der Frühling.* (In March, spring begins.)
-
-<a id="36-seasons"></a>
 
 ### 3.6. Seasons
 
@@ -447,11 +409,7 @@ All seasons are **masculine** (der). Use **im** + season for "in [season]."
 
 *Im Sommer ist es heiß.* (In summer it is hot.)
 
-<a id="4-personal-pronouns-present-tense-präsens"></a>
-
 ## 4. Personal Pronouns & Present Tense (Präsens)
-
-<a id="41-personal-pronouns"></a>
 
 ### 4.1. Personal Pronouns
 
@@ -466,8 +424,6 @@ All seasons are **masculine** (der). Use **im** + season for "in [season]."
 | ihr | you | informal plural |
 | sie | they | same form as "she" — context distinguishes |
 | Sie | you | formal (always capitalized), singular or plural |
-
-<a id="42-conjugation-of-sein"></a>
 
 ### 4.2. Conjugation of sein
 
@@ -484,8 +440,6 @@ All seasons are **masculine** (der). Use **im** + season for "in [season]."
 
 *Ich bin müde.* (I am tired.) — *Wir sind Freunde.* (We are friends.)
 
-<a id="43-conjugation-of-haben"></a>
-
 ### 4.3. Conjugation of haben
 
 *haben* (to have) — irregular in du and er/sie/es forms.
@@ -500,8 +454,6 @@ All seasons are **masculine** (der). Use **im** + season for "in [season]."
 | sie/Sie | haben |
 
 *Er hat ein Buch.* (He has a book.) — *Habt ihr Zeit?* (Do you have time?)
-
-<a id="44-regular-weak-verb-pattern"></a>
 
 ### 4.4. Regular (Weak) Verb Pattern
 
@@ -524,8 +476,6 @@ If the stem ends in **-t** or **-d**, add an **-e-** before -st and -t for pronu
 | er/sie/es | arbeit**e**t | find**e**t |
 | ihr | arbeit**e**t | find**e**t |
 
-<a id="45-key-irregular-verbs-in-präsens-with-vowel-changes"></a>
-
 ### 4.5. Key Irregular Verbs in Präsens with Vowel Changes
 
 Seven high-frequency verbs change their stem vowel in the **du** and **er/sie/es** forms only. The wir/ihr/sie forms keep the base vowel.
@@ -543,13 +493,9 @@ Note: *nehmen* also changes its consonant (h drops, m doubles: du n**imm**st, er
 
 Other vocabulary verbs with vowel changes: **fahren** (a→ä: du f**ä**hrst, er f**ä**hrt), **schlafen** (a→ä: du schl**ä**fst, er schl**ä**ft), **lesen** (e→ie: du l**ie**st, er l**ie**st), **fallen** (a→ä: du f**ä**llst, er f**ä**llt). Also fully irregular: **wissen** (ich **weiß**, du **weißt**, er **weiß**, wir wissen).
 
-<a id="5-nominative-case-the-subject"></a>
-
 ## 5. Nominative Case — The Subject
 
 The **nominative case** marks the subject of the sentence — the person or thing performing the action.
-
-<a id="51-definite-articles"></a>
 
 ### 5.1. Definite Articles
 
@@ -560,8 +506,6 @@ The **nominative case** marks the subject of the sentence — the person or thin
 | Neuter | **das** | das Kind (the child) |
 | Plural (all) | **die** | die Kinder (the children) |
 
-<a id="52-indefinite-articles"></a>
-
 ### 5.2. Indefinite Articles
 
 | Gender | Nominative | Example |
@@ -571,8 +515,6 @@ The **nominative case** marks the subject of the sentence — the person or thin
 | Neuter | **ein** | ein Kind (a child) |
 | Plural | — | Kinder (children) — no indefinite plural |
 
-<a id="53-identifying-the-subject-wer-was"></a>
-
 ### 5.3. Identifying the Subject: "wer?" / "was?"
 
 To find the nominative, ask:
@@ -581,13 +523,9 @@ To find the nominative, ask:
 
 The answer to *wer?* or *was?* is always in the nominative case.
 
-<a id="6-accusative-case-direct-objects"></a>
-
 ## 6. Accusative Case — Direct Objects
 
 The **accusative case** marks the direct object — the person or thing directly receiving the action of a transitive verb.
-
-<a id="61-accusative-articles"></a>
 
 ### 6.1. Accusative Articles
 
@@ -599,8 +537,6 @@ The **accusative case** marks the direct object — the person or thing directly
 | Plural | die | die | no change |
 
 **Key rule:** Only the masculine article changes in the accusative. Everything else stays the same.
-
-<a id="62-transitive-verbs-that-take-accusative"></a>
 
 ### 6.2. Transitive Verbs That Take Accusative
 
@@ -619,19 +555,13 @@ These 10 verbs always take a direct object in the accusative:
 | brauchen (to need) | Wir brauchen **ein Bett**. |
 | kennen (to know) | Ich kenne **die Frau**. |
 
-<a id="63-recognizing-direct-objects-wen-was"></a>
-
 ### 6.3. Recognizing Direct Objects: "wen?" / "was?"
 
 To find the accusative, ask:
 - **Wen?** (Whom?) — for people: *Ich sehe* **wen?** → Ich sehe **den Mann**.
 - **Was?** (What?) — for things: *Er kauft* **was?** → Er kauft **ein Buch**.
 
-<a id="7-word-order-the-v2-rule-questions"></a>
-
 ## 7. Word Order — The V2 Rule & Questions
-
-<a id="71-verb-second-in-main-clauses"></a>
 
 ### 7.1. Verb-Second in Main Clauses
 
@@ -645,8 +575,6 @@ Formula: **[Element 1] + [VERB] + [remaining elements]**
 - Heute **spielt** das Kind Fußball. (Position 1 = time adverb)
 
 The verb is always second, regardless of what fills position 1.
-
-<a id="72-subject-verb-inversion-when-position-1-subject"></a>
 
 ### 7.2. Subject-Verb Inversion When Position 1 ≠ Subject
 
@@ -662,8 +590,6 @@ When something other than the subject occupies position 1, the subject moves to 
 2. **Dort** wohnt mein Bruder. (There lives my brother.)
 3. **Leider** hat er kein Buch. (Unfortunately he has no book.)
 
-<a id="73-yesno-questions-v1"></a>
-
 ### 7.3. Yes/No Questions — V1
 
 For yes/no questions, move the verb to **position 1** (V1). The subject follows directly.
@@ -673,8 +599,6 @@ For yes/no questions, move the verb to **position 1** (V1). The subject follows 
 | Du spielst Fußball. | **Spielst** du Fußball? |
 | Er ist müde. | **Ist** er müde? |
 | Sie hat ein Buch. | **Hat** sie ein Buch? |
-
-<a id="74-w-questions"></a>
 
 ### 7.4. W-Questions
 
@@ -691,11 +615,7 @@ Place the W-word in position 1 and the verb in position 2 (still V2). The subjec
 | woher | where from | **Woher** kommst du? (Where do you come from?) |
 | wohin | where to | **Wohin** gehst du? (Where are you going?) |
 
-<a id="8-negation"></a>
-
 ## 8. Negation
-
-<a id="81-nicht-negating-verbs-adjectives-whole-clauses"></a>
 
 ### 8.1. nicht — Negating Verbs, Adjectives & Whole Clauses
 
@@ -708,8 +628,6 @@ Place the W-word in position 1 and the verb in position 2 (still V2). The subjec
 | Whole verb / clause | at the end | Ich spiele **nicht**. |
 | Specific element | directly before it | Er kommt **nicht** heute (, sondern morgen). |
 
-<a id="82-keinkeine-negating-nouns"></a>
-
 ### 8.2. kein/keine — Negating Nouns
 
 **kein** negates nouns. It replaces **ein/eine** or a bare noun (without article). It follows the same endings as *ein*:
@@ -721,8 +639,6 @@ Place the W-word in position 1 and the verb in position 2 (still V2). The subjec
 
 - Ich habe **ein** Buch → Ich habe **kein** Buch. (I have no book.)
 - Er trinkt Milch → Er trinkt **keine** Milch. (He drinks no milk.)
-
-<a id="83-nicht-vs-kein-decision-rule"></a>
 
 ### 8.3. nicht vs. kein Decision Rule
 
@@ -741,11 +657,7 @@ Place the W-word in position 1 and the verb in position 2 (still V2). The subjec
 | Das Buch ist **gut**. | Das Buch ist **nicht** gut. | adjective → nicht |
 | Er kommt **heute**. | Er kommt heute **nicht**. | verb/adverb → nicht |
 
-<a id="9-es-gibt-impersonal-es"></a>
-
 ## 9. es gibt & Impersonal es
-
-<a id="91-es-gibt-accusative"></a>
 
 ### 9.1. es gibt + Accusative
 
@@ -759,8 +671,6 @@ Place the W-word in position 1 and the verb in position 2 (still V2). The subjec
 
 To form a question, invert: *Gibt es...?*
 
-<a id="92-weather-expressions"></a>
-
 ### 9.2. Weather Expressions
 
 Weather uses impersonal **es** as the subject. These are fixed patterns.
@@ -770,8 +680,6 @@ Weather uses impersonal **es** as the subject. These are fixed patterns.
 - Es **ist** kalt. (It's cold.)
 - Es **ist** warm. (It's warm.)
 - Es **ist** sonnig. (It's sunny.)
-
-<a id="93-fixed-impersonal-phrases"></a>
 
 ### 9.3. Fixed Impersonal Phrases
 
@@ -784,11 +692,7 @@ These common expressions use impersonal **es**. Learn them as set phrases.
 | Es tut mir leid. | It does me sorrow. | I'm sorry. |
 | Es freut mich. | It pleases me. | I'm pleased. / Nice to meet you. |
 
-<a id="10-practice-exercises"></a>
-
 ## 10. Practice Exercises
-
-<a id="101-pronunciation-drill"></a>
 
 ### 10.1. Pronunciation Drill
 
@@ -804,8 +708,6 @@ Read each sentence aloud, focusing on vowel length, final devoicing, and ch soun
 8. Die Blume ist schön. [diː ˈbluːmə ɪst ʃøːn]
 9. Ich bin müde und hungrig. [ɪç bɪn ˈmyːdə ʊnt ˈhʊŋʁɪç]
 10. Das Kind schläft im Bett. [das kɪnt ʃlɛːft ɪm bɛt]
-
-<a id="102-conjugation-drill"></a>
 
 ### 10.2. Conjugation Drill
 
@@ -827,8 +729,6 @@ Fill in the correct Präsens form of the verb in parentheses.
 14. Du ___ (helfen) gern.
 15. Ihr ___ (haben) einen Hund.
 
-<a id="103-case-identification"></a>
-
 ### 10.3. Case Identification
 
 The nominative form of the article is given in parentheses. Write the correct form for each position and label each noun phrase as Nominative (Nom) or Accusative (Acc). Remember: only masculine articles change in the accusative (der→den, ein→einen).
@@ -846,8 +746,6 @@ The nominative form of the article is given in parentheses. Write the correct fo
 11. ___ (eine) Freundin sieht ___ (der) Baum.
 12. ___ (die) Frau nimmt ___ (das) Brot.
 
-<a id="104-word-order-drill"></a>
-
 ### 10.4. Word Order Drill
 
 Rearrange the given elements into a correct V2 sentence. Items 5–8 must place the time/frequency word first (inversion required).
@@ -860,8 +758,6 @@ Rearrange the given elements into a correct V2 sentence. Items 5–8 must place 
 6. morgen / er / kommt
 7. jetzt / müde / du / bist
 8. oft / sie / spielt / hier
-
-<a id="105-question-formation"></a>
 
 ### 10.5. Question Formation
 
@@ -881,8 +777,6 @@ Rearrange the given elements into a correct V2 sentence. Items 5–8 must place 
 4. Sie lernt Deutsch. (warum)
 5. Er kommt aus Berlin. (woher)
 
-<a id="106-negation-transformation"></a>
-
 ### 10.6. Negation Transformation
 
 Make each sentence negative using **nicht** or **kein/keine/keinen**.
@@ -897,8 +791,6 @@ Make each sentence negative using **nicht** or **kein/keine/keinen**.
 8. Der Mann ist groß.
 9. Sie hat einen Freund.
 10. Wir spielen heute.
-
-<a id="107-translation-exercises"></a>
 
 ### 10.7. Translation Exercises
 
@@ -919,8 +811,6 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 13. The mother reads a book.
 14. He drinks no coffee.
 15. When does he come?
-
-<a id="108-answer-key"></a>
 
 ### 10.8. Answer Key
 

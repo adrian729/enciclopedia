@@ -37,8 +37,6 @@
   - [4.7. Protocol Cheat Sheet](#47-protocol-cheat-sheet)
 - [5. Questions / things to check](#5-questions--things-to-check)
 
-<a id="1-recognizing-systems"></a>
-
 ## 1. Recognizing systems
 
 - Breaking down system design problem into steps
@@ -53,15 +51,11 @@
 
 Important to make sure the requirements and scope (boundaries) are clear and well defined
 
-<a id="11-distributed-systems"></a>
-
 ### 1.1. Distributed Systems
 
 - Components separated
 - Need to work together
 - Design needs to handle **failure** and **scale** across multiple locations
-
-<a id="12-common-system-components"></a>
 
 ### 1.2. Common System Components
 
@@ -71,11 +65,7 @@ Important to make sure the requirements and scope (boundaries) are clear and wel
 - **Load** balancer: distributes incomming traffic to keep things running smoothly
 - **Cache**: makes things faster by temp storing data
 
-<a id="2-requirements"></a>
-
 ## 2. Requirements
-
-<a id="21-core-elements"></a>
 
 ### 2.1. Core elements
 
@@ -83,8 +73,6 @@ Important to make sure the requirements and scope (boundaries) are clear and wel
     - What are we trying to solve?
 - Designing API and architecture
 - Understanding technology and trade-offs
-
-<a id="211-example-todo-app-requirements"></a>
 
 #### 2.1.1. Example: TODO app Requirements
 
@@ -97,15 +85,11 @@ Important to make sure the requirements and scope (boundaries) are clear and wel
     - Is it for myself? For several users?
     - Do we need persisting data or it's just for the moment?
 
-<a id="212-strategy"></a>
-
 #### 2.1.2. Strategy
 
 1. Scope the problem (REALLY IMPORTANT!)
 2. Design the high-level architecture
 3. Address key challenges and trade-offs (Details)
-
-<a id="213-functional-requirements"></a>
 
 #### 2.1.3. Functional Requirements
 
@@ -135,8 +119,6 @@ Describes WHAT the system should do.
 - ... delete a list
 - ~~... sharing a list~~ (maybe not this one, adds a lot of complexity)
 - ... create account and login with email and password
-
-<a id="214-cap-theorem"></a>
 
 #### 2.1.4. CAP Theorem
 
@@ -187,8 +169,6 @@ Any distributed system can only `guarantee` 2 out of the 3 -  `C` `A` `P` - at t
     - Always available
 - No perfect system exists, trade-offs are necessary
 
-<a id="215-system-quality"></a>
-
 #### 2.1.5. System Quality
 
 - Reliability
@@ -199,8 +179,6 @@ Any distributed system can only `guarantee` 2 out of the 3 -  `C` `A` `P` - at t
 - Security
 - Scalability
 - 
-
-<a id="216-non-functional-requirements"></a>
 
 #### 2.1.6. Non-Functional Requirements
 
@@ -235,16 +213,12 @@ Describe HOW the system should behave/perform.
 - The system must support a total of 1000 registered users, and 10 concurrent users
 - All user data must be transmitted over HTTPS
 
-<a id="3-modeling"></a>
-
 ## 3. Modeling
 
 1. `Requirements`: functional / non-functional
 2. `Entity Modeling`: define the main functional elements
 3. `API Design`: define the actions and operations of the system
 4. `Endpoints (Optional)`: 
-
-<a id="31-todo-app-modeling"></a>
 
 ### 3.1. TODO App Modeling
 
@@ -280,17 +254,11 @@ Describe HOW the system should behave/perform.
     }
 3. `API`
 
-<a id="4-protocols"></a>
-
 ## 4. Protocols
-
-<a id="41-http"></a>
 
 ### 4.1. HTTP
 
 `H`yper`T`ext `T`ransport `P`rotocol
-
-<a id="411-characteristics"></a>
 
 #### 4.1.1. Characteristics
 
@@ -299,17 +267,11 @@ Describe HOW the system should behave/perform.
 - supported by all browsers
 - stateless
 
-<a id="412-common-use-cases"></a>
-
 #### 4.1.2. Common Use Cases
 
 - Web Browsers
 
-<a id="42-websockets"></a>
-
 ### 4.2. WebSockets
-
-<a id="421-characteristics"></a>
 
 #### 4.2.1. Characteristics
 
@@ -318,26 +280,18 @@ Describe HOW the system should behave/perform.
 - low-latency
 - stateful
 
-<a id="422-common-use-cases"></a>
-
 #### 4.2.2. Common Use Cases
 
 - chat apps
 - live dashboards
 - collaborative editing
 
-<a id="43-server-sent-events"></a>
-
 ### 4.3. Server-Sent Events 
-
-<a id="431-characteristics"></a>
 
 #### 4.3.1. Characteristics
 
 - one-way communication (server to client)
 - human readable
-
-<a id="432-common-use-cases"></a>
 
 #### 4.3.2. Common Use Cases
 
@@ -345,13 +299,9 @@ Describe HOW the system should behave/perform.
 - status updates
 - stock tickers
 
-<a id="44-grpc"></a>
-
 ### 4.4. gRPC
 
 `R`emote `P`rocedure `C`all
-
-<a id="441-characteristics"></a>
 
 #### 4.4.1. Characteristics
 
@@ -359,21 +309,15 @@ Describe HOW the system should behave/perform.
 - strongly-typed contracts (proto buffs)
 - requires code generation
 
-<a id="442-common-use-cases"></a>
-
 #### 4.4.2. Common Use Cases
 
 - microservice communication
 - performance critical systems
 - IoT devices
 
-<a id="45-rest"></a>
-
 ### 4.5. REST
 
 `RE`resentational `S`tate `T`ransfer
-
-<a id="451-characteristics"></a>
 
 #### 4.5.1. Characteristics
 
@@ -382,21 +326,15 @@ Describe HOW the system should behave/perform.
 - supported by all browsers
 - stateless
 
-<a id="452-common-use-cases"></a>
-
 #### 4.5.2. Common Use Cases
 
 - single-sources of data
 - CRUD apps
 - easily cached data
 
-<a id="46-graphql"></a>
-
 ### 4.6. GraphQL
 
 `Graph` `Q`uery `L`anguage
-
-<a id="461-characteristics"></a>
 
 #### 4.6.1. Characteristics
 
@@ -405,15 +343,11 @@ Describe HOW the system should behave/perform.
 - self-documenting API
 - strongly typed
 
-<a id="462-common-use-cases"></a>
-
 #### 4.6.2. Common Use Cases
 
 - complex or multiple sources of data (Facebook Homepage)
 - apps supporting multiple client types
 - decoupling FE from BE development
-
-<a id="47-protocol-cheat-sheet"></a>
 
 ### 4.7. Protocol Cheat Sheet
 
@@ -430,8 +364,6 @@ Advice on chosing the proper protocol
 - Complext data from many sources?
     - `GraphQL`
 - `REST`
-
-<a id="5-questions--things-to-check"></a>
 
 ## 5. Questions / things to check
 

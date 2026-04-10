@@ -62,13 +62,9 @@
   - [10.8. Clause Linking](#108-clause-linking)
   - [10.9. Answer Key](#109-answer-key)
 
-<a id="1-dative-case-indirect-objects"></a>
-
 ## 1. Dative Case — Indirect Objects
 
 The **dative case** marks the indirect object — the person who *receives* the direct object or *benefits* from the action.
-
-<a id="11-dative-article-forms"></a>
 
 ### 1.1. Dative Article Forms
 
@@ -94,8 +90,6 @@ Plural nouns add **-n** in the dative if they don't already end in -n or -s: die
 | sie (they) | sie | ihnen |
 | Sie (formal) | Sie | Ihnen |
 
-<a id="12-common-dative-verbs"></a>
-
 ### 1.2. Common Dative Verbs
 
 These 10 verbs take an indirect object in the dative. Some also take a direct object (accusative).
@@ -113,16 +107,12 @@ These 10 verbs take an indirect object in the dative. Some also take a direct ob
 | erzählen (to tell/narrate) | yes | Sie erzählt **dem Kind** eine Geschichte. |
 | antworten (to answer) | **no** — Dat only | Er antwortet **dem Lehrer**. |
 
-<a id="13-identifying-indirect-objects-wem"></a>
-
 ### 1.3. Identifying Indirect Objects: "wem?"
 
 To find the dative, ask **Wem?** (To whom? / For whom?):
 
 - *Wem gebe ich das Buch?* → **Dem Kind.** (To whom do I give the book? → To the child.)
 - *Wem hilft sie?* → **Dem Freund.** (Whom does she help? → The friend.)
-
-<a id="14-word-order-with-two-objects"></a>
 
 ### 1.4. Word Order with Two Objects
 
@@ -139,11 +129,7 @@ To find the dative, ask **Wem?** (To whom? / For whom?):
 3. Sie schenkt **dem Kind** einen Ball. → Sie schenkt **ihn** dem Kind. (him/it = Acc pronoun first)
 4. Wir bringen **der Mutter** die Blumen. → Wir bringen **sie** der Mutter. (them = Acc pronoun first)
 
-<a id="2-possessive-articles-der-words"></a>
-
 ## 2. Possessive Articles & Der-Words
-
-<a id="21-possessive-articles"></a>
 
 ### 2.1. Possessive Articles
 
@@ -169,8 +155,6 @@ Possessives follow the **same endings as ein**:
 
 Note: **euer** drops the internal -e- before endings: eu**e**r → eur**e**, eur**en**, eur**em**, eur**er**.
 
-<a id="22-der-words-dieser-jeder-welcher"></a>
-
 ### 2.2. Der-Words: dieser, jeder, welcher
 
 | German | English | Notes |
@@ -178,8 +162,6 @@ Note: **euer** drops the internal -e- before endings: eu**e**r → eur**e**, eur
 | dieser / diese / dieses | this | |
 | jeder / jede / jedes | every, each | no plural form |
 | welcher / welche / welches | which | used in questions |
-
-<a id="23-der-word-declension-table"></a>
 
 ### 2.3. Der-Word Declension Table
 
@@ -192,8 +174,6 @@ Der-words take the **same endings as the definite article** (der/die/das):
 | Dat | diesem | dieser | diesem | diesen |
 
 The pattern is identical for *jeder* and *welcher*.
-
-<a id="24-examples-using-possessives-der-words-in-all-three-cases"></a>
 
 ### 2.4. Examples Using Possessives & Der-Words in All Three Cases
 
@@ -219,11 +199,7 @@ The pattern is identical for *jeder* and *welcher*.
 | Dat | In **diesem** Haus wohne ich. (In this house I live.) |
 | Dat | Mit **welchem** Bus fährst du? (With which bus do you travel?) |
 
-<a id="3-modal-verbs-all-six"></a>
-
 ## 3. Modal Verbs (All Six)
-
-<a id="31-conjugation-charts"></a>
 
 ### 3.1. Conjugation Charts
 
@@ -249,8 +225,6 @@ Modal verbs have a **vowel change in the singular** (ich/du/er) and keep the inf
 | ihr | möchtet |
 | sie/Sie | möchten |
 
-<a id="32-meaning-nuance"></a>
-
 ### 3.2. Meaning & Nuance
 
 | Modal | Core meaning | Example | Watch out |
@@ -263,8 +237,6 @@ Modal verbs have a **vowel change in the singular** (ich/du/er) and keep the inf
 | mögen | liking (general) | Ich **mag** Kaffee. (I like coffee.) | rarely used with infinitive |
 | möchten | would like (polite) | Ich **möchte** einen Tee. (I'd like a tea.) | polite form of wollen |
 
-<a id="33-sentence-structure-modal-in-v2-main-verb-infinitive-at-end"></a>
-
 ### 3.3. Sentence Structure: Modal in V2 + Main Verb Infinitive at End
 
 The modal verb takes position 2 (conjugated). The main verb goes to the **end** as an infinitive.
@@ -276,8 +248,6 @@ The modal verb takes position 2 (conjugated). The main verb goes to the **end** 
 3. Wir **müssen** jetzt **gehen**. (We must go now.)
 4. Du **darfst** hier nicht **rauchen**. (You may not smoke here.)
 
-<a id="34-word-order-with-time-phrase-first"></a>
-
 ### 3.4. Word Order with Time Phrase First
 
 When a time phrase occupies position 1, the modal still stays in position 2 and the infinitive stays at the end. The subject moves to position 3 (inversion).
@@ -286,13 +256,9 @@ When a time phrase occupies position 1, the modal still stays in position 2 and 
 2. **Heute** muss **er** viel **arbeiten**. (Today he must work a lot.)
 3. **Jetzt** können **wir** Deutsch **sprechen**. (Now we can speak German.)
 
-<a id="4-perfekt-conversational-past-tense"></a>
-
 ## 4. Perfekt — Conversational Past Tense
 
 The **Perfekt** is the standard past tense in spoken German. It is formed with an auxiliary verb (**haben** or **sein**) plus the **Partizip II** (past participle).
-
-<a id="41-structure-habensein-partizip-ii"></a>
 
 ### 4.1. Structure: haben/sein + Partizip II
 
@@ -302,8 +268,6 @@ The **Perfekt** is the standard past tense in spoken German. It is formed with a
 - Er **ist** nach Berlin **gefahren**. (He drove to Berlin.)
 
 The auxiliary is conjugated and sits in position 2. The Partizip II goes to the very end.
-
-<a id="42-partizip-ii-of-weak-regular-verbs"></a>
 
 ### 4.2. Partizip II of Weak (Regular) Verbs
 
@@ -323,8 +287,6 @@ Formula: **ge-** + stem + **-t**
 | arbeiten | ge**arbeit**et | worked |
 
 Note: Stems ending in **-t** or **-d** add **-et** (not just -t): gearbeit**et**, geantwortet.
-
-<a id="43-partizip-ii-of-strong-irregular-verbs"></a>
 
 ### 4.3. Partizip II of Strong (Irregular) Verbs
 
@@ -355,8 +317,6 @@ These must be memorized. 20 high-frequency examples:
 | fliegen | ge**flog**en | flown |
 | schwimmen | ge**schwomm**en | swum |
 
-<a id="44-verbs-without-ge"></a>
-
 ### 4.4. Verbs Without ge-
 
 Two groups of verbs form the Partizip II **without** the ge- prefix:
@@ -379,8 +339,6 @@ Two groups of verbs form the Partizip II **without** the ge- prefix:
 | erzählen | erzählt |
 | empfehlen | empfohlen |
 
-<a id="45-haben-vs-sein-as-auxiliary"></a>
-
 ### 4.5. haben vs. sein as Auxiliary
 
 | Auxiliary | Used for | Examples |
@@ -391,8 +349,6 @@ Two groups of verbs form the Partizip II **without** the ge- prefix:
 | **sein** | bleiben, sein | geblieben (stayed), gewesen (been) |
 
 Quick test: Does the verb describe moving from A to B, or changing from state A to state B? → **sein**. Everything else → **haben**.
-
-<a id="46-30-essential-strong-verb-participles"></a>
 
 ### 4.6. 30 Essential Strong Verb Participles
 
@@ -429,11 +385,7 @@ Quick test: Does the verb describe moving from A to B, or changing from state A 
 | 29 | bleiben | geblieben | sein | to stay |
 | 30 | sein | gewesen | sein | to be |
 
-<a id="5-prepositions"></a>
-
 ## 5. Prepositions
-
-<a id="51-accusative-only-prepositions"></a>
 
 ### 5.1. Accusative-Only Prepositions
 
@@ -446,8 +398,6 @@ Mnemonic: **DOGFU** — **D**urch, **O**hne, **G**egen, **F**ür, **U**m.
 3. Er läuft **gegen die** Wand. (He runs against the wall.)
 4. Ich gehe **ohne meinen** Hund. (I go without my dog.)
 5. Wir sitzen **um den** Tisch. (We sit around the table.)
-
-<a id="52-dative-only-prepositions"></a>
 
 ### 5.2. Dative-Only Prepositions
 
@@ -465,8 +415,6 @@ Mnemonic: *Aus, bei, mit, nach, seit, von, zu — mit dem Dativ immer du!*
 
 Common contractions: **bei + dem = beim**, **von + dem = vom**, **zu + dem = zum**, **zu + der = zur**.
 
-<a id="53-two-way-prepositions"></a>
-
 ### 5.3. Two-Way Prepositions
 
 These 9 prepositions take **accusative OR dative** depending on meaning:
@@ -474,8 +422,6 @@ These 9 prepositions take **accusative OR dative** depending on meaning:
 **an, auf, hinter, in, neben, über, unter, vor, zwischen**
 
 Common contractions: **in + dem = im**, **in + das = ins**, **an + dem = am**, **an + das = ans**.
-
-<a id="54-two-way-logic-accusative-direction-vs-dative-location"></a>
 
 ### 5.4. Two-Way Logic: Accusative = Direction vs. Dative = Location
 
@@ -497,11 +443,7 @@ Think of dative as **"being inside a zone"** (static) and accusative as **"cross
 | Wir sind in **der** Schule. (We are in the school.) | Wir gehen in **die** Schule. (We go into the school.) |
 | Die Lampe hängt über **dem** Tisch. (The lamp hangs over the table.) | Ich hänge die Lampe über **den** Tisch. (I hang the lamp over the table.) |
 
-<a id="6-telling-time-uhrzeit"></a>
-
 ## 6. Telling Time (Uhrzeit)
-
-<a id="61-formal-time"></a>
 
 ### 6.1. Formal Time
 
@@ -512,8 +454,6 @@ The formal system uses the **24-hour clock**. Say the hour, then *Uhr*, then the
 3. Es ist **20:15 Uhr**. → Es ist zwanzig Uhr fünfzehn.
 4. Es ist **6:45 Uhr**. → Es ist sechs Uhr fünfundvierzig.
 5. Es ist **0:00 Uhr**. → Es ist null Uhr. / Es ist Mitternacht.
-
-<a id="62-informal-time"></a>
 
 ### 6.2. Informal Time
 
@@ -534,16 +474,12 @@ Informal time uses the **12-hour clock** and references the *next* hour.
 
 **Key rule:** *halb* refers to the **next** hour. *halb drei* = 2:30, *halb acht* = 7:30.
 
-<a id="63-questions-answers"></a>
-
 ### 6.3. Questions & Answers
 
 1. **Wie spät ist es?** — Es ist drei Uhr. (What time is it? — It's three o'clock.)
 2. **Um wie viel Uhr** kommst du? — Um acht Uhr. (At what time do you come? — At eight.)
 3. Wie spät ist es? — Es ist halb fünf. (What time is it? — It's 4:30.)
 4. Um wie viel Uhr beginnt der Film? — Um Viertel nach sieben. (What time does the movie start? — At 7:15.)
-
-<a id="64-prepositions-with-time"></a>
 
 ### 6.4. Prepositions with Time
 
@@ -556,13 +492,9 @@ Informal time uses the **12-hour clock** and references the *next* hour.
 | **am** + time of day | morning/afternoon/evening | **Am** Nachmittag lerne ich. / **Am** Abend lese ich. |
 | **in der** | night | **In der** Nacht schlafe ich. |
 
-<a id="7-adjective-endings-nominative-accusative"></a>
-
 ## 7. Adjective Endings — Nominative & Accusative
 
 When an adjective comes **before a noun** (attributive position), it needs an ending. The ending depends on what article (if any) precedes it.
-
-<a id="71-weak-endings-after-der-words"></a>
 
 ### 7.1. Weak Endings After der-Words
 
@@ -575,8 +507,6 @@ After **der/die/das**, **dieser**, **jeder**, **welcher** — the article alread
 
 Pattern: **-e** almost everywhere, except **-en** for accusative masculine and all plurals.
 
-<a id="72-strong-endings-without-article"></a>
-
 ### 7.2. Strong Endings Without Article
 
 When there is **no article**, the adjective must carry the gender/case signal itself.
@@ -588,8 +518,6 @@ When there is **no article**, the adjective must carry the gender/case signal it
 
 These endings mirror the definite article endings (der→-er, die→-e, das→-es, den→-en).
 
-<a id="73-the-signal-rule"></a>
-
 ### 7.3. The Signal Rule
 
 The **case signal** (the ending that shows gender and case) must appear exactly once before the noun:
@@ -598,8 +526,6 @@ The **case signal** (the ending that shows gender and case) must appear exactly 
 - If there is **no article** → adjective carries the **signal** itself (strong ending: -er/-e/-es/-en)
 
 A third pattern (**mixed endings**, after ein/kein/mein/dein) exists and is covered fully in Week 3. For now, practice adjectives with der-words or without any article.
-
-<a id="74-10-example-noun-phrases"></a>
 
 ### 7.4. 10 Example Noun Phrases
 
@@ -623,11 +549,7 @@ A third pattern (**mixed endings**, after ein/kein/mein/dein) exists and is cove
 | 9 | kalt**en** Kaffee | Acc masc | -en |
 | 10 | alt**e** Häuser | Nom/Acc pl | -e |
 
-<a id="8-sentence-connectors"></a>
-
 ## 8. Sentence Connectors
-
-<a id="81-coordinating-conjunctions"></a>
 
 ### 8.1. Coordinating Conjunctions
 
@@ -642,8 +564,6 @@ Coordinating conjunctions join two main clauses. **No word order change** — ea
 | sondern | but rather | Er ist nicht krank, **sondern** müde. |
 
 Note: *sondern* is only used after a negation — it corrects a negative statement.
-
-<a id="82-subordinating-conjunctions"></a>
 
 ### 8.2. Subordinating Conjunctions
 
@@ -663,8 +583,6 @@ Main clause          Subordinate clause
 Ich bleibe zu Hause,  weil  ich krank         bin.
 ```
 
-<a id="83-main-clause-after-subordinate-clause"></a>
-
 ### 8.3. Main Clause After Subordinate Clause
 
 When the subordinate clause comes **first**, the main clause verb moves to position 1 (directly after the comma). The subordinate clause counts as "element 1" of the whole sentence.
@@ -675,8 +593,6 @@ When the subordinate clause comes **first**, the main clause verb moves to posit
 
 Pattern: **[Subordinate clause], [VERB] [Subject] [rest].**
 
-<a id="84-man-as-impersonal-subject"></a>
-
 ### 8.4. man as Impersonal Subject
 
 **man** means "one" / "people in general" / "you" (generic). It always takes **3rd person singular** verb forms.
@@ -686,11 +602,7 @@ Pattern: **[Subordinate clause], [VERB] [Subject] [rest].**
 3. **Man** soll nicht lügen. (One should not lie.)
 4. **Man** muss jeden Tag üben. (One must practice every day.)
 
-<a id="9-vocabulary-expansion-150-new-words-300-cumulative"></a>
-
 ## 9. Vocabulary Expansion (150 New Words → 300 Cumulative)
-
-<a id="91-daily-routines-20"></a>
 
 ### 9.1. Daily Routines (20)
 
@@ -715,8 +627,6 @@ Pattern: **[Subordinate clause], [VERB] [Subject] [rest].**
 19. der Alltag (no pl.) — everyday life
 20. normalerweise — normally, usually
 
-<a id="92-school-work-20"></a>
-
 ### 9.2. School & Work (20)
 
 1. die Arbeit (-en) — work, job
@@ -739,8 +649,6 @@ Pattern: **[Subordinate clause], [VERB] [Subject] [rest].**
 18. üben — to practice
 19. das Fach (Fächer) — subject (school)
 20. die Aufgabe (-n) — task, assignment
-
-<a id="93-transport-city-20"></a>
 
 ### 9.3. Transport & City (20)
 
@@ -767,8 +675,6 @@ Pattern: **[Subordinate clause], [VERB] [Subject] [rest].**
 
 Note: *abfahren*, *ankommen*, and *umsteigen* are **separable verbs** (covered in Week 5). For now, learn them as vocabulary.
 
-<a id="94-shopping-money-15"></a>
-
 ### 9.4. Shopping & Money (15)
 
 1. das Geld (no pl.) — money
@@ -786,8 +692,6 @@ Note: *abfahren*, *ankommen*, and *umsteigen* are **separable verbs** (covered i
 13. die Kundin (-nen) — customer (female)
 14. das Angebot (-e) — offer, deal
 15. der Einkauf (Einkäufe) — purchase, shopping
-
-<a id="95-time-expressions-15"></a>
 
 ### 9.5. Time Expressions (15)
 
@@ -809,8 +713,6 @@ Note: *abfahren*, *ankommen*, and *umsteigen* are **separable verbs** (covered i
 | 14 | spät | late |
 | 15 | am Wochenende | on the weekend |
 
-<a id="96-collocations-fixed-expressions-10"></a>
-
 ### 9.6. Collocations & Fixed Expressions (10)
 
 | # | German | English |
@@ -825,8 +727,6 @@ Note: *abfahren*, *ankommen*, and *umsteigen* are **separable verbs** (covered i
 | 8 | so schnell wie möglich | as fast as possible |
 | 9 | Spaß machen | to be fun |
 | 10 | gar nicht | not at all |
-
-<a id="97-word-formation-compound-nouns"></a>
 
 ### 9.7. Word Formation: Compound Nouns
 
@@ -847,11 +747,7 @@ German builds nouns by joining two or more words. The **last noun determines the
 
 Note: Some compounds insert a linking letter (Fugenzeichen): Woche**n**ende, Straße**n**bahn, Geburt**s**tag. There are no strict rules — learn each compound as vocabulary.
 
-<a id="10-practice-exercises"></a>
-
 ## 10. Practice Exercises
-
-<a id="101-dative-case-drill"></a>
 
 ### 10.1. Dative Case Drill
 
@@ -868,8 +764,6 @@ Fill in the correct **dative** form of the article or possessive shown in parent
 9. Er empfiehlt ___ (sein) Bruder einen Film.
 10. Ich gebe ___ (die) Kinder Milch.
 
-<a id="102-der-word-possessive-drill"></a>
-
 ### 10.2. Der-Word & Possessive Drill
 
 Fill in the correct form of the word in parentheses. The required case is indicated.
@@ -882,8 +776,6 @@ Fill in the correct form of the word in parentheses. The required case is indica
 6. ___ (unser/Nom neut) Haus ist groß.
 7. Mit ___ (welcher/Dat masc) Bus fährst du?
 8. ___ (dieser/Nom fem) Frau ist meine Lehrerin.
-
-<a id="103-modal-verb-translation"></a>
 
 ### 10.3. Modal Verb Translation
 
@@ -899,8 +791,6 @@ Translate into German. Choose the correct modal, conjugate it, and place the inf
 8. I don't want to work today.
 9. You (du) are not allowed to smoke here.
 10. She has to go to school.
-
-<a id="104-perfekt-transformation"></a>
 
 ### 10.4. Perfekt Transformation
 
@@ -918,8 +808,6 @@ Rewrite each sentence in the **Perfekt**. Choose the correct auxiliary (haben or
 10. Er kommt nach Hause.
 11. Wir fahren nach Berlin.
 12. Das Kind schläft.
-
-<a id="105-preposition-gap-fill"></a>
 
 ### 10.5. Preposition Gap-Fill
 
@@ -943,8 +831,6 @@ Fill in the correct preposition and determine whether the noun takes accusative 
 11. Das Bild hängt ___ der Wand. (on — location)
 12. Ich hänge das Bild ___ die Wand. (on — direction)
 
-<a id="106-time-telling"></a>
-
 ### 10.6. Time Telling
 
 Write each time in **formal** (24-hour) and **informal** format.
@@ -955,8 +841,6 @@ Write each time in **formal** (24-hour) and **informal** format.
 4. 18:45
 5. 09:05
 6. 23:50
-
-<a id="107-adjective-ending-drill"></a>
 
 ### 10.7. Adjective Ending Drill
 
@@ -973,8 +857,6 @@ Supply the correct adjective ending. The type (weak/strong) and case are indicat
 9. kalt___ Kaffee (strong, Acc masc)
 10. alt___ Häuser (strong, Nom pl)
 
-<a id="108-clause-linking"></a>
-
 ### 10.8. Clause Linking
 
 Join the two sentences using the conjunction in parentheses. Apply the correct word order.
@@ -987,8 +869,6 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 6. Es regnet. + Wir bleiben zu Hause. (wenn — subordinate clause first)
 7. Sie ist nicht krank. + Sie ist müde. (sondern)
 8. Ich trinke Kaffee. + Ich trinke Tee. (oder)
-
-<a id="109-answer-key"></a>
 
 ### 10.9. Answer Key
 

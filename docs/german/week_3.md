@@ -45,13 +45,9 @@
   - [7.6. Mixed Translation](#76-mixed-translation)
   - [7.7. Answer Key](#77-answer-key)
 
-<a id="1-präteritum-simple-past-narrative-past"></a>
-
 ## 1. Präteritum — Simple Past / Narrative Past
 
 The **Präteritum** (also called *Imperfekt*) is the simple past tense. It is the standard narrative tense in written German (novels, news articles, fairy tales). In spoken German, the Perfekt (Week 2) is preferred for most verbs — but **sein**, **haben**, and the **modal verbs** are almost always used in Präteritum even in speech.
-
-<a id="11-präteritum-of-sein"></a>
 
 ### 1.1. Präteritum of sein
 
@@ -72,8 +68,6 @@ Examples:
 3. Wir **waren** glücklich. (We were happy.)
 4. **Warst** du krank? (Were you sick?)
 
-<a id="12-präteritum-of-haben"></a>
-
 ### 1.2. Präteritum of haben
 
 | Person | Präteritum | English |
@@ -90,8 +84,6 @@ Examples:
 2. Sie **hatte** einen Hund. (She had a dog.)
 3. Wir **hatten** Hunger. (We were hungry. — lit. We had hunger.)
 4. **Hattest** du Angst? (Were you afraid? — lit. Had you fear?)
-
-<a id="13-präteritum-of-all-six-modal-verbs"></a>
 
 ### 1.3. Präteritum of All Six Modal Verbs
 
@@ -115,8 +107,6 @@ Examples:
 4. Du **solltest** das Buch lesen. (You were supposed to read the book.)
 5. Sie **durfte** nicht kommen. (She was not allowed to come.)
 6. Er **mochte** keinen Kaffee. (He didn't like coffee.)
-
-<a id="14-weak-verb-präteritum-pattern"></a>
 
 ### 1.4. Weak Verb Präteritum Pattern
 
@@ -143,8 +133,6 @@ Weak (regular) verbs form the Präteritum by adding **-te** to the stem:
 5. Ihr **redetet** zu laut. (You all talked too loudly.)
 
 > **Note:** In everyday spoken German, weak verbs almost always use Perfekt instead of Präteritum. You will mainly encounter weak-verb Präteritum in written narratives.
-
-<a id="15-präteritum-of-20-strong-verbs"></a>
 
 ### 1.5. Präteritum of 20 Strong Verbs
 
@@ -186,8 +174,6 @@ Strong (irregular) verbs **change their stem vowel** in the Präteritum. There i
 
 > **Tip:** Stems ending in **-d** or **-t** (fand, stand) add **-est** / **-et** for du/ihr: du fand**est**, ihr fand**et**, du stand**est**, ihr stand**et**.
 
-<a id="16-perfekt-vs-präteritum-when-to-use-which"></a>
-
 ### 1.6. Perfekt vs. Präteritum: When to Use Which
 
 **Decision flowchart:**
@@ -216,11 +202,7 @@ Strong (irregular) verbs **change their stem vowel** in the Präteritum. There i
 
 > **Note:** The Perfekt forms with sein/haben/modals are grammatically correct but sound unnatural in everyday German. The Präteritum is strongly preferred.
 
-<a id="2-reflexive-verbs"></a>
-
 ## 2. Reflexive Verbs
-
-<a id="21-what-are-reflexive-verbs"></a>
 
 ### 2.1. What Are Reflexive Verbs?
 
@@ -230,8 +212,6 @@ A **reflexive verb** is a verb where the **subject and the object are the same p
 - German: Ich wasche **mich**. Sie setzt **sich**.
 
 Many verbs that are reflexive in German are **not** reflexive in English — you simply have to learn which verbs require a reflexive pronoun.
-
-<a id="22-accusative-reflexive-pronouns"></a>
 
 ### 2.2. Accusative Reflexive Pronouns
 
@@ -247,8 +227,6 @@ The reflexive pronoun is in the **accusative** when it is the **direct object** 
 | sie/Sie | sie/Sie | **sich** |
 
 Notice: Only the **3rd person** (er/sie/es/sie-plural/Sie-formal) has a special reflexive form: **sich**. For 1st and 2nd person, the reflexive pronoun is the same as the regular accusative pronoun.
-
-<a id="23-10-common-accusative-reflexive-verbs"></a>
 
 ### 2.3. 10 Common Accusative Reflexive Verbs
 
@@ -266,8 +244,6 @@ Notice: Only the **3rd person** (er/sie/es/sie-plural/Sie-formal) has a special 
 | sich treffen (mit + Dat) | to meet (up with) | Ich treffe **mich** mit meinem Freund. (I meet up with my friend.) |
 
 > **Note on prepositions:** Some reflexive verbs require a fixed preposition (shown in parentheses). These preposition-verb combinations are covered systematically in Week 8. For now, learn them as set phrases.
-
-<a id="24-dative-reflexive-pronouns"></a>
 
 ### 2.4. Dative Reflexive Pronouns
 
@@ -288,8 +264,6 @@ The reflexive pronoun is in the **dative** when the verb **also has a direct obj
 - Ich wasche **mich**. (accusative — no other object)
 - Ich wasche **mir** die Hände. (dative — "die Hände" is the accusative object)
 
-<a id="25-8-common-dative-reflexive-verbs"></a>
-
 ### 2.5. 8 Common Dative Reflexive Verbs
 
 These verbs always take a dative reflexive pronoun because they require an additional accusative object (the thing being imagined, wished for, etc.).
@@ -306,8 +280,6 @@ These verbs always take a dative reflexive pronoun because they require an addit
 | sich (Dat) etwas überlegen | to think something over | Ich überlege **mir** das. (I'll think that over.) |
 
 > **Memory aid:** If you can insert a **thing** after the reflexive pronoun (sich *etwas* vorstellen, sich *etwas* merken), the reflexive pronoun is dative.
-
-<a id="26-word-order-with-reflexive-pronouns"></a>
 
 ### 2.6. Word Order with Reflexive Pronouns
 
@@ -332,13 +304,9 @@ With inversion (time phrase in position 1 — see Week 1, V2 rule): Jeden Morgen
 - ..., weil **sich** der Mann auf den Stuhl setzt. (...because the man sits down on the chair.)
 - ..., dass **sich** das Kind nicht bewegt. (...that the child doesn't move.)
 
-<a id="3-indefinite-pronouns"></a>
-
 ## 3. Indefinite Pronouns
 
 Indefinite pronouns refer to **unspecified people or things**. You already met **man** briefly in Week 2. Here we cover all the common indefinite pronouns.
-
-<a id="31-man"></a>
 
 ### 3.1. man
 
@@ -350,8 +318,6 @@ Indefinite pronouns refer to **unspecified people or things**. You already met *
 4. In Deutschland trinkt **man** viel Bier. (In Germany, people drink a lot of beer.)
 
 > **Do not confuse:** man (impersonal pronoun) ≠ der Mann (the man).
-
-<a id="32-jemand-niemand"></a>
 
 ### 3.2. jemand / niemand
 
@@ -370,8 +336,6 @@ Both can optionally take **-(e)n** in the accusative and dative — both forms a
 3. Kann **jemand** mir helfen? (Can someone help me?)
 4. Er hat mit **niemandem** gesprochen. (He spoke with nobody.)
 
-<a id="33-etwas-nichts"></a>
-
 ### 3.3. etwas / nichts
 
 **etwas** = something. **nichts** = nothing.
@@ -384,8 +348,6 @@ Both can optionally take **-(e)n** in the accusative and dative — both forms a
 4. Er hat **nichts Wichtiges** gesagt. (He said nothing important.) — *Wichtiges = neuter accusative strong ending -es*
 
 > **Pattern:** etwas/nichts + **adjective with capital letter + strong neuter ending** = a noun phrase. The adjective always takes strong endings because there is no article.
-
-<a id="34-alle-jeder-manche-einige"></a>
 
 ### 3.4. alle, jeder, manche, einige
 
@@ -412,13 +374,9 @@ Declension example with **jeder** (like der-word):
 | Dat | jedem | jeder | jedem |
 | Gen | jedes | jeder | jedes |
 
-<a id="4-full-adjective-declension-all-cases-all-types"></a>
-
 ## 4. Full Adjective Declension — All Cases, All Types
 
 In Week 2, you learned weak and strong adjective endings for **nominative and accusative** only. Now we complete the system with all **four cases** (Nom, Acc, Dat, Gen) and all **three types** (weak, mixed, strong). We also introduce the **mixed** type (after ein-words) for the first time.
-
-<a id="41-weak-endings-after-der-words-complete-table"></a>
 
 ### 4.1. Weak Endings After der-Words — Complete Table
 
@@ -438,8 +396,6 @@ Examples:
 - Acc: **den** alt**en** Mann, **die** klein**e** Frau, **das** groß**e** Kind, **die** neu**en** Bücher
 - Dat: **dem** alt**en** Mann, **der** klein**en** Frau, **dem** groß**en** Kind, **den** neu**en** Bücher**n**
 - Gen: **des** alt**en** Mann**es**, **der** klein**en** Frau, **des** groß**en** Kind**es**, **der** neu**en** Bücher
-
-<a id="42-mixed-endings-after-ein-words-complete-table"></a>
 
 ### 4.2. Mixed Endings After ein-Words — Complete Table
 
@@ -462,8 +418,6 @@ Examples:
 - Dat: **einem** alt**en** Mann, **einer** klein**en** Frau, **einem** groß**en** Kind, **keinen** neu**en** Bücher**n**
 - Gen: **eines** alt**en** Mann**es**, **einer** klein**en** Frau, **eines** groß**en** Kind**es**, **keiner** neu**en** Bücher
 
-<a id="43-strong-endings-without-article-complete-table"></a>
-
 ### 4.3. Strong Endings Without Article — Complete Table
 
 Used when there is **no article** before the adjective. The adjective itself must carry the full case signal.
@@ -483,8 +437,6 @@ Examples:
 - Dat: mit alt**em** Wein, mit kalt**er** Milch, mit frisch**em** Brot, mit grün**en** Äpfeln
 - Gen: trotz alt**en** Weines, trotz kalt**er** Milch, trotz frisch**en** Brotes, trotz grün**er** Äpfel
 
-<a id="44-the-signal-concept-summarized"></a>
-
 ### 4.4. The Signal Concept Summarized
 
 Every German noun phrase needs a **case signal** — a marker that shows the gender, number, and case. The question is: **who carries it?**
@@ -502,8 +454,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
    - **Yes** → Adjective must carry the full signal → **strong** ending
 
 **Quick check:** Look at what comes before the adjective. If it already shows gender/case clearly → adjective relaxes to -e/-en. If not → adjective steps up with a strong ending.
-
-<a id="45-12-worked-examples"></a>
 
 ### 4.5. 12 Worked Examples
 
@@ -577,11 +527,7 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 - Gen pl → **-er**
 - Result: **grüner Äpfel**
 
-<a id="5-vocabulary-expansion-200-new-words-500-cumulative"></a>
-
 ## 5. Vocabulary Expansion (200 New Words → 500 Cumulative)
-
-<a id="51-feelings-emotions-25"></a>
 
 ### 5.1. Feelings & Emotions (25)
 
@@ -613,8 +559,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 | die Trauer (f.) | grief, sorrow | Die Trauer war tief. |
 | die Hoffnung (f.) | hope | Die Hoffnung stirbt zuletzt. |
 
-<a id="52-health-body-25"></a>
-
 ### 5.2. Health & Body (25)
 
 | German | English | Example |
@@ -645,8 +589,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 | wehtun | to hurt | Mein Kopf tut weh. — *separable (see Week 5)* |
 | sich erholen | to recover | Sie erholt sich gut. |
 
-<a id="53-weather-20"></a>
-
 ### 5.3. Weather (20)
 
 | German | English | Example |
@@ -671,8 +613,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 | kühl | cool | Es ist kühl. |
 | kalt | cold | Es ist kalt. |
 | die Temperatur (f.) | temperature | Die Temperatur ist hoch. |
-
-<a id="54-hobbies-free-time-25"></a>
 
 ### 5.4. Hobbies & Free Time (25)
 
@@ -704,8 +644,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 | die Freizeit (f.) | free time | In meiner Freizeit lese ich. |
 | sich entspannen | to relax | Ich entspanne mich am Abend. |
 
-<a id="55-travel-directions-25"></a>
-
 ### 5.5. Travel & Directions (25)
 
 | German | English | Example |
@@ -736,8 +674,6 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 | die Ecke (f.) | corner | An der Ecke ist ein Café. |
 | sich verlaufen | to get lost | Ich habe mich verlaufen. |
 
-<a id="56-word-formation-verb-noun-patterns-10-pairs"></a>
-
 ### 5.6. Word Formation: Verb → Noun Patterns (10 Pairs)
 
 German frequently creates nouns from verbs. Common patterns:
@@ -764,11 +700,7 @@ German frequently creates nouns from verbs. Common patterns:
 
 > **Rule:** Nouns ending in **-ung** are always **feminine** (die).
 
-<a id="6-applied-skills"></a>
-
 ## 6. Applied Skills
-
-<a id="61-reading-short-a2-narrative"></a>
 
 ### 6.1. Reading: Short A2 Narrative
 
@@ -796,8 +728,6 @@ Am Sonntag lag Lisa lange im Bett. Sie las ein Buch und trank Tee. Am Nachmittag
 4. Wie war der Film im Kino?
 5. Was machte Lisa am Sonntagmorgen?
 
-<a id="62-writing-prompt-mein-letzter-urlaub"></a>
-
 ### 6.2. Writing Prompt: "Mein letzter Urlaub"
 
 Write **8–10 sentences** about your last vacation (real or imagined). Use:
@@ -808,11 +738,7 @@ Write **8–10 sentences** about your last vacation (real or imagined). Use:
 
 Example start: *Letztes Jahr war ich in Spanien. Das Wetter war sehr warm und sonnig. Ich habe mich gefreut...*
 
-<a id="7-practice-exercises"></a>
-
 ## 7. Practice Exercises
-
-<a id="71-präteritum-conjugation-drill"></a>
 
 ### 7.1. Präteritum Conjugation Drill
 
@@ -834,8 +760,6 @@ Rewrite each sentence in the **Präteritum**. The verb to conjugate is in bold.
 14. Sie (they) **kommen** aus Berlin.
 15. Ich **sehe** den Mann.
 
-<a id="72-perfekt-vs-präteritum-choice"></a>
-
 ### 7.2. Perfekt vs. Präteritum Choice
 
 For each context, choose whether Perfekt or Präteritum is more appropriate and write the sentence. Justify your choice.
@@ -850,8 +774,6 @@ For each context, choose whether Perfekt or Präteritum is more appropriate and 
 8. You are texting a friend: "I saw a good film."
 9. You are speaking: "We had to wait."
 10. You are writing a report: "He found the book."
-
-<a id="73-reflexive-verb-translation"></a>
 
 ### 7.3. Reflexive Verb Translation
 
@@ -868,8 +790,6 @@ Translate into German. Decide whether the reflexive pronoun is **accusative** or
 9. He wishes for a new car. (sich wünschen — Dat)
 10. We worry about the children. (sich Sorgen machen — Dat)
 
-<a id="74-indefinite-pronoun-gap-fill"></a>
-
 ### 7.4. Indefinite Pronoun Gap-Fill
 
 Fill in the correct indefinite pronoun: **man**, **jemand**, **niemand**, **etwas**, **nichts**, **alle**, **jeder**, **manche**.
@@ -882,8 +802,6 @@ Fill in the correct indefinite pronoun: **man**, **jemand**, **niemand**, **etwa
 6. ___ muss das lernen. (Everyone / each one)
 7. ___ Leute sprechen drei Sprachen.
 8. Er hat ___ Interessantes gesagt. (nothing interesting)
-
-<a id="75-adjective-ending-gap-fill"></a>
 
 ### 7.5. Adjective Ending Gap-Fill
 
@@ -917,8 +835,6 @@ Supply the correct adjective ending. The type and case are indicated.
 19. alt___ Brot (Nom neut)
 20. welche neu___ Schuhe (Acc pl)
 
-<a id="76-mixed-translation"></a>
-
 ### 7.6. Mixed Translation
 
 Translate into German using Week 3 grammar and vocabulary.
@@ -935,8 +851,6 @@ Translate into German using Week 3 grammar and vocabulary.
 10. She has a new car. (mixed ending)
 11. I drank cold water. (strong ending)
 12. All students were happy.
-
-<a id="77-answer-key"></a>
 
 ### 7.7. Answer Key
 
