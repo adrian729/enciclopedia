@@ -54,7 +54,7 @@ docs/sub/page.md     => /#/sub/page
 
 - **search** — full-text search, loaded via separate `<script>` tag.
 - **docsify-sidebar-collapse** — collapses nested sidebar items by default. Controlled by `sidebarDisplayLevel` config. Loaded via external CSS + JS from CDN.
-- **fixHeadingIds** — custom inline plugin that strips the `_` prefix docsify adds to heading IDs starting with a digit (e.g. `_1-section` → `1-section`), and patches sidebar links to match.
+- **fixHeadingIds** — custom inline plugin that strips the `_` prefix docsify adds to heading IDs starting with a digit, and patches sidebar links to match. This is needed because the project uses numbered headings whose IDs start with digits. See the `md-standards` skill for the heading ID convention.
 
 ## Configuration reference (`window.$docsify`)
 

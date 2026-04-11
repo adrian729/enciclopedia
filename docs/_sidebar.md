@@ -31,6 +31,16 @@
     - [Ch 22: Conclusion](software/philosophy-of-software-design/ch22_conclusion.md)
     - [Summary: Design Principles & Red Flags](software/philosophy-of-software-design/summary_design_principles.md)
 
+  - [The Art of Functional Programming](software/art-of-functional-programming/ch01_introduction.md)
+    - [Ch 1: Introduction](software/art-of-functional-programming/ch01_introduction.md)
+    - [Ch 2: Expressions](software/art-of-functional-programming/ch02_expressions.md)
+    - [Ch 3: Building Abstractions with Functions](software/art-of-functional-programming/ch03_building_abstractions_with_functions.md)
+    - [Ch 4: Compound Data Types](software/art-of-functional-programming/ch04_compound_data_types.md)
+    - [Ch 5: Common Computation Patterns](software/art-of-functional-programming/ch05_common_computation_patterns.md)
+    - [Ch 6: Dataflow Programming](software/art-of-functional-programming/ch06_dataflow_programming.md)
+    - [Ch 7: Applying FP in Practice](software/art-of-functional-programming/ch07_applying_fp_in_practice.md)
+    - [Ch 8: Conclusion](software/art-of-functional-programming/ch08_conclusion.md)
+
 - **AI**
   - [AI Tools](ai/ai_tools.md)
 
