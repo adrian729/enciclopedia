@@ -41,6 +41,7 @@ docs/sub/page.md     => /#/sub/page
 
 - Links are relative to `docs/`.
 - `subMaxLevel: 0` — sidebar auto-TOC is disabled; all sidebar navigation is manual.
+- `sidebarDisplayLevel: 1` — nested items are collapsed by default. Users click to expand. Powered by the `docsify-sidebar-collapse` plugin.
 - Nested sidebars: a `_sidebar.md` in a subdirectory overrides the root one for that path. Falls back to parent if absent.
 
 ## Adding pages
@@ -52,6 +53,7 @@ docs/sub/page.md     => /#/sub/page
 ## Plugins
 
 - **search** — full-text search, loaded via separate `<script>` tag.
+- **docsify-sidebar-collapse** — collapses nested sidebar items by default. Controlled by `sidebarDisplayLevel` config. Loaded via external CSS + JS from CDN.
 - **fixHeadingIds** — custom inline plugin that strips the `_` prefix docsify adds to heading IDs starting with a digit (e.g. `_1-section` → `1-section`), and patches sidebar links to match.
 
 ## Configuration reference (`window.$docsify`)
@@ -72,4 +74,5 @@ docs/sub/page.md     => /#/sub/page
 | `routerMode` | String | `hash` | `hash` or `history` |
 | `alias` | Object | - | Route aliases (regex supported) |
 | `notFoundPage` | Bool/String | `false` | Custom 404 page |
+| `sidebarDisplayLevel` | Number | `1` | Initial sidebar nesting depth shown (collapse plugin) |
 | `plugins` | Array | - | Inline plugin functions |

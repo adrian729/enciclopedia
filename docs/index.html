@@ -7,6 +7,7 @@
   <meta name="description" content="Enciclopedia - Personal Knowledge Base">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 </head>
 <body>
   <div id="app"></div>
@@ -16,6 +17,7 @@
       loadSidebar: true,
       auto2top: true,
       subMaxLevel: 0,
+      sidebarDisplayLevel: 1,
       plugins: [
         function fixHeadingIds(hook) {
           function scrollToId(id) {
@@ -61,5 +63,6 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
