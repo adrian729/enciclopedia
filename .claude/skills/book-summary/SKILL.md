@@ -11,6 +11,19 @@ Turn a book into concise, verified summaries in the Docsify knowledge base.
 
 Load `docsify` and `md-standards` skills before starting. Follow them throughout.
 
+## Context discipline
+
+A full book run dispatches many agents and touches many files. Without discipline, the main conversation balloons past 40% context and forces compaction mid-run. Follow these rules across every phase:
+
+- **Never read source chapter files (HTML/TXT under `tmp/`) in the main thread.** Source reading belongs inside agents. The only main-thread reads on source are (a) one sample file in Phase 1 to confirm extraction worked, and (b) the TOC/nav file in Phase 2.
+- **Never re-read a completed summary file in the main thread to spot-check an agent's fix.** If you need verification, send another agent. Main-thread `Read` on `docs/<book-slug>/*.md` is reserved for: the reference chapter during Phase 3.5 calibration, and the narrative `book_summary.md` while authoring it in Phase 5.
+- **Cap every agent report.** Include `Report in under 100 words.` (or under 50 for audit agents) in every Agent prompt. Audit agents report only `CLEAN` or a terse fix list — no recaps of what the summary says, no explanations of why a fix was needed beyond a phrase.
+- **Compact at phase boundaries.** After Phase 3 completes, after Phase 4 converges, and after Phase 5 audit is clean, the prior phase's detail stops being load-bearing. Proactively `/compact` at these seams rather than waiting for auto-compact.
+- **Keep agent prompts self-contained but terse.** Point agents at the skill file and the reference chapter; don't inline long style recaps.
+- **Don't dump tool output into the thread.** When listing files or checking progress, prefer `wc -l`, `ls | head`, or counts over full listings.
+
+Tradeoff: less visibility into each agent's reasoning. Mitigation: the audit loop in Phase 4 is the safety net — trust it to catch silent misbehavior rather than paying context to watch every agent.
+
 ## Phase 1: Extract
 
 ### Locating the source file
@@ -118,8 +131,11 @@ Once a reference chapter is approved, split remaining chapters across agents (~2
 3. Reads assigned source files
 4. Writes each summary
 5. Does NOT update progress tracker or sidebar (do centrally to avoid conflicts)
+6. **Reports in under 100 words**: just the list of files written, one line each. No recap of contents.
 
-After all agents complete, bulk-update the progress tracker.
+After all agents complete, bulk-update the progress tracker from the file list alone — do not Read the summaries to verify them; Phase 4 is where verification happens.
+
+**Compact checkpoint**: after Phase 3 finishes, proactively `/compact` before starting Phase 4. The per-chapter drafting detail is no longer needed.
 
 ## Phase 4: Audit
 
@@ -134,8 +150,14 @@ Each audit agent:
 2. Reads corresponding summary
 3. Cross-references **every claim** against source
 4. Checks: accuracy, no fabrications, terminology preserved, formal callouts correctly labeled
-5. Issues found → fix immediately, report what was wrong, re-audit (max 5 iterations)
+5. Issues found → fix immediately in the file, re-audit (max 5 iterations)
 6. Clean → report "CLEAN", stop
+
+**Report format — strict cap, under 50 words total.** One line per chapter:
+- `chNN: CLEAN` if no fixes were needed
+- `chNN: N fixes — <terse phrase per fix>` (e.g., `ch05_03: 2 fixes — DB taxonomy, removed fabricated IDs bullet`)
+
+No recaps of what the summary covers, no explanations of why fixes were correct, no diffs. The fix is in the file; the report is just the ledger.
 
 ### 4.2 Convergence loop (outer)
 
@@ -150,6 +172,8 @@ Any round with fixes requires another round to confirm. Repeat until **every cha
 **Early graduation**: chapter clean for 2 consecutive rounds → exclude from further rounds.
 
 **Non-convergence**: at max iterations with remaining issues → stop, flag problematic chapters to user with details. Do not silently accept flawed summaries.
+
+**Compact checkpoint**: after Phase 4 converges, proactively `/compact` before starting Phase 5. The audit round-by-round fix ledger is no longer needed.
 
 ### 4.3 Checks
 
@@ -222,8 +246,11 @@ Run the narrative summary through the same audit loop as Phase 4:
 - Check: accuracy, no fabrications, author's terminology preserved, no smuggled opinions or cross-book references
 - Fix-and-reaudit loop, max 5 iterations
 - Must reach CLEAN on first iteration of a round before proceeding to Phase 6
+- Agent reports under 50 words, same format as Phase 4.1 (`CLEAN` or terse fix list). Do not re-read `book_summary.md` in the main thread to verify — trust the audit agent and send another if in doubt.
 
 Because this is a single file, parallelization doesn't apply — one audit agent covers the whole document.
+
+**Compact checkpoint**: after Phase 5 audit reaches CLEAN, proactively `/compact` before Phase 6. Only the final sidebar edit and progress-tracker update remain.
 
 ## Phase 6: Finalize
 
