@@ -5,13 +5,21 @@ description: End-to-end process for summarizing a book into the Docsify knowledg
 
 # Book Summary Skill
 
-Turn a book into concise, verified chapter summaries in the Docsify knowledge base.
+Turn a book into concise, verified summaries in the Docsify knowledge base.
 
 ## Prerequisites
 
 Load `docsify` and `md-standards` skills before starting. Follow them throughout.
 
 ## Phase 1: Extract
+
+### Locating the source file
+
+Before extracting, find the book file. Check in this order:
+
+1. **Explicit path** — if the user provided a file path, use it.
+2. **`~/projects/resources/books/`** — the local book library. Filenames are inconsistent (may include ISBNs, authors, publishers, scan codes), so match by keywords from the title or author: `ls ~/projects/resources/books/ | grep -i <keyword>`.
+3. **Ask the user** — only if the library has no match. Don't guess or download.
 
 Accept any format. Extract to readable text under `tmp/<book-slug>/`.
 
@@ -151,18 +159,70 @@ Any round with fixes requires another round to confirm. Repeat until **every cha
 - Formal callouts only when author explicitly labels them
 - No misattributed claims between chapters
 
-## Phase 5: Finalize
+## Phase 5: Narrative Summary
+
+Produce a single readable whole-book summary at `docs/<category>/<book-slug>/book_summary.md`. Target: 15–30 minute read (≈3,000–6,000 words). Reader is someone who will not read the book itself and wants the core ideas in one sitting.
+
+### 5.1 Scope and position
+
+Written only after Phase 4 converges (all chapter summaries clean). Uses the audited chapter summaries as scaffolding and the source material in `tmp/` as ground truth. If `tmp/` was cleared between sessions, re-extract per Phase 1 before starting.
+
+### 5.2 File format
+
+- H1: `# <Book Title>: Summary` (e.g., `# A Philosophy of Software Design: Summary`)
+- `## Table of Contents` after H1 (follow `md-standards`)
+- H2–H4 numbered per `md-standards`
+- Organize by **theme/argument**, not by chapter order. The narrative should flow as an essay, weaving related chapters together under shared headings. Chapter numbers are an implementation detail of the source, not of the summary.
+
+### 5.3 Writing style
+
+- **Prose-first.** Full sentences and paragraphs are the default. A reader should be able to read it top-to-bottom without losing the thread.
+- **Bullets only for genuine enumerations** — a list of principles, a list of steps, a side-by-side comparison. Never as a substitute for an explanation.
+- **Preserve author's terminology exactly** (same rule as chapter summaries). When introducing a coined term for the first time, bold it.
+- **Explain, don't just name-drop.** Each key concept gets a sentence or two of context: what it means, why it matters, a concrete example when the author provides one.
+- **No opinions, no commentary, no comparisons to other books.** The narrative should read as a faithful condensation of the author's own argument.
+- **Voice:** third-person, neutral ("Ousterhout argues…", "The book distinguishes…"). Don't address the reader as "you".
+- **Open with the book's thesis** in 2–4 sentences — what problem it's solving and the author's core claim.
+- **Close with a short "Key takeaways" section** (5–10 bullets) restating the most important ideas for recall.
+
+### 5.4 Sidebar entry
+
+Add as the **last** nested entry under the book title in `docs/_sidebar.md`, after all chapter links and any topical summary files:
+
+```
+    - [Book Summary](<category>/<book-slug>/book_summary.md)
+```
+
+### 5.5 Authoring
+
+Write this phase **centrally**, not via parallel agents. The narrative requires a single coherent voice; splitting it across agents produces stitched-together sections that don't flow. Input: all chapter summaries + the source material for any section where the chapter summary is too condensed to write prose from.
+
+### 5.6 Audit
+
+Run the narrative summary through the same audit loop as Phase 4:
+
+- Spawn an audit agent that reads `book_summary.md` alongside the source material
+- Cross-reference every factual claim, every named concept, every example against source
+- Check: accuracy, no fabrications, author's terminology preserved, no smuggled opinions or cross-book references
+- Fix-and-reaudit loop, max 5 iterations
+- Must reach CLEAN on first iteration of a round before proceeding to Phase 6
+
+Because this is a single file, parallelization doesn't apply — one audit agent covers the whole document.
+
+## Phase 6: Finalize
 
 1. Mark all chapters `done` in progress tracker
-2. Verify sidebar renders correctly (`docsify serve docs`)
-3. Confirm collapsible sections work for new book's chapters
-4. Report completion to user
+2. Verify `book_summary.md` is present and audited clean
+3. Verify sidebar renders correctly (`docsify serve docs`)
+4. Confirm collapsible sections work for new book's chapters and the Book Summary link appears last
+5. Report completion to user
 
 ## Key files
 
 | What | Where | Git? |
 |------|-------|------|
 | Summaries | `docs/<category>/<book-slug>/chNN_*.md` | Yes |
+| Narrative summary | `docs/<category>/<book-slug>/book_summary.md` | Yes |
 | Sidebar | `docs/_sidebar.md` | Yes |
 | Source | `tmp/<book-slug>/` | No |
 | Progress | `tmp/<book-slug>-progress.md` | No |

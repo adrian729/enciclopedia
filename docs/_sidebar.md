@@ -30,6 +30,7 @@
     - [Ch 21: Decide What Matters](software/philosophy-of-software-design/ch21_decide_what_matters.md)
     - [Ch 22: Conclusion](software/philosophy-of-software-design/ch22_conclusion.md)
     - [Summary: Design Principles & Red Flags](software/philosophy-of-software-design/summary_design_principles.md)
+    - [Book Summary](software/philosophy-of-software-design/book_summary.md)
 
   - [The Art of Functional Programming](software/art-of-functional-programming/ch01_introduction.md)
     - [Ch 1: Introduction](software/art-of-functional-programming/ch01_introduction.md)
@@ -40,6 +41,7 @@
     - [Ch 6: Dataflow Programming](software/art-of-functional-programming/ch06_dataflow_programming.md)
     - [Ch 7: Applying FP in Practice](software/art-of-functional-programming/ch07_applying_fp_in_practice.md)
     - [Ch 8: Conclusion](software/art-of-functional-programming/ch08_conclusion.md)
+    - [Book Summary](software/art-of-functional-programming/book_summary.md)
 
 - **AI**
   - [AI Tools](ai/ai_tools.md)
@@ -91,6 +93,7 @@
     - [Ch 37: Breastfeeding Is Best Feeding](life/parenting/hypnobirthing/ch37_breastfeeding.md)
     - [Ch 38: The Birth Afterglow](life/parenting/hypnobirthing/ch38_birth_afterglow.md)
     - [Ch 39: Birth Preference Sheets](life/parenting/hypnobirthing/ch39_birth_preference_sheets.md)
+    - [Book Summary](life/parenting/hypnobirthing/book_summary.md)
 
 - **Languages**
   - [German](german/german.md)
