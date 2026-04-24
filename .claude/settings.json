@@ -4,11 +4,31 @@
       "/Users/adriansanchezalbanell/projects/resources/books"
     ],
     "allow": [
-      "Read(/Users/adriansanchezalbanell/projects/resources/books/**)",
-      "Grep(/Users/adriansanchezalbanell/projects/resources/books/**)",
-      "Bash(ls /Users/adriansanchezalbanell/projects/resources/books:*)",
-      "Bash(find /Users/adriansanchezalbanell/projects/resources/books:*)",
-      "Bash(cat /Users/adriansanchezalbanell/projects/resources/books/*)"
+      "Read",
+      "Grep",
+      "Glob",
+      "WebSearch",
+      "WebFetch",
+      "Skill",
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(file:*)",
+      "Bash(jq:*)",
+      "Bash(mkdir:*)",
+      "Bash(pdftotext:*)",
+      "Bash(pdftoppm:*)",
+      "Bash(pdfinfo:*)",
+      "Bash(unzip:*)",
+      "Bash(node:*)",
+      "Bash(npx:*)",
+      "Bash(npm:*)",
+      "Bash(python3:*)",
+      "Bash(curl:*)"
     ]
   }
 }
