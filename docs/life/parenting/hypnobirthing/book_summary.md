@@ -1,5 +1,7 @@
 # HypnoBirthing: The Mongan Method — Summary
 
+> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+
 ## Table of Contents
 
 - [1. The Thesis](#1-the-thesis)

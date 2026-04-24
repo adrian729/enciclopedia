@@ -71,7 +71,7 @@ Show structure before writing summaries. Confirm: chapter list, file names, cate
 
 ### 2.5 Sidebar
 
-After approval, add entries to `docs/_sidebar.md` per docsify skill. All chapter links nested under book title.
+After approval, add entries to `docs/_sidebar.md` per docsify skill. Initial structure: book title links to `ch01`, chapter links nested under it. Phase 5.4 will finalize the structure once `book_summary.md` exists.
 
 ## Phase 3: Write Summaries
 
@@ -170,7 +170,12 @@ Written only after Phase 4 converges (all chapter summaries clean). Uses the aud
 ### 5.2 File format
 
 - H1: `# <Book Title>: Summary` (e.g., `# A Philosophy of Software Design: Summary`)
-- `## Table of Contents` after H1 (follow `md-standards`)
+- **Standard intro blockquote** immediately after H1, verbatim across every book:
+
+  ```markdown
+  > **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+  ```
+- `## Table of Contents` after the intro (follow `md-standards`)
 - H2–H4 numbered per `md-standards`
 - Organize by **theme/argument**, not by chapter order. The narrative should flow as an essay, weaving related chapters together under shared headings. Chapter numbers are an implementation detail of the source, not of the summary.
 
@@ -187,10 +192,21 @@ Written only after Phase 4 converges (all chapter summaries clean). Uses the aud
 
 ### 5.4 Sidebar entry
 
-Add as the **last** nested entry under the book title in `docs/_sidebar.md`, after all chapter links and any topical summary files:
+Finalize the book's sidebar block so readers land on the narrative summary by default and can drill into chapters from there:
 
-```
+1. **Change the book title link** from `ch01_*.md` to `book_summary.md` — clicking the book name in the sidebar opens the narrative summary.
+2. **Add Book Summary as the FIRST nested entry**, above all chapter links. Any topical summary files (e.g., `summary_design_principles.md`) stay at the bottom of the block.
+
+Final shape:
+
+```markdown
+  - [<Book Title>](<category>/<book-slug>/book_summary.md)
     - [Book Summary](<category>/<book-slug>/book_summary.md)
+    - [Ch 1: ...](<category>/<book-slug>/ch01_*.md)
+    - [Ch 2: ...](<category>/<book-slug>/ch02_*.md)
+    ...
+    - [Ch N: ...](<category>/<book-slug>/chNN_*.md)
+    - [<Topical Summary>](<category>/<book-slug>/summary_*.md)   # if any
 ```
 
 ### 5.5 Authoring
