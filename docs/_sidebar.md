@@ -243,6 +243,33 @@
 - **AI**
   - [AI Tools](ai/ai_tools.md)
 
+- **Design**
+  - **Books**
+    - [Introduction to Graphic Design](design/books/introduction-to-graphic-design/ch01_overview_of_the_field.md)
+      - [Ch 1: Overview of the Field](design/books/introduction-to-graphic-design/ch01_overview_of_the_field.md)
+      - [Ch 2: Concepts and Ideas](design/books/introduction-to-graphic-design/ch02_concepts_and_ideas.md)
+      - [Ch 3: Form and Space](design/books/introduction-to-graphic-design/ch03_form_and_space.md)
+      - [Ch 4: Working with Color](design/books/introduction-to-graphic-design/ch04_working_with_color.md)
+      - [Ch 5: Typography](design/books/introduction-to-graphic-design/ch05_typography.md)
+      - [Ch 6: Using and Creating Imagery](design/books/introduction-to-graphic-design/ch06_using_and_creating_imagery.md)
+      - [Ch 7: Layout and Arrangement](design/books/introduction-to-graphic-design/ch07_layout_and_arrangement.md)
+      - [Ch 8: Context and Production](design/books/introduction-to-graphic-design/ch08_context_and_production.md)
+      - [Ch 9: Conclusion](design/books/introduction-to-graphic-design/ch09_conclusion.md)
+
+- **Writing**
+  - **Books**
+    - [The Emotional Craft of Fiction](writing/books/emotional-craft-of-fiction/book_summary.md)
+      - [Book Summary](writing/books/emotional-craft-of-fiction/book_summary.md)
+      - [Ch 1: The Emotional Craft of Fiction](writing/books/emotional-craft-of-fiction/ch01_the_emotional_craft_of_fiction.md)
+      - [Ch 2: Inner Versus Outer](writing/books/emotional-craft-of-fiction/ch02_inner_versus_outer.md)
+      - [Ch 3: The Emotional World](writing/books/emotional-craft-of-fiction/ch03_the_emotional_world.md)
+      - [Ch 4: Emotions, Meaning, and Arc](writing/books/emotional-craft-of-fiction/ch04_emotions_meaning_and_arc.md)
+      - [Ch 5: The Emotional Plot](writing/books/emotional-craft-of-fiction/ch05_the_emotional_plot.md)
+      - [Ch 6: The Reader's Emotional Journey](writing/books/emotional-craft-of-fiction/ch06_the_readers_emotional_journey.md)
+      - [Ch 7: The Writer's Emotional Journey](writing/books/emotional-craft-of-fiction/ch07_the_writers_emotional_journey.md)
+      - [Ch 8: Conclusion](writing/books/emotional-craft-of-fiction/ch08_conclusion.md)
+      - [Ch 9: The Emotional Mastery Checklist](writing/books/emotional-craft-of-fiction/ch09_emotional_mastery_checklist.md)
+
 - **Mathematics**
   - [Category Theory](mathematics/category_theory.md)
 
