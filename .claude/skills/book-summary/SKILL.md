@@ -11,12 +11,23 @@ Turn a book into concise, verified summaries in the Docsify knowledge base.
 
 Load `docsify` and `md-standards` skills before starting. Follow them throughout.
 
+## Mode selection
+
+Before Phase 1, ask the user once:
+
+> Do you want to guide this run (review structure, give calibration feedback) or run it autonomously end-to-end?
+
+- **Guided mode**: stop at the normal checkpoints — Phase 2.4 (structure approval) and Phase 3.5 (calibration feedback).
+- **Autonomous mode**: skip every feedback checkpoint until Phase 6. Make sensible default choices (pick the closest existing category, keep the obvious chapter list, skip prefaces/indexes/acknowledgements by default) and proceed straight through. Only interrupt for genuine blockers that cannot be resolved without the user: source file not found in the library, DRM-protected file that fails extraction, or Phase 4 non-convergence at max iterations.
+
+Record the chosen mode and honor it for the rest of the run. In autonomous mode, do not ask the user *anything* — including the structure confirmation in 2.4 and the calibration review in 3.5 — until Phase 6 reports completion.
+
 ## Context discipline
 
 A full book run dispatches many agents and touches many files. Without discipline, the main conversation balloons past 40% context and forces compaction mid-run. Follow these rules across every phase:
 
 - **Never read source chapter files (HTML/TXT under `tmp/`) in the main thread.** Source reading belongs inside agents. The only main-thread reads on source are (a) one sample file in Phase 1 to confirm extraction worked, and (b) the TOC/nav file in Phase 2.
-- **Never re-read a completed summary file in the main thread to spot-check an agent's fix.** If you need verification, send another agent. Main-thread `Read` on `docs/<book-slug>/*.md` is reserved for: the reference chapter during Phase 3.5 calibration, and the narrative `book_summary.md` while authoring it in Phase 5.
+- **Never re-read a completed summary file in the main thread to spot-check an agent's fix.** If you need verification, send another agent. Main-thread `Read` on `docs/<category>/books/<book-slug>/*.md` is reserved for: the reference chapter during Phase 3.5 calibration, and the narrative `book_summary.md` while authoring it in Phase 5.
 - **Cap every agent report.** Include `Report in under 100 words.` (or under 50 for audit agents) in every Agent prompt. Audit agents report only `CLEAN` or a terse fix list — no recaps of what the summary says, no explanations of why a fix was needed beyond a phrase.
 - **Compact at phase boundaries.** After Phase 3 completes, after Phase 4 converges, and after Phase 5 audit is clean, the prior phase's detail stops being load-bearing. Proactively `/compact` at these seams rather than waiting for auto-compact.
 - **Keep agent prompts self-contained but terse.** Point agents at the skill file and the reference chapter; don't inline long style recaps.
@@ -54,9 +65,13 @@ DRM-protected files will fail extraction — inform the user the file must be DR
 
 ### 2.1 Output folder
 
-Create `docs/<category>/<book-slug>/` (e.g., `docs/software/philosophy-of-software-design/`).
+Create `docs/<category>/books/<book-slug>/` (e.g., `docs/software/books/philosophy-of-software-design/`).
+
+Books always live in a `books/` subfolder so they're visually distinguished from non-book topical pages in the sidebar. The `books/` segment immediately precedes the book slug.
 
 Match `<category>` to existing top-level folders under `docs/`. If none fits, ask the user.
+
+**Subcategories are allowed.** When a book genuinely belongs under an existing sub-topic, place it under that subcategory's own `books/` folder — e.g., `docs/life/parenting/books/<book-slug>/`. Use a subcategory only if one already exists or the user requests it; do not invent new subcategory layers.
 
 ### 2.2 Chapter files
 
@@ -82,9 +97,39 @@ Create `tmp/<book-slug>-progress.md`:
 
 Show structure before writing summaries. Confirm: chapter list, file names, category, chapters to skip (e.g., preface, index).
 
+**Autonomous mode**: skip this step. Pick the closest category, keep all main chapters, skip prefaces / forewords / acknowledgements / indexes by default, and proceed.
+
 ### 2.5 Sidebar
 
-After approval, add entries to `docs/_sidebar.md` per docsify skill. Initial structure: book title links to `ch01`, chapter links nested under it. Phase 5.4 will finalize the structure once `book_summary.md` exists.
+After approval, add entries to `docs/_sidebar.md` per docsify skill. Books always live under a `**Books**` subheader inside their category (matching the `<category>/books/` folder layout from 2.1). Mirror the folder structure exactly: every path segment between the top-level category and the book slug appears as a nested bold header in the sidebar.
+
+- For a book at `docs/<category>/books/<slug>/`: nest under `**<Category>**` → `**Books**` → book entry.
+- For a book at `docs/<category>/<subcategory>/books/<slug>/`: nest under `**<Category>**` → `**<Subcategory>**` → `**Books**` → book entry.
+
+If the `**Books**` header (or an intermediate subcategory header) doesn't already exist in the sidebar for that category, create it. Place the `**Books**` group after non-book topical entries in the same category so books visually trail topical pages.
+
+Initial structure: the book-title link points to `ch01`, chapter links nested under it. Phase 5.4 will finalize the structure once `book_summary.md` exists.
+
+Example shape (single category):
+
+```markdown
+- **<Category>**
+  - [Topical Page](<category>/topical.md)
+  - **Books**
+    - [<Book Title>](<category>/books/<book-slug>/ch01_*.md)
+      - [Ch 1: ...](<category>/books/<book-slug>/ch01_*.md)
+      - [Ch 2: ...](<category>/books/<book-slug>/ch02_*.md)
+```
+
+Example shape (subcategory):
+
+```markdown
+- **<Category>**
+  - **<Subcategory>**
+    - **Books**
+      - [<Book Title>](<category>/<subcategory>/books/<book-slug>/ch01_*.md)
+        - [Ch 1: ...](<category>/<subcategory>/books/<book-slug>/ch01_*.md)
+```
 
 ## Phase 3: Write Summaries
 
@@ -101,6 +146,9 @@ Follow `md-standards` for headings, numbering, TOC, anchors. The H1 (`# Ch N: Ch
 - **Concise bullet points**, not paragraphs. Strip all filler.
 - Lead with **key concept/keyword in bold**, then short dash (`—`) and brief explanation.
 - **Concise ≠ context-free.** Each bullet must carry enough meaning for a reader who hasn't read the book to understand *why* the concept matters. If a bare definition leaves someone thinking "so what?", add the implication or a concrete example.
+- **Definitions must be clear and complete.** When introducing a coined term or named concept, the explanation should actually define it — what it is, what distinguishes it — not just restate the label. "Deep modules — modules with simple interfaces and complex implementations" beats "Deep modules — a key idea Ousterhout emphasizes." Cross-references to terms defined elsewhere *in this same summary* are fine; assume the reader is reading top-to-bottom.
+- **Prefer concrete over abstract.** When the author gives a concrete example, name or reference it; don't reduce a vivid illustration to a generic phrase. A concept paired with one short example beats two abstract restatements.
+- **First-pass test:** before moving on, re-read each bullet. If the explanation could apply to almost any concept ("X is important", "Y matters", "use X carefully"), it isn't a definition — rewrite it to say what the concept actually *is* or *does*.
 - Sub-bullets only when genuinely needed (e.g., listing examples under a concept).
 - Prefer **tables** for comparisons or paired/grouped items.
 - **No opinions, no commentary** — just the book's content distilled.
@@ -120,7 +168,14 @@ Only use blockquote callouts when the **author explicitly labels** something as 
 
 ### 3.5 Calibration
 
-Write the first 1–2 chapters manually (not via agents). Get user feedback on style, density, and tone before batching the rest. This establishes the reference standard for agents.
+Write the first 1–2 chapters manually (not via agents). Before showing them to the user:
+
+1. **Self-audit pass.** Run a single audit on the calibration chapter(s) using the same checks as Phase 4.1 (accuracy against source, no fabrications, terminology preserved, formal callouts only when explicitly labeled) **plus the Phase 3.3 clarity bar** (definitions actually define, no label-only bullets, concrete examples preserved). Fix any issues found.
+2. **Then ask the user** for feedback on style, density, tone, and clarity.
+
+This establishes the reference standard for agents. Catching accuracy and clarity issues before the user reviews keeps their feedback focused on style/tone rather than correctness.
+
+**Autonomous mode**: still write 1–2 chapters manually and run the self-audit pass — they remain the reference for the parallel agents in 3.6 — but skip step 2 and proceed directly to Phase 3.6 once the self-audit is clean.
 
 ### 3.6 Parallelization
 
@@ -185,7 +240,7 @@ Any round with fixes requires another round to confirm. Repeat until **every cha
 
 ## Phase 5: Narrative Summary
 
-Produce a single readable whole-book summary at `docs/<category>/<book-slug>/book_summary.md`. Target: 15–30 minute read (≈3,000–6,000 words). Reader is someone who will not read the book itself and wants the core ideas in one sitting.
+Produce a single readable whole-book summary at `docs/<category>/books/<book-slug>/book_summary.md`. Target: 15–30 minute read (≈3,000–6,000 words). Reader is someone who will not read the book itself and wants the core ideas in one sitting.
 
 ### 5.1 Scope and position
 
@@ -221,17 +276,20 @@ Finalize the book's sidebar block so readers land on the narrative summary by de
 1. **Change the book title link** from `ch01_*.md` to `book_summary.md` — clicking the book name in the sidebar opens the narrative summary.
 2. **Add Book Summary as the FIRST nested entry**, above all chapter links. Any topical summary files (e.g., `summary_design_principles.md`) stay at the bottom of the block.
 
-Final shape:
+Final shape (the book entry lives inside the `**Books**` group established in Phase 2.5; indentation reflects that nesting — the book title sits one level below `**Books**`, chapters two levels below):
 
 ```markdown
-  - [<Book Title>](<category>/<book-slug>/book_summary.md)
-    - [Book Summary](<category>/<book-slug>/book_summary.md)
-    - [Ch 1: ...](<category>/<book-slug>/ch01_*.md)
-    - [Ch 2: ...](<category>/<book-slug>/ch02_*.md)
-    ...
-    - [Ch N: ...](<category>/<book-slug>/chNN_*.md)
-    - [<Topical Summary>](<category>/<book-slug>/summary_*.md)   # if any
+  - **Books**
+    - [<Book Title>](<category>/books/<book-slug>/book_summary.md)
+      - [Book Summary](<category>/books/<book-slug>/book_summary.md)
+      - [Ch 1: ...](<category>/books/<book-slug>/ch01_*.md)
+      - [Ch 2: ...](<category>/books/<book-slug>/ch02_*.md)
+      ...
+      - [Ch N: ...](<category>/books/<book-slug>/chNN_*.md)
+      - [<Topical Summary>](<category>/books/<book-slug>/summary_*.md)   # if any
 ```
+
+If the book lives under a subcategory, the `**Books**` group sits one level deeper (under the subcategory header) and every entry below it is indented an extra two spaces accordingly.
 
 ### 5.5 Authoring
 
@@ -264,8 +322,8 @@ Because this is a single file, parallelization doesn't apply — one audit agent
 
 | What | Where | Git? |
 |------|-------|------|
-| Summaries | `docs/<category>/<book-slug>/chNN_*.md` | Yes |
-| Narrative summary | `docs/<category>/<book-slug>/book_summary.md` | Yes |
+| Summaries | `docs/<category>/books/<book-slug>/chNN_*.md` | Yes |
+| Narrative summary | `docs/<category>/books/<book-slug>/book_summary.md` | Yes |
 | Sidebar | `docs/_sidebar.md` | Yes |
 | Source | `tmp/<book-slug>/` | No |
 | Progress | `tmp/<book-slug>-progress.md` | No |
