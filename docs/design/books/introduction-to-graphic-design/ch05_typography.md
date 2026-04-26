@@ -108,7 +108,7 @@
 ## 9. Typographic Niceties
 
 - **Typographic niceties** — small styling decisions that make text clearer and easier to read. Designers maintain a list of "typographic sins" — unsightly orphans/widows, unhung quotes, rivers, un-kerned quotation marks at paragraph ends.
-- **Hyphenation** — marked syllabic division of words when they don't fit on a line. Acceptable when a syllable has 3+ letters; avoid hyphenating words with 2-letter or "ly"-ending syllables; never have more than two consecutive hyphens; never hyphenate the first two letters of a word.
+- **Hyphenation** — marked syllabic division of words when they don't fit on a line. Acceptable when a syllable has 3+ letters; avoid hyphenating words with 2-letter or "ly"-ending syllables; never have more than two consecutive hyphens.
 - **Hung punctuation** — quotation marks and bullets placed *outside* the text block (rather than within) maintain clean, smooth alignment and look more elegant.
 - **Orphan** — a single word by itself on a line. Avoid unless the word covers at least one-third of the column width; fix using kerning, tracking, or hyphenation to coax it up or pull a word down.
 - **Widow** — a single line at the beginning or end of a column. Avoid by breaking the paragraph differently to keep the widow with company.
@@ -140,8 +140,8 @@
 | **Futura** | Geometric sans | Paul Renner, 1927, Bauer; capitals trace to ancient Greek lettering |
 | **Frutiger** | Sans | Adrian Frutiger, 1970; originally Roissy for Charles de Gaulle Airport signage |
 | **Gill Sans** | Sans | Eric Gill, 1928, Monotype; bundled with Microsoft Office and iOS |
-| **Helvetica** | Sans | Eduard Hoffmann/Max Miedinger, 1957 (originally Neue Haas Grotesk) |
-| **Optima** | Sans | Hermann Zapf, 1950s; Roman-inspired with flared terminals, no true serifs |
+| **Helvetica** | Sans | Eduard Hoffmann (Haas Type Corporation) commissioned Max Miedinger to design it, 1957 (originally Neue Haas Grotesk) |
+| **Optima** | Sans | Herman Zapf, 1950s; Roman-inspired with flared terminals, no true serifs |
 | **Univers** | Sans | Adrian Frutiger, 1954; based on 1898 Akzidenz Grotesk; 44 weights/styles |
 | **Verdana** | Sans | David Berlow & David Jonathan Ross with Matthew Carter, 1996; built for onscreen display |
 

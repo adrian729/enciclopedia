@@ -92,7 +92,7 @@
 - **Dark colors** — hues containing black; dramatic, useful as background tones. Pair dark colors with lighter or more saturated ones; two dark colors of similar value are hard to distinguish.
 - **Bright colors** — pure pigment, no black/white added (also fluorescents). Strong attention-grabbers; limit how many saturated/super-bright colors appear together — supercharged combinations irritate the eye and harm hierarchy. Often paired with black or brown to offset.
 
-> **Color blindness** — inability to see certain colors; affects approximately 8 percent of the population, most often men. **Red-green color blindness** is the most common. Designers should consider whether color-coded references rely on distinctions a colorblind viewer can't make.
+- **Color blindness** — inability to see certain colors; affects approximately 8 percent of the population, most often men. **Red-green color blindness** is the most common. Designers should consider whether color-coded references rely on distinctions a colorblind viewer can't make.
 
 ## 8. Color Theory and Perception
 

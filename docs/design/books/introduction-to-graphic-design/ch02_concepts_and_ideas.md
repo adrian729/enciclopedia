@@ -57,7 +57,7 @@
 
 | Principle | What it does |
 |-----------|--------------|
-| **Connection** | Shows association or linkage; can be **literal** (two things directly linked) or **contradiction** (something doing the opposite of what's expected) |
+| **Connection** | Shows association or linkage; can be **literal** (two items or elements are linked) or **contradictory** (something does the opposite of what one expects). Distortion and exaggeration can also enhance visual connections |
 | **Space / depth** | Activates the 2D plane; iterate by exaggerating, distorting, or highlighting space |
 | **Surprise and play** | Taps the viewer's emotions; most effective combined with narrative; can occur in one area or as a substituted element |
 
