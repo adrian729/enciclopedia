@@ -8,6 +8,7 @@
 - [2. Two System Types](#2-two-system-types)
   - [2.1. Message Queue (Log-Based)](#21-message-queue-log-based)
   - [2.2. Publisher-Subscriber](#22-publisher-subscriber)
+  - [2.3. Inside a Log-Based Broker](#23-inside-a-log-based-broker)
 - [3. Delivery Semantics](#3-delivery-semantics)
 - [4. Custom Queue Shapes](#4-custom-queue-shapes)
 - [5. When a Queue Is the Right Answer](#5-when-a-queue-is-the-right-answer)
@@ -37,6 +38,12 @@ Trade-off: durability is high, but reprocessing 10-minute-old events is often po
 Examples: RabbitMQ, Amazon SQS. Each subscriber gets its own queue; messages are removed on acknowledgment. No retention beyond ack. Fits when events should be consumed once, immediately.
 
 Liu's mental model: log-based for replayable streams; pub-sub for "just deliver this once and remove it."
+
+### 2.3. Inside a Log-Based Broker
+
+A Kafka-style broker survives at scale by leaning on the OS rather than fighting it: an **append-only WAL** on disk (sequential writes can outpace random memory access), **zero-copy** reads via `sendfile(2)` straight from the page cache to the socket, **batching** on both produce and consume to amortize syscalls, and **ISR replication** with a leader and a set of in-sync followers for durability without synchronous writes to every replica. See [Distributed Message Queue](case-studies/distributed-message-queue.md) for the full design — partitioning, leader election, exactly-once at the broker, and the trade-offs.
+
+Note: ch04's broker-style sequencer and the [Stock Exchange](case-studies/stock-exchange.md)'s in-memory mmap sequencer are different primitives at different latency tiers — Kafka serves milliseconds with strong durability, the exchange serves microseconds with hot-warm replication.
 
 ## 3. Delivery Semantics
 
@@ -77,3 +84,4 @@ Queues add operational cost (offsets, dead-letter handling, ordering guarantees,
 - [Liu Ch 5.10: Queues and Messaging](software/system-design-interview/books/system-design-interview-fundamentals/ch05_10_queues_and_messaging.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (message queue section)
 - [Xu Ch 10: Design a Notification System](software/system-design-interview/books/system-design-interview-insiders-guide/ch10_design_a_notification_system.md) (per-channel queue isolation)
+- [Vol 2 Ch 4: Distributed Message Queue](software/system-design-interview/books/system-design-interview-vol2/ch04_distributed_message_queue.md) (broker internals: WAL, zero-copy, ISR)

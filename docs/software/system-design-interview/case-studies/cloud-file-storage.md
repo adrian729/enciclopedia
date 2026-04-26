@@ -1,6 +1,6 @@
 # Cloud File Storage (Google Drive / Dropbox)
 
-> Both books cover this. Xu's Ch 15 is the full design (delta sync, block servers, ACID metadata, long polling). Liu's Ch 6.06 emphasizes **why MySQL** for metadata (cross-row transactions, joins on `parent_folder_id`) and the blob-then-metadata pattern as a 2PC alternative.
+> Both books cover this. Xu's Ch 15 is the full design (delta sync, block servers, ACID metadata, long polling). Liu's Ch 6.06 emphasizes **why MySQL** for metadata (cross-row transactions, joins on `parent_folder_id`) and the blob-then-metadata pattern as a 2PC alternative. Distinct from [Object Storage (S3-like)](case-studies/object-storage.md), which is the immutable-objects-with-versioning problem; this page is about **mutable file sync** with delta-based bandwidth savings.
 
 ## Table of Contents
 

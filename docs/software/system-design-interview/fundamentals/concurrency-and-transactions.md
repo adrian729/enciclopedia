@@ -1,6 +1,6 @@
 # Concurrency & Transactions
 
-> Liu's chapter is the deep reference (single-thread vs micro-batch vs sharded-serial, pessimistic vs optimistic locking, write skew, distributed transactions). Xu doesn't cover concurrency as its own topic but applies the patterns inside specific case studies (rate limiter Lua scripts, news feed counters). Concurrency is one of the strongest interview signals because most candidates avoid it.
+> Liu's chapter is the deep reference (single-thread vs micro-batch vs sharded-serial, pessimistic vs optimistic locking, write skew, distributed transactions). Xu Vol 1 doesn't cover concurrency as its own topic but applies the patterns inside specific case studies (rate limiter Lua scripts, news feed counters). Xu Vol 2 leans on the patterns heavily — TC/C and Saga in [Digital Wallet](case-studies/digital-wallet.md), idempotency keys in [Hotel Reservation](case-studies/hotel-reservation.md) and [Payment System](case-studies/payment-system.md), event sourcing in wallet/payment/[Stock Exchange](case-studies/stock-exchange.md), exactly-once-via-offset in [Ad-Click Aggregation](case-studies/ad-click-aggregation.md). Concurrency is one of the strongest interview signals because most candidates avoid it.
 
 ## Table of Contents
 
@@ -14,7 +14,13 @@
   - [6.2. Blob + Metadata Pattern](#62-blob--metadata-pattern)
   - [6.3. Database + Queue Pattern](#63-database--queue-pattern)
   - [6.4. The Generic Frame](#64-the-generic-frame)
-- [7. Reframing the Product](#7-reframing-the-product)
+  - [6.5. Try-Confirm/Cancel (TC/C)](#65-try-confirmcancel-tcc)
+  - [6.6. Saga](#66-saga)
+  - [6.7. Event Sourcing + CQRS](#67-event-sourcing--cqrs)
+- [7. Idempotency Keys as Primary Keys](#7-idempotency-keys-as-primary-keys)
+- [8. Double-Entry Ledger](#8-double-entry-ledger)
+- [9. Exactly-Once via Offset Transactions](#9-exactly-once-via-offset-transactions)
+- [10. Reframing the Product](#10-reframing-the-product)
 - [Sources](#sources)
 
 ## 1. Why Concurrency Matters in the Interview
@@ -92,7 +98,89 @@ Liu's abstraction for any A/B distributed transaction:
 
 For each option, walk through what happens on partial failure. The right answer is whichever leaves the system in a state cleanup can fix.
 
-## 7. Reframing the Product
+### 6.5. Try-Confirm/Cancel (TC/C)
+
+A 2PC alternative that's database-agnostic — the "undo" lives in application code, not the DB. Two **independent** local transactions per participant: phase 1 *Try* reserves resources, phase 2 *Confirm* finalizes or *Cancel* reverses via business-logic compensation.
+
+For a transfer `A → $1 → C`, the only correct Try-phase choice is `Try: A=-$1, C=NOP`; `Confirm: A=NOP, C=+$1`; `Cancel: A=+$1, C=NOP`. Crediting C in Try risks somebody draining C before Cancel can reclaim the funds; touching both accounts in Try creates concurrency complications.
+
+**Unbalanced state is expected.** At the end of Try, $1 is missing — debited from A, not yet credited to C. TC/C exposes the intermediate state; that's fine as long as the full sequence completes.
+
+A **phase status table** (typically co-located with the debit account's DB) records `(transaction_id, try_status_per_db, second_phase_name, second_phase_status, out_of_order_flag)` so TC/C can resume after a coordinator restart. Out-of-order execution — a Cancel arriving before its Try — is handled by leaving the out-of-order flag; a later-arriving Try checks the flag and fails immediately.
+
+### 6.6. Saga
+
+The de-facto standard for cross-microservice transactions. Order all operations in a linear sequence of independent local transactions; on failure at step `k`, run **compensating transactions** for steps `k-1, k-2, …, 1` to roll back.
+
+Two coordination styles:
+
+- **Choreography** — services subscribe to each other's events; fully decentralized; hard to reason about as the service count grows.
+- **Orchestration** — single coordinator drives the order; preferred for [digital wallet](case-studies/digital-wallet.md) and [payment system](case-studies/payment-system.md).
+
+**TC/C vs Saga:**
+
+| Dimension | TC/C | Saga |
+|---|---|---|
+| Compensating action | In Cancel phase | In rollback phase |
+| Operation execution order | Any | Linear |
+| Parallel execution | Yes | No |
+| Partial inconsistent state visible | Yes | Yes |
+
+Pick Saga if you're following microservice trends or have few services with no strict latency need. Pick TC/C if latency is tight and parallelism wins.
+
+### 6.7. Event Sourcing + CQRS
+
+Persist the immutable sequence of state-changing facts; derive state by replay. Four core terms:
+
+- **Command** — intent from outside ("transfer $1 A→C").
+- **Event** — validated past-tense fact ("transferred $1 A→C").
+- **State** — current materialized view (`account → balance`).
+- **State Machine** — validates Commands → emits Events; applies Events → mutates State. Must be **deterministic** (no random numbers, no external I/O during apply); replay must yield identical State.
+
+**CQRS (Command-Query Responsibility Segregation)** publishes Events, not State. One writer State Machine and many read-only State Machines build different views (current balance, hourly window for double-charge investigation, audit trail) — eventually consistent.
+
+This is the **only** pattern that satisfies *reproducibility*: replay the Event log from start (or from a snapshot) to reconstruct any historical balance, verify correctness after a code change, or test new code by re-running events. State-only stores cannot answer "why is this balance what it is."
+
+The generic mechanism is shared across [Digital Wallet](case-studies/digital-wallet.md), [Payment System](case-studies/payment-system.md), and [Stock Exchange](case-studies/stock-exchange.md); each case study covers its own workload-specific motivation (mmap+Raft for wallet, sequencer + deterministic matching engine for exchange, append-only payment-state log for retry/resume in payments).
+
+## 7. Idempotency Keys as Primary Keys
+
+The universal double-write defense. Client generates a UUID (cart ID, `reservation_id`, message offset) and sends it with the request — typically as `<idempotency-key: key_value>` in an HTTP header (Stripe, PayPal). Server uses the key as the **primary key** of the relevant table; the unique constraint rejects duplicate inserts and the system returns the original status.
+
+Decomposition: **exactly-once = at-least-once (via retry) + at-most-once (via idempotency)**.
+
+Defends against:
+
+- User double-clicks "pay" or "book."
+- Network retry after the server succeeded but the response was lost in transit.
+- Concurrent in-flight requests with the same key — only one is processed; the others receive `429 Too Many Requests`.
+- Crash-redo across reservation, payment, and ad pipelines.
+
+Pick a natural pre-submit identifier when one exists: the **shopping-cart ID** in [Payment System](case-studies/payment-system.md), the **`reservation_id`** in [Hotel Reservation](case-studies/hotel-reservation.md), the **partition offset** in [Ad-Click Aggregation](case-studies/ad-click-aggregation.md). When the third party doesn't offer idempotency, wrap your own — payment systems map a UUID nonce to a PSP token and check the token before re-charging.
+
+## 8. Double-Entry Ledger
+
+Every transfer posts to two accounts with equal magnitude — debit one, credit the other — so the sum across all entries is exactly zero. "One cent lost means someone else gains a cent." End-to-end traceability falls out for free; auditors can reconstruct any account's history by filtering the ledger.
+
+Two practical conventions money math depends on:
+
+- **Amount as string, not double.** Doubles cause precision/serialization rounding errors. Values can be huge (Japan's GDP ≈ 5 × 10¹⁴ yen) or tiny (1 satoshi = 10⁻⁸ BTC). Parse to numeric only at the display/calculation boundary.
+- **Running balance derives from the ledger.** Never modify a balance directly; insert ledger entries and recompute. Combined with [event sourcing](#67-event-sourcing--cqrs), this gives both reproducibility and audit.
+
+Used in [Payment System](case-studies/payment-system.md). Square's engineering blog is the canonical industry reference.
+
+## 9. Exactly-Once via Offset Transactions
+
+The naive recipe — process events, write the offset back to durable storage, ack downstream — has two failure windows:
+
+- **Save offset *before* downstream ack** → crash after the save means the un-acked events are skipped forever.
+- **Save offset *after* downstream ack** → crash before the save means the events get redelivered on restart.
+
+The fix: **wrap the offset commit and the downstream ack in a single distributed transaction**. Either both succeed or both roll back. On partial failure, the consumer restarts from the last committed offset and replays whatever wasn't acked.
+
+This is how [Ad-Click Aggregation](case-studies/ad-click-aggregation.md) gets billing-grade exactly-once semantics on top of Kafka. End-of-day reconciliation against the raw event log catches very late events that watermarks missed.
+
+## 10. Reframing the Product
 
 When concurrency gets hairy, ask whether the product requirement can change. Liu's ridesharing example: instead of fanning a ride request to three drivers and resolving the acceptance race, redesign so the backend auto-assigns one driver. The user gets the same UX — they don't pick the driver in either case — and the technical complexity collapses.
 
@@ -102,3 +190,8 @@ Materializing 30-minute booking blocks (Section 5) is the same move. Concurrency
 
 - [Liu Ch 5.05: Concurrency and Transactions](software/system-design-interview/books/system-design-interview-fundamentals/ch05_05_concurrency_and_transactions.md)
 - [Liu Ch 5.16: Distributed Transaction](software/system-design-interview/books/system-design-interview-fundamentals/ch05_16_distributed_transaction.md)
+- [Vol 2 Ch 6: Aggregate Ad Click Events](software/system-design-interview/books/system-design-interview-vol2/ch06_aggregate_ad_click_events.md) — exactly-once via offset transactions.
+- [Vol 2 Ch 7: Hotel Reservation System](software/system-design-interview/books/system-design-interview-vol2/ch07_hotel_reservation_system.md) — idempotency key as primary key, optimistic locking.
+- [Vol 2 Ch 11: Payment System](software/system-design-interview/books/system-design-interview-vol2/ch11_payment_system.md) — idempotency keys, double-entry ledger, Saga.
+- [Vol 2 Ch 12: Digital Wallet](software/system-design-interview/books/system-design-interview-vol2/ch12_digital_wallet.md) — TC/C, Saga, Event Sourcing + CQRS.
+- [Vol 2 Ch 13: Stock Exchange](software/system-design-interview/books/system-design-interview-vol2/ch13_stock_exchange.md) — Event Sourcing for crash recovery.

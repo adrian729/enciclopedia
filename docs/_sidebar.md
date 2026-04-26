@@ -20,6 +20,7 @@
       - [CDN](software/system-design-interview/fundamentals/cdn.md)
       - [Replication](software/system-design-interview/fundamentals/replication.md)
       - [Sharding & Consistent Hashing](software/system-design-interview/fundamentals/sharding-and-consistent-hashing.md)
+      - [Geospatial Indexing](software/system-design-interview/fundamentals/geospatial-indexing.md)
       - [CAP, Consensus & Conflict Resolution](software/system-design-interview/fundamentals/cap-consensus-and-conflict-resolution.md)
       - [Concurrency & Transactions](software/system-design-interview/fundamentals/concurrency-and-transactions.md)
       - [Real-Time Communication](software/system-design-interview/fundamentals/real-time-communication.md)
@@ -32,19 +33,39 @@
       - [Resilience Patterns](software/system-design-interview/fundamentals/resilience-patterns.md)
       - [Observability, Security, Cold Storage](software/system-design-interview/fundamentals/observability-security-cold-storage.md)
     - **Case Studies**
-      - [Rate Limiter](software/system-design-interview/case-studies/rate-limiter.md)
-      - [URL Shortener](software/system-design-interview/case-studies/url-shortener.md)
-      - [Key-Value Store](software/system-design-interview/case-studies/key-value-store.md)
-      - [Web Crawler](software/system-design-interview/case-studies/web-crawler.md)
-      - [Notification System](software/system-design-interview/case-studies/notification-system.md)
-      - [News Feed](software/system-design-interview/case-studies/news-feed.md)
-      - [Chat System](software/system-design-interview/case-studies/chat-system.md)
-      - [Search Autocomplete](software/system-design-interview/case-studies/search-autocomplete.md)
-      - [YouTube](software/system-design-interview/case-studies/youtube.md)
-      - [Cloud File Storage](software/system-design-interview/case-studies/cloud-file-storage.md)
-      - [Ridesharing](software/system-design-interview/case-studies/ridesharing.md)
-      - [Distributed Counter](software/system-design-interview/case-studies/distributed-counter.md)
-      - [Emoji Broadcasting](software/system-design-interview/case-studies/emoji-broadcasting.md)
+      - **Spatial & Mapping**
+        - [Proximity Service](software/system-design-interview/case-studies/proximity-service.md)
+        - [Nearby Friends](software/system-design-interview/case-studies/nearby-friends.md)
+        - [Google Maps](software/system-design-interview/case-studies/google-maps.md)
+        - [Ridesharing](software/system-design-interview/case-studies/ridesharing.md)
+      - **Storage & Retrieval**
+        - [URL Shortener](software/system-design-interview/case-studies/url-shortener.md)
+        - [Key-Value Store](software/system-design-interview/case-studies/key-value-store.md)
+        - [Cloud File Storage](software/system-design-interview/case-studies/cloud-file-storage.md)
+        - [Object Storage (S3-like)](software/system-design-interview/case-studies/object-storage.md)
+        - [YouTube](software/system-design-interview/case-studies/youtube.md)
+      - **Messaging & Real-Time**
+        - [Distributed Message Queue](software/system-design-interview/case-studies/distributed-message-queue.md)
+        - [Notification System](software/system-design-interview/case-studies/notification-system.md)
+        - [News Feed](software/system-design-interview/case-studies/news-feed.md)
+        - [Chat System](software/system-design-interview/case-studies/chat-system.md)
+        - [Emoji Broadcasting](software/system-design-interview/case-studies/emoji-broadcasting.md)
+        - [Distributed Email](software/system-design-interview/case-studies/distributed-email.md)
+      - **Search & Crawling**
+        - [Web Crawler](software/system-design-interview/case-studies/web-crawler.md)
+        - [Search Autocomplete](software/system-design-interview/case-studies/search-autocomplete.md)
+      - **Analytics & Monitoring**
+        - [Metrics Monitoring](software/system-design-interview/case-studies/metrics-monitoring.md)
+        - [Ad-Click Aggregation](software/system-design-interview/case-studies/ad-click-aggregation.md)
+        - [Distributed Counter](software/system-design-interview/case-studies/distributed-counter.md)
+      - **Transactions & Financial**
+        - [Hotel Reservation](software/system-design-interview/case-studies/hotel-reservation.md)
+        - [Payment System](software/system-design-interview/case-studies/payment-system.md)
+        - [Digital Wallet](software/system-design-interview/case-studies/digital-wallet.md)
+        - [Stock Exchange](software/system-design-interview/case-studies/stock-exchange.md)
+      - **Real-Time Ranking & Throttling**
+        - [Rate Limiter](software/system-design-interview/case-studies/rate-limiter.md)
+        - [Gaming Leaderboard](software/system-design-interview/case-studies/gaming-leaderboard.md)
     - [Cheat Sheet](software/system-design-interview/cheat-sheet.md)
     - **Books**
       - [System Design Interview – An Insider's Guide: Volume 2](software/system-design-interview/books/system-design-interview-vol2/book_summary.md)
@@ -391,6 +412,16 @@
 
 - **Mathematics**
   - [Category Theory](mathematics/category_theory.md)
+  - **Books**
+    - [Time Series Analysis and Its Applications](mathematics/books/time-series-analysis/book_summary.md)
+      - [Book Summary](mathematics/books/time-series-analysis/book_summary.md)
+      - [Ch 1: Characteristics of Time Series](mathematics/books/time-series-analysis/ch01_characteristics_of_time_series.md)
+      - [Ch 2: Time Series Regression and Exploratory Data Analysis](mathematics/books/time-series-analysis/ch02_regression_and_exploratory_analysis.md)
+      - [Ch 3: ARIMA Models](mathematics/books/time-series-analysis/ch03_arima_models.md)
+      - [Ch 4: Spectral Analysis and Filtering](mathematics/books/time-series-analysis/ch04_spectral_analysis_and_filtering.md)
+      - [Ch 5: Additional Time Domain Topics](mathematics/books/time-series-analysis/ch05_additional_time_domain_topics.md)
+      - [Ch 6: State Space Models](mathematics/books/time-series-analysis/ch06_state_space_models.md)
+      - [Ch 7: Statistical Methods in the Frequency Domain](mathematics/books/time-series-analysis/ch07_frequency_domain_methods.md)
 
 - **Tools**
   - [NVim](tools/nvim.md)
