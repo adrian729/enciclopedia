@@ -1,6 +1,6 @@
 ---
 name: cooking-book-summary
-description: Use INSTEAD of book-summary for cookbooks, cooking books, recipes, recipe books, baking, pastry, culinary, food, kitchen, gastronomy.
+description: Use INSTEAD of book-summary for cookbooks, cooking books, recipes, recipe books, baking, pastry, culinary, food, kitchen, gastronomy. Also load whenever editing any file under docs/cooking/ for any reason (formatting, audits, fixes, sidebar updates, refactors), not only when summarizing a new book.
 ---
 
 # Cooking Book Summary Skill
@@ -8,6 +8,15 @@ description: Use INSTEAD of book-summary for cookbooks, cooking books, recipes, 
 Turn a cookbook into a deterministic set of recipe, category, trait, and book pages in the Docsify knowledge base. The output is faithful to the source, navigable in every direction, and identical across runs.
 
 If you are summarizing a standard chapter-based book, use `book-summary` instead.
+
+## Scope
+
+This skill governs ALL edits to `docs/cooking/**`, not only initial cookbook summarization. Any task that creates, modifies, formats, audits, or reorganizes a file under `docs/cooking/` MUST follow the page templates, anti-drift rules, and audit checks in this skill.
+
+- The **page templates**, **anti-drift rules**, and **Phase 5 audit checks** apply to every edit, even one-off fixes (typo corrections, link fixes, lexicon updates, formatting passes).
+- The **Phase 1–4 and Phase 6 pipeline** applies only to fresh cookbook summarization runs. For maintenance tasks, skip the pipeline and apply the relevant rules directly.
+
+**Authority over conflicting skills:** Inside `docs/cooking/**`, this skill wins. If `md-standards`, `docsify`, or any future generic skill would apply rules that contradict the templates or anti-drift rules here (e.g., adding `## Table of Contents`, renumbering `## Ingredients` to `## 1. Ingredients`, restructuring the sidebar), follow this skill and ignore the conflicting rule. Outside `docs/cooking/**`, those skills apply normally.
 
 ## Prerequisites
 
