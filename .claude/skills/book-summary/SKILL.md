@@ -7,6 +7,8 @@ description: End-to-end process for summarizing a book into the Docsify knowledg
 
 Turn a book into concise, verified summaries in the Docsify knowledge base.
 
+If the source is a cookbook (recipe-organized rather than chapter-organized), use the `cooking-book-summary` skill instead.
+
 ## Prerequisites
 
 Load `docsify` and `md-standards` skills before starting. Follow them throughout.
