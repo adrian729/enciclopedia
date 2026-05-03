@@ -1,6 +1,6 @@
 # Artichoke Salad
 
-> Total: 15 mins · Yield: 2 servings as a main or 4 as a side · Cost: under $10
+> Total: 15 mins · Yield: 2 as a main, 4 as a side · Cost: under $10
 
 ## Ingredients
 

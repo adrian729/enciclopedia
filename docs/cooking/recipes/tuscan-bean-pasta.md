@@ -11,7 +11,7 @@
 | 1 | yellow onion, chopped |
 | 4 cloves | garlic, minced or pressed |
 | ¼ cup | all-purpose flour (gluten-free if preferred) |
-| 2 ½ cups | plant-based milk, such as soy or oat |
+| 2½ cups | plant-based milk, such as soy or oat |
 | 2 teaspoons | Italian Seasoning ([recipe](cooking/recipes/italian-seasoning.md) or store-bought) |
 | 1 teaspoon | salt |
 | ½ teaspoon | black pepper |

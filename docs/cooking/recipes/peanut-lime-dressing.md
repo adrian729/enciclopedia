@@ -28,6 +28,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [No Cook](cooking/traits/no-cook.md)
 
 ## Books

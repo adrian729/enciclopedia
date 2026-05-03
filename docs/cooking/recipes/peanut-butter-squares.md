@@ -1,6 +1,6 @@
 # Peanut Butter Squares
 
-> Total: 30 mins · Yield: about 10 2-inch squares · Cost: under $5
+> Total: 30 mins · Yield: about 10 two-inch squares · Cost: under $5
 
 ## Ingredients
 
@@ -31,6 +31,7 @@
 ## Traits
 
 - [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 - [Microwave](cooking/traits/microwave.md)

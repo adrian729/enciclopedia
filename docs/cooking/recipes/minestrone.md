@@ -36,7 +36,10 @@
 
 ## Traits
 
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
+- [One Pot](cooking/traits/one-pot.md)
 
 ## Books
 

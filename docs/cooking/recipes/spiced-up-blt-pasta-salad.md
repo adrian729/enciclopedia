@@ -6,9 +6,9 @@
 
 | Quantity | Ingredient |
 |---|---|
-| 3 ½ cups | short pasta, such as farfalle, shells, macaroni, or orecchiette (gluten-free if preferred) |
+| 3½ cups | short pasta, such as farfalle, shells, macaroni, or orecchiette (gluten-free if preferred) |
 | 2 tablespoons | vegan butter |
-| 3 slices | bread, cut into small cubes (about 2 ½ cups, gluten-free if preferred) |
+| 3 slices | bread, cut into small cubes (about 2½ cups, gluten-free if preferred) |
 | 1 tablespoon | [Cajun Seasoning](cooking/recipes/cajun-seasoning.md) (or store-bought, see Quick Tip) |
 | 2 | large tomatoes, cut into wedges |
 | 1 head | romaine lettuce, chopped |

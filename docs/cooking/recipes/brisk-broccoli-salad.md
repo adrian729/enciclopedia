@@ -1,6 +1,6 @@
 # Brisk Broccoli Salad
 
-> Total: 15 mins · Yield: 6 servings as a side · Cost: under $7
+> Total: 15 mins · Yield: 6 as a side · Cost: under $7
 
 ## Ingredients
 
@@ -22,7 +22,7 @@
 
 ## Notes
 
-- Storage: cover and store in the fridge for up to 2 days.
+- Make ahead: Cover and store the salad in the fridge for up to 2 days.
 
 ## Categories
 

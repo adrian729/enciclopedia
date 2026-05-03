@@ -10,7 +10,7 @@
 | 1½ teaspoons | cinnamon |
 | 2 | bananas, sliced into quarters |
 | 2 tablespoons | vegan butter |
-| Scoop | [Ice Cream](cooking/recipes/ice-cream.md) (optional) |
+| Scoop of | [Lickety-Split Ice Cream](cooking/recipes/ice-cream.md) (optional) |
 
 ## Preparation
 

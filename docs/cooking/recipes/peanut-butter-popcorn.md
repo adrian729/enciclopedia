@@ -22,6 +22,11 @@
 
 - [Snack](cooking/categories/snack.md)
 
+## Traits
+
+- [Fast](cooking/traits/fast.md)
+- [Microwave](cooking/traits/microwave.md)
+
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)

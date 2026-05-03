@@ -62,6 +62,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 - [Pantry](cooking/traits/pantry.md)
 

@@ -69,6 +69,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Pantry](cooking/traits/pantry.md)
 
 ## Books

@@ -1,4 +1,4 @@
-# Instant Ramen Soup
+# Ramen Soup
 
 > Total: 15 mins · Yield: 1 serving per jar · Cost: $1–$5 per jar
 
@@ -66,6 +66,8 @@
 
 ## Traits
 
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books

@@ -18,11 +18,7 @@
 
 ## Preparation
 
-1. In a small bowl, whisk together the hummus, lemon juice, nutritional yeast, capers, caper brine, mustard, garlic, and pepper until combined and creamy. Add water, as needed, to thin the dressing to the desired consistency.
-
-## Notes
-
-- Storage: store in an airtight container in the fridge for up to 5 days.
+1. In a small bowl, whisk together the hummus, lemon juice, nutritional yeast, capers, caper brine, mustard, garlic, and pepper until combined and creamy. Add water, as needed, to thin the dressing to the desired consistency. Store in an airtight container in the fridge for up to 5 days.
 
 ## Categories
 

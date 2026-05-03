@@ -19,10 +19,6 @@
 2. Butter one side of each slice of bread.
 3. Heat a skillet or pan over medium heat and place one of the slices of bread, butter side down, in the hot pan. Spread the berry mixture over the bread and top with the nuts, chocolate chips, and remaining slice of bread, butter side up. Cook for about 3 minutes, until the bottom is browned, then carefully turn over and cook the other side until the chocolate has melted and the bread is browned. Serve hot.
 
-## Notes
-
-- A play on "easy as pie": this is a berry-and-chocolate grilled bread sandwich, not a literal pie.
-
 ## Categories
 
 - [Dessert](cooking/categories/dessert.md)
@@ -30,6 +26,7 @@
 ## Traits
 
 - [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [No Bake](cooking/traits/no-bake.md)
 
 ## Books

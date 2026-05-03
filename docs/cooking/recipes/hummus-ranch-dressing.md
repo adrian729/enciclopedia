@@ -17,11 +17,7 @@
 
 ## Preparation
 
-1. In a small bowl, whisk together the hummus, vinegar, dried parsley, dried chives, onion powder, dried dill, and garlic powder until combined. Add the water, as needed, to thin to a dressing consistency.
-
-## Notes
-
-- Storage: keeps fresh for up to 5 days when stored in the fridge in an airtight container.
+1. In a small bowl, whisk together the hummus, vinegar, dried parsley, dried chives, onion powder, dried dill, and garlic powder until combined. Add the water, as needed, to thin to a dressing consistency. The dressing will keep fresh for up to 5 days when stored in the fridge in an airtight container.
 
 ## Categories
 

@@ -34,6 +34,8 @@
 
 ## Traits
 
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 

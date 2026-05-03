@@ -27,7 +27,7 @@
 ## Notes
 
 - Quick tip: for a different spin, try subbing brown rice, quinoa, or couscous for the white rice.
-- Quick tip: if you have leftover dressing, it's perfect for dressing a quick salad or using in a [Guzinta Bowl Guide](cooking/recipes/guzinta-bowl-guide.md).
+- Quick tip: if you have leftover dressing, it's perfect for dressing a quick salad or using in a [Guzinta Bowl](cooking/recipes/guzinta-bowl-guide.md).
 - Make ahead: bowls can be assembled up to 4 days in advance and kept in the fridge. Store the dressing in a separate container in the fridge for up to 1 week, and then drizzle over the bowls when ready to enjoy.
 
 ## Categories

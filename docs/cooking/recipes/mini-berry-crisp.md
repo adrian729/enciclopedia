@@ -28,6 +28,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Microwave](cooking/traits/microwave.md)
 - [No Bake](cooking/traits/no-bake.md)
 

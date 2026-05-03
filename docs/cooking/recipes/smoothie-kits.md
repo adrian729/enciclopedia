@@ -4,34 +4,25 @@
 
 ## Ingredients
 
-### Fresh or Frozen Fruit (1 Cup, Choose 1 or a Combo)
-
 | Quantity | Ingredient |
 |---|---|
-| — | Blueberries |
-| — | Strawberries |
-| — | Mixed berries |
-| — | Cherries |
-| — | Peaches |
-| — | Pineapple |
-| — | Kiwi |
-| — | Apple |
-| — | Banana |
-
-### Add Some Creaminess (Choose 1)
-
-| Quantity | Ingredient |
-|---|---|
+| | **Fresh or Frozen Fruit (1 Cup, Choose 1 or a Combo)** |
+| | Blueberries |
+| | Strawberries |
+| | Mixed berries |
+| | Cherries |
+| | Peaches |
+| | Pineapple |
+| | Kiwi |
+| | Apple |
+| | Banana |
+| | **Add Some Creaminess (Choose 1)** |
 | 1 | fresh or frozen banana |
 | ½ cup | fresh or frozen mangoes |
 | ½ cup | chopped fresh or frozen avocados |
 | ½ cup | silken tofu |
 | ¼ cup | whole rolled or quick oats (gluten-free if preferred) |
-
-### Amp It Up (Choose 1–3, Optional)
-
-| Quantity | Ingredient |
-|---|---|
+| | **Amp It Up (Choose 1–3, Optional)** |
 | 1 handful | fresh or frozen spinach |
 | 1 handful | fresh or frozen kale leaves or stems |
 | 1 tablespoon | peanut butter or other nut butter |
@@ -43,17 +34,13 @@
 | ¼ teaspoon | [Pumpkin Pie Spice](cooking/recipes/pumpkin-pie-spice.md) (or store-bought) |
 | 2–4 | dates (for sweetness) |
 | ¼ cup | raisins (for sweetness) |
-
-### Liquid (1–2 Cups, Choose 1)
-
-| Quantity | Ingredient |
-|---|---|
-| — | Plant-based milk, such as soy or oat |
-| — | Water |
-| — | Fruit juice |
-| — | Cooled coffee |
-| — | Cooled herbal tea |
-| — | Coconut water |
+| | **Liquid (1–2 Cups, Choose 1)** |
+| | Plant-based milk, such as soy or oat |
+| | Water |
+| | Fruit juice |
+| | Cooled coffee |
+| | Cooled herbal tea |
+| | Coconut water |
 
 ## Preparation
 

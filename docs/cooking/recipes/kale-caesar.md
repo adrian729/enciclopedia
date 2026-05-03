@@ -20,11 +20,16 @@
 
 ## Notes
 
-- Sub the Tacos & More Seasoning for equal amounts of [Italian Seasoning](cooking/recipes/italian-seasoning.md) or [Cajun Seasoning](cooking/recipes/cajun-seasoning.md) for other crouton flavor options.
+- Quick tip: You can sub the [Tacos & More Seasoning](cooking/recipes/tacos-more-seasoning.md) for equal amounts of [Italian Seasoning](cooking/recipes/italian-seasoning.md) or [Cajun Seasoning](cooking/recipes/cajun-seasoning.md) for other crouton flavor options.
 
 ## Categories
 
 - [Salad](cooking/categories/salad.md)
+
+## Traits
+
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 
 ## Books
 

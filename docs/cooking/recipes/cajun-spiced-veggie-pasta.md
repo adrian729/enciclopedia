@@ -14,7 +14,7 @@
 | 1 | red onion, thickly sliced |
 | 2 cloves | garlic, minced or pressed |
 | 1 cup | halved grape tomatoes |
-| 1 tablespoon | Cajun Seasoning ([recipe](cooking/recipes/cajun-seasoning.md) or store-bought) |
+| 1 tablespoon | [Cajun Seasoning](cooking/recipes/cajun-seasoning.md) (this page or store-bought) |
 | ¼–½ cup | reserved pasta water |
 
 ## Preparation

@@ -70,7 +70,7 @@
 | 1 tablespoon | sliced green onions or chives |
 | 1 tablespoon | sliced olives |
 | 2 teaspoons | capers |
-| ¼–½ teaspoon | spice mix of choice <!-- TODO: ambiguous spice-mix link --> |
+| ¼–½ teaspoon | Spice Mix of choice |
 | ¼–½ teaspoon | cinnamon |
 | — | Salt and black pepper |
 

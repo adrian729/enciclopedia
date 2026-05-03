@@ -21,6 +21,10 @@
 4. Optionally, you can brush the top of each turnover with a bit of plant-based milk and then sprinkle sugar over top. This will make the turnover extra golden and sparkly.
 5. Bake for 12–15 minutes, until the pastry is puffed up and golden. Let cool on the pan for 10 minutes before serving.
 
+## Notes
+
+- Make ahead: leftover turnovers will still be great when stored at room temperature for up to 2 days.
+
 ## Categories
 
 - [Dessert](cooking/categories/dessert.md)

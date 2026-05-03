@@ -1,10 +1,10 @@
 # Hot Chocolate Mix
 
-> Total: 5 mins · Yield: 2 cups mix (5 servings) · Cost: under $3
+> Total: 5 mins · Yield: 2 cups mix, 5 servings · Cost: under $3
 
 ## Ingredients
 
-### For the mix
+### For the Hot Chocolate Mix
 
 | Quantity | Ingredient |
 |---|---|
@@ -18,7 +18,7 @@
 |---|---|
 | 3 tablespoons | Hot Chocolate Mix |
 | 1 cup | plant-based milk, such as soy or oat |
-| A dollop | of coconut cream (optional, for serving) |
+| A dollop of | coconut cream (optional, for serving) |
 
 ## Preparation
 

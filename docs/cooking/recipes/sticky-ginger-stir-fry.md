@@ -7,11 +7,7 @@
 | Quantity | Ingredient |
 |---|---|
 | 2 cups | white rice, preferred grain, or noodles |
-
-### For the Sticky Ginger Sauce
-
-| Quantity | Ingredient |
-|---|---|
+| | **For the Sticky Ginger Sauce** |
 | 1 cup | water |
 | 6 tablespoons | soy sauce (gluten-free if preferred) |
 | ¼ cup | brown sugar |
@@ -20,13 +16,9 @@
 | 4 | green onions, chopped (set aside some for garnish) |
 | 3-inch piece | fresh ginger, minced (3 tablespoons) |
 | 4 cloves | garlic, minced or pressed |
-
-### For the Veggie Stir-Fry
-
-| Quantity | Ingredient |
-|---|---|
+| | **For the Veggie Stir-Fry** |
 | 2 tablespoons | light oil, such as canola or peanut, plus more if needed |
-| 1 | head broccoli (12 ounces), cut into florets (about 4 cups) |
+| 1 head | broccoli (12 ounces), cut into florets (about 4 cups) |
 | 8 ounces | cremini or button mushrooms, quartered |
 | 2 teaspoons | sesame seeds, for garnish |
 
@@ -39,6 +31,10 @@
 ## Categories
 
 - [Main](cooking/categories/main.md)
+
+## Traits
+
+- [Fast](cooking/traits/fast.md)
 
 ## Books
 

@@ -287,6 +287,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [No Bake](cooking/traits/no-bake.md)
 
 ## Books

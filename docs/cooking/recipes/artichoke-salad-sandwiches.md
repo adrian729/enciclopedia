@@ -29,7 +29,7 @@
 
 ## Notes
 
-- Make ahead: you can prepare the filling (step 1) ahead of time and store in an airtight container in the fridge for 3–4 days, making this a great take-to-work lunch.
+- Make ahead: You can prepare the filling (step 1) ahead of time and store in an airtight container in the fridge for 3–4 days, making this a great take-to-work lunch.
 
 ## Categories
 

@@ -7,11 +7,7 @@
 | Quantity | Ingredient |
 |---|---|
 | 2 cups | white rice or preferred grain (gluten-free if preferred) |
-
-### For the Sauce
-
-| Quantity | Ingredient |
-|---|---|
+| | **For the Sauce** |
 | 2 cups | water |
 | ¼ cup | soy sauce (gluten-free if preferred) |
 | 2–3 tablespoons | brown sugar |
@@ -19,11 +15,7 @@
 | 1-inch piece | fresh ginger, minced |
 | 1 teaspoon | sesame oil |
 | ½ teaspoon | crushed red pepper flakes |
-
-### For the Lentils
-
-| Quantity | Ingredient |
-|---|---|
+| | **For the Lentils** |
 | 1 tablespoon | light oil, such as canola or vegetable |
 | ½ | yellow onion, chopped |
 | 1 cup | red lentils |
@@ -47,6 +39,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 

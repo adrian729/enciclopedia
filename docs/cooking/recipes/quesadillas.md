@@ -28,6 +28,10 @@
 
 - [Sandwich](cooking/categories/sandwich.md)
 
+## Traits
+
+- [Fast](cooking/traits/fast.md)
+
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)

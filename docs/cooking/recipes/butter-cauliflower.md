@@ -38,7 +38,7 @@
 
 ## Notes
 
-- Make ahead: allow the rice and butter cauliflower to cool completely, then store in separate containers in the fridge for up to 3 days.
+- Make ahead: Allow the rice and butter cauliflower to cool completely, then store in separate containers in the fridge for up to 3 days.
 
 ## Categories
 

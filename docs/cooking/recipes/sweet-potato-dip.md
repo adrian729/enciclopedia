@@ -10,7 +10,7 @@
 | 1 can (19 ounces) | white beans, such as kidney or navy, drained and rinsed (about 2 cups) |
 | 3–6 tablespoons | full-fat coconut milk |
 | 3 tablespoons | lime juice (about 1½ limes) |
-| 1 | clove garlic |
+| 1 clove | garlic |
 | 1 teaspoon | salt |
 | ½ teaspoon | black pepper |
 | — | Lime zest and olive oil, for garnish (optional) |
@@ -32,6 +32,8 @@
 
 ## Traits
 
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 - [Microwave](cooking/traits/microwave.md)
 

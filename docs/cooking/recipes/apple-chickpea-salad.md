@@ -1,6 +1,6 @@
 # Apple Chickpea Salad
 
-> Total: 15 mins · Yield: 2 servings as a main or 4 as a side · Cost: under $7
+> Total: 15 mins · Yield: 2 as a main, 4 as a side · Cost: under $7
 
 ## Ingredients
 
@@ -19,7 +19,7 @@
 
 ## Notes
 
-- Storage: stores well covered in the fridge for 4–5 days.
+- Make ahead: This salad will store well covered in the fridge for 4–5 days.
 
 ## Categories
 

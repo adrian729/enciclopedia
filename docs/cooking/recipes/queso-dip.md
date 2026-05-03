@@ -4,20 +4,15 @@
 
 ## Ingredients
 
-### For the Queso Dip
-
 | Quantity | Ingredient |
 |---|---|
+| | **For the Queso Dip** |
 | ½ cup | raw cashews |
 | 1 cup | red salsa (mild, medium, or spicy) |
 | 3 tablespoons | nutritional yeast |
 | ¼ teaspoon | turmeric |
 | 1–4 tablespoons | water |
-
-### For the Toppings
-
-| Quantity | Ingredient |
-|---|---|
+| | **For the Toppings** |
 | ½ cup | black beans, drained and rinsed, divided |
 | ½ cup | corn kernels (thawed if frozen), divided |
 | 2 tablespoons | roughly chopped fresh cilantro |
@@ -31,17 +26,13 @@
 3. You can serve the queso dip hot or cold. If you want to heat it (my personal preference), pour it into a heatproof bowl and microwave on high for 2–3 minutes, or heat in a small pot on the stove until warm.
 4. Stir ¼ cup black beans and ¼ cup corn into the dip, then use the remaining black beans and corn to garnish the top, along with the cilantro and jalapeño, if using. Serve with tortilla chips.
 
-## Notes
-
-- Make ahead: You can make the queso ahead of time (steps 1–2) and store in an airtight container in the fridge for up to 3 days. When ready to serve, heat if desired, and add toppings.
-
 ## Categories
 
 - [Sauce](cooking/categories/sauce.md)
 
 ## Traits
 
-- [Make Ahead](cooking/traits/make-ahead.md)
+- [Fast](cooking/traits/fast.md)
 
 ## Books
 

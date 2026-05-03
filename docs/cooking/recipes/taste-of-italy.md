@@ -14,7 +14,7 @@
 | 3 cloves | garlic, minced or pressed |
 | ½ teaspoon | crushed red pepper flakes (optional) |
 | ½ cup | pasta water |
-| 1 can (13 ounces) | tomato paste (about 1 ½ cups) |
+| 1 can (13 ounces) | tomato paste (about 1½ cups) |
 | ¾ teaspoon | salt |
 
 ## Preparation

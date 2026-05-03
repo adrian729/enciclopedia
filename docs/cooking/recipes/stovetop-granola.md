@@ -1,6 +1,6 @@
 # Stovetop Granola
 
-> Total: 10 mins · Yield: about 4 cups · Cost: $3–$7
+> Total: 10 mins · Yield: about 4 cups granola, 8 servings · Cost: $3–$7
 
 ## Ingredients
 
@@ -8,7 +8,7 @@
 |---|---|
 | 2 tablespoons | vegan butter or coconut oil |
 | 2 cups | whole rolled oats (gluten-free if preferred) |
-| ½ cup | sunflower seeds, pepitas, raw peanuts, flax seeds, sesame seeds, shredded coconut, poppy seeds, chopped almonds, or any other nut or seed, or a combination |
+| ½ cup | sunflower seeds, pepitas, raw peanuts, flax seeds, sesame seeds, shredded coconut, poppy seeds, chopped almonds, or any other nut or seed you like, or a combination |
 | ¼ cup | corn syrup, agave, or maple syrup |
 | ½ teaspoon | cinnamon or [Pumpkin Pie Spice](cooking/recipes/pumpkin-pie-spice.md) (or store-bought, optional) |
 | ¼ teaspoon | salt |
@@ -21,7 +21,7 @@
 
 ## Notes
 
-- Make ahead: store in an airtight container in the pantry for up to 6 months.
+- Make ahead: This is the perfect recipe to make ahead of time and store in an airtight jar.
 
 ## Categories
 
@@ -29,8 +29,10 @@
 
 ## Traits
 
+- [Cheap](cooking/traits/cheap.md)
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
-- [Pantry](cooking/traits/pantry.md)
 
 ## Books
 

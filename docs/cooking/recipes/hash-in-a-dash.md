@@ -27,7 +27,7 @@
 
 ## Preparation
 
-1. In a large lidded skillet or non-stick frying pan, heat the oil over medium-high heat. When hot, add the potatoes and onions and sauté for about 5 minutes, until they begin to brown. The potatoes may stick to the pan a bit; let them cook, and as they brown they should release with a gentle push. Add the salsa and ¼ cup water, then cover. Continue to cook for about 5 minutes, until the potatoes are fork-tender. Add up to ¼ cup more water if the potatoes start to dry out too much.
+1. In a large lidded skillet or non-stick frying pan, heat the oil over medium-high heat. When hot, add the potatoes and onions and sauté for about 5 minutes, until they begin to brown. The potatoes may stick to the pan a bit, so just let them cook, and as they brown they should easily release from the pan with a gentle push. Add the salsa and ¼ cup water, then cover. Continue to cook for about 5 minutes, until the potatoes are fork-tender. You may need to add up to ¼ cup more water if the potatoes start to dry out too much.
 2. Add the beans and heat through, another 3–5 minutes. Add salt to taste (this will vary depending on the salsa used). Remove from the heat.
 3. In a small bowl, mash the avocados with the lime juice and salt.
 4. Serve the hash with a large dollop of the mashed avocados and garnish with cilantro.

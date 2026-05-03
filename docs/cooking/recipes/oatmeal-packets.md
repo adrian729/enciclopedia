@@ -1,4 +1,4 @@
-# Instant Oatmeal Packets
+# Oatmeal Packets
 
 > Total: 10 mins · Yield: 1 serving · Cost: under $1
 
@@ -10,7 +10,7 @@
 |---|---|
 | ⅓ cup | quick oats (gluten-free if preferred, see Quick Tip) |
 | 1–3 teaspoons | brown sugar or white sugar (optional) |
-| Pinch | of salt |
+| Pinch | salt |
 
 ### Add-Ins (Choose 1–4)
 
@@ -47,6 +47,8 @@
 
 ## Traits
 
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 - [Pantry](cooking/traits/pantry.md)
 

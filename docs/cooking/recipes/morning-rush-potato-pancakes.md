@@ -1,6 +1,6 @@
 # Morning Rush Potato Pancakes
 
-> Total: 25 mins · Yield: about 10 pancakes · Cost: under $5
+> Total: 25 mins · Yield: about 10 pancakes, 4 servings · Cost: under $5
 
 ## Ingredients
 
@@ -32,6 +32,7 @@
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books

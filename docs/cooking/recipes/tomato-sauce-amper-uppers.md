@@ -7,7 +7,7 @@
 | Quantity | Ingredient |
 |---|---|
 | 1 jar (20 ounces) | store-bought tomato sauce |
-| as desired | cooked pasta of choice (gluten-free if preferred) |
+| — | cooked pasta of choice (gluten-free if preferred) |
 
 ### Before the Sauce
 

@@ -22,17 +22,13 @@
 2. Add the celery, onions, mayonnaise, jalapeños (if using), paprika, and salt and stir to combine.
 3. Make the sandwiches by dividing the filling evenly among four slices of bread. Top with lettuce and the remaining slices of bread and enjoy!
 
-## Notes
-
-- Make ahead: you can prepare the filling (steps 1–2) ahead of time and store in an airtight container in the fridge for 3–4 days. Assemble sandwiches when ready to enjoy or pack a lunch for the day.
-
 ## Categories
 
 - [Sandwich](cooking/categories/sandwich.md)
 
 ## Traits
 
-- [Make Ahead](cooking/traits/make-ahead.md)
+- [Fast](cooking/traits/fast.md)
 
 ## Books
 
