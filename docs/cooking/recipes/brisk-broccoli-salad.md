@@ -1,0 +1,37 @@
+# Brisk Broccoli Salad
+
+> Total: 15 mins · Yield: 6 servings as a side · Cost: under $7
+
+## Ingredients
+
+| Quantity | Ingredient |
+|---|---|
+| ½ cup | vegan mayonnaise |
+| 2 tablespoons | apple cider vinegar |
+| 2 cloves | garlic, minced or pressed |
+| ¼ teaspoon | black pepper |
+| 1 large head | broccoli (12 ounces), chopped into bite-size pieces (about 4 cups) |
+| ½ cup | chopped red onions |
+| ½ cup | dried cranberries |
+| ½ cup | roasted salted sunflower seeds |
+
+## Preparation
+
+1. In a large bowl, mix the mayonnaise, vinegar, garlic, and pepper to combine.
+2. Add the broccoli, onions, dried cranberries, and sunflower seeds to the mayonnaise dressing. Toss well until everything is evenly coated with the dressing. Enjoy fresh or store for later.
+
+## Notes
+
+- Storage: cover and store in the fridge for up to 2 days.
+
+## Categories
+
+- [Salad](cooking/categories/salad.md)
+
+## Traits
+
+- [Make Ahead](cooking/traits/make-ahead.md)
+
+## Books
+
+- [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)

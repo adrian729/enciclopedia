@@ -1,0 +1,20 @@
+# Mix
+
+Back to [Categories](cooking/categories/README.md)
+
+- [Biscuit Mix](cooking/recipes/biscuit-mix.md)
+- [Cajun Seasoning](cooking/recipes/cajun-seasoning.md)
+- [Devil's Food Cake Mix](cooking/recipes/devils-food-cake-mix.md)
+- [Greek Seasoning](cooking/recipes/greek-seasoning.md)
+- [Hot Chocolate Mix](cooking/recipes/hot-chocolate-mix.md)
+- [Italian Seasoning](cooking/recipes/italian-seasoning.md)
+- [Mac & Cheese Powder](cooking/recipes/mac-cheese-powder.md)
+- [Muffin Mix](cooking/recipes/muffin-mix.md)
+- [Mushroom Gravy Mix](cooking/recipes/mushroom-gravy-mix.md)
+- [New Bay Seasoning](cooking/recipes/new-bay-seasoning.md)
+- [Pancake & Waffle Mix](cooking/recipes/pancake-waffle-mix.md)
+- [Pumpkin Pie Spice](cooking/recipes/pumpkin-pie-spice.md)
+- [Tacos & More Seasoning](cooking/recipes/tacos-more-seasoning.md)
+- [Tofu Scramble Seasoning](cooking/recipes/tofu-scramble-seasoning.md)
+- [Veggie Broth Powder](cooking/recipes/veggie-broth-powder.md)
+- [Yellow Cake Mix](cooking/recipes/yellow-cake-mix.md)

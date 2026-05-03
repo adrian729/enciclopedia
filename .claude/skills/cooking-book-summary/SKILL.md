@@ -153,20 +153,40 @@ Every list that is supposed to be alphabetical uses this sort key:
 
 Lists this applies to: recipes index, categories index, traits index, books index, recipe links inside any category/trait/book page, and the `## Categories`, `## Traits`, `## Books` sections of every recipe page.
 
+### Link path convention
+
+All Markdown links inside `docs/cooking/**` MUST be **absolute from the docs root**, i.e. start with `cooking/...`. This project uses Docsify with the default `relativePath: false`, which resolves every link as if it were rooted at `docs/`. Relative paths like `apple-chickpea-salad.md`, `../recipes/foo.md`, `README.md`, or `../README.md` resolve to wrong URLs (e.g. `/#/apple-chickpea-salad` instead of `/#/cooking/recipes/apple-chickpea-salad`) and break every recipe link.
+
+Required form for every link target under `docs/cooking/**`:
+
+| From → To | Correct link |
+|---|---|
+| any cooking page → cooking landing | `cooking/README.md` |
+| any cooking page → recipes index | `cooking/recipes/README.md` |
+| any cooking page → categories index | `cooking/categories/README.md` |
+| any cooking page → traits index | `cooking/traits/README.md` |
+| any cooking page → books index | `cooking/books/README.md` |
+| any cooking page → a recipe | `cooking/recipes/<slug>.md` |
+| any cooking page → a category | `cooking/categories/<slug>.md` |
+| any cooking page → a trait | `cooking/traits/<slug>.md` |
+| any cooking page → a book | `cooking/books/<slug>.md` |
+
+Never use `./`, `../`, or bare filenames (e.g. `salad.md`, `README.md`) as the link target. If a sibling page is the target, still write the full `cooking/...` path.
+
 ### Back-link wording
 
 Fixed wording per page kind. The line lives directly under the H1, separated from the H1 and from the next section by one blank line each side.
 
-| Page kind | Back link text | Target |
-|---|---|---|
-| `recipes/README.md` | `Back to [Cooking](../README.md)` | `../README.md` |
-| `categories/README.md` | `Back to [Cooking](../README.md)` | `../README.md` |
-| `traits/README.md` | `Back to [Cooking](../README.md)` | `../README.md` |
-| `books/README.md` | `Back to [Cooking](../README.md)` | `../README.md` |
-| `categories/<slug>.md` | `Back to [Categories](README.md)` | sibling `README.md` |
-| `traits/<slug>.md` | `Back to [Traits](README.md)` | sibling `README.md` |
-| `books/<slug>.md` | `Back to [Books](README.md)` | sibling `README.md` |
-| `recipes/<slug>.md` | *no back-link line* | — |
+| Page kind | Back link |
+|---|---|
+| `recipes/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `categories/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `traits/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `books/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `categories/<slug>.md` | `Back to [Categories](cooking/categories/README.md)` |
+| `traits/<slug>.md` | `Back to [Traits](cooking/traits/README.md)` |
+| `books/<slug>.md` | `Back to [Books](cooking/books/README.md)` |
+| `recipes/<slug>.md` | *no back-link line* |
 
 Recipe pages omit the back-link because the sidebar handles navigation and the recipe is the deep page; cluttering it with chrome is undesirable.
 
@@ -259,10 +279,10 @@ Every page kind under `docs/cooking/` has a fixed shape. Agents emit these verba
 ```markdown
 # Cooking
 
-- [Recipes](recipes/README.md)
-- [Categories](categories/README.md)
-- [Traits](traits/README.md)
-- [Books](books/README.md)
+- [Recipes](cooking/recipes/README.md)
+- [Categories](cooking/categories/README.md)
+- [Traits](cooking/traits/README.md)
+- [Books](cooking/books/README.md)
 ```
 
 ### `docs/cooking/recipes/README.md`
@@ -270,10 +290,10 @@ Every page kind under `docs/cooking/` has a fixed shape. Agents emit these verba
 ```markdown
 # Recipes
 
-Back to [Cooking](../README.md)
+Back to [Cooking](cooking/README.md)
 
-- [Banana Bread](banana-bread.md)
-- [Classic French Omelette](classic-french-omelette.md)
+- [Banana Bread](cooking/recipes/banana-bread.md)
+- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
 ...
 ```
 
@@ -306,17 +326,17 @@ Back to [Cooking](../README.md)
 
 ## Categories
 
-- [Breakfast](../categories/breakfast.md)
-- [Main](../categories/main.md)
+- [Breakfast](cooking/categories/breakfast.md)
+- [Main](cooking/categories/main.md)
 
 ## Traits
 
-- [Easy](../traits/easy.md)
-- [Fast](../traits/fast.md)
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 
 ## Books
 
-- [Salt Fat Acid Heat](../books/salt-fat-acid-heat.md)
+- [Salt Fat Acid Heat](cooking/books/salt-fat-acid-heat.md)
 ```
 
 Section order is fixed. Sections that are empty:
@@ -330,11 +350,11 @@ Section order is fixed. Sections that are empty:
 ```markdown
 # Categories
 
-Back to [Cooking](../README.md)
+Back to [Cooking](cooking/README.md)
 
-- [Appetizer](appetizer.md)
-- [Breakfast](breakfast.md)
-- [Dessert](dessert.md)
+- [Appetizer](cooking/categories/appetizer.md)
+- [Breakfast](cooking/categories/breakfast.md)
+- [Dessert](cooking/categories/dessert.md)
 ...
 ```
 
@@ -345,10 +365,10 @@ Lists every category currently in use under `categories/`. New entries appear he
 ```markdown
 # Breakfast
 
-Back to [Categories](README.md)
+Back to [Categories](cooking/categories/README.md)
 
-- [Banana Bread](../recipes/banana-bread.md)
-- [Classic French Omelette](../recipes/classic-french-omelette.md)
+- [Banana Bread](cooking/recipes/banana-bread.md)
+- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
 ...
 ```
 
@@ -359,11 +379,11 @@ H1 is the humanized form (Title Case, single word for single-word slugs; replace
 ```markdown
 # Traits
 
-Back to [Cooking](../README.md)
+Back to [Cooking](cooking/README.md)
 
-- [Cheap](cheap.md)
-- [Easy](easy.md)
-- [Fast](fast.md)
+- [Cheap](cooking/traits/cheap.md)
+- [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 ...
 ```
 
@@ -372,9 +392,9 @@ Back to [Cooking](../README.md)
 ```markdown
 # Fast
 
-Back to [Traits](README.md)
+Back to [Traits](cooking/traits/README.md)
 
-- [Classic French Omelette](../recipes/classic-french-omelette.md)
+- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
 ...
 ```
 
@@ -383,10 +403,10 @@ Back to [Traits](README.md)
 ```markdown
 # Books
 
-Back to [Cooking](../README.md)
+Back to [Cooking](cooking/README.md)
 
-- [Fast Easy Cheap Vegan](fast-easy-cheap-vegan.md)
-- [Salt Fat Acid Heat](salt-fat-acid-heat.md)
+- [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+- [Salt Fat Acid Heat](cooking/books/salt-fat-acid-heat.md)
 ...
 ```
 
@@ -395,12 +415,12 @@ Back to [Cooking](../README.md)
 ```markdown
 # <Book Title>
 
-Back to [Books](README.md)
+Back to [Books](cooking/books/README.md)
 
 <optional 1–2-sentence intro from the source — only if the book's own introduction provides one>
 
-- [Banana Bread](../recipes/banana-bread.md)
-- [Classic French Omelette](../recipes/classic-french-omelette.md)
+- [Banana Bread](cooking/recipes/banana-bread.md)
+- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
 ...
 ```
 
@@ -426,7 +446,7 @@ The `**Books**` subgroup lists each summarized book, alphabetical, linking to th
 
 A recipe's body (typically the `## Notes` section, occasionally a `## Preparation` step) may reference another recipe.
 
-- **In-corpus**: `[<Recipe Name>](../recipes/<slug>.md)` — relative path, always `../recipes/` since recipe pages live in `recipes/`.
+- **In-corpus**: `[<Recipe Name>](cooking/recipes/<slug>.md)` — absolute path from the docs root, per the link path convention.
 - **Out-of-corpus** (recipe not in any summarized book): leave as plain text and append `<!-- TODO: not in corpus -->`. Do not fabricate links.
 - Look up target slugs from the in-flight progress tracker or by listing `docs/cooking/recipes/`.
 
@@ -586,7 +606,7 @@ The most error-prone area. For every cross-reference, both directions must agree
 - Same two-way check for `## Traits` ↔ `traits/<slug>.md`.
 - Same two-way check for `## Books` ↔ `books/<slug>.md`.
 
-Concrete check: for each recipe `R` and each category `C` listed on it, `grep "../recipes/R.md" categories/C.md` must succeed.
+Concrete check: for each recipe `R` and each category `C` listed on it, `grep "cooking/recipes/R.md" docs/cooking/categories/C.md` must succeed.
 
 ### 5.5 Index completeness
 
@@ -601,25 +621,29 @@ for d in docs/cooking/recipes docs/cooking/categories docs/cooking/traits docs/c
   done
 done
 
-# Index entries with no backing file
+# Index entries with no backing file (links are absolute from docs/, e.g. cooking/recipes/foo.md)
 for d in docs/cooking/recipes docs/cooking/categories docs/cooking/traits docs/cooking/books; do
-  rg -o '\[[^\]]+\]\(([^)]+)\)' $d/README.md -r '$1' | while read link; do
-    [ -f "$d/$link" ] || echo "DEAD link in $d/README.md: $link"
+  rg -o '\[[^]]+\]\(([^)]+\.md)\)' $d/README.md -r '$1' | while read link; do
+    [ -f "docs/$link" ] || echo "DEAD link in $d/README.md: $link"
   done
 done
 ```
 
 ### 5.6 Link resolution
 
-Every Markdown link inside `docs/cooking/**` resolves to an existing file:
+Every Markdown link inside `docs/cooking/**` resolves to an existing file. Links must be absolute from the docs root (start with `cooking/`). Per the link path convention, any link target containing `../`, starting with `./`, or being a bare filename is a defect — flag it.
 
 ```bash
-rg -o '\[[^\]]+\]\(([^)]+\.md)\)' docs/cooking/ -r '$1' --no-filename | sort -u | while read link; do
-  : # cross-check each link with its source file location; agent does this per-file
+# Find any link that violates the absolute-from-docs-root rule
+rg -n '\]\((?:\.\./|\./|[a-z][^/)]*\.md\))' docs/cooking/ && echo "FOUND non-absolute link(s)"
+
+# Verify every link target resolves
+rg -o '\]\((cooking/[^)]+\.md)\)' docs/cooking/ -r '$1' --no-filename | sort -u | while read link; do
+  [ -f "docs/$link" ] || echo "DEAD link target: $link"
 done
 ```
 
-Agents do this per-file: for each recipe / category / trait / book page, enumerate every link target and `test -f` the resolved path.
+Agents do this per-file: for each recipe / category / trait / book page, enumerate every link target and `test -f docs/$target` the resolved path.
 
 ### 5.7 Alphabetical order
 
