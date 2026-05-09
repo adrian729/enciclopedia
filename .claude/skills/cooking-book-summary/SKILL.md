@@ -47,6 +47,7 @@ The cooking section uses a flat four-section layout. Recipes live in one global 
 ```
 docs/cooking/
 ├── README.md                              # Cooking landing page
+├── ingredients-info.md                    # Alphabetical ingredient → nutrient lookup
 ├── recipes/
 │   ├── README.md                          # Alphabetical list of every recipe
 │   ├── classic-french-omelette.md
@@ -62,12 +63,49 @@ docs/cooking/
 │   ├── easy.md
 │   ├── fast.md
 │   └── one-pot.md
-└── books/
-    ├── README.md                          # Alphabetical list of every book summarized
-    └── fast-easy-cheap-vegan.md
+├── books/
+│   ├── README.md                          # Alphabetical list of every book summarized
+│   └── fast-easy-cheap-vegan.md
+├── macronutrients/                        # ingredient-derived facet
+│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── complex-carbs.md
+│   ├── healthy-fats.md
+│   └── protein.md
+├── minerals/                              # ingredient-derived facet
+│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── calcium.md
+│   ├── iodine.md
+│   ├── iron.md
+│   ├── magnesium.md
+│   ├── potassium.md
+│   ├── selenium.md
+│   └── zinc.md
+├── vitamins/                              # ingredient-derived facet
+│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── vitamin-a.md
+│   ├── vitamin-b1.md
+│   ├── vitamin-b2.md
+│   ├── vitamin-b3.md
+│   ├── vitamin-b5.md
+│   ├── vitamin-b6.md
+│   ├── vitamin-b7.md
+│   ├── vitamin-b9.md
+│   ├── vitamin-b12.md
+│   ├── vitamin-c.md
+│   ├── vitamin-d.md
+│   ├── vitamin-e.md
+│   └── vitamin-k.md
+└── soft-essentials/                       # ingredient-derived facet
+    ├── README.md                          # canonical table + alphabetical slug list
+    ├── dietary-fiber.md
+    ├── omega-3.md
+    ├── phytochemicals.md
+    └── probiotics.md
 ```
 
 **Why flat instead of per-book folders:** every recipe is a globally addressable page that can belong to many categories and many traits and appear in multiple books. A nested per-book layout breaks that fan-in.
+
+**Categories/traits vs. nutrient facets:** categories and traits are *agent-chosen* per recipe (from the canonical lexicons below). Macronutrients, minerals, vitamins, and soft-essentials are *ingredient-derived* — they are not chosen, they are computed from each recipe's `## Ingredients` table via the lookup in `ingredients-info.md`. See `## Nutrient lexicons` and `## Ingredient → nutrient mapping` below.
 
 ## Anti-drift rules
 
@@ -170,6 +208,15 @@ Required form for every link target under `docs/cooking/**`:
 | any cooking page → a category | `cooking/categories/<slug>.md` |
 | any cooking page → a trait | `cooking/traits/<slug>.md` |
 | any cooking page → a book | `cooking/books/<slug>.md` |
+| any cooking page → macronutrients index | `cooking/macronutrients/README.md` |
+| any cooking page → minerals index | `cooking/minerals/README.md` |
+| any cooking page → vitamins index | `cooking/vitamins/README.md` |
+| any cooking page → soft-essentials index | `cooking/soft-essentials/README.md` |
+| any cooking page → a macronutrient | `cooking/macronutrients/<slug>.md` |
+| any cooking page → a mineral | `cooking/minerals/<slug>.md` |
+| any cooking page → a vitamin | `cooking/vitamins/<slug>.md` |
+| any cooking page → a soft-essential | `cooking/soft-essentials/<slug>.md` |
+| any cooking page → ingredients info | `cooking/ingredients-info.md` |
 
 Never use `./`, `../`, or bare filenames (e.g. `salad.md`, `README.md`) as the link target. If a sibling page is the target, still write the full `cooking/...` path.
 
@@ -186,9 +233,30 @@ Fixed wording per page kind. The line lives directly under the H1, separated fro
 | `categories/<slug>.md` | `Back to [Categories](cooking/categories/README.md)` |
 | `traits/<slug>.md` | `Back to [Traits](cooking/traits/README.md)` |
 | `books/<slug>.md` | `Back to [Books](cooking/books/README.md)` |
+| `macronutrients/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `minerals/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `vitamins/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `soft-essentials/README.md` | `Back to [Cooking](cooking/README.md)` |
+| `macronutrients/<slug>.md` | `Back to [Macronutrients](cooking/macronutrients/README.md)` |
+| `minerals/<slug>.md` | `Back to [Minerals](cooking/minerals/README.md)` |
+| `vitamins/<slug>.md` | `Back to [Vitamins](cooking/vitamins/README.md)` |
+| `soft-essentials/<slug>.md` | `Back to [Soft Essentials](cooking/soft-essentials/README.md)` |
+| `ingredients-info.md` | `Back to [Cooking](cooking/README.md)` |
 | `recipes/<slug>.md` | *no back-link line* |
 
 Recipe pages omit the back-link because the sidebar handles navigation and the recipe is the deep page; cluttering it with chrome is undesirable.
+
+### Nutrient-section omission rule
+
+`## Macronutrients`, `## Minerals`, `## Vitamins`, and `## Soft Essentials` are omitted from a recipe page when their derived list is empty (same omission rule as `## Traits`). The four sections always appear in this fixed order, after `## Books`. Bullets within each section are alphabetical (case-insensitive, leading-article strip).
+
+### Frozen-table rule
+
+The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, and `soft-essentials/README.md` are **byte-for-byte canonical**. They duplicate the tables in this SKILL's `## Nutrient lexicons` section (4 columns: `Category | Requirement | Function | Example Sources`, alphabetical rows, `—` for empty cells, `†` for AIs). Audit and formatting passes MUST NOT modify them. Any drift between the SKILL copy and the README copy is a defect — restore from this SKILL. Reformatting attempts (renaming columns back to `Top Sources`/`Best Sources`, adding columns like `Type`, splitting cells into multiple rows, etc.) explicitly violate this rule.
+
+### Ingredient-info append-only rule
+
+`docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells are sorted alphabetically; never reorder a cell's slugs into "frequency" or "priority" order. Empty cells are a single en-dash (`—`), never blank, never `none`, never `N/A`.
 
 ## Canonical category lexicon
 
@@ -270,6 +338,133 @@ This v1 list is closed. Adding a new trait requires explicit user approval.
 
 - **`kid-friendly`** — source explicitly calls out kid appeal. Subsumes "kids", "family-friendly".
 
+## Nutrient lexicons
+
+> **CANONICAL REFERENCE DATA — DO NOT MODIFY.** The four tables below (rows, columns, cell text, ordering) MUST NOT be changed by any agent, audit pass, formatting pass, or lexicon-conformance fix. Adding a row, renaming a row, or changing a cell requires explicit user approval. The same rule applies to the duplicated copy of each table inside `<group>/README.md` — this SKILL is the source; the README copy must remain byte-identical.
+
+The four nutrient axes — macronutrients, minerals, vitamins, soft-essentials — are *ingredient-derived* facets. Each row of each table maps to a `<slug>.md` page under the corresponding directory; each recipe's `## Macronutrients` / `## Minerals` / `## Vitamins` / `## Soft Essentials` sections list the slugs derived from its ingredients via `## Ingredient → nutrient mapping` (next section).
+
+**Uniform schema.** All four tables use the same four columns in the same order:
+
+```
+| Category | Requirement | Function | Example Sources |
+```
+
+No table uses a different column name (`Top Sources`, `Best Bioavailable Sources`, `Why You Can't Skip It`, `Main Focus`, `Mineral`, `Type`, etc.). Empty cells are a single en-dash (`—`). Rows are alphabetized within each table per the alphabetical sort key.
+
+**The `Example Sources` column is examples only, NOT an exhaustive list.** This is repeated in the column-name itself (`Example Sources`, not `Top Sources` or `Best Sources`) so the framing survives at every glance. An ingredient not appearing in any cell may still be a meaningful source of the nutrient. Use the column as orientation; derive each ingredient's actual nutrient profile from established nutritional knowledge.
+
+**The closed-lexicon rule.** The 27 row slugs (3 macronutrients + 7 minerals + 13 vitamins + 4 soft-essentials) are frozen at v1. New rows require explicit user approval, identical to the rule already in place for traits. Agents do not invent slugs; unmapped concepts are surfaced to the user.
+
+**Slug derivation from the `Category` column.** Lowercase ASCII, kebab-case, accents stripped, parentheticals dropped. Specifically: `Complex Carbs` → `complex-carbs`, `Healthy Fats` → `healthy-fats`, `Omega-3 (EPA/DHA)` → `omega-3` (parenthetical dropped), `Vitamin A` → `vitamin-a`, `Vitamin B1` → `vitamin-b1`, `Vitamin B12` → `vitamin-b12`. The 27 slugs below are the only valid values; `b-complex` is **not** a valid slug (the source's lumped B-Complex row is split into seven individual B-vitamin rows).
+
+### Macronutrients
+
+| Category      | Requirement                                   | Function                                                | Example Sources                                                                  |
+|---------------|-----------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
+| Complex Carbs | ~3–5 g/kg body weight; 45–65% of calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
+| Healthy Fats  | ~0.8–1.2 g/kg body weight; 20–35% of calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
+| Protein       | 0.8–1.5 g/kg body weight; 10–35% of calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
+
+### Minerals
+
+| Category   | Requirement                       | Function                                            | Example Sources                                              |
+|------------|-----------------------------------|-----------------------------------------------------|--------------------------------------------------------------|
+| Calcium    | 1000 mg                           | Muscle contraction and bone integrity.              | Sardines (with bones), dairy, fortified milks, almonds.      |
+| Iodine     | 150 µg                            | Crucial for thyroid function (metabolism).          | Seaweed (nori/kelp), iodized salt, white fish.               |
+| Iron       | 8 mg (M) / 18 mg (F)              | Prevents anemia; carries oxygen to cells.           | Clams, spinach (eat with Vitamin C), lentils, tofu.          |
+| Magnesium  | 400 mg (M) / 310 mg (F)           | 300+ reactions (energy, sleep, DNA repair).         | Pumpkin seeds, dark chocolate (85%+), spinach.               |
+| Potassium  | 3400 mg (M) / 2600 mg (F) †       | Regulates blood pressure and heartbeat.             | Bananas, potatoes (with skin), coconut water, beans.         |
+| Selenium   | 55 µg                             | Antioxidant defense and thyroid health.             | Brazil nuts, eggs.                                           |
+| Zinc       | 11 mg (M) / 8 mg (F)              | DNA synthesis and immune response.                  | Oysters, pumpkin seeds, chickpeas, cashews.                  |
+
+### Vitamins
+
+| Category    | Requirement                | Function                                                                                       | Example Sources                                                                 |
+|-------------|----------------------------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Vitamin A   | 900 µg (M) / 700 µg (F)    | Fat-soluble. Eye health and skin integrity.                                                    | Egg yolks, dairy, carrots, sweet potatoes (as Beta-Carotene).                   |
+| Vitamin B1  | 1.2 mg (M) / 1.1 mg (F)    | Water-soluble. Carbohydrate metabolism and nerve function. Also called thiamin.                | Trout, sunflower seeds, whole grains, legumes, fortified grains.                |
+| Vitamin B2  | 1.3 mg (M) / 1.1 mg (F)    | Water-soluble. Energy metabolism and antioxidant function. Also called riboflavin.             | Dairy, eggs, salmon, almonds, leafy greens.                                     |
+| Vitamin B3  | 16 mg (M) / 14 mg (F)      | Water-soluble. Energy metabolism and DNA repair. Also called niacin.                           | Tuna, salmon, sardines, peanuts, fortified grains.                              |
+| Vitamin B5  | 5 mg †                     | Water-soluble. Coenzyme A synthesis and fatty acid metabolism. Also called pantothenic acid.   | Avocado, mushrooms, sunflower seeds, salmon, eggs.                              |
+| Vitamin B6  | 1.3 mg                     | Water-soluble. Amino acid metabolism and neurotransmitter synthesis. Also called pyridoxine.   | Chickpeas, salmon, potatoes, bananas, tuna.                                     |
+| Vitamin B7  | 30 µg †                    | Water-soluble. Fatty acid synthesis and glucose metabolism. Also called biotin.                | Egg yolks, salmon, almonds, sweet potatoes, sunflower seeds.                    |
+| Vitamin B9  | 400 µg                     | Water-soluble. DNA/RNA synthesis and cell division (critical in pregnancy). Also called folate.| Leafy greens, lentils, asparagus, beans, fortified grains.                      |
+| Vitamin B12 | 2.4 µg                     | Water-soluble. Nervous system and DNA. Crucial for vegans to supplement.                       | Clams, sardines, eggs, dairy, fortified cereals, nutritional yeast.             |
+| Vitamin C   | 90 mg (M) / 75 mg (F)      | Water-soluble. Collagen and immune function.                                                   | Bell peppers (higher than oranges), kiwi, citrus.                               |
+| Vitamin D   | 600 IU (15 µg)             | Fat-soluble. Immune system and bone health.                                                    | Fatty fish (salmon, mackerel), egg yolks, fortified milk, UV-exposed mushrooms. |
+| Vitamin E   | 15 mg                      | Fat-soluble. Protecting cells from oxidative stress.                                           | Sunflower seeds, almonds, wheat germ oil.                                       |
+| Vitamin K   | 120 µg (M) / 90 µg (F) †   | Fat-soluble. Blood clotting and bone mineralization.                                           | Kale, spinach, fermented foods (K2).                                            |
+
+### Soft Essentials
+
+| Category          | Requirement       | Function                                            | Example Sources                                              |
+|-------------------|-------------------|-----------------------------------------------------|--------------------------------------------------------------|
+| Dietary Fiber     | 25g (F) / 38g (M) | Gut motility, feeding good bacteria.                | Chia seeds, beans, raspberries, broccoli.                    |
+| Omega-3 (EPA/DHA) | 250–500mg daily   | Reducing systemic inflammation.                     | Wild salmon, sardines, mackerel, anchovies, oysters.         |
+| Phytochemicals    | High variety      | Anti-aging and disease prevention.                  | "Eat the rainbow": purple cabbage, blueberries, turmeric.    |
+| Probiotics        | Periodic intake   | Maintaining a healthy "army" of gut bacteria.       | Kimchi, kefir, sauerkraut, miso.                             |
+
+### Requirement-source note
+
+> Requirement values are for adults 19–50, single value where male/female intake is the same. `(M)` and `(F)` distinguish the two when they differ. `†` marks an Adequate Intake (AI) rather than a Recommended Dietary Allowance (RDA) — used by the NIH Office of Dietary Supplements when evidence is insufficient to set a true RDA. Source: NIH ODS Fact Sheets ([ods.od.nih.gov/factsheets](https://ods.od.nih.gov/factsheets/list-all/)). Macronutrient ranges (AMDR) and protein g/kg target are from the U.S. Dietary Reference Intakes (DRIs).
+
+### Edible-only rule for `Example Sources`
+
+Cells in the `Example Sources` column contain edible foods only. No supplements (D3 capsules, algae oil softgels, B12 pills), no non-foods (sunlight). Water is the only acceptable "intake by default" non-recipe item but is not actually present in any cell. The tables map to recipes; supplements and sunlight do not appear in any recipe ingredient list and would create dead leads in `ingredients-info.md`.
+
+Examples are also restricted to **vegetarian + fish/shellfish** sources. "Vegetarian" here is broad: plants, grains, legumes, nuts, seeds, fungi, eggs, dairy, honey, and any other vegetarian-friendly products are all allowed. Fish and shellfish (clams, oysters, mussels) are also allowed. The only exclusion is land-animal flesh — no beef, pork, lamb, chicken, turkey, liver, or other meat / poultry / organ meats. When a row's most concentrated source is land meat (e.g., liver for retinol, beef for B12), substitute the next-best vegetarian or pescatarian source (egg yolks, dairy, fatty fish, sardines) rather than reintroducing meat.
+
+## Ingredient → nutrient mapping
+
+Recipe nutrient sections are *derived*, not hand-picked. The single authoritative lookup is `docs/cooking/ingredients-info.md`. This section defines its schema and the protocol agents follow when writing or auditing a recipe's nutrient sections.
+
+### `ingredients-info.md` schema
+
+The file shape:
+
+- One H1: `# Ingredients Info`.
+- One back-link line: `Back to [Cooking](cooking/README.md)`.
+- One short paragraph reminding agents that the table is alphabetical and the cells contain *slugs only* (canonical slugs from `## Nutrient lexicons`).
+- A single five-column table:
+
+  ```
+  | Ingredient | Macronutrients | Minerals | Vitamins | Soft Essentials |
+  |---|---|---|---|---|
+  ```
+
+**Ingredient column rules** (canonical name normalization):
+
+- Lowercase. Canonical generic name (e.g., `olive oil`, not `extra virgin olive oil`; `yogurt` covers brand/style variants unless nutrition meaningfully differs — `greek yogurt` is a distinct row because protein density differs materially).
+- Strip preparation modifiers (`chopped`, `diced`, `sliced`, `minced`, `grated`, `crushed`, `ground`, `melted`, `softened`, etc.).
+- Strip quantity, parentheticals, and packaging notes.
+- Use the singular form unless the ingredient is naturally plural (`oats`, `lentils`, `chickpeas`).
+- Sort the table by the canonical ingredient name, case-insensitive, with the same alphabetical sort key used elsewhere in this skill (strip leading articles `the`/`a`/`an`; numeric tokens by value).
+
+**Cell content rules:**
+
+- Comma-separated list of slugs from the relevant group's lexicon (e.g., the Minerals cell for `spinach` reads `iron, magnesium`).
+- Slugs sorted alphabetically inside each cell.
+- Empty cells written as a single en-dash (`—`) — never blank, never `none`, never `N/A`.
+- Only include nutrients for which the ingredient is a **recognized meaningful source** (per general nutritional knowledge). Trace amounts do **not** count. The `Example Sources` columns in `## Nutrient lexicons` provide a calibration anchor for "meaningful".
+
+### Lookup-extend protocol
+
+The writing process for the four nutrient sections of any recipe page:
+
+1. For each row in the recipe's `## Ingredients` table, compute the canonical ingredient name per the normalization rules above.
+2. Search `ingredients-info.md` for that canonical name. (`grep -i "^| <name> |" docs/cooking/ingredients-info.md` is fine; `Read` followed by visual scan is fine. **Do not invent or fuzzy-match** — exact canonical match only.)
+3. **If found:** read the four nutrient cells; emit the slugs into the recipe's running set for each group (deduplicate).
+4. **If not found:**
+   1. Determine the ingredient's nutrient profile from established nutritional knowledge.
+   2. Add a new row to `ingredients-info.md` in the correct alphabetical position with the four cells filled (each cell either a comma-separated alphabetical slug list or a single `—`).
+   3. Then read the cells back and emit slugs into the recipe's running set.
+5. After processing every recipe ingredient, write the four nutrient sections on the recipe page using the deduped, alphabetically-sorted lists. Omit any section whose set is empty.
+
+**Dedup + sort.** Within a recipe's `## Macronutrients` (and the other three sections), each slug appears at most once and the bullet list is alphabetical (case-insensitive, leading-article strip). Bullets link to the slug's canonical row file (e.g., `cooking/minerals/iron.md`).
+
+**Critical guard.** The agent **MUST NOT** invent slugs not present in the v1 lexicons. If the agent believes an ingredient provides a nutrient that has no slug (e.g., a hypothetical "iron-bound copper"), it surfaces this to the user — it does not silently add a new row to any lexicon table or to `ingredients-info.md`.
+
 ## Page templates
 
 Every page kind under `docs/cooking/` has a fixed shape. Agents emit these verbatim.
@@ -283,6 +478,11 @@ Every page kind under `docs/cooking/` has a fixed shape. Agents emit these verba
 - [Categories](cooking/categories/README.md)
 - [Traits](cooking/traits/README.md)
 - [Books](cooking/books/README.md)
+- [Macronutrients](cooking/macronutrients/README.md)
+- [Minerals](cooking/minerals/README.md)
+- [Vitamins](cooking/vitamins/README.md)
+- [Soft Essentials](cooking/soft-essentials/README.md)
+- [Ingredients Info](cooking/ingredients-info.md)
 ```
 
 ### `docs/cooking/recipes/README.md`
@@ -337,12 +537,33 @@ Back to [Cooking](cooking/README.md)
 ## Books
 
 - [Salt Fat Acid Heat](cooking/books/salt-fat-acid-heat.md)
+
+## Macronutrients
+
+- [Healthy Fats](cooking/macronutrients/healthy-fats.md)
+- [Protein](cooking/macronutrients/protein.md)
+
+## Minerals
+
+- [Iron](cooking/minerals/iron.md)
+- [Selenium](cooking/minerals/selenium.md)
+
+## Vitamins
+
+- [Vitamin A](cooking/vitamins/vitamin-a.md)
+- [Vitamin B12](cooking/vitamins/vitamin-b12.md)
+- [Vitamin D](cooking/vitamins/vitamin-d.md)
+
+## Soft Essentials
+
+- [Omega-3](cooking/soft-essentials/omega-3.md)
 ```
 
-Section order is fixed. Sections that are empty:
+Section order is fixed: `Ingredients` → `Preparation` → `Notes` → `Categories` → `Traits` → `Books` → `Macronutrients` → `Minerals` → `Vitamins` → `Soft Essentials`. Sections that are empty:
 
 - `## Notes` — omit if no notes are available.
 - `## Traits` — omit entirely if the recipe has zero traits.
+- `## Macronutrients`, `## Minerals`, `## Vitamins`, `## Soft Essentials` — each section is omitted entirely (heading + bullet list both gone) when its derived list is empty. The four sections are *ingredient-derived* via the lookup-extend protocol in `## Ingredient → nutrient mapping`; in practice macronutrients/minerals/vitamins almost always have ≥1 entry; soft-essentials often won't.
 - `## Categories` and `## Books` are always present (every recipe has ≥1 of each).
 
 ### `docs/cooking/categories/README.md`
@@ -426,6 +647,62 @@ Back to [Books](cooking/books/README.md)
 
 The bullet list contains every recipe from this book, alphabetical, linking to the recipe's own page (which itself lists the book under `## Books`).
 
+### `docs/cooking/macronutrients/README.md`
+
+```markdown
+# Macronutrients
+
+Back to [Cooking](cooking/README.md)
+
+| Category      | Requirement                                   | Function                                                | Example Sources                                                                  |
+|---------------|-----------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
+| Complex Carbs | ~3–5 g/kg body weight; 45–65% of calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
+| Healthy Fats  | ~0.8–1.2 g/kg body weight; 20–35% of calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
+| Protein       | 0.8–1.5 g/kg body weight; 10–35% of calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
+
+- [Complex Carbs](cooking/macronutrients/complex-carbs.md)
+- [Healthy Fats](cooking/macronutrients/healthy-fats.md)
+- [Protein](cooking/macronutrients/protein.md)
+```
+
+The body shape: H1 → back-link → the **verbatim canonical table** copied byte-for-byte from `## Nutrient lexicons` (4 columns, alphabetical rows, `—` for empty cells, `†` for AIs) → the alphabetical bullet list of every row's slug. The table itself is frozen (see "Frozen-table rule" under `## Anti-drift rules`).
+
+### `docs/cooking/minerals/README.md`, `docs/cooking/vitamins/README.md`, `docs/cooking/soft-essentials/README.md`
+
+Structurally identical to `macronutrients/README.md`. Each has H1 (`# Minerals` / `# Vitamins` / `# Soft Essentials`), a back-link to Cooking, the **verbatim canonical table** for that group from `## Nutrient lexicons`, and the alphabetical bullet list of that group's slugs. For v1 the bullet lists contain exactly 7 / 13 / 4 entries respectively.
+
+### `docs/cooking/macronutrients/<slug>.md` (and analogous for minerals, vitamins, soft-essentials)
+
+```markdown
+# Protein
+
+Back to [Macronutrients](cooking/macronutrients/README.md)
+
+- [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
+- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
+...
+```
+
+H1 is humanized from the slug (Title Case, hyphens → spaces; e.g., `complex-carbs` → `Complex Carbs`, `vitamin-b12` → `Vitamin B12`, `omega-3` → `Omega-3`, `dietary-fiber` → `Dietary Fiber`). Back-link points to the parent group's README. Bullet list is every recipe whose `## Macronutrients` (or `## Minerals` / `## Vitamins` / `## Soft Essentials`) section contains this slug, alphabetical. Empty list when no recipes yet reference the slug — the file still exists with just the H1 and back-link.
+
+### `docs/cooking/ingredients-info.md`
+
+```markdown
+# Ingredients Info
+
+Back to [Cooking](cooking/README.md)
+
+Authoritative ingredient → nutrient lookup. Alphabetical by ingredient (canonical name; see `## Ingredient → nutrient mapping` for the normalization rules). Cells contain canonical slugs only (comma-separated, alphabetical). An en-dash (`—`) marks an empty cell. New ingredients are appended in alphabetical position; existing rows are not deleted.
+
+| Ingredient | Macronutrients | Minerals | Vitamins | Soft Essentials |
+|---|---|---|---|---|
+| almonds | healthy-fats, protein | calcium, magnesium | vitamin-e | dietary-fiber |
+| olive oil | healthy-fats | — | vitamin-e, vitamin-k | — |
+| spinach | — | iron, magnesium, potassium | vitamin-a, vitamin-b9, vitamin-c, vitamin-k | dietary-fiber, phytochemicals |
+```
+
+Five columns, exactly. Cells contain only canonical slugs from `## Nutrient lexicons` — no free text, no plurals, no human-readable names. Slugs sorted alphabetically inside each cell. The file is append-only (see "Ingredient-info append-only rule" under `## Anti-drift rules`).
+
 ## Sidebar shape
 
 Add the following block to `docs/_sidebar.md` under a top-level `**Cooking**` group. The sidebar deliberately does NOT enumerate every recipe, category, or trait — index pages handle that.
@@ -435,6 +712,11 @@ Add the following block to `docs/_sidebar.md` under a top-level `**Cooking**` gr
   - [All Recipes](cooking/recipes/README.md)
   - [Categories](cooking/categories/README.md)
   - [Traits](cooking/traits/README.md)
+  - [Macronutrients](cooking/macronutrients/README.md)
+  - [Minerals](cooking/minerals/README.md)
+  - [Vitamins](cooking/vitamins/README.md)
+  - [Soft Essentials](cooking/soft-essentials/README.md)
+  - [Ingredients Info](cooking/ingredients-info.md)
   - **Books**
     - [<Book Title>](cooking/books/<book-slug>.md)
     - [<Book Title>](cooking/books/<book-slug>.md)
@@ -499,6 +781,17 @@ For each recipe:
 2. **Traits** (0+): scan the recipe's source content for triggers: time claims, "easy" wording, single-vessel preparation, no-cook / no-bake claims, freezer notes, make-ahead notes, source cost claims, dietary deviations from the book baseline, kid-friendly callouts.
 3. Apply alias collapse and lexicon-first rules. Never invent.
 
+### 2.4b Per-recipe nutrient derivation
+
+For each recipe, walk its `## Ingredients` and apply the **lookup-extend protocol** from `## Ingredient → nutrient mapping`. Specifically:
+
+1. Compute each ingredient's canonical name per the normalization rules.
+2. Look up the canonical name in `docs/cooking/ingredients-info.md`. If absent, append a new alphabetical row with the four nutrient cells filled from established nutritional knowledge.
+3. Read the ingredient's four nutrient cells; merge into the recipe's running sets for `Macronutrients`, `Minerals`, `Vitamins`, `Soft Essentials` (deduplicate per group).
+4. After all ingredients are processed, alphabetize each set (case-insensitive, leading-article strip).
+
+Record the four resulting slug sets on the progress tracker (four new columns: `Macronutrients`, `Minerals`, `Vitamins`, `Soft Essentials`). Empty sets stay as `—` in the tracker. The agent does NOT invent slugs outside the v1 lexicon — see the critical guard in `## Ingredient → nutrient mapping`.
+
 ### 2.5 Apply the recipe-name strip-list
 
 Convert each source recipe title into a clean recipe name by applying the strip-list. Examples:
@@ -517,12 +810,12 @@ For each candidate recipe slug, check if `docs/cooking/recipes/<slug>.md` alread
 Create `tmp/<book-slug>-progress.md`:
 
 ```markdown
-| Recipe | Slug | Categories | Traits | Source | Status |
-|--------|------|------------|--------|--------|--------|
-| Classic French Omelette | classic-french-omelette | breakfast, main | easy, fast | text/part0042.html | pending |
+| Recipe | Slug | Categories | Traits | Macronutrients | Minerals | Vitamins | Soft Essentials | Source | Status |
+|--------|------|------------|--------|----------------|----------|----------|-----------------|--------|--------|
+| Classic French Omelette | classic-french-omelette | breakfast, main | easy, fast | healthy-fats, protein | iron, selenium | vitamin-a, vitamin-b12, vitamin-d | — | text/part0042.html | pending |
 ```
 
-The tracker doubles as a lookup table during Phase 4.
+The tracker doubles as a lookup table during Phase 4. The four nutrient columns are populated in Phase 2.4b; empty sets are written as `—`.
 
 ### 2.8 Surface decisions in autonomous mode
 
@@ -570,9 +863,17 @@ Steps, in this order:
 3. **`categories/README.md`** — append any newly-created categories in alphabetical position.
 4. **`traits/<slug>.md`** — same as 2 but for traits.
 5. **`traits/README.md`** — same as 3 but for traits.
-6. **`books/<book-slug>.md`** — create from template; list every recipe in this book, alphabetical.
-7. **`books/README.md`** — insert the new book in alphabetical position. Create the file if it didn't exist.
-8. **`docs/cooking/README.md`** — create from template if it doesn't already exist. (Created once and never modified after.)
+6. **`macronutrients/<slug>.md`** — for each macronutrient slug referenced by any new recipe, insert the recipe link in alphabetical position. The file already exists from skeleton creation; agents only insert into its bullet list. **Do not edit the canonical table at the top of the file.**
+7. **`minerals/<slug>.md`** — same as 6 but for minerals.
+8. **`vitamins/<slug>.md`** — same as 6 but for vitamins.
+9. **`soft-essentials/<slug>.md`** — same as 6 but for soft-essentials.
+10. **`books/<book-slug>.md`** — create from template; list every recipe in this book, alphabetical.
+11. **`books/README.md`** — insert the new book in alphabetical position. Create the file if it didn't exist.
+12. **`docs/cooking/README.md`** — create from template if it doesn't already exist. (Created once and never modified after.)
+
+The four group `README.md` files (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) do **not** need modification during a normal run — their canonical tables are frozen and their alphabetical slug lists are fixed at v1. The only legitimate edit is when the user explicitly approves a new lexicon row.
+
+`docs/cooking/ingredients-info.md` is updated **inline during Phase 2.4b** (recipe-level lookup-extend). By Phase 4 it is already current.
 
 ## Phase 5: Audit
 
@@ -663,6 +964,28 @@ Every recipe page:
 - Has a two-column ingredient table — never three columns.
 - Uses Unicode fractions in the Quantity column, not ASCII (`½` not `1/2`) — match existing files.
 
+### 5.10 Frozen-table integrity
+
+The four group `README.md` tables (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) are byte-identical to the canonical copies in this SKILL's `## Nutrient lexicons` (modulo whitespace within a cell). Any drift fails the audit and must be restored from this SKILL — agents do not touch the table content or column order.
+
+### 5.11 Nutrient bidirectional integrity
+
+For every entry in a recipe's `## Macronutrients`, the recipe link appears in `cooking/macronutrients/<slug>.md`. Same for minerals, vitamins, soft-essentials. And vice-versa: every recipe link in a nutrient row file corresponds to an entry on that recipe's nutrient section.
+
+Concrete check for each recipe `R` and each nutrient slug `N` listed on it: `grep "cooking/recipes/R.md" docs/cooking/<group>/N.md` must succeed.
+
+### 5.12 Ingredient-info coverage
+
+Every ingredient in every recipe under `docs/cooking/recipes/` appears as a row in `docs/cooking/ingredients-info.md` under its canonical name. Surface unmatched ingredients; do not silently fix — the agent must add the row with a real nutrient profile (per the lookup-extend protocol). New rows go in alphabetical position; existing rows are not deleted.
+
+### 5.13 Nutrient-derivation correctness
+
+For each recipe, recompute the four nutrient sets by walking its `## Ingredients`, looking each up in `ingredients-info.md`, and merging (deduped). Confirm the recipe page's `## Macronutrients` / `## Minerals` / `## Vitamins` / `## Soft Essentials` sections match (deduped, alphabetical, with empty sections omitted). Discrepancies fail the audit.
+
+### 5.14 Slug validity
+
+Every slug appearing in any recipe nutrient section, in any nutrient row file, or in any `ingredients-info.md` cell exists in the v1 lexicon (the 27 slugs listed in `## Nutrient lexicons`). No invented slugs, no `b-complex`, no aliases, no plurals.
+
 ### Audit reports
 
 Audit agents report under 50 words, one line per recipe:
@@ -693,6 +1016,11 @@ Repeat audit rounds until every recipe reports clean on first iteration of a rou
 | Category pages | `docs/cooking/categories/<slug>.md` | Yes |
 | Trait pages | `docs/cooking/traits/<slug>.md` | Yes |
 | Book pages | `docs/cooking/books/<slug>.md` | Yes |
+| Macronutrient pages | `docs/cooking/macronutrients/<slug>.md` | Yes |
+| Mineral pages | `docs/cooking/minerals/<slug>.md` | Yes |
+| Vitamin pages | `docs/cooking/vitamins/<slug>.md` | Yes |
+| Soft-essential pages | `docs/cooking/soft-essentials/<slug>.md` | Yes |
+| Ingredient lookup | `docs/cooking/ingredients-info.md` | Yes |
 | Cooking landing | `docs/cooking/README.md` | Yes |
 | Sidebar | `docs/_sidebar.md` | Yes |
 | Source extraction | `tmp/<book-slug>/` | No |
@@ -703,3 +1031,4 @@ Repeat audit rounds until every recipe reports clean on first iteration of a rou
 - **Phase 5 "Narrative"** from `book-summary` does not apply. Cookbooks don't get a whole-book narrative summary.
 - **Per-book folders** under `docs/cooking/books/<book-slug>/<category>/<recipe>.md`. Recipes are global; books are flat reference pages.
 - **`md-standards` H2 numbering and TOC.** The cooking templates above are the authoritative shape.
+- **Lexicon expansion without explicit user approval.** The four nutrient lexicons (3 macronutrients, 7 minerals, 13 vitamins, 4 soft-essentials = 27 slugs) are **closed at v1**, mirroring the trait lexicon's closed status. The standard "lexicon-first rule" applies: agents do not invent rows, do not add columns, do not rename slugs, and do not silently fix table content. Unmapped concepts are surfaced to the user in the Phase 2.8 / Phase 6 completion report.
