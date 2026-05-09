@@ -1,5 +1,7 @@
 # Artichoke Salad Sandwiches
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: 4 servings · Cost: under $10
 
 ## Ingredients

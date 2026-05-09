@@ -1,5 +1,7 @@
 # Crunchy Cabbage Salad
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: 2–4 servings · Cost: under $10
 
 ## Ingredients

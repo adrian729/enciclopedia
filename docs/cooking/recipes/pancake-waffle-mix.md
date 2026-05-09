@@ -1,5 +1,7 @@
 # Pancake & Waffle Mix
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: about 4½ cups (3 batches) · Cost: under $3
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Butter Cauliflower
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: 4 servings · Cost: under $10 · Equipment: high-powered blender
 
 ## Ingredients

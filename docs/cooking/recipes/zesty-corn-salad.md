@@ -1,5 +1,7 @@
 # Zesty Corn Salad
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: 6 servings as a side · Cost: under $7
 
 ## Ingredients

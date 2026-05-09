@@ -1,5 +1,7 @@
 # Veggie Broth Powder
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: about ¼ cup powder (12 cups broth) · Cost: under $1
 
 ## Ingredients

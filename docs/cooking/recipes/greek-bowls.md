@@ -1,5 +1,7 @@
 # Greek Bowls
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 20 mins · Yield: 2 large or 4 small portions · Cost: under $10
 
 ## Ingredients

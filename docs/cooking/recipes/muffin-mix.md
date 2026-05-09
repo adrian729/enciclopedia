@@ -1,5 +1,7 @@
 # Muffin Mix
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 25 mins · Yield: 5⅓ cups (4 batches muffins) · Cost: under $3
 
 ## Ingredients

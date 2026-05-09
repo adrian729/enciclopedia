@@ -1,5 +1,7 @@
 # White Bean Pinwheels
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: 2–4 servings · Cost: under $5
 
 ## Ingredients

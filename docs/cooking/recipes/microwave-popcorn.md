@@ -1,5 +1,7 @@
 # Microwave Popcorn
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 4 mins · Yield: 2 servings · Cost: under $1 (not including toppings) or under $3 (with toppings)
 
 ## Ingredients

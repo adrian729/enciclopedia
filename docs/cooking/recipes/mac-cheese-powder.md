@@ -1,5 +1,7 @@
 # Mac & Cheese Powder
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: about 1 cup (4 batches mac & cheese) · Cost: under $5
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Hummamole
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: about 4 cups · Cost: under $7 (dip only) · Equipment: food processor
 
 ## Ingredients

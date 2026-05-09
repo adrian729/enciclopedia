@@ -1,5 +1,7 @@
 # Ice Cream
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins (plus freezing time) · Yield: 2 servings · Cost: under $1 (for the basic recipe) · Equipment: food processor or high-powered blender
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Brownie in a Cup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 8 mins · Yield: 1 serving · Cost: under $1 · Equipment: microwave
 
 ## Ingredients

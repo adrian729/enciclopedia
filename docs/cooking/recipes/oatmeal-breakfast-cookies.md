@@ -1,5 +1,7 @@
 # Oatmeal Breakfast Cookies
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 26 mins · Yield: 12–14 cookies · Cost: under $5
 
 ## Ingredients

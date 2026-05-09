@@ -1,5 +1,7 @@
 # Cheesy Cracker Snackers
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 25 mins · Yield: about 100 crackers · Cost: under $3 · Equipment: food processor
 
 ## Ingredients

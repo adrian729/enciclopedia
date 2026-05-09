@@ -1,5 +1,7 @@
 # Peanut Butter Popcorn
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: 2 servings · Cost: under $3
 
 ## Ingredients

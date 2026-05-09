@@ -1,5 +1,7 @@
 # Stovetop Granola
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: about 4 cups granola, 8 servings · Cost: $3–$7
 
 ## Ingredients

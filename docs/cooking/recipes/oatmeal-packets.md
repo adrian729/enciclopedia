@@ -1,5 +1,7 @@
 # Oatmeal Packets
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: 1 serving · Cost: under $1
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Guzinta Bowl Guide
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 20 mins · Yield: as many as you like
 
 ## Ingredients

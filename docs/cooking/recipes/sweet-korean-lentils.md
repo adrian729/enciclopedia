@@ -1,5 +1,7 @@
 # Sweet Korean Lentils
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 25 mins · Yield: 4 servings · Cost: under $5
 
 ## Ingredients

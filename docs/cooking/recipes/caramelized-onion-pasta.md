@@ -1,5 +1,7 @@
 # Caramelized Onion Pasta
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: 4 servings · Cost: under $3
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Pizza Popcorn
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 13 mins · Yield: 2 servings · Cost: under $1
 
 ## Ingredients

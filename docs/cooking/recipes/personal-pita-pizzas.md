@@ -1,5 +1,7 @@
 # Personal Pita Pizzas
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 18 mins · Yield: 4 servings · Cost: $5–$10
 
 ## Ingredients

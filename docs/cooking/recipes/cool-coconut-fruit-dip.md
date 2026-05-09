@@ -1,5 +1,7 @@
 # Cool Coconut Fruit Dip
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins (plus overnight to chill the coconut milk) · Yield: about 1½ cups · Cost: under $5 (not including fruit) or under $10 (with fruit)
 
 ## Ingredients

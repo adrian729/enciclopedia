@@ -1,5 +1,7 @@
 # Maple Dijon Dressing
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: about ½ cup · Cost: under $3
 
 ## Ingredients

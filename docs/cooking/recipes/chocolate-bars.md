@@ -1,5 +1,7 @@
 # Chocolate Bars
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 28 mins · Yield: about 4 chocolate bars · Cost: $5–$10 (depending on your choices) · Equipment: microwave
 
 ## Ingredients

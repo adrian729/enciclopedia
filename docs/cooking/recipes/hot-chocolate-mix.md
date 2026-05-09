@@ -1,5 +1,7 @@
 # Hot Chocolate Mix
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: 2 cups mix, 5 servings · Cost: under $3
 
 ## Ingredients

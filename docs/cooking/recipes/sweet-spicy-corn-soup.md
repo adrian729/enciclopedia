@@ -1,5 +1,7 @@
 # Sweet & Spicy Corn Soup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 21 mins · Yield: 6–8 servings · Cost: under $10
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Sweet Potato Dip
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: about 3 cups · Cost: under $5 (dip only) · Equipment: food processor or blender
 
 ## Ingredients

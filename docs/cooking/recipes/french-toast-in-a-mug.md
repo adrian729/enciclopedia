@@ -1,5 +1,7 @@
 # French Toast in a Mug
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 3 mins · Yield: 1 serving · Cost: under $1 (not including toppings)
 
 ## Ingredients

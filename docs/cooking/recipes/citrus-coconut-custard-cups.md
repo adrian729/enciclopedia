@@ -1,5 +1,7 @@
 # Citrus & Coconut Custard Cups
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: 4 servings · Cost: under $5
 
 ## Ingredients

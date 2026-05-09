@@ -1,5 +1,7 @@
 # Vanilla Frosting
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: about 3½ cups (enough for one 2-layer cake or 24 cupcakes) · Cost: under $5
 
 ## Ingredients

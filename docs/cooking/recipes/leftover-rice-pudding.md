@@ -1,5 +1,7 @@
 # Leftover Rice Pudding
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 12 mins · Yield: 4 servings · Cost: under $5
 
 ## Ingredients

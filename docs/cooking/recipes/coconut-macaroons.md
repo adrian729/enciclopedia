@@ -1,5 +1,7 @@
 # Coconut Macaroons
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 28 mins · Yield: 12 macaroons · Cost: under $3
 
 ## Ingredients

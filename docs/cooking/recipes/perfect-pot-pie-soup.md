@@ -1,5 +1,7 @@
 # Perfect Pot-Pie Soup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: 4–6 servings · Cost: under $7
 
 ## Ingredients

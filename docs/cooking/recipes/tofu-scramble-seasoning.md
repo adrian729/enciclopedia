@@ -1,5 +1,7 @@
 # Tofu Scramble Seasoning
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 10 mins · Yield: about ½ cup · Cost: under $3
 
 ## Ingredients

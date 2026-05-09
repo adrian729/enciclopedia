@@ -1,5 +1,7 @@
 # Creamy Gnocchi Soup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: 6 servings · Cost: under $10
 
 ## Ingredients

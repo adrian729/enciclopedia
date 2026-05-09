@@ -1,5 +1,7 @@
 # Avocado Cilantro Sauce
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: about 1 cup · Cost: under $5 · Equipment: blender or food processor
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Sesame Dressing
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: about ¼ cup · Cost: under $3
 
 ## Ingredients

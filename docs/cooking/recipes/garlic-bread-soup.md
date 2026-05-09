@@ -1,5 +1,7 @@
 # Garlic Bread Soup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 25 mins · Yield: 4–6 servings · Cost: under $5 · Equipment: blender
 
 ## Ingredients

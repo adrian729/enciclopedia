@@ -1,5 +1,7 @@
 # Kitchen Sink Cookies
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 28 mins · Yield: 14–16 cookies · Cost: under $5 (not including add-ins)
 
 ## Ingredients

@@ -1,5 +1,7 @@
 # Kale Caesar
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 20 mins · Yield: 2 servings as a main or 4 as a side · Cost: under $7
 
 ## Ingredients

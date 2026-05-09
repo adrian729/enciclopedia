@@ -1,5 +1,7 @@
 # Artichoke Dressing
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: about ¾ cup · Cost: under $1
 
 ## Ingredients

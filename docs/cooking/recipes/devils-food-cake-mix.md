@@ -1,5 +1,7 @@
 # Devil's Food Cake Mix
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: about 8 cups (4 one-layer cakes or 48 cupcakes) · Cost: under $7
 
 ## Ingredients

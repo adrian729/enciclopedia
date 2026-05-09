@@ -1,5 +1,7 @@
 # Lime & Bean Soup
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: 4 servings · Cost: under $10
 
 ## Ingredients

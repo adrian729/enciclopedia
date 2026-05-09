@@ -1,5 +1,7 @@
 # Trail Mix
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: about 2 cups · Cost: $1–$10 (depending on your choices)
 
 ## Ingredients

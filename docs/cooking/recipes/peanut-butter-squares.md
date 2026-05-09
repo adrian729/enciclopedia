@@ -1,5 +1,7 @@
 # Peanut Butter Squares
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 30 mins · Yield: about 10 two-inch squares · Cost: under $5
 
 ## Ingredients

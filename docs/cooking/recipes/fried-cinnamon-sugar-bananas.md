@@ -1,5 +1,7 @@
 # Fried Cinnamon Sugar Bananas
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 11 mins · Yield: 2 servings · Cost: under $1
 
 ## Ingredients

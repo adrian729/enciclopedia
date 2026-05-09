@@ -1,5 +1,7 @@
 # Tomato Sauce Amper-Uppers
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 15 mins · Yield: 4 servings · Cost: $5–$10 (depending on your choices)
 
 ## Ingredients

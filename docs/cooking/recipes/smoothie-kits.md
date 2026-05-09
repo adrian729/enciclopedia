@@ -1,5 +1,7 @@
 # Smoothie Kits
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 5 mins · Yield: 1 serving · Cost: $1–$5 · Equipment: blender
 
 ## Ingredients

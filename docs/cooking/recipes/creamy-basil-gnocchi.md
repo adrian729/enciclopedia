@@ -1,5 +1,7 @@
 # Creamy Basil Gnocchi
 
+Back to [All Recipes](cooking/recipes/README.md)
+
 > Total: 17 mins · Yield: 4 servings · Cost: under $7
 
 ## Ingredients
