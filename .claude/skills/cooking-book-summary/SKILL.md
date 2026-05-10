@@ -67,12 +67,12 @@ docs/cooking/
 │   ├── README.md                          # Alphabetical list of every book summarized
 │   └── fast-easy-cheap-vegan.md
 ├── macronutrients/                        # ingredient-derived facet
-│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── README.md                          # canonical table (Category cells link to row pages)
 │   ├── complex-carbs.md
 │   ├── healthy-fats.md
 │   └── protein.md
 ├── minerals/                              # ingredient-derived facet
-│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── README.md                          # canonical table (Category cells link to row pages)
 │   ├── calcium.md
 │   ├── iodine.md
 │   ├── iron.md
@@ -81,7 +81,7 @@ docs/cooking/
 │   ├── selenium.md
 │   └── zinc.md
 ├── vitamins/                              # ingredient-derived facet
-│   ├── README.md                          # canonical table + alphabetical slug list
+│   ├── README.md                          # canonical table (Category cells link to row pages)
 │   ├── vitamin-a.md
 │   ├── vitamin-b1.md
 │   ├── vitamin-b2.md
@@ -96,7 +96,7 @@ docs/cooking/
 │   ├── vitamin-e.md
 │   └── vitamin-k.md
 └── soft-essentials/                       # ingredient-derived facet
-    ├── README.md                          # canonical table + alphabetical slug list
+    ├── README.md                          # canonical table (Category cells link to row pages)
     ├── dietary-fiber.md
     ├── omega-3.md
     ├── phytochemicals.md
@@ -254,7 +254,7 @@ Within each section, drop any **quantitative** bullet whose computed per-recipe 
 
 ### Frozen-table rule
 
-The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, and `soft-essentials/README.md` are **byte-for-byte canonical**. They duplicate the tables in this SKILL's `## Nutrient lexicons` section (4 columns: `Category | Requirement | Function | Example Sources`; rows alphabetical by display name, with B-vitamins ordered by numeric value — `Vitamin B1` … `Vitamin B12` — NOT ASCII; `—` for empty cells, `†` for AIs). Audit and formatting passes MUST NOT modify them. Any drift between the SKILL copy and the README copy is a defect — restore from this SKILL. Reformatting attempts (renaming columns back to `Top Sources`/`Best Sources`, adding columns like `Type`, splitting cells into multiple rows, re-sorting B-vitamins as ASCII strings, etc.) explicitly violate this rule.
+The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, and `soft-essentials/README.md` are **byte-for-byte canonical**. They duplicate the tables in this SKILL's `## Nutrient lexicons` section (4 columns: `Category | Requirement | Function | Example Sources`; the `Category` cell of each row contains a Markdown link of the form `[Display Name](cooking/<group>/<slug>.md)` — never bare display text and never a slug; rows alphabetical by display name, with B-vitamins ordered by numeric value — `Vitamin B1` … `Vitamin B12` — NOT ASCII; `—` for empty cells, `†` for AIs). Audit and formatting passes MUST NOT modify them. Any drift between the SKILL copy and the README copy is a defect — restore from this SKILL. Reformatting attempts (renaming columns back to `Top Sources`/`Best Sources`, adding columns like `Type`, splitting cells into multiple rows, re-sorting B-vitamins as ASCII strings, unlinking the Category cells, splitting the link across lines, etc.) explicitly violate this rule.
 
 ### Ingredient-info append-only rule
 
@@ -362,50 +362,50 @@ No table uses a different column name (`Top Sources`, `Best Bioavailable Sources
 
 ### Macronutrients
 
-| Category      | Requirement                                   | Function                                                | Example Sources                                                                  |
-|---------------|-----------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
-| Complex Carbs | ~3–5 g/kg body weight per day; 45–65% of total daily calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
-| Healthy Fats  | ~0.8–1.2 g/kg body weight per day; 20–35% of total daily calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
-| Protein       | 0.8–1.5 g/kg body weight per day; 10–35% of total daily calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
+| Category                                                 | Requirement                                                       | Function                                                | Example Sources                                                                  |
+|----------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
+| [Complex Carbs](cooking/macronutrients/complex-carbs.md) | ~3–5 g/kg body weight per day; 45–65% of total daily calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
+| [Healthy Fats](cooking/macronutrients/healthy-fats.md)   | ~0.8–1.2 g/kg body weight per day; 20–35% of total daily calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
+| [Protein](cooking/macronutrients/protein.md)             | 0.8–1.5 g/kg body weight per day; 10–35% of total daily calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
 
 ### Minerals
 
-| Category   | Requirement                       | Function                                            | Example Sources                                              |
-|------------|-----------------------------------|-----------------------------------------------------|--------------------------------------------------------------|
-| Calcium    | 1000 mg/day                       | Muscle contraction and bone integrity.              | Sardines (with bones), dairy, fortified milks, almonds.      |
-| Iodine     | 150 µg/day                        | Crucial for thyroid function (metabolism).          | Seaweed (nori/kelp), iodized salt, white fish.               |
-| Iron       | 8 mg/day (M) / 18 mg/day (F)      | Prevents anemia; carries oxygen to cells.           | Clams, spinach (eat with Vitamin C), lentils, tofu.          |
-| Magnesium  | 400 mg/day (M) / 310 mg/day (F)   | 300+ reactions (energy, sleep, DNA repair).         | Pumpkin seeds, dark chocolate (85%+), spinach.               |
-| Potassium  | 3400 mg/day (M) / 2600 mg/day (F) † | Regulates blood pressure and heartbeat.           | Bananas, potatoes (with skin), coconut water, beans.         |
-| Selenium   | 55 µg/day                         | Antioxidant defense and thyroid health.             | Brazil nuts, eggs.                                           |
-| Zinc       | 11 mg/day (M) / 8 mg/day (F)      | DNA synthesis and immune response.                  | Oysters, pumpkin seeds, chickpeas, cashews.                  |
+| Category                                  | Requirement                       | Function                                            | Example Sources                                              |
+|-------------------------------------------|-----------------------------------|-----------------------------------------------------|--------------------------------------------------------------|
+| [Calcium](cooking/minerals/calcium.md)    | 1000 mg/day                       | Muscle contraction and bone integrity.              | Sardines (with bones), dairy, fortified milks, almonds.      |
+| [Iodine](cooking/minerals/iodine.md)      | 150 µg/day                        | Crucial for thyroid function (metabolism).          | Seaweed (nori/kelp), iodized salt, white fish.               |
+| [Iron](cooking/minerals/iron.md)          | 8 mg/day (M) / 18 mg/day (F)      | Prevents anemia; carries oxygen to cells.           | Clams, spinach (eat with Vitamin C), lentils, tofu.          |
+| [Magnesium](cooking/minerals/magnesium.md)| 400 mg/day (M) / 310 mg/day (F)   | 300+ reactions (energy, sleep, DNA repair).         | Pumpkin seeds, dark chocolate (85%+), spinach.               |
+| [Potassium](cooking/minerals/potassium.md)| 3400 mg/day (M) / 2600 mg/day (F) † | Regulates blood pressure and heartbeat.           | Bananas, potatoes (with skin), coconut water, beans.         |
+| [Selenium](cooking/minerals/selenium.md)  | 55 µg/day                         | Antioxidant defense and thyroid health.             | Brazil nuts, eggs.                                           |
+| [Zinc](cooking/minerals/zinc.md)          | 11 mg/day (M) / 8 mg/day (F)      | DNA synthesis and immune response.                  | Oysters, pumpkin seeds, chickpeas, cashews.                  |
 
 ### Vitamins
 
-| Category    | Requirement                | Function                                                                                       | Example Sources                                                                 |
-|-------------|----------------------------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Vitamin A   | 900 µg/day (M) / 700 µg/day (F)    | Fat-soluble. Eye health and skin integrity.                                                    | Egg yolks, dairy, carrots, sweet potatoes (as Beta-Carotene).                   |
-| Vitamin B1  | 1.2 mg/day (M) / 1.1 mg/day (F)    | Water-soluble. Carbohydrate metabolism and nerve function. Also called thiamin.                | Trout, sunflower seeds, whole grains, legumes, fortified grains.                |
-| Vitamin B2  | 1.3 mg/day (M) / 1.1 mg/day (F)    | Water-soluble. Energy metabolism and antioxidant function. Also called riboflavin.             | Dairy, eggs, salmon, almonds, leafy greens.                                     |
-| Vitamin B3  | 16 mg/day (M) / 14 mg/day (F)      | Water-soluble. Energy metabolism and DNA repair. Also called niacin.                           | Tuna, salmon, sardines, peanuts, fortified grains.                              |
-| Vitamin B5  | 5 mg/day †                         | Water-soluble. Coenzyme A synthesis and fatty acid metabolism. Also called pantothenic acid.   | Avocado, mushrooms, sunflower seeds, salmon, eggs.                              |
-| Vitamin B6  | 1.3 mg/day                         | Water-soluble. Amino acid metabolism and neurotransmitter synthesis. Also called pyridoxine.   | Chickpeas, salmon, potatoes, bananas, tuna.                                     |
-| Vitamin B7  | 30 µg/day †                        | Water-soluble. Fatty acid synthesis and glucose metabolism. Also called biotin.                | Egg yolks, salmon, almonds, sweet potatoes, sunflower seeds.                    |
-| Vitamin B9  | 400 µg/day                         | Water-soluble. DNA/RNA synthesis and cell division (critical in pregnancy). Also called folate.| Leafy greens, lentils, asparagus, beans, fortified grains.                      |
-| Vitamin B12 | 2.4 µg/day                         | Water-soluble. Nervous system and DNA. Crucial for vegans to supplement.                       | Clams, sardines, eggs, dairy, fortified cereals, nutritional yeast.             |
-| Vitamin C   | 90 mg/day (M) / 75 mg/day (F)      | Water-soluble. Collagen and immune function.                                                   | Bell peppers (higher than oranges), kiwi, citrus.                               |
-| Vitamin D   | 600 IU/day (15 µg/day)             | Fat-soluble. Immune system and bone health.                                                    | Fatty fish (salmon, mackerel), egg yolks, fortified milk, UV-exposed mushrooms. |
-| Vitamin E   | 15 mg/day                          | Fat-soluble. Protecting cells from oxidative stress.                                           | Sunflower seeds, almonds, wheat germ oil.                                       |
-| Vitamin K   | 120 µg/day (M) / 90 µg/day (F) †   | Fat-soluble. Blood clotting and bone mineralization.                                           | Kale, spinach, fermented foods (K2).                                            |
+| Category                                    | Requirement                        | Function                                                                                       | Example Sources                                                                 |
+|---------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [Vitamin A](cooking/vitamins/vitamin-a.md)  | 900 µg/day (M) / 700 µg/day (F)    | Fat-soluble. Eye health and skin integrity.                                                    | Egg yolks, dairy, carrots, sweet potatoes (as Beta-Carotene).                   |
+| [Vitamin B1](cooking/vitamins/vitamin-b1.md)| 1.2 mg/day (M) / 1.1 mg/day (F)    | Water-soluble. Carbohydrate metabolism and nerve function. Also called thiamin.                | Trout, sunflower seeds, whole grains, legumes, fortified grains.                |
+| [Vitamin B2](cooking/vitamins/vitamin-b2.md)| 1.3 mg/day (M) / 1.1 mg/day (F)    | Water-soluble. Energy metabolism and antioxidant function. Also called riboflavin.             | Dairy, eggs, salmon, almonds, leafy greens.                                     |
+| [Vitamin B3](cooking/vitamins/vitamin-b3.md)| 16 mg/day (M) / 14 mg/day (F)      | Water-soluble. Energy metabolism and DNA repair. Also called niacin.                           | Tuna, salmon, sardines, peanuts, fortified grains.                              |
+| [Vitamin B5](cooking/vitamins/vitamin-b5.md)| 5 mg/day †                         | Water-soluble. Coenzyme A synthesis and fatty acid metabolism. Also called pantothenic acid.   | Avocado, mushrooms, sunflower seeds, salmon, eggs.                              |
+| [Vitamin B6](cooking/vitamins/vitamin-b6.md)| 1.3 mg/day                         | Water-soluble. Amino acid metabolism and neurotransmitter synthesis. Also called pyridoxine.   | Chickpeas, salmon, potatoes, bananas, tuna.                                     |
+| [Vitamin B7](cooking/vitamins/vitamin-b7.md)| 30 µg/day †                        | Water-soluble. Fatty acid synthesis and glucose metabolism. Also called biotin.                | Egg yolks, salmon, almonds, sweet potatoes, sunflower seeds.                    |
+| [Vitamin B9](cooking/vitamins/vitamin-b9.md)| 400 µg/day                         | Water-soluble. DNA/RNA synthesis and cell division (critical in pregnancy). Also called folate.| Leafy greens, lentils, asparagus, beans, fortified grains.                      |
+| [Vitamin B12](cooking/vitamins/vitamin-b12.md)| 2.4 µg/day                       | Water-soluble. Nervous system and DNA. Crucial for vegans to supplement.                       | Clams, sardines, eggs, dairy, fortified cereals, nutritional yeast.             |
+| [Vitamin C](cooking/vitamins/vitamin-c.md)  | 90 mg/day (M) / 75 mg/day (F)      | Water-soluble. Collagen and immune function.                                                   | Bell peppers (higher than oranges), kiwi, citrus.                               |
+| [Vitamin D](cooking/vitamins/vitamin-d.md)  | 600 IU/day (15 µg/day)             | Fat-soluble. Immune system and bone health.                                                    | Fatty fish (salmon, mackerel), egg yolks, fortified milk, UV-exposed mushrooms. |
+| [Vitamin E](cooking/vitamins/vitamin-e.md)  | 15 mg/day                          | Fat-soluble. Protecting cells from oxidative stress.                                           | Sunflower seeds, almonds, wheat germ oil.                                       |
+| [Vitamin K](cooking/vitamins/vitamin-k.md)  | 120 µg/day (M) / 90 µg/day (F) †   | Fat-soluble. Blood clotting and bone mineralization.                                           | Kale, spinach, fermented foods (K2).                                            |
 
 ### Soft Essentials
 
-| Category          | Requirement       | Function                                            | Example Sources                                              |
-|-------------------|-------------------|-----------------------------------------------------|--------------------------------------------------------------|
-| Dietary Fiber     | 25 g/day (F) / 38 g/day (M) | Gut motility, feeding good bacteria.                | Chia seeds, beans, raspberries, broccoli.                    |
-| Omega-3 (EPA/DHA) | 250–500 mg/day              | Reducing systemic inflammation.                     | Wild salmon, sardines, mackerel, anchovies, oysters.         |
-| Phytochemicals    | Diverse intake daily        | Anti-aging and disease prevention.                  | "Eat the rainbow": purple cabbage, blueberries, turmeric.    |
-| Probiotics        | Periodic intake (daily/weekly) | Maintaining a healthy "army" of gut bacteria.       | Kimchi, kefir, sauerkraut, miso.                             |
+| Category                                                      | Requirement                    | Function                                            | Example Sources                                              |
+|---------------------------------------------------------------|--------------------------------|-----------------------------------------------------|--------------------------------------------------------------|
+| [Dietary Fiber](cooking/soft-essentials/dietary-fiber.md)     | 25 g/day (F) / 38 g/day (M)    | Gut motility, feeding good bacteria.                | Chia seeds, beans, raspberries, broccoli.                    |
+| [Omega-3 (EPA/DHA)](cooking/soft-essentials/omega-3.md)       | 250–500 mg/day                 | Reducing systemic inflammation.                     | Wild salmon, sardines, mackerel, anchovies, oysters.         |
+| [Phytochemicals](cooking/soft-essentials/phytochemicals.md)   | Diverse intake daily           | Anti-aging and disease prevention.                  | "Eat the rainbow": purple cabbage, blueberries, turmeric.    |
+| [Probiotics](cooking/soft-essentials/probiotics.md)           | Periodic intake (daily/weekly) | Maintaining a healthy "army" of gut bacteria.       | Kimchi, kefir, sauerkraut, miso.                             |
 
 ### Requirement-source note
 
@@ -495,7 +495,8 @@ The file shape:
   - When in doubt: if a USDA / standard nutrition-database row exists separately for the modified form (e.g., "tomato, cherry, raw" is its own row), treat it as a cultivar. Otherwise it's a size.
 - Strip quantity, parentheticals, and packaging notes.
 - Use the singular form unless the ingredient is naturally plural (`oats`, `lentils`, `chickpeas`).
-- Sort the table by the canonical ingredient name, case-insensitive, with the same alphabetical sort key used elsewhere in this skill (strip leading articles `the`/`a`/`an`; numeric tokens by value).
+- **Sub-recipe ingredients** (a recipe used as an ingredient by another recipe — e.g., `[Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md)` used inside `apple-chickpea-salad`) use a Markdown link as the canonical name: `[<Title>](cooking/recipes/<slug>.md)`. The visible link text is the recipe's H1 (Title Case). The alphabetical sort key is the link text in lowercase, ignoring `[...](...)` syntax. Lookup matches the link text, not the URL. See `### Sub-recipe ingredients` below for how their cells are computed.
+- Sort the table by the canonical ingredient name, case-insensitive, with the same alphabetical sort key used elsewhere in this skill (strip leading articles `the`/`a`/`an`; numeric tokens by value; for sub-recipe rows, use the link text only).
 
 **Cell content rules:**
 
@@ -658,7 +659,7 @@ For ingredients/forms not in either table (`1 medium butternut squash` ≈ 1000g
 The writing process for the four nutrient sections of any recipe page:
 
 1. For each row in the recipe's `## Ingredients` table, compute (a) the canonical ingredient name per the normalization rules above, and (b) the ingredient mass in grams via `### Quantity → grams conversion`. Skip ingredients with 0g mass.
-2. Search `ingredients-info.md` for that canonical name. (`grep -i "^| <name> |" docs/cooking/ingredients-info.md` is fine; `Read` followed by visual scan is fine. **Do not invent or fuzzy-match** — exact canonical match only.)
+2. Search `ingredients-info.md` for that canonical name. (`grep -i "^| <name> |" docs/cooking/ingredients-info.md` is fine; `Read` followed by visual scan is fine. **Do not invent or fuzzy-match** — exact canonical match only.) **Sub-recipe rows** use a Markdown link in the Ingredient column (`| [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md) | … |`); for those, match against the link text only, ignoring `[...](...)` syntax. After matching, the four cells provide the sub-recipe's per-100g profile and the standard `(value × grams / 100)` math applies — sub-recipes are otherwise treated identically to raw ingredients during lookup.
 3. **If found:** read the four nutrient cells. For each entry of the form `<Display Name> (<X><unit>/100g)`:
    - Compute the contribution: `contribution = X × mass_g / 100` (in the same unit).
    - Add the contribution to the recipe-level running total for that display name (per group).
@@ -676,6 +677,43 @@ The writing process for the four nutrient sections of any recipe page:
 **Dedup + sort.** Within a recipe's `## Macronutrients` (and the other three sections), each slug appears at most once and the bullet list is alphabetical by display name, case-insensitive, with B-vitamins by numeric value (`Vitamin B1` … `Vitamin B12`). Bullets link to the slug's canonical row file (e.g., `cooking/minerals/iron.md`).
 
 **Critical guard.** The agent **MUST NOT** invent slugs not present in the v1 lexicons. If the agent believes an ingredient provides a nutrient that has no slug (e.g., a hypothetical "iron-bound copper"), it surfaces this to the user — it does not silently add a new row to any lexicon table or to `ingredients-info.md`.
+
+### Sub-recipe ingredients
+
+Some recipes use other recipes as ingredients (e.g., `apple-chickpea-salad` calls for "1 batch Maple Dijon Dressing"; `breakfast-sandwiches` uses "1 tbsp Tofu Scramble Seasoning"). These sub-recipe ingredients need a row in `ingredients-info.md` so their nutrients propagate to the parent — but the row is built differently from a raw-ingredient row.
+
+**Convention.** A sub-recipe gets a row in `ingredients-info.md` like any other ingredient, with two differences:
+
+1. **Ingredient column is a Markdown link** to the recipe page:
+
+   ```
+   | [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md) | Healthy Fats (60g/100g) | Calcium (40mg/100g), Potassium (110mg/100g) | Vitamin C (8mg/100g), Vitamin E (2.4mg/100g), Vitamin K (11µg/100g) | — |
+   ```
+
+   The visible link text is the recipe's H1 (Title Case). This signals "this row is a sub-recipe; click for the underlying recipe."
+
+2. **Nutrient cells contain a per-100g profile computed by aggregating the sub-recipe's own `## Ingredients` table.** The procedure:
+   a. For each ingredient row in the sub-recipe, compute canonical name → grams (per `### Quantity → grams conversion`).
+   b. Sum those masses → the sub-recipe's **batch mass** (the total grams of the produced output; for sauces, seasonings, dressings, dips, and assemblies this equals the sum of ingredient masses; for mass-loss recipes see below).
+   c. For each nutrient slug, sum `(per_100g_value × ingredient_grams / 100)` across the sub-recipe's ingredients = total of that nutrient in one batch.
+   d. Per-100g of the sub-recipe = `(total_in_batch × 100) / batch_mass`.
+   e. Apply the same per-100g **inclusion thresholds** that gate any ingredient cell (see `### Canonical units and inclusion thresholds per nutrient`); only include nutrients above their inclusion threshold; round per the cell content rules in `### `ingredients-info.md` schema`.
+
+**Sort key.** The row's alphabetical position is determined by the link text in lowercase, ignoring `[...](...)` punctuation. `[Maple Dijon Dressing](...)` sorts at `maple dijon dressing`.
+
+**Lookup matching.** When a parent-recipe agent encounters a sub-recipe ingredient, it computes the canonical name (e.g., `maple dijon dressing`) and matches against the link text in `ingredients-info.md`'s Ingredient column (case-insensitive, ignoring Markdown link syntax). Once matched, the four cells provide the per-100g profile, and the standard `(value × grams / 100)` math propagates the sub-recipe's nutrients to the parent. **No special-casing beyond the link-text match** — at consumption time, a sub-recipe is just another ingredient with a per-100g profile.
+
+**Mass conversion when a parent recipe uses a sub-recipe:**
+
+- "1 batch &lt;Sub-recipe Title&gt;" → grams = the sub-recipe's batch mass (computed in step b above). Consult the sub-recipe page's metadata blockquote `Yield:` field if it states a finished mass; otherwise sum the ingredient masses directly.
+- "1 tbsp / 1 tsp / 1 cup &lt;Sub-recipe Title&gt;" → standard `### Quantity → grams conversion` using the sub-recipe's bulk-density family (dressings/sauces ~15g/tbsp · 240g/cup; dry seasoning blends ~6g/tbsp · 80g/cup; dips/spreads ~15g/tbsp · 240g/cup; granola ~30g per ¼ cup; ice cream ~130g/cup). When ambiguous, prefer the closest culinary analogue and note the assumption in the sub-recipe's `## Notes`.
+- "to taste" or "—" quantity → 0g contribution, exactly as for raw ingredients.
+
+**Recursion (sub-recipes that use sub-recipes).** Sub-recipes can reference further sub-recipes (e.g., a dressing that calls for hummus). Process **leaf sub-recipes first** so the inner sub-recipe's row is populated before the outer one is computed. Two-level recursion is the practical limit observed in v1; deeper chains require explicit user surfacing.
+
+**Mass-loss sub-recipes.** For sub-recipes where the produced batch mass differs materially from the raw-ingredient sum (typically baked goods that lose 15–25% to evaporation, or reductions/concentrates), use the **finished batch mass** in step (b), not the raw ingredient sum. State the assumed finished mass in the sub-recipe's own `## Notes` so future runs can verify. For sauces, seasonings, dressings, dips, granola, and most assemblies, the raw-sum mass is fine.
+
+**Updating sub-recipe rows.** When a sub-recipe's `## Ingredients` table changes, its row in `ingredients-info.md` must be recomputed and the per-100g profile updated. Then every parent recipe that uses it must be re-derived. The audit subsection `### 5.15 Sub-recipe profile validity` exists to catch drift.
 
 ### Recipe-page rendering
 
@@ -902,22 +940,20 @@ The bullet list contains every recipe from this book, alphabetical, linking to t
 
 Back to [Cooking](cooking/README.md)
 
-| Category      | Requirement                                   | Function                                                | Example Sources                                                                  |
-|---------------|-----------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
-| Complex Carbs | ~3–5 g/kg body weight per day; 45–65% of total daily calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
-| Healthy Fats  | ~0.8–1.2 g/kg body weight per day; 20–35% of total daily calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
-| Protein       | 0.8–1.5 g/kg body weight per day; 10–35% of total daily calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
+| Category                                                 | Requirement                                                       | Function                                                | Example Sources                                                                  |
+|----------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|
+| [Complex Carbs](cooking/macronutrients/complex-carbs.md) | ~3–5 g/kg body weight per day; 45–65% of total daily calories     | Glucose for the brain, glycogen for muscles.            | Quinoa, oats, berries, legumes, sprouted grains.                                 |
+| [Healthy Fats](cooking/macronutrients/healthy-fats.md)   | ~0.8–1.2 g/kg body weight per day; 20–35% of total daily calories | Hormone production, brain structure, vitamin absorption.| Extra virgin olive oil, walnuts (Omega-3), avocado, fatty fish.                  |
+| [Protein](cooking/macronutrients/protein.md)             | 0.8–1.5 g/kg body weight per day; 10–35% of total daily calories  | Muscle repair, neurotransmitters, enzymes.              | Eggs (gold standard), fish, Greek yogurt, soy, lentils.                          |
 
-- [Complex Carbs](cooking/macronutrients/complex-carbs.md)
-- [Healthy Fats](cooking/macronutrients/healthy-fats.md)
-- [Protein](cooking/macronutrients/protein.md)
+> All Requirement values are daily intake targets (24-hour total, summed across all meals). Values shown are for adults 19–50; `(M)` and `(F)` distinguish male/female when they differ; `†` marks an Adequate Intake (AI) rather than RDA. Macronutrient `g/kg/day` values scale with body weight; `% of total daily calories` are AMDRs from the U.S. DRIs. Source: NIH ODS Fact Sheets ([ods.od.nih.gov/factsheets](https://ods.od.nih.gov/factsheets/list-all/)).
 ```
 
-The body shape: H1 → back-link → the **verbatim canonical table** copied byte-for-byte from `## Nutrient lexicons` (4 columns, alphabetical rows, `—` for empty cells, `†` for AIs) → the alphabetical bullet list of every row's slug. The table itself is frozen (see "Frozen-table rule" under `## Anti-drift rules`).
+The body shape: H1 → back-link → the **verbatim canonical table** copied byte-for-byte from `## Nutrient lexicons` (4 columns, alphabetical rows, `Category` cells are Markdown links of the form `[Display Name](cooking/<group>/<slug>.md)`, `—` for empty cells, `†` for AIs) → the source-note blockquote (also copied verbatim from `## Nutrient lexicons`). The table itself is frozen (see "Frozen-table rule" under `## Anti-drift rules`). **No bullet list follows the table** — the linked Category cells are the only navigation path to the individual row pages.
 
 ### `docs/cooking/minerals/README.md`, `docs/cooking/vitamins/README.md`, `docs/cooking/soft-essentials/README.md`
 
-Structurally identical to `macronutrients/README.md`. Each has H1 (`# Minerals` / `# Vitamins` / `# Soft Essentials`), a back-link to Cooking, the **verbatim canonical table** for that group from `## Nutrient lexicons`, and the alphabetical bullet list of that group's slugs. For v1 the bullet lists contain exactly 7 / 13 / 4 entries respectively.
+Structurally identical to `macronutrients/README.md` — H1 (`# Minerals` / `# Vitamins` / `# Soft Essentials`), back-link to Cooking, and the verbatim canonical table for that group from `## Nutrient lexicons` (with linked Category cells), followed by the source-note blockquote. For v1 the tables contain exactly 7 / 13 / 4 rows respectively.
 
 ### `docs/cooking/macronutrients/<slug>.md` (and analogous for minerals, vitamins, soft-essentials)
 
@@ -1135,7 +1171,7 @@ Steps, in this order:
 11. **`books/README.md`** — insert the new book in alphabetical position. Create the file if it didn't exist.
 12. **`docs/cooking/README.md`** — create from template if it doesn't already exist. (Created once and never modified after.)
 
-The four group `README.md` files (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) do **not** need modification during a normal run — their canonical tables are frozen and their alphabetical slug lists are fixed at v1. The only legitimate edit is when the user explicitly approves a new lexicon row.
+The four group `README.md` files (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) do **not** need modification during a normal run — their canonical tables are frozen at v1 (and they no longer contain a separate slug list; the Category column links replace it). The only legitimate edit is when the user explicitly approves a new lexicon row.
 
 `docs/cooking/ingredients-info.md` is updated **inline during Phase 2.4b** (recipe-level lookup-extend). By Phase 4 it is already current.
 
@@ -1230,7 +1266,7 @@ Every recipe page:
 
 ### 5.10 Frozen-table integrity
 
-The four group `README.md` tables (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) are byte-identical to the canonical copies in this SKILL's `## Nutrient lexicons` (modulo whitespace within a cell). Any drift fails the audit and must be restored from this SKILL — agents do not touch the table content or column order.
+The four group `README.md` tables (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) are byte-identical to the canonical copies in this SKILL's `## Nutrient lexicons` (modulo whitespace within a cell). The `Category` cells are Markdown links of the form `[Display Name](cooking/<group>/<slug>.md)`; an unlinked Category cell is a drift defect and fails the audit. Any drift must be restored from this SKILL — agents do not touch the table content, column order, or the link target.
 
 ### 5.11 Nutrient bidirectional integrity
 
@@ -1272,6 +1308,18 @@ For `ingredients-info.md` cells specifically: every entry uses the EXACT `Catego
 The audit cross-checks each ingredient row against established USDA per-100g profiles and the inclusion-threshold column to flag both kinds of defect. Agents do NOT make ad-hoc trace-amount decisions.
 
 **Per-recipe threshold compliance for recipe-page bullets:** see `### 5.13 Nutrient-derivation correctness` — recipe-page bullets that fall below the **recipe drop threshold** (or are dropped while above it) are flagged there, since the check requires recomputing the per-recipe sum.
+
+### 5.15 Sub-recipe profile validity
+
+For every sub-recipe used as an ingredient anywhere in `docs/cooking/recipes/`, confirm:
+
+- A row exists in `docs/cooking/ingredients-info.md` whose Ingredient column is a Markdown link to the sub-recipe's recipe page (`| [<Title>](cooking/recipes/<slug>.md) | … |`) — not a plain canonical-name string.
+- The four nutrient cells follow the per-100g convention defined in `### Sub-recipe ingredients`. Recompute the per-100g profile from the sub-recipe's `## Ingredients` table (steps a–d in that section) and verify each surfaced display name's amount matches within ~10% rounding tolerance. Missing nutrients above the inclusion threshold or surfaced nutrients below it are defects.
+- Cross-check by walking parent recipes that use the sub-recipe: their derived nutrient sections must include the sub-recipe's per-100g contribution. A parent recipe whose sums silently exclude a sub-recipe's nutrients is the canonical pre-v1 defect this audit is designed to catch.
+
+To enumerate sub-recipes used as ingredients, scan every recipe's `## Ingredients` table for substrings matching another recipe's H1 title (case-insensitive). The set is closed: a recipe is a sub-recipe iff at least one other recipe lists it as an ingredient. Build-your-own / template recipes (e.g., `guzinta-bowl-guide`, `toast-is-the-most`) reference sub-recipes only inside `—`-quantity rows, so those parents contribute no real consumption — sub-recipe rows still exist, but parent re-derivation is a no-op there.
+
+Discrepancies fail the audit. Restore by recomputing the sub-recipe's per-100g profile, updating its row, and re-deriving every parent recipe that uses it.
 
 For recipe-page nutrient bullets specifically: every bullet matches `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` for quantitative nutrients, or `- [<Display Name>](cooking/<group>/<slug>.md)` for qualitative `Phytochemicals` / `Probiotics`. Defects:
 

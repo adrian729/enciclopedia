@@ -71,3 +71,30 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+
+## Macronutrients
+
+- [Complex Carbs](cooking/macronutrients/complex-carbs.md) — 319g
+- [Protein](cooking/macronutrients/protein.md) — 42g
+
+## Minerals
+
+- [Calcium](cooking/minerals/calcium.md) — 810mg
+- [Iron](cooking/minerals/iron.md) — 26mg
+- [Magnesium](cooking/minerals/magnesium.md) — 92mg
+- [Potassium](cooking/minerals/potassium.md) — 890mg
+- [Selenium](cooking/minerals/selenium.md) — 140µg
+- [Zinc](cooking/minerals/zinc.md) — 2.9mg
+
+## Vitamins
+
+- [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 3.4mg
+- [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 2.1mg
+- [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 25mg
+- [Vitamin B5](cooking/vitamins/vitamin-b5.md) — 1.8mg
+- [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 0.2mg
+- [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 110µg
+
+## Soft Essentials
+
+- [Dietary Fiber](cooking/soft-essentials/dietary-fiber.md) — 11g

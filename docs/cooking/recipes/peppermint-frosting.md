@@ -38,3 +38,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+
+## Vitamins
+
+- [Vitamin B12](cooking/vitamins/vitamin-b12.md) — 0.2µg

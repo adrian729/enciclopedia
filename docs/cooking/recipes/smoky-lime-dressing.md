@@ -33,3 +33,15 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+
+## Macronutrients
+
+- [Healthy Fats](cooking/macronutrients/healthy-fats.md) — 32g
+
+## Vitamins
+
+- [Vitamin C](cooking/vitamins/vitamin-c.md) — 14mg
+
+## Soft Essentials
+
+- [Phytochemicals](cooking/soft-essentials/phytochemicals.md)

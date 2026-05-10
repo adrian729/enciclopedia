@@ -34,3 +34,32 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+
+## Macronutrients
+
+- [Complex Carbs](cooking/macronutrients/complex-carbs.md) — 45g
+- [Healthy Fats](cooking/macronutrients/healthy-fats.md) — 5g
+- [Protein](cooking/macronutrients/protein.md) — 7g
+
+## Minerals
+
+- [Calcium](cooking/minerals/calcium.md) — 99mg
+- [Iron](cooking/minerals/iron.md) — 2.9mg
+- [Magnesium](cooking/minerals/magnesium.md) — 54mg
+- [Potassium](cooking/minerals/potassium.md) — 250mg
+- [Zinc](cooking/minerals/zinc.md) — 0.8mg
+
+## Vitamins
+
+- [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 0.3mg
+- [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 0.2mg
+- [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 2.7mg
+- [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 88µg
+- [Vitamin C](cooking/vitamins/vitamin-c.md) — 23mg
+- [Vitamin E](cooking/vitamins/vitamin-e.md) — 1.4mg
+- [Vitamin K](cooking/vitamins/vitamin-k.md) — 15µg
+
+## Soft Essentials
+
+- [Dietary Fiber](cooking/soft-essentials/dietary-fiber.md) — 5g
+- [Phytochemicals](cooking/soft-essentials/phytochemicals.md)
