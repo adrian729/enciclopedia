@@ -187,9 +187,9 @@ Every list that is supposed to be alphabetical uses this sort key:
 
 - Case-insensitive.
 - Strip leading articles `the`, `a`, `an` before comparing.
-- Numbers sort by numeric value when the leading token is a digit (`5-bean` < `7-layer`).
+- Numeric tokens sort by integer value, not ASCII (so `5-bean` < `7-layer` < `10-bean`). The most common case is a leading-digit token, but any embedded digit run is compared numerically.
 
-Lists this applies to: recipes index, categories index, traits index, books index, recipe links inside any category/trait/book page, and the `## Categories`, `## Traits`, `## Books` sections of every recipe page.
+This sort key applies to: the recipes-index **table rows** (sorted by the `Recipe` cell title) and the comma-separated entries inside each `Categories` / `Traits` cell of that table; the categories/traits/books-index bullet lists; the recipe links inside any category/trait/book page; and the `## Categories`, `## Traits`, `## Books` sections of every recipe page.
 
 ### Link path convention
 
@@ -258,7 +258,7 @@ The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/READM
 
 ### Ingredient-info append-only rule
 
-`docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells use display names from `## Nutrient lexicons` with per-100g amount estimates (see "Cell content rules" in `## Ingredient → nutrient mapping`); entries are sorted alphabetically inside each cell — never reorder them into "frequency" or "priority" order. Empty cells are a single en-dash (`—`), never blank, never `none`, never `N/A`.
+`docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells use display names from `## Nutrient lexicons` with per-100g amount estimates (see "Cell content rules" in `## Ingredient → nutrient mapping`); entries are sorted alphabetically inside each cell — never reorder them into "frequency" or "priority" order. Empty cells are a single em-dash (`—`, U+2014), never blank, never `none`, never `N/A`.
 
 ## Canonical category lexicon
 
@@ -352,7 +352,7 @@ The four nutrient axes — macronutrients, minerals, vitamins, soft-essentials �
 | Category | Requirement | Function | Example Sources |
 ```
 
-No table uses a different column name (`Top Sources`, `Best Bioavailable Sources`, `Why You Can't Skip It`, `Main Focus`, `Mineral`, `Type`, etc.). Empty cells are a single en-dash (`—`). Rows are alphabetized within each table per the alphabetical sort key.
+No table uses a different column name (`Top Sources`, `Best Bioavailable Sources`, `Why You Can't Skip It`, `Main Focus`, `Mineral`, `Type`, etc.). Empty cells are a single em-dash (`—`, U+2014). Rows are alphabetized within each table per the alphabetical sort key.
 
 **The `Example Sources` column is examples only, NOT an exhaustive list.** This is repeated in the column-name itself (`Example Sources`, not `Top Sources` or `Best Sources`) so the framing survives at every glance. An ingredient not appearing in any cell may still be a meaningful source of the nutrient. Use the column as orientation; derive each ingredient's actual nutrient profile from established nutritional knowledge.
 
@@ -507,7 +507,7 @@ The file shape:
   - Vitamins (per the canonical-unit table): `Vitamin C (28mg/100g)`, `Vitamin B12 (0.9µg/100g)`, `Vitamin A (470µg/100g)`. Never write `Vitamin A (0.47mg/100g)` — that's a different (non-canonical) unit and would corrupt summation.
   - Soft Essentials: `Dietary Fiber (12g/100g)`, `Omega-3 (EPA/DHA) (2400mg/100g)` use a per-100g amount; `Phytochemicals` and `Probiotics` are qualitative — write the bare display name with no amount.
 - Within-cell sort: alphabetical by display name, case-insensitive. Vitamins ending in a digit sort by **numeric value** of the digit, NOT ASCII: `Vitamin B1, Vitamin B2, Vitamin B3, Vitamin B5, Vitamin B6, Vitamin B7, Vitamin B9, Vitamin B12`.
-- Empty cells written as a single en-dash (`—`) — never blank, never `none`, never `N/A`.
+- Empty cells written as a single em-dash (`—`, U+2014) — never blank, never `none`, never `N/A`.
 - **Inclusion criterion (per-100g `inclusion threshold`, NOT the stricter recipe drop threshold):** a nutrient is listed in the row whenever the ingredient's per-100g content is **at or above the inclusion threshold** for that nutrient (see `### Canonical units and inclusion thresholds per nutrient` — the `Inclusion threshold (per 100g)` column, which is roughly the recipe drop threshold ÷ 5). It is **omitted** when below the inclusion threshold. **Do NOT apply the recipe drop threshold here** — at the ingredient level we do not know how much of the ingredient any particular recipe will use, and a small per-100g content can still produce a meaningful recipe-level sum at high ingredient quantities (e.g., apple Vitamin C at 4.6mg/100g is below the 5mg recipe drop threshold but well above the 1mg inclusion threshold, and a 1kg apple-pie filling delivers ~46mg, which the recipe stage would surface). The agent's job at the ingredient level is to write what's actually in the food, filtered only against the looser inclusion threshold; the recipe-level filter decides whether to surface a nutrient on any particular recipe page.
 - For qualitative entries (`Phytochemicals`, `Probiotics`), include whenever the ingredient is a recognized source (lycopene, capsaicin, anthocyanins, sulforaphane, etc. for Phytochemicals; live-culture fermented items for Probiotics) — there is no quantitative threshold.
 
@@ -778,10 +778,24 @@ Every page kind under `docs/cooking/` has a fixed shape. Agents emit these verba
 
 Back to [Cooking](cooking/README.md)
 
-- [Banana Bread](cooking/recipes/banana-bread.md)
-- [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
+| Recipe | Categories | Traits | Complex Carbs | Healthy Fats | Protein | Calcium | Iodine | Iron | Magnesium | Potassium | Selenium | Zinc | Vitamin A | Vitamin B1 | Vitamin B2 | Vitamin B3 | Vitamin B5 | Vitamin B6 | Vitamin B7 | Vitamin B9 | Vitamin B12 | Vitamin C | Vitamin D | Vitamin E | Vitamin K | Dietary Fiber | Omega-3 | Phytochemicals | Probiotics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [Banana Bread](cooking/recipes/banana-bread.md) | dessert | easy | 245g | 22g | 16g | 120mg | — | 4mg | 60mg | 580mg | — | 1.2mg | 90µg | 0.2mg | 0.3mg | 4mg | 1mg | 0.4mg | — | 90µg | — | 8mg | — | 3.5mg | 7µg | 7g | — | yes | — |
+| [Classic French Omelette](cooking/recipes/classic-french-omelette.md) | breakfast, main | easy, fast | — | 28g | 19g | — | — | 1.8mg | — | — | 45µg | — | 370µg | — | — | — | — | — | — | — | 1.4µg | — | 3µg | — | — | — | — | — | — |
 ...
 ```
+
+**Schema (the contract for every row).** The script `scripts/build_recipes_table.py` (next to this SKILL) regenerates this file in one pass from the current `docs/cooking/recipes/*.md` set. Maintenance runs MUST regenerate it from the script rather than hand-editing rows, so the rules below stay enforced by construction:
+
+- **30 columns, fixed order**: `Recipe | Categories | Traits | <macronutrients> | <minerals> | <vitamins> | <soft-essentials>`. Within each nutrient group the columns are alphabetical (B-vitamins by numeric value: `B1 … B12`). The 27 nutrient columns are the 27 v1 slugs from `## Nutrient lexicons`. The header label is the canonical lexicon display name **except** `Omega-3` (parenthetical dropped — matches the recipe-page bullet link text rule).
+- **Rows sorted alphabetically by recipe display name** using the standard sort key (case-insensitive, strip leading `the`/`a`/`an`, numeric tokens by value).
+- **`Recipe` cell**: `[<H1 title>](cooking/recipes/<slug>.md)` — absolute path per the link path convention.
+- **`Categories` cell**: comma-separated category **slugs** (not display names), alphabetical, e.g. `breakfast, main`. `—` when empty (won't happen in practice — every recipe has ≥1 category, but the empty form is defined for completeness).
+- **`Traits` cell**: comma-separated trait **slugs**, alphabetical, e.g. `easy, fast, vegan`. `—` when the recipe has zero traits.
+- **Quantitative nutrient cells**: the **exact `<amount><unit>` printed in the recipe page bullet** (e.g. `158g`, `1.4µg`, `370µg`). No space between number and unit. No rounding here — the recipe page is the source of truth and this cell mirrors it byte-for-byte. `—` when the bullet is absent from that recipe (i.e. the nutrient was below its recipe drop threshold or the section was omitted).
+- **Qualitative nutrient cells** (`Phytochemicals`, `Probiotics`): `yes` when the recipe page lists the bullet, `—` when it does not. No amount.
+
+The slug-form encoding for `Categories` / `Traits` is deliberate: it gives a parser a single canonical key per cell entry, mapping directly to `cooking/categories/<slug>.md` / `cooking/traits/<slug>.md` and to the corresponding lexicon entry. Display-name encoding would require a slugify step before any lookup.
 
 ### `docs/cooking/recipes/<slug>.md`
 
@@ -874,7 +888,7 @@ Lists every category currently in use under `categories/`. New entries appear he
 
 Back to [Categories](cooking/categories/README.md)
 
-- [Banana Bread](cooking/recipes/banana-bread.md)
+- [Breakfast Sandwiches](cooking/recipes/breakfast-sandwiches.md)
 - [Classic French Omelette](cooking/recipes/classic-french-omelette.md)
 ...
 ```
@@ -983,7 +997,7 @@ Back-link points to the parent group's README. Bullet list is every recipe whose
 
 Back to [Cooking](cooking/README.md)
 
-Authoritative ingredient → nutrient lookup. Alphabetical by ingredient (canonical name; see `## Ingredient → nutrient mapping` for the normalization rules). Cells contain entries from `## Nutrient lexicons` using the EXACT `Category` column display name, each followed by a per-100g amount estimate in parentheses (`Display Name (Xunit/100g)`). `Phytochemicals` and `Probiotics` are qualitative — bare display name with no amount. An en-dash (`—`) marks an empty cell. New ingredients are appended in alphabetical position; existing rows are not deleted.
+Authoritative ingredient → nutrient lookup. Alphabetical by ingredient (canonical name; see `## Ingredient → nutrient mapping` for the normalization rules). Cells contain entries from `## Nutrient lexicons` using the EXACT `Category` column display name, each followed by a per-100g amount estimate in parentheses (`Display Name (Xunit/100g)`). `Phytochemicals` and `Probiotics` are qualitative — bare display name with no amount. An em-dash (`—`, U+2014) marks an empty cell. New ingredients are appended in alphabetical position; existing rows are not deleted.
 
 | Ingredient | Macronutrients | Minerals | Vitamins | Soft Essentials |
 |---|---|---|---|---|
@@ -1156,7 +1170,14 @@ Centralized phase. Single agent (or main thread) writes the index and category/t
 
 Steps, in this order:
 
-1. **`recipes/README.md`** — for each new recipe, insert in alphabetical position. Create the file if it didn't exist.
+1. **`recipes/README.md`** — regenerate the table in one pass by running the script bundled with this skill from the repo root:
+
+   ```bash
+   python3 .claude/skills/cooking-book-summary/scripts/build_recipes_table.py \
+       > docs/cooking/recipes/README.md
+   ```
+
+   The script walks every `docs/cooking/recipes/<slug>.md` file, extracts H1 / categories / traits / nutrient sections, sorts alphabetically per the standard sort key, and emits the H1 + back-link + table in the canonical 30-column format (see the recipe-index template under `## Page templates`). Never hand-edit rows in this file — the script is the only writer, and hand-edits drift from recipe-page truth. The script is idempotent; running it twice in a row produces no diff.
 2. **`categories/<slug>.md`** — for each category referenced by any new recipe:
    1. Create the file from the template if it doesn't exist.
    2. Insert each new recipe link in alphabetical position.
@@ -1211,7 +1232,7 @@ Concrete check: for each recipe `R` and each category `C` listed on it, `grep "c
 
 ### 5.5 Index completeness
 
-Every file under `recipes/`, `categories/`, `traits/`, and `books/` (excluding the directory's own `README.md`) is listed in that directory's `README.md`. Conversely, every entry in any `README.md` has a backing file. Run:
+Every file under `recipes/`, `categories/`, `traits/`, and `books/` (excluding the directory's own `README.md`) is referenced from that directory's `README.md`. Conversely, every link target in any `README.md` has a backing file. Note: `recipes/README.md` is a **table** (one row per recipe — see audit 5.16 for the row-by-row contract); the other three directory READMEs are bullet lists. The bash checks below are format-agnostic — they basename-grep and link-enumerate either form. Run:
 
 ```bash
 # Files that exist but aren't indexed
@@ -1248,7 +1269,7 @@ Agents do this per-file: for each recipe / category / trait / book page, enumera
 
 ### 5.7 Alphabetical order
 
-Every list that should be alphabetical is alphabetical per the sort key in "Anti-drift rules". Includes: every `README.md`'s bullet list, every category/trait/book page's recipe list, and every recipe page's `## Categories`, `## Traits`, `## Books` sections.
+Every list that should be alphabetical is alphabetical per the sort key in "Anti-drift rules". Includes: the recipes-index **table** rows in `recipes/README.md` (sorted by the `Recipe` cell title — covered byte-for-byte by 5.16, listed here for completeness); the `categories/README.md`, `traits/README.md`, and `books/README.md` bullet lists; every category/trait/book page's recipe list; every recipe page's `## Categories`, `## Traits`, `## Books` sections; and the comma-separated entries inside each `Categories` / `Traits` cell of the recipes-index table.
 
 ### 5.8 Back-link presence
 
@@ -1309,6 +1330,14 @@ The audit cross-checks each ingredient row against established USDA per-100g pro
 
 **Per-recipe threshold compliance for recipe-page bullets:** see `### 5.13 Nutrient-derivation correctness` — recipe-page bullets that fall below the **recipe drop threshold** (or are dropped while above it) are flagged there, since the check requires recomputing the per-recipe sum.
 
+**Recipe-page nutrient bullet format**: every bullet matches `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` for quantitative nutrients, or `- [<Display Name>](cooking/<group>/<slug>.md)` for qualitative `Phytochemicals` / `Probiotics`. Defects:
+
+- Missing the ` — <amount><unit>` suffix on a quantitative bullet.
+- Including ` — <amount>` on `Phytochemicals` or `Probiotics`.
+- Using a hyphen-minus or en-dash instead of em-dash (` — ` is `space U+2014 space`).
+- Adding a space between the number and the unit (`28 g` is wrong; `28g` is correct).
+- Display name in slug form (`vitamin-b12` instead of `Vitamin B12`) or in plural / free-text variant.
+
 ### 5.15 Sub-recipe profile validity
 
 For every sub-recipe used as an ingredient anywhere in `docs/cooking/recipes/`, confirm:
@@ -1321,13 +1350,26 @@ To enumerate sub-recipes used as ingredients, scan every recipe's `## Ingredient
 
 Discrepancies fail the audit. Restore by recomputing the sub-recipe's per-100g profile, updating its row, and re-deriving every parent recipe that uses it.
 
-For recipe-page nutrient bullets specifically: every bullet matches `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` for quantitative nutrients, or `- [<Display Name>](cooking/<group>/<slug>.md)` for qualitative `Phytochemicals` / `Probiotics`. Defects:
+### 5.16 Recipes-index table integrity
 
-- Missing the ` — <amount><unit>` suffix on a quantitative bullet.
-- Including ` — <amount>` on `Phytochemicals` or `Probiotics`.
-- Using a hyphen-minus or en-dash instead of em-dash (` — ` is `space U+2014 space`).
-- Adding a space between the number and the unit (`28 g` is wrong; `28g` is correct).
-- Display name in slug form (`vitamin-b12` instead of `Vitamin B12`) or in plural / free-text variant.
+`docs/cooking/recipes/README.md` MUST be byte-identical to the output of the bundled script, regenerated from the current recipe pages:
+
+```bash
+python3 .claude/skills/cooking-book-summary/scripts/build_recipes_table.py | diff - docs/cooking/recipes/README.md
+```
+
+Any diff is a defect — restore by re-running the script with output redirected to the file (see Phase 4 step 1). The script is the only sanctioned writer of this file.
+
+Beyond the byte-identical check, the table also encodes invariants worth surfacing as named defects when they fail (these will surface as a diff, but stating them aids debugging):
+
+- **Row count = recipe-page count.** Every file under `docs/cooking/recipes/*.md` (excluding `README.md`) corresponds to exactly one row, and every row corresponds to a file. Orphan rows or missing rows are defects.
+- **Recipe cell link target exists.** Each `Recipe` cell links to `cooking/recipes/<slug>.md`; the target file must exist.
+- **Categories / Traits cells match the recipe page's `## Categories` / `## Traits` sections.** Slugs are comma-separated, alphabetical, and `—` only when the section is absent (Traits) or impossible (Categories, never empty). Display names in these cells are a defect — slugs only.
+- **Quantitative nutrient cells match the recipe page bullets byte-for-byte.** `158g` on the recipe page → `158g` in the cell. `—` ↔ bullet absent. A discrepancy between cell value and recipe-page bullet is a defect; fix the recipe page (the source of truth) and regenerate the table.
+- **Qualitative nutrient cells**: `yes` ↔ recipe-page bullet exists for that slug; `—` ↔ bullet absent. Anything else in the cell (`y`, `Y`, `✓`, `true`, blank) is a defect. Note: 5.16 only checks the cell value form; it does NOT validate the bullet's own format on the recipe page (e.g., a malformed qualitative bullet with an illegal ` — <amount>` suffix would still produce `yes` here). Bullet-format defects are caught by 5.13 / 5.14 instead. The generator script also emits a `[WARN]` to stderr for the structural subset it can detect (unparseable bullet, qualitative bullet with an amount, quantitative bullet missing its amount) — but it does NOT catch defects that require lexicon knowledge (e.g., a slug-form display name like `vitamin-b12` instead of `Vitamin B12`); those remain 5.14's responsibility.
+- **Alphabetical row order** per the standard sort key. Misordering surfaces as a diff.
+
+Auditors should NOT hand-fix cells in the README; they fix the underlying recipe page (or the script's column list, on the explicit user-approved addition of a new v1 lexicon row) and rerun the script.
 
 ### Audit reports
 

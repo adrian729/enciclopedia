@@ -2,111 +2,113 @@
 
 Back to [Cooking](cooking/README.md)
 
-- [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
-- [Apple Turnovers](cooking/recipes/apple-turnovers.md)
-- [Artichoke Dressing](cooking/recipes/artichoke-dressing.md)
-- [Artichoke Salad](cooking/recipes/artichoke-salad.md)
-- [Artichoke Salad Sandwiches](cooking/recipes/artichoke-salad-sandwiches.md)
-- [Avocado Cilantro Sauce](cooking/recipes/avocado-cilantro-sauce.md)
-- [Avocado Pesto](cooking/recipes/avocado-pesto.md)
-- [Biscuit Mix](cooking/recipes/biscuit-mix.md)
-- [Breakfast Sandwiches](cooking/recipes/breakfast-sandwiches.md)
-- [Brisk Broccoli Salad](cooking/recipes/brisk-broccoli-salad.md)
-- [Brownie in a Cup](cooking/recipes/brownie-in-a-cup.md)
-- [Butter Cauliflower](cooking/recipes/butter-cauliflower.md)
-- [Cajun Seasoning](cooking/recipes/cajun-seasoning.md)
-- [Cajun-Spiced Veggie Pasta](cooking/recipes/cajun-spiced-veggie-pasta.md)
-- [Caramelized Onion Pasta](cooking/recipes/caramelized-onion-pasta.md)
-- [Cheesy BBQ Popcorn](cooking/recipes/cheesy-bbq-popcorn.md)
-- [Cheesy Cracker Snackers](cooking/recipes/cheesy-cracker-snackers.md)
-- [Chickpea Lettuce Wraps](cooking/recipes/chickpea-lettuce-wraps.md)
-- [Chocolate Bars](cooking/recipes/chocolate-bars.md)
-- [Chocolate Cream Cheese Frosting](cooking/recipes/chocolate-cream-cheese-frosting.md)
-- [Chocolate Frosting](cooking/recipes/chocolate-frosting.md)
-- [Chocolate Pots](cooking/recipes/chocolate-pots.md)
-- [Cinnamon Bun Popcorn](cooking/recipes/cinnamon-bun-popcorn.md)
-- [Cinnamon Cream Cheese Frosting](cooking/recipes/cinnamon-cream-cheese-frosting.md)
-- [Citrus & Coconut Custard Cups](cooking/recipes/citrus-coconut-custard-cups.md)
-- [Coconut Macaroons](cooking/recipes/coconut-macaroons.md)
-- [Cool Coconut Fruit Dip](cooking/recipes/cool-coconut-fruit-dip.md)
-- [Cool Ranch Popcorn](cooking/recipes/cool-ranch-popcorn.md)
-- [Creamy Basil Gnocchi](cooking/recipes/creamy-basil-gnocchi.md)
-- [Creamy Gnocchi Soup](cooking/recipes/creamy-gnocchi-soup.md)
-- [Creamy Miso Udon Noodles](cooking/recipes/creamy-miso-udon-noodles.md)
-- [Creamy Tuscan Mushrooms](cooking/recipes/creamy-tuscan-mushrooms.md)
-- [Crunchy Cabbage Salad](cooking/recipes/crunchy-cabbage-salad.md)
-- [Curry Coconut Carrot Soup](cooking/recipes/curry-coconut-carrot-soup.md)
-- [Devil's Food Cake Mix](cooking/recipes/devils-food-cake-mix.md)
-- [French Toast in a Mug](cooking/recipes/french-toast-in-a-mug.md)
-- [Fried Cinnamon Sugar Bananas](cooking/recipes/fried-cinnamon-sugar-bananas.md)
-- [Garlic Bread Soup](cooking/recipes/garlic-bread-soup.md)
-- [Garlic Noodles](cooking/recipes/garlic-noodles.md)
-- [Gingerbread Frosting](cooking/recipes/gingerbread-frosting.md)
-- [Greek Bowls](cooking/recipes/greek-bowls.md)
-- [Greek Seasoning](cooking/recipes/greek-seasoning.md)
-- [Guzinta Bowl Guide](cooking/recipes/guzinta-bowl-guide.md)
-- [Hash in a Dash](cooking/recipes/hash-in-a-dash.md)
-- [Herb Butter Tofu & Broccoli](cooking/recipes/herb-butter-tofu-broccoli.md)
-- [Hot Chocolate Mix](cooking/recipes/hot-chocolate-mix.md)
-- [Hummamole](cooking/recipes/hummamole.md)
-- [Hummus Blue Cheese Dressing](cooking/recipes/hummus-blue-cheese-dressing.md)
-- [Hummus Caesar Dressing](cooking/recipes/hummus-caesar-dressing.md)
-- [Hummus Ranch Dressing](cooking/recipes/hummus-ranch-dressing.md)
-- [Ice Cream](cooking/recipes/ice-cream.md)
-- [Italian Seasoning](cooking/recipes/italian-seasoning.md)
-- [Kale Caesar](cooking/recipes/kale-caesar.md)
-- [Kitchen Sink Cookies](cooking/recipes/kitchen-sink-cookies.md)
-- [Leftover Rice Pudding](cooking/recipes/leftover-rice-pudding.md)
-- [Lemon Cream Pasta](cooking/recipes/lemon-cream-pasta.md)
-- [Lentil Burritos](cooking/recipes/lentil-burritos.md)
-- [Lime & Bean Soup](cooking/recipes/lime-bean-soup.md)
-- [Lo Mein](cooking/recipes/lo-mein.md)
-- [Mac & Cheese Powder](cooking/recipes/mac-cheese-powder.md)
-- [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md)
-- [Microwave Popcorn](cooking/recipes/microwave-popcorn.md)
-- [Minestrone](cooking/recipes/minestrone.md)
-- [Mini Berry Crisp](cooking/recipes/mini-berry-crisp.md)
-- [Morning Rush Potato Pancakes](cooking/recipes/morning-rush-potato-pancakes.md)
-- [Muffin Mix](cooking/recipes/muffin-mix.md)
-- [Mushroom Gravy Mix](cooking/recipes/mushroom-gravy-mix.md)
-- [New Bay Seasoning](cooking/recipes/new-bay-seasoning.md)
-- [Oatmeal Breakfast Cookies](cooking/recipes/oatmeal-breakfast-cookies.md)
-- [Oatmeal Packets](cooking/recipes/oatmeal-packets.md)
-- [Pancake & Waffle Mix](cooking/recipes/pancake-waffle-mix.md)
-- [Peanut Butter Frosting](cooking/recipes/peanut-butter-frosting.md)
-- [Peanut Butter Popcorn](cooking/recipes/peanut-butter-popcorn.md)
-- [Peanut Butter Squares](cooking/recipes/peanut-butter-squares.md)
-- [Peanut Lime Dressing](cooking/recipes/peanut-lime-dressing.md)
-- [Peppermint Frosting](cooking/recipes/peppermint-frosting.md)
-- [Perfect Pot-Pie Soup](cooking/recipes/perfect-pot-pie-soup.md)
-- [Personal Pita Pizzas](cooking/recipes/personal-pita-pizzas.md)
-- [Pie Sandwich](cooking/recipes/pie-sandwich.md)
-- [Pineapple BBQ Chickpeas](cooking/recipes/pineapple-bbq-chickpeas.md)
-- [Pizza Popcorn](cooking/recipes/pizza-popcorn.md)
-- [Pumpkin Pie Spice](cooking/recipes/pumpkin-pie-spice.md)
-- [Quesadillas](cooking/recipes/quesadillas.md)
-- [Queso Dip](cooking/recipes/queso-dip.md)
-- [Ramen Soup](cooking/recipes/ramen-soup.md)
-- [Sesame Dressing](cooking/recipes/sesame-dressing.md)
-- [Smoky Black Bean Sandwiches](cooking/recipes/smoky-black-bean-sandwiches.md)
-- [Smoky Lime Dressing](cooking/recipes/smoky-lime-dressing.md)
-- [Smoothie Kits](cooking/recipes/smoothie-kits.md)
-- [Spiced-Up BLT Pasta Salad](cooking/recipes/spiced-up-blt-pasta-salad.md)
-- [Sticky Ginger Stir-Fry](cooking/recipes/sticky-ginger-stir-fry.md)
-- [Stovetop Granola](cooking/recipes/stovetop-granola.md)
-- [Strawberry Frosting](cooking/recipes/strawberry-frosting.md)
-- [Sweet & Spicy Corn Soup](cooking/recipes/sweet-spicy-corn-soup.md)
-- [Sweet Korean Lentils](cooking/recipes/sweet-korean-lentils.md)
-- [Sweet Potato Dip](cooking/recipes/sweet-potato-dip.md)
-- [Tacos & More Seasoning](cooking/recipes/tacos-more-seasoning.md)
-- [Taste of Italy](cooking/recipes/taste-of-italy.md)
-- [Toast Is the Most](cooking/recipes/toast-is-the-most.md)
-- [Tofu Scramble Seasoning](cooking/recipes/tofu-scramble-seasoning.md)
-- [Tomato Sauce Amper-Uppers](cooking/recipes/tomato-sauce-amper-uppers.md)
-- [Trail Mix](cooking/recipes/trail-mix.md)
-- [Tuscan Bean Pasta](cooking/recipes/tuscan-bean-pasta.md)
-- [Vanilla Frosting](cooking/recipes/vanilla-frosting.md)
-- [Veggie Broth Powder](cooking/recipes/veggie-broth-powder.md)
-- [White Bean Pinwheels](cooking/recipes/white-bean-pinwheels.md)
-- [Yellow Cake Mix](cooking/recipes/yellow-cake-mix.md)
-- [Zesty Corn Salad](cooking/recipes/zesty-corn-salad.md)
+| Recipe | Categories | Traits | Complex Carbs | Healthy Fats | Protein | Calcium | Iodine | Iron | Magnesium | Potassium | Selenium | Zinc | Vitamin A | Vitamin B1 | Vitamin B2 | Vitamin B3 | Vitamin B5 | Vitamin B6 | Vitamin B7 | Vitamin B9 | Vitamin B12 | Vitamin C | Vitamin D | Vitamin E | Vitamin K | Dietary Fiber | Omega-3 | Phytochemicals | Probiotics |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md) | salad | make-ahead | 158g | 26g | 34g | 290mg | — | 11mg | 210mg | 1920mg | 23µg | 6mg | — | 0.5mg | 0.8mg | 2.1mg | 1.3mg | 0.6mg | — | 630µg | — | 26mg | — | 4.9mg | 55µg | 36g | — | yes | — |
+| [Apple Turnovers](cooking/recipes/apple-turnovers.md) | dessert | easy | 206g | 45g | 32g | 150mg | — | 12mg | 55mg | 890mg | 91µg | 2.8mg | — | 1.4mg | 1mg | 14mg | 1.4mg | 0.2mg | — | 270µg | 0.2µg | 17mg | — | — | — | 16g | — | yes | — |
+| [Artichoke Dressing](cooking/recipes/artichoke-dressing.md) | sauce | no-cook | — | — | 6g | — | — | 0.8mg | — | 220mg | 6.4µg | 0.9mg | — | 1mg | 1mg | 5.1mg | 0.5mg | 1mg | — | 100µg | 4µg | — | — | — | — | 3g | — | yes | — |
+| [Artichoke Salad](cooking/recipes/artichoke-salad.md) | salad | — | 78g | — | 42g | 510mg | — | 19mg | 500mg | 4150mg | 50µg | 6.8mg | 900µg | 1.9mg | 1.7mg | 8.9mg | 2mg | 2mg | — | 910µg | 3.9µg | 82mg | — | 4.2mg | 900µg | 39g | — | yes | — |
+| [Artichoke Salad Sandwiches](cooking/recipes/artichoke-salad-sandwiches.md) | sandwich | make-ahead | 119g | 11g | 22g | 380mg | — | 9.3mg | 220mg | 1690mg | — | 1.7mg | 220µg | 1.2mg | 0.7mg | 14mg | 1.8mg | 0.7mg | — | 640µg | — | 41mg | — | — | 110µg | 23g | — | yes | — |
+| [Avocado Cilantro Sauce](cooking/recipes/avocado-cilantro-sauce.md) | sauce | no-cook | 1g | 23g | — | — | — | — | 48mg | 820mg | — | — | — | — | 0.2mg | 2.7mg | 2.2mg | 0.5mg | — | 130µg | — | 24mg | — | 3.5mg | 70µg | 11g | — | yes | — |
+| [Avocado Pesto](cooking/recipes/avocado-pesto.md) | pasta | easy | 301g | 45g | 51g | 80mg | — | 6.2mg | 320mg | 1850mg | 250µg | 2mg | 74µg | 2mg | 1.1mg | 26mg | 4.4mg | 1.4mg | — | 590µg | — | 69mg | — | 6.5mg | 180µg | 36g | — | yes | — |
+| [Biscuit Mix](cooking/recipes/biscuit-mix.md) | mix | make-ahead, pantry | 365g | — | 48g | 2250mg | — | 22mg | 110mg | 610mg | 160µg | 3.4mg | — | 3.8mg | 2.5mg | 28mg | 2.1mg | 0.2mg | — | 130µg | 0.2µg | — | — | — | — | 13g | — | yes | — |
+| [Breakfast Sandwiches](cooking/recipes/breakfast-sandwiches.md) | breakfast, sandwich | fast | 138g | — | 53g | 1420mg | — | 27mg | 170mg | 1070mg | 99µg | 5.4mg | — | 2.5mg | 1.9mg | 16mg | 1.3mg | 1.6mg | — | 440µg | 5µg | — | — | — | — | 9g | — | yes | — |
+| [Brisk Broccoli Salad](cooking/recipes/brisk-broccoli-salad.md) | salad | make-ahead | 64g | 116g | 14g | 230mg | — | 6mg | 280mg | 1650mg | 35µg | 3.3mg | 100µg | 1.2mg | 0.6mg | 7.4mg | 6.6mg | 1.7mg | — | 370µg | — | 310mg | — | 29mg | 350µg | 20g | — | yes | — |
+| [Brownie in a Cup](cooking/recipes/brownie-in-a-cup.md) | dessert | microwave, no-bake | 54g | 43g | 8g | 93mg | — | 5.5mg | 140mg | 670mg | 11µg | 1.8mg | — | 0.2mg | 0.2mg | 1.9mg | — | 0.3mg | — | 30µg | — | — | — | 5.9mg | 5.4µg | 9g | — | yes | — |
+| [Butter Cauliflower](cooking/recipes/butter-cauliflower.md) | main | make-ahead | 166g | 31g | 44g | 150mg | — | 12mg | 430mg | 4350mg | 54µg | 7.3mg | 250µg | 0.9mg | 0.7mg | 11mg | 5.8mg | 2.5mg | — | 440µg | — | 340mg | — | 8.6mg | 140µg | 28g | — | yes | — |
+| [Cajun Seasoning](cooking/recipes/cajun-seasoning.md) | mix | make-ahead, pantry | 7g | — | 1g | 81mg | — | 3mg | 32mg | 320mg | — | 0.7mg | 190µg | — | 0.1mg | 1mg | — | 0.3mg | — | — | — | — | — | 2.9mg | 58µg | 5g | — | yes | — |
+| [Cajun-Spiced Veggie Pasta](cooking/recipes/cajun-spiced-veggie-pasta.md) | pasta | make-ahead | 297g | 31g | 59g | 190mg | — | 9.7mg | 420mg | 2870mg | 270µg | 4.4mg | 110µg | 2.2mg | 2.5mg | 33mg | 4.4mg | 1.8mg | — | 530µg | — | 120mg | — | 12mg | 48µg | 29g | — | yes | — |
+| [Caramelized Onion Pasta](cooking/recipes/caramelized-onion-pasta.md) | pasta | easy, freezer-friendly, make-ahead | 296g | 26g | 51g | — | — | 5.3mg | 210mg | 1100mg | 250µg | 2mg | — | 2mg | 0.8mg | 21mg | — | 1.1mg | — | 440µg | — | 46mg | — | 3.6mg | 17µg | 23g | — | yes | — |
+| [Cheesy BBQ Popcorn](cooking/recipes/cheesy-bbq-popcorn.md) | snack | make-ahead | 50g | — | 13g | — | — | 3mg | 99mg | 450mg | 5.2µg | 2.9mg | — | 1.1mg | 1.2mg | 6.7mg | 0.8mg | 1.2mg | — | 120µg | 4µg | — | — | — | — | 12g | — | yes | — |
+| [Cheesy Cracker Snackers](cooking/recipes/cheesy-cracker-snackers.md) | snack | make-ahead | 93g | — | 20g | 140mg | — | 6.6mg | 45mg | 460mg | 44µg | 2.2mg | — | 2.6mg | 2.2mg | 15mg | 1.3mg | 1.7mg | — | 190µg | 6.4µg | — | — | — | — | 7g | — | yes | — |
+| [Chickpea Lettuce Wraps](cooking/recipes/chickpea-lettuce-wraps.md) | sandwich | make-ahead | 113g | 5g | 39g | 420mg | — | 18mg | 280mg | 2150mg | 17µg | 6.1mg | 1500µg | 0.5mg | 0.2mg | 4.7mg | 1.1mg | 1mg | — | 1150µg | — | 39mg | — | 2.4mg | 510µg | 33g | — | yes | — |
+| [Chocolate Bars](cooking/recipes/chocolate-bars.md) | dessert | easy, make-ahead, microwave, no-bake | 214g | — | 14g | 110mg | — | 14mg | 210mg | 1250mg | — | 3.1mg | — | — | — | — | — | — | — | — | — | — | — | — | 14µg | 10g | — | yes | — |
+| [Chocolate Cream Cheese Frosting](cooking/recipes/chocolate-cream-cheese-frosting.md) | dessert | freezer-friendly, make-ahead | 15g | — | 5g | 69mg | — | 3.5mg | 130mg | 430mg | — | 1.7mg | — | — | 0.1mg | — | — | — | — | — | 0.1µg | — | — | — | — | 8g | — | yes | — |
+| [Chocolate Frosting](cooking/recipes/chocolate-frosting.md) | dessert | freezer-friendly, make-ahead | 15g | — | 5g | 78mg | — | 3.5mg | 130mg | 440mg | — | 1.7mg | — | — | 0.1mg | — | — | — | — | — | 0.2µg | — | — | — | — | 8g | — | yes | — |
+| [Chocolate Pots](cooking/recipes/chocolate-pots.md) | dessert | make-ahead, microwave, no-bake | 128g | — | 27g | 1050mg | — | 20mg | 150mg | 720mg | 26µg | 3.2mg | — | 0.2mg | — | — | — | 0.1mg | — | 44µg | — | — | — | — | — | 3g | — | yes | — |
+| [Cinnamon Bun Popcorn](cooking/recipes/cinnamon-bun-popcorn.md) | snack | — | 51g | — | 8g | — | — | 2.8mg | 90mg | 250mg | — | 2.1mg | — | 0.1mg | 0.1mg | 1.6mg | — | 0.1mg | — | 21µg | — | — | — | — | — | 10g | — | yes | — |
+| [Cinnamon Cream Cheese Frosting](cooking/recipes/cinnamon-cream-cheese-frosting.md) | dessert | freezer-friendly, make-ahead | 1g | — | — | 55mg | — | — | — | — | — | — | — | — | — | — | — | — | — | — | 0.2µg | — | — | — | — | — | — | yes | — |
+| [Citrus & Coconut Custard Cups](cooking/recipes/citrus-coconut-custard-cups.md) | dessert | make-ahead, no-bake | 19g | — | 8g | — | — | 6.8mg | 160mg | 1200mg | 25µg | 2.9mg | — | 0.1mg | — | 3.4mg | 0.8mg | 0.1mg | — | 76µg | — | 52mg | — | — | — | 9g | — | yes | — |
+| [Coconut Macaroons](cooking/recipes/coconut-macaroons.md) | dessert | freezer-friendly, make-ahead | 27g | — | 7g | — | — | 5.8mg | 96mg | 880mg | 23µg | 2.6mg | — | 0.1mg | — | 1.8mg | 0.7mg | 0.1mg | — | 61µg | — | 11mg | — | — | — | 17g | — | — | — |
+| [Cool Coconut Fruit Dip](cooking/recipes/cool-coconut-fruit-dip.md) | sauce | make-ahead, no-cook | 21g | — | 15g | — | — | 8.3mg | 150mg | 1300mg | 30µg | 3.9mg | — | 0.1mg | 0.4mg | 2.3mg | 0.7mg | 0.2mg | — | 38µg | — | 19mg | — | — | — | 8g | — | — | — |
+| [Cool Ranch Popcorn](cooking/recipes/cool-ranch-popcorn.md) | snack | make-ahead | 50g | — | 13g | — | — | 2.9mg | 99mg | 440mg | — | 2.9mg | 17µg | 1.1mg | 1.1mg | 6.5mg | 0.8mg | 1.2mg | — | 130µg | 4µg | — | — | — | 37µg | 12g | — | yes | — |
+| [Creamy Basil Gnocchi](cooking/recipes/creamy-basil-gnocchi.md) | pasta | make-ahead | 163g | — | 24g | 810mg | — | 7.7mg | 80mg | 1750mg | 48µg | 0.8mg | 430µg | 1.4mg | 1.8mg | 10mg | 0.9mg | 0.8mg | — | 72µg | 4.4µg | 10mg | 6µg | 2mg | 100µg | 10g | — | yes | — |
+| [Creamy Gnocchi Soup](cooking/recipes/creamy-gnocchi-soup.md) | soup | make-ahead | 188g | 26g | 27g | 810mg | — | 11mg | 180mg | 2900mg | 50µg | 1mg | 1900µg | 1.1mg | 1.4mg | 10mg | 0.9mg | 0.8mg | — | 320µg | 1.9µg | 60mg | 4.8µg | 8.4mg | 660µg | 18g | — | yes | — |
+| [Creamy Miso Udon Noodles](cooking/recipes/creamy-miso-udon-noodles.md) | pasta | make-ahead | 110g | 21g | 32g | 220mg | — | 5mg | 87mg | 560mg | 8.5µg | 2.5mg | — | 0.6mg | 0.3mg | 1.5mg | — | — | — | 83µg | — | 34mg | — | — | 210µg | 9g | — | yes | yes |
+| [Creamy Tuscan Mushrooms](cooking/recipes/creamy-tuscan-mushrooms.md) | main | make-ahead | 133g | 26g | 41g | 740mg | — | 20mg | 310mg | 4650mg | 38µg | 6.7mg | 800µg | 3.5mg | 4.9mg | 37mg | 8.1mg | 2.7mg | — | 840µg | 7.8µg | 56mg | 3.6µg | 7.2mg | 630µg | 22g | — | yes | — |
+| [Crunchy Cabbage Salad](cooking/recipes/crunchy-cabbage-salad.md) | salad | — | 7g | 43g | 19g | 550mg | — | 5.6mg | 280mg | 1700mg | — | 2.8mg | 550µg | 0.2mg | 0.8mg | 4.7mg | 0.5mg | 1mg | — | 320µg | — | 95mg | — | 19mg | 150µg | 15g | — | yes | — |
+| [Curry Coconut Carrot Soup](cooking/recipes/curry-coconut-carrot-soup.md) | soup | freezer-friendly, make-ahead | 49g | 13g | 10g | 180mg | — | 6mg | 150mg | 2400mg | 16µg | 1.9mg | 3800µg | 0.4mg | 0.3mg | 6.6mg | 1.7mg | 1mg | — | 160µg | — | 53mg | — | 5.2mg | 70µg | 21g | — | yes | — |
+| [Devil's Food Cake Mix](cooking/recipes/devils-food-cake-mix.md) | mix | freezer-friendly, make-ahead, pantry | 406g | — | 72g | 970mg | — | 41mg | 870mg | 3000mg | 160µg | 13mg | — | 3.5mg | 2.5mg | 30mg | 2.4mg | 0.3mg | — | 160µg | — | — | — | — | — | 62g | — | yes | — |
+| [French Toast in a Mug](cooking/recipes/french-toast-in-a-mug.md) | breakfast | microwave | 27g | — | 3g | 110mg | — | 1.1mg | — | 230mg | — | — | — | 0.2mg | 0.3mg | 1.4mg | — | 0.2mg | — | 48µg | 0.2µg | — | — | — | — | 2g | — | yes | — |
+| [Fried Cinnamon Sugar Bananas](cooking/recipes/fried-cinnamon-sugar-bananas.md) | dessert | no-bake | 58g | — | — | — | — | — | 67mg | 880mg | — | — | — | — | — | — | — | 1mg | — | 48µg | — | 22mg | — | — | — | 8g | — | yes | — |
+| [Garlic Bread Soup](cooking/recipes/garlic-bread-soup.md) | soup | freezer-friendly, make-ahead | 128g | — | 24g | 990mg | — | 9.5mg | 67mg | 1350mg | — | 2.1mg | 290µg | 1.3mg | 1.7mg | 11mg | 1.2mg | 0.8mg | — | 370µg | 1.9µg | 21mg | 4.8µg | 1.5mg | 14µg | 10g | — | yes | — |
+| [Garlic Noodles](cooking/recipes/garlic-noodles.md) | pasta | easy, make-ahead | 70g | 21g | 13g | 240mg | — | 5.3mg | 81mg | 720mg | 29µg | 1mg | — | 0.2mg | 0.1mg | 3.4mg | — | 0.4mg | — | 67µg | — | 24mg | — | — | 190µg | 6g | — | yes | — |
+| [Gingerbread Frosting](cooking/recipes/gingerbread-frosting.md) | dessert | freezer-friendly, make-ahead | 65g | — | — | 190mg | — | 4.1mg | 210mg | 1250mg | 15µg | — | — | — | — | — | 0.7mg | 0.6mg | — | — | — | — | — | — | — | — | — | yes | — |
+| [Greek Bowls](cooking/recipes/greek-bowls.md) | main | make-ahead | 146g | 73g | 26g | 240mg | — | 8.8mg | 170mg | 1000mg | 43µg | 3.4mg | 80µg | 0.9mg | 0.4mg | 6.8mg | 0.8mg | 1.2mg | — | 280µg | — | 56mg | — | 11mg | 80µg | 16g | — | yes | — |
+| [Greek Seasoning](cooking/recipes/greek-seasoning.md) | mix | make-ahead, pantry | 11g | — | 2g | 180mg | — | 4mg | 36mg | 230mg | — | — | — | — | — | — | — | 0.2mg | — | 31µg | — | 9mg | — | 1.7mg | 82µg | 5g | — | yes | — |
+| [Guzinta Bowl Guide](cooking/recipes/guzinta-bowl-guide.md) | main | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — |
+| [Hash in a Dash](cooking/recipes/hash-in-a-dash.md) | breakfast | make-ahead | 115g | 58g | 36g | 120mg | — | 9mg | 390mg | 4050mg | — | 3.5mg | 55µg | 0.9mg | 0.3mg | 8.1mg | 4.8mg | 2.2mg | — | 830µg | — | 100mg | — | 8.4mg | 89µg | 60g | — | yes | — |
+| [Herb Butter Tofu & Broccoli](cooking/recipes/herb-butter-tofu-broccoli.md) | main | — | 123g | — | 45g | 1600mg | — | 30mg | 490mg | 3150mg | 43µg | 7.3mg | 240µg | 0.7mg | 1mg | 5.4mg | 4.5mg | 2mg | — | 610µg | — | 550mg | — | 11mg | 800µg | 28g | — | yes | — |
+| [Hot Chocolate Mix](cooking/recipes/hot-chocolate-mix.md) | mix | make-ahead, pantry | 58g | — | 20g | 1550mg | — | 14mg | 500mg | 3300mg | 14µg | 6.8mg | 720µg | — | 2.6mg | 2.2mg | — | 0.1mg | — | 32µg | 4.8µg | — | 12µg | 3.7mg | — | 33g | — | yes | — |
+| [Hummamole](cooking/recipes/hummamole.md) | sauce | make-ahead, no-cook | 96g | 100g | 37g | 330mg | — | 13mg | 290mg | 2700mg | 25µg | 6.8mg | — | 0.8mg | 0.7mg | 8.7mg | 5.5mg | 1.5mg | — | 870µg | — | 50mg | — | 14mg | 100µg | 51g | — | yes | — |
+| [Hummus Blue Cheese Dressing](cooking/recipes/hummus-blue-cheese-dressing.md) | sauce | no-cook | 13g | 7g | 15g | — | — | 2.7mg | 67mg | 480mg | — | 2.4mg | — | 1.7mg | 1.6mg | 8.1mg | 0.9mg | 2mg | — | 210µg | 6.4µg | — | — | — | 8µg | 8g | — | yes | yes |
+| [Hummus Caesar Dressing](cooking/recipes/hummus-caesar-dressing.md) | sauce | no-cook | 10g | 6g | 9g | — | — | 2.1mg | 56mg | 330mg | — | 1.4mg | — | 0.9mg | 0.8mg | 4.1mg | — | 1.2mg | — | 130µg | 3.2µg | 12mg | — | — | 5µg | 6g | — | yes | — |
+| [Hummus Ranch Dressing](cooking/recipes/hummus-ranch-dressing.md) | sauce | no-cook | 19g | 12g | 10g | 60mg | — | 3.2mg | 88mg | 320mg | — | 1.4mg | — | 0.2mg | — | — | — | 0.8mg | — | 110µg | — | 14mg | — | — | 44µg | 8g | — | yes | — |
+| [Ice Cream](cooking/recipes/ice-cream.md) | dessert | fast, no-bake | 55g | — | — | 72mg | — | — | 65mg | 950mg | — | — | — | — | 0.1mg | — | — | 1mg | — | 48µg | 0.2µg | 22mg | — | — | — | 6g | — | yes | — |
+| [Italian Seasoning](cooking/recipes/italian-seasoning.md) | mix | easy, fast, make-ahead, pantry | 7g | — | 1g | 98mg | — | 2.4mg | 26mg | 180mg | — | — | — | — | — | — | — | 0.2mg | — | 22µg | — | 9mg | — | — | 140µg | 3g | — | yes | — |
+| [Kale Caesar](cooking/recipes/kale-caesar.md) | salad | easy, fast | 66g | 32g | 25g | 670mg | — | 10mg | 150mg | 1600mg | — | 1.9mg | 1350µg | 1.3mg | 1.5mg | 8.9mg | 0.9mg | 1.6mg | — | 470µg | 2.1µg | 200mg | — | 7.3mg | 820µg | 18g | — | yes | — |
+| [Kitchen Sink Cookies](cooking/recipes/kitchen-sink-cookies.md) | dessert | fast, freezer-friendly, make-ahead | 160g | — | 21g | 380mg | — | 12mg | 46mg | 470mg | 71µg | 1.5mg | — | 1.7mg | 1.2mg | 12mg | 0.9mg | — | — | 55µg | 0.3µg | — | — | — | — | 6g | — | — | — |
+| [Leftover Rice Pudding](cooking/recipes/leftover-rice-pudding.md) | dessert | easy, fast, make-ahead, no-bake | 160g | — | 20g | — | — | 8.1mg | 220mg | 1650mg | 53µg | 4.7mg | — | 0.3mg | — | 5.4mg | 0.8mg | 0.6mg | — | 71µg | — | 23mg | — | — | — | 13g | — | yes | — |
+| [Lemon Cream Pasta](cooking/recipes/lemon-cream-pasta.md) | pasta | easy, fast, make-ahead | 306g | — | 53g | 940mg | — | 8mg | 270mg | 1600mg | 250µg | 2.1mg | 510µg | 2.1mg | 2.1mg | 22mg | — | 0.3mg | — | 460µg | 2.4µg | 51mg | 6µg | 2.3mg | 130µg | 17g | — | yes | — |
+| [Lentil Burritos](cooking/recipes/lentil-burritos.md) | sandwich | fast, freezer-friendly, make-ahead | 307g | 36g | 54g | 420mg | — | 17mg | 310mg | 2850mg | 36µg | 5.5mg | 120µg | 1.8mg | 0.8mg | 17mg | 4.6mg | 1.7mg | — | 960µg | — | 49mg | — | 6.3mg | 44µg | 46g | — | yes | — |
+| [Lime & Bean Soup](cooking/recipes/lime-bean-soup.md) | soup | easy, fast, freezer-friendly, make-ahead | 82g | 58g | 33g | 370mg | — | 14mg | 320mg | 3900mg | 45µg | 5.2mg | — | 0.8mg | 0.6mg | 5.6mg | 5.3mg | 1.8mg | — | 570µg | — | 72mg | — | 9.4mg | 110µg | 46g | — | yes | — |
+| [Lo Mein](cooking/recipes/lo-mein.md) | pasta | easy, fast, make-ahead | 178g | 13g | 35g | 220mg | — | 8.5mg | 250mg | 2450mg | 160µg | 2.3mg | 610µg | 1.6mg | 1.7mg | 25mg | 5.6mg | 1.3mg | — | 450µg | — | 310mg | — | 5.7mg | 360µg | 20g | — | yes | — |
+| [Mac & Cheese Powder](cooking/recipes/mac-cheese-powder.md) | mix | fast, pantry | 53g | — | 32g | — | — | 7mg | 79mg | 1200mg | 29µg | 4.7mg | 120µg | 5.3mg | 5.2mg | 28mg | 2.9mg | 5mg | — | 500µg | 19µg | — | — | 1.7mg | — | 15g | — | yes | — |
+| [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md) | sauce | fast, no-cook | 30g | 26g | 1g | 61mg | — | — | 23mg | 160mg | 9.6µg | 0.8mg | — | — | 0.5mg | — | — | — | — | — | — | 12mg | — | 3.6mg | 16µg | — | — | yes | — |
+| [Microwave Popcorn](cooking/recipes/microwave-popcorn.md) | snack | fast, microwave | 50g | — | 12g | — | — | 2.5mg | 95mg | 350mg | — | 2.7mg | — | 0.9mg | 0.9mg | 5.5mg | 0.7mg | 0.9mg | — | 100µg | 3.2µg | — | — | — | — | 11g | — | — | — |
+| [Minestrone](cooking/recipes/minestrone.md) | soup | easy, fast, make-ahead, one-pot | 215g | 13g | 55g | 290mg | — | 15mg | 390mg | 4500mg | 87µg | 4.4mg | 1500µg | 1.5mg | 0.6mg | 15mg | 0.9mg | 2mg | — | 810µg | — | 160mg | — | 7.9mg | 240µg | 49g | — | yes | — |
+| [Mini Berry Crisp](cooking/recipes/mini-berry-crisp.md) | dessert | fast, microwave, no-bake | 70g | 18g | 11g | 90mg | — | 4mg | 160mg | 660mg | 16µg | 2.2mg | — | 0.5mg | 0.2mg | 2.1mg | 0.6mg | 0.2mg | — | 53µg | — | 90mg | — | 2.1mg | 58µg | 15g | — | yes | — |
+| [Morning Rush Potato Pancakes](cooking/recipes/morning-rush-potato-pancakes.md) | breakfast | fast, make-ahead | 152g | — | 19g | 100mg | — | 8mg | 160mg | 2850mg | 21µg | — | — | 1mg | 0.3mg | 10mg | 2.2mg | 2mg | — | 140µg | — | 130mg | — | — | 75µg | 17g | — | yes | — |
+| [Muffin Mix](cooking/recipes/muffin-mix.md) | mix | fast, make-ahead, pantry | 319g | — | 42g | 810mg | — | 26mg | 92mg | 890mg | 140µg | 2.9mg | — | 3.4mg | 2.1mg | 25mg | 1.8mg | 0.2mg | — | 110µg | — | — | — | — | — | 11g | — | — | — |
+| [Mushroom Gravy Mix](cooking/recipes/mushroom-gravy-mix.md) | mix | fast, freezer-friendly, make-ahead, pantry | 78g | — | 11g | 85mg | — | 6mg | 43mg | 290mg | 33µg | 1.1mg | — | 0.8mg | 0.5mg | 6mg | 0.6mg | 0.3mg | — | 33µg | — | — | — | — | 69µg | 5g | — | yes | — |
+| [New Bay Seasoning](cooking/recipes/new-bay-seasoning.md) | mix | fast, make-ahead, pantry | 3g | — | — | 74mg | — | 4mg | 21mg | 170mg | — | — | 110µg | — | — | — | — | 0.2mg | — | — | — | — | — | 1.3mg | 7.2µg | 4g | — | yes | — |
+| [Oatmeal Breakfast Cookies](cooking/recipes/oatmeal-breakfast-cookies.md) | breakfast, dessert | fast, freezer-friendly, make-ahead | 310g | 84g | 69g | 420mg | — | 18mg | 770mg | 3600mg | 90µg | 13mg | — | 2.2mg | 0.8mg | 23mg | 4.5mg | 2.3mg | — | 290µg | — | 29mg | — | 11mg | — | 49g | — | yes | — |
+| [Oatmeal Packets](cooking/recipes/oatmeal-packets.md) | breakfast | easy, fast, make-ahead, pantry | 20g | 2g | 4g | — | — | 1.6mg | 53mg | — | 8.4µg | 1.2mg | — | 0.2mg | — | — | — | — | — | — | — | — | — | — | — | 3g | — | yes | — |
+| [Pancake & Waffle Mix](cooking/recipes/pancake-waffle-mix.md) | mix | fast, make-ahead, pantry | 365g | — | 48g | 2200mg | — | 22mg | 110mg | 510mg | 160µg | 3.4mg | — | 3.8mg | 2.4mg | 28mg | 2.1mg | 0.2mg | — | 120µg | — | — | — | — | — | 13g | — | — | — |
+| [Peanut Butter Frosting](cooking/recipes/peanut-butter-frosting.md) | dessert | fast, freezer-friendly, make-ahead | — | 63g | 31g | 61mg | — | 2.1mg | 190mg | 810mg | 5.1µg | 3.1mg | — | 0.2mg | 0.2mg | 16mg | 1.4mg | 0.6mg | — | 93µg | — | — | — | 11mg | — | 8g | — | — | — |
+| [Peanut Butter Popcorn](cooking/recipes/peanut-butter-popcorn.md) | snack | fast, microwave | 52g | 16g | 16g | — | — | 2.8mg | 140mg | 420mg | — | 3mg | — | 0.2mg | 0.2mg | 5.8mg | 0.6mg | 0.3mg | — | 45µg | — | — | — | 3mg | — | 12g | — | — | — |
+| [Peanut Butter Squares](cooking/recipes/peanut-butter-squares.md) | dessert | easy, fast, freezer-friendly, make-ahead, microwave, no-bake | 82g | 32g | 28g | 130mg | — | 16mg | 370mg | 1250mg | 14µg | 5.3mg | — | 0.3mg | 0.3mg | 11mg | 1.2mg | 0.4mg | — | 62µg | — | — | — | 6.3mg | 8.2µg | 17g | — | yes | — |
+| [Peanut Lime Dressing](cooking/recipes/peanut-lime-dressing.md) | sauce | fast, no-cook | 1g | 18g | 9g | — | — | 0.9mg | 57mg | 330mg | — | 0.8mg | — | — | — | 4.8mg | — | 0.2mg | — | 24µg | — | 10mg | — | 2.9mg | — | 2g | — | yes | — |
+| [Peppermint Frosting](cooking/recipes/peppermint-frosting.md) | dessert | fast, freezer-friendly, make-ahead | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | 0.2µg | — | — | — | — | — | — | — | — |
+| [Perfect Pot-Pie Soup](cooking/recipes/perfect-pot-pie-soup.md) | soup | fast, freezer-friendly, make-ahead | 149g | — | 23g | 550mg | — | 9.3mg | 190mg | 3550mg | 20µg | 2.4mg | 1300µg | 1.3mg | 1.2mg | 12mg | 2.1mg | 2.1mg | — | 230µg | 1.4µg | 170mg | 3.6µg | 2.2mg | 130µg | 26g | — | yes | — |
+| [Personal Pita Pizzas](cooking/recipes/personal-pita-pizzas.md) | pizza | fast, freezer-friendly, make-ahead | 204g | — | 36g | 850mg | — | 10mg | 130mg | 2110mg | 79µg | 4.1mg | 350µg | 3.1mg | 3.4mg | 24mg | 2mg | 2.1mg | — | 560µg | 7.9µg | 17mg | 4.8µg | 1.4mg | 6.7µg | 14g | — | yes | — |
+| [Pie Sandwich](cooking/recipes/pie-sandwich.md) | dessert | easy, fast, no-bake | 45g | 5g | 7g | 99mg | — | 2.9mg | 54mg | 250mg | — | 0.8mg | — | 0.3mg | 0.2mg | 2.7mg | — | — | — | 88µg | — | 23mg | — | 1.4mg | 15µg | 5g | — | yes | — |
+| [Pineapple BBQ Chickpeas](cooking/recipes/pineapple-bbq-chickpeas.md) | main | fast, make-ahead | 202g | 13g | 40g | 200mg | — | 11mg | 250mg | 2200mg | 67µg | 5.3mg | — | 0.8mg | 0.2mg | 3.9mg | 1.8mg | 1.3mg | — | 750µg | — | 200mg | — | 3.7mg | 79µg | 38g | — | yes | — |
+| [Pizza Popcorn](cooking/recipes/pizza-popcorn.md) | snack | fast, microwave | 53g | 26g | 14g | — | — | 2.8mg | 100mg | 410mg | 5.2µg | 3mg | — | 1.1mg | 1.1mg | 6.6mg | 0.8mg | 1.2mg | — | 120µg | 4µg | — | — | 3.9mg | 20µg | 12g | — | yes | — |
+| [Pumpkin Pie Spice](cooking/recipes/pumpkin-pie-spice.md) | mix | fast, make-ahead, pantry | 13g | — | — | 150mg | — | 1.5mg | 22mg | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | 6.9µg | 8g | — | yes | — |
+| [Quesadillas](cooking/recipes/quesadillas.md) | sandwich | fast | 264g | 13g | 69g | 520mg | — | 25mg | 550mg | 3740mg | 38µg | 7.6mg | 100µg | 2.4mg | 0.8mg | 16mg | 2.1mg | 1.1mg | — | 1070µg | — | 56mg | — | 3mg | 11µg | 57g | — | yes | — |
+| [Queso Dip](cooking/recipes/queso-dip.md) | sauce | fast | 56g | 31g | 30g | 91mg | — | 7.9mg | 340mg | 1750mg | 16µg | 6.4mg | 100µg | 2.1mg | 1.6mg | 11mg | 1.9mg | 2.2mg | — | 340µg | 6µg | 34mg | — | 1mg | 47µg | 19g | — | yes | — |
+| [Ramen Soup](cooking/recipes/ramen-soup.md) | soup | easy, fast, make-ahead | 1g | 13g | 7g | 120mg | — | 2.6mg | 72mg | 320mg | — | 1.2mg | — | 0.2mg | — | 2.8mg | — | 0.2mg | — | 80µg | — | 10mg | — | 1.8mg | 67µg | 4g | — | yes | — |
+| [Sesame Dressing](cooking/recipes/sesame-dressing.md) | sauce | no-cook | 1g | 4g | 3g | — | — | 0.7mg | — | — | — | — | — | — | — | 1.2mg | — | — | — | — | — | — | — | — | — | — | — | yes | — |
+| [Smoky Black Bean Sandwiches](cooking/recipes/smoky-black-bean-sandwiches.md) | sandwich | fast | 201g | 21g | 54g | 490mg | — | 17mg | 320mg | 1900mg | — | 5.2mg | 190µg | 1.9mg | 0.7mg | 11mg | 1.2mg | 0.7mg | — | 950µg | — | 17mg | — | — | 75µg | 40g | — | yes | — |
+| [Smoky Lime Dressing](cooking/recipes/smoky-lime-dressing.md) | sauce | no-cook | — | 32g | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | 14mg | — | — | — | — | — | yes | — |
+| [Smoothie Kits](cooking/recipes/smoothie-kits.md) | breakfast, drink | easy, no-cook | 132g | 21g | 22g | 640mg | — | 12mg | 300mg | 2690mg | 19µg | 2.8mg | 360µg | 0.4mg | 0.5mg | 8.3mg | 2.8mg | 1.4mg | — | 260µg | — | 86mg | — | 4.8mg | 280µg | 25g | — | yes | — |
+| [Spiced-Up BLT Pasta Salad](cooking/recipes/spiced-up-blt-pasta-salad.md) | pasta, salad | make-ahead | 284g | 41g | 49g | 310mg | — | 13mg | 290mg | 2200mg | 200µg | 2.3mg | 2350µg | 2.4mg | 1.3mg | 24mg | 0.9mg | 1mg | — | 1100µg | — | 170mg | — | 2.4mg | 550µg | 28g | — | yes | — |
+| [Sticky Ginger Stir-Fry](cooking/recipes/sticky-ginger-stir-fry.md) | main | fast | 133g | 29g | 21g | 330mg | — | 8mg | 220mg | 2600mg | 52µg | 3.6mg | 140µg | 0.6mg | 1.3mg | 16mg | 5.6mg | 1.5mg | — | 300µg | — | 320mg | — | 9.4mg | 470µg | 16g | — | yes | — |
+| [Stovetop Granola](cooking/recipes/stovetop-granola.md) | breakfast | cheap, easy, fast, make-ahead | 244g | 42g | 39g | 210mg | — | 13mg | 550mg | 1750mg | 85µg | 10mg | — | 2.3mg | 0.6mg | 8mg | 7mg | 1.2mg | — | 250µg | — | — | — | 23mg | — | 27g | — | yes | — |
+| [Strawberry Frosting](cooking/recipes/strawberry-frosting.md) | dessert | fast, freezer-friendly, make-ahead | 52g | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | 0.1µg | 7mg | — | — | — | — | — | yes | — |
+| [Sweet & Spicy Corn Soup](cooking/recipes/sweet-spicy-corn-soup.md) | soup | easy, fast, freezer-friendly, make-ahead | 165g | 13g | 34g | — | — | 13mg | 460mg | 3820mg | 35µg | 7mg | 360µg | 1.8mg | 0.6mg | 18mg | 6.2mg | 1.5mg | — | 520µg | — | 310mg | — | 6mg | 17µg | 36g | — | yes | — |
+| [Sweet Korean Lentils](cooking/recipes/sweet-korean-lentils.md) | main | fast, freezer-friendly, make-ahead | 150g | 17g | 34g | — | — | 9mg | 150mg | 1250mg | 35µg | 4.6mg | — | 0.4mg | 0.2mg | 6mg | 1.4mg | 0.9mg | — | 380µg | — | 9mg | — | 2.3mg | — | 19g | — | yes | — |
+| [Sweet Potato Dip](cooking/recipes/sweet-potato-dip.md) | sauce | easy, fast, make-ahead, microwave | 148g | — | 33g | 440mg | — | 16mg | 240mg | 3450mg | 47µg | 5.4mg | 2600µg | 1mg | 0.4mg | 2.7mg | 3.9mg | 1.1mg | — | 340µg | — | 27mg | — | — | — | 34g | — | yes | — |
+| [Tacos & More Seasoning](cooking/recipes/tacos-more-seasoning.md) | mix | make-ahead, pantry | 23g | 3g | 5g | 170mg | — | 8mg | 67mg | 640mg | — | 1.2mg | 320µg | 0.2mg | 0.2mg | 2mg | 0.5mg | 0.6mg | — | 23µg | — | — | — | 6mg | 31µg | 9g | — | yes | — |
+| [Taste of Italy](cooking/recipes/taste-of-italy.md) | pasta | — | 297g | — | 67g | 160mg | — | 18mg | 410mg | 5900mg | 360µg | 4.3mg | 500µg | 2.3mg | 2mg | 54mg | 9.7mg | 2mg | — | 590µg | — | 96mg | — | 16mg | 37µg | 37g | — | yes | — |
+| [Toast Is the Most](cooking/recipes/toast-is-the-most.md) | breakfast | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — |
+| [Tofu Scramble Seasoning](cooking/recipes/tofu-scramble-seasoning.md) | mix | make-ahead, pantry | 6g | — | 31g | — | — | 4mg | 70mg | 1250mg | 10µg | 5mg | — | 6mg | 6mg | 30mg | 3.1mg | 6.1mg | — | 600µg | 24µg | — | — | — | — | 15g | — | yes | — |
+| [Tomato Sauce Amper-Uppers](cooking/recipes/tomato-sauce-amper-uppers.md) | pasta, sauce | make-ahead | 20g | 62g | 21g | 400mg | — | 17mg | 510mg | 7700mg | 30µg | 4.6mg | 1830µg | 0.8mg | 1.8mg | 24mg | 6.5mg | 3.3mg | — | 600µg | — | 390mg | — | 14mg | 520µg | 44g | — | yes | — |
+| [Trail Mix](cooking/recipes/trail-mix.md) | snack | make-ahead, no-cook | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — |
+| [Tuscan Bean Pasta](cooking/recipes/tuscan-bean-pasta.md) | pasta | make-ahead | 395g | 13g | 100g | 1250mg | — | 29mg | 660mg | 6440mg | 310µg | 9.2mg | 820µg | 3.4mg | 2.9mg | 30mg | 2.7mg | 1.4mg | — | 870µg | 2.4µg | 71mg | 6µg | 6mg | 500µg | 49g | — | yes | — |
+| [Vanilla Frosting](cooking/recipes/vanilla-frosting.md) | dessert | freezer-friendly, make-ahead | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — | — |
+| [Veggie Broth Powder](cooking/recipes/veggie-broth-powder.md) | mix | make-ahead, pantry | 6g | — | 2g | 83mg | — | 2.6mg | 28mg | 190mg | — | 0.6mg | — | — | — | — | — | 0.2mg | — | — | — | 9mg | — | — | 140µg | 2g | — | yes | — |
+| [White Bean Pinwheels](cooking/recipes/white-bean-pinwheels.md) | sandwich | no-cook | 243g | 34g | 48g | 440mg | — | 17mg | 220mg | 1840mg | — | 3.8mg | 56µg | 1.4mg | 0.4mg | 6mg | — | — | — | 780µg | — | 18mg | — | 1.7mg | 250µg | 34g | — | yes | — |
+| [Yellow Cake Mix](cooking/recipes/yellow-cake-mix.md) | mix | freezer-friendly, make-ahead, pantry | 456g | — | 60g | 93mg | — | 28mg | 140mg | 680mg | 200µg | 4.3mg | — | 4.8mg | 3mg | 35mg | 2.7mg | 0.3mg | — | 160µg | — | — | — | — | — | 17g | — | yes | — |
+| [Zesty Corn Salad](cooking/recipes/zesty-corn-salad.md) | salad | make-ahead | 87g | 54g | 14g | — | — | 2.7mg | 210mg | 2150mg | — | 2mg | 110µg | 0.9mg | 0.4mg | 10mg | 5.3mg | 0.9mg | — | 340µg | — | 79mg | — | 4mg | 58µg | 24g | — | yes | — |
