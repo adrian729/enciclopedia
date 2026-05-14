@@ -28,6 +28,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Microwave](cooking/traits/microwave.md)
 
 ## Books

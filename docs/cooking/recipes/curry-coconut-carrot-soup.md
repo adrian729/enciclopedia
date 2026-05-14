@@ -35,6 +35,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 

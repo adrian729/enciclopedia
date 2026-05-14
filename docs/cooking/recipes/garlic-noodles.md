@@ -36,6 +36,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Traits
 
 - [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books
@@ -45,7 +46,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Macronutrients
 
 - [Complex Carbs](cooking/macronutrients/complex-carbs.md) — 70g
-- [Healthy Fats](cooking/macronutrients/healthy-fats.md) — 21g
+- [Healthy Fats](cooking/macronutrients/healthy-fats.md) — 16g
 - [Protein](cooking/macronutrients/protein.md) — 13g
 
 ## Minerals

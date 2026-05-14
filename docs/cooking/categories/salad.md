@@ -4,6 +4,7 @@ Back to [Categories](cooking/categories/README.md)
 
 - [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
 - [Artichoke Salad](cooking/recipes/artichoke-salad.md)
+- [Artichoke Salad Sandwiches](cooking/recipes/artichoke-salad-sandwiches.md)
 - [Brisk Broccoli Salad](cooking/recipes/brisk-broccoli-salad.md)
 - [Crunchy Cabbage Salad](cooking/recipes/crunchy-cabbage-salad.md)
 - [Kale Caesar](cooking/recipes/kale-caesar.md)

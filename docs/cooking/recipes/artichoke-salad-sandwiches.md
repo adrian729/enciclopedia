@@ -35,10 +35,12 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Categories
 
+- [Salad](cooking/categories/salad.md)
 - [Sandwich](cooking/categories/sandwich.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books

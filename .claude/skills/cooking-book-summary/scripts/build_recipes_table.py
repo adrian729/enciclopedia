@@ -1,28 +1,15 @@
 #!/usr/bin/env python3
 """Build the recipes overview table for docs/cooking/recipes/README.md.
 
-Walks every recipe page under docs/cooking/recipes/, extracts H1 title,
-categories, traits, and the four nutrient sections, then emits the full
-README content (H1 + back-link + alphabetical-by-title Markdown table)
-to stdout.
-
-The table is the canonical view of every recipe in the corpus. Re-run this
-script whenever recipes are added, removed, renamed, or have their
-categories / traits / nutrient sections edited. The expected invocation
-from the repo root is:
+Sole writer of docs/cooking/recipes/README.md. Invoke from the repo root:
 
     python3 .claude/skills/cooking-book-summary/scripts/build_recipes_table.py \\
         > docs/cooking/recipes/README.md
 
-Cell format (the contract every recipe page must satisfy for this script
-to produce correct output):
-
-- Recipe cell:        [<H1 title>](cooking/recipes/<slug>.md)
-- Categories cell:    comma-separated category slugs, alphabetical; — if empty
-- Traits cell:        comma-separated trait slugs, alphabetical;   — if empty
-- Quantitative cells: the exact `<amount><unit>` printed in the recipe page
-                      bullet (e.g. `158g`, `1.4µg`, `370µg`);     — if absent
-- Qualitative cells:  yes / —    (Phytochemicals, Probiotics)
+Behavior, cell formats, sort key, and warning emissions are defined by the
+cooking-book-summary SKILL.md — see the `### `docs/cooking/recipes/README.md``
+template under `## Page templates`, the `### Recipe-page rendering` section
+for cell-amount source-of-truth, and `### 5.16` for the byte-identical audit.
 """
 
 from __future__ import annotations

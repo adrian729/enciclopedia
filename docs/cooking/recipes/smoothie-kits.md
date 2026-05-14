@@ -57,6 +57,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Traits
 
 - [Easy](cooking/traits/easy.md)
+- [Fast](cooking/traits/fast.md)
 - [No Cook](cooking/traits/no-cook.md)
 
 ## Books

@@ -62,6 +62,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Vitamins
 
+- [Vitamin A](cooking/vitamins/vitamin-a.md) — 74µg
 - [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 0.8mg
 - [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 0.6mg
 - [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 5.6mg

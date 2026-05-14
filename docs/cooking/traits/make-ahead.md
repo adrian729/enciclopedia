@@ -3,6 +3,7 @@
 Back to [Traits](cooking/traits/README.md)
 
 - [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
+- [Apple Turnovers](cooking/recipes/apple-turnovers.md)
 - [Artichoke Salad Sandwiches](cooking/recipes/artichoke-salad-sandwiches.md)
 - [Biscuit Mix](cooking/recipes/biscuit-mix.md)
 - [Brisk Broccoli Salad](cooking/recipes/brisk-broccoli-salad.md)

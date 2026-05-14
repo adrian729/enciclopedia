@@ -4,6 +4,8 @@ Back to [Macronutrients](cooking/macronutrients/README.md)
 
 - [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
 - [Apple Turnovers](cooking/recipes/apple-turnovers.md)
+- [Artichoke Dressing](cooking/recipes/artichoke-dressing.md)
+- [Artichoke Salad](cooking/recipes/artichoke-salad.md)
 - [Artichoke Salad Sandwiches](cooking/recipes/artichoke-salad-sandwiches.md)
 - [Avocado Cilantro Sauce](cooking/recipes/avocado-cilantro-sauce.md)
 - [Avocado Pesto](cooking/recipes/avocado-pesto.md)

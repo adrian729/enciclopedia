@@ -64,6 +64,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Categories
 
+- [Pasta](cooking/categories/pasta.md)
 - [Soup](cooking/categories/soup.md)
 
 ## Traits

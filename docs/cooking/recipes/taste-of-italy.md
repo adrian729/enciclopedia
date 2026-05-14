@@ -33,6 +33,10 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Pasta](cooking/categories/pasta.md)
 
+## Traits
+
+- [Fast](cooking/traits/fast.md)
+
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)

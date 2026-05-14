@@ -291,6 +291,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Fast](cooking/traits/fast.md)
 - [No Bake](cooking/traits/no-bake.md)
+- [No Cook](cooking/traits/no-cook.md)
 
 ## Books
 

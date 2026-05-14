@@ -2,6 +2,7 @@
 
 Back to [Traits](cooking/traits/README.md)
 
+- [Biscuit Mix](cooking/recipes/biscuit-mix.md)
 - [Caramelized Onion Pasta](cooking/recipes/caramelized-onion-pasta.md)
 - [Chocolate Cream Cheese Frosting](cooking/recipes/chocolate-cream-cheese-frosting.md)
 - [Chocolate Frosting](cooking/recipes/chocolate-frosting.md)
@@ -14,8 +15,10 @@ Back to [Traits](cooking/traits/README.md)
 - [Kitchen Sink Cookies](cooking/recipes/kitchen-sink-cookies.md)
 - [Lentil Burritos](cooking/recipes/lentil-burritos.md)
 - [Lime & Bean Soup](cooking/recipes/lime-bean-soup.md)
+- [Muffin Mix](cooking/recipes/muffin-mix.md)
 - [Mushroom Gravy Mix](cooking/recipes/mushroom-gravy-mix.md)
 - [Oatmeal Breakfast Cookies](cooking/recipes/oatmeal-breakfast-cookies.md)
+- [Pancake & Waffle Mix](cooking/recipes/pancake-waffle-mix.md)
 - [Peanut Butter Frosting](cooking/recipes/peanut-butter-frosting.md)
 - [Peanut Butter Squares](cooking/recipes/peanut-butter-squares.md)
 - [Peppermint Frosting](cooking/recipes/peppermint-frosting.md)

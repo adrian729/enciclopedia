@@ -24,6 +24,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 ## Categories
 
 - [Dessert](cooking/categories/dessert.md)
+- [Sandwich](cooking/categories/sandwich.md)
 
 ## Traits
 

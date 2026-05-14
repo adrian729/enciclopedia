@@ -36,6 +36,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books
@@ -62,7 +63,6 @@ Back to [All Recipes](cooking/recipes/README.md)
 - [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 1.4mg
 - [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 1.8mg
 - [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 10mg
-- [Vitamin B5](cooking/vitamins/vitamin-b5.md) — 0.9mg
 - [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 0.8mg
 - [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 72µg
 - [Vitamin B12](cooking/vitamins/vitamin-b12.md) — 4.4µg

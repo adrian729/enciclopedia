@@ -31,6 +31,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 - [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
+- [No Cook](cooking/traits/no-cook.md)
 
 ## Books
 

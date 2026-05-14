@@ -35,6 +35,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
+- [No Cook](cooking/traits/no-cook.md)
 - [Pantry](cooking/traits/pantry.md)
 
 ## Books

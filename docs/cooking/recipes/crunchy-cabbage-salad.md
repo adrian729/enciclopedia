@@ -22,6 +22,11 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Salad](cooking/categories/salad.md)
 
+## Traits
+
+- [Fast](cooking/traits/fast.md)
+- [No Cook](cooking/traits/no-cook.md)
+
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)

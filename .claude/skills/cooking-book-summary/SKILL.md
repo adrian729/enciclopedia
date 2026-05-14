@@ -46,61 +46,32 @@ The cooking section uses a flat four-section layout. Recipes live in one global 
 
 ```
 docs/cooking/
-├── README.md                              # Cooking landing page
-├── ingredients-info.md                    # Alphabetical ingredient → nutrient lookup
+├── README.md                       # Cooking landing page
+├── ingredients-info.md             # Alphabetical ingredient → nutrient lookup
 ├── recipes/
-│   ├── README.md                          # Alphabetical list of every recipe
-│   ├── classic-french-omelette.md
-│   ├── banana-bread.md
-│   └── banana-bread--joy-of-cooking.md   # only on slug collision
+│   ├── README.md                   # Alphabetical table of every recipe
+│   └── <slug>.md                   # one per recipe (`<slug>--<book>.md` on collision)
 ├── categories/
-│   ├── README.md                          # Alphabetical list of every category in use
-│   ├── breakfast.md
-│   ├── dessert.md
-│   └── soup.md
+│   ├── README.md                   # Alphabetical list of every category in use
+│   └── <slug>.md                   # one per category in use
 ├── traits/
-│   ├── README.md                          # Alphabetical list of every trait in use
-│   ├── easy.md
-│   ├── fast.md
-│   └── one-pot.md
+│   ├── README.md                   # Alphabetical list of every trait in use
+│   └── <slug>.md                   # one per trait in use
 ├── books/
-│   ├── README.md                          # Alphabetical list of every book summarized
-│   └── fast-easy-cheap-vegan.md
-├── macronutrients/                        # ingredient-derived facet
-│   ├── README.md                          # canonical table (Category cells link to row pages)
-│   ├── complex-carbs.md
-│   ├── healthy-fats.md
-│   └── protein.md
-├── minerals/                              # ingredient-derived facet
-│   ├── README.md                          # canonical table (Category cells link to row pages)
-│   ├── calcium.md
-│   ├── iodine.md
-│   ├── iron.md
-│   ├── magnesium.md
-│   ├── potassium.md
-│   ├── selenium.md
-│   └── zinc.md
-├── vitamins/                              # ingredient-derived facet
-│   ├── README.md                          # canonical table (Category cells link to row pages)
-│   ├── vitamin-a.md
-│   ├── vitamin-b1.md
-│   ├── vitamin-b2.md
-│   ├── vitamin-b3.md
-│   ├── vitamin-b5.md
-│   ├── vitamin-b6.md
-│   ├── vitamin-b7.md
-│   ├── vitamin-b9.md
-│   ├── vitamin-b12.md
-│   ├── vitamin-c.md
-│   ├── vitamin-d.md
-│   ├── vitamin-e.md
-│   └── vitamin-k.md
-└── soft-essentials/                       # ingredient-derived facet
-    ├── README.md                          # canonical table (Category cells link to row pages)
-    ├── dietary-fiber.md
-    ├── omega-3.md
-    ├── phytochemicals.md
-    └── probiotics.md
+│   ├── README.md                   # Alphabetical list of every book summarized
+│   └── <book-slug>.md              # one per summarized book
+├── macronutrients/                 # ingredient-derived facet
+│   ├── README.md                   # one canonical table per group (Category cells link to row pages)
+│   └── <slug>.md                   # one per row in the group's README
+├── minerals/                       # one <slug>.md per row in minerals/README.md
+│   ├── README.md
+│   └── <slug>.md
+├── vitamins/                       # one <slug>.md per row in vitamins/README.md
+│   ├── README.md
+│   └── <slug>.md
+└── soft-essentials/                # one <slug>.md per row in soft-essentials/README.md
+    ├── README.md
+    └── <slug>.md
 ```
 
 **Why flat instead of per-book folders:** every recipe is a globally addressable page that can belong to many categories and many traits and appear in multiple books. A nested per-book layout breaks that fan-in.
@@ -160,7 +131,7 @@ If `<recipe-slug>.md` already exists in `docs/cooking/recipes/` for a different 
 
 Recipe pages start with a single-line blockquote immediately under the H1. Fields appear in this fixed order, separated by ` · `, and are included only when the source provides them:
 
-```
+```markdown
 > Prep: 5 mins · Cook: 5 mins · Total: 10 mins · Yield: 1 serving · Cost: under $5 · Equipment: blender
 ```
 
@@ -193,30 +164,13 @@ This sort key applies to: the recipes-index **table rows** (sorted by the `Recip
 
 ### Link path convention
 
-All Markdown links inside `docs/cooking/**` MUST be **absolute from the docs root**, i.e. start with `cooking/...`. This project uses Docsify with the default `relativePath: false`, which resolves every link as if it were rooted at `docs/`. Relative paths like `apple-chickpea-salad.md`, `../recipes/foo.md`, `README.md`, or `../README.md` resolve to wrong URLs (e.g. `/#/apple-chickpea-salad` instead of `/#/cooking/recipes/apple-chickpea-salad`) and break every recipe link.
+All Markdown links inside `docs/cooking/**` MUST be **absolute from the docs root**, i.e. start with `cooking/...`. This project uses Docsify with the default `relativePath: false`. Relative paths resolve to wrong URLs and break every recipe link.
 
-Required form for every link target under `docs/cooking/**`:
+Examples:
 
-| From → To | Correct link |
-|---|---|
-| any cooking page → cooking landing | `cooking/README.md` |
-| any cooking page → recipes index | `cooking/recipes/README.md` |
-| any cooking page → categories index | `cooking/categories/README.md` |
-| any cooking page → traits index | `cooking/traits/README.md` |
-| any cooking page → books index | `cooking/books/README.md` |
-| any cooking page → a recipe | `cooking/recipes/<slug>.md` |
-| any cooking page → a category | `cooking/categories/<slug>.md` |
-| any cooking page → a trait | `cooking/traits/<slug>.md` |
-| any cooking page → a book | `cooking/books/<slug>.md` |
-| any cooking page → macronutrients index | `cooking/macronutrients/README.md` |
-| any cooking page → minerals index | `cooking/minerals/README.md` |
-| any cooking page → vitamins index | `cooking/vitamins/README.md` |
-| any cooking page → soft-essentials index | `cooking/soft-essentials/README.md` |
-| any cooking page → a macronutrient | `cooking/macronutrients/<slug>.md` |
-| any cooking page → a mineral | `cooking/minerals/<slug>.md` |
-| any cooking page → a vitamin | `cooking/vitamins/<slug>.md` |
-| any cooking page → a soft-essential | `cooking/soft-essentials/<slug>.md` |
-| any cooking page → ingredients info | `cooking/ingredients-info.md` |
+- Index target: `cooking/recipes/README.md`
+- Recipe target: `cooking/recipes/banana-bread.md`
+- Nutrient row target: `cooking/vitamins/vitamin-b12.md`
 
 Never use `./`, `../`, or bare filenames (e.g. `salad.md`, `README.md`) as the link target. If a sibling page is the target, still write the full `cooking/...` path.
 
@@ -246,11 +200,15 @@ Fixed wording per page kind. The line lives directly under the H1, separated fro
 
 Recipe pages back-link to the recipes index for direct return navigation. The link sits on the standard line under the H1, separated by one blank line above and below, before the metadata blockquote.
 
-### Nutrient-section omission rule
+### Section-omission rule
 
-`## Macronutrients`, `## Minerals`, `## Vitamins`, and `## Soft Essentials` are omitted from a recipe page when their derived list is empty (same omission rule as `## Traits`). The four sections always appear in this fixed order, after `## Books`. Bullets within each section are alphabetical by display name, case-insensitive, with B-vitamins ordered by numeric value (`Vitamin B1` … `Vitamin B12`, NOT ASCII).
+A recipe-page section is omitted (heading and body both) when it would be empty:
 
-Within each section, drop any **quantitative** bullet whose computed per-recipe **unrounded** total is below the per-nutrient **recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient`. The recipe drop threshold is the single arbiter — there is NO separate "rounds to 0" rule and no separate macro/fiber floor test (the macros and fiber recipe drop thresholds are simply `1g`, applied via the same threshold check as every other quantitative slug). **Qualitative** bullets (`Phytochemicals`, `Probiotics`) have no quantitative total and are NEVER subject to this rule; they appear whenever ≥1 ingredient lists them in `ingredients-info.md` and are removed only if no ingredient lists them at all. If dropping below-threshold quantitative bullets (and the absence of any qualifying qualitative entries) leaves the section empty, omit the section entirely.
+- `## Notes` — omit if the recipe has no notes.
+- `## Traits` — omit if the recipe has zero traits.
+- `## Macronutrients`, `## Minerals`, `## Vitamins`, `## Soft Essentials` — omit when the derived list is empty after applying the threshold drop (see `### Threshold model`).
+
+The four nutrient sections always appear in fixed order after `## Books`. Bullets within each section are alphabetical by display name, case-insensitive, B-vitamins by numeric value.
 
 ### Frozen-table rule
 
@@ -259,6 +217,22 @@ The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/READM
 ### Ingredient-info append-only rule
 
 `docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells use display names from `## Nutrient lexicons` with per-100g amount estimates (see "Cell content rules" in `## Ingredient → nutrient mapping`); entries are sorted alphabetically inside each cell — never reorder them into "frequency" or "priority" order. Empty cells are a single em-dash (`—`, U+2014), never blank, never `none`, never `N/A`.
+
+### Formatting conventions
+
+File-wide style rules. Apply uniformly so audit greps work and diffs stay readable.
+
+- **Slugs in backticks**: `` `breakfast` ``, `` `vitamin-b12` ``. Bold + backticks only inside lexicon definitions where the slug is the bullet anchor.
+- **Display names plain** in prose: `Vitamin B12`, `Healthy Fats`. Use backticks only when quoting a literal cell string (e.g., `` `Vitamin B12 (0.9µg/100g)` ``).
+- **Cross-section references** use the backticked-heading form: `` `### Threshold model` ``, `` `### 5.13` ``. Never bare prose ("under Anti-drift rules") or double-quoted names.
+- **Cross-reference verb**: "see" everywhere. Never "per", "as defined in", "reference".
+- **Hard imperative**: **MUST** / **MUST NOT** in caps for load-bearing rules; lowercase "must" only inside example prose. This keeps the file greppable for audits.
+- **"Do not" callouts**: inline `**Do NOT** …` at paragraph start. Never as a blockquote.
+- **Code-fence languages**: `` ```markdown `` for every markdown example block; `` ```bash `` for shell; `` ```python `` for Python. No bare `` ``` ``.
+- **Em-dash** U+2014 `—` for empty cells; separator ` — ` is `space U+2014 space`. Never blank, never `none`, never `N/A`, never hyphen-minus, never en-dash.
+- **No space between value and unit**: `28g`, `1.4µg`, `470µg`. Never `28 g`.
+- **Humanization** (slug → display name): Title Case, hyphens → spaces. **Omega-3 carve-out: the `omega-3` slug's humanized form RETAINS the hyphen-digit suffix — `Omega-3`, NOT `Omega 3`.** This is the only such carve-out among the 27 v1 slugs. (The lexicon Category column also encodes it as `Omega-3 (EPA/DHA)`; `ingredients-info.md` cells use that full form, recipe-page bullets drop the parenthetical to `Omega-3`. The hyphen-digit retention is identical in both forms.) Distinct from the nutrition rule "marine EPA/DHA only" that gates which sources count — see the `omega-3` Notes cell in `### Canonical units and inclusion thresholds per nutrient`.
+- **B-vitamin ordering** is by **numeric value, not ASCII**: `Vitamin B1, Vitamin B2, Vitamin B3, Vitamin B5, Vitamin B6, Vitamin B7, Vitamin B9, Vitamin B12`. Applies to every list of nutrients in this file and every list of nutrients agents emit (recipes-index columns, recipe-page bullets, `ingredients-info.md` cell-internal sort, threshold table, slug-mapping table, group READMEs).
 
 ## Canonical category lexicon
 
@@ -348,7 +322,7 @@ The four nutrient axes — macronutrients, minerals, vitamins, soft-essentials �
 
 **Uniform schema.** All four tables use the same four columns in the same order:
 
-```
+```markdown
 | Category | Requirement | Function | Example Sources |
 ```
 
@@ -415,31 +389,35 @@ No table uses a different column name (`Top Sources`, `Best Bioavailable Sources
 
 ### Edible-only rule for `Example Sources`
 
-Cells in the `Example Sources` column contain edible foods only. No supplements (D3 capsules, algae oil softgels, B12 pills), no non-foods (sunlight). Water is the only acceptable "intake by default" non-recipe item but is not actually present in any cell. The tables map to recipes; supplements and sunlight do not appear in any recipe ingredient list and would create dead leads in `ingredients-info.md`.
+Cells contain edible foods only — no supplements (D3 capsules, B12 pills), no non-foods (sunlight). **Reason:** the tables map to recipes; supplements / sunlight don't appear in any recipe ingredient list and would create dead leads in `ingredients-info.md`.
 
-Examples are also restricted to **vegetarian + fish/shellfish** sources. "Vegetarian" here is broad: plants, grains, legumes, nuts, seeds, fungi, eggs, dairy, honey, and any other vegetarian-friendly products are all allowed. Fish and shellfish (clams, oysters, mussels) are also allowed. The only exclusion is land-animal flesh — no beef, pork, lamb, chicken, turkey, liver, or other meat / poultry / organ meats. When a row's most concentrated source is land meat (e.g., liver for retinol, beef for B12), substitute the next-best vegetarian or pescatarian source (egg yolks, dairy, fatty fish, sardines) rather than reintroducing meat.
+Examples are restricted to **vegetarian + fish/shellfish** sources. "Vegetarian" is broad: plants, grains, legumes, nuts, seeds, fungi, eggs, dairy, honey. Fish and shellfish (clams, oysters, mussels) are allowed. **The only exclusion is land-animal flesh** — no beef, pork, lamb, chicken, turkey, liver, or other meat / poultry / organ meats. When a row's most concentrated source is land meat (e.g., liver for retinol, beef for B12), substitute the next-best vegetarian or pescatarian source (egg yolks, dairy, fatty fish, sardines).
 
 ## Ingredient → nutrient mapping
 
 Recipe nutrient sections are *derived*, not hand-picked. The single authoritative lookup is `docs/cooking/ingredients-info.md`. This section defines its schema and the protocol agents follow when writing or auditing a recipe's nutrient sections.
 
+### Threshold model
+
+Two thresholds, used at two distinct stages. The full per-nutrient values live in `### Canonical units and inclusion thresholds per nutrient`; the model below states the rules.
+
+- **Inclusion threshold (per-100g)** gates `ingredients-info.md` cells. Roughly 1% of the adult RDA / AI per 100g; set to **recipe drop threshold ÷ 5**. **Do NOT preemptively apply the recipe drop threshold here** — at the ingredient level we do not know how much of the ingredient any recipe will use, and a small per-100g content can still produce a meaningful per-recipe sum at high ingredient quantities.
+- **Recipe drop threshold (per-recipe sum)** gates recipe-page bullets and recipes-index table cells. The single arbiter of "is this enough to render": **no separate "rounds to 0" rule and no separate macro/fiber floor test** (macros and fiber recipe drop thresholds are simply `1g`, applied via the same threshold check as every other quantitative slug). Threshold drop runs BEFORE rounding.
+- **HARD CLIFF**: when an audit recomputes a recipe's sums, the recipe drop threshold wins over the ±20% / ±1-step tolerance — see `### 5.13`.
+- **Qualitative entries** (`Phytochemicals`, `Probiotics`): no unit, no amount, no quantitative threshold, no ` — <amount>` suffix on bullets. Presence-based: listed in an `ingredients-info.md` cell whenever the ingredient is a recognized source; listed on a recipe whenever ≥1 ingredient lists them. **State once here; every other site references this rule.**
+
+**Reason for two tiers (one sentence).** A low per-100g content can still produce a meaningful per-recipe sum at high ingredient quantities (e.g., apple Vitamin C at 4.6mg/100g, recipe drop threshold 5mg — pre-filtering at the ingredient level would lose Vitamin C from a 1kg apple-pie filling, whose per-recipe sum is ~46mg).
+
 ### Canonical units and inclusion thresholds per nutrient
 
-**Each of the 25 quantitative v1 nutrient slugs has exactly one canonical unit AND two thresholds — one for ingredient-cell inclusion (looser) and one for recipe-page rendering (stricter).** The unit is fixed: every `ingredients-info.md` cell for that nutrient MUST use this unit, and every recipe-page bullet for that nutrient MUST display the summed total in this unit. **Do NOT mix units within a nutrient** — `spinach` writing `Vitamin A (470µg/100g)` and another row writing `Vitamin A (0.5mg/100g)` is a defect: the agent would sum `470 + 0.5 = 470.5` and emit a wrong value (the correct sum is `470 + 500 = 970µg`). The single-unit rule below makes summation a straight numeric add with no conversion step.
+Each of the 25 quantitative v1 nutrient slugs has exactly one canonical unit AND two thresholds — one for ingredient-cell inclusion (looser) and one for recipe-page rendering (stricter). The unit is fixed: every `ingredients-info.md` cell for that nutrient MUST use this unit, and every recipe-page bullet for that nutrient MUST display the summed total in this unit. **Reason:** mixing units within a nutrient corrupts summation — e.g., `Vitamin A (470µg/100g)` + `Vitamin A (0.5mg/100g)` summed as `470 + 0.5 = 470.5` is wrong (the correct sum is `970µg`).
 
-**Why two thresholds (and not one).** A recipe can use anywhere from a teaspoon to a kilogram of any single ingredient — we cannot know in advance which. If the ingredient-cell rule used the same threshold as the recipe-page rule, we would silently drop nutrients whose per-100g content is small but whose contribution to a large-quantity recipe would be meaningful (e.g., apple Vitamin C at 4.6mg/100g, recipe drop threshold 5mg — pre-filtering at ingredient level would mean a 1kg apple pie loses Vitamin C from the lookup, even though the per-recipe sum would be ~46mg, well above the recipe threshold). The two-tier design fixes this: the **ingredient inclusion threshold** is calibrated to ~1% of the adult RDA / AI per 100g (a low floor that filters only true-trace amounts) and is set to **the recipe drop threshold ÷ 5**. The **recipe drop threshold** stays at ~5% of the adult RDA / AI and decides whether the per-recipe summed total surfaces as a bullet.
-
-The two thresholds are used at two distinct stages:
-
-1. **`ingredients-info.md` cell inclusion (per-100g content):** include a nutrient on the row whenever the ingredient's per-100g content is **at or above the inclusion threshold**. Omit when below the inclusion threshold (true-trace contamination — e.g., a vegan food with traceable B12 from soil microbes that is not a meaningful source). Do NOT preemptively apply the recipe drop threshold here — we don't know in advance how much of the ingredient any recipe will use, so a low per-100g content can still produce a meaningful per-recipe sum at high ingredient quantities.
-2. **Recipe-page rendering (per-recipe sum):** drop the bullet whenever the summed recipe-level total is **below the recipe drop threshold**. Render the rounded amount when at or above. Recipe-level filtering is the gate that surfaces only meaningful contributions to the reader.
-
-This makes the threshold table the single source of truth for "what counts" at each stage. Agents do NOT make ad-hoc calls about trace amounts; they consult the table.
+For the two-stage threshold rule itself, see `### Threshold model` above.
 
 | Slug | Display name | Canonical unit | Inclusion threshold (per 100g) | Recipe drop threshold (per recipe) | Notes |
 |---|---|---|---|---|---|
 | `complex-carbs` | `Complex Carbs` | `g` | `0.2g` | `1g` | Macros — always `g`. |
-| `healthy-fats` | `Healthy Fats` | `g` | `0.2g` | `1g` | Always `g`. **Strict policy: only UNSATURATED fats count** (lexicon Example Sources are extra-virgin olive oil, walnuts, avocado, fatty fish — all unsaturated). Coconut oil / coconut milk / coconut cream / palm oil / butter / lard / dairy fat / deep-frying fat / hydrogenated shortening are saturated and DO NOT contribute to `Healthy Fats`. Saturated fat is not tracked anywhere in v1. |
+| `healthy-fats` | `Healthy Fats` | `g` | `0.2g` | `1g` | Always `g`. **Strict policy: only UNSATURATED fats count** (lexicon Example Sources are extra-virgin olive oil, walnuts, avocado, fatty fish — all unsaturated). Saturated fats — coconut oil / coconut milk / coconut cream / palm oil / butter / lard / dairy fat / deep-frying fat / hydrogenated shortening — do NOT contribute to `Healthy Fats`. Saturated fat is not tracked anywhere in v1. |
 | `protein` | `Protein` | `g` | `0.2g` | `1g` | Macros — always `g`. |
 | `calcium` | `Calcium` | `mg` | `10mg` | `50mg` | |
 | `iodine` | `Iodine` | `µg` | `2µg` | `10µg` | |
@@ -466,9 +444,9 @@ This makes the threshold table the single source of truth for "what counts" at e
 | `phytochemicals` | `Phytochemicals` | — | presence | presence | Qualitative — no unit, no amount, no quantitative threshold. Listed in an ingredient cell whenever the ingredient is a recognized source; listed on a recipe whenever ≥1 ingredient lists it. |
 | `probiotics` | `Probiotics` | — | presence | presence | Qualitative — no unit, no amount, no quantitative threshold. Listed in an ingredient cell only for live-culture fermented foods; listed on a recipe whenever ≥1 ingredient lists it. |
 
-**Why this matters for summation.** The lookup-extend protocol computes `contribution = X × mass_g / 100` for each ingredient and sums per nutrient. Because every cell for a given nutrient uses the same unit, the sum is a straight numeric add — no µg-to-mg conversion ever appears in the agent's workflow. If an audit ever finds a cell using a non-canonical unit (e.g., `Vitamin A (0.47mg/100g)` instead of `Vitamin A (470µg/100g)`), it is a defect to be fixed by re-rendering the cell in the canonical unit before any summation runs.
+Summation: `contribution = X × mass_g / 100` per ingredient, summed per nutrient. Single-unit-per-nutrient means the sum is a straight numeric add — no conversion step. A non-canonical-unit cell (e.g., `Vitamin A (0.47mg/100g)` instead of `Vitamin A (470µg/100g)`) is a defect: fix by re-expressing the cell in the canonical unit before any summation runs (see `### 5.14`).
 
-**Adding a new ingredient.** When step 4 of the lookup-extend protocol adds a new row to `ingredients-info.md`, the per-100g amount for each nutrient MUST be expressed in the canonical unit above. Do NOT pick a unit based on what feels readable for that ingredient — readability is fixed at the slug level, not the row level. The agent fills a nutrient cell entry whenever the ingredient's per-100g content is **at or above the inclusion threshold above** (the looser, ingredient-level threshold) — and omits it when below. The recipe drop threshold is NOT applied at this stage. Example: apple Vitamin C is ~4.6mg/100g — above the 1mg inclusion threshold, so the row lists `Vitamin C (4.6mg/100g)`, even though a recipe using only ~50g of apple would yield ~2mg (below the 5mg recipe drop threshold and would NOT render a bullet at the recipe stage). A recipe using ~1kg of apple yields ~46mg (above the recipe threshold and DOES render). The two-tier design preserves this signal at the lookup level so the recipe-stage filter has the data it needs.
+When step 4 of the lookup-extend protocol adds a new row, fill each nutrient cell whenever per-100g content is at or above the **inclusion threshold** above (the looser threshold). **Do NOT preemptively apply the recipe drop threshold here** — see `### Threshold model`.
 
 ### `ingredients-info.md` schema
 
@@ -500,16 +478,13 @@ The file shape:
 
 **Cell content rules:**
 
-- Comma-separated list of entries from the relevant group's lexicon. Each entry uses the EXACT `Category` column display name from `## Nutrient lexicons` (e.g., `Complex Carbs`, `Healthy Fats`, `Vitamin B12`, `Omega-3 (EPA/DHA)`, `Dietary Fiber`) — never the slug form, never a plural, never a free-text variant.
-- Each entry is followed by an approximate per-100g amount in parentheses, rounded to a natural value, **using the canonical unit for that nutrient from `### Canonical units and inclusion thresholds per nutrient` above** (do NOT pick the unit row-by-row). Format: `<Display Name> (<value><unit>/100g)`. Do NOT prefix the amount with `~` — Docsify's bundled marked@1.x parser treats single tildes as strikethrough delimiters, so `(~50g/100g), Protein (~21g/100g)` would render with a strikethrough span across `50g/100g), Protein (`. Examples:
-  - Macronutrients (always `g`): `Healthy Fats (50g/100g)`, `Protein (21g/100g)`, `Complex Carbs (66g/100g)`.
-  - Minerals (per the canonical-unit table — Calcium / Iron / Magnesium / Potassium / Zinc in `mg`; Iodine / Selenium in `µg`): `Calcium (270mg/100g)`, `Selenium (30µg/100g)`.
-  - Vitamins (per the canonical-unit table): `Vitamin C (28mg/100g)`, `Vitamin B12 (0.9µg/100g)`, `Vitamin A (470µg/100g)`. Never write `Vitamin A (0.47mg/100g)` — that's a different (non-canonical) unit and would corrupt summation.
-  - Soft Essentials: `Dietary Fiber (12g/100g)`, `Omega-3 (EPA/DHA) (2400mg/100g)` use a per-100g amount; `Phytochemicals` and `Probiotics` are qualitative — write the bare display name with no amount.
-- Within-cell sort: alphabetical by display name, case-insensitive. Vitamins ending in a digit sort by **numeric value** of the digit, NOT ASCII: `Vitamin B1, Vitamin B2, Vitamin B3, Vitamin B5, Vitamin B6, Vitamin B7, Vitamin B9, Vitamin B12`.
-- Empty cells written as a single em-dash (`—`, U+2014) — never blank, never `none`, never `N/A`.
-- **Inclusion criterion (per-100g `inclusion threshold`, NOT the stricter recipe drop threshold):** a nutrient is listed in the row whenever the ingredient's per-100g content is **at or above the inclusion threshold** for that nutrient (see `### Canonical units and inclusion thresholds per nutrient` — the `Inclusion threshold (per 100g)` column, which is roughly the recipe drop threshold ÷ 5). It is **omitted** when below the inclusion threshold. **Do NOT apply the recipe drop threshold here** — at the ingredient level we do not know how much of the ingredient any particular recipe will use, and a small per-100g content can still produce a meaningful recipe-level sum at high ingredient quantities (e.g., apple Vitamin C at 4.6mg/100g is below the 5mg recipe drop threshold but well above the 1mg inclusion threshold, and a 1kg apple-pie filling delivers ~46mg, which the recipe stage would surface). The agent's job at the ingredient level is to write what's actually in the food, filtered only against the looser inclusion threshold; the recipe-level filter decides whether to surface a nutrient on any particular recipe page.
-- For qualitative entries (`Phytochemicals`, `Probiotics`), include whenever the ingredient is a recognized source (lycopene, capsaicin, anthocyanins, sulforaphane, etc. for Phytochemicals; live-culture fermented items for Probiotics) — there is no quantitative threshold.
+- Comma-separated entries from the relevant group's lexicon. Each entry uses the EXACT `Category` column display name from `## Nutrient lexicons` (e.g., `Complex Carbs`, `Vitamin B12`, `Omega-3 (EPA/DHA)`) — never the slug, never a plural, never a free-text variant.
+- Format: `<Display Name> (<value><unit>/100g)`. Unit is the canonical unit (see `### Canonical units and inclusion thresholds per nutrient`); do NOT pick the unit row-by-row. **Do NOT** prefix the amount with `~` — **Reason:** marked@1.x renders `~text~` as strikethrough, so `(~50g/100g), Protein (~21g/100g)` would render struck-through across `50g/100g), Protein (`.
+- Examples: `Healthy Fats (50g/100g)`, `Vitamin B12 (0.9µg/100g)`, `Vitamin A (470µg/100g)` (never `Vitamin A (0.47mg/100g)` — wrong unit), `Omega-3 (EPA/DHA) (2400mg/100g)`. `Phytochemicals` and `Probiotics` are qualitative — bare display name, no amount.
+- Within-cell sort: alphabetical by display name, B-vitamins by numeric value (see `### Formatting conventions`).
+- Empty cells: single em-dash (`—`).
+- **Inclusion criterion**: per-100g `inclusion threshold` (looser column), NOT the recipe drop threshold. See `### Threshold model`.
+- **Qualitative entries** (`Phytochemicals`, `Probiotics`): include whenever the ingredient is a recognized source (lycopene, capsaicin, anthocyanins, sulforaphane for Phytochemicals; live-culture fermented items for Probiotics). See `### Threshold model`.
 
 **Display name → slug mapping** (used when deriving recipe page bullet links from cell content). The 27 v1 entries map cleanly via the standard slug-derivation rule (lowercase, kebab-case, parentheticals dropped):
 
@@ -542,8 +517,6 @@ The file shape:
 | `Omega-3 (EPA/DHA)` | `omega-3` |
 | `Phytochemicals` | `phytochemicals` |
 | `Probiotics` | `probiotics` |
-
-> Note on `Omega-3 (EPA/DHA)`: the slug drops the `(EPA/DHA)` parenthetical per the standard slug-derivation rule (lowercase, kebab-case, parentheticals dropped). The slug is `omega-3`, the file is `cooking/soft-essentials/omega-3.md`, and the recipe-page bullet link text is `Omega-3` (humanized slug, parenthetical absent) — see `### Recipe-page rendering` for the bullet-link-text rule.
 
 ### Quantity → grams conversion
 
@@ -645,7 +618,7 @@ To compute per-recipe nutrient totals, each `## Ingredients` row's quantity must
 
 **Unspecified-size fallback.** When the source omits a size qualifier (`1 onion`, `1 tomato`, `2 eggs`):
 
-- **Eggs default to `large` = 50g.** This matches North American recipe convention (USDA "large" is the standard cookbook default). So `2 eggs` → 100g, even though the table also lists smaller variants.
+- **Eggs default to large = 50g.** This matches North American recipe convention (USDA "large" is the standard cookbook default). So `2 eggs` → 100g, even though the table also lists smaller variants.
 - **Mushrooms (whole-item count, cultivar omitted) default to white/button = 18g** — e.g., `1 mushroom`, `2 mushrooms`. When the source names a cultivar (`1 cremini`, `1 portobello cap`, `2 shiitake`), use the cultivar's row. **Volume measurements** (`½ cup chopped mushrooms`, `1 cup sliced mushrooms`) follow the **whole-item-vs-volume precedence** rule and go to the volume table above — specifically the row labeled `Mushrooms (sliced / chopped, raw)` (70g per cup) — NOT to this whole-item fallback.
 - **All other current items** (every entry besides eggs and mushrooms — `1 medium onion`, `1 medium carrot`, `1 stalk celery`, `1 clove garlic`, `1 slice bread`, `1 cherry tomato`, etc.) have only one row in the table and therefore fall through to the **Single-variant items** rule below. There is no choice to make.
 - **Forward-compatibility:** if a future revision adds multiple non-egg, non-mushroom size rows for some item, those default to the `medium` entry. (No such item exists in the current table.)
@@ -656,64 +629,50 @@ For ingredients/forms not in either table (`1 medium butternut squash` ≈ 1000g
 
 ### Lookup-extend protocol
 
-The writing process for the four nutrient sections of any recipe page:
+Writing the four nutrient sections of any recipe page:
 
-1. For each row in the recipe's `## Ingredients` table, compute (a) the canonical ingredient name per the normalization rules above, and (b) the ingredient mass in grams via `### Quantity → grams conversion`. Skip ingredients with 0g mass.
-2. Search `ingredients-info.md` for that canonical name. (`grep -i "^| <name> |" docs/cooking/ingredients-info.md` is fine; `Read` followed by visual scan is fine. **Do not invent or fuzzy-match** — exact canonical match only.) **Sub-recipe rows** use a Markdown link in the Ingredient column (`| [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md) | … |`); for those, match against the link text only, ignoring `[...](...)` syntax. After matching, the four cells provide the sub-recipe's per-100g profile and the standard `(value × grams / 100)` math applies — sub-recipes are otherwise treated identically to raw ingredients during lookup.
-3. **If found:** read the four nutrient cells. For each entry of the form `<Display Name> (<X><unit>/100g)`:
-   - Compute the contribution: `contribution = X × mass_g / 100` (in the same unit).
-   - Add the contribution to the recipe-level running total for that display name (per group).
-   - For qualitative entries (`Phytochemicals`, `Probiotics`), no amount is summed — just record presence.
-4. **If not found:**
-   1. Determine the ingredient's nutrient profile from established nutritional knowledge — both which nutrients are present meaningfully and the per-100g amount of each.
-   2. Add a new row to `ingredients-info.md` in the correct alphabetical position with the four cells filled per the **Cell content rules** above (display names + `(Xunit/100g)` amounts, or a single `—` if none).
-   3. Then read the cells back and apply step 3 to compute contributions.
-5. After processing every recipe ingredient:
-   - **Quantitative entries (all 25 quantitative slugs — macros, fiber, minerals, vitamins, Omega-3):** for each, compare the summed **unrounded** total against the per-nutrient **recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient`. If the total is **below** the recipe drop threshold, drop the bullet (no meaningful contribution to surface). If at or above, round per `### Recipe-page rendering` and render. The recipe drop threshold is the single arbiter — there is no separate "rounds to 0" rule. (Note: the *inclusion* threshold is looser and applies to `ingredients-info.md` cells, not to recipe pages.)
-   - **Qualitative entries** (`Phytochemicals`, `Probiotics`): keep them whenever ≥1 ingredient listed them in step 3. They have no summed total and no threshold; presence is the only test.
-   - Convert each remaining display name to its slug via the **Display name → slug mapping**.
-   - Write the four nutrient sections on the recipe page using deduped, alphabetically-sorted bullets per `### Recipe-page rendering`. Omit any section whose set is empty (every quantitative entry below threshold AND no qualifying qualitative entries).
+1. For each `## Ingredients` row, compute canonical name + mass in grams (see `### Quantity → grams conversion`). Skip 0g entries.
+2. Look up the canonical name in `ingredients-info.md`. **Exact canonical match only — do not invent or fuzzy-match.** Sub-recipe rows match against the link text only, ignoring `[...](...)` syntax.
+3. **If found:** for each cell entry `<Display Name> (<X><unit>/100g)`, compute `contribution = X × mass_g / 100` and add to the recipe-level running total. Qualitative entries record presence only.
+4. **If not found:** determine the per-100g profile from established nutritional knowledge, append a new alphabetical row with the four cells filled per the Cell content rules above, then apply step 3.
+5. After all ingredients: apply the recipe drop threshold to each quantitative sum and presence to qualitative entries (see `### Threshold model`). Convert surviving display names to slugs via the **Display name → slug mapping**. Write per `### Recipe-page rendering`; omit empty sections (see `### Section-omission rule`).
 
-**Dedup + sort.** Within a recipe's `## Macronutrients` (and the other three sections), each slug appears at most once and the bullet list is alphabetical by display name, case-insensitive, with B-vitamins by numeric value (`Vitamin B1` … `Vitamin B12`). Bullets link to the slug's canonical row file (e.g., `cooking/minerals/iron.md`).
+**Dedup + sort:** within each section, each slug appears at most once; sort as in `### Recipe-page rendering`. Bullets link to the slug's canonical row file (e.g., `cooking/minerals/iron.md`).
 
-**Critical guard.** The agent **MUST NOT** invent slugs not present in the v1 lexicons. If the agent believes an ingredient provides a nutrient that has no slug (e.g., a hypothetical "iron-bound copper"), it surfaces this to the user — it does not silently add a new row to any lexicon table or to `ingredients-info.md`.
+**Critical guard:** the agent **MUST NOT** invent slugs outside the v1 lexicons. Surface unmapped concepts to the user — do not silently add rows (see `### Lexicon-first rule`).
 
 ### Sub-recipe ingredients
 
-Some recipes use other recipes as ingredients (e.g., `apple-chickpea-salad` calls for "1 batch Maple Dijon Dressing"; `breakfast-sandwiches` uses "1 tbsp Tofu Scramble Seasoning"). These sub-recipe ingredients need a row in `ingredients-info.md` so their nutrients propagate to the parent — but the row is built differently from a raw-ingredient row.
+Some recipes use other recipes as ingredients (e.g., `apple-chickpea-salad` uses "1 batch Maple Dijon Dressing"). Sub-recipes need a row in `ingredients-info.md` so their nutrients propagate to the parent.
 
-**Convention.** A sub-recipe gets a row in `ingredients-info.md` like any other ingredient, with two differences:
+**Row convention.** Two differences from a raw-ingredient row:
 
-1. **Ingredient column is a Markdown link** to the recipe page:
+1. **Ingredient column is a Markdown link** to the recipe page (signals "this row is a sub-recipe"):
 
-   ```
+   ```markdown
    | [Maple Dijon Dressing](cooking/recipes/maple-dijon-dressing.md) | Healthy Fats (60g/100g) | Calcium (40mg/100g), Potassium (110mg/100g) | Vitamin C (8mg/100g), Vitamin E (2.4mg/100g), Vitamin K (11µg/100g) | — |
    ```
 
-   The visible link text is the recipe's H1 (Title Case). This signals "this row is a sub-recipe; click for the underlying recipe."
-
-2. **Nutrient cells contain a per-100g profile computed by aggregating the sub-recipe's own `## Ingredients` table.** The procedure:
-   a. For each ingredient row in the sub-recipe, compute canonical name → grams (per `### Quantity → grams conversion`).
-   b. Sum those masses → the sub-recipe's **batch mass** (the total grams of the produced output; for sauces, seasonings, dressings, dips, and assemblies this equals the sum of ingredient masses; for mass-loss recipes see below).
-   c. For each nutrient slug, sum `(per_100g_value × ingredient_grams / 100)` across the sub-recipe's ingredients = total of that nutrient in one batch.
+2. **Nutrient cells contain a per-100g profile** aggregated from the sub-recipe's own `## Ingredients` table:
+   a. For each ingredient row, compute canonical name → grams (see `### Quantity → grams conversion`).
+   b. Sum masses → **batch mass** (for sauces / seasonings / dressings / dips / assemblies this equals the raw-ingredient sum; for mass-loss recipes see below).
+   c. For each nutrient slug, sum `(per_100g_value × ingredient_grams / 100)` = total in one batch.
    d. Per-100g of the sub-recipe = `(total_in_batch × 100) / batch_mass`.
-   e. Apply the same per-100g **inclusion thresholds** that gate any ingredient cell (see `### Canonical units and inclusion thresholds per nutrient`); only include nutrients above their inclusion threshold; round per the cell content rules in `### `ingredients-info.md` schema`.
+   e. Apply per-100g **inclusion thresholds** as for any ingredient cell (see `### Threshold model`); round per cell content rules.
 
-**Sort key.** The row's alphabetical position is determined by the link text in lowercase, ignoring `[...](...)` punctuation. `[Maple Dijon Dressing](...)` sorts at `maple dijon dressing`.
+**Sort key and lookup matching.** Row sorts by the link text in lowercase, ignoring `[...](...)` syntax: `[Maple Dijon Dressing](...)` sorts at `maple dijon dressing`. A parent-recipe agent computes the canonical name (e.g., `maple dijon dressing`) and matches against the link text in `ingredients-info.md`'s Ingredient column (case-insensitive, ignoring Markdown link syntax). Once matched, the four cells provide the per-100g profile; the standard `(value × grams / 100)` math propagates nutrients to the parent. No special-casing beyond the link-text match.
 
-**Lookup matching.** When a parent-recipe agent encounters a sub-recipe ingredient, it computes the canonical name (e.g., `maple dijon dressing`) and matches against the link text in `ingredients-info.md`'s Ingredient column (case-insensitive, ignoring Markdown link syntax). Once matched, the four cells provide the per-100g profile, and the standard `(value × grams / 100)` math propagates the sub-recipe's nutrients to the parent. **No special-casing beyond the link-text match** — at consumption time, a sub-recipe is just another ingredient with a per-100g profile.
+**Mass conversion when a parent uses a sub-recipe:**
 
-**Mass conversion when a parent recipe uses a sub-recipe:**
+- "1 batch &lt;Title&gt;" → batch mass (step b above; consult the sub-recipe page's `Yield:` if it states a finished mass).
+- "1 tbsp / 1 tsp / 1 cup &lt;Title&gt;" → standard `### Quantity → grams conversion` using the sub-recipe's bulk-density family (dressings/sauces ~15g/tbsp · 240g/cup; dry seasoning blends ~6g/tbsp · 80g/cup; dips/spreads ~15g/tbsp · 240g/cup; granola ~30g per ¼ cup; ice cream ~130g/cup). When ambiguous, note the assumption in the sub-recipe's `## Notes`.
+- "to taste" or "—" → 0g contribution.
 
-- "1 batch &lt;Sub-recipe Title&gt;" → grams = the sub-recipe's batch mass (computed in step b above). Consult the sub-recipe page's metadata blockquote `Yield:` field if it states a finished mass; otherwise sum the ingredient masses directly.
-- "1 tbsp / 1 tsp / 1 cup &lt;Sub-recipe Title&gt;" → standard `### Quantity → grams conversion` using the sub-recipe's bulk-density family (dressings/sauces ~15g/tbsp · 240g/cup; dry seasoning blends ~6g/tbsp · 80g/cup; dips/spreads ~15g/tbsp · 240g/cup; granola ~30g per ¼ cup; ice cream ~130g/cup). When ambiguous, prefer the closest culinary analogue and note the assumption in the sub-recipe's `## Notes`.
-- "to taste" or "—" quantity → 0g contribution, exactly as for raw ingredients.
+**Recursion.** Process leaf sub-recipes first so inner rows are populated before outer ones. **Two-level recursion is the practical limit in v1**; deeper chains require explicit user surfacing.
 
-**Recursion (sub-recipes that use sub-recipes).** Sub-recipes can reference further sub-recipes (e.g., a dressing that calls for hummus). Process **leaf sub-recipes first** so the inner sub-recipe's row is populated before the outer one is computed. Two-level recursion is the practical limit observed in v1; deeper chains require explicit user surfacing.
+**Mass-loss sub-recipes.** Where the produced batch mass differs materially from the raw-ingredient sum (typically baked goods losing 15–25% to evaporation, or reductions/concentrates), use the **finished batch mass** in step (b), not the raw sum. State the assumed finished mass in the sub-recipe's own `## Notes`.
 
-**Mass-loss sub-recipes.** For sub-recipes where the produced batch mass differs materially from the raw-ingredient sum (typically baked goods that lose 15–25% to evaporation, or reductions/concentrates), use the **finished batch mass** in step (b), not the raw ingredient sum. State the assumed finished mass in the sub-recipe's own `## Notes` so future runs can verify. For sauces, seasonings, dressings, dips, granola, and most assemblies, the raw-sum mass is fine.
-
-**Updating sub-recipe rows.** When a sub-recipe's `## Ingredients` table changes, its row in `ingredients-info.md` must be recomputed and the per-100g profile updated. Then every parent recipe that uses it must be re-derived. The audit subsection `### 5.15 Sub-recipe profile validity` exists to catch drift.
+**Updating.** When a sub-recipe's `## Ingredients` table changes, recompute its row in `ingredients-info.md` and re-derive every parent recipe that uses it. `### 5.15` catches drift.
 
 ### Recipe-page rendering
 
@@ -731,25 +690,22 @@ Bullet format:
 
 Format rules:
 
-- Bullet shape: `- [<Bullet Link Text>](cooking/<group>/<slug>.md) — <amount><unit>`.
-- Separator: ` — ` (single space, em-dash U+2014, single space). Not a hyphen-minus, not an en-dash.
-- **Bullet link text is the humanized slug** (Title Case, hyphens → spaces, B-vitamins keep their digit, **`omega-3` carve-out: hyphen-digit suffix RETAINED — `Omega-3`, NOT `Omega 3`**) — NOT necessarily the full lexicon `Category` display name. For 26 of the 27 v1 entries the two are identical (e.g., `Vitamin B12`, `Healthy Fats`, `Iron`). The one exception is **Omega-3**: the lexicon Category is `Omega-3 (EPA/DHA)` and `ingredients-info.md` cells use that full form (`Omega-3 (EPA/DHA) (200mg/100g)`), but the recipe-page bullet drops the parenthetical so the link text matches the slug's H1: `- [Omega-3](cooking/soft-essentials/omega-3.md) — 200mg`. Slug derivation always strips parentheticals; this rule keeps the bullet text aligned with the slug page's H1.
-- No space between number and unit: `28g`, not `28 g`. This matches the convention used in `ingredients-info.md` cell amounts.
-- Amount unit is the canonical unit for that nutrient from `### Canonical units and inclusion thresholds per nutrient` (the same unit used in every `ingredients-info.md` cell for that nutrient). Summation across ingredients is therefore a straight numeric add — no unit conversion ever appears in the agent's workflow. Quick reference: `g` for macros and Dietary Fiber; `mg` or `µg` for minerals and vitamins per the canonical-unit table; `mg` for Omega-3.
-- **Threshold drop FIRST, then rounding.** Compute the unrounded recipe-level sum for each nutrient. If the sum is **below the per-nutrient recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient` (the `Recipe drop threshold` column — NOT the looser `Inclusion threshold` that gates `ingredients-info.md` cells), drop the bullet entirely — do not render. If the sum is at or above the recipe drop threshold, apply the rounding rules below to the sum and render the rounded value. The recipe drop threshold is the single arbiter of "is this enough to list on a recipe page"; the rounding rules only apply to values that already passed it.
+- Bullet shape: `- [<Bullet Link Text>](cooking/<group>/<slug>.md) — <amount><unit>`. Separator ` — `, no space between number and unit (see `### Formatting conventions`).
+- **Bullet link text is the humanized slug** (Title Case, hyphens → spaces, B-vitamins keep their digit; `omega-3` carve-out — `Omega-3`, hyphen-digit retained — see `### Formatting conventions`). For 26 of 27 v1 entries this equals the lexicon `Category` display name. The one exception is `Omega-3`: lexicon Category `Omega-3 (EPA/DHA)` and `ingredients-info.md` cells use the full form (`Omega-3 (EPA/DHA) (200mg/100g)`), but the recipe-page bullet drops the parenthetical so the link text matches the slug's H1: `- [Omega-3](cooking/soft-essentials/omega-3.md) — 200mg`.
+- Amount unit is the canonical unit (see `### Canonical units and inclusion thresholds per nutrient`; same as `ingredients-info.md`). Quick reference: `g` for macros and Dietary Fiber; `mg` or `µg` per the table; `mg` for Omega-3.
+- **Vitamin D is always reported in `µg`, never IU.** The IU form in the lexicon's Requirement column is informational only; recipe-page bullets AND `ingredients-info.md` cells use `µg`.
+- **Threshold drop FIRST, then rounding.** Drop any quantitative bullet whose **unrounded** recipe-level sum is below the per-nutrient **recipe drop threshold** (see `### Threshold model`). Apply rounding only to values that passed.
 - **Rounding** (apply by magnitude band of the *value*, regardless of unit; bands are half-open at the upper end so a value of exactly 10 falls into `[10, 100)`, not `[1, 10)`):
-  - `[0, 1)` (e.g., `0.7µg`): one decimal place. (A value here only renders if its threshold is sub-1; e.g., Vitamin B12 threshold `0.1µg` → `0.7µg` renders.)
-  - `[1, 10)` (e.g., `1.8mg`, `1.4µg`, `3µg`): one decimal place; drop a trailing `.0` (so `3.0µg` → `3µg`, but `1.4µg` stays `1.4µg`).
+  - `[0, 1)` (e.g., `0.7µg`): one decimal place.
+  - `[1, 10)` (e.g., `1.8mg`, `1.4µg`, `3µg`): one decimal place; drop a trailing `.0` (so `3.0µg` → `3µg`, `1.4µg` stays).
   - `[10, 100)` (e.g., `45µg`, `28mg`): integer.
-  - `[100, 1000)` (e.g., `270mg`, `370µg`, `480µg`): nearest 10.
+  - `[100, 1000)` (e.g., `270mg`, `370µg`): nearest 10.
   - `[1000, 5000)` (e.g., `2400mg`): nearest 50.
   - `[5000, ∞)`: nearest 100.
-  - **Macros and Dietary Fiber override:** always reported in `g`, always integer (round half-up at every magnitude — no band rounding). So `1.4g` → `1g`, `19.6g` → `20g`, `28.3g` → `28g`, `245.4g` → `245g` (NOT `250g`). The recipe drop threshold for these four (`Complex Carbs`, `Healthy Fats`, `Protein`, `Dietary Fiber`) is `1g`, so any unrounded sum `< 1g` is dropped at the threshold step above before rounding ever runs.
-  - Vitamin B12 typical amounts are sub-µg to a few µg — threshold is `0.1µg`, so any sum at or above `0.1µg` renders. Render with one decimal place per the band rule. For values in `[1, 10)`, drop a trailing `.0` (so `2.0µg → 2µg`). For values in `[0, 1)`, the leading `0.` is kept (so `0.7µg`, NOT `7µg`).
-  - Vitamin D is always reported in `µg` (the unit used in `## Nutrient lexicons`), never `IU`. The IU form shown in the lexicon's Requirement column is informational only; recipe-page bullets and `ingredients-info.md` cells use `µg`.
-- **Qualitative entries** (`Phytochemicals`, `Probiotics`) carry NO amount and NO ` — ` separator: `- [Phytochemicals](cooking/soft-essentials/phytochemicals.md)`. They are present on the recipe page whenever **at least one** ingredient lists them in its `ingredients-info.md` cell — there is no per-recipe "amount" to compare, so the threshold rule below does NOT apply to qualitative entries.
-- **Bullet inclusion threshold (quantitative entries only):** drop any bullet whose **unrounded** recipe-level total is below the per-nutrient **recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient` (the stricter of the two thresholds — the looser inclusion threshold gates ingredient-cell content, not recipe-page bullets). The recipe drop threshold is the single arbiter; "rounds to 0" is no longer used as a separate trigger. Examples: Vitamin C recipe drop threshold `5mg` — a recipe with summed `3mg` Vitamin C drops the bullet; with summed `7mg` renders `7mg`. Calcium recipe drop threshold `50mg` — `40mg` drops, `60mg` renders. Macros and fiber recipe drop threshold `1g` — `0.7g` of Protein drops (not rendered as `1g`); `1.4g` renders as `1g`. This rule applies ONLY to quantitative nutrients; qualitative entries (Phytochemicals, Probiotics) are governed by the rule above. If no bullets remain in a group after applying both rules, omit the section heading entirely.
-- **Within-section sort:** alphabetical by display name, case-insensitive, with B-vitamins by numeric value.
+  - **Macros and Dietary Fiber override:** always `g`, always integer (round half-up; no band rounding). `1.4g` → `1g`, `19.6g` → `20g`, `28.3g` → `28g`, `245.4g` → `245g`. (Sums `< 1g` are dropped at the threshold step before rounding runs.)
+- **Qualitative entries** (`Phytochemicals`, `Probiotics`): no amount, no ` — ` separator. See `### Threshold model`.
+- **Within-section sort:** alphabetical by display name, case-insensitive, B-vitamins by numeric value.
+- If no bullets remain in a group after the threshold check, omit the section (see `### Section-omission rule`).
 
 ## Page templates
 
@@ -857,14 +813,9 @@ Back to [All Recipes](cooking/recipes/README.md)
 - [Vitamin D](cooking/vitamins/vitamin-d.md) — 3µg
 ```
 
-Each nutrient bullet shows the recipe-level rounded total amount in the format `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` (see `### Recipe-page rendering` for full format and rounding rules). Qualitative entries (`Phytochemicals`, `Probiotics`) carry no ` — <amount>` suffix.
+Each nutrient bullet shows the recipe-level rounded total amount (see `### Recipe-page rendering`). Qualitative entries carry no ` — <amount>` suffix.
 
-Section order is fixed: `Ingredients` → `Preparation` → `Notes` → `Categories` → `Traits` → `Books` → `Macronutrients` → `Minerals` → `Vitamins` → `Soft Essentials`. Sections that are empty:
-
-- `## Notes` — omit if no notes are available.
-- `## Traits` — omit entirely if the recipe has zero traits.
-- `## Macronutrients`, `## Minerals`, `## Vitamins`, `## Soft Essentials` — each section is omitted entirely (heading + bullet list both gone) when its derived list is empty. The four sections are *ingredient-derived* via the lookup-extend protocol in `## Ingredient → nutrient mapping`; in practice macronutrients/minerals/vitamins almost always have ≥1 entry; soft-essentials often won't.
-- `## Categories` and `## Books` are always present (every recipe has ≥1 of each).
+Section order is fixed: `Ingredients` → `Preparation` → `Notes` → `Categories` → `Traits` → `Books` → `Macronutrients` → `Minerals` → `Vitamins` → `Soft Essentials`. `## Categories` and `## Books` are always present (every recipe has ≥1 of each); other optional sections are omitted when empty (see `### Section-omission rule`). The four nutrient sections are *ingredient-derived* via `### Lookup-extend protocol`.
 
 ### `docs/cooking/categories/README.md`
 
@@ -963,11 +914,11 @@ Back to [Cooking](cooking/README.md)
 > All Requirement values are daily intake targets (24-hour total, summed across all meals). Values shown are for adults 19–50; `(M)` and `(F)` distinguish male/female when they differ; `†` marks an Adequate Intake (AI) rather than RDA. Macronutrient `g/kg/day` values scale with body weight; `% of total daily calories` are AMDRs from the U.S. DRIs. Source: NIH ODS Fact Sheets ([ods.od.nih.gov/factsheets](https://ods.od.nih.gov/factsheets/list-all/)).
 ```
 
-The body shape: H1 → back-link → the **verbatim canonical table** copied byte-for-byte from `## Nutrient lexicons` (4 columns, alphabetical rows, `Category` cells are Markdown links of the form `[Display Name](cooking/<group>/<slug>.md)`, `—` for empty cells, `†` for AIs) → the source-note blockquote (also copied verbatim from `## Nutrient lexicons`). The table itself is frozen (see "Frozen-table rule" under `## Anti-drift rules`). **No bullet list follows the table** — the linked Category cells are the only navigation path to the individual row pages.
+Body shape: H1 → back-link → verbatim canonical table from `## Nutrient lexicons` (4 columns, alphabetical rows, `Category` cells are Markdown links `[Display Name](cooking/<group>/<slug>.md)`, `—` for empty cells, `†` for AIs) → the source-note blockquote from `## Nutrient lexicons` (see `### Requirement-source note`). Table is frozen — see `### Frozen-table rule`. **No bullet list follows the table** — the linked Category cells are the only navigation path to the individual row pages.
 
 ### `docs/cooking/minerals/README.md`, `docs/cooking/vitamins/README.md`, `docs/cooking/soft-essentials/README.md`
 
-Structurally identical to `macronutrients/README.md` — H1 (`# Minerals` / `# Vitamins` / `# Soft Essentials`), back-link to Cooking, and the verbatim canonical table for that group from `## Nutrient lexicons` (with linked Category cells), followed by the source-note blockquote. For v1 the tables contain exactly 7 / 13 / 4 rows respectively.
+Structurally identical to `macronutrients/README.md`: H1 (`# Minerals` / `# Vitamins` / `# Soft Essentials`), back-link to Cooking, verbatim canonical table from `## Nutrient lexicons`, then the source-note blockquote. For v1 the tables contain exactly 7 / 13 / 4 rows respectively.
 
 ### `docs/cooking/macronutrients/<slug>.md` (and analogous for minerals, vitamins, soft-essentials)
 
@@ -981,14 +932,7 @@ Back to [Macronutrients](cooking/macronutrients/README.md)
 ...
 ```
 
-H1 is humanized from the slug (Title Case, hyphens → spaces, with one carve-out for `omega-3`). Worked examples covering all 27 v1 slugs:
-
-- Macronutrients: `complex-carbs` → `Complex Carbs`, `healthy-fats` → `Healthy Fats`, `protein` → `Protein`.
-- Minerals: `calcium` → `Calcium`, `iodine` → `Iodine`, `iron` → `Iron`, `magnesium` → `Magnesium`, `potassium` → `Potassium`, `selenium` → `Selenium`, `zinc` → `Zinc`.
-- Vitamins: `vitamin-a` → `Vitamin A`, `vitamin-b1` → `Vitamin B1`, … `vitamin-b12` → `Vitamin B12` (hyphen between `vitamin` and `b12` becomes a space, B-vitamin digit kept), `vitamin-c` → `Vitamin C`, …, `vitamin-k` → `Vitamin K`.
-- Soft Essentials: `dietary-fiber` → `Dietary Fiber`, `phytochemicals` → `Phytochemicals`, `probiotics` → `Probiotics`, **`omega-3` → `Omega-3` (carve-out — the hyphen-digit suffix is RETAINED, not converted to a space; `Omega 3` is wrong).** This matches the conventional written form of the term and aligns with the recipe-page bullet link text rule under `### Recipe-page rendering`.
-
-Back-link points to the parent group's README. Bullet list is every recipe whose `## Macronutrients` (or `## Minerals` / `## Vitamins` / `## Soft Essentials`) section contains this slug, alphabetical. Empty list when no recipes yet reference the slug — the file still exists with just the H1 and back-link.
+H1 is the humanized slug (see `### Formatting conventions` for the rule, including the `omega-3` → `Omega-3` carve-out). Back-link points to the parent group's README. Bullet list is every recipe whose `## Macronutrients` / `## Minerals` / `## Vitamins` / `## Soft Essentials` section contains this slug, alphabetical. Empty list when no recipes yet reference the slug — the file still exists with just the H1 and back-link.
 
 ### `docs/cooking/ingredients-info.md`
 
@@ -1006,7 +950,7 @@ Authoritative ingredient → nutrient lookup. Alphabetical by ingredient (canoni
 | spinach | — | Iron (2.7mg/100g), Magnesium (80mg/100g), Potassium (560mg/100g) | Vitamin A (470µg/100g), Vitamin B9 (190µg/100g), Vitamin C (28mg/100g), Vitamin K (480µg/100g) | Dietary Fiber (2g/100g), Phytochemicals |
 ```
 
-Five columns, exactly. Cells use the canonical display name from `## Nutrient lexicons` (NOT the slug, NOT a plural, NOT a free-text variant) plus a per-100g amount in parentheses. Entries sorted alphabetically inside each cell (B-vitamins by numeric value: `Vitamin B1, Vitamin B2, …, Vitamin B9, Vitamin B12`). The file is append-only (see "Ingredient-info append-only rule" under `## Anti-drift rules`).
+Five columns, exactly. Cells use the canonical display name from `## Nutrient lexicons` (NOT the slug, NOT a plural, NOT a free-text variant) plus a per-100g amount in parentheses. Entries sorted alphabetically inside each cell (B-vitamins by numeric value: `Vitamin B1, Vitamin B2, …, Vitamin B9, Vitamin B12`). The file is append-only (see `### Ingredient-info append-only rule`).
 
 ## Sidebar shape
 
@@ -1098,11 +1042,7 @@ For each recipe, walk its `## Ingredients` and apply the **lookup-extend protoco
 1. For each ingredient, compute (a) the canonical name per the normalization rules and (b) the mass in grams via `### Quantity → grams conversion`. Skip 0g entries.
 2. Look up the canonical name in `docs/cooking/ingredients-info.md`. If absent, append a new alphabetical row with the four nutrient cells filled from established nutritional knowledge.
 3. For each entry in the ingredient's four cells, multiply the per-100g amount by `mass_g / 100` and add to the recipe-level running total for that display name (per group). Qualitative entries (`Phytochemicals`, `Probiotics`) are recorded as presence with no amount.
-4. After all ingredients are processed:
-   - **Quantitative entries (all 25 quantitative slugs — macros, fiber, minerals, vitamins, Omega-3):** for each, compare the summed **unrounded** total against the per-nutrient **recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient`. If below the recipe drop threshold, drop the bullet. If at or above, round per `### Recipe-page rendering` and render. The recipe drop threshold is the single arbiter — there is no separate "rounds to 0" rule and no separate macro/fiber floor test (macros and fiber recipe drop thresholds are `1g`, applied via the same threshold check as every other slug). The looser inclusion threshold (per-100g ingredient gate) does NOT apply at this stage.
-   - **Qualitative entries** (`Phytochemicals`, `Probiotics`): keep them whenever ≥1 ingredient listed them. They have no summed total and the threshold rule does NOT apply to them.
-   - Convert each remaining display name to its slug via the **Display name → slug mapping** (used both for the tracker and for the bullet links).
-   - Alphabetize within each group (B-vitamins by numeric value).
+4. After all ingredients are processed: apply the recipe drop threshold to each quantitative sum and presence to qualitative entries (see `### Threshold model`). Convert surviving display names to slugs via the **Display name → slug mapping**. Alphabetize within each group (B-vitamins by numeric value).
 
 Record the four resulting **slug** sets on the progress tracker (four new columns: `Macronutrients`, `Minerals`, `Vitamins`, `Soft Essentials`). Per-bullet amounts are NOT stored in the tracker — they are rendered when the recipe page is written in Phase 3 (or recomputed during Phase 5.13 audit). Empty sets stay as `—` in the tracker. The agent does NOT invent slugs outside the v1 lexicon — see the critical guard in `## Ingredient → nutrient mapping`.
 
@@ -1177,14 +1117,14 @@ Steps, in this order:
        > docs/cooking/recipes/README.md
    ```
 
-   The script walks every `docs/cooking/recipes/<slug>.md` file, extracts H1 / categories / traits / nutrient sections, sorts alphabetically per the standard sort key, and emits the H1 + back-link + table in the canonical 30-column format (see the recipe-index template under `## Page templates`). Never hand-edit rows in this file — the script is the only writer, and hand-edits drift from recipe-page truth. The script is idempotent; running it twice in a row produces no diff.
+   The script walks every `docs/cooking/recipes/<slug>.md` file, extracts H1 / categories / traits / nutrient sections, sorts by the standard sort key, and emits the H1 + back-link + table in the canonical 30-column format (see the recipes-index template in `## Page templates`). Never hand-edit rows — the script is the only writer, and hand-edits drift from recipe-page truth. The script is idempotent; running it twice in a row produces no diff.
 2. **`categories/<slug>.md`** — for each category referenced by any new recipe:
    1. Create the file from the template if it doesn't exist.
    2. Insert each new recipe link in alphabetical position.
 3. **`categories/README.md`** — append any newly-created categories in alphabetical position.
 4. **`traits/<slug>.md`** — same as 2 but for traits.
 5. **`traits/README.md`** — same as 3 but for traits.
-6. **`macronutrients/<slug>.md`** — for each macronutrient slug referenced by any new recipe, insert the recipe link (just `[<Recipe Name>](cooking/recipes/<slug>.md)`, no per-recipe amount) in alphabetical position. The 27 nutrient row files (`<group>/<slug>.md`) were created during the v1 setup of the cooking section and pre-exist on every cookbook run; agents normally only append to the bullet list of recipes that reference each slug. **Create-if-missing fallback:** if a v1 row file is somehow absent (e.g., partial setup, accidental deletion), recreate it from the row-page template under `## Page templates` (H1 = humanized slug, back-link to the group README, then the recipe bullet). Humanization is Title Case with hyphens → spaces, **except** `omega-3` → `Omega-3` (hyphen-digit suffix retained, NOT `Omega 3`). Other examples: `complex-carbs` → `Complex Carbs`, `vitamin-b12` → `Vitamin B12`, `dietary-fiber` → `Dietary Fiber`, `iron` → `Iron`. The full slug-to-H1 list is given under `### docs/cooking/macronutrients/<slug>.md (and analogous for minerals, vitamins, soft-essentials)` in `## Page templates`. Do NOT add a canonical table to the row file — the frozen canonical tables live exclusively in the four group `<group>/README.md` files (see the "Frozen-table rule" under `## Anti-drift rules`).
+6. **`macronutrients/<slug>.md`** — for each macronutrient slug referenced by any new recipe, insert the recipe link (`[<Recipe Name>](cooking/recipes/<slug>.md)`, no per-recipe amount) in alphabetical position. The 27 nutrient row files pre-exist from v1 setup; agents normally only append. **Create-if-missing fallback:** if a v1 row file is somehow absent, recreate it from the row-page template in `## Page templates` (H1 = humanized slug, see `### Formatting conventions`; back-link to the group README; then the recipe bullet). **Do NOT** add a canonical table to the row file — see `### Frozen-table rule`.
 7. **`minerals/<slug>.md`** — same as 6 but for minerals.
 8. **`vitamins/<slug>.md`** — same as 6 but for vitamins.
 9. **`soft-essentials/<slug>.md`** — same as 6 but for soft-essentials.
@@ -1202,37 +1142,23 @@ The audit is the hard bar that catches drift, fabrication, and missed cross-refe
 
 ### 5.1 Source fidelity (per recipe)
 
-For each recipe page, read the corresponding source and verify:
-
-- Every ingredient, quantity, and unit matches the source.
-- Every step's time, temperature, visual cue, rest/proof duration, and equipment requirement is present.
-- Nothing fabricated: no ingredient/step/time/temp on the page that isn't in the source.
-- Nothing essential dropped: no source ingredient or step missing from the page.
-- Author anecdotes / philosophy / personal stories are correctly stripped.
-- Units not silently converted; ingredient names spelled as in source.
+Read each source against each recipe page. Verify every ingredient / quantity / unit / step / time / temperature / visual cue / equipment requirement is present and not fabricated. Anecdotes and philosophy correctly stripped. Units not silently converted. Names spelled as in source.
 
 ### 5.2 Recipe-name purity
 
-The H1 and slug of every recipe page do not contain stripped descriptors unless they're identity exceptions. Violations require renaming the file AND updating every link to it (in `recipes/README.md`, in every category file, every trait file, the book file, and any cross-recipe reference).
+H1 and slug carry no stripped descriptors (see `### Recipe-name strip-list` for the list and identity exceptions). Violations require renaming the file AND every link to it.
 
 ### 5.3 Lexicon conformance
 
-Every category and trait used by any recipe exists in the live `categories/README.md` / `traits/README.md` (or the v1 canonical lexicon for first run). No alias slipped through as a new file. No accidental `desserts.md` next to `dessert.md`.
+Every category / trait used exists in `categories/README.md` / `traits/README.md` (or the v1 canonical lexicon on first run). No alias slipped through as a new file. No `desserts.md` next to `dessert.md`.
 
 ### 5.4 Bidirectional integrity
 
-The most error-prone area. For every cross-reference, both directions must agree.
-
-- For every entry in a recipe's `## Categories`, that recipe link is present in `categories/<slug>.md`.
-- For every recipe link in `categories/<slug>.md`, that category is in the recipe's `## Categories`.
-- Same two-way check for `## Traits` ↔ `traits/<slug>.md`.
-- Same two-way check for `## Books` ↔ `books/<slug>.md`.
-
-Concrete check: for each recipe `R` and each category `C` listed on it, `grep "cooking/recipes/R.md" docs/cooking/categories/C.md` must succeed.
+For every recipe `R` and each category `C` / trait `T` / book `B` listed on it, `grep "cooking/recipes/R.md" docs/cooking/categories/C.md` (and the trait / book analogues) must succeed — and vice-versa (entries in `categories/<slug>.md` are listed on the recipe). Apply the same two-way check for `## Traits` ↔ `traits/<slug>.md` and `## Books` ↔ `books/<slug>.md`.
 
 ### 5.5 Index completeness
 
-Every file under `recipes/`, `categories/`, `traits/`, and `books/` (excluding the directory's own `README.md`) is referenced from that directory's `README.md`. Conversely, every link target in any `README.md` has a backing file. Note: `recipes/README.md` is a **table** (one row per recipe — see audit 5.16 for the row-by-row contract); the other three directory READMEs are bullet lists. The bash checks below are format-agnostic — they basename-grep and link-enumerate either form. Run:
+Every file under `recipes/`, `categories/`, `traits/`, and `books/` (excluding `README.md`) is referenced from that directory's `README.md`; every link target in any `README.md` has a backing file. `recipes/README.md` is a table (see `### 5.16`); the others are bullet lists. Run:
 
 ```bash
 # Files that exist but aren't indexed
@@ -1253,7 +1179,7 @@ done
 
 ### 5.6 Link resolution
 
-Every Markdown link inside `docs/cooking/**` resolves to an existing file. Links must be absolute from the docs root (start with `cooking/`). Per the link path convention, any link target containing `../`, starting with `./`, or being a bare filename is a defect — flag it.
+Every Markdown link inside `docs/cooking/**` resolves to an existing file and is absolute from the docs root. Per `### Link path convention`, any link target containing `../`, starting with `./`, or being a bare filename is a defect.
 
 ```bash
 # Find any link that violates the absolute-from-docs-root rule
@@ -1265,111 +1191,99 @@ rg -o '\]\((cooking/[^)]+\.md)\)' docs/cooking/ -r '$1' --no-filename | sort -u 
 done
 ```
 
-Agents do this per-file: for each recipe / category / trait / book page, enumerate every link target and `test -f docs/$target` the resolved path.
-
 ### 5.7 Alphabetical order
 
-Every list that should be alphabetical is alphabetical per the sort key in "Anti-drift rules". Includes: the recipes-index **table** rows in `recipes/README.md` (sorted by the `Recipe` cell title — covered byte-for-byte by 5.16, listed here for completeness); the `categories/README.md`, `traits/README.md`, and `books/README.md` bullet lists; every category/trait/book page's recipe list; every recipe page's `## Categories`, `## Traits`, `## Books` sections; and the comma-separated entries inside each `Categories` / `Traits` cell of the recipes-index table.
+Every list that should be alphabetical is alphabetical (see `### Alphabetical sort key`). Covers: `categories/README.md`, `traits/README.md`, `books/README.md` bullet lists; every category / trait / book page's recipe list; every recipe page's `## Categories` / `## Traits` / `## Books` sections; and the comma-separated entries inside each `Categories` / `Traits` cell of the recipes-index table. The recipes-index table row order is covered byte-for-byte by `### 5.16`.
 
 ### 5.8 Back-link presence
 
-Every page under `docs/cooking/**` carries a "Back to ..." line with the exact prescribed wording from the back-link table, immediately under the H1, blank-line separated above and below. Recipe pages back-link to `[All Recipes](cooking/recipes/README.md)` (the back-link line sits between the H1 and the metadata blockquote, with one blank line on each side).
+Every page under `docs/cooking/**` carries the exact prescribed back-link line from `### Back-link wording`, immediately under the H1, blank-line separated above and below.
 
 ### 5.9 Metadata / template conformance
 
-Every recipe page:
-
-- Has H1 followed by a blank line.
-- Has the metadata blockquote in the canonical field order using ` · ` separators. The blockquote is required whenever the source provides ≥1 of the canonical fields (Prep, Cook, Total, Yield, Cost, Equipment); when the source provides none, the blockquote may be omitted entirely (rare — most cookbook recipes provide at least Yield).
-- Has section headers in the canonical order: `Ingredients`, `Preparation`, optional `Notes`, `Categories`, optional `Traits`, `Books`, optional `Macronutrients`, optional `Minerals`, optional `Vitamins`, optional `Soft Essentials`. The four nutrient sections, when present, appear in that fixed order after `Books`.
-- Has a two-column ingredient table — never three columns.
-- Uses Unicode fractions in the Quantity column, not ASCII (`½` not `1/2`) — match existing files.
+Every recipe page: H1 followed by blank line; metadata blockquote in canonical field order with ` · ` separators (omit only when the source provides zero canonical fields); section headers in canonical order (`Ingredients`, `Preparation`, optional `Notes`, `Categories`, optional `Traits`, `Books`, then optional `Macronutrients` / `Minerals` / `Vitamins` / `Soft Essentials`); two-column ingredient table; Unicode fractions in the Quantity column. See `### Section-omission rule` for which sections may be omitted.
 
 ### 5.10 Frozen-table integrity
 
-The four group `README.md` tables (`macronutrients/README.md`, `minerals/README.md`, `vitamins/README.md`, `soft-essentials/README.md`) are byte-identical to the canonical copies in this SKILL's `## Nutrient lexicons` (modulo whitespace within a cell). The `Category` cells are Markdown links of the form `[Display Name](cooking/<group>/<slug>.md)`; an unlinked Category cell is a drift defect and fails the audit. Any drift must be restored from this SKILL — agents do not touch the table content, column order, or the link target.
+The four group `README.md` tables are byte-identical to `## Nutrient lexicons` (modulo whitespace within a cell). `Category` cells MUST be Markdown links `[Display Name](cooking/<group>/<slug>.md)`. See `### Frozen-table rule`.
 
 ### 5.11 Nutrient bidirectional integrity
 
-For every entry in a recipe's `## Macronutrients`, the recipe link appears in `cooking/macronutrients/<slug>.md`. Same for minerals, vitamins, soft-essentials. And vice-versa: every recipe link in a nutrient row file corresponds to an entry on that recipe's nutrient section.
-
-Concrete check for each recipe `R` and each nutrient slug `N` listed on it: `grep "cooking/recipes/R.md" docs/cooking/<group>/N.md` must succeed.
+For each recipe `R` and each nutrient slug `N` listed on it: `grep "cooking/recipes/R.md" docs/cooking/<group>/N.md` must succeed; and every recipe link in a nutrient row file corresponds to an entry in that recipe's nutrient section.
 
 ### 5.12 Ingredient-info coverage
 
-Every ingredient in every recipe under `docs/cooking/recipes/` appears as a row in `docs/cooking/ingredients-info.md` under its canonical name. Surface unmatched ingredients; do not silently fix — the agent must add the row with a real nutrient profile (per the lookup-extend protocol). New rows go in alphabetical position; existing rows are not deleted.
+Every ingredient in every recipe under `docs/cooking/recipes/` appears as a row in `docs/cooking/ingredients-info.md` under its canonical name. Surface unmatched ingredients; do not silently fix — add the row with a real nutrient profile (see `### Lookup-extend protocol`). New rows go in alphabetical position; existing rows are not deleted (see `### Ingredient-info append-only rule`).
 
 ### 5.13 Nutrient-derivation correctness
 
-For each recipe, recompute the four nutrient sets and their per-recipe totals: walk its `## Ingredients`, convert each quantity to grams via `### Quantity → grams conversion` (skip 0g-mass entries — `to taste`, `for serving`, etc., per the Special quantities list), look each remaining ingredient up in `ingredients-info.md`, multiply each per-100g amount by `mass_g / 100`, and sum per nutrient. Then confirm:
+Recompute each recipe's four nutrient sets and per-recipe totals: walk its `## Ingredients`, convert each quantity via `### Quantity → grams conversion` (skip 0g entries), look up each canonical name in `ingredients-info.md`, multiply each per-100g amount by `mass_g / 100`, sum per nutrient. Confirm:
 
-- The recipe page's `## Macronutrients` / `## Minerals` / `## Vitamins` / `## Soft Essentials` sections list the same quantitative nutrients (deduped, alphabetical, B-vitamins by numeric value, with empty sections and below-threshold quantitative bullets omitted). **Qualitative entries** (`Phytochemicals`, `Probiotics`) are governed by presence, NOT by any threshold: a qualitative bullet is correct iff ≥1 ingredient lists it in `ingredients-info.md`.
-- **Threshold check (HARD CLIFF — applies BEFORE the tolerance check):** for every quantitative slug, compare the recomputed **unrounded** total against the per-nutrient **recipe drop threshold** in `### Canonical units and inclusion thresholds per nutrient`. If the recipe page DROPPED a quantitative bullet, the recomputed unrounded total must be **below** the recipe drop threshold. If the recipe page RENDERS a quantitative bullet, the recomputed unrounded total must be **at or above** the recipe drop threshold. The recipe drop threshold is a hard boundary that wins over the ±20% / ±1-step tolerance: a printed `Vitamin C — 6mg` bullet for a recomputed unrounded `4.5mg` (recipe drop threshold 5mg) is a defect even though `4.5mg` is within ±20% of `6mg`; a dropped Vitamin C bullet for a recomputed unrounded `5.5mg` is also a defect. The same applies to macros (printed `1g` Protein for recomputed `0.95g` is a defect — recipe drop threshold is 1g) and to every other slug. The two thresholds work in series: the (looser) inclusion threshold gates `ingredients-info.md` cell entries (audited under 5.14), and the (stricter) recipe drop threshold gates recipe-page bullets (audited here under 5.13).
-- **Tolerance check (applies only to bullets that pass the threshold check):** each rendered bullet's printed amount matches the recomputed total within **±20% or ±1 step of the rounding granularity, whichever is greater**. "Rounding granularity" means the rounding step from the band that applies in `### Recipe-page rendering` — e.g., for a value in `[100, 1000)` rounded to the nearest 10, the granularity is 10, so `370µg` is acceptable for a recomputed `360µg` or `380µg`. **For macros and Dietary Fiber the granularity is `1g` (plain-integer rendering, no band)**, and the ±20% rule typically dominates: `28g` is acceptable for a recomputed range of `~22g–~34g`.
-- Larger discrepancies and gross errors (wrong unit, missing factor of 10, qualitative-vs-quantitative confusion) still fail.
+- The four nutrient sections list the same quantitative nutrients (deduped, alphabetical, B-vitamins by numeric value, empty sections and below-threshold bullets omitted). **Qualitative entries** (`Phytochemicals`, `Probiotics`) are governed by presence — see `### Threshold model`.
+- **Threshold check (HARD CLIFF — applies BEFORE the tolerance check):** for every quantitative slug, compare the recomputed **unrounded** total against the per-nutrient **recipe drop threshold**. If the recipe page DROPPED a bullet, the recomputed unrounded total MUST be **below** the recipe drop threshold; if the page RENDERS, MUST be **at or above**. The recipe drop threshold is a hard boundary that wins over the ±20% / ±1-step tolerance: a printed `Vitamin C — 6mg` bullet for a recomputed unrounded `4.5mg` (recipe drop threshold 5mg) is a defect even though `4.5mg` is within ±20% of `6mg`; a dropped Vitamin C bullet for a recomputed unrounded `5.5mg` is also a defect. Same applies to macros (printed `1g` Protein for recomputed `0.95g` is a defect — threshold 1g) and every other slug. The looser inclusion threshold gates `ingredients-info.md` cells (see `### 5.14`); the stricter recipe drop threshold gates recipe-page bullets (here).
+- **Tolerance check (applies only to bullets that pass the threshold check):** each rendered bullet's printed amount matches the recomputed total within **±20% or ±1 step of the rounding granularity, whichever is greater**. "Rounding granularity" means the rounding step from the applicable band in `### Recipe-page rendering` — e.g., for `[100, 1000)` rounded to the nearest 10, granularity is 10, so `370µg` is acceptable for a recomputed `360µg` or `380µg`. **For macros and Dietary Fiber, granularity is `1g` (plain integer)**, and the ±20% rule typically dominates: `28g` is acceptable for a recomputed range of `~22g–~34g`.
+- Gross errors (wrong unit, missing factor of 10, qualitative-vs-quantitative confusion) fail.
 - Qualitative bullets (`Phytochemicals`, `Probiotics`) carry NO ` — <amount>` suffix; including one is a defect.
 
 Discrepancies fail the audit.
 
 ### 5.14 Slug / display-name / amount-format validity
 
-Every slug appearing in any recipe nutrient section bullet link, or in any nutrient row file, exists in the v1 lexicon (the 27 slugs listed in `## Nutrient lexicons`). No invented slugs, no `b-complex`, no aliases, no plurals.
+Every slug in any recipe nutrient section or any nutrient row file exists in the v1 lexicon (27 slugs in `## Nutrient lexicons`). No invented slugs, no `b-complex`, no aliases, no plurals.
 
-For `ingredients-info.md` cells specifically: every entry uses the EXACT `Category` column display name from `## Nutrient lexicons` (e.g., `Vitamin B12`, `Omega-3 (EPA/DHA)`), followed by `(Xunit/100g)` for quantifiable nutrients or no amount for `Phytochemicals` / `Probiotics`. Slug-form entries (`vitamin-b12`, `omega-3`) inside a cell are a defect — they must be re-rendered as the display name with the amount appended.
+`ingredients-info.md` cell entries use the EXACT `Category` column display name (e.g., `Vitamin B12`, `Omega-3 (EPA/DHA)`), followed by `(Xunit/100g)` for quantifiable nutrients or no amount for `Phytochemicals` / `Probiotics`. Slug-form entries (`vitamin-b12`, `omega-3`) inside a cell are a defect.
 
-**Canonical-unit consistency**: every `(<value><unit>/100g)` cell amount uses the canonical unit for that nutrient from `### Canonical units and inclusion thresholds per nutrient`. Defects: `Vitamin A (0.47mg/100g)` (canonical unit is `µg` — must be `Vitamin A (470µg/100g)`); `Iron (2700µg/100g)` (canonical unit is `mg` — must be `Iron (2.7mg/100g)`); `Vitamin D (200 IU/100g)` (must be `µg`). Fix by re-expressing the amount in the canonical unit before any summation runs. The same canonical unit also applies to recipe-page bullet amounts — a recipe-page bullet rendering `Vitamin A — 0.5mg` instead of `Vitamin A — 500µg` is the same defect class.
+**Canonical-unit consistency**: every `(<value><unit>/100g)` cell amount uses the canonical unit (see `### Canonical units and inclusion thresholds per nutrient`). Defects: `Vitamin A (0.47mg/100g)` (canonical unit is `µg` — must be `Vitamin A (470µg/100g)`); `Iron (2700µg/100g)` (canonical unit is `mg` — must be `Iron (2.7mg/100g)`); `Vitamin D (200 IU/100g)` (must be `µg`). Same defect class applies to recipe-page bullet amounts — `Vitamin A — 0.5mg` instead of `Vitamin A — 500µg`. Fix by re-expressing in the canonical unit before any summation runs.
 
-**Per-100g `inclusion threshold` compliance for `ingredients-info.md` cells:** the audit uses the **inclusion threshold** column (the looser of the two — roughly 1% of RDA per 100g, or recipe drop threshold ÷ 5), NOT the recipe drop threshold. For every `(<value><unit>/100g)` cell entry, the value MUST be at or above the inclusion threshold. Defects:
+**Per-100g `inclusion threshold` compliance for `ingredients-info.md` cells:** audit uses the **inclusion threshold** column (the looser — recipe drop threshold ÷ 5), NOT the recipe drop threshold. See `### Threshold model`. Defects:
 
-- **Below-inclusion-threshold entry present:** e.g., a row listing `Vitamin C (0.5mg/100g)` (inclusion threshold `1mg`) — true-trace level, must be REMOVED (no plausible recipe quantity would surface it). Fix by deleting the entry from the cell.
-- **Above-inclusion-threshold nutrient absent:** if established USDA per-100g data shows an ingredient has a nutrient at or above the inclusion threshold, the row MUST list it. Concrete cases the previous (single-threshold) audit incorrectly trimmed and that the inclusion-threshold audit MUST restore: `apple` Vitamin C ~4.6mg/100g (above 1mg inclusion threshold), `pear` Vitamin C ~4.3mg/100g, `sweet potato` Vitamin C ~2.4mg/100g, `peach` Vitamin A ~16µg/100g (above 10µg inclusion threshold), `pumpkin` Dietary Fiber ~0.5g/100g (above 0.2g inclusion threshold). Missing entries — even when the agent considered the per-recipe contribution unlikely to surface — are defects under the no-preemptive-recipe-quantity-assumption rule. Fix by adding the entry.
+- **Below-inclusion-threshold entry present:** e.g., `Vitamin C (0.5mg/100g)` (inclusion threshold `1mg`) — true-trace level, must be REMOVED.
+- **Above-inclusion-threshold nutrient absent:** if established USDA per-100g data shows the ingredient has a nutrient at or above the inclusion threshold, the row MUST list it. Concrete cases the previous (single-threshold) audit incorrectly trimmed and that the inclusion-threshold audit MUST restore: apple Vitamin C ~4.6mg/100g (above 1mg inclusion threshold), pear Vitamin C ~4.3mg/100g, sweet potato Vitamin C ~2.4mg/100g, peach Vitamin A ~16µg/100g (above 10µg inclusion threshold), pumpkin Dietary Fiber ~0.5g/100g (above 0.2g inclusion threshold). Missing entries — even when the agent considered the per-recipe contribution unlikely to surface — are defects under the no-preemptive-recipe-quantity-assumption rule.
 
-**Important: do NOT apply the recipe drop threshold here.** A common defect class is to filter ingredient cells against the recipe drop threshold (e.g., dropping `apple Vitamin C (4.6mg/100g)` because it is below the 5mg recipe drop threshold). This is wrong: the recipe drop threshold gates the per-recipe SUM (apple at 1kg in a recipe yields ~46mg → above 5mg → renders), not the per-100g entry. Use the inclusion threshold column for ingredient-cell decisions.
+**Important: do NOT preemptively apply the recipe drop threshold here.** Filtering ingredient cells against the recipe drop threshold (e.g., dropping `apple Vitamin C (4.6mg/100g)` because it's below the 5mg recipe drop threshold) is wrong: the recipe drop threshold gates the per-recipe SUM (apple at 1kg yields ~46mg → above 5mg → renders), not the per-100g entry. Worked example: apple Vitamin C ~4.6mg/100g × 1kg = 46mg, which is above the 5mg recipe drop threshold → renders. Use the inclusion threshold column for ingredient-cell decisions.
 
-The audit cross-checks each ingredient row against established USDA per-100g profiles and the inclusion-threshold column to flag both kinds of defect. Agents do NOT make ad-hoc trace-amount decisions.
+Per-recipe threshold compliance for recipe-page bullets is checked by `### 5.13`.
 
-**Per-recipe threshold compliance for recipe-page bullets:** see `### 5.13 Nutrient-derivation correctness` — recipe-page bullets that fall below the **recipe drop threshold** (or are dropped while above it) are flagged there, since the check requires recomputing the per-recipe sum.
+**Recipe-page nutrient bullet format**: `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` for quantitative; `- [<Display Name>](cooking/<group>/<slug>.md)` for qualitative `Phytochemicals` / `Probiotics`. Defects:
 
-**Recipe-page nutrient bullet format**: every bullet matches `- [<Display Name>](cooking/<group>/<slug>.md) — <amount><unit>` for quantitative nutrients, or `- [<Display Name>](cooking/<group>/<slug>.md)` for qualitative `Phytochemicals` / `Probiotics`. Defects:
-
-- Missing the ` — <amount><unit>` suffix on a quantitative bullet.
+- Missing ` — <amount><unit>` suffix on a quantitative bullet.
 - Including ` — <amount>` on `Phytochemicals` or `Probiotics`.
-- Using a hyphen-minus or en-dash instead of em-dash (` — ` is `space U+2014 space`).
-- Adding a space between the number and the unit (`28 g` is wrong; `28g` is correct).
+- Hyphen-minus or en-dash instead of em-dash (` — ` is `space U+2014 space`).
+- Space between number and unit (`28 g` wrong; `28g` correct).
 - Display name in slug form (`vitamin-b12` instead of `Vitamin B12`) or in plural / free-text variant.
 
 ### 5.15 Sub-recipe profile validity
 
-For every sub-recipe used as an ingredient anywhere in `docs/cooking/recipes/`, confirm:
+For every sub-recipe used as an ingredient anywhere under `docs/cooking/recipes/`:
 
-- A row exists in `docs/cooking/ingredients-info.md` whose Ingredient column is a Markdown link to the sub-recipe's recipe page (`| [<Title>](cooking/recipes/<slug>.md) | … |`) — not a plain canonical-name string.
-- The four nutrient cells follow the per-100g convention defined in `### Sub-recipe ingredients`. Recompute the per-100g profile from the sub-recipe's `## Ingredients` table (steps a–d in that section) and verify each surfaced display name's amount matches within ~10% rounding tolerance. Missing nutrients above the inclusion threshold or surfaced nutrients below it are defects.
-- Cross-check by walking parent recipes that use the sub-recipe: their derived nutrient sections must include the sub-recipe's per-100g contribution. A parent recipe whose sums silently exclude a sub-recipe's nutrients is the canonical pre-v1 defect this audit is designed to catch.
+- A row exists in `ingredients-info.md` whose Ingredient column is a Markdown link to the sub-recipe's recipe page (`| [<Title>](cooking/recipes/<slug>.md) | … |`) — never a plain canonical-name string.
+- The four nutrient cells follow the per-100g convention from `### Sub-recipe ingredients`. Recompute the per-100g profile (steps a–d in that section); each surfaced display-name amount matches within ~10% rounding tolerance. Missing nutrients above the inclusion threshold, or surfaced nutrients below it, are defects.
+- **Recursion invariant:** parent recipes that use a sub-recipe MUST include its per-100g contribution in their derived nutrient sums. A parent recipe whose sums silently exclude a sub-recipe's nutrients is the canonical pre-v1 defect this audit catches.
 
-To enumerate sub-recipes used as ingredients, scan every recipe's `## Ingredients` table for substrings matching another recipe's H1 title (case-insensitive). The set is closed: a recipe is a sub-recipe iff at least one other recipe lists it as an ingredient. Build-your-own / template recipes (e.g., `guzinta-bowl-guide`, `toast-is-the-most`) reference sub-recipes only inside `—`-quantity rows, so those parents contribute no real consumption — sub-recipe rows still exist, but parent re-derivation is a no-op there.
+Enumerate sub-recipes by scanning every recipe's `## Ingredients` table for substrings matching another recipe's H1 (case-insensitive). The set is closed: a recipe is a sub-recipe iff at least one other recipe lists it as an ingredient. Build-your-own / template recipes (e.g., `guzinta-bowl-guide`, `toast-is-the-most`) reference sub-recipes only inside `—`-quantity rows, so those parents contribute no real consumption — sub-recipe rows still exist, but parent re-derivation is a no-op there.
 
-Discrepancies fail the audit. Restore by recomputing the sub-recipe's per-100g profile, updating its row, and re-deriving every parent recipe that uses it.
+Discrepancies fail the audit. Restore by recomputing the sub-recipe's per-100g profile, updating its row, and re-deriving every parent.
 
 ### 5.16 Recipes-index table integrity
 
-`docs/cooking/recipes/README.md` MUST be byte-identical to the output of the bundled script, regenerated from the current recipe pages:
+`docs/cooking/recipes/README.md` MUST be byte-identical to the output of the bundled script:
 
 ```bash
 python3 .claude/skills/cooking-book-summary/scripts/build_recipes_table.py | diff - docs/cooking/recipes/README.md
 ```
 
-Any diff is a defect — restore by re-running the script with output redirected to the file (see Phase 4 step 1). The script is the only sanctioned writer of this file.
+Any diff is a defect — restore by re-running the script with output redirected to the file (see Phase 4 step 1). The script is the only sanctioned writer.
 
-Beyond the byte-identical check, the table also encodes invariants worth surfacing as named defects when they fail (these will surface as a diff, but stating them aids debugging):
+Named invariants (a failure will surface as a diff; stating them aids debugging):
 
-- **Row count = recipe-page count.** Every file under `docs/cooking/recipes/*.md` (excluding `README.md`) corresponds to exactly one row, and every row corresponds to a file. Orphan rows or missing rows are defects.
+- **Row count = recipe-page count.** Every `docs/cooking/recipes/*.md` (excluding `README.md`) is exactly one row; every row corresponds to a file.
 - **Recipe cell link target exists.** Each `Recipe` cell links to `cooking/recipes/<slug>.md`; the target file must exist.
-- **Categories / Traits cells match the recipe page's `## Categories` / `## Traits` sections.** Slugs are comma-separated, alphabetical, and `—` only when the section is absent (Traits) or impossible (Categories, never empty). Display names in these cells are a defect — slugs only.
-- **Quantitative nutrient cells match the recipe page bullets byte-for-byte.** `158g` on the recipe page → `158g` in the cell. `—` ↔ bullet absent. A discrepancy between cell value and recipe-page bullet is a defect; fix the recipe page (the source of truth) and regenerate the table.
-- **Qualitative nutrient cells**: `yes` ↔ recipe-page bullet exists for that slug; `—` ↔ bullet absent. Anything else in the cell (`y`, `Y`, `✓`, `true`, blank) is a defect. Note: 5.16 only checks the cell value form; it does NOT validate the bullet's own format on the recipe page (e.g., a malformed qualitative bullet with an illegal ` — <amount>` suffix would still produce `yes` here). Bullet-format defects are caught by 5.13 / 5.14 instead. The generator script also emits a `[WARN]` to stderr for the structural subset it can detect (unparseable bullet, qualitative bullet with an amount, quantitative bullet missing its amount) — but it does NOT catch defects that require lexicon knowledge (e.g., a slug-form display name like `vitamin-b12` instead of `Vitamin B12`); those remain 5.14's responsibility.
-- **Alphabetical row order** per the standard sort key. Misordering surfaces as a diff.
+- **Categories / Traits cells = slugs only**, comma-separated, alphabetical; `—` only when the section is absent (Traits) or impossible (Categories, never empty). **Display names in these cells are a defect — slugs only.**
+- **Quantitative nutrient cells match the recipe-page bullets byte-for-byte.** `158g` on the recipe page → `158g` in the cell; `—` ↔ bullet absent. Discrepancies are defects — fix the recipe page (source of truth) and regenerate.
+- **Qualitative nutrient cells**: `yes` ↔ recipe-page bullet present; `—` ↔ bullet absent. Anything else (`y`, `Y`, `✓`, `true`, blank) is a defect. 5.16 checks only the cell value form; bullet-format defects (malformed qualitative bullet with illegal suffix, slug-form display name) are caught by `### 5.13` / `### 5.14`. The script emits `[WARN]` to stderr for the structural subset it can detect (unparseable bullet, qualitative bullet with an amount, quantitative bullet missing its amount).
+- **Alphabetical row order** (see `### Alphabetical sort key`).
 
-Auditors should NOT hand-fix cells in the README; they fix the underlying recipe page (or the script's column list, on the explicit user-approved addition of a new v1 lexicon row) and rerun the script.
+**Auditors fix the recipe page, not cells in the README.** (Or the script's column list, on user-approved addition of a new v1 lexicon row.) Then rerun the script.
 
 ### Audit reports
 

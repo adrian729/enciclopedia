@@ -34,6 +34,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
 
 ## Books
@@ -50,11 +51,11 @@ Back to [All Recipes](cooking/recipes/README.md)
 - [Iron](cooking/minerals/iron.md) — 2.9mg
 - [Magnesium](cooking/minerals/magnesium.md) — 99mg
 - [Potassium](cooking/minerals/potassium.md) — 440mg
+- [Selenium](cooking/minerals/selenium.md) — 5.5µg
 - [Zinc](cooking/minerals/zinc.md) — 2.9mg
 
 ## Vitamins
 
-- [Vitamin A](cooking/vitamins/vitamin-a.md) — 17µg
 - [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 1.1mg
 - [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 1.1mg
 - [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 6.5mg

@@ -3,6 +3,7 @@
 Back to [Vitamins](cooking/vitamins/README.md)
 
 - [Apple Chickpea Salad](cooking/recipes/apple-chickpea-salad.md)
+- [Artichoke Dressing](cooking/recipes/artichoke-dressing.md)
 - [Artichoke Salad](cooking/recipes/artichoke-salad.md)
 - [Avocado Cilantro Sauce](cooking/recipes/avocado-cilantro-sauce.md)
 - [Avocado Pesto](cooking/recipes/avocado-pesto.md)

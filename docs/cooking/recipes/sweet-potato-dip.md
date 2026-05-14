@@ -52,7 +52,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Calcium](cooking/minerals/calcium.md) — 440mg
 - [Iron](cooking/minerals/iron.md) — 16mg
-- [Magnesium](cooking/minerals/magnesium.md) — 240mg
+- [Magnesium](cooking/minerals/magnesium.md) — 340mg
 - [Potassium](cooking/minerals/potassium.md) — 3450mg
 - [Selenium](cooking/minerals/selenium.md) — 47µg
 - [Zinc](cooking/minerals/zinc.md) — 5.4mg

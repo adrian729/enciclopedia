@@ -29,9 +29,15 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [Freezer Friendly](cooking/traits/freezer-friendly.md)
 - [Make Ahead](cooking/traits/make-ahead.md)
+- [No Cook](cooking/traits/no-cook.md)
 
 ## Books
 
 - [Fast Easy Cheap Vegan](cooking/books/fast-easy-cheap-vegan.md)
+
+## Vitamins
+
+- [Vitamin B12](cooking/vitamins/vitamin-b12.md) — 0.2µg

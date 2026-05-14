@@ -28,6 +28,7 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 ## Traits
 
+- [Fast](cooking/traits/fast.md)
 - [No Cook](cooking/traits/no-cook.md)
 
 ## Books
@@ -44,17 +45,17 @@ Back to [All Recipes](cooking/recipes/README.md)
 
 - [Iron](cooking/minerals/iron.md) — 2.1mg
 - [Magnesium](cooking/minerals/magnesium.md) — 56mg
-- [Potassium](cooking/minerals/potassium.md) — 330mg
-- [Zinc](cooking/minerals/zinc.md) — 1.4mg
+- [Potassium](cooking/minerals/potassium.md) — 270mg
+- [Zinc](cooking/minerals/zinc.md) — 1.1mg
 
 ## Vitamins
 
-- [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 0.9mg
-- [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 0.8mg
-- [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 4.1mg
-- [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 1.2mg
-- [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 130µg
-- [Vitamin B12](cooking/vitamins/vitamin-b12.md) — 3.2µg
+- [Vitamin B1](cooking/vitamins/vitamin-b1.md) — 0.6mg
+- [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 0.5mg
+- [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 2.6mg
+- [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 0.9mg
+- [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 100µg
+- [Vitamin B12](cooking/vitamins/vitamin-b12.md) — 2µg
 - [Vitamin C](cooking/vitamins/vitamin-c.md) — 12mg
 - [Vitamin K](cooking/vitamins/vitamin-k.md) — 5µg
 

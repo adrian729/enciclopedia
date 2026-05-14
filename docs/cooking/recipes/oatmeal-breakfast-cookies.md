@@ -65,9 +65,9 @@ Back to [All Recipes](cooking/recipes/README.md)
 - [Vitamin B2](cooking/vitamins/vitamin-b2.md) — 0.8mg
 - [Vitamin B3](cooking/vitamins/vitamin-b3.md) — 23mg
 - [Vitamin B5](cooking/vitamins/vitamin-b5.md) — 4.5mg
-- [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 2.3mg
+- [Vitamin B6](cooking/vitamins/vitamin-b6.md) — 1.8mg
 - [Vitamin B9](cooking/vitamins/vitamin-b9.md) — 290µg
-- [Vitamin C](cooking/vitamins/vitamin-c.md) — 29mg
+- [Vitamin C](cooking/vitamins/vitamin-c.md) — 18mg
 - [Vitamin E](cooking/vitamins/vitamin-e.md) — 11mg
 
 ## Soft Essentials
