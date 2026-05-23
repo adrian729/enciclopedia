@@ -6,6 +6,7 @@
     - [Architectural](software/design_patterns/architectural.md)
   - [System Design](software/system_design.md)
   - [From TCP to HTTP](software/from_tcp_to_http.md)
+  - [Bevy](software/bevy.md)
   - **System Design Interview**
     - [Overview](software/system-design-interview/README.md)
     - **Process**
