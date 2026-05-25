@@ -99,3 +99,10 @@ Snowflake is the modern default for any system that needs **unique, time-sortabl
 
 - [Liu Ch 5.14: ID Generator](software/system-design-interview/books/system-design-interview-fundamentals/ch05_14_id_generator.md)
 - [Xu Ch 7: Design a Unique ID Generator](software/system-design-interview/books/system-design-interview-insiders-guide/ch07_design_a_unique_id_generator.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Async, Batch, Stream Processing](software/system-design-interview/fundamentals/async-batch-stream.md) | [API Design & API Gateway](software/system-design-interview/fundamentals/api-design-and-gateway.md) →

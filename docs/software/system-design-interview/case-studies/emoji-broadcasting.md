@@ -77,3 +77,10 @@ Liu's pick is **cross-region forwarding** — forward each emoji to all three re
 ## Sources
 
 - [Liu Ch 6.03: Emoji Broadcasting](software/system-design-interview/books/system-design-interview-fundamentals/ch06_03_emoji_broadcasting.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Chat System](software/system-design-interview/case-studies/chat-system.md) | [Distributed Email](software/system-design-interview/case-studies/distributed-email.md) →

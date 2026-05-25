@@ -51,3 +51,10 @@ For services where DNS-level redirection is too slow, anycast keeps the same pub
 
 - [Liu Ch 5.18: Networking](software/system-design-interview/books/system-design-interview-fundamentals/ch05_18_networking.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (multi-DC and GeoDNS sections)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Scaling Evolution](software/system-design-interview/fundamentals/scaling-evolution.md) | [Databases, Schema, and Indexing](software/system-design-interview/fundamentals/databases-schema-indexing.md) →

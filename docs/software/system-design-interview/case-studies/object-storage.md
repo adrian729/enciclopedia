@@ -32,7 +32,7 @@
 - Functional: bucket creation, object upload/download, versioning, listing.
 - Non-functional: 100 PB stored in year one, **6 nines durability** (99.9999%), **4 nines availability** (99.99%), strong storage efficiency.
 - Object-size mix: 20% small (<1 MB), 60% medium (1–64 MB), 20% large (>64 MB).
-- Capacity: at 40% disk-usage ratio, 100 PB holds ~0.68 billion objects; at ~1 KB metadata per object, ~0.68 TB of metadata.
+- Capacity: at 40% disk-usage ratio, 100 PB holds ≈0.68 billion objects; at ≈1 KB metadata per object, ≈0.68 TB of metadata.
 - IOPS budget: 7200 rpm SATA disk does ~100–150 random seeks/sec → bottleneck for small-object workloads.
 
 ## 3. High-Level Design
@@ -132,3 +132,10 @@ The book uses **replication as the primary mechanism**; erasure coding is the co
 ## Sources
 
 - [Vol 2 Ch 9: S3-like Object Storage](software/system-design-interview/books/system-design-interview-vol2/ch09_s3_like_object_storage.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Cloud File Storage](software/system-design-interview/case-studies/cloud-file-storage.md) | [YouTube](software/system-design-interview/case-studies/youtube.md) →

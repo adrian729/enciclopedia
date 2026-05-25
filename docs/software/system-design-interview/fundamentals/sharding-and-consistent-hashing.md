@@ -88,3 +88,10 @@ Sharding adds operational cost (resharding, cross-shard joins, hot-key issues) t
 - [Liu Ch 5.07: Sharding](software/system-design-interview/books/system-design-interview-fundamentals/ch05_07_sharding.md)
 - [Xu Ch 5: Design Consistent Hashing](software/system-design-interview/books/system-design-interview-insiders-guide/ch05_design_consistent_hashing.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (database scaling and resharding section)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Replication](software/system-design-interview/fundamentals/replication.md) | [Geospatial Indexing](software/system-design-interview/fundamentals/geospatial-indexing.md) →

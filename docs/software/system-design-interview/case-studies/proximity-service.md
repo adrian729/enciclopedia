@@ -94,3 +94,10 @@ The **eight-neighbor fetch** handles the geohash boundary issue covered in [Geos
 ## Sources
 
 - [Vol 2 Ch 1: Proximity Service](software/system-design-interview/books/system-design-interview-vol2/ch01_proximity_service.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Observability, Security, and Cold Storage](software/system-design-interview/fundamentals/observability-security-cold-storage.md) | [Nearby Friends](software/system-design-interview/case-studies/nearby-friends.md) →

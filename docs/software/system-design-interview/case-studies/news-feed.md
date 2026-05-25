@@ -96,3 +96,10 @@ This is the same logic as the rate limiter's 1% inaccuracy tolerance — naming 
 
 - [Xu Ch 11: Design a News Feed System](software/system-design-interview/books/system-design-interview-insiders-guide/ch11_design_a_news_feed_system.md)
 - [Liu Ch 6.04: Instagram](software/system-design-interview/books/system-design-interview-fundamentals/ch06_04_instagram.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Notification System](software/system-design-interview/case-studies/notification-system.md) | [Chat System](software/system-design-interview/case-studies/chat-system.md) →

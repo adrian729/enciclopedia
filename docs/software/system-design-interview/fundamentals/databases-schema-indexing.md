@@ -81,3 +81,10 @@ Stating which store handles which entity, and why, is a stronger signal than pic
 - [Liu Ch 5.03: Schema, Indexing, Databases](software/system-design-interview/books/system-design-interview-fundamentals/ch05_03_schema_indexing_databases.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (SQL vs NoSQL section)
 - [Xu Ch 6: Design a Key-Value Store](software/system-design-interview/books/system-design-interview-insiders-guide/ch06_design_a_key_value_store.md) (CAP, partitioning, replication on a KV)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Networking & DNS](software/system-design-interview/fundamentals/networking-and-dns.md) | [Caching](software/system-design-interview/fundamentals/caching.md) →

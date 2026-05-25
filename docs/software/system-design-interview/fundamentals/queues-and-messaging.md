@@ -85,3 +85,10 @@ Queues add operational cost (offsets, dead-letter handling, ordering guarantees,
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (message queue section)
 - [Xu Ch 10: Design a Notification System](software/system-design-interview/books/system-design-interview-insiders-guide/ch10_design_a_notification_system.md) (per-channel queue isolation)
 - [Vol 2 Ch 4: Distributed Message Queue](software/system-design-interview/books/system-design-interview-vol2/ch04_distributed_message_queue.md) (broker internals: WAL, zero-copy, ISR)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Real-Time Communication](software/system-design-interview/fundamentals/real-time-communication.md) | [Async, Batch, Stream Processing](software/system-design-interview/fundamentals/async-batch-stream.md) →

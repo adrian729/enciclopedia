@@ -69,3 +69,10 @@ Cassandra's storage analog of fail-to-open: when a node is down, stash the write
 
 - [Liu Ch 5.13: Resilience Patterns](software/system-design-interview/books/system-design-interview-fundamentals/ch05_13_resilience_patterns.md)
 - [Liu Ch 6.03: Emoji Broadcasting](software/system-design-interview/books/system-design-interview-fundamentals/ch06_03_emoji_broadcasting.md) (sampling at scale)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Search](software/system-design-interview/fundamentals/full-text-search.md) | [Observability, Security, and Cold Storage](software/system-design-interview/fundamentals/observability-security-cold-storage.md) →

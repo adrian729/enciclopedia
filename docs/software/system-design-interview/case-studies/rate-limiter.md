@@ -108,3 +108,10 @@ This is a senior-level move: tying the storage choice to the *accuracy SLO* rath
 
 - [Xu Ch 4: Design a Rate Limiter](software/system-design-interview/books/system-design-interview-insiders-guide/ch04_design_a_rate_limiter.md)
 - [Liu Ch 6.07: Rate Limiter](software/system-design-interview/books/system-design-interview-fundamentals/ch06_07_rate_limiter.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Stock Exchange](software/system-design-interview/case-studies/stock-exchange.md) | [Gaming Leaderboard](software/system-design-interview/case-studies/gaming-leaderboard.md) →

@@ -126,3 +126,10 @@ Dashboards show metrics across timeframes (server requests, memory/CPU, page loa
 ## Sources
 
 - [Vol 2 Ch 5: Metrics Monitoring and Alerting System](software/system-design-interview/books/system-design-interview-vol2/ch05_metrics_monitoring_alerting.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Search Autocomplete](software/system-design-interview/case-studies/search-autocomplete.md) | [Ad-Click Aggregation](software/system-design-interview/case-studies/ad-click-aggregation.md) →

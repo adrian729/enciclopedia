@@ -80,3 +80,10 @@ If a follower dies, traffic routes elsewhere; replication backlog catches up whe
 - [Liu Ch 5.06: Replication](software/system-design-interview/books/system-design-interview-fundamentals/ch05_06_replication.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (master-slave section)
 - [Xu Ch 6: Design a Key-Value Store](software/system-design-interview/books/system-design-interview-insiders-guide/ch06_design_a_key_value_store.md) (quorum, sloppy quorum, hinted handoff)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Content Delivery Network (CDN)](software/system-design-interview/fundamentals/cdn.md) | [Sharding & Consistent Hashing](software/system-design-interview/fundamentals/sharding-and-consistent-hashing.md) →

@@ -102,3 +102,10 @@ Xu's distilled rules — every later chapter applies them:
 
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md)
 - [Liu Ch 5.03–5.23](software/system-design-interview/books/system-design-interview-fundamentals/book_summary.md) (parallel coverage of individual primitives, treated topic-by-topic rather than as an evolution)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Back-of-the-Envelope Estimation](software/system-design-interview/process/estimation.md) | [Networking & DNS](software/system-design-interview/fundamentals/networking-and-dns.md) →

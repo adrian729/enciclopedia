@@ -118,3 +118,10 @@ This pattern recurs in [Distributed Counter](case-studies/distributed-counter.md
 
 - [Xu Ch 14: Design YouTube](software/system-design-interview/books/system-design-interview-insiders-guide/ch14_design_youtube.md)
 - [Liu Ch 6.02: Top Watched YouTube Video](software/system-design-interview/books/system-design-interview-fundamentals/ch06_02_top_youtube_video.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Object Storage (S3-like)](software/system-design-interview/case-studies/object-storage.md) | [Distributed Message Queue](software/system-design-interview/case-studies/distributed-message-queue.md) →

@@ -96,3 +96,10 @@ Liu's golden question — *"What is the problem I am trying to solve?"* — is t
 - [Liu Ch 3: Interviewer's Perspective](software/system-design-interview/books/system-design-interview-fundamentals/ch03_interviewers_perspective.md)
 - [Liu Ch 4: Communication Tactics](software/system-design-interview/books/system-design-interview-fundamentals/ch04_communication_tactics.md)
 - [Xu Ch 3: A Framework for System Design Interviews](software/system-design-interview/books/system-design-interview-insiders-guide/ch03_framework_for_system_design_interviews.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Interview Framework](software/system-design-interview/process/framework.md) | [Back-of-the-Envelope Estimation](software/system-design-interview/process/estimation.md) →

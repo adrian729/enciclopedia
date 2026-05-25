@@ -197,3 +197,10 @@ Avoid these — both books mark them as instant down-level signals:
 - Failing to take a stance after listing options.
 
 See [Communication & Evaluation](process/communication.md) for the full rubric.
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Gaming Leaderboard](software/system-design-interview/case-studies/gaming-leaderboard.md)

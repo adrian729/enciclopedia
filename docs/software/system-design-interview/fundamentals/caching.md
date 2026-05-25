@@ -91,3 +91,10 @@ The pattern (cache-a-lower-layer-and-fan-in) is Liu's third invalidation approac
 - [Liu Ch 5.08: Cache Strategies](software/system-design-interview/books/system-design-interview-fundamentals/ch05_08_cache_strategies.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (cache section)
 - [Xu Ch 11: Design a News Feed System](software/system-design-interview/books/system-design-interview-insiders-guide/ch11_design_a_news_feed_system.md) (multi-layer cache)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Databases, Schema, and Indexing](software/system-design-interview/fundamentals/databases-schema-indexing.md) | [Content Delivery Network (CDN)](software/system-design-interview/fundamentals/cdn.md) →

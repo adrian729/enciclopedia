@@ -112,3 +112,10 @@ The cost scales with the number of *differences*, not the size of the data.
 
 - [Liu Ch 5.11: Conflict Resolution](software/system-design-interview/books/system-design-interview-fundamentals/ch05_11_conflict_resolution.md)
 - [Xu Ch 6: Design a Key-Value Store](software/system-design-interview/books/system-design-interview-insiders-guide/ch06_design_a_key_value_store.md) (CAP, quorum, vector clocks, gossip, sloppy quorum, Merkle trees)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Geospatial Indexing](software/system-design-interview/fundamentals/geospatial-indexing.md) | [Concurrency & Transactions](software/system-design-interview/fundamentals/concurrency-and-transactions.md) →

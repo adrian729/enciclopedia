@@ -73,7 +73,7 @@ For each video, the CRDT pattern can also be applied across regions: each region
 
 Counting *unique users* (rather than total views) is a different problem. The exact answer requires storing every user_id ever seen — at scale, **50 TB** for a popular video.
 
-**HyperLogLog** is a probabilistic structure that estimates cardinality at ~1% error using **~1 GB** instead of 50 TB. Liu mentions it as an option for the unique-views variant. Like CRDTs, two HLL sketches can be merged — a regional HLL plus a global HLL gives both regional and global unique-user counts from one structure.
+**HyperLogLog** is a probabilistic structure that estimates cardinality at ≈1% error using **≈1 GB** instead of 50 TB. Liu mentions it as an option for the unique-views variant. Like CRDTs, two HLL sketches can be merged — a regional HLL plus a global HLL gives both regional and global unique-user counts from one structure.
 
 ## 6. Trade-offs
 
@@ -85,3 +85,10 @@ Counting *unique users* (rather than total views) is a different problem. The ex
 ## Sources
 
 - [Liu Ch 6.05: Distributed Counter](software/system-design-interview/books/system-design-interview-fundamentals/ch06_05_distributed_counter.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Ad-Click Aggregation](software/system-design-interview/case-studies/ad-click-aggregation.md) | [Hotel Reservation](software/system-design-interview/case-studies/hotel-reservation.md) →

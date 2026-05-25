@@ -88,3 +88,10 @@ A separate concern from infrastructure rate limiting. Over-notification is the f
 ## Sources
 
 - [Xu Ch 10: Design a Notification System](software/system-design-interview/books/system-design-interview-insiders-guide/ch10_design_a_notification_system.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Distributed Message Queue](software/system-design-interview/case-studies/distributed-message-queue.md) | [News Feed](software/system-design-interview/case-studies/news-feed.md) →

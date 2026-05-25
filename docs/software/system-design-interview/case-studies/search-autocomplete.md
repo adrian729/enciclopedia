@@ -100,3 +100,10 @@ The filter is small enough to fit in memory and is applied on every lookup.
 ## Sources
 
 - [Xu Ch 13: Design a Search Autocomplete System](software/system-design-interview/books/system-design-interview-insiders-guide/ch13_design_a_search_autocomplete.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Web Crawler](software/system-design-interview/case-studies/web-crawler.md) | [Metrics Monitoring](software/system-design-interview/case-studies/metrics-monitoring.md) →

@@ -45,3 +45,10 @@ Xu's YouTube design makes the cost trade-off explicit: serving every video throu
 - [Liu Ch 5.20: CDN](software/system-design-interview/books/system-design-interview-fundamentals/ch05_20_cdn.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (CDN section)
 - [Xu Ch 14: Design YouTube](software/system-design-interview/books/system-design-interview-insiders-guide/ch14_design_youtube.md) (CDN cost optimization)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Caching](software/system-design-interview/fundamentals/caching.md) | [Replication](software/system-design-interview/fundamentals/replication.md) →

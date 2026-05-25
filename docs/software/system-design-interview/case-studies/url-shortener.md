@@ -102,3 +102,10 @@ The choice is a product decision: 301 reduces infrastructure cost; 302 enables a
 ## Sources
 
 - [Xu Ch 8: Design a URL Shortener](software/system-design-interview/books/system-design-interview-insiders-guide/ch08_design_a_url_shortener.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Ridesharing](software/system-design-interview/case-studies/ridesharing.md) | [Key-Value Store](software/system-design-interview/case-studies/key-value-store.md) →

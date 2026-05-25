@@ -20,7 +20,7 @@
 
 ## 1. The Two Frameworks Side-by-Side
 
-| Liu (6-step, ~40 min) | Xu (4-step, ~45 min) | Time |
+| Liu (6-step, ≈40 min) | Xu (4-step, ≈45 min) | Time |
 |---|---|---|
 | 1a. Functional requirements | 1. Understand and establish design scope | 2–3 min |
 | 1b. Non-functional requirements |  | 3–5 min |
@@ -95,3 +95,10 @@ Solution-first thinking — adding a cache, sharding, applying Cassandra because
 - [Liu Ch 5.01: Back-of-the-Envelope Math](software/system-design-interview/books/system-design-interview-fundamentals/ch05_01_back_of_envelope_math.md)
 - [Liu Ch 5.02: API Design](software/system-design-interview/books/system-design-interview-fundamentals/ch05_02_api_design.md)
 - [Xu Ch 3: A Framework for System Design Interviews](software/system-design-interview/books/system-design-interview-insiders-guide/ch03_framework_for_system_design_interviews.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Summary](software/system-design-interview/summary.md) | [Communication & Evaluation](software/system-design-interview/process/communication.md) →

@@ -124,3 +124,10 @@ This is the pattern Liu emphasizes throughout the book: when concurrency gets ha
 ## Sources
 
 - [Liu Ch 6.01: Ridesharing Service](software/system-design-interview/books/system-design-interview-fundamentals/ch06_01_ridesharing_service.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Google Maps](software/system-design-interview/case-studies/google-maps.md) | [URL Shortener](software/system-design-interview/case-studies/url-shortener.md) →

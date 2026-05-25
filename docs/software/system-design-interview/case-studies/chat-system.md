@@ -101,3 +101,10 @@ Bounded fanout works for friend lists (a few hundred friends) but doesn't scale 
 
 - [Xu Ch 12: Design a Chat System](software/system-design-interview/books/system-design-interview-insiders-guide/ch12_design_a_chat_system.md)
 - [Liu Ch 6.08: Chat Application](software/system-design-interview/books/system-design-interview-fundamentals/ch06_08_chat_application.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [News Feed](software/system-design-interview/case-studies/news-feed.md) | [Emoji Broadcasting](software/system-design-interview/case-studies/emoji-broadcasting.md) →

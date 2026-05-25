@@ -86,7 +86,7 @@ A **skip list** is a sorted linked list augmented with multi-level indexes that 
 
 ## 7. Sharding Redis at 100×
 
-At 500M DAU (100× original) the leaderboard reaches ~65 GB and ~250K QPS, beyond a single node.
+At 500M DAU (100× original) the leaderboard reaches ≈65 GB and ≈250K QPS, beyond a single node.
 
 **Fixed partition** — partition by score range; e.g., 10 shards spanning [1–100], [101–200], …, [901–1000]; **top 10 lives entirely in the highest-range shard**.
 
@@ -120,3 +120,10 @@ Desired properties: write-optimized, efficient sort within a partition by score.
 ## Sources
 
 - [Vol 2 Ch 10: Real-time Gaming Leaderboard](software/system-design-interview/books/system-design-interview-vol2/ch10_realtime_gaming_leaderboard.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Rate Limiter](software/system-design-interview/case-studies/rate-limiter.md) | [Cheat Sheet](software/system-design-interview/cheat-sheet.md) →

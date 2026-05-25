@@ -130,3 +130,10 @@ Per-user data access is independent, so most components scale by adding nodes.
 ## Sources
 
 - [Vol 2 Ch 8: Distributed Email Service](software/system-design-interview/books/system-design-interview-vol2/ch08_distributed_email_service.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Emoji Broadcasting](software/system-design-interview/case-studies/emoji-broadcasting.md) | [Web Crawler](software/system-design-interview/case-studies/web-crawler.md) →

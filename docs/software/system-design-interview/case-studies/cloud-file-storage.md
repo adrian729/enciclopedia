@@ -142,3 +142,10 @@ Graceful degradation everywhere: a degraded experience beats an outage.
 
 - [Xu Ch 15: Design Google Drive](software/system-design-interview/books/system-design-interview-insiders-guide/ch15_design_google_drive.md)
 - [Liu Ch 6.06: Cloud File Storage](software/system-design-interview/books/system-design-interview-fundamentals/ch06_06_cloud_file_storage.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Key-Value Store](software/system-design-interview/case-studies/key-value-store.md) | [Object Storage (S3-like)](software/system-design-interview/case-studies/object-storage.md) →

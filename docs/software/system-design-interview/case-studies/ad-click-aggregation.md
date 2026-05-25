@@ -20,7 +20,7 @@
 - **Three queries** — clicks of `ad_id` in last `M` minutes; top-100 most-clicked ads in last 1 minute (configurable); both filterable by `ip`, `user_id`, or `country`.
 - Edge cases: **late events**, **duplicate events**, partial system failures.
 - Latency: a few minutes end-to-end (RTB itself is sub-second; aggregation is not). Workload is **billing-grade** — correctness beats latency.
-- Scale: 1B DAU × 1 click/user/day → ~10K QPS avg, 50K peak. 0.1 KB/event → 100 GB/day, ~3 TB/month. 2M total ads. 30% YoY growth.
+- Scale: 1B DAU × 1 click/user/day → ≈10K QPS avg, 50K peak. 0.1 KB/event → 100 GB/day, ≈3 TB/month. 2M total ads. 30% YoY growth.
 
 ## 2. Data Model and APIs
 
@@ -122,3 +122,10 @@ Option 2 is more widely used because compute can be added as a resource.
 ## Sources
 
 - [Vol 2 Ch 6: Aggregate Ad Click Events](software/system-design-interview/books/system-design-interview-vol2/ch06_aggregate_ad_click_events.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Metrics Monitoring](software/system-design-interview/case-studies/metrics-monitoring.md) | [Distributed Counter](software/system-design-interview/case-studies/distributed-counter.md) →

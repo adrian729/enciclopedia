@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [1. Why a Merged Section](#1-why-a-merged-section)
-- [2. How the Two Books Compare](#2-how-the-two-books-compare)
+- [2. How the Three Books Compare](#2-how-the-three-books-compare)
 - [3. How to Use This Section](#3-how-to-use-this-section)
 - [4. Section Map](#4-section-map)
 
@@ -15,15 +15,15 @@ The three books overlap heavily on technical fundamentals (consistent hashing, r
 
 ## 2. How the Three Books Compare
 
-| Aspect | Liu (Fundamentals) | Xu Vol 1 (Insider's Guide) | Xu Vol 2 (Insider's Guide Vol 2) |
-|---|---|---|---|
-| Interview framework | 6 steps, 40 minutes, math *after* API and schema | 4 steps, 45 minutes, math during high-level design | Same 4-step framework as Vol 1 |
-| Toolbox depth | 24 small reference chapters with decision trees | 4 deep distributed primitives (rate limiter, consistent hashing, KV store, ID generator) plus a "scale from zero" walkthrough | 13 end-to-end designs that surface a recurring-primitives table (geohash, hash ring, append-only log, idempotency keys, event sourcing, double-entry ledger) |
-| Case studies | 8 (ridesharing, top YouTube, emoji broadcast, Instagram, distributed counter, cloud file, rate limiter, chat) | 8 (URL shortener, web crawler, notifications, news feed, chat, autocomplete, YouTube, Google Drive) | 13 (proximity, nearby friends, Google Maps, distributed message queue, metrics monitoring, ad-click aggregation, hotel reservation, distributed email, S3-like object storage, gaming leaderboard, payment, digital wallet, stock exchange) |
-| Communication coverage | Full chapter on tactics + leveling rubric | A few paragraphs of "do/don't" advice | Brief — Vol 2 leans on Vol 1's framework |
-| Distinctive emphasis | Long-tail distribution patterns, product-redesign as a senior signal, communication discipline | Composing primitives bottom-up, consistent-hashing-everywhere, Snowflake-everywhere | Primitive-to-workload mapping; the same handful of primitives (geohash, hash ring, append-only WAL, idempotency keys, event sourcing) reappear across thirteen domains |
+| Aspect                 | Liu (Fundamentals)                                                                                            | Xu Vol 1 (Insider's Guide)                                                                                                    | Xu Vol 2 (Insider's Guide Vol 2)                                                                                                                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Interview framework    | 6 steps, 40 minutes, math _after_ API and schema                                                              | 4 steps, 45 minutes, math during high-level design                                                                            | Same 4-step framework as Vol 1                                                                                                                                                                                                              |
+| Toolbox depth          | 24 small reference chapters with decision trees                                                               | 4 deep distributed primitives (rate limiter, consistent hashing, KV store, ID generator) plus a "scale from zero" walkthrough | 13 end-to-end designs that surface a recurring-primitives table (geohash, hash ring, append-only log, idempotency keys, event sourcing, double-entry ledger)                                                                                |
+| Case studies           | 8 (ridesharing, top YouTube, emoji broadcast, Instagram, distributed counter, cloud file, rate limiter, chat) | 8 (URL shortener, web crawler, notifications, news feed, chat, autocomplete, YouTube, Google Drive)                           | 13 (proximity, nearby friends, Google Maps, distributed message queue, metrics monitoring, ad-click aggregation, hotel reservation, distributed email, S3-like object storage, gaming leaderboard, payment, digital wallet, stock exchange) |
+| Communication coverage | Full chapter on tactics + leveling rubric                                                                     | A few paragraphs of "do/don't" advice                                                                                         | Brief — Vol 2 leans on Vol 1's framework                                                                                                                                                                                                    |
+| Distinctive emphasis   | Long-tail distribution patterns, product-redesign as a senior signal, communication discipline                | Composing primitives bottom-up, consistent-hashing-everywhere, Snowflake-everywhere                                           | Primitive-to-workload mapping; the same handful of primitives (geohash, hash ring, append-only WAL, idempotency keys, event sourcing) reappear across thirteen domains                                                                      |
 
-No book is wrong — they cover the same skill from different angles. Liu trains the candidate to argue; Vol 1 trains primitive depth on a few canonical primitives (rate limiter, KV store, ID gen); Vol 2 trains primitive *application* across thirteen end-to-end designs.
+No book is wrong — they cover the same skill from different angles. Liu trains the candidate to argue; Vol 1 trains primitive depth on a few canonical primitives (rate limiter, KV store, ID gen); Vol 2 trains primitive _application_ across thirteen end-to-end designs.
 
 ## 3. How to Use This Section
 

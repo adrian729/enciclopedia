@@ -84,3 +84,10 @@ Two distinct dedup steps:
 ## Sources
 
 - [Xu Ch 9: Design a Web Crawler](software/system-design-interview/books/system-design-interview-insiders-guide/ch09_design_a_web_crawler.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Distributed Email](software/system-design-interview/case-studies/distributed-email.md) | [Search Autocomplete](software/system-design-interview/case-studies/search-autocomplete.md) →

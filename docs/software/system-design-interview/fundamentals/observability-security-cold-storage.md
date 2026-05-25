@@ -117,3 +117,10 @@ Liu's framing: cold storage is the **direct answer to unbounded-data-growth prom
 - [Liu Ch 5.21: Monitoring](software/system-design-interview/books/system-design-interview-fundamentals/ch05_21_monitoring.md)
 - [Liu Appendix: Security Considerations](software/system-design-interview/books/system-design-interview-fundamentals/appendix_3_security.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (logging/metrics section)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Resilience Patterns](software/system-design-interview/fundamentals/resilience-patterns.md) | [Proximity Service](software/system-design-interview/case-studies/proximity-service.md) →

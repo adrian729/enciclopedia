@@ -119,3 +119,10 @@ Many production systems run both side-by-side: an Elasticsearch cluster for full
 
 - [Liu Ch 5.22: Full-Text Search](software/system-design-interview/books/system-design-interview-fundamentals/ch05_22_full_text_search.md)
 - [Xu Ch 13: Design a Search Autocomplete System](software/system-design-interview/books/system-design-interview-insiders-guide/ch13_design_a_search_autocomplete.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Service Discovery & Load Balancing](software/system-design-interview/fundamentals/service-discovery-and-load-balancing.md) | [Resilience Patterns](software/system-design-interview/fundamentals/resilience-patterns.md) →

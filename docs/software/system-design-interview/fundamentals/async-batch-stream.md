@@ -78,3 +78,10 @@ Batch beats stream when streaming complexity outweighs the freshness benefit. La
 - [Liu Ch 5.09: Async, Batch, Stream, Lambda](software/system-design-interview/books/system-design-interview-fundamentals/ch05_09_async_batch_stream_lambda.md)
 - [Xu Ch 13: Design a Search Autocomplete System](software/system-design-interview/books/system-design-interview-insiders-guide/ch13_design_a_search_autocomplete.md) (weekly batch trie rebuild)
 - [Xu Ch 14: Design YouTube](software/system-design-interview/books/system-design-interview-insiders-guide/ch14_design_youtube.md) (transcoding DAG with staged queues)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Queues & Messaging](software/system-design-interview/fundamentals/queues-and-messaging.md) | [ID Generation](software/system-design-interview/fundamentals/id-generation.md) →

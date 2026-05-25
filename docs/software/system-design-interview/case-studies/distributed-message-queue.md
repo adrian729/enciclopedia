@@ -130,3 +130,10 @@ Each partition has multiple replicas (e.g., 3) on different brokers; one **leade
 ## Sources
 
 - [Vol 2 Ch 4: Distributed Message Queue](software/system-design-interview/books/system-design-interview-vol2/ch04_distributed_message_queue.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [YouTube](software/system-design-interview/case-studies/youtube.md) | [Notification System](software/system-design-interview/case-studies/notification-system.md) →

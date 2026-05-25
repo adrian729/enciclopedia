@@ -78,3 +78,10 @@ The exceptions are intentionally stateful — chat servers (WebSocket-bound clie
 - [Liu Ch 5.23: Service Discovery and Routing](software/system-design-interview/books/system-design-interview-fundamentals/ch05_23_service_discovery.md)
 - [Xu Ch 1: Scale From Zero to Millions of Users](software/system-design-interview/books/system-design-interview-insiders-guide/ch01_scale_zero_to_millions.md) (load balancer section)
 - [Xu Ch 12: Design a Chat System](software/system-design-interview/books/system-design-interview-insiders-guide/ch12_design_a_chat_system.md) (ZooKeeper for chat-server discovery)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [API Design & API Gateway](software/system-design-interview/fundamentals/api-design-and-gateway.md) | [Search](software/system-design-interview/fundamentals/full-text-search.md) →

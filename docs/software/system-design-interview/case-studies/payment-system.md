@@ -155,3 +155,10 @@ Two integration models:
 ## Sources
 
 - [Vol 2 Ch 11: Payment System](software/system-design-interview/books/system-design-interview-vol2/ch11_payment_system.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Hotel Reservation](software/system-design-interview/case-studies/hotel-reservation.md) | [Digital Wallet](software/system-design-interview/case-studies/digital-wallet.md) →

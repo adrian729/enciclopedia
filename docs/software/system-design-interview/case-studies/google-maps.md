@@ -49,9 +49,9 @@ Inter-level edges let the algorithm "enter" a bigger tile (e.g., a freeway entra
 | Quantity | Value |
 |---|---|
 | Map tiles at zoom 21 | ~4.4 trillion 256×256 tiles × 100 KB ≈ 440 PB |
-| After ocean/desert compression (~90%) | ~50 PB at top zoom |
+| After ocean/desert compression (≈90%) | ≈50 PB at top zoom |
 | Sum across 22 zoom levels (each level = ¼ tiles) | 50 + 50/4 + 50/16 + … ≈ **~100 PB** |
-| Navigation QPS | 1B × 5 sessions × 35 min/wk → ~7,200 avg, ~36,000 peak |
+| Navigation QPS | 1B × 5 sessions × 35 min/wk → ≈7,200 avg, ≈36,000 peak |
 | Location update QPS | 1s cadence = 3M; **batched to 15s = 200K avg, 1M peak** |
 | Mobile data per session | 256-pixel tiles at 100 KB; 25 tiles per 1 km² → **1.25 MB/min** at 30 km/h |
 | CDN load | 5B nav-min/day × 1.25 MB ≈ 62,500 MB/s; **200 POPs** each serve ~few hundred MB/s |
@@ -113,3 +113,10 @@ See [Real-Time Communication](fundamentals/real-time-communication.md).
 ## Sources
 
 - [Vol 2 Ch 3: Google Maps](software/system-design-interview/books/system-design-interview-vol2/ch03_google_maps.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Nearby Friends](software/system-design-interview/case-studies/nearby-friends.md) | [Ridesharing](software/system-design-interview/case-studies/ridesharing.md) →

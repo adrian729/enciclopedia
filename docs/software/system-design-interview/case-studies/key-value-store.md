@@ -120,3 +120,10 @@ Production examples that match this template: Amazon Dynamo (the original), Apac
 ## Sources
 
 - [Xu Ch 6: Design a Key-Value Store](software/system-design-interview/books/system-design-interview-insiders-guide/ch06_design_a_key_value_store.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [URL Shortener](software/system-design-interview/case-studies/url-shortener.md) | [Cloud File Storage](software/system-design-interview/case-studies/cloud-file-storage.md) →

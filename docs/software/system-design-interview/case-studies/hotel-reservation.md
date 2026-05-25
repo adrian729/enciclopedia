@@ -19,8 +19,8 @@ Booking backend for a chain like Marriott. Same techniques transfer to Airbnb, f
 
 - In scope: hotel detail page, room detail page, reserve a room, admin CRUD, **10% overbooking** (chain sells more rooms than it has, betting on cancellations).
 - Out of scope: search; pricing varies by day but the design just exposes daily rates.
-- Scale: 5,000 hotels, 1M total rooms; 70% occupancy with 3-day average stay → ~240,000 reservations/day → **~3 reservations/sec** average. Reservation TPS is low; the challenge is **concurrency on hot rooms** during peak events.
-- Funnel QPS — detail page ~300 QPS, booking page ~30 QPS, reservation ~3 TPS (10% step-through).
+- Scale: 5,000 hotels, 1M total rooms; 70% occupancy with 3-day average stay → ≈240,000 reservations/day → **≈3 reservations/sec** average. Reservation TPS is low; the challenge is **concurrency on hot rooms** during peak events.
+- Funnel QPS — detail page ≈300 QPS, booking page ≈30 QPS, reservation ≈3 TPS (10% step-through).
 
 ## 2. APIs and Microservices
 
@@ -106,3 +106,10 @@ Author's stance: the added complexity isn't worth it for this problem; co-locati
 ## Sources
 
 - [Vol 2 Ch 7: Hotel Reservation System](software/system-design-interview/books/system-design-interview-vol2/ch07_hotel_reservation_system.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Distributed Counter](software/system-design-interview/case-studies/distributed-counter.md) | [Payment System](software/system-design-interview/case-studies/payment-system.md) →

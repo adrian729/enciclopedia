@@ -72,3 +72,10 @@ The Google Drive choice (long polling, not WebSocket) is a useful counter-point:
 - [Liu Ch 5.04: Real-Time Data Updates](software/system-design-interview/books/system-design-interview-fundamentals/ch05_04_realtime_data_updates.md)
 - [Xu Ch 12: Design a Chat System](software/system-design-interview/books/system-design-interview-insiders-guide/ch12_design_a_chat_system.md) (protocol comparison and WebSocket choice)
 - [Xu Ch 15: Design Google Drive](software/system-design-interview/books/system-design-interview-insiders-guide/ch15_design_google_drive.md) (long-polling rationale)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Concurrency & Transactions](software/system-design-interview/fundamentals/concurrency-and-transactions.md) | [Queues & Messaging](software/system-design-interview/fundamentals/queues-and-messaging.md) →

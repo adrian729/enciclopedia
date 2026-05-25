@@ -132,3 +132,10 @@ The point is process over precision: round aggressively, write down assumptions,
 - [Liu Ch 5.01: Back-of-the-Envelope Math](software/system-design-interview/books/system-design-interview-fundamentals/ch05_01_back_of_envelope_math.md)
 - [Liu Appendix: Numbers and Capacity](software/system-design-interview/books/system-design-interview-fundamentals/appendix_1_numbers_and_capacity.md)
 - [Xu Ch 2: Back-of-the-Envelope Estimation](software/system-design-interview/books/system-design-interview-insiders-guide/ch02_back_of_envelope_estimation.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Communication & Evaluation](software/system-design-interview/process/communication.md) | [Scaling Evolution](software/system-design-interview/fundamentals/scaling-evolution.md) →

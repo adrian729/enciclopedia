@@ -27,7 +27,7 @@
 - Average 400 friends/user.
 - **30-second location refresh**, chosen because 3–4 mph walking speed makes finer cadence pointless.
 - Location update QPS = 10M / 30 ≈ **334K updates/sec**.
-- With ~10% of friends online and nearby, the backend forwards ~13M location messages/sec downstream.
+- With ≈10% of friends online and nearby, the backend forwards ≈13M location messages/sec downstream.
 
 ## 3. Architecture
 
@@ -92,3 +92,10 @@ For the "show me anyone nearby, not just friends" feature, switch from per-user 
 ## Sources
 
 - [Vol 2 Ch 2: Nearby Friends](software/system-design-interview/books/system-design-interview-vol2/ch02_nearby_friends.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Proximity Service](software/system-design-interview/case-studies/proximity-service.md) | [Google Maps](software/system-design-interview/case-studies/google-maps.md) →

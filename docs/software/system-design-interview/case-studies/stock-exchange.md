@@ -22,7 +22,7 @@ Electronic stock exchange that matches buyers and sellers; this design supports 
 
 - Functional: place new limit order, cancel order, view real-time order book, receive matched trades; risk checks (e.g., max 1M shares of AAPL/user/day); wallet integration to withhold funds for resting orders.
 - Non-functional: **99.99% availability** (downtime in seconds harms reputation), **millisecond round-trip with focus on 99th-percentile latency**, KYC + DDoS protection.
-- Scale: 100 symbols, ~tens of thousands of concurrent users, ~1B orders/day. With NYSE's 6.5h trading window: **~43,000 QPS average, ~215,000 peak** (5× for open/close bursts).
+- Scale: 100 symbols, ≈tens of thousands of concurrent users, ≈1B orders/day. With NYSE's 6.5h trading window: **≈43,000 QPS average, ≈215,000 peak** (5× for open/close bursts).
 - Reference: NYSE trades billions of matches/day; HKEX ~200B shares/day.
 
 **Workload-specific ES motivation:** orders pass through many state transitions; the immutable event log is the golden source of truth, and replay reconstructs any historical state — essential for crash recovery in a system that cannot afford to drop trades.
@@ -144,3 +144,10 @@ DDoS defenses for the public market data interface:
 ## Sources
 
 - [Vol 2 Ch 13: Stock Exchange](software/system-design-interview/books/system-design-interview-vol2/ch13_stock_exchange.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Digital Wallet](software/system-design-interview/case-studies/digital-wallet.md) | [Rate Limiter](software/system-design-interview/case-studies/rate-limiter.md) →

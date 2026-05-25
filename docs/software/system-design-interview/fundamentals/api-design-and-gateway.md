@@ -87,3 +87,10 @@ In the deep-dive, candidates often place a rate limiter, auth, and TLS terminati
 
 - [Liu Ch 5.02: API Design](software/system-design-interview/books/system-design-interview-fundamentals/ch05_02_api_design.md)
 - [Liu Ch 5.19: API Gateway](software/system-design-interview/books/system-design-interview-fundamentals/ch05_19_api_gateway.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [ID Generation](software/system-design-interview/fundamentals/id-generation.md) | [Service Discovery & Load Balancing](software/system-design-interview/fundamentals/service-discovery-and-load-balancing.md) →

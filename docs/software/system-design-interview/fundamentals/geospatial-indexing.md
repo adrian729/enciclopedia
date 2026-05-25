@@ -75,7 +75,7 @@ Memory math from the proximity service example:
 
 - Leaf node = 832 bytes (32-byte bounding box + 100 × 8-byte business IDs).
 - Internal node = 64 bytes.
-- 200 M businesses → ~2 M leaves and ~0.67 M internals → **~1.71 GB total**, fits on one server.
+- 200 M businesses → ≈2 M leaves and ≈0.67 M internals → **≈1.71 GB total**, fits on one server.
 
 Build time is `(n/100) log(n/100)`, on the order of minutes for 200 M points. The server cannot serve traffic while building, so deployment is an **incremental rollout** (rolling deploy or blue/green) and rebuilds happen during a daily window.
 
@@ -106,3 +106,10 @@ The shared trick across all of these: use the geohash itself as the **cache key*
 - [Vol 2 Ch 1: Proximity Service](software/system-design-interview/books/system-design-interview-vol2/ch01_proximity_service.md)
 - [Vol 2 Ch 2: Nearby Friends](software/system-design-interview/books/system-design-interview-vol2/ch02_nearby_friends.md)
 - [Vol 2 Ch 3: Google Maps](software/system-design-interview/books/system-design-interview-vol2/ch03_google_maps.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Sharding & Consistent Hashing](software/system-design-interview/fundamentals/sharding-and-consistent-hashing.md) | [CAP, Consensus, and Conflict Resolution](software/system-design-interview/fundamentals/cap-consensus-and-conflict-resolution.md) →

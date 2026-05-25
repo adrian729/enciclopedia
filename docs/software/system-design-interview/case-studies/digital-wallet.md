@@ -129,3 +129,10 @@ Two remaining limitations of a single Raft group:
 ## Sources
 
 - [Vol 2 Ch 12: Digital Wallet](software/system-design-interview/books/system-design-interview-vol2/ch12_digital_wallet.md)
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [Payment System](software/system-design-interview/case-studies/payment-system.md) | [Stock Exchange](software/system-design-interview/case-studies/stock-exchange.md) →

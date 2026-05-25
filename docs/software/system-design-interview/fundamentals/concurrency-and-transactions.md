@@ -195,3 +195,10 @@ Materializing 30-minute booking blocks (Section 5) is the same move. Concurrency
 - [Vol 2 Ch 11: Payment System](software/system-design-interview/books/system-design-interview-vol2/ch11_payment_system.md) — idempotency keys, double-entry ledger, Saga.
 - [Vol 2 Ch 12: Digital Wallet](software/system-design-interview/books/system-design-interview-vol2/ch12_digital_wallet.md) — TC/C, Saga, Event Sourcing + CQRS.
 - [Vol 2 Ch 13: Stock Exchange](software/system-design-interview/books/system-design-interview-vol2/ch13_stock_exchange.md) — Event Sourcing for crash recovery.
+
+
+<!-- prev-next-nav -->
+
+---
+
+← [CAP, Consensus, and Conflict Resolution](software/system-design-interview/fundamentals/cap-consensus-and-conflict-resolution.md) | [Real-Time Communication](software/system-design-interview/fundamentals/real-time-communication.md) →
