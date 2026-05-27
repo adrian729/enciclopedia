@@ -471,6 +471,8 @@
   - [NVim](tools/nvim.md)
 
 - **Life**
+  - **Learning**
+    - [How to Take Notes](life/learning/how_to_take_notes.md)
   - **Parenting**
     - **Books**
       - [HypnoBirthing](life/parenting/books/hypnobirthing/book_summary.md)
