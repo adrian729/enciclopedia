@@ -1,6 +1,6 @@
 # Refactoring UI: Summary
 
-> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+> **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
 
 ## Table of Contents
 
@@ -127,7 +127,7 @@ The final chapter is about the polish that separates a competent-but-bland desig
 
 **Add color with accent borders.** A colored rectangle across the top of a card, under an active nav item, along the side of an alert, beneath a headline, or across the entire layout requires no graphic-design talent but makes a UI feel deliberate.
 
-**Decorate your backgrounds.** When everything else is right but a design still feels plain, the background is usually why. Three low-effort moves: change the background color (for a whole section or a single panel; a slight gradient with the two hues less than ~30° apart adds energy without chaos); use a repeating subtle pattern across the whole background or along one edge; or add a simple shape or illustration. In all three, keep contrast between background and pattern low so it doesn't fight the content.
+**Decorate your backgrounds.** When everything else is right but a design still feels plain, the background is usually why. Three low-effort moves: change the background color (for a whole section or a single panel; a slight gradient with the two hues less than \~30° apart adds energy without chaos); use a repeating subtle pattern across the whole background or along one edge; or add a simple shape or illustration. In all three, keep contrast between background and pattern low so it doesn't fight the content.
 
 **Don't overlook empty states.** If a feature depends on user-generated content, the empty state is the user's *first* interaction with the feature — and a blank screen kills enthusiasm for a feature you spent weeks building. Use an image or illustration plus a clear call-to-action that pushes the user toward the next step. Hide supporting UI (tabs, filters) that has nothing to act on. Treat empty states as an opportunity to be interesting.
 

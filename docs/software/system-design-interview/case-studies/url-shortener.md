@@ -24,8 +24,8 @@
 
 ## 2. Estimation
 
-- **Writes**: 100M URLs/day → ~1,160 writes/second.
-- **Reads**: 10:1 read:write ratio → ~11,600 reads/second.
+- **Writes**: 100M URLs/day → \~1,160 writes/second.
+- **Reads**: 10:1 read:write ratio → \~11,600 reads/second.
 - **Storage**: 100M × 365 days × 10 years = **365 billion records**.
 - **Hash length**: alphabet of 62 characters (`a-z`, `A-Z`, `0-9`). Smallest `n` where `62^n ≥ 365B` is **n=7**.
 
@@ -52,7 +52,7 @@ Drawbacks: collision-handling complexity grows as the corpus fills; verifying un
 
 ### 4.2. Base-62 Conversion of a Unique ID
 
-Generate a globally-unique 64-bit ID (e.g., [Snowflake](fundamentals/id-generation.md)) and convert to base-62. Each digit is a character in `[0-9, a-z, A-Z]`; 7 base-62 digits cover up to ~3.5 trillion values.
+Generate a globally-unique 64-bit ID (e.g., [Snowflake](fundamentals/id-generation.md)) and convert to base-62. Each digit is a character in `[0-9, a-z, A-Z]`; 7 base-62 digits cover up to \~3.5 trillion values.
 
 **Base-62 wins** in Xu's analysis:
 

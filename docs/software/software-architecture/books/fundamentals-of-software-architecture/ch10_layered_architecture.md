@@ -39,7 +39,7 @@
 - **Mark the new layer open** — otherwise the Business layer would be forced to traverse Services to reach Persistence. Marked open, Business can either use Services or skip it on the way down.
 - **Document open vs. closed** — failing to communicate which layers are open or closed (and why) usually produces tightly coupled, brittle architectures that are hard to test, maintain, and deploy.
 - **Architecture sinkhole antipattern** — requests pass through layers with no business logic performed. A read of basic customer data goes Presentation → Business → Rules → Persistence → Database and back, with each layer doing nothing but pass-through. This wastes object instantiation, memory, and performance.
-- **80/20 rule** — if ~20% of requests are sinkholes, fine; if 80%, layered is the wrong style. Alternative: make all layers open and accept the increased difficulty in managing change.
+- **80/20 rule** — if \~20% of requests are sinkholes, fine; if 80%, layered is the wrong style. Alternative: make all layers open and accept the increased difficulty in managing change.
 
 ## 4. Data Topologies and Cloud Considerations
 
@@ -49,7 +49,7 @@
 ## 5. Common Risks
 
 - **No fault tolerance** — monolithic deployment with no architectural modularity: one out-of-memory in any small part crashes the whole application unit.
-- **High MTTR** — *mean time to recover* (and overall availability) suffer because monolith startup times range from ~2 minutes for small apps to 15+ minutes for large ones.
+- **High MTTR** — *mean time to recover* (and overall availability) suffer because monolith startup times range from \~2 minutes for small apps to 15+ minutes for large ones.
 
 ## 6. Governance
 

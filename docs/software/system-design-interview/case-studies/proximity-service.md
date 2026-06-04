@@ -23,7 +23,7 @@
 
 ## 2. Estimation
 
-- 100M DAU × 5 searches/user/day → ~5,000 search QPS (using `10⁵` seconds/day).
+- 100M DAU × 5 searches/user/day → \~5,000 search QPS (using `10⁵` seconds/day).
 - 200M businesses worldwide.
 - Allowed radii are fixed UI options: 0.5 km, 1 km, 2 km, 5 km, 20 km.
 
@@ -68,7 +68,7 @@ Two Redis caches:
 
 | Cache | Key | Value | Size at scale |
 |---|---|---|---|
-| Geohash → business IDs | `geohash` (precomputed at lengths 4, 5, 6) | List of business IDs | ~5 GB total (200M businesses × 3 precisions × 8 bytes) |
+| Geohash → business IDs | `geohash` (precomputed at lengths 4, 5, 6) | List of business IDs | \~5 GB total (200M businesses × 3 precisions × 8 bytes) |
 | Business detail | `business_id` | Business object for rendering | Smaller |
 
 Both caches are **replicated globally** for low cross-continent latency. A nightly job updates them in line with the next-day update SLA — no need for write-through.

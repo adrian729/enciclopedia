@@ -34,7 +34,7 @@
 | Aspect | Lossless | Lossy |
 |---|---|---|
 | Original recoverable? | Yes | No |
-| Typical image ratio | ~2 | Heavily depends on encoding (e.g., JPEG ~20) |
+| Typical image ratio | \~2 | Heavily depends on encoding (e.g., JPEG \~20) |
 | Example algorithm | Run-Length Encoding (RLE) | Chroma subsampling |
 
 - **Run-Length Encoding (RLE)** — lossless; stores runs instead of individual characters. `AAAABBBBBBBBBBBBBBBAAA` (22 chars) becomes `4A15B3A`; always rebuildable. Efficiency depends on pattern — `ABABAB` becomes `1A1B1A1B1A1B`, potentially worse. Used in images like JPEG
@@ -43,7 +43,7 @@
 ## 3. Compression Efficiency
 
 - **Compression Ratio = Uncompressed Size / Compressed Size** — higher is better. A 10 MB file compressed to 1 MB = ratio of 10
-- **Typical ratios** — lossless image compression ~2; lossy heavily depends on encoding. An iOS HEIF photo (~2 MB) encoded to JPEG (~100 KB) for Instagram gives a ratio of ~20
+- **Typical ratios** — lossless image compression \~2; lossy heavily depends on encoding. An iOS HEIF photo (\~2 MB) encoded to JPEG (\~100 KB) for Instagram gives a ratio of \~20
 
 ## 4. Quality of File
 

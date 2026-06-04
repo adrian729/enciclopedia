@@ -18,9 +18,9 @@
   - Up to **50 GB per user**, no pricing tiers
   - Thousands of folders/files per folder is plausible
   - File size up to **1 GB**; common range **1 KB – 1 MB**
-  - Read-to-write ratio **~20:1** (every upload triggers a page visit)
+  - Read-to-write ratio **\~20:1** (every upload triggers a page visit)
   - **Consistency** important across devices; **durability** important (data loss = terrible UX); **integrity** (no corruption) important
-  - Fetch latency ~**300–400 ms p99**
+  - Fetch latency \~**300–400 ms p99**
 
 ## 2. API
 
@@ -124,7 +124,7 @@ download_file(user_id, file_url) → file_bytes
 
 ### 6.6 Scale It Up (sharding the relational DB)
 
-- **Math** — 100M DAU × 2 visits × 1.5 peak = **3×10⁸ QPD** → ~**3,000 read QPS**, writes a fraction. At 300–500 QPS per DB, need ~10 shards
+- **Math** — 100M DAU × 2 visits × 1.5 peak = **3×10⁸ QPD** → \~**3,000 read QPS**, writes a fraction. At 300–500 QPS per DB, need \~10 shards
 - **Cache** is rejected first: strong consistency requirement makes cache invalidation on write the same cost as writing to the DB
 
 | Option | Upside | Downside |

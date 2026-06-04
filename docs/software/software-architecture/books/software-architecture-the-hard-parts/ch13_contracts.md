@@ -49,7 +49,7 @@
 
 - **Definition** — passing a large data structure between services where each service interacts with only a small portion of it; common when an industry-standard XML/JSON document is shared.
 - **Over-coupling** — anti-pattern when the architect over-specifies fields "just in case." Wishlist needs only `name` from Profile, but contracting on the whole Profile makes any unrelated field change (e.g., `state`) break Wishlist.
-- **Bandwidth fallacy** — falling for the *"bandwidth is infinite"* fallacy of distributed computing. 2,000 req/s × 500 KB payloads = 1,000,000 KB/s; trimming the contract to just `name` collapses overhead to ~200 bytes/s, a perfectly reasonable 400 KB.
+- **Bandwidth fallacy** — falling for the *"bandwidth is infinite"* fallacy of distributed computing. 2,000 req/s × 500 KB payloads = 1,000,000 KB/s; trimming the contract to just `name` collapses overhead to \~200 bytes/s, a perfectly reasonable 400 KB.
 - **Workflow management (legitimate use)** — when scalability forces choreography over orchestration, stamp coupling can carry workflow status, transactional state, and error info alongside domain data; each service updates its slice and forwards the document.
 - **Atomicity caveat** — for transactional consistency in such a workflow, services must rebroadcast the contract to previously visited services to restore atomic consistency.
 - **Trade-offs** — *Advantage*: enables complex workflows in choreographed solutions. *Disadvantages*: artificially high coupling between collaborators; bandwidth pressure at scale.

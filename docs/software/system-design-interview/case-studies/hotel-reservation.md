@@ -1,6 +1,6 @@
 # Hotel Reservation System
 
-> Vol 2 only — neither Liu nor Xu Vol 1 covers this. The interesting moves are using the client-supplied **`reservation_id` as the primary key** to defang double-clicks, picking **optimistic locking** because reservation QPS is low (~3/sec), and the senior-level pragmatic choice to **co-locate reservation + inventory in one ACID DB** rather than chase pure-microservice purity. Idempotency-key mechanics live in [Concurrency & Transactions §7](fundamentals/concurrency-and-transactions.md#7-idempotency-keys-as-primary-keys).
+> Vol 2 only — neither Liu nor Xu Vol 1 covers this. The interesting moves are using the client-supplied **`reservation_id` as the primary key** to defang double-clicks, picking **optimistic locking** because reservation QPS is low (\~3/sec), and the senior-level pragmatic choice to **co-locate reservation + inventory in one ACID DB** rather than chase pure-microservice purity. Idempotency-key mechanics live in [Concurrency & Transactions §7](fundamentals/concurrency-and-transactions.md#7-idempotency-keys-as-primary-keys).
 
 ## Table of Contents
 
@@ -74,13 +74,13 @@ Two distinct double-booking problems:
 | **Optimistic locking** (version column) | Fast under low contention; no DB lock | Many failed retries under high contention → bad UX | **Good fit** — reservation QPS is low |
 | **DB constraints** (`CHECK (inventory - reserved >= 0)`) | Easy; no app-level logic | Same retry problem; constraints not version-controlled with code; not all DBs support them | **Good fit** — easy at this scale |
 
-**Why optimistic fits hotels** — reservation QPS is naturally low (~3/sec), so version-check failures are rare and the absence of DB locks lets reads scale. See [Concurrency & Transactions §4](fundamentals/concurrency-and-transactions.md#4-pessimistic-vs-optimistic-locking).
+**Why optimistic fits hotels** — reservation QPS is naturally low (\~3/sec), so version-check failures are rare and the absence of DB locks lets reads scale. See [Concurrency & Transactions §4](fundamentals/concurrency-and-transactions.md#4-pessimistic-vs-optimistic-locking).
 
 ## 5. Scaling
 
 Stateless services scale horizontally; the bottleneck is the database.
 
-**Database sharding by `hotel_id`** — every key query filters by hotel; spreading 30,000 QPS across 16 shards yields ~1,875 QPS per shard, well within MySQL's capacity. See [Sharding & Consistent Hashing](fundamentals/sharding-and-consistent-hashing.md).
+**Database sharding by `hotel_id`** — every key query filters by hotel; spreading 30,000 QPS across 16 shards yields \~1,875 QPS per shard, well within MySQL's capacity. See [Sharding & Consistent Hashing](fundamentals/sharding-and-consistent-hashing.md).
 
 **Booking.com / Expedia scenario** — 1,000× higher load than a single chain forces sharding plus a cache layer; without it the inventory DB becomes the bottleneck.
 

@@ -34,9 +34,9 @@ Hard Parts uses a running example. A **Wishlist Service** must show item descrip
 
 | Component | Typical range |
 |---|---|
-| Network latency | ~30–300 ms |
-| Security latency (auth/authz on secured endpoints) | ~20–400 ms |
-| Data latency (the extra database call inside the owning service) | ~10–50 ms |
+| Network latency | \~30–300 ms |
+| Security latency (auth/authz on secured endpoints) | \~20–400 ms |
+| Data latency (the extra database call inside the owning service) | \~10–50 ms |
 
 Worst-case cumulative latency approaches a second per cross-boundary read. A page that needs three such reads can become unusable.
 
@@ -74,7 +74,7 @@ This is not a single in-memory cache (no sharing across services) and not a dist
 
 | Ceiling | Threshold | Why it matters |
 |---|---|---|
-| **Data volume** | ~500 MB | Memory cost scales by `cache size × consumer instances`. 500 MB × 5 instances = 2.5 GB. |
+| **Data volume** | \~500 MB | Memory cost scales by `cache size × consumer instances`. 500 MB × 5 instances = 2.5 GB. |
 | **Update rate** | High churn | Synchronization can't keep up; consumers diverge. Inventory counts are too volatile; product descriptions are fine. |
 
 **Configuration challenge** — services discover each other via TCP/IP broadcast and lookups. Cloud and containerized environments with dynamic IPs make this harder; the platform team owns the discovery configuration.
@@ -123,13 +123,13 @@ That leaves two candidates: **Interservice Communication** or **Replicated Cachi
 | Quantity | Value |
 |---|---|
 | Active experts | 900 |
-| Profile size per expert | ~1.3 KB |
+| Profile size per expert | \~1.3 KB |
 | Total dataset | 900 × 1.3 KB ≈ **1.2 MB** |
 | Max User Management instances | 2 |
 | Max Ticket Assignment instances | 4 |
 | Total in-memory footprint across consumers | 1.2 MB × 4 ≈ 5 MB |
 
-1.2 MB sits comfortably below the ~500 MB ceiling, and expert profiles are mostly static (updated rarely). Both ceilings are clear; Replicated Caching is the right choice.
+1.2 MB sits comfortably below the \~500 MB ceiling, and expert profiles are mostly static (updated rarely). Both ceilings are clear; Replicated Caching is the right choice.
 
 **Decision** — Replicated Caching with **User Management Service as sole writer**; Ticket Assignment instances hold read-only replicas. Performance and fault-tolerance pain of remote calls are resolved.
 

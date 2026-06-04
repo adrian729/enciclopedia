@@ -38,7 +38,7 @@ The "nines" table is the canonical example:
 | Availability | Downtime per year | Downtime per day |
 |---|---|---|
 | **99.9%** (three nines) | 8 hr 46 min | 86 sec |
-| **99.99%** (four nines) | 52 min 33 sec | ~8.6 sec |
+| **99.99%** (four nines) | 52 min 33 sec | \~8.6 sec |
 | **99.999%** (five nines) | 5 min 35 sec | **1 sec** |
 | **99.9999%** (six nines) | 31.5 sec | 86 ms |
 

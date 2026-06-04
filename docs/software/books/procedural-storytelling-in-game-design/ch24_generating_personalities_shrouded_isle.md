@@ -19,7 +19,7 @@
 
 Three layered elements: **family**, **traits**, **aesthetics**.
 
-- **Family** — every character belongs to one of five Great Houses: **Kegnni, Iosefka, Cadwell, Efferson, Blackborn**. Each house has ~6 members (30 townspeople total), with at least one elderly male and elderly female (parents) and 2–5 younger members (children). Family relationships are implied, not explicit. No new characters arrive during the playthrough, giving the cast permanence and history.
+- **Family** — every character belongs to one of five Great Houses: **Kegnni, Iosefka, Cadwell, Efferson, Blackborn**. Each house has \~6 members (30 townspeople total), with at least one elderly male and elderly female (parents) and 2–5 younger members (children). Family relationships are implied, not explicit. No new characters arrive during the playthrough, giving the cast permanence and history.
 - **House specialties** — each House is responsible for one of the cult's five values:
 
 | House | Value | Ritual |

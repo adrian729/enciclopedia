@@ -83,7 +83,7 @@ Cloud fit is **limited**. Because the architecture is monolithic and partitioned
 ## 6. Risks and Antipatterns
 
 - **No fault tolerance.** A monolithic deployment with no architectural modularity: an out-of-memory error in any small part crashes the whole unit.
-- **High MTTR.** Monolith startup ranges from ~2 minutes (small apps) to 15+ minutes (large ones), eroding mean-time-to-recover and availability.
+- **High MTTR.** Monolith startup ranges from \~2 minutes (small apps) to 15+ minutes (large ones), eroding mean-time-to-recover and availability.
 - **Architecture Sinkhole antipattern** — see [§ 3](#3-the-architecture-sinkhole-antipattern).
 - **Architecture by Implication / Accidental Architecture.** Teams that "just start coding" land in layered without an explicit choice. The decision should be deliberate.
 - **DDD mismatch.** Domain-driven design fits poorly because every domain change touches every layer.

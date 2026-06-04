@@ -29,9 +29,9 @@ Non-functional:
 
 ## 2. Estimation
 
-100M DAU × 2 rides per day × 10× peak factor / 86,400 seconds = **~20,000 peak QPS** on the matching path.
+100M DAU × 2 rides per day × 10× peak factor / 86,400 seconds = **\~20,000 peak QPS** on the matching path.
 
-Driver location updates: 10M active drivers × 1 update per 5 seconds = **~2M location updates/sec**.
+Driver location updates: 10M active drivers × 1 update per 5 seconds = **\~2M location updates/sec**.
 
 The numbers expose two scaling problems: matching at 20K QPS is expensive (it's a geographic search, not a hash lookup), and location updates at 2M/sec saturates a normal data store.
 

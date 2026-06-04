@@ -15,8 +15,8 @@
 - **Hotel reservation system** — booking backend for a chain like Marriott; same techniques transfer to Airbnb, flight reservations, and movie ticket booking.
 - **In-scope features** — hotel detail page, room detail page, reserve a room, admin CRUD, **10% overbooking** (chain sells more rooms than it has, betting on cancellations).
 - **Out of scope** — search; pricing varies by day (dynamic pricing) but the design just exposes daily rates.
-- **Scale** — 5,000 hotels, 1M total rooms; 70% occupancy with 3-day average stay → ~240,000 reservations/day → **~3 reservations/sec** average. Reservation TPS is low; the challenge is concurrency on hot rooms during peak events.
-- **Funnel QPS** — assuming 10% step-through and no prefetch: detail page ~300 QPS, booking page ~30 QPS, reservation ~3 TPS (working backwards from the funnel).
+- **Scale** — 5,000 hotels, 1M total rooms; 70% occupancy with 3-day average stay → \~240,000 reservations/day → **\~3 reservations/sec** average. Reservation TPS is low; the challenge is concurrency on hot rooms during peak events.
+- **Funnel QPS** — assuming 10% step-through and no prefetch: detail page \~300 QPS, booking page \~30 QPS, reservation \~3 TPS (working backwards from the funnel).
 - **Non-functional priorities** — high concurrency on contested rooms, moderate latency (a few seconds is acceptable for the reservation request itself).
 
 ## 2. APIs and Microservice Architecture
@@ -48,12 +48,12 @@
 | **Optimistic locking** | Add a `version` column; increment on update; reject if version doesn't match | Fast under low contention; no DB lock | Many failed retries under high contention → bad UX | **Good fit** — reservation QPS is low |
 | **Database constraints** | `CHECK (total_inventory - total_reserved >= 0)` rolls back violations | Easy; no app-level logic | Same retry problem under contention; constraints not version-controlled with code; not all DBs support them | **Good fit** — easy to implement at this scale |
 
-- **Why optimistic locking fits hotels** — reservation QPS is naturally low (~3/sec), so version-check failures are rare and the absence of DB locks lets reads scale.
+- **Why optimistic locking fits hotels** — reservation QPS is naturally low (\~3/sec), so version-check failures are rare and the absence of DB locks lets reads scale.
 
 ## 5. Scaling the System
 
 - **Stateless services scale horizontally** — the bottleneck is the database, which holds all state.
-- **Database sharding by `hotel_id`** — every key query filters by hotel; spreading 30,000 QPS across 16 shards yields ~1,875 QPS per shard, well within MySQL's capacity.
+- **Database sharding by `hotel_id`** — every key query filters by hotel; spreading 30,000 QPS across 16 shards yields \~1,875 QPS per shard, well within MySQL's capacity.
 - **Booking.com / Expedia scenario** — 1,000× higher load than a single chain forces sharding plus a cache layer; without it the inventory DB becomes the bottleneck.
 
 ## 6. Cache Layer and Consistency

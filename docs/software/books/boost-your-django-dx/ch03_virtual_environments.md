@@ -36,7 +36,7 @@
 
 ### 2.2. virtualenv
 
-- **virtualenv vs. venv** — virtualenv is the original third-party tool that was copied into the stdlib as venv in Python 3.3 (PEP 405). venv has stagnated; virtualenv kept evolving. Roughly 10x faster (~0.3s vs. ~3s), seeds the env with a recent cached Pip, and writes its own `.gitignore`. Worth installing if you create envs frequently: `python -m pip install virtualenv` then `python -m virtualenv --prompt . .venv`. Activate exactly like venv.
+- **virtualenv vs. venv** — virtualenv is the original third-party tool that was copied into the stdlib as venv in Python 3.3 (PEP 405). venv has stagnated; virtualenv kept evolving. Roughly 10x faster (\~0.3s vs. \~3s), seeds the env with a recent cached Pip, and writes its own `.gitignore`. Worth installing if you create envs frequently: `python -m pip install virtualenv` then `python -m virtualenv --prompt . .venv`. Activate exactly like venv.
 
 ## 3. Pinning dependencies with pip-compile
 

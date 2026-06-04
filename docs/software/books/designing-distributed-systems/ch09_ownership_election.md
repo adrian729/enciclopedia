@@ -21,7 +21,7 @@
 
 - **Singleton pattern** — run a single replica; it implicitly owns everything without election. Simpler to build and deploy at the cost of downtime.
 - **Orchestrator-provided guarantees** — a singleton on Kubernetes gets automatic restart on crash, automatic restart on failed health check, and rescheduling onto another machine if its node fails.
-- **Uptime estimate** — a container that crashes once a day and restarts in a few seconds gives roughly three to four nines (2 s of downtime/day ~= 99.99%); whole-machine failure plus a ~5-minute reschedule yields ~two nines if every machine fails daily.
+- **Uptime estimate** — a container that crashes once a day and restarts in a few seconds gives roughly three to four nines (2 s of downtime/day \~= 99.99%); whole-machine failure plus a \~5-minute reschedule yields \~two nines if every machine fails daily.
 - **Deployment is the dominant cost** — a singleton cannot run old and new versions concurrently; a 2-minute daily upgrade caps you at two nines, an hourly upgrade drops below one nine. Pre-pulling images speeds this up but adds complexity.
 - **When singletons are fine** — background asynchronous processing and other workloads where simplicity beats high availability; reach for master election only when four+ nines really matter.
 

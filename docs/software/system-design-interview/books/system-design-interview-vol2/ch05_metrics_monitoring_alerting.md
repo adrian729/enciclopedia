@@ -95,7 +95,7 @@
 
 ## 10. Storage Optimization
 
-- **Encoding (delta-of-delta)** — store value deltas with one base instead of full values; e.g., timestamps `1610087371, 1610087381, …` become `1610087371, 10, 10, 9, 11`, dropping per-point timestamp from 32 bits to ~4 bits.
+- **Encoding (delta-of-delta)** — store value deltas with one base instead of full values; e.g., timestamps `1610087371, 1610087381, …` become `1610087371, 10, 10, 9, 11`, dropping per-point timestamp from 32 bits to \~4 bits.
 - **Compression** — built into good TSDBs; combines with delta encoding for major savings.
 - **Downsampling** — convert high-resolution to low-resolution as data ages. Example tier: raw for 7 days, 1-minute for 30 days, 1-hour for 1 year. E.g., six 10-second `cpu` samples (10, 16, 20, 30, 20, 30) roll up to two 30-second averages (19, 25).
 - **Cold storage** — inactive, rarely-accessed data moves to cheap cold tiers.

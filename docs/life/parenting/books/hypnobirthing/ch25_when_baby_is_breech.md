@@ -15,9 +15,9 @@
 
 ## 2. Hypnotherapy for Turning
 
-- **Mehl-Madronna study** — 200 women with babies in breech position at 36+ weeks (baseline spontaneous turn rate after week 37: ~12%). 100 received hypnotherapy; 100 did not (some in the comparison group had ECV). Result: 81 of 100 hypnotherapy babies turned to vertex vs. 26 of 100 in the comparison group (plus 20 more turned via ECV)
+- **Mehl-Madronna study** — 200 women with babies in breech position at 36+ weeks (baseline spontaneous turn rate after week 37: \~12%). 100 received hypnotherapy; 100 did not (some in the comparison group had ECV). Result: 81 of 100 hypnotherapy babies turned to vertex vs. 26 of 100 in the comparison group (plus 20 more turned via ECV)
 - **What the hypnosis session involves** — deep relaxation through guided imagery; the mother visualises her baby easily turning and settling into vertex position; suggestions that the uterus becomes pliable and relaxed to give the baby room; the mother talks to her baby, encouraging release from the breech position
-- **Fewer sessions than expected** — originally estimated at ~10 hours per mother; actual average was 4 hours, and half of the successful turns required only one session
+- **Fewer sessions than expected** — originally estimated at \~10 hours per mother; actual average was 4 hours, and half of the successful turns required only one session
 - **Release therapy** — mothers with breech-presented babies can be helped to identify and release negative emotions that may be contributing to uterine tension. When the turn is achieved through relaxation and tension release rather than manual manipulation, the baby usually stays in vertex position
 - **ECV babies may revert** — babies turned through external cephalic version (manual manipulation from outside the abdomen) not uncommonly turn back into breech
 

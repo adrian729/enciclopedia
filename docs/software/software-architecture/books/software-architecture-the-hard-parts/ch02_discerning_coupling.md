@@ -71,7 +71,7 @@ Dynamic coupling concerns how quanta interact at runtime to form workflows. It i
 
 ## 5. Sysops Squad: understanding quanta
 
-- **Static coupling = "what's needed to bootstrap"** — for a Sysops Squad service: Java, SpringBoot, ~15–20 frameworks/libraries listed in the Maven POM, Postgres, Docker, *and* the event broker the service uses to communicate. The presence of the broker is static; calls *through* the broker are dynamic.
+- **Static coupling = "what's needed to bootstrap"** — for a Sysops Squad service: Java, SpringBoot, \~15–20 frameworks/libraries listed in the Maven POM, Postgres, Docker, *and* the event broker the service uses to communicate. The presence of the broker is static; calls *through* the broker are dynamic.
 - **Defensive use** — the team built static quantum diagrams per service for *reliability analysis*: if X changes, what must be tested? The diagrams also expose how teams impact one another.
 - **No off-the-shelf tool** — the platform team is building a custom mapper from container manifests, POM files, NPM dependencies, and observability log data (call graph) to maintain the static coupling view.
 - **Dynamic coupling and elasticity (book's recap)** — scalability = supporting many concurrent users; elasticity = supporting bursts. If Ticketing operates at 10× the elastic scale of Assignment, a *synchronous* call bogs the workflow down on the slower service; an *asynchronous* call via a queue lets each service stay operationally independent and the caller move on.

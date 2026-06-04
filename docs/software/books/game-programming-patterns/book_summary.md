@@ -1,6 +1,6 @@
 # Game Programming Patterns: Summary
 
-> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+> **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
 
 ## Table of Contents
 
@@ -230,7 +230,7 @@ The final four patterns (plus Flyweight, a GoF pattern Nystrom repositions) conc
 
 ### 6.1. Data Locality: Data Layout is Performance
 
-Modern CPUs have caches because main memory is roughly a hundred times slower than registers. When data is fetched from RAM, the CPU pulls a whole contiguous chunk — a **cache line** (~64–128 bytes). A **cache hit** reuses data already pulled; a **cache miss** stalls the CPU for hundreds of cycles. Two programs doing identical work can differ 50× in speed based on cache miss patterns alone.
+Modern CPUs have caches because main memory is roughly a hundred times slower than registers. When data is fetched from RAM, the CPU pulls a whole contiguous chunk — a **cache line** (\~64–128 bytes). A **cache hit** reuses data already pulled; a **cache miss** stalls the CPU for hundreds of cycles. Two programs doing identical work can differ 50× in speed based on cache miss patterns alone.
 
 The pattern: organize data structures so the things you process next are next to each other in memory, maximizing reuse of each cache line. Three techniques:
 

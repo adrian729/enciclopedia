@@ -13,7 +13,7 @@
 
 - **Model** xt = β0 + β1 zt1 + … + βq ztq + wt — output xt regressed on q fixed inputs ztj plus error wt; for now wt is iid N(0, σw²), an assumption to be relaxed (Ch 3).
 - **OLS estimate** β̂ = (Σ zt zt')⁻¹ Σ zt xt — minimizes the sum of squared errors; unbiased and minimum-variance among linear unbiased estimators (Gauss–Markov).
-- **Variance and inference** — under normal errors β̂ ~ N(β, σw² C) with C = (Σ zt zt')⁻¹; unbiased σ̂w² = MSE = SSE/(n − q − 1); the t-statistic (β̂i − βi)/(sw √cii) has tn−q−1 distribution.
+- **Variance and inference** — under normal errors β̂ \~ N(β, σw² C) with C = (Σ zt zt')⁻¹; unbiased σ̂w² = MSE = SSE/(n − q − 1); the t-statistic (β̂i − βi)/(sw √cii) has tn−q−1 distribution.
 - **F-test for nested models** — full model vs. reduced model with r < q regressors gives F = (SSR/(q − r))/(SSE/(n − q − 1)) where SSR = SSEr − SSE; rejects H0: βr+1 = … = βq = 0 when F is large.
 - **Coefficient of determination** R² = (SSE0 − SSE)/SSE0 where SSE0 = Σ(xt − x̄)² — proportion of variation accounted for by all regressors.
 - **Chicken-price example** — monthly whole-bird price 2001–2016 fit as xt = β0 + β1 t + wt; estimated slope 3.59 (SE 0.08) cents/year, an upward linear trend.

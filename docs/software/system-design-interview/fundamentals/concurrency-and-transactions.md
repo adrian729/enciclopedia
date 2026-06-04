@@ -43,7 +43,7 @@ Three options on a spectrum, from simplest to most scalable:
 | Strategy | Throughput | Freshness | When to use |
 |---|---|---|---|
 | Single-thread | Low | Live | Low-QPS critical path; admin operations. |
-| Single-thread micro-batch | Medium | ~1 batch interval stale | Aggregation, dispatch, top-K. Amortizes I/O. |
+| Single-thread micro-batch | Medium | \~1 batch interval stale | Aggregation, dispatch, top-K. Amortizes I/O. |
 | Sharded serial | High | Live per shard | Independent partitions (per-driver, per-room, per-key). |
 
 Liu's ridesharing case study uses sharded serial: each geographic dispatcher serializes per-region matches.

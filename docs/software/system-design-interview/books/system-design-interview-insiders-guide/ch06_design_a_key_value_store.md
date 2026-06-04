@@ -99,7 +99,7 @@
 - **Merkle tree** — a hash tree where every non-leaf node is the hash of its children's labels; allows efficient and secure verification of large data structures
 - **Build steps** — divide the key space into buckets (root-level nodes that bound tree depth), hash each key in a bucket, produce one hash per bucket, then build upward to the root by hashing children
 - **Comparison** — start at root hashes; if equal, replicas match. If not, recurse into mismatched children to find exactly which buckets diverge, syncing only those
-- **Efficiency** — data transferred is proportional to differences between replicas, not total data size. A typical setup uses one million buckets per one billion keys (~1000 keys per bucket)
+- **Efficiency** — data transferred is proportional to differences between replicas, not total data size. A typical setup uses one million buckets per one billion keys (\~1000 keys per bucket)
 
 ## 12. Handling Data Center Outage
 

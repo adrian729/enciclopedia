@@ -18,7 +18,7 @@
   - Expect bursty traffic (Friday night, concert/sporting event endings)
   - Match on **linear distance** (ignore real-world edge cases like rivers)
   - Wait time should be minimized; 30 seconds is acceptable
-  - Location accuracy tolerance: ~10 seconds (10s of movement doesn't materially change match)
+  - Location accuracy tolerance: \~10 seconds (10s of movement doesn't materially change match)
   - **Availability** for ride requests is the priority non-functional requirement
 
 ## 2. API

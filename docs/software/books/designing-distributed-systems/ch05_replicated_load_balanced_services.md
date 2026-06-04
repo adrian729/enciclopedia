@@ -29,7 +29,7 @@
 
 ### 2.2. Hands-On: Replicated Service in Kubernetes
 
-- **Demo** — deploy `brendanburns/dictionary-server` (a NodeJS dictionary server that downloads ~8 MB of data before reporting ready) as a Kubernetes `Deployment` with three replicas, an HTTP `readinessProbe` on `/ready`, and a `Service` object as the load balancer providing a stable name independent of any specific replica.
+- **Demo** — deploy `brendanburns/dictionary-server` (a NodeJS dictionary server that downloads \~8 MB of data before reporting ready) as a Kubernetes `Deployment` with three replicas, an HTTP `readinessProbe` on `/ready`, and a `Service` object as the load balancer providing a stable name independent of any specific replica.
 
 ## 3. Session Tracked Services
 

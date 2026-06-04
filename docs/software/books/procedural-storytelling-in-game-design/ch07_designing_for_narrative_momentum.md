@@ -22,7 +22,7 @@
 
 ## 3. ink and the Weave Structure
 
-- **80 Days** — players see ~3% of 750,000 words per playthrough. Design ethos: *"only forwards, whichever way you want"*. The time-limited premise justifies no backtracking and makes "failing" a scenario an active choice pushing forward.
+- **80 Days** — players see \~3% of 750,000 words per playthrough. Design ethos: *"only forwards, whichever way you want"*. The time-limited premise justifies no backtracking and makes "failing" a scenario an active choice pushing forward.
 - **Weave** — the core structure in Inkle's **ink** mark-up language. Text and options flow top-to-bottom. Options marked with `*` lead to branches that rejoin at gather points (`-`); whatever the player picks, flow falls to the end.
 - **Paragraph labels as conditionals** — each label (e.g. `zany`, `dull`) can be set only in one place in the entire script, and once set can never be unset. That makes `london.zany` a reliable test no matter how long the script grows. Intrinsically only-forwards.
 - **Sequences and loops** — braced alternatives (`{first time|later visits}`) advance on each visit and can't be reset. Options default to once-only; `+` marks a reusable option (e.g. "Leave"). The *Sorcery!* hub pattern: choices unlock as discovered, each exhausts itself, the `Leave` option bounces the flow onward. If a player re-enters an emptied *Sorcery!* location, the text is reduced to a sentence or skipped.
@@ -39,7 +39,7 @@
 ```
 
 - **Why intervals** — the test asks "does the player know enough for this to make sense, but not so much that it's redundant?" Future-proof: inserting new states mid-chain doesn't break existing checks because only the interval endpoints matter.
-- **Knowledge webs** — chains can branch and rejoin like CYOA graphs. *Heaven's Vault* has over 1,500 knowledge states across ~700 chains, some 10 states long, some single-state (glorified Booleans that may be extended later without breaking anything).
+- **Knowledge webs** — chains can branch and rejoin like CYOA graphs. *Heaven's Vault* has over 1,500 knowledge states across \~700 chains, some 10 states long, some single-state (glorified Booleans that may be extended later without breaking anything).
 - **Writing workflow** — lay out the knowledge map, then write content, then mark content with minimum (unlock) and maximum (redundancy) requirements. The map is static; the writer doesn't need to think through flow, order, or cause and effect while drafting.
 
 ## 5. Rules for Momentum

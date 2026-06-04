@@ -16,7 +16,7 @@
 
 ## 2. Early Growth and Medical Resistance
 
-- **NBC Dateline exposure** — a full-hour TV feature generated ~5,000 calls/emails in weeks, but it also revealed a gap: the public was ready for natural birth long before doctors were
+- **NBC Dateline exposure** — a full-hour TV feature generated \~5,000 calls/emails in weeks, but it also revealed a gap: the public was ready for natural birth long before doctors were
 - **Nurses embraced it, doctors didn't** — nurses and midwives became early adopters; most doctors called HypnoBirths "remarkable" but treated them as flukes and showed no curiosity about how to replicate them
 - **Friedman Curve pressure** — doctors would interrupt calm labours to suggest membrane ruptures or Pitocin drips if the mother was not progressing in line with the Friedman Curve, especially when their shift was about to end. A beautiful calm birthing was often given over to manipulation with little thought to the dramatic change in the mother's comfort level
 - **Practitioner network built the movement** — growth came from trained HypnoBirthing practitioners (midwives, doulas, hypnotherapists), not from hospital endorsement. Midwife Nancy Wainer called it "the missing link we have all been seeking for years"

@@ -59,8 +59,8 @@ The fan-out trick: **Redis Pub/Sub**. Every user has a personal channel; their l
 
 **Bottleneck is CPU, not memory.** Back-of-envelope:
 
-- Memory: 100M users × 100 active friends × 20 bytes ≈ **200 GB** → ~2 servers' worth.
-- CPU: pushing 13M messages/sec at a conservative 100K pushes/server-sec needs **~130 Redis servers**.
+- Memory: 100M users × 100 active friends × 20 bytes ≈ **200 GB** → \~2 servers' worth.
+- CPU: pushing 13M messages/sec at a conservative 100K pushes/server-sec needs **\~130 Redis servers**.
 
 The fan-out load dwarfs the storage need.
 
@@ -87,7 +87,7 @@ Implications:
 
 For the "show me anyone nearby, not just friends" feature, switch from per-user channels to **one channel per geohash grid**. Each client subscribes to its current geohash plus the eight neighbors. See [Geospatial Indexing](fundamentals/geospatial-indexing.md) for the geohash mechanics — the eight-neighbor fetch is the same trick used in proximity service.
 
-**Erlang as an alternative.** The authors note that Erlang/Elixir on the BEAM VM technically beats Redis Pub/Sub here: each Erlang process is ~300 bytes (millions per server) and idle processes consume zero CPU, so each user is naturally modeled as a process subscribed to friends' processes. The drawback is hiring — Erlang expertise is rare, so Redis Pub/Sub is the default.
+**Erlang as an alternative.** The authors note that Erlang/Elixir on the BEAM VM technically beats Redis Pub/Sub here: each Erlang process is \~300 bytes (millions per server) and idle processes consume zero CPU, so each user is naturally modeled as a process subscribed to friends' processes. The drawback is hiring — Erlang expertise is rare, so Redis Pub/Sub is the default.
 
 ## Sources
 

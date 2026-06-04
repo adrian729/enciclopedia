@@ -29,7 +29,7 @@
 - **Information equivalence** — autocovariance and spectral density carry the same information; γ(h) expresses it in lags (time domain), f(ω) in cycles (frequency domain).
 - **White noise spectrum** — fw(ω) = σw², flat across all frequencies; the analogy with white light gives the noise its name.
 - **Filtered output** (Property 4.3) — if yt = Σ aj xt−j, then fy(ω) = |A(ω)|² fx(ω), where A(ω) = Σ aj e^(−2πiωj) is the **frequency response function** and {aj} is the **impulse response**; filtering multiplies the input spectrum frequency by frequency.
-- **ARMA spectral density** (Property 4.4) — for φ(B)xt = θ(B)wt, fx(ω) = σw² |θ(e^(−2πiω))|² / |φ(e^(−2πiω))|²; the MA(1) xt = wt + 0.5 wt−1 yields f(ω) = σw²[1.25 + cos(2πω)] (low-frequency power), while AR(2) with φ1 = 1, φ2 = −0.9 concentrates power near ω ≈ 0.16 (period ~6).
+- **ARMA spectral density** (Property 4.4) — for φ(B)xt = θ(B)wt, fx(ω) = σw² |θ(e^(−2πiω))|² / |φ(e^(−2πiω))|²; the MA(1) xt = wt + 0.5 wt−1 yields f(ω) = σw²[1.25 + cos(2πω)] (low-frequency power), while AR(2) with φ1 = 1, φ2 = −0.9 concentrates power near ω ≈ 0.16 (period \~6).
 - **Spectral representation of xt** (Property 4.5) — every mean-zero stationary series can be written as xt = ∫ e^(2πiωt) dZ(ω) with Z(ω) a complex-valued process of uncorrelated increments whose variances follow F; the theoretical justification for decomposing a series into harmonic components.
 
 ## 3. DFT, FFT, and the Periodogram as an Estimator

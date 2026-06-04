@@ -18,7 +18,7 @@
 
 | Structure | Problem it solves | Use case |
 |---|---|---|
-| **HyperLogLog** | Approximate unique count with minimal memory, using the intuition that leading-bit patterns correlate with how many distinct values have been seen (e.g., a bit-pattern `100` suggests you've seen ~8 numbers) | Count unique site/post visitors |
+| **HyperLogLog** | Approximate unique count with minimal memory, using the intuition that leading-bit patterns correlate with how many distinct values have been seen (e.g., a bit-pattern `100` suggests you've seen \~8 numbers) | Count unique site/post visitors |
 | **Count-Min Sketch** | Maintain a key→count map that exceeds memory by trading accuracy for space | Near-real-time top-K |
 | **Bloom Filter** | Fast, space-efficient membership test. Can return false positives but never false negatives — if it says "not present", it isn't; if it says "present", verify against the real source | Skip disk seeks when asking "does this ID exist?"; second-degree connection checks in graph dbs; skip already-crawled URLs |
 

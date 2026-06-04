@@ -26,7 +26,7 @@
 ## 2. Requirements and Scale
 
 - **Clarify scope first** — purpose (search indexing), scale (1B pages/month), content type (HTML only), freshness (recrawl new/edited pages), retention (5 years), dedupe policy (ignore duplicate content)
-- **Back-of-envelope** — 1B pages/month → ~400 QPS, peak 800 QPS; avg page 500 KB → 500 TB/month; 5 years → 30 PB total storage
+- **Back-of-envelope** — 1B pages/month → \~400 QPS, peak 800 QPS; avg page 500 KB → 500 TB/month; 5 years → 30 PB total storage
 
 ## 3. Characteristics of a Good Crawler
 
@@ -42,7 +42,7 @@
 - **HTML Downloader** — fetches pages over HTTP using URLs from the Frontier
 - **DNS Resolver** — translates hostnames to IPs (e.g., `www.wikipedia.org` → `198.35.26.96`)
 - **Content Parser** — parses and validates downloaded pages; runs as a separate component because doing it on the crawler would slow downloads
-- **Content Seen?** — dedupe check against previously stored pages; ~29% of the web is duplicate content, so comparing **hash values** (not character-by-character) is essential for speed
+- **Content Seen?** — dedupe check against previously stored pages; \~29% of the web is duplicate content, so comparing **hash values** (not character-by-character) is essential for speed
 - **Content Storage** — most HTML on disk (data set is too big for RAM); popular content kept in memory for low-latency access
 - **URL Extractor** — pulls links from HTML; converts relative paths to absolute URLs (e.g., prepend `https://en.wikipedia.org`)
 - **URL Filter** — drops blacklisted sites, error links, and unwanted file extensions/content types
@@ -104,7 +104,7 @@
 
 ## 11. Detect and Avoid Problematic Content
 
-- **Redundant content** — ~30% of pages are duplicates; detect with hashes/checksums
+- **Redundant content** — \~30% of pages are duplicates; detect with hashes/checksums
 - **Spider trap** — a page that traps the crawler in an infinite loop (e.g., `www.spidertrapexample.com/foo/bar/foo/bar/...`); mitigations include capping URL length and manually blacklisting offenders, since no general algorithm exists
 - **Data noise** — ads, code snippets, spam URLs add no value; filter them out where possible
 

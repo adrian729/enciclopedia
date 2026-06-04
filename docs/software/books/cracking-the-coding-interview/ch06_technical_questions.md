@@ -70,7 +70,7 @@ Example use: a hash table mapping every 32-bit integer to a boolean fits in memo
 
 - Problems are more ambiguous than they appear — ambiguity resolution can turn a hard problem into an easy one, and is explicitly tested at some companies (especially Microsoft).
 - **Good questions** — data types, how much data, what assumptions hold, who the user is.
-- **Example** — "design an algorithm to sort a list" becomes "sort an array of ~1M customer ages (integers 0–130)" once questions are asked; solution collapses to a 130-element counting array.
+- **Example** — "design an algorithm to sort a list" becomes "sort an array of \~1M customer ages (integers 0–130)" once questions are asked; solution collapses to a 130-element counting array.
 
 ### 5.2. Step 2: Design an Algorithm
 

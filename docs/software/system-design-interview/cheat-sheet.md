@@ -80,7 +80,7 @@ See [Estimation](process/estimation.md).
 | 99.99% | 52.6 min |
 | 99.999% | 5.26 min |
 
-**Single machine rough capacity:** ~10⁶ QPS for cheap reads; less for compute-heavy work.
+**Single machine rough capacity:** \~10⁶ QPS for cheap reads; less for compute-heavy work.
 
 ## 4. Decision Trees
 

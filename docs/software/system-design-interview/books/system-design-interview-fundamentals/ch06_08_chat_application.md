@@ -18,7 +18,7 @@
   - **100,000 channels**, long-tail distribution; up to **5,000 users per channel**
   - Bursty traffic at night (hobby chat); max message size **50,000 chars**
   - End-to-end delivery latency target **< 100 ms**
-  - Message load time **~200 ms p95**
+  - Message load time **\~200 ms p95**
   - Availability and durability both important; no message corruption
 
 ## 2. API

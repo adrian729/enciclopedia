@@ -106,10 +106,10 @@ The architect "over-specifies" the contract just in case. Wishlist only needs `n
 
 | Scenario | Calculation |
 |---|---|
-| Over-coupled contract: 500 KB Profile document, 2,000 req/s | 2,000 × 500 KB = **1,000,000 KB/s = ~1 GB/s** |
+| Over-coupled contract: 500 KB Profile document, 2,000 req/s | 2,000 × 500 KB = **1,000,000 KB/s = \~1 GB/s** |
 | Trimmed to just `name`: ≈100 bytes, 2,000 req/s | 2,000 × 100 B = **≈200 KB/s** |
 
-The over-coupled version is consuming ~5,000× more bandwidth than the trimmed version, almost entirely for fields nobody reads. At scale, the bandwidth cost is real money, and the change-coupling cost is real production incidents. Trim the contract.
+The over-coupled version is consuming \~5,000× more bandwidth than the trimmed version, almost entirely for fields nobody reads. At scale, the bandwidth cost is real money, and the change-coupling cost is real production incidents. Trim the contract.
 
 ### 5.2. The Legitimate Form
 

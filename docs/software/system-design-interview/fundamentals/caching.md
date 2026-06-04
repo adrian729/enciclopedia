@@ -16,7 +16,7 @@
 
 ## 1. Why Cache
 
-Three benefits, in this order: **latency** (memory is ~100× faster than disk), **throughput**, **bandwidth** (data closer to the user — a CDN is a form of cache).
+Three benefits, in this order: **latency** (memory is \~100× faster than disk), **throughput**, **bandwidth** (data closer to the user — a CDN is a form of cache).
 
 Both authors flag the same anti-pattern: throwing a cache in front of every database without tying the decision to a non-functional requirement. The latency gain depends on the target — 5 ms to 0.1 ms is pointless at a 500 ms SLO and meaningful at a 20 ms SLO.
 

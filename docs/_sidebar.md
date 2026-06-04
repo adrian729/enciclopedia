@@ -426,6 +426,40 @@
 - **AI**
   - [AI Tools](ai/ai_tools.md)
 
+- **Mathematics**
+  - [Category Theory](mathematics/category_theory.md)
+  - **Books**
+    - [Time Series Analysis and Its Applications](mathematics/books/time-series-analysis/book_summary.md)
+      - [Book Summary](mathematics/books/time-series-analysis/book_summary.md)
+      - [Ch 1: Characteristics of Time Series](mathematics/books/time-series-analysis/ch01_characteristics_of_time_series.md)
+      - [Ch 2: Time Series Regression and Exploratory Data Analysis](mathematics/books/time-series-analysis/ch02_regression_and_exploratory_analysis.md)
+      - [Ch 3: ARIMA Models](mathematics/books/time-series-analysis/ch03_arima_models.md)
+      - [Ch 4: Spectral Analysis and Filtering](mathematics/books/time-series-analysis/ch04_spectral_analysis_and_filtering.md)
+      - [Ch 5: Additional Time Domain Topics](mathematics/books/time-series-analysis/ch05_additional_time_domain_topics.md)
+      - [Ch 6: State Space Models](mathematics/books/time-series-analysis/ch06_state_space_models.md)
+      - [Ch 7: Statistical Methods in the Frequency Domain](mathematics/books/time-series-analysis/ch07_frequency_domain_methods.md)
+
+    - [Think Bayes](mathematics/books/think-bayes/book_summary.md)
+      - [Book Summary](mathematics/books/think-bayes/book_summary.md)
+      - [Ch 1: Bayes's Theorem](mathematics/books/think-bayes/ch01_bayes_theorem.md)
+      - [Ch 2: Computational Statistics](mathematics/books/think-bayes/ch02_computational_statistics.md)
+      - [Ch 3: Estimation](mathematics/books/think-bayes/ch03_estimation.md)
+      - [Ch 4: More Estimation](mathematics/books/think-bayes/ch04_more_estimation.md)
+      - [Ch 5: Odds and Addends](mathematics/books/think-bayes/ch05_odds_and_addends.md)
+      - [Ch 6: Decision Analysis](mathematics/books/think-bayes/ch06_decision_analysis.md)
+      - [Ch 7: Prediction](mathematics/books/think-bayes/ch07_prediction.md)
+      - [Ch 8: Observer Bias](mathematics/books/think-bayes/ch08_observer_bias.md)
+      - [Ch 9: Two Dimensions](mathematics/books/think-bayes/ch09_two_dimensions.md)
+      - [Ch 10: Approximate Bayesian Computation](mathematics/books/think-bayes/ch10_approximate_bayesian_computation.md)
+      - [Ch 11: Hypothesis Testing](mathematics/books/think-bayes/ch11_hypothesis_testing.md)
+      - [Ch 12: Evidence](mathematics/books/think-bayes/ch12_evidence.md)
+      - [Ch 13: Simulation](mathematics/books/think-bayes/ch13_simulation.md)
+      - [Ch 14: A Hierarchical Model](mathematics/books/think-bayes/ch14_hierarchical_model.md)
+      - [Ch 15: Dealing with Dimensions](mathematics/books/think-bayes/ch15_dealing_with_dimensions.md)
+
+- **Tools**
+  - [NVim](tools/nvim.md)
+
 - **Design**
   - **Books**
     - [Introduction to Graphic Design](design/books/introduction-to-graphic-design/book_summary.md)
@@ -454,21 +488,11 @@
       - [Ch 8: Conclusion](writing/books/emotional-craft-of-fiction/ch08_conclusion.md)
       - [Ch 9: The Emotional Mastery Checklist](writing/books/emotional-craft-of-fiction/ch09_emotional_mastery_checklist.md)
 
-- **Mathematics**
-  - [Category Theory](mathematics/category_theory.md)
-  - **Books**
-    - [Time Series Analysis and Its Applications](mathematics/books/time-series-analysis/book_summary.md)
-      - [Book Summary](mathematics/books/time-series-analysis/book_summary.md)
-      - [Ch 1: Characteristics of Time Series](mathematics/books/time-series-analysis/ch01_characteristics_of_time_series.md)
-      - [Ch 2: Time Series Regression and Exploratory Data Analysis](mathematics/books/time-series-analysis/ch02_regression_and_exploratory_analysis.md)
-      - [Ch 3: ARIMA Models](mathematics/books/time-series-analysis/ch03_arima_models.md)
-      - [Ch 4: Spectral Analysis and Filtering](mathematics/books/time-series-analysis/ch04_spectral_analysis_and_filtering.md)
-      - [Ch 5: Additional Time Domain Topics](mathematics/books/time-series-analysis/ch05_additional_time_domain_topics.md)
-      - [Ch 6: State Space Models](mathematics/books/time-series-analysis/ch06_state_space_models.md)
-      - [Ch 7: Statistical Methods in the Frequency Domain](mathematics/books/time-series-analysis/ch07_frequency_domain_methods.md)
-
-- **Tools**
-  - [NVim](tools/nvim.md)
+- **Languages**
+  - [German](german/german.md)
+    - [Week 1](german/week_1.md)
+    - [Week 2](german/week_2.md)
+    - [Week 3](german/week_3.md)
 
 - **Life**
   - **Learning**
@@ -516,12 +540,6 @@
         - [Ch 37: Breastfeeding Is Best Feeding](life/parenting/books/hypnobirthing/ch37_breastfeeding.md)
         - [Ch 38: The Birth Afterglow](life/parenting/books/hypnobirthing/ch38_birth_afterglow.md)
         - [Ch 39: Birth Preference Sheets](life/parenting/books/hypnobirthing/ch39_birth_preference_sheets.md)
-
-- **Languages**
-  - [German](german/german.md)
-    - [Week 1](german/week_1.md)
-    - [Week 2](german/week_2.md)
-    - [Week 3](german/week_3.md)
 
 - **Cooking**
   - **Recipes**

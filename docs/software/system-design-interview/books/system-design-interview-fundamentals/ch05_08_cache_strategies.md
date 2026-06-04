@@ -14,7 +14,7 @@
 ## 1. What Cache Is and Why to Use It
 
 - **Definition** — volatile storage that improves query efficiency; data is lost when the cache goes down, unlike a database
-- **Three benefits** — latency (memory is ~100× faster than disk), throughput (more work in the same time on a single core), bandwidth (data closer to the user; CDNs are a form of cache)
+- **Three benefits** — latency (memory is \~100× faster than disk), throughput (more work in the same time on a single core), bandwidth (data closer to the user; CDNs are a form of cache)
 - **Justify, don't hand-wave** — cache costs maintenance and complexity; candidates who throw it in front of every database without a reason get dinged. Tie the need to a non-functional requirement: e.g., sub-20 ms latency with 100k read QPS
 - **Latency gain depends on the target** — reducing 5 ms → 0.1 ms is pointless if the requirement is 500 ms; meaningful if the requirement is 20 ms
 

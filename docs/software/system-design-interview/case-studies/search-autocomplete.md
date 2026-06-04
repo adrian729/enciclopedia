@@ -40,7 +40,7 @@ See [Full-Text Search](fundamentals/full-text-search.md) for the contrast betwee
 
 ### 4.1. Cap Prefix Length
 
-Cap at ~50 characters. Beyond that, the search degrades into a much smaller subtree where the lookup is cheap anyway. This makes worst-case lookup time O(1) — the depth is bounded.
+Cap at \~50 characters. Beyond that, the search degrades into a much smaller subtree where the lookup is cheap anyway. This makes worst-case lookup time O(1) — the depth is bounded.
 
 ### 4.2. Cache Top-K at Every Node
 

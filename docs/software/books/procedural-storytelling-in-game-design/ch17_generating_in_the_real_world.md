@@ -15,7 +15,7 @@
 ## 2. Three Immersive Case Studies
 
 - **Sleep No More (Punchdrunk)** — immersive Macbeth-meets-*Rebecca* hyperdrama in the McKittrick Hotel, a six-story Manhattan warehouse. Actors follow precise pre-planned paths; the player's freedom to wander produces a huge narrative possibility space. The post-show debrief with friends is part of the work. Brute-force emergence fails in infinitely reproducible video games (wikis, Let's Plays), but succeeds in a $90+ bounded 2–3 hour physical event.
-- **Then She Fell (Third Rail Productions)** — mostly-linear immersive theatre; only ~12 audience members per performance, each taken on an individually guided journey. Counter-intuitively, linearity enables intensely personal one-on-one actor scenes. Where *Sleep No More* optimises broad exploration, *Then She Fell* optimises vivid shareable moments.
+- **Then She Fell (Third Rail Productions)** — mostly-linear immersive theatre; only \~12 audience members per performance, each taken on an individually guided journey. Counter-intuitively, linearity enables intensely personal one-on-one actor scenes. Where *Sleep No More* optimises broad exploration, *Then She Fell* optimises vivid shareable moments.
 - **Janet Cardiff's audio walks** — half-hour binaural soundscapes recorded over real-world spaces (*Her Long Black Hair*, 2004, Central Park). Static recordings, yet feel tailored to the listener. Cardiff plays with three element types:
   1. **Things that won't change** — police sirens on 59th Street; always there, always specific, feel authored.
   2. **Things meaningful either way** — a polar bear enclosure that was there once but isn't now; if the bear is there, it feels knowing; if not, it becomes a meditation on transience.

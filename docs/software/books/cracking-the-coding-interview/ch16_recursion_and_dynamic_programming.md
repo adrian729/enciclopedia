@@ -31,7 +31,7 @@
 
 - **Rarely asked in interviews** — DP problems are too difficult for a 45-minute interview; even good candidates generally do poorly on them, so they're not a good evaluation technique.
 - **Treat DP as recursion plus caching** — approach a DP problem much the same way as a recursion problem; the only difference is that intermediate results are "cached" for future calls.
-- **Naive Fibonacci is O(2ⁿ)** — the recursive definition `fib(i) = fib(i-1) + fib(i-2)` makes two recursive calls per invocation, giving exponential runtime; on a standard desktop, seconds-to-compute grows steeply past ~n = 40.
+- **Naive Fibonacci is O(2ⁿ)** — the recursive definition `fib(i) = fib(i-1) + fib(i-2)` makes two recursive calls per invocation, giving exponential runtime; on a standard desktop, seconds-to-compute grows steeply past \~n = 40.
 - **Cached Fibonacci is O(N)** — store each `fib[i]` in an array and return the cached value when available:
 
 ```java

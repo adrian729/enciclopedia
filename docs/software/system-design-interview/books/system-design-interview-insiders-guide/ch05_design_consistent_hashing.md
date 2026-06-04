@@ -54,7 +54,7 @@
 - **Definition** — each real server is represented by multiple virtual nodes (also called replicas) on the ring; e.g., `s0_0, s0_1, s0_2` and `s1_0, s1_1, s1_2` instead of `s0` and `s1`
 - **Why it helps** — each server now owns multiple partitions scattered around the ring, balancing load
 - **Lookup** — same clockwise walk; the first virtual node encountered identifies the real server (e.g., reaching `s1_1` means the key belongs to server 1)
-- **Standard-deviation tradeoff** — more virtual nodes → smaller standard deviation → more balanced distribution. Online experiments show ~10% of mean with 100 virtual nodes and ~5% with 200; more virtual nodes cost more memory to track, so the count is a tunable tradeoff
+- **Standard-deviation tradeoff** — more virtual nodes → smaller standard deviation → more balanced distribution. Online experiments show \~10% of mean with 100 virtual nodes and \~5% with 200; more virtual nodes cost more memory to track, so the count is a tunable tradeoff
 
 ## 9. Finding Affected Keys
 

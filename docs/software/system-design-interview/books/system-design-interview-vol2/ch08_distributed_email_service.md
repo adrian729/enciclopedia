@@ -15,7 +15,7 @@
 
 - **Distributed email service** — Gmail/Outlook/Yahoo Mail-scale system supporting send/receive, fetch all emails, read/unread filtering, full-text search across subject/sender/body, anti-spam, and anti-virus. Authentication is out of scope.
 - **Client transport assumed** — HTTP between client and server (rather than legacy POP/IMAP/SMTP for the user-facing layer); attachments allowed.
-- **Scale** — 1B users, avg 10 sends + 40 receives/user/day → **100,000 send QPS**; metadata avg 50 KB/email → **730 PB/year metadata**; 20% of emails carry ~500 KB attachments → **1,460 PB/year of attachments**. Storage-heavy by nature, so a distributed DB is required.
+- **Scale** — 1B users, avg 10 sends + 40 receives/user/day → **100,000 send QPS**; metadata avg 50 KB/email → **730 PB/year metadata**; 20% of emails carry \~500 KB attachments → **1,460 PB/year of attachments**. Storage-heavy by nature, so a distributed DB is required.
 - **Non-functional requirements** — reliability (no data loss), availability (replicated, survives partial failure), scalability (no degradation with growth), flexibility/extensibility (custom protocols are likely needed because POP/IMAP are too limited for modern features).
 
 ## 2. Email Protocols and Traditional Servers
@@ -37,7 +37,7 @@
 - **Webmail + Web servers** — browser clients hit stateless web servers that handle login, profile, send-email API, folder loading, etc.
 - **Real-time servers** — stateful long-lived connections that push new emails to online clients. Prefer **WebSocket** with **long polling fallback** for browser-compat. Apache James implements **JMAP over WebSocket** as a real-world example.
 - **Metadata database** — stores subject, body, from/to, flags. Custom-built at Gmail/Outlook scale.
-- **Attachment store** — object storage (e.g., **Amazon S3**), required because emails carry up to ~25 MB blobs. **Cassandra is rejected**: theoretical 2 GB blob, practical limit <1 MB, and large blobs break the row cache.
+- **Attachment store** — object storage (e.g., **Amazon S3**), required because emails carry up to \~25 MB blobs. **Cassandra is rejected**: theoretical 2 GB blob, practical limit <1 MB, and large blobs break the row cache.
 - **Distributed cache (Redis)** — caches recently accessed emails since most reads target recent data; Redis lists fit the inbox model and scale easily.
 - **Search store** — distributed document store using an **inverted index** for full-text search.
 
@@ -50,7 +50,7 @@
 
 ## 5. Metadata Database Design
 
-- **Workload characteristics** — small frequently-read headers vs. larger seldom-read bodies (each email read ~once); operations are isolated per user; **82% of read queries hit data younger than 16 days**; data loss is unacceptable.
+- **Workload characteristics** — small frequently-read headers vs. larger seldom-read bodies (each email read \~once); operations are isolated per user; **82% of read queries hit data younger than 16 days**; data loss is unacceptable.
 - **DB option analysis** — **relational** is bad for the >100 KB HTML emails (BLOB search is inefficient); **object storage alone** (S3) can't support read flags / search / threading; **NoSQL** is the leading candidate. Bigtable is what Gmail uses (closed-source). Large providers ultimately build **custom KV stores** with these properties: support multi-MB columns, strong consistency, minimized disk I/O, HA + fault tolerance, easy incremental backups.
 - **Partitioning** — `user_id` as partition key keeps a user's data on one shard; trade-off: sharing messages across users isn't supported, but it's not a stated requirement.
 

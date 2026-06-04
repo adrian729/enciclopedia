@@ -52,8 +52,8 @@
 | **Method calls on critical path** | 3 (alloc -> allocateAppend -> Allocation::allocateAppend) | 1 (entire path in a single method) |
 | **Layer depth** | 3 shallow layers with nearly identical signatures (a red flag) | Shallow layers eliminated; deeper internal abstractions |
 | **Code size** | 1886 lines | 1476 lines (20% smaller) |
-| **Performance (1-byte append)** | 8.8 ns | 4.75 ns (~2x faster) |
-| **Performance (construct + append + destroy)** | 24 ns | 12 ns (~2x faster) |
+| **Performance (1-byte append)** | 8.8 ns | 4.75 ns (\~2x faster) |
+| **Performance (construct + append + destroy)** | 24 ns | 12 ns (\~2x faster) |
 
 - **Key technique: `extraAppendBytes`** — a new instance variable that tracks available space after the last chunk. Consolidates multiple checks (is last chunk internal? is there space? does the buffer have chunks at all?) into a single zero-vs-nonzero test
 

@@ -49,7 +49,7 @@
 
 ## 5. Trie Optimizations
 
-- **Limit prefix length** — users rarely type queries longer than ~50 chars, so prefix lookup becomes O(small constant) ≈ O(1)
+- **Limit prefix length** — users rarely type queries longer than \~50 chars, so prefix lookup becomes O(small constant) ≈ O(1)
 - **Cache top-k at every node** — store top 5 most-frequent queries directly on each prefix node (e.g., node `be` stores `[best:35, bet:29, bee:20, be:15, beer:10]`). Trades space for time
 - **Resulting complexity** — O(1) to find prefix node + O(1) to return cached top-k = O(1) overall
 

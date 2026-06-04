@@ -26,14 +26,14 @@ A macro-layered topology:
 
 | Property | Service-based shape |
 |---|---|
-| Number of services | Coarse-grained — typically no more than ~12 when sharing a database. |
+| Number of services | Coarse-grained — typically no more than \~12 when sharing a database. |
 | Service shape | Each represents a specific domain or subdomain (a *domain service*) and encompasses a meaningful slice of functionality (`OrderFulfillment`, `Shipping`). |
 | Independence | Domain services are independent of each other and separately deployed. |
 | Deployment | Containers (Docker, Kubernetes) optional but not required — services deploy like any monolithic application. |
 | Instances | Each service typically deploys as a single instance; multiple instances + load balancer added when scalability, fault tolerance, or throughput demand it. |
 | UI communication | Typically REST. Alternatives: messaging, RPC, an API layer with proxy/gateway, even SOAP. The UI usually embeds the **service locator** pattern (which can also live in an API Gateway). |
 
-The cap on number of services comes from sharing one monolithic database — beyond ~12, change-control, scalability, and fault-tolerance problems compound.
+The cap on number of services comes from sharing one monolithic database — beyond \~12, change-control, scalability, and fault-tolerance problems compound.
 
 ## 2. Domain Service Design
 
@@ -100,7 +100,7 @@ Versioning the library helps but determining impact still requires manual analys
 ## 6. Risks and Antipatterns
 
 - **Inter-service communication.** Typical in microservices but *avoided* in service-based. Heavy chatter between domain services usually signals badly partitioned domains or the wrong style.
-- **Too many domain services.** Practical upper limit is ~12; beyond that, testing, deployment, monitoring, and database connections/changes start to suffer.
+- **Too many domain services.** Practical upper limit is \~12; beyond that, testing, deployment, monitoring, and database connections/changes start to suffer.
 - **Single shared-library antipattern.** See [§ 4.1](#41-the-single-shared-library-antipattern).
 - **Cross-domain change.** The first thing to govern is whether changes span multiple domain services. If they do, domain boundaries are wrong, or service-based isn't the right style. Measure how often one domain service calls another. Some flows legitimately require it (`OrderProcessing` calling `CustomerNotification`), but most orchestration should live in the UI or API Gateway, not between services.
 

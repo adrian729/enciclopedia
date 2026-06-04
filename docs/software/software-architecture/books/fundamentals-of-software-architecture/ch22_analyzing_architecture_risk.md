@@ -85,7 +85,7 @@
 ## 6. Risk-Storming Use Case: Nursing Hotline
 
 - **System** — call-center support system where nurses advise patients on medical conditions. Three web UIs (self-service, nurse, admin), `Call Accepter` and `Call Router` services, central database, diagnostics-system API Gateway. Four main backend services: `Case Management`, `Nurse Profile Management`, `Medical Records Interface`, `Diagnostics Engine Interface`. REST throughout, except proprietary protocols to external systems and call-center services.
-- **Constraints** — third-party diagnostics engine handles ~500 req/s; 250 concurrent nurses, hundreds of thousands of self-service patients; HIPAA-compliant medical records (nurses only); spikes during cold/flu/COVID outbreaks. Critical characteristics: availability, elasticity, security.
+- **Constraints** — third-party diagnostics engine handles \~500 req/s; 250 concurrent nurses, hundreds of thousands of self-service patients; HIPAA-compliant medical records (nurses only); spikes during cold/flu/COVID outbreaks. Critical characteristics: availability, elasticity, security.
 
 ### 6.1. Availability
 

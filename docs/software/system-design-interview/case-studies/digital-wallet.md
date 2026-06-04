@@ -25,7 +25,7 @@ Backend that lets users store money in a per-user balance and transfer it direct
 
 **Why reproducibility over reconciliation alone** — comparing internal records to bank statements only flags discrepancies; it cannot explain *how* a difference was generated. Replay can.
 
-**Node-count math** — each transfer is two operations (debit + credit), so 1M TPS needs ~2M per-node TPS. At 1,000 TPS/node → 2,000 nodes; at 10,000 TPS/node → 200 nodes. Design goal: push per-node TPS up to lower hardware cost.
+**Node-count math** — each transfer is two operations (debit + credit), so 1M TPS needs \~2M per-node TPS. At 1,000 TPS/node → 2,000 nodes; at 10,000 TPS/node → 200 nodes. Design goal: push per-node TPS up to lower hardware cost.
 
 **Workload-specific ES motivation:** unlike [Payment System](case-studies/payment-system.md)'s use of event sourcing as a retry-resume log, the wallet uses **full ES + CQRS** to satisfy auditor questions like "balance at any time?", "historical correctness?", "logic correctness after a code change?" — replay is the answer.
 

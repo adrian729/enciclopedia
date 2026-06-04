@@ -19,7 +19,7 @@
 Gmail/Outlook/Yahoo Mail-scale system. Send/receive, fetch all emails, read/unread filtering, **full-text search** across subject/sender/body, anti-spam, anti-virus. Authentication is out of scope.
 
 - Client transport assumed: HTTP (rather than legacy POP/IMAP/SMTP for the user-facing layer); attachments allowed.
-- Scale: 1B users, avg 10 sends + 40 receives/user/day → **100K send QPS**. Metadata avg 50 KB/email → **730 PB/year**. 20% of emails carry ~500 KB attachments → **1,460 PB/year**.
+- Scale: 1B users, avg 10 sends + 40 receives/user/day → **100K send QPS**. Metadata avg 50 KB/email → **730 PB/year**. 20% of emails carry \~500 KB attachments → **1,460 PB/year**.
 - Storage-heavy by nature, so a distributed DB is required.
 
 ## 2. Email Protocols
@@ -40,7 +40,7 @@ Gmail/Outlook/Yahoo Mail-scale system. Send/receive, fetch all emails, read/unre
 - **Webmail + Web servers** — stateless servers that handle login, profile, send-email API, folder loading.
 - **Real-time servers** — stateful long-lived connections push new emails to online clients. Prefer **WebSocket** with **long polling fallback**. Apache James implements **JMAP over WebSocket** as a real-world example. See [Real-Time Communication](fundamentals/real-time-communication.md).
 - **Metadata database** — custom-built at Gmail/Outlook scale (see §5).
-- **Attachment store** — object storage (e.g., **Amazon S3**), required because emails carry up to ~25 MB blobs. **Cassandra is rejected** — theoretical 2 GB blob limit, practical limit <1 MB, large blobs break the row cache.
+- **Attachment store** — object storage (e.g., **Amazon S3**), required because emails carry up to \~25 MB blobs. **Cassandra is rejected** — theoretical 2 GB blob limit, practical limit <1 MB, large blobs break the row cache.
 - **Distributed cache (Redis)** — caches recently accessed emails since most reads target recent data; Redis lists fit the inbox model.
 - **Search store** — distributed document store using an inverted index. See [Full-Text Search](fundamentals/full-text-search.md).
 
@@ -63,7 +63,7 @@ GET /v1/messages/{message_id}
 
 ## 5. Metadata Database Design
 
-**Workload characteristics** — small frequently-read headers vs. larger seldom-read bodies (each email read ~once); operations are isolated per user; **82% of read queries hit data younger than 16 days**; data loss is unacceptable.
+**Workload characteristics** — small frequently-read headers vs. larger seldom-read bodies (each email read \~once); operations are isolated per user; **82% of read queries hit data younger than 16 days**; data loss is unacceptable.
 
 **DB option analysis:**
 

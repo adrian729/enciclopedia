@@ -19,7 +19,7 @@
 - **Functional requirements** — pay-in (collect money from customers on behalf of sellers) and pay-out (disburse money to sellers).
 - **Non-functional requirements** — reliability, fault tolerance for failed payments, asynchronous reconciliation between internal services and external providers.
 - **Scope simplifications** — credit-card payments only, single currency, third-party payment processors handle card data (no direct PCI DSS storage), e-commerce backend like Amazon.com.
-- **Scale** — 1M transactions/day → ~10 TPS; the design challenge is correctness, not throughput.
+- **Scale** — 1M transactions/day → \~10 TPS; the design challenge is correctness, not throughput.
 
 ## 2. Pay-in Flow
 

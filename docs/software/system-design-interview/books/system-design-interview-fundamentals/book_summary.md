@@ -1,6 +1,6 @@
 # System Design Interview Fundamentals: Summary
 
-> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+> **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
 
 ## Table of Contents
 
@@ -94,7 +94,7 @@ The second idea is the **magic formula**, a six-step loop run repeatedly: (1) id
 
 ## 3. Back-of-the-Envelope Math
 
-Numbers justify design choices; without them, proposals like caching and sharding are hand-wavy. A calculated 10⁸ QPS against a single machine's ~10⁶ capacity identifies a scaling problem. Dismissing the need to scale based on a calculated result reflects strong judgment. The most common failure mode is calculating too soon: QPS is per-API and storage is per-schema.
+Numbers justify design choices; without them, proposals like caching and sharding are hand-wavy. A calculated 10⁸ QPS against a single machine's \~10⁶ capacity identifies a scaling problem. Dismissing the need to scale based on a calculated result reflects strong judgment. The most common failure mode is calculating too soon: QPS is per-API and storage is per-schema.
 
 Liu's QPS formula is `daily active users × percentage making the query × average queries per user per day × scaling factor`, divided by roughly 100,000 (the 86,400 seconds in a day, rounded for mental math — dividing by 100k just subtracts 5 from the power of 10). The storage formula multiplies daily active users by percentage, queries, data size per query, replication factor (typically 3), and time horizon (usually 1–5 years). The scaling factor captures worst-case spikes — ridesharing on weekend nights runs 5–10× average — and the worst case is the number to design for.
 
@@ -114,7 +114,7 @@ Choosing a database is category reasoning, not name-dropping. "I'll use NoSQL be
 
 ### 4.2. Caching
 
-Caching is volatile storage that delivers three benefits: latency (memory is ~100× faster than disk), throughput, and bandwidth (data closer to the user — CDNs are a form of cache). Candidates who throw a cache in front of every database without tying the decision to a non-functional requirement get dinged. The latency gain depends on the target: 5 ms to 0.1 ms is pointless at a 500 ms SLO and meaningful at a 20 ms SLO.
+Caching is volatile storage that delivers three benefits: latency (memory is \~100× faster than disk), throughput, and bandwidth (data closer to the user — CDNs are a form of cache). Candidates who throw a cache in front of every database without tying the decision to a non-functional requirement get dinged. The latency gain depends on the target: 5 ms to 0.1 ms is pointless at a 500 ms SLO and meaningful at a 20 ms SLO.
 
 **Cache Hit Rate = Hits / (Hits + Misses)**. What is cached changes the rate dramatically: caching a full free-text search query yields a poor hit rate; caching per-token posting lists reuses tokens. Write strategies divide into write-through (synchronous to cache and store, atomicity not guaranteed), write-back (cache first, data loss risk), and write-around (store first, populate cache on read miss). Liu recommends *delete* over *update* on cache invalidation because two concurrent database updates don't guarantee cache ordering, and delete is idempotent.
 
@@ -192,7 +192,7 @@ Text-to-token preprocessing normalizes (lowercase, strip special chars), tokeniz
 
 ### 5.4. Data Transfer and Compression
 
-Liu distinguishes **encoding** (raw → JPEG), **transcoding** (format → format), **compression** (any size reduction), and **codec** (the algorithm). Lossless compression — Run-Length Encoding turning `AAAABBBBBBBBBBBBBBBAAA` into `4A15B3A` — preserves the original at a modest ratio (~2 for images). Lossy compression — chroma subsampling — gives higher ratios (~20 for JPEG) at the cost of unrecoverable detail. Compression costs compute, influencing whether to encode client-side or server-side. Backend must support multiple formats; **adaptive bit rate (ABR)** dynamically adjusts quality to available bandwidth. Passing only needed data is complementary: server-side field filtering returns only requested fields, and the **rsync** approach hashes 2,048-byte chunks with MD5 and transmits only mismatched chunks, using a **rolling hash** to recompute chunk hashes by moving one byte forward at head and tail.
+Liu distinguishes **encoding** (raw → JPEG), **transcoding** (format → format), **compression** (any size reduction), and **codec** (the algorithm). Lossless compression — Run-Length Encoding turning `AAAABBBBBBBBBBBBBBBAAA` into `4A15B3A` — preserves the original at a modest ratio (\~2 for images). Lossy compression — chroma subsampling — gives higher ratios (\~20 for JPEG) at the cost of unrecoverable detail. Compression costs compute, influencing whether to encode client-side or server-side. Backend must support multiple formats; **adaptive bit rate (ABR)** dynamically adjusts quality to available bandwidth. Passing only needed data is complementary: server-side field filtering returns only requested fields, and the **rsync** approach hashes 2,048-byte chunks with MD5 and transmits only mismatched chunks, using a **rolling hash** to recompute chunk hashes by moving one byte forward at head and tail.
 
 ### 5.5. Networking, Gateways, and CDNs
 
@@ -216,7 +216,7 @@ The interview is heavily about how ideas are presented. Poor pacing makes the in
 
 Driving the conversation is a leadership signal — the candidate does most of the talking and steers toward areas of strength — but yielding when redirected is equally important. Talking over the interviewer blocks the candidate from hearing what is really being evaluated. When asked "tell me more about the queue," the scoped-response pattern offers a menu ("Would you like me to discuss what kind of queue and why, or talk about scalability?"), justifies, and checks direction. Justifying designs is the majority of what is evaluated: "I will use a wide-column store" is weak; tying the choice to a 100k write QPS ratio and time-series disk locality is strong. Reciting how WebSocket works is an encyclopedia entry unless it is applied to a design choice.
 
-Scope discipline means narrowing requirements rather than sweeping shallowly. Candidates who over-studied — naming **EdgeRank** signals for Facebook affinity, weight, and decay — can complicate the interview unnecessarily. Better: "I know Facebook uses EdgeRank; for now we'll assume scores are computed and stored." A private messaging design shouldn't burn ten minutes on OAuth 2.0. Math is used with purpose — "QPS is 100k, so we'll need to scale app servers since each handles ~30k QPS" — and never done before API and schema. Canned real-world answers are rejected: applying Cassandra with Snowflake because "that's a well-known design" fails as soon as the interviewer changes an assumption the canned design didn't cover.
+Scope discipline means narrowing requirements rather than sweeping shallowly. Candidates who over-studied — naming **EdgeRank** signals for Facebook affinity, weight, and decay — can complicate the interview unnecessarily. Better: "I know Facebook uses EdgeRank; for now we'll assume scores are computed and stored." A private messaging design shouldn't burn ten minutes on OAuth 2.0. Math is used with purpose — "QPS is 100k, so we'll need to scale app servers since each handles \~30k QPS" — and never done before API and schema. Canned real-world answers are rejected: applying Cassandra with Snowflake because "that's a well-known design" fails as soon as the interviewer changes an assumption the canned design didn't cover.
 
 Handling disagreement is part of the formula. Disagreements usually stem from different assumptions; neutralizing by addressing the root — "we can A/B test location-update frequency and monitor customer feedback" — is more effective than arguing the surface claim. Keep a backbone: back each stance with strong justifications, but don't make the interviewer look bad. Every deep dive ends in a stance. "It really depends on the use cases" is not a conclusion — senior engineers must deal with ambiguity and commit.
 

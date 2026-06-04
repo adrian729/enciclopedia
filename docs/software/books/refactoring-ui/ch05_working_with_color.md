@@ -61,7 +61,7 @@
 
 ## 6. Accessibility without ugliness
 
-- **WCAG contrast minimums** — the Web Content Accessibility Guidelines recommend a contrast ratio of at least 4.5:1 for normal text (under ~18px) and 3:1 for larger text. Dark text on light backgrounds hits this easily; colored backgrounds make it harder.
+- **WCAG contrast minimums** — the Web Content Accessibility Guidelines recommend a contrast ratio of at least 4.5:1 for normal text (under \~18px) and 3:1 for larger text. Dark text on light backgrounds hits this easily; colored backgrounds make it harder.
 - **Flip the contrast instead of fighting for white-on-color** — white text on a colored background often needs a very dark color to reach 4.5:1, which over-emphasizes elements that shouldn't be focal. Swap to dark colored text on a light colored background of the same hue — the color still supports the text but the element stops screaming for attention.
 - **Rotate the hue to make colored-on-colored text accessible** — when placing secondary text inside a dark colored panel, simply tweaking lightness and saturation of the background color often can't reach the contrast ratio without going nearly white. Since some hues are inherently brighter, rotating the hue toward cyan, magenta, or yellow increases contrast while keeping the text colorful.
 - **Don't rely on color alone** — users with color blindness can't read information encoded only in hue. On red-green metric cards, for example, add icons to indicate positive or negative change.

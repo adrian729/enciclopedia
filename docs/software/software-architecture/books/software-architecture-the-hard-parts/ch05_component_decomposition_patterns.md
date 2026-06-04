@@ -40,7 +40,7 @@
 ### 2.2. Fitness functions
 
 - **Maintain component inventory** — walks the directory tree, diffs the namespace list against a stored prior list, and alerts on added or removed components.
-- **No component shall exceed `<percent>` of the codebase** — alerts when a component's statement share crosses a threshold (e.g., 30% for ~10 components, 10% for ~50 components).
+- **No component shall exceed `<percent>` of the codebase** — alerts when a component's statement share crosses a threshold (e.g., 30% for \~10 components, 10% for \~50 components).
 - **No component shall exceed `<n> standard deviations` from the mean component size** — pseudocode example uses 3 standard deviations.
 
 ### 2.3. Sysops Squad outcome

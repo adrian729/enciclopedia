@@ -359,7 +359,7 @@ MCP Server is a way to extend the functionality of Large Language Models by conn
 
 **Limitations**
 
-- `Tool limit`: there is a maximum of how many tools you can have installed (context window limitation). Currently ~40.
+- `Tool limit`: there is a maximum of how many tools you can have installed (context window limitation). Currently \~40.
 - `Context Window Overhead`: each alive MCP connection and its tool description consume tokens in the LLM context window.
 - `Cost`: MCP servers might incur additional costs depending on models and usage.
 

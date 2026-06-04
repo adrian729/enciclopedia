@@ -12,7 +12,7 @@
 ## 1. The Problem
 
 - **Computers are sequential beasts** — they perform one tiny step after another, but users need to see operations appear instantaneous or simultaneous. Rendering is the canonical case: every game engine must address it
-- **Framebuffer** — an array of pixels in memory; the video driver streams it to the screen ~60 times a second, pixel by pixel, row by row
+- **Framebuffer** — an array of pixels in memory; the video driver streams it to the screen \~60 times a second, pixel by pixel, row by row
 - **Tearing** — if game code writes to the framebuffer *while* the video driver reads it, the driver can race past the renderer. The user sees half of something drawn on screen — the bottom half looks "torn off"
 - **Two causes of mid-modification access**:
   1. State accessed from another thread or interrupt (e.g., video driver reading framebuffer)

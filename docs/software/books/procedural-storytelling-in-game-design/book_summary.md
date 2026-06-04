@@ -1,6 +1,6 @@
 # Procedural Storytelling in Game Design: Summary
 
-> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+> **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
 
 ## Table of Contents
 
@@ -62,7 +62,7 @@ Jimmy Maher's retrospective on *Murder on the Zinderneuf* (1983) — Jon Freeman
 
 ### 3.1. Keeping Stories Moving
 
-Jon Ingold's chapter on **narrative momentum** argues that the dreaded slump happens when players have nothing to do and the designer has given them nothing to think about. Action games solve this with *only-forwards* corridors dressed up as open worlds. Inkle's **ink** scripting language builds only-forwards directly into its syntax: the **weave** structure flows top-to-bottom, paragraph labels can only be set once and never unset, options default to once-only. *80 Days* shows ~3 % of its 750,000 words per playthrough and prevents backtracking through its time-limited premise.
+Jon Ingold's chapter on **narrative momentum** argues that the dreaded slump happens when players have nothing to do and the designer has given them nothing to think about. Action games solve this with *only-forwards* corridors dressed up as open worlds. Inkle's **ink** scripting language builds only-forwards directly into its syntax: the **weave** structure flows top-to-bottom, paragraph labels can only be set once and never unset, options default to once-only. *80 Days* shows \~3 % of its 750,000 words per playthrough and prevents backtracking through its time-limited premise.
 
 For *Heaven's Vault*, Ingold added a **knowledge model**: an acyclic directed graph of facts where learning a state also learns every preceding state, and no beat unlearns. Scripts gate their lines with `between(...)` intervals — *"does the player know enough for this to make sense, but not so much as to make it redundant?"*. Two rules follow: no scene may fire outside an acceptable interval, and every scene must move *something* forward. Dialogue becomes the inexhaustible resource: a dedicated conversation button pulls lines from the script based on the current knowledge model, turning the Roomba-style "hoover up hotspots" loop into a detective loop of interact, walk, discuss, deduce.
 

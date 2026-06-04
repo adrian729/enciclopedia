@@ -61,7 +61,7 @@ Emits monotonic 64-bit integers via consensus (e.g., ZooKeeper's `zxid`). Used f
 | Bits | Field |
 |---|---|
 | 1 | Sign bit (always 0) |
-| 41 | Timestamp in milliseconds since a custom epoch (~69 years of runway) |
+| 41 | Timestamp in milliseconds since a custom epoch (\~69 years of runway) |
 | 10 | Machine ID (5 bits datacenter + 5 bits machine = 1024 machines max, often assigned by ZooKeeper) |
 | 12 | Sequence number (4096 IDs per millisecond per machine) |
 
@@ -79,9 +79,9 @@ Why each field is the size it is:
 
 - **41 bits of millisecond timestamp** = 2⁴¹ ms ≈ 69 years. Pick an epoch in the recent past so the high bits aren't wasted on years that already happened.
 - **10 bits of machine ID** = 1024 distinct generators. With one or two generators per service in a fleet, this is plenty.
-- **12 bits of sequence** = 4096 unique IDs per millisecond per machine. Total throughput per machine = ~4M IDs/second.
+- **12 bits of sequence** = 4096 unique IDs per millisecond per machine. Total throughput per machine = \~4M IDs/second.
 
-Cluster throughput = 1024 × 4M = ~4 billion IDs/second, which is more than any current real-world system needs. The design has decade-plus headroom.
+Cluster throughput = 1024 × 4M = \~4 billion IDs/second, which is more than any current real-world system needs. The design has decade-plus headroom.
 
 ## 4. Decision Guide
 

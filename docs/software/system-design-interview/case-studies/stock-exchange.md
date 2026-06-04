@@ -23,7 +23,7 @@ Electronic stock exchange that matches buyers and sellers; this design supports 
 - Functional: place new limit order, cancel order, view real-time order book, receive matched trades; risk checks (e.g., max 1M shares of AAPL/user/day); wallet integration to withhold funds for resting orders.
 - Non-functional: **99.99% availability** (downtime in seconds harms reputation), **millisecond round-trip with focus on 99th-percentile latency**, KYC + DDoS protection.
 - Scale: 100 symbols, ≈tens of thousands of concurrent users, ≈1B orders/day. With NYSE's 6.5h trading window: **≈43,000 QPS average, ≈215,000 peak** (5× for open/close bursts).
-- Reference: NYSE trades billions of matches/day; HKEX ~200B shares/day.
+- Reference: NYSE trades billions of matches/day; HKEX \~200B shares/day.
 
 **Workload-specific ES motivation:** orders pass through many state transitions; the immutable event log is the golden source of truth, and replay reconstructs any historical state — essential for crash recovery in a system that cannot afford to drop trades.
 
@@ -83,7 +83,7 @@ PriceLevel
 
 | Design | Latency |
 |---|---|
-| Naive multi-server | ~500μs per network hop + tens of ms for sequencer disk persistence → tens of ms total |
+| Naive multi-server | \~500μs per network hop + tens of ms for sequencer disk persistence → tens of ms total |
 | **Single-server with mmap** | **Tens of microseconds** end-to-end |
 
 **Single-server design** — gateway, order manager, sequencer, matching engine on one machine; communicate via `mmap(2)` over a file in `/dev/shm` (memory-backed filesystem). No disk access at all; sub-microsecond message sends.

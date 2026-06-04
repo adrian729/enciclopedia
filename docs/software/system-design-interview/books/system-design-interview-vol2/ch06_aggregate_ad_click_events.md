@@ -18,7 +18,7 @@
 - **Three required queries** — count clicks of an `ad_id` in the last `M` minutes; top 100 most clicked ads in the past 1 minute (configurable); both filterable by `ip`, `user_id`, or `country`.
 - **Edge cases called out** — late events, duplicate events, partial system failures.
 - **Latency target** — end-to-end of a few minutes (unlike RTB itself, which is sub-second). Workload is **billing-grade**, so correctness beats latency.
-- **Scale** — 1B DAU, 1 click/user/day → ~10,000 QPS average, 50,000 QPS peak; 0.1 KB per event → 100 GB/day, ~3 TB/month; 2M total ads; volume grows 30% YoY (doubling every 3 years).
+- **Scale** — 1B DAU, 1 click/user/day → \~10,000 QPS average, 50,000 QPS peak; 0.1 KB per event → 100 GB/day, \~3 TB/month; 2M total ads; volume grows 30% YoY (doubling every 3 years).
 
 ## 2. Data Model and APIs
 

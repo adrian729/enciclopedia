@@ -28,7 +28,7 @@
 
 - **Space available != space to use** — modern 1200–1400px canvases tempt you to fill them, but if an interface only needs 600px, use 600px. Spreading things out makes an interface harder to interpret; extra space around the edges never hurts.
 - **Sections don't need to match the nav** — just because your navigation is full-width doesn't mean every section under it must be. Give each element the space it needs.
-- **Shrink the canvas** — if a small interface is hard to design on a large canvas, design it on a ~400px canvas first. For responsive apps, start mobile-first and then adjust compromises when you move to larger screens — you won't need to change as much as you think.
+- **Shrink the canvas** — if a small interface is hard to design on a large canvas, design it on a \~400px canvas first. For responsive apps, start mobile-first and then adjust compromises when you move to larger screens — you won't need to change as much as you think.
 - **Thinking in columns** — when something works best at a narrow width but feels unbalanced in a wide UI, split it into columns rather than stretching it. For example, break a form's supporting text into a second column so the form itself stays at its optimal width.
 - **Don't force it either way** — just as you shouldn't stretch to fill the screen, you shouldn't cram into a small area. If you need the space, use it.
 

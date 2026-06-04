@@ -17,7 +17,7 @@
 
 - **EDD is only an estimate** — one doctor calls it "The Guess Date." A more realistic framing is a birth month or segment of the month (e.g., "toward the end of September") rather than a single date
 - **How EDD is calculated and why it is imprecise** — count back three months from the first day of the last menstrual period, then add 7 days. Recent studies suggest adding 15 days for first-time mothers and 10 days for mothers who have birthed before. Factors that skew the estimate: calendar months differ in length, menstrual cycles vary in duration and frequency, gestation length varies between pregnancies, and foetal development timelines differ just as children's do
-- **Only ~5% of babies arrive on the EDD** — the normal gestation range is 265–300 days from the first day of the last period (average 282 days, i.e., ~40 weeks). A mother is not technically "post date" until 42 weeks. First-time mothers may reasonably go beyond 42 weeks
+- **Only \~5% of babies arrive on the EDD** — the normal gestation range is 265–300 days from the first day of the last period (average 282 days, i.e., \~40 weeks). A mother is not technically "post date" until 42 weeks. First-time mothers may reasonably go beyond 42 weeks
 - **Multiple due dates are a red flag for imprecision** — many women today are given as many as three different due dates during pregnancy, which itself demonstrates how unreliable the calculation is
 
 ## 3. Resisting Pressure to Induce

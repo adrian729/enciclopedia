@@ -15,7 +15,7 @@
 
 ## 1. AR, MA, and ARMA Models
 
-- **Autoregressive AR(p)** — xt = φ1 xt−1 + … + φp xt−p + wt with wt ~ wn(0, σw²); current value is a linear function of p past values plus white-noise innovation. In operator form, φ(B) xt = wt with φ(B) = 1 − φ1 B − … − φp Bp.
+- **Autoregressive AR(p)** — xt = φ1 xt−1 + … + φp xt−p + wt with wt \~ wn(0, σw²); current value is a linear function of p past values plus white-noise innovation. In operator form, φ(B) xt = wt with φ(B) = 1 − φ1 B − … − φp Bp.
 - **Moving average MA(q)** — xt = wt + θ1 wt−1 + … + θq wt−q; current value is a linear combination of the last q innovations. In operator form, xt = θ(B) wt with θ(B) = 1 + θ1 B + … + θq Bq. Stationary for *any* parameter values, unlike AR.
 - **ARMA(p, q)** — combines both: φ(B) xt = θ(B) wt. The compact form makes it possible to read off properties of the process from the polynomials φ(z) and θ(z) treated as polynomials in a complex z (the backshift operator B is treated like a complex number).
 - **AR(1) prototypes** — φ = .9 produces a smooth sample path; φ = −.9 produces a choppy alternating path. ACF of AR(1) is ρ(h) = φh.
@@ -48,7 +48,7 @@
 | ACF | tails off | cuts off after lag q | tails off |
 | PACF | cuts off after lag p | tails off | tails off |
 
-- **Recruitment series identification** — sample ACF cycles at ~12-month period; sample PACF has large values at h = 1, 2 then drops to zero. Suggests AR(2); OLS regression gives x̂t = 6.74 + 1.35 xt−1 − .46 xt−2 with σ̂w² = 89.72.
+- **Recruitment series identification** — sample ACF cycles at \~12-month period; sample PACF has large values at h = 1, 2 then drops to zero. Suggests AR(2); OLS regression gives x̂t = 6.74 + 1.35 xt−1 − .46 xt−2 with σ̂w² = 89.72.
 
 ## 5. Forecasting
 
@@ -65,7 +65,7 @@
 ## 6. Estimation
 
 - **Yule-Walker for AR(p)** — equations γ(h) = φ1 γ(h−1) + … + φp γ(h−p) for h = 1, …, p plus σw² = γ(0) − φ′γp; replace γ by sample estimates to get φ̂ = R̂p−1 ρ̂p, σ̂w² = γ̂(0)(1 − ρ̂p′ R̂p−1 ρ̂p). For AR(p), Yule-Walker estimators are asymptotically optimal: √n (φ̂ − φ) → N(0, σw² Γp−1).
-- **Method of moments fails for MA/ARMA** — for MA(1), solving ρ̂(1) = θ̂/(1 + θ̂²) gives an estimator with asymptotic variance ~3.5× that of the MLE at θ = .5; nonlinear in parameters means moment matching is suboptimal.
+- **Method of moments fails for MA/ARMA** — for MA(1), solving ρ̂(1) = θ̂/(1 + θ̂²) gives an estimator with asymptotic variance \~3.5× that of the MLE at θ = .5; nonlinear in parameters means moment matching is suboptimal.
 - **Conditional vs. unconditional likelihood** — for an AR(1), the unconditional sum of squares S(μ, φ) = (1−φ²)(x1−μ)² + Σ[(xt−μ) − φ(xt−1−μ)]²; conditioning on x1 drops the leading term and makes the problem linear in (α, φ) where α = μ(1−φ). Conditional LS, unconditional LS, Yule-Walker, and MLE all coincide asymptotically.
 - **Innovations form of the likelihood** — for ARMA, write L in terms of one-step prediction errors xt − xt^t−1 and their variances Pt^t−1 = σw² rt; concentrated likelihood l(β) = log(n−1 S(β)) + n−1 Σ log rt(β) is minimized numerically.
 - **Newton-Raphson and scoring** — standard numerical optimizers; Newton-Raphson uses the observed Hessian, scoring uses the information matrix (its expectation). Inverse of the information matrix gives asymptotic variance.
@@ -87,7 +87,7 @@
 - **Differencing decision** — slow decay of sample ACF signals a unit root (need to difference). Avoid overdifferencing: ∇wt = wt − wt−1 is MA(1), so differencing white noise *creates* spurious dependence.
 - **GNP example (Example 3.39)** — quarterly U.S. GNP 1947-2002. Strong trend in raw series; growth rate xt = ∇log(yt) is stable. ACF of the growth rate could be read as cutting off at lag 2 (MA(2) for growth, ARIMA(0,1,2) for log GNP) or as tailing off with PACF cutting off at lag 1 (AR(1) for growth, ARIMA(1,1,0) for log GNP). Both fits are nearly equivalent: the AR(1) implies xt ≈ .35 wt−1 + .12 wt−2 + wt, matching the MA(2) coefficients .303 and .204.
 - **Diagnostics on standardized residuals** — should look like iid mean-zero unit-variance: time plot inspection, ACF check against ±2/√n bounds, Q-Q plot for normality.
-- **Ljung-Box-Pierce Q-statistic** — Q = n(n+2) Σh=1..H ρ̂e²(h)/(n−h); under model adequacy Q ~ χ²H−p−q. Tests collective magnitude of residual autocorrelations rather than individual lags. Typically H = 20.
+- **Ljung-Box-Pierce Q-statistic** — Q = n(n+2) Σh=1..H ρ̂e²(h)/(n−h); under model adequacy Q \~ χ²H−p−q. Tests collective magnitude of residual autocorrelations rather than individual lags. Typically H = 20.
 - **Glacial varves revisited** — initial ARIMA(0,1,1) fit leaves significant Q-statistics; adding an AR(1) term to give ARIMA(1,1,1) with φ̂ = .23, θ̂ = −.89 yields clean diagnostics.
 - **Overfitting illustrated** — U.S. census 1910-1990 (9 points) fit with an 8th-degree polynomial: perfect fit but predicts U.S. population near zero in year 2000.
 - **Model choice via AIC, AICc, BIC** — for the GNP growth rate, AIC and AICc slightly prefer MA(2), BIC prefers the simpler AR(1); BIC tends to choose smaller-order models. Either is defensible; pure AR is often retained for ease of use.

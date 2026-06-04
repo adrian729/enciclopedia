@@ -21,7 +21,7 @@
 ### 1.2. "I Don't Have Time"
 
 - **Investment mindset** — there will always be something that seems higher priority than writing comments. If you allow documentation to be de-prioritized, you'll end up with none
-- **Low actual cost** — typing code (excluding design, compiling, testing) is roughly 10% of development time. Even if commenting doubles that typing time, it adds only ~10% to overall effort, which is quickly repaid by easier maintenance
+- **Low actual cost** — typing code (excluding design, compiling, testing) is roughly 10% of development time. Even if commenting doubles that typing time, it adds only \~10% to overall effort, which is quickly repaid by easier maintenance
 - **Abstraction comments pay for themselves immediately** — top-level class and method comments should be written as part of the design process, where they also serve as a design tool (covered in Ch 15)
 
 ### 1.3. "Comments Get Out of Date"

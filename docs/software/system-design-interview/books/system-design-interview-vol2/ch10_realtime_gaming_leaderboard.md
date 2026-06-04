@@ -68,7 +68,7 @@
 ## 4. Storage Sizing
 
 - **Per-entry footprint** — 24-char user_id + 16-bit score ≈ 26 bytes per leaderboard entry.
-- **Worst case** — all 25M MAU have at least one win → 26 B × 25M ≈ 650 MB; double to ~1.3 GB to account for skip list + hash overhead, easily fits one Redis instance.
+- **Worst case** — all 25M MAU have at least one win → 26 B × 25M ≈ 650 MB; double to \~1.3 GB to account for skip list + hash overhead, easily fits one Redis instance.
 - **CPU/IO** — peak 2,500 updates/sec is well within a single Redis node's envelope.
 - **Persistence** — Redis persistence works but cold-start from disk is slow; standard practice is a read replica that gets promoted on primary failure with a fresh replica attached.
 - **Supporting MySQL tables** — `user(user_id, display_name)` and `point(user_id, score, timestamp)`; the point table doubles as the source of truth for rebuilding Redis after a cache failure.
@@ -83,7 +83,7 @@
 
 ## 6. Scaling Redis: Sharding
 
-- **When sharding is needed** — at 500M DAU (100× original) the leaderboard reaches ~65 GB and ~250K QPS, beyond a single node.
+- **When sharding is needed** — at 500M DAU (100× original) the leaderboard reaches \~65 GB and \~250K QPS, beyond a single node.
 
 ### Fixed partition
 
@@ -99,7 +99,7 @@
 - **Limitations** — large-K results are slow (lots of cross-shard data), tail latency dominated by slowest partition, no straightforward way to compute a single user's global rank.
 - **Verdict** — book leans toward fixed partition for leaderboards because rank queries don't naturally fan out.
 
-- **Sizing rule** — write-heavy Redis nodes need ~2× the working-set memory to accommodate snapshot creation under failure; benchmark with `redis-benchmark`.
+- **Sizing rule** — write-heavy Redis nodes need \~2× the working-set memory to accommodate snapshot creation under failure; benchmark with `redis-benchmark`.
 
 ## 7. NoSQL Alternative
 

@@ -12,7 +12,7 @@
 ## 1. The Problem
 
 - **CPUs got faster than RAM** — fetching a byte from main memory can take hundreds of cycles. If most instructions need data, the CPU spends a huge fraction of time stalled waiting on memory
-- **Caches bridge the gap** — a small chunk of fast memory on the chip (L1, L2, L3). When data is fetched from RAM, the CPU automatically grabs a whole contiguous chunk (~64–128 bytes) called a **cache line**. Finding data already in cache is a **cache hit**; missing is a **cache miss**, which stalls the CPU
+- **Caches bridge the gap** — a small chunk of fast memory on the chip (L1, L2, L3). When data is fetched from RAM, the CPU automatically grabs a whole contiguous chunk (\~64–128 bytes) called a **cache line**. Finding data already in cache is a **cache hit**; missing is a **cache miss**, which stalls the CPU
 - **Data layout is performance** — two programs doing the exact same computation can differ 50x in speed based on cache miss patterns alone. Performance is not just an aspect of code; it's an aspect of data
 - **Goal** — organize data structures so the things you process next are next to each other in memory, maximizing reuse of each cache line pulled in
 

@@ -28,7 +28,7 @@
 
 ### 2.2. Abstractness and Instability
 
-- **Abstractness (A)** — Robert Martin's metric: ratio of abstract artifacts (interfaces, abstract classes) to concrete ones. `A = Σma / (Σmc + Σma)`. A 10,000-line `main()` scores ~0 and is hard to understand.
+- **Abstractness (A)** — Robert Martin's metric: ratio of abstract artifacts (interfaces, abstract classes) to concrete ones. `A = Σma / (Σmc + Σma)`. A 10,000-line `main()` scores \~0 and is hard to understand.
 - **Instability (I)** — `I = Ce / (Ce + Ca)`. Measures volatility: a value near 1 means highly unstable (changes in others ripple in); near 0 means either stable (if abstract) or rigid (if concrete). Trade-off: high stability without abstraction implies duplication.
 - **Read I and A together** — neither metric alone is meaningful; the next metric combines them.
 

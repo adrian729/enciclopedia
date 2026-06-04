@@ -26,7 +26,7 @@ Multiple edges share one IP; each internet router forwards the packet toward the
 
 ## 4. The Private Backbone
 
-The network between a CDN edge and the origin data center is typically the company's own private backbone, far more efficient than the public internet. Cross-region transfer over the public internet should be assumed slow (~150 ms transcontinental) compared to the same hop over a private fiber backbone.
+The network between a CDN edge and the origin data center is typically the company's own private backbone, far more efficient than the public internet. Cross-region transfer over the public internet should be assumed slow (\~150 ms transcontinental) compared to the same hop over a private fiber backbone.
 
 ## 5. The OSI Model in Practice
 

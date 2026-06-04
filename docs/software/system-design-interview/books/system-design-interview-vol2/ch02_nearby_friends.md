@@ -17,7 +17,7 @@
 - **Functional requirements** — list nearby friends with distance + last-updated timestamp; refresh every few seconds.
 - **Non-functional requirements** — low latency, reliability with occasional drops acceptable, eventual consistency (a few seconds of replica lag is fine).
 - **Scale assumptions** — 1B total users, 100M DAU on this feature, 10% concurrent (10M), avg 400 friends/user, **30-second location refresh** (chosen because 3–4 mph walking speed makes finer updates pointless).
-- **Derived QPS** — location update QPS = 10M / 30 ≈ **334K updates/sec**; with ~10% of friends online and nearby, the backend must forward ~13M location messages/sec downstream.
+- **Derived QPS** — location update QPS = 10M / 30 ≈ **334K updates/sec**; with \~10% of friends online and nearby, the backend must forward \~13M location messages/sec downstream.
 
 ## 2. High-Level Design
 
@@ -40,7 +40,7 @@
 
 ## 4. Scaling the Pub/Sub Layer
 
-- **Bottleneck is CPU, not memory** — back-of-envelope: 100M users × 100 active friends × 20 bytes ≈ 200 GB → ~2 servers worth of memory; but pushing 13M messages/sec at a conservative 100K pushes/server-sec needs ~130 Redis servers. The fan-out load dwarfs the storage need.
+- **Bottleneck is CPU, not memory** — back-of-envelope: 100M users × 100 active friends × 20 bytes ≈ 200 GB → \~2 servers worth of memory; but pushing 13M messages/sec at a conservative 100K pushes/server-sec needs \~130 Redis servers. The fan-out load dwarfs the storage need.
 - **Distributed pub/sub via consistent hashing** — channels are sharded across the pub/sub server cluster using a **hash ring** keyed on the publishing user's ID; the ring is stored in a **service discovery component** (etcd or ZooKeeper).
 - **Service discovery requirements** — keep the active server list under a key like `/config/pub_sub_ring`, and let WebSocket servers subscribe to changes so their cached copy of the ring stays current.
 - **Treat pub/sub as a stateful cluster** — even though messages aren't persisted, the **subscriber list per channel is state**; moving a channel forces every subscriber to unsubscribe from the old server and resubscribe on the new one.
@@ -58,4 +58,4 @@
 ## 6. Extensions and Alternatives
 
 - **Nearby random person (extension)** — instead of per-user channels, allocate **one pub/sub channel per geohash grid**; each client subscribes to its current geohash plus the eight neighboring grids (to handle border cases), and location updates are published to the user's grid channel. Reuses the geohash machinery from Chapter 1.
-- **Erlang as an alternative to Redis Pub/Sub** — the authors argue Erlang/Elixir on the BEAM VM with OTP is technically a better fit: each Erlang process is ~300 bytes (millions per server) and idle processes consume zero CPU, so each user can be modeled as a process that subscribes to friends' processes natively. The drawback is purely organizational — Erlang expertise is hard to hire, so Redis Pub/Sub is the default recommendation unless a team already has Erlang skills.
+- **Erlang as an alternative to Redis Pub/Sub** — the authors argue Erlang/Elixir on the BEAM VM with OTP is technically a better fit: each Erlang process is \~300 bytes (millions per server) and idle processes consume zero CPU, so each user can be modeled as a process that subscribes to friends' processes natively. The drawback is purely organizational — Erlang expertise is hard to hire, so Redis Pub/Sub is the default recommendation unless a team already has Erlang skills.

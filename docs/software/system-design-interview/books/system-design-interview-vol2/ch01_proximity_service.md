@@ -16,7 +16,7 @@
 - **Proximity service** — backend that finds nearby places (restaurants, gas stations) within a user-supplied radius and location, powering features like Yelp's nearby search.
 - **Functional requirements** — return businesses by (lat, long, radius); allow owners to add/update/delete businesses (effective next day, not real-time); allow customers to view business details.
 - **Non-functional requirements** — low latency, high availability/scalability, and data privacy (GDPR, CCPA) since location is sensitive.
-- **Scale assumptions** — 100M DAU, 200M businesses, 5 searches/user/day → ~5,000 search QPS (using `10^5` seconds/day shorthand throughout the book).
+- **Scale assumptions** — 100M DAU, 200M businesses, 5 searches/user/day → \~5,000 search QPS (using `10^5` seconds/day shorthand throughout the book).
 - **Allowed radii** — fixed UI options of 0.5km, 1km, 2km, 5km, and 20km (max).
 
 ## 2. High-Level Design
@@ -43,8 +43,8 @@
 
 ### 3.2. Quadtree Details
 
-- **Quadtree** — in-memory tree (not a database) built on each LBS server at startup that recursively subdivides the world into four quadrants until each leaf holds at most ~100 businesses (threshold is arbitrary).
-- **Memory footprint** — leaf node = 832 bytes (32-byte bounding box + 100 × 8-byte business IDs); internal node = 64 bytes; with 200M businesses → ~2M leaves and ~0.67M internals → ~1.71 GB total, fits on one server.
+- **Quadtree** — in-memory tree (not a database) built on each LBS server at startup that recursively subdivides the world into four quadrants until each leaf holds at most \~100 businesses (threshold is arbitrary).
+- **Memory footprint** — leaf node = 832 bytes (32-byte bounding box + 100 × 8-byte business IDs); internal node = 64 bytes; with 200M businesses → \~2M leaves and \~0.67M internals → \~1.71 GB total, fits on one server.
 - **Build time** — `(n/100) log(n/100)`, on the order of minutes for 200M businesses; the server cannot serve traffic while building.
 - **Operational implications** — long warm-up forces incremental rollouts (rolling deploys or blue/green) so the cluster doesn't go offline; nightly rebuilds work given the next-day update policy but invalidate many cache keys at once.
 - **Search algorithm** — traverse from root to the leaf containing the user's location; if that leaf has fewer than the desired number of results, pull from neighboring leaves.
@@ -65,11 +65,11 @@
 ## 4. Scaling and Caching
 
 - **Business table sharding** — shard by `business_id` for even load; simple to operate.
-- **Geo index table sharding — usually unnecessary** — the whole index (~1.71 GB) fits in one server's working set; prefer **read replicas** for read scaling. Don't reflexively shard.
+- **Geo index table sharding — usually unnecessary** — the whole index (\~1.71 GB) fits in one server's working set; prefer **read replicas** for read scaling. Don't reflexively shard.
 - **Geo index row layout — prefer one row per business** — a compound key `(geohash, business_id)` makes inserts/deletes simple and avoids row-level locking; the alternative (a JSON array of business IDs per geohash row) requires array scans, locks, and duplicate checks.
 - **Cache key choice** — raw lat/long is a poor key (GPS jitter, tiny user movement), but **geohash naturally clusters nearby points to the same key**.
-- **Two cache types in Redis** — `geohash → list of business IDs` (precomputed at lengths 4, 5, 6 = ~5 GB total for 200M businesses × 3 precisions × 8 bytes) and `business_id → business object` for detail rendering.
-- **Cache deployment** — replicate the same ~5 GB Redis dataset globally for low cross-continent latency; nightly job updates caches in line with the next-day business-update SLA.
+- **Two cache types in Redis** — `geohash → list of business IDs` (precomputed at lengths 4, 5, 6 = \~5 GB total for 200M businesses × 3 precisions × 8 bytes) and `business_id → business object` for detail rendering.
+- **Cache deployment** — replicate the same \~5 GB Redis dataset globally for low cross-continent latency; nightly job updates caches in line with the next-day business-update SLA.
 - **Multi-region / availability zones** — serve users from the geographically nearest data center, balance load across populous regions (e.g., separate regions for Japan/Korea), and use DNS routing to keep traffic in-country where privacy laws require local data residency.
 - **Filtering by time or business type** — filter post-fetch in the application layer; grid sizes are small enough that the candidate set is manageable.
 

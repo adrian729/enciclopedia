@@ -94,7 +94,7 @@ Real world: Prometheus pulls; CloudWatch and Graphite push. Large orgs often sup
 
 ## 8. Storage Optimization
 
-- **Delta-of-delta encoding** — store value deltas with one base instead of full values. Timestamps `1610087371, 1610087381, …` become `1610087371, 10, 10, 9, 11`, dropping per-point timestamp from 32 bits to ~4 bits.
+- **Delta-of-delta encoding** — store value deltas with one base instead of full values. Timestamps `1610087371, 1610087381, …` become `1610087371, 10, 10, 9, 11`, dropping per-point timestamp from 32 bits to \~4 bits.
 - **Compression** — built into good TSDBs; combines with delta encoding for major savings.
 - **Downsampling** — convert high-resolution to low-resolution as data ages. Tier: raw 7 days, 1-min 30 days, 1-hour 1 year. Six 10-second `cpu` samples (10, 16, 20, 30, 20, 30) roll up to two 30-second averages (19, 25).
 - **Cold storage** — inactive data moves to cheap cold tiers. See [Observability, Security, Cold Storage](fundamentals/observability-security-cold-storage.md).

@@ -83,8 +83,8 @@ Using the right term in an interview signals familiarity with the domain.
 
 | Type | Example | Ratio | Recoverable? |
 |---|---|---|---|
-| Lossless | Run-Length Encoding (`AAAABBBBBBBBBBBBBBBAAA` → `4A15B3A`) | ~2× | Yes |
-| Lossy | JPEG chroma subsampling | ~20× | No |
+| Lossless | Run-Length Encoding (`AAAABBBBBBBBBBBBBBBAAA` → `4A15B3A`) | \~2× | Yes |
+| Lossy | JPEG chroma subsampling | \~20× | No |
 
 Compression costs CPU. The choice between client-side and server-side compression depends on which side has spare cycles and which side is bandwidth-constrained.
 
@@ -105,7 +105,7 @@ Recent data is accessed more often than old data — the access distribution is 
 Xu uses cold storage in two designs:
 
 - **YouTube** — popular videos go through CDN; unpopular videos serve from in-house cold storage where the marginal cost per view is much lower than CDN egress.
-- **Google Drive** — files not opened in months move to cold tiers (S3 Glacier, etc.); recall takes minutes but storage is ~10× cheaper.
+- **Google Drive** — files not opened in months move to cold tiers (S3 Glacier, etc.); recall takes minutes but storage is \~10× cheaper.
 
 Liu's framing: cold storage is the **direct answer to unbounded-data-growth prompts**. When the interviewer asks "what about old data?", the answer is almost always "tier it." The trade-off is performance/availability for cost; the complexity is the migration logic between tiers.
 

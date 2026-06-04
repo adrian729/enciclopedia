@@ -38,7 +38,7 @@ Liu lists the deep-dive questions a senior candidate proactively raises:
 
 ## 5. Cost vs In-House Storage
 
-Xu's YouTube design makes the cost trade-off explicit: serving every video through CDN costs ~$150,000/day at AWS CloudFront pricing for a YouTube-scale catalog. The optimization is to exploit the **long-tail viewing pattern** — popular videos go through CDN; unpopular videos serve from in-house storage where the marginal cost per view is much lower. The hot/cold split mirrors the [cold storage](fundamentals/observability-security-cold-storage.md) pattern.
+Xu's YouTube design makes the cost trade-off explicit: serving every video through CDN costs \~$150,000/day at AWS CloudFront pricing for a YouTube-scale catalog. The optimization is to exploit the **long-tail viewing pattern** — popular videos go through CDN; unpopular videos serve from in-house storage where the marginal cost per view is much lower. The hot/cold split mirrors the [cold storage](fundamentals/observability-security-cold-storage.md) pattern.
 
 ## Sources
 

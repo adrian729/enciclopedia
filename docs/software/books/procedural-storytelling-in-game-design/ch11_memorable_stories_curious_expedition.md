@@ -24,7 +24,7 @@
   text: I suddenly felt better. }
 ```
 
-Events can reference other events (like a cookbook of ingredients). The `evt-nightRest-sanityLow` event picks one of ~50 sub-events that meets its requirements (`reqSanity: 20..50`) and runs it. `charEffects` finds *N* trek members matching tags (`+humanoid -special`) and substitutes `$name`, `$he`, etc. into the text — *"A discussion between Richard Wellington and Akulta grew into an argument"*, with per-character action buttons *"Arrest Richard Wellington" / "Arrest Akulta"*.
+Events can reference other events (like a cookbook of ingredients). The `evt-nightRest-sanityLow` event picks one of \~50 sub-events that meets its requirements (`reqSanity: 20..50`) and runs it. `charEffects` finds *N* trek members matching tags (`+humanoid -special`) and substitutes `$name`, `$he`, etc. into the text — *"A discussion between Richard Wellington and Akulta grew into an argument"*, with per-character action buttons *"Arrest Richard Wellington" / "Arrest Akulta"*.
 
 - **Sentence layer** — text supports inline word randomisation:
 

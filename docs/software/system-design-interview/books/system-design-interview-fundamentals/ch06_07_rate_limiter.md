@@ -14,7 +14,7 @@
 - **Prompt** — design a rate limiter
 - **Scope narrowed to**: external client with a per-customer budget (calls per time frame). Limit is at the customer level, independent of which API is called
 - **Assumptions** agreed with interviewer:
-  - **10M customers**, ~**1,000 calls/day each**
+  - **10M customers**, \~**1,000 calls/day each**
   - Traffic pattern unknown; anticipate spikes
   - Protected API is an **asynchronous job**; p50 = 500 ms, latency **not** sensitive
   - Short-term over-limit is tolerable; **long-horizon accuracy** matters (over-processing costs money, under-processing angers customers)
@@ -78,7 +78,7 @@ invoke_api(customer_id) → status   // ALLOW or DENY
 
 ### 6.4 Data Storage — Long Time Horizon (requests per hour)
 
-- **Math** — 10M customers × 1,000 calls/day × 2 peak = **2×10¹⁰ QPD** → ~**200,000 QPS**
+- **Math** — 10M customers × 1,000 calls/day × 2 peak = **2×10¹⁰ QPD** → \~**200,000 QPS**
 
 | Option | Upside | Downside |
 |---|---|---|
@@ -98,7 +98,7 @@ invoke_api(customer_id) → status   // ALLOW or DENY
 
 | Option | Upside | Downside |
 |---|---|---|
-| **Distributed cache** | Simplest; ~1 ms intra-datacenter | Every request pays a network hop |
+| **Distributed cache** | Simplest; \~1 ms intra-datacenter | Every request pays a network hop |
 | Instance-level (stateful) rate limiter | No network call | App servers become stateful; load balancer must sticky-route; availability hit on instance failure |
 | **Stateless instances with approximation** — `instance_limit = global_limit / healthy_hosts` | Stateless; no network call | Inaccurate (instance can over-admit if traffic lands unevenly); topology changes skew math |
 | Client-side forward proxy | Offloads cost to client | Bypassable; rolling client changes is hard; centralized proxy reintroduces a hop |

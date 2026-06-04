@@ -24,10 +24,10 @@
 
 ## 2. Back-of-the-Envelope Estimation
 
-- **Write rate** — 100 million URLs/day → ~1,160 writes/second
-- **Read rate** — 10:1 read-to-write ratio → ~11,600 reads/second
+- **Write rate** — 100 million URLs/day → \~1,160 writes/second
+- **Read rate** — 10:1 read-to-write ratio → \~11,600 reads/second
 - **Records over 10 years** — 100M × 365 × 10 = 365 billion records
-- **Storage** — average URL ~100 bytes → 365 billion × 100 bytes = 365 TB over 10 years
+- **Storage** — average URL \~100 bytes → 365 billion × 100 bytes = 365 TB over 10 years
 
 ## 3. API Endpoints
 

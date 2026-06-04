@@ -94,7 +94,7 @@ For autocomplete, frequency is stored on each node (or each terminal node) so co
 
 A naive top-k traverse-and-sort is too slow on dense subtrees (a popular prefix can have millions of completions). Two optimizations make Xu's autocomplete sub-100 ms:
 
-1. **Cap prefix length** to ~50 characters. Beyond that, the search degrades to a much smaller subtree.
+1. **Cap prefix length** to \~50 characters. Beyond that, the search degrades to a much smaller subtree.
 2. **Cache the top-k completions at every node.** Lookup becomes O(1) instead of "walk the subtree, sort by frequency."
 
 The trade-off: writes (recomputing top-k as queries arrive) become expensive. The chapter side-steps this by rebuilding the trie weekly in batch (see [Async, Batch, Stream](fundamentals/async-batch-stream.md)) and atomically swapping the new version in.

@@ -27,7 +27,7 @@
 
 Before picking a phrase, Improv runs **filters** that take (world model, group metadata) and return a salience number or null. Null discards the group; numbers add to the group's **salience score**. High-scoring phrases survive.
 
-- **Soft filtering** — a developer-supplied **culling formula** c = f(m) decides the threshold given the max salience m. *Voyageur* uses `c = m − 10` (empirically tuned; m tends to hover around 30, so it roughly keeps phrases within ~70 % of the maximum). A formula of `c = m` makes the generator rigid; too loose and output goes random.
+- **Soft filtering** — a developer-supplied **culling formula** c = f(m) decides the threshold given the max salience m. *Voyageur* uses `c = m − 10` (empirically tuned; m tends to hover around 30, so it roughly keeps phrases within \~70 % of the maximum). A formula of `c = m` makes the generator rigid; too loose and output goes random.
 
 *Voyageur*'s seven planet-generator filters:
 

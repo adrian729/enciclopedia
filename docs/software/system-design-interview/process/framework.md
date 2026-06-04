@@ -61,7 +61,7 @@ Schema concretizes the diagram. Detail belongs on arrows (unsorted driver ID lis
 
 ### 2.5. Back-of-the-Envelope Math
 
-Numbers justify caching and sharding choices. A calculated 10⁸ QPS against a single machine's ~10⁶ capacity identifies a scaling problem; calculating that the load is well within one machine's capacity and dismissing the need to scale is also a strong signal.
+Numbers justify caching and sharding choices. A calculated 10⁸ QPS against a single machine's \~10⁶ capacity identifies a scaling problem; calculating that the load is well within one machine's capacity and dismissing the need to scale is also a strong signal.
 
 Common failure modes: calculating too soon (before API and schema are nailed), spending too long on it, confusing GB with TB (1,000× error), and calculating numbers that don't drive a decision. See the [Estimation](process/estimation.md) page for formulas.
 

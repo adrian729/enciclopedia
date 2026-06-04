@@ -97,7 +97,7 @@ Cost scales with the *number of differences*, not data size.
 
 ### 9.3. Data Center Outage
 
-Replicas span multiple DCs. A regional outage takes some replicas offline; quorum can still be assembled from survivors. Cross-DC writes increase latency (~150 ms transcontinental); systems often serve reads locally and replicate writes asynchronously.
+Replicas span multiple DCs. A regional outage takes some replicas offline; quorum can still be assembled from survivors. Cross-DC writes increase latency (\~150 ms transcontinental); systems often serve reads locally and replicate writes asynchronously.
 
 ## 10. Putting It Together
 

@@ -19,9 +19,9 @@
 ## 2. Statistical Models
 
 - **Stochastic process** — collection of random variables {xt} indexed by integer time; the realized data are one *realization* of the process.
-- **White noise** wt ~ wn(0, σw²) — uncorrelated zero-mean variates with finite variance; "white" by analogy with white light, all periodic oscillations equally present.
-  - **iid noise** wt ~ iid(0, σw²) — strengthens uncorrelated to independent.
-  - **Gaussian white noise** wt ~ iid N(0, σw²) — independent normal variates; serves as the canonical building block.
+- **White noise** wt \~ wn(0, σw²) — uncorrelated zero-mean variates with finite variance; "white" by analogy with white light, all periodic oscillations equally present.
+  - **iid noise** wt \~ iid(0, σw²) — strengthens uncorrelated to independent.
+  - **Gaussian white noise** wt \~ iid N(0, σw²) — independent normal variates; serves as the canonical building block.
 - **Moving average / filtering** — replacing wt with a local average, e.g. vt = (wt−1 + wt + wt+1)/3, smooths the series; any linear combination of values at different lags is called a *filtered series*.
 - **Autoregression** — current value is a linear function of past values plus noise; example xt = xt−1 − 0.9 xt−2 + wt produces quasi-periodic behavior similar to the speech series.
 - **Random walk with drift** — xt = δ + xt−1 + wt with x0 = 0, equivalently xt = δt + Σwj; serves as a model for trend such as the global temperature record. Pure random walk is δ = 0.

@@ -52,7 +52,7 @@ Persists intermediate state so a failed host doesn't replay from the beginning. 
 
 ### 3.4. Micro-Batching
 
-Amortizes per-event I/O overhead at the cost of delay. Spark Streaming uses ~1-second micro-batches; Flink can run truly per-event. The sweet spot depends on the freshness target.
+Amortizes per-event I/O overhead at the cost of delay. Spark Streaming uses \~1-second micro-batches; Flink can run truly per-event. The sweet spot depends on the freshness target.
 
 ## 4. Lambda Architecture
 

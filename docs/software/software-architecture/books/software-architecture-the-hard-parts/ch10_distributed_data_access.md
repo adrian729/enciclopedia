@@ -19,7 +19,7 @@
 ## 2. Interservice Communication pattern
 
 - **Mechanism** — the consumer makes a remote call (REST, gRPC, messaging) to the owning service to fetch the data on demand.
-- **Latency stack** — *network latency* (~30–300 ms), *security latency* (~20–400 ms when endpoints are secured), *data latency* (~10–50 ms for the extra database call inside the owning service); cumulative latency can approach a second.
+- **Latency stack** — *network latency* (\~30–300 ms), *security latency* (\~20–400 ms when endpoints are secured), *data latency* (\~10–50 ms for the extra database call inside the owning service); cumulative latency can approach a second.
 - **Coupling cost** — semantic and static coupling: if the Catalog Service is unavailable the Wishlist Service is too; both must scale together.
 - **Best fit** — simple cases with low call volume, no fault-tolerance pressure, and large data volumes that rule out replication-based patterns.
 
@@ -37,7 +37,7 @@
 - **Owner semantics** — the owning service is the sole writer (e.g., Catalog Service); consumers (e.g., Wishlist Service) hold a read-only replica.
 - **Supported products** — Hazelcast, Apache Ignite, Oracle Coherence (not all caching products support replicated mode).
 - **Startup dependency** — only the *first* consumer instance must wait for the owner to be running; subsequent consumer instances bootstrap from peer caches and the owner can disappear afterward without disrupting the consumer.
-- **Volume ceiling** — feasibility drops past ~500 MB; replicated cache memory cost scales by `cache size × number of consumer instances` (e.g., 500 MB × 5 instances = 2.5 GB).
+- **Volume ceiling** — feasibility drops past \~500 MB; replicated cache memory cost scales by `cache size × number of consumer instances` (e.g., 500 MB × 5 instances = 2.5 GB).
 - **Update-rate ceiling** — high write churn (e.g., inventory counts) cannot stay in sync; pattern fits relatively static data (e.g., product descriptions).
 - **Configuration challenge** — services discover each other via TCP/IP broadcast and lookups; cloud and containerized environments make this harder due to dynamic IPs.
 
@@ -62,6 +62,6 @@
 
 - **Problem** — Ticket Assignment Service must continuously query the expert profile table now owned by the User Management Service; remote calls per query were not feasible.
 - **Eliminated options** — Service Consolidation (services live in different domains), Data Domain (Ticket Assignment already connects to the ticketing data domain and a service cannot attach to two schemas), so the choice narrowed to Interservice Communication or Replicated Caching.
-- **Sizing analysis** — 900 experts × ~1.3 KB per expert ≈ 1,200 KB total; up to 2 User Management instances and up to 4 Ticket Assignment instances; total in-memory footprint is small and the data is mostly static.
+- **Sizing analysis** — 900 experts × \~1.3 KB per expert ≈ 1,200 KB total; up to 2 User Management instances and up to 4 Ticket Assignment instances; total in-memory footprint is small and the data is mostly static.
 - **Decision** — Replicated Caching with the User Management Service as the sole writer; resolves the performance and fault-tolerance pain of remote calls.
 - **Consequences accepted** — startup ordering (at least one User Management instance must be running before the first Ticket Assignment instance), licensing cost for the chosen caching product, and team learning curve mitigated by a planned proof-of-concept.

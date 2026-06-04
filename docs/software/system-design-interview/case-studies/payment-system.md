@@ -1,6 +1,6 @@
 # Payment System
 
-> Vol 2 only — neither Liu nor Xu Vol 1 covers payments. The challenge isn't throughput (1M transactions/day = ~10 TPS) but **correctness**: pair-in / pay-out flows, PSP integration, **reconciliation as the last line of defense**, idempotency keys against double-clicks and lost-response retries, and PSP-hosted pages to stay out of PCI DSS scope. Idempotency mechanics live in [Concurrency & Transactions §7](fundamentals/concurrency-and-transactions.md#7-idempotency-keys-as-primary-keys); double-entry ledger in [§8](fundamentals/concurrency-and-transactions.md#8-double-entry-ledger); Saga in [§6.6](fundamentals/concurrency-and-transactions.md#66-saga).
+> Vol 2 only — neither Liu nor Xu Vol 1 covers payments. The challenge isn't throughput (1M transactions/day = \~10 TPS) but **correctness**: pair-in / pay-out flows, PSP integration, **reconciliation as the last line of defense**, idempotency keys against double-clicks and lost-response retries, and PSP-hosted pages to stay out of PCI DSS scope. Idempotency mechanics live in [Concurrency & Transactions §7](fundamentals/concurrency-and-transactions.md#7-idempotency-keys-as-primary-keys); double-entry ledger in [§8](fundamentals/concurrency-and-transactions.md#8-double-entry-ledger); Saga in [§6.6](fundamentals/concurrency-and-transactions.md#66-saga).
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ Backend that settles financial transactions between buyers, sellers, and interme
 - Functional: pay-in (collect from customers) and pay-out (disburse to sellers).
 - Non-functional: reliability, fault tolerance for failed payments, asynchronous reconciliation.
 - Scope simplifications: credit-card only, single currency, third-party PSPs handle card data (no direct PCI DSS storage), e-commerce backend like Amazon.com.
-- Scale: 1M transactions/day → **~10 TPS**. The challenge is correctness, not throughput.
+- Scale: 1M transactions/day → **\~10 TPS**. The challenge is correctness, not throughput.
 
 **Workload-specific event sourcing motivation:** payments use event sourcing primarily as an **append-only state log** for retry/resume — given a failure mid-flow, the system can resume from the last known state and decide retry vs refund. The full reproducibility-by-replay treatment lives in [Digital Wallet](case-studies/digital-wallet.md).
 

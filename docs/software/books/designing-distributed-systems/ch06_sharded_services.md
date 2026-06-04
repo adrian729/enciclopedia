@@ -34,7 +34,7 @@
 
 - **Hit rate** — the percentage of requests served from cache; determines the overall capacity and latency of the system, not just the cache itself.
 - **Sharded caches are fragile** — because each user always maps to the same shard, losing a shard means that user permanently misses cache until the shard is restored, unlike a replicated cache where any replica can answer.
-- **Capacity sizing under cache failure** — a backend rated for 1,000 RPS fronted by a 50%-hit cache appears to do 2,000 RPS, but should be rated at ~1,500 RPS so the system survives losing half the cache replicas.
+- **Capacity sizing under cache failure** — a backend rated for 1,000 RPS fronted by a 50%-hit cache appears to do 2,000 RPS, but should be rated at \~1,500 RPS so the system survives losing half the cache replicas.
 - **Latency contribution** — a 25%-hit cache returning in 10 ms in front of a 100 ms backend yields 77.5 ms average latency; cache loss won't drop request volume but can cause queue buildup and timeouts. Load-test with and without the cache.
 - **Rollouts cost capacity** — deploying a new sharded-cache version temporarily loses capacity; replicating shards is the mitigation.
 

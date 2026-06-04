@@ -29,7 +29,7 @@
 
 ### 1.2. DuckDuckGo
 
-- **DuckDuckGo** — privacy-first search engine with developer-centric features (keyboard shortcuts, bangs, instant answers). The author finds its results nearly always good enough for development and about 95% of the time for general queries; for the remaining ~5% the `!g` bang re-runs the query on Google.
+- **DuckDuckGo** — privacy-first search engine with developer-centric features (keyboard shortcuts, bangs, instant answers). The author finds its results nearly always good enough for development and about 95% of the time for general queries; for the remaining \~5% the `!g` bang re-runs the query on Google.
 - **Keyboard navigation** — `/` or `h` focuses the search box; `j`/`k` (or arrows) move between results; `enter`/`l`/`o` opens the selected result; `ctrl+enter` (or `command+enter`) opens it in a background tab. Google by contrast offers no shortcuts beyond focusing the search bar, and has even removed shortcuts over time.
 - **Bangs** — exclamation-mark prefixes that redirect a query to another search engine without an intermediate page (e.g., `!py sorted` jumps directly to Python docs search).
 

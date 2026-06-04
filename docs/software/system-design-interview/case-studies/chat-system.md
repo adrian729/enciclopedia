@@ -82,7 +82,7 @@ Send to group(N members)
 For each member: append message to their inbox queue
 ```
 
-Cheap for groups capped at ~100. WeChat caps at 500, which is still manageable. For "channels" with 100,000+ members (Discord, Slack), the design changes — fanout becomes too expensive, and members fetch on read instead, which is a [News Feed](case-studies/news-feed.md)-style hybrid.
+Cheap for groups capped at \~100. WeChat caps at 500, which is still manageable. For "channels" with 100,000+ members (Discord, Slack), the design changes — fanout becomes too expensive, and members fetch on read instead, which is a [News Feed](case-studies/news-feed.md)-style hybrid.
 
 ## 8. Online Presence
 

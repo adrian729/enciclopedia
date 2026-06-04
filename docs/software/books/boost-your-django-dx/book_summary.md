@@ -1,6 +1,6 @@
 # Boost Your Django DX: Summary
 
-> **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+> **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ Johnson recommends sticking to the default Python tools — venv plus Pip — ov
 
 The recommended `venv` create command is `python -m venv --prompt . --upgrade-deps .venv`: `.venv` is the conventional hidden directory name (auto-detected by VS Code and PyCharm), `--prompt .` labels the shell prompt with the project directory, and `--upgrade-deps` upgrades Pip inside the env so the "new release available" nag stops. Virtual environments must never be committed; Python 3.13 onward writes a `.gitignore` inside new envs automatically, but earlier versions need a manual `/.venv/` line. If a venv has been committed, `git rm -r --cached .venv` stops tracking without deleting from disk.
 
-The original third-party **virtualenv** package is worth knowing: it was copied into the standard library as venv in Python 3.3 (PEP 405) and has continued to evolve while venv has mostly stood still. It's roughly ten times faster (~0.3s vs ~3s) and seeds new envs with a cached recent Pip — worth installing for those who create environments often.
+The original third-party **virtualenv** package is worth knowing: it was copied into the standard library as venv in Python 3.3 (PEP 405) and has continued to evolve while venv has mostly stood still. It's roughly ten times faster (\~0.3s vs \~3s) and seeds new envs with a cached recent Pip — worth installing for those who create environments often.
 
 Dependency pinning is the larger topic of the chapter. The naive approach — `pip freeze > requirements.txt` — has three problems: it mixes top-level and transitive dependencies with no way to tell them apart, new direct dependencies don't auto-pin their transitives, and editing a version doesn't recompute transitives. The recommended replacement is **pip-tools**' `pip-compile`, which reads a hand-maintained `requirements.in` (the project's direct dependencies, mostly unconstrained) and produces a fully pinned `requirements.txt` with `# via` annotations explaining each entry. Both files are committed; this is the same pattern npm and Cargo follow. To add a dependency: append to `.in`, run `pip-compile`, install. To upgrade a single package: `pip-compile -P <pkg>`. To upgrade everything: `pip-compile -U`. The `pip-sync` command brings the env into exact alignment with the lockfile, useful for cleaning out stale packages.
 
@@ -74,7 +74,7 @@ The first is help and autocomplete: `name?` shows type, signature, and docstring
 
 `IPython.embed()` drops an IPython prompt at any point in the code — inside a view, inside a management command — with full access to local variables. When embedding inside a view, run `runserver --nothreading --noreload` to avoid concurrent re-entry and file-change restarts. For debugging, `%debug` opens IPython's pdb-extended debugger on the line of the last exception. To get the same upgrade outside IPython, install **ipdb** and set `PYTHONBREAKPOINT=ipdb.set_trace` so plain `breakpoint()` calls open the IPython debugger; Django's `--pdb` test flag picks `ipdb` up automatically. The pytest equivalent is `addopts = --pdbcls=IPython.terminal.debugger:TerminalPdb`.
 
-For micro-benchmarking, `%timeit <expr>` auto-determines a sensible loop count and reports mean ± std. dev. with units. A throwaway example used in the book — `%timeit dict()` (~36.5 ns) versus `%timeit {}` (~16.7 ns) — illustrates that the literal form skips the name lookup `dict()` requires, since `dict` could be locally rebound.
+For micro-benchmarking, `%timeit <expr>` auto-determines a sensible loop count and reports mean ± std. dev. with units. A throwaway example used in the book — `%timeit dict()` (\~36.5 ns) versus `%timeit {}` (\~16.7 ns) — illustrates that the literal form skips the name lookup `dict()` requires, since `dict` could be locally rebound.
 
 Finally, **django-read-only** addresses the production-shell hazard: running `manage.py shell` against production accelerates feature work but it's easy to mix up terminal sessions and run a destructive command meant for dev. The package (added to `INSTALLED_APPS`) makes the database read-only when `DJANGO_READ_ONLY=1` is set, raising `DjangoReadOnlyError` on any write. `django_read_only.enable_writes()` and a `temp_writes()` context manager are escape hatches. The recommended setup exports the env var in the production shell's `.bashrc` so protection is on by default.
 

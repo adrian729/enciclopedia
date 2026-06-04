@@ -19,7 +19,7 @@
 
 ## 2. The Three Laws of Software Architecture
 
-The authors set out to find ~10–15 universal laws and ended up with three.
+The authors set out to find \~10–15 universal laws and ended up with three.
 
 > **First Law of Software Architecture** — Everything in software architecture is a trade-off.
 

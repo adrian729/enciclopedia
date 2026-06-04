@@ -177,7 +177,7 @@ ACID stops at the service boundary. Replace with **BASE**: Basic Availability, S
 
 | Pattern | Best for | Cost |
 |---|---|---|
-| **Interservice Communication** | Real-time freshness | ~30–300 ms network + security + data latency |
+| **Interservice Communication** | Real-time freshness | \~30–300 ms network + security + data latency |
 | **Column Schema Replication** | Aggregation/reporting | Ownership leakage |
 | **Replicated Caching** | Mostly static, ≲500 MB | Startup ordering, license cost |
 | **Data Domain** | Strong integrity, native joins | Broader bounded context |

@@ -33,13 +33,13 @@
 - Non-functional: 100 PB stored in year one, **6 nines durability** (99.9999%), **4 nines availability** (99.99%), strong storage efficiency.
 - Object-size mix: 20% small (<1 MB), 60% medium (1–64 MB), 20% large (>64 MB).
 - Capacity: at 40% disk-usage ratio, 100 PB holds ≈0.68 billion objects; at ≈1 KB metadata per object, ≈0.68 TB of metadata.
-- IOPS budget: 7200 rpm SATA disk does ~100–150 random seeks/sec → bottleneck for small-object workloads.
+- IOPS budget: 7200 rpm SATA disk does \~100–150 random seeks/sec → bottleneck for small-object workloads.
 
 ## 3. High-Level Design
 
 The architectural insight is **object immutability** — objects can be replaced or deleted but never edited in place. **UNIX inode analogy**: separate metadata store (mutable) from data store (immutable); each independently optimized.
 
-Per LinkedIn research, **~95% of object-storage requests are reads**, justifying read-optimized choices.
+Per LinkedIn research, **\~95% of object-storage requests are reads**, justifying read-optimized choices.
 
 ```
 Client → Load Balancer → API Service → IAM (authn/authz)

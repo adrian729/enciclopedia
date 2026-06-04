@@ -44,7 +44,7 @@ Both authors single out the same anti-pattern: applying a canned design (Cassand
 
 When asked "tell me more about the queue," offer a menu before diving: "Would you like me to discuss what kind of queue and why, or talk about scalability?" This shows scope discipline and lets the interviewer point at the part they want to hear.
 
-Don't sweep shallowly across the whole product — narrow to one or two features. Don't burn ten minutes on OAuth 2.0 in a private-messaging design. Math is used with purpose ("QPS is 100k, so we'll need to scale app servers since each handles ~30k") and never done before API and schema.
+Don't sweep shallowly across the whole product — narrow to one or two features. Don't burn ten minutes on OAuth 2.0 in a private-messaging design. Math is used with purpose ("QPS is 100k, so we'll need to scale app servers since each handles \~30k") and never done before API and schema.
 
 ### 2.5. Handle Disagreement at the Assumption Level
 

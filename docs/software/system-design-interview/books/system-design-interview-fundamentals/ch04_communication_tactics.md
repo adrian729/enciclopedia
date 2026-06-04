@@ -57,7 +57,7 @@
 
 ## 8. Using Math and Technical Detail
 
-- **Math with a purpose** — back-of-the-envelope calculations aren't a test of algebra; the results must justify a design choice. "QPS is 100k and storage is 20 PB, let me talk about API now" is wasted math. "QPS is 100k, so we'll need to scale app servers since each server handles ~30k QPS" is math used to justify a decision
+- **Math with a purpose** — back-of-the-envelope calculations aren't a test of algebra; the results must justify a design choice. "QPS is 100k and storage is 20 PB, let me talk about API now" is wasted math. "QPS is 100k, so we'll need to scale app servers since each server handles \~30k QPS" is math used to justify a decision
 - **Don't do the math too early** — candidates often calculate right after gathering requirements, before API, high-level diagram, and schema. That's dangerous: you may only be calculating one API's load, and storage estimates are inaccurate without a finalized schema. The math supports decisions like sharding or adding a cache — and if QPS is low, proposing partitioning adds complexity with no benefit
 
 ## 9. Avoiding Canned Answers

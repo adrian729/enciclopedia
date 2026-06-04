@@ -57,7 +57,7 @@
 ## 7. Common Risks
 
 - **Inter-service communication** — typical in microservices but **avoided** in service-based. Heavy chatter between domain services usually signals badly partitioned domains or the wrong style for the problem.
-- **Too many domain services** — practical upper limit is ~12; beyond that, testing, deployment, monitoring, and database connections/changes start to suffer.
+- **Too many domain services** — practical upper limit is \~12; beyond that, testing, deployment, monitoring, and database connections/changes start to suffer.
 
 ## 8. Governance
 

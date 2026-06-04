@@ -68,7 +68,7 @@
 
 | Method | How it works | Notes |
 |--------|--------------|-------|
-| **Perfect binding** (also adhesive binding) | Same-size pages stacked, adhesive applied along one edge; heavy-weight cover added | Used widely by publishing for paperbacks and magazines; uniform rectangular look; opens flat or nearly flat; needs at least ~20 sheets to adhere properly |
+| **Perfect binding** (also adhesive binding) | Same-size pages stacked, adhesive applied along one edge; heavy-weight cover added | Used widely by publishing for paperbacks and magazines; uniform rectangular look; opens flat or nearly flat; needs at least \~20 sheets to adhere properly |
 | **Saddle stitch** | Both sides of a spread printed on the same sheet; sheets gathered, folded in half, stapled along the fold | Cheap, doable by hand with long-arm staplers (or manually with awl/needle); good for student projects |
 | **Spiral binding** | Holes punched along the edge; wire or plastic combs/loops threaded through | Lies completely flat when open; quality is not always high; imagery may look odd where holes are punched |
 | **Metal spiral** | Common variant of wire binding | Inexpensive; small manual machines widely available |

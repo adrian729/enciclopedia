@@ -61,15 +61,15 @@ Both are solved by the **eight-neighbor fetch**: in addition to the user's geoha
 
 | Geohash length | Grid size       | Use for radius |
 |---|---|---|
-| 4 | ~39.1 km × 19.5 km | 20 km |
-| 5 | ~4.9 km × 4.9 km   | 2 km, 5 km |
-| 6 | ~1.2 km × 609 m    | 0.5 km, 1 km |
+| 4 | \~39.1 km × 19.5 km | 20 km |
+| 5 | \~4.9 km × 4.9 km   | 2 km, 5 km |
+| 6 | \~1.2 km × 609 m    | 0.5 km, 1 km |
 
 The Vol 2 proximity service exposes fixed UI options (0.5, 1, 2, 5, 20 km) so each radius maps deterministically to a geohash length. Pre-compute the index at lengths 4, 5, and 6 and the lookup is always a single equality scan plus eight neighbors.
 
 ## 3. Quadtree
 
-A quadtree is an in-memory tree (not a database) that recursively subdivides the world into four quadrants until each leaf holds at most ~100 points. The threshold is arbitrary — pick whatever makes the leaf size match the radius queries you plan to answer.
+A quadtree is an in-memory tree (not a database) that recursively subdivides the world into four quadrants until each leaf holds at most \~100 points. The threshold is arbitrary — pick whatever makes the leaf size match the radius queries you plan to answer.
 
 Memory math from the proximity service example:
 

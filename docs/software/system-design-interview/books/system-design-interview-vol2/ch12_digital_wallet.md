@@ -21,7 +21,7 @@
 - **Functional scope** — only cross-wallet balance transfer between two wallets; no FX, no other features.
 - **Non-functional requirements** — 1,000,000 TPS, 99.99% availability, transactional guarantees for correctness, and **reproducibility** so historical balances can be reconstructed by replaying data from the beginning.
 - **Why reproducibility over reconciliation alone** — comparing internal records to bank statements only flags discrepancies; it cannot explain *how* a difference was generated. Replay can.
-- **Node-count math** — each transfer is two operations (debit + credit), so 1M TPS needs ~2M per-node TPS. At 1,000 TPS/node → 2,000 nodes; at 10,000 TPS/node → 200 nodes; design goal is to push per-node TPS up to lower hardware cost.
+- **Node-count math** — each transfer is two operations (debit + credit), so 1M TPS needs \~2M per-node TPS. At 1,000 TPS/node → 2,000 nodes; at 10,000 TPS/node → 200 nodes; design goal is to push per-node TPS up to lower hardware cost.
 - **Amount as string, not double** — avoids floating-point precision loss in money math (rationale carried over from Ch 11 Payment System).
 
 ## 2. Design Evolution Overview

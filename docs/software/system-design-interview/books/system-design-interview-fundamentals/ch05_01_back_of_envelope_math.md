@@ -11,7 +11,7 @@
 
 ## 1. Why Do the Math at All
 
-- **Numbers justify design choices** — a calculated 10⁸ QPS against a single machine's ~10⁶ capacity identifies a scaling problem and lets you propose solutions; conversely, dismissing the need to scale based on a calculated result reflects strong judgment
+- **Numbers justify design choices** — a calculated 10⁸ QPS against a single machine's \~10⁶ capacity identifies a scaling problem and lets you propose solutions; conversely, dismissing the need to scale based on a calculated result reflects strong judgment
 - **Keeps you from spewing concepts** — if the numbers come out to 10 QPS and you start proposing caching and sharding, it looks bad; scalable solutions need a solid numerical reason
 - **Do it *after* API and schema, not upfront** — QPS is tied to a specific API and storage is tied to a specific schema; calculating early forces guesswork and usually misses APIs and tables
 
@@ -47,11 +47,11 @@ Worked example: daily active users 200M, 10% post photos, 10 photos per user, 10
 - **Step 3: Group all other numbers together** — 10% × 3 × 2 × 1 = 0.6
 - **Step 4: Find the final number** — 0.6 × 10¹⁶ → 6 × 10¹⁵
 - **Step 5: Convert to a readable number** — using Appendix 1: Conversion Table, 6 × 10¹⁵ → 6 Petabytes; humans reason in PB, not 10¹⁵
-- **Step 6: Do something with the number** — use Appendix 2: Capacity Numbers to reason about scaling (e.g., if each host stores ~1 TB, 6 PB/day requires scaling up servers)
+- **Step 6: Do something with the number** — use Appendix 2: Capacity Numbers to reason about scaling (e.g., if each host stores \~1 TB, 6 PB/day requires scaling up servers)
 
 ## 6. Common Mistakes
 
-- **Spending too long on the calculation** — of a 40-minute interview, intro and Q&A consume ~10 minutes, leaving 35 for technical. If math eats more than 10 of that, a third of your technical time is algebra, not system design
+- **Spending too long on the calculation** — of a 40-minute interview, intro and Q&A consume \~10 minutes, leaving 35 for technical. If math eats more than 10 of that, a third of your technical time is algebra, not system design
 - **Calculation mistakes** — common slips: confusing GB with TB (magnitude-of-1,000 error), losing a 0 (magnitude-of-10 error). One-off mistakes may not be game-ending but look bad; practice the method to do it quickly and accurately
 - **Not doing anything with the result** — calculating 6 PB/day is worthless if you move on without it; the interviewer wants to see how you use the number to identify bottlenecks and propose solutions
 - **Calculating unimportant numbers** — spending 2–3 minutes on bandwidth for a lightweight heartbeat service signals poor technical judgment; develop intuition for what matters to the bottleneck

@@ -55,7 +55,7 @@ A good network is both **broad and close**:
 In the US:
 
 - **One page if < 10 years of experience**, no more than two pages otherwise.
-- **Recruiters spend ~20 seconds** scanning; extra content dilutes the most impressive items.
+- **Recruiters spend \~20 seconds** scanning; extra content dilutes the most impressive items.
 - **Some readers refuse long resumes outright** — risk not worth taking.
 - Long resumes signal **poor prioritization**, not abundant experience.
 

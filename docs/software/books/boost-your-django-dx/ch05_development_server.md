@@ -29,9 +29,9 @@
 
 ### 1.2. Diagnosing slow queries
 
-- **`Books` page case study** — page takes ~1.5s; SQL panel shows "96 queries including 95 similar and 95 duplicates". *Similar* = repeated SQL with possibly different parameters; *duplicate* = same SQL with same parameters. The slowest query (red) is the initial `SELECT ... FROM core_book`; the second query, `SELECT ... FROM core_author WHERE ...`, repeats 95 times.
+- **`Books` page case study** — page takes \~1.5s; SQL panel shows "96 queries including 95 similar and 95 duplicates". *Similar* = repeated SQL with possibly different parameters; *duplicate* = same SQL with same parameters. The slowest query (red) is the initial `SELECT ... FROM core_book`; the second query, `SELECT ... FROM core_author WHERE ...`, repeats 95 times.
 - **N + 1 Queries Problem** — outer template loop `{% for book in books %}` runs one query for books; inner `{{ book.author.name }}` triggers one query per book to fetch its author. Total: *N + 1* queries. Traceback in the SQL panel pinpoints the responsible template line.
-- **Fix with `prefetch_related()`** — change `Book.objects.all()` to `Book.objects.prefetch_related("author")`. Page now issues 2 queries (one for books, one batched `WHERE "core_author"."id" IN (...)`) and loads ~10x faster.
+- **Fix with `prefetch_related()`** — change `Book.objects.all()` to `Book.objects.prefetch_related("author")`. Page now issues 2 queries (one for books, one batched `WHERE "core_author"."id" IN (...)`) and loads \~10x faster.
 
 ### 1.3. Non-HTML requests via the History panel
 

@@ -24,7 +24,7 @@
 | Approach | How it works | Pros | Cons |
 |---|---|---|---|
 | **Multi-master replication** | Use DB `auto_increment` but step by `k` (number of DB servers) so each server emits a disjoint sequence | Reuses familiar DB feature | Hard to scale across data centers; IDs do not go up with time across servers; doesn't scale on add/remove |
-| **UUID** | 128-bit number generated independently per web server; collision probability is ~50% only after 1B IDs/sec for 100 years | Simple, no coordination, scales with web servers | 128 bits exceeds 64-bit limit; not time-sorted; can be non-numeric |
+| **UUID** | 128-bit number generated independently per web server; collision probability is \~50% only after 1B IDs/sec for 100 years | Simple, no coordination, scales with web servers | 128 bits exceeds 64-bit limit; not time-sorted; can be non-numeric |
 | **Ticket server** | Centralized DB with `auto_increment` (Flickr's design) hands out IDs | Numeric IDs; easy for small/medium scale | Single point of failure; multiple ticket servers reintroduce sync challenges |
 | **Twitter snowflake** | Divide a 64-bit ID into sections (timestamp + datacenter + machine + sequence) | Meets all requirements: 64-bit, numeric, time-sorted, scalable | More complex; depends on synchronized clocks |
 

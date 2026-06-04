@@ -93,7 +93,7 @@
   | Live + 3 or 4 alive | Dead |
   | Dead + 3 alive | Alive |
 
-- **Cave-map automaton** — initialize a 2D grid randomly with ~55% wall cells, leave a two-wide border, then iterate the rules:
+- **Cave-map automaton** — initialize a 2D grid randomly with \~55% wall cells, leave a two-wide border, then iterate the rules:
 
   | Current + Wall Neighbors | New State |
   |---|---|

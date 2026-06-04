@@ -51,7 +51,7 @@ Art toys lack established genres, but most fit a modular pattern of **inputs**, 
 
 - **Pipeline width** — keyboard yields sparse binary events; mouse yields continuous (X, Y) per frame; a Leap Motion hand tracker produces 50–100 data points per sample (joints × rotations).
 - **High-DOF input needs continuous feedback** — Chris Milk's *Treachery of Sanctuary* uses the user's full continuous shadow as input; raising arms extends feathered wings, fingers fan in and out at the same rate. Children grasp it instantly.
-- **Pose-detection apps fail** — apps that compress rich tracking data into discrete pose events discard ~99.99% of the input and end up with the same expressiveness as a keyboard.
+- **Pose-detection apps fail** — apps that compress rich tracking data into discrete pose events discard \~99.99% of the input and end up with the same expressiveness as a keyboard.
 
 ### 5.2. Transformations
 

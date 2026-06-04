@@ -30,7 +30,7 @@ The naive approach over-engineers the wrong problem.
 
 ### 3.1. Client-Side Sampling
 
-Each client doesn't send every tap to the server. It samples — say, 1 in 10 taps make it to the wire. Server receives ~1M emojis/sec instead of 10M. The aggregate signal is preserved (we know the rate is high) at 10× lower cost.
+Each client doesn't send every tap to the server. It samples — say, 1 in 10 taps make it to the wire. Server receives \~1M emojis/sec instead of 10M. The aggregate signal is preserved (we know the rate is high) at 10× lower cost.
 
 See [Resilience Patterns — Sampling](fundamentals/resilience-patterns.md) for the underlying technique.
 

@@ -39,7 +39,7 @@
 - **Stateless services** — login, signup, user profile, etc. Sit behind a load balancer; can be monolith or microservices. Service discovery is the one stateless service worth deep-diving
 - **Stateful service** — the chat service is stateful because each client holds a persistent WebSocket connection to a specific chat server and normally does not switch as long as that server is alive
 - **Third-party integration** — push notifications are critical; they alert users of new messages even when the app is not running (see Ch 10)
-- **Why not a single server** — at 1M concurrent users with ~10K memory per connection (~10GB), it physically fits on one box, but a single server is a SPOF and a deal-breaker; fine to start with one but explicitly call it a starting point
+- **Why not a single server** — at 1M concurrent users with \~10K memory per connection (\~10GB), it physically fits on one box, but a single server is a SPOF and a deal-breaker; fine to start with one but explicitly call it a starting point
 - **Final components** — chat servers (real-time messaging), presence servers (online/offline), API servers (login/signup/profile), notification servers (push), key-value store (chat history)
 
 ## 4. Storage Choices

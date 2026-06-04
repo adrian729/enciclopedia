@@ -20,7 +20,7 @@
 
 **After API and schema, not before** (Liu's most-emphasized sequencing rule). QPS is per-API; storage is per-schema. Calculating either upfront forces guesswork.
 
-A calculated 10⁸ QPS against a single machine's ~10⁶ capacity *identifies* a scaling problem — that's the value of doing the math. Calculating 6 PB/day and moving on without doing anything with the number is worthless.
+A calculated 10⁸ QPS against a single machine's \~10⁶ capacity *identifies* a scaling problem — that's the value of doing the math. Calculating 6 PB/day and moving on without doing anything with the number is worthless.
 
 ## 2. Liu's QPS Formula
 
@@ -28,7 +28,7 @@ A calculated 10⁸ QPS against a single machine's ~10⁶ capacity *identifies* a
 QPS = (DAU × % making query × queries per user per day × scaling factor) ÷ 100,000
 ```
 
-The denominator is the ~86,400 seconds in a day, rounded for mental math. Dividing by 100k just subtracts 5 from the power of 10.
+The denominator is the \~86,400 seconds in a day, rounded for mental math. Dividing by 100k just subtracts 5 from the power of 10.
 
 The **scaling factor** captures worst-case spikes — ridesharing on weekend nights runs 5–10× average; concert-end can go 10×. The worst case is the number to design for.
 
@@ -59,11 +59,11 @@ Getting the unit wrong corrupts every estimate by orders of magnitude. The minim
 
 | Power | Approx. value | Unit |
 |---|---|---|
-| 2¹⁰ | ~10³ | KB |
-| 2²⁰ | ~10⁶ | MB |
-| 2³⁰ | ~10⁹ | GB |
-| 2⁴⁰ | ~10¹² | TB |
-| 2⁵⁰ | ~10¹⁵ | PB |
+| 2¹⁰ | \~10³ | KB |
+| 2²⁰ | \~10⁶ | MB |
+| 2³⁰ | \~10⁹ | GB |
+| 2⁴⁰ | \~10¹² | TB |
+| 2⁵⁰ | \~10¹⁵ | PB |
 
 Liu's mnemonic for powers of 10: 3=Kudos, 6=Monkeys, 9=Grapes, 12=Tents, 15=Pizzas.
 
@@ -71,20 +71,20 @@ Liu's mnemonic for powers of 10: 3=Kudos, 6=Monkeys, 9=Grapes, 12=Tents, 15=Pizz
 
 Jeff Dean's 2010 numbers, still directionally correct:
 
-- L1 cache reference: ~0.5 ns
-- Branch misprediction: ~5 ns
-- L2 cache reference: ~7 ns
-- Mutex lock/unlock: ~25 ns
-- Main memory reference: ~100 ns
-- Compress 1 KB with Zippy: ~3 µs
-- Send 1 KB over 1 Gbps network: ~10 µs
-- Read 4 KB from SSD: ~150 µs
-- Read 1 MB sequentially from memory: ~250 µs
-- Round trip within same datacenter: ~500 µs
-- Read 1 MB sequentially from SSD: ~1 ms
-- Disk seek: ~10 ms
-- Read 1 MB sequentially from disk: ~20 ms
-- Send packet CA → Netherlands → CA: ~150 ms
+- L1 cache reference: \~0.5 ns
+- Branch misprediction: \~5 ns
+- L2 cache reference: \~7 ns
+- Mutex lock/unlock: \~25 ns
+- Main memory reference: \~100 ns
+- Compress 1 KB with Zippy: \~3 µs
+- Send 1 KB over 1 Gbps network: \~10 µs
+- Read 4 KB from SSD: \~150 µs
+- Read 1 MB sequentially from memory: \~250 µs
+- Round trip within same datacenter: \~500 µs
+- Read 1 MB sequentially from SSD: \~1 ms
+- Disk seek: \~10 ms
+- Read 1 MB sequentially from disk: \~20 ms
+- Send packet CA → Netherlands → CA: \~150 ms
 
 Operational rules of thumb: memory is fast, disk is slow, random disk seeks should be engineered out, simple compression is cheap, and cross-region transfer is meaningfully slower than intra-region.
 
@@ -92,10 +92,10 @@ Operational rules of thumb: memory is fast, disk is slow, random disk seeks shou
 
 | Nines | Downtime per year |
 |---|---|
-| 99% | ~3.65 days |
-| 99.9% | ~8.76 hours |
-| 99.99% | ~52.6 minutes |
-| 99.999% | ~5.26 minutes |
+| 99% | \~3.65 days |
+| 99.9% | \~8.76 hours |
+| 99.99% | \~52.6 minutes |
+| 99.999% | \~5.26 minutes |
 
 Codified in **SLA** contracts; major cloud providers set SLAs at 99.9% or above. Frame durability ("eleven 9s") in user impact rather than memorized counts.
 

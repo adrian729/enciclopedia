@@ -28,14 +28,14 @@
 - **Functional scope** — bucket creation, object upload/download, versioning, listing objects in a bucket (`aws s3 ls` style).
 - **Non-functional targets** — 100 PB stored in year one, 6 nines durability (99.9999%), 4 nines availability (99.99%), strong storage efficiency.
 - **Object-size mix assumption** — 20% small (<1 MB, median 0.5 MB), 60% medium (1–64 MB, median 32 MB), 20% large (>64 MB, median 200 MB).
-- **Capacity math** — at 40% disk-usage ratio, 100 PB holds ~0.68 billion objects; at ~1 KB metadata per object that's ~0.68 TB of metadata.
-- **IOPS budget** — a 7200 rpm SATA disk does ~100–150 random seeks/sec, which becomes the bottleneck for small-object workloads.
+- **Capacity math** — at 40% disk-usage ratio, 100 PB holds \~0.68 billion objects; at \~1 KB metadata per object that's \~0.68 TB of metadata.
+- **IOPS budget** — a 7200 rpm SATA disk does \~100–150 random seeks/sec, which becomes the bottleneck for small-object workloads.
 
 ## 3. High-Level Design
 
 - **Object immutability** — objects can be replaced or deleted but never edited in place; this is the key tradeoff that buys vast scale and durability.
 - **UNIX-inode analogy** — separate metadata store (inode-equivalent, mutable) from data store (file-block-equivalent, immutable); each component is then independently optimized.
-- **Write-once / read-many** — per LinkedIn research, ~95% of object-storage requests are reads, justifying read-optimized choices.
+- **Write-once / read-many** — per LinkedIn research, \~95% of object-storage requests are reads, justifying read-optimized choices.
 - **Core components** — Load Balancer → stateless API Service → IAM (authn/authz) + Metadata Store + Data Store; the API service orchestrates RPCs across the three.
 - **Logical vs physical separation** — metadata and data stores are logical roles; some systems (Ceph Rados Gateway) collapse them into a single object substrate.
 

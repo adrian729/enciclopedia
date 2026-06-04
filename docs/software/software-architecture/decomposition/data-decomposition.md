@@ -152,7 +152,7 @@ Hard Parts works the Sysops Squad scenario to anchor both the *justification* of
 Addison and Devon convinced Dana with three concrete signals:
 
 - Reporting queries blocked ticketing via shared connections (a § 2.2 connection-management failure already in production).
-- Projected service growth required ~2,000 additional connections (§ 2.3 scalability).
+- Projected service growth required \~2,000 additional connections (§ 2.3 scalability).
 - The shared database created an availability SPOF for ticketing (§ 2.4 fault tolerance).
 
 The three together carried the ADR. None of them was speculative — all three were live problems.

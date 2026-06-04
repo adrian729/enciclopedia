@@ -21,8 +21,8 @@
 - **Electronic stock exchange** — system that matches buyers and sellers of securities; this design supports stocks only, with limit orders that can be placed or canceled.
 - **Functional requirements** — place new limit order, cancel order, view real-time order book, receive matched trades; risk checks (e.g., max 1M shares of AAPL/user/day); wallet integration to withhold funds for resting orders so users can't overspend.
 - **Non-functional requirements** — 99.99% availability (downtime in seconds harms reputation), millisecond round-trip with focus on **99th-percentile latency**, fault tolerance with fast recovery, KYC + DDoS protection.
-- **Scale** — 100 symbols, ~tens of thousands of concurrent users, ~1B orders/day. With NYSE's 6.5h trading window: ~43,000 QPS average, ~215,000 peak (5× for open/close bursts).
-- **Reference scale points** — NYSE trades billions of matches/day; HKEX ~200B shares/day.
+- **Scale** — 100 symbols, \~tens of thousands of concurrent users, \~1B orders/day. With NYSE's 6.5h trading window: \~43,000 QPS average, \~215,000 peak (5× for open/close bursts).
+- **Reference scale points** — NYSE trades billions of matches/day; HKEX \~200B shares/day.
 
 ## 2. Domain Concepts
 
@@ -69,7 +69,7 @@
 ## 5. Latency Optimization
 
 - **Latency formula** — `Latency = Σ execution time along critical path`; reduce by shortening the path or each task's time (eliminate network/disk, optimize code).
-- **Naive multi-server design** — ~500μs network round-trip per hop plus tens of milliseconds for sequencer disk persistence; total in tens of ms — unacceptable as volumes grew.
+- **Naive multi-server design** — \~500μs network round-trip per hop plus tens of milliseconds for sequencer disk persistence; total in tens of ms — unacceptable as volumes grew.
 - **Single-server design** — put gateway, order manager, sequencer, matching engine on one machine; communicate via mmap; modern exchanges hit **tens of microseconds** end-to-end this way.
 - **Application loop** — single-threaded `while(true)` polling loop pinned to a fixed CPU core; benefits: no context switches, no locks, no contention → very low p99. Tradeoff: each task must be carefully bounded so it doesn't starve subsequent tasks.
 - **mmap message bus** — `mmap(2)` over a file in `/dev/shm` (a memory-backed filesystem) creates inter-process shared memory with no disk access at all; sub-microsecond message sends. Lets components communicate as low-latency microservices inside one server.

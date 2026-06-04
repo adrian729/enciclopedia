@@ -15,7 +15,7 @@
 ## 1. Problem and Scope
 
 - **Scope** — design a simplified Google Maps for mobile with three features: user location update, navigation + ETA, and map rendering. Business places, photos, and multi-stop routes are out of scope.
-- **Scale** — 1 billion DAU; road data is TBs of raw input from external sources; 99% world coverage and ~25M daily map updates in real Google Maps as reference.
+- **Scale** — 1 billion DAU; road data is TBs of raw input from external sources; 99% world coverage and \~25M daily map updates in real Google Maps as reference.
 - **Non-functional requirements** — accuracy (no wrong directions), smooth client-side rendering, minimal mobile data and battery usage, and standard availability/scalability.
 
 ## 2. Map Fundamentals
@@ -34,7 +34,7 @@
 
 ## 4. Back-of-the-Envelope Estimates
 
-- **Map tile storage** — at zoom level 21 there are ~4.4 trillion 256×256 tiles at ~100KB each = 440 PB. ~90% of the world (oceans, deserts) compresses heavily, so the highest level drops to ~50 PB. Summing all 22 zoom levels (each level has 4× fewer tiles): 50 + 50/4 + 50/16 + … ≈ 67 PB; rounded estimate **~100 PB**.
+- **Map tile storage** — at zoom level 21 there are \~4.4 trillion 256×256 tiles at \~100KB each = 440 PB. \~90% of the world (oceans, deserts) compresses heavily, so the highest level drops to \~50 PB. Summing all 22 zoom levels (each level has 4× fewer tiles): 50 + 50/4 + 50/16 + … ≈ 67 PB; rounded estimate **\~100 PB**.
 - **Navigation QPS** — each user averages 5 navigation sessions totaling 35 min/week → 1B × 35 min/week = 35B nav-min/week ≈ **5B nav-minutes/day**; navigation QPS = 1B × 5 / 7 / 10⁵ ≈ **7,200**, peak (5×) ≈ **36,000**.
 - **Location update QPS** — naive (every 1s) = 3M QPS; batching to every 15s drops it to **200,000** average, **1M** peak.
 - **Mobile data per session** — at 30 km/h with 200m × 200m tiles (256px, 100KB), a 1km × 1km area = 25 tiles = 2.5MB; usage = 75MB/hour or **1.25 MB/min**.
@@ -43,7 +43,7 @@
 ## 5. High-Level Services
 
 - **Three top-level services** — **Location service** (records user GPS updates), **Navigation service** (computes routes + ETA), **Map rendering** (serves tile imagery to clients).
-- **Location service** — clients buffer GPS samples locally (every 1s) and POST batches every ~15s via `POST /v1/locations` over HTTP keep-alive; reduces traffic and battery use. Stored in a write-optimized DB (Cassandra) and also published to Kafka so downstream consumers (live traffic, road-detection, personalization) can tap the stream.
+- **Location service** — clients buffer GPS samples locally (every 1s) and POST batches every \~15s via `POST /v1/locations` over HTTP keep-alive; reduces traffic and battery use. Stored in a write-optimized DB (Cassandra) and also published to Kafka so downstream consumers (live traffic, road-detection, personalization) can tap the stream.
 - **Navigation API** — `GET /v1/nav?origin=...&destination=...` returns distance, duration, polyline, geocoded waypoints, travel mode, and HTML turn instructions (matches Google's public API shape).
 - **Map rendering — pre-generate, don't build on the fly** — dynamic tile generation is too costly per request and uncacheable; pre-generated static tiles served via **CDN** are scalable and highly cacheable.
 - **Tile URL via geohash** — each tile has a unique geohash; URL `https://cdn.map-provider.com/tiles/<geohash>.png`. Computing the geohash from (lat, long) + zoom is cheap and can run on the client.

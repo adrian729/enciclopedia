@@ -73,7 +73,7 @@ Each database type is rated against a fixed set of characteristics: **ease-of-le
 
 ## 6. Sysops Squad: justifying decomposition and polyglot databases
 
-- **Justification accepted** — Addison and Devon convinced Dana with three concrete signals: reporting queries blocked ticketing via shared connections, projected service growth required ~2,000 additional connections, and the shared database created an availability SPOF for ticketing.
+- **Justification accepted** — Addison and Devon convinced Dana with three concrete signals: reporting queries blocked ticketing via shared connections, projected service growth required \~2,000 additional connections, and the shared database created an availability SPOF for ticketing.
 - **Six data domains identified** — Customer, Survey, Payment, Profile, Knowledge Base, Ticketing, with Sysops Squad tables assigned to each (e.g., `billing`/`contract`/`payment_method` to Payment; `ticket`/`ticket_history` to Ticketing).
 - **Cross-domain view rewritten** — `payment.v_customer_contract` originally joined `payment.contract`, `customer.customer`, and `payment.billing`; the rewrite removes the join to `customer.customer` and the `customer_name` column, forcing the Payment service to call the Customer service for the name.
 - **Polyglot decision: Survey moves to a document database** — Marketing required frequent, low-friction survey changes; relational rendering was painful for the UI. ADR records the decision and the trade-off (single aggregate accepted question duplication in exchange for one-shot retrieval and simpler UI rendering).

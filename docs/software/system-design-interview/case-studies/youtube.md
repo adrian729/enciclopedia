@@ -69,7 +69,7 @@ Six components:
 
 YouTube's viewing pattern is **long-tail** — a small number of videos get most of the traffic; the long tail of unpopular videos is enormous.
 
-- **CDN for popular videos**, in-house storage for unpopular videos. CDN egress is expensive at scale (~$150K/day at AWS CloudFront pricing for a YouTube-scale catalog); serving the long tail from cheaper in-house storage saves substantially.
+- **CDN for popular videos**, in-house storage for unpopular videos. CDN egress is expensive at scale (\~$150K/day at AWS CloudFront pricing for a YouTube-scale catalog); serving the long tail from cheaper in-house storage saves substantially.
 - **Reduced encoding count for short-tail content** — popular videos get the full ladder of resolutions and codecs; unpopular ones get a minimal set.
 - **Regional CDNs** — push popular videos to regional edges based on viewing pattern.
 - **Cold storage** for very old or rarely-watched content (see [Observability, Security, Cold Storage](fundamentals/observability-security-cold-storage.md)).
@@ -111,7 +111,7 @@ This pattern recurs in [Distributed Counter](case-studies/distributed-counter.md
 
 - **Transcoding cost vs storage cost.** Producing every resolution and bitrate up front uses CPU and bandwidth. On-demand transcoding saves cost for unpopular content at the price of first-view latency.
 - **CDN cost vs in-house cost.** CDN gives the lowest latency; in-house storage is cheaper. The split follows the long-tail viewing distribution.
-- **GOP chunk size.** Bigger chunks reduce overhead; smaller chunks parallelize better. ~6-second GOPs are typical.
+- **GOP chunk size.** Bigger chunks reduce overhead; smaller chunks parallelize better. \~6-second GOPs are typical.
 - **Live counting accuracy vs cost.** The min-heap top-K is approximate during the micro-batch window; exact reconciliation happens in batch.
 
 ## Sources
