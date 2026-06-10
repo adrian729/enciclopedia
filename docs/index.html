@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
 </head>
 <body>
   <div id="app"></div>
@@ -57,6 +58,44 @@
               if (m) setTimeout(function() { scrollToId(m[1]); }, 10);
             });
           });
+        },
+        // KaTeX math. Extract \( … \) (inline) and \[ … \] (display) from the RAW
+        // markdown in beforeEach — before marked can eat the backslashes or mangle
+        // underscores/asterisks inside the math — then inject katex.renderToString
+        // output in afterEach. Uses \( \[ delimiters (collision-free: never appear
+        // elsewhere in docs; $ is avoided because 200+ lines use it as currency).
+        function katexMath(hook) {
+          var store = {};
+          var seq = 0;
+          hook.beforeEach(function (md) {
+            md = md.replace(/\\\[([\s\S]+?)\\\]/g, function (_, tex) {
+              var key = 'KXMATH' + (seq++) + 'XK';
+              store[key] = { tex: tex, display: true };
+              return key;
+            });
+            md = md.replace(/\\\(([\s\S]+?)\\\)/g, function (_, tex) {
+              var key = 'KXMATH' + (seq++) + 'XK';
+              store[key] = { tex: tex, display: false };
+              return key;
+            });
+            return md;
+          });
+          hook.afterEach(function (html) {
+            Object.keys(store).forEach(function (key) {
+              if (html.indexOf(key) === -1) return;
+              var out;
+              try {
+                out = katex.renderToString(store[key].tex, {
+                  displayMode: store[key].display,
+                  throwOnError: false
+                });
+              } catch (e) {
+                out = store[key].tex;
+              }
+              html = html.split(key).join(out);
+            });
+            return html;
+          });
         }
       ]
     }
@@ -64,5 +103,6 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 </body>
 </html>

@@ -7,6 +7,17 @@
   - [System Design](software/system_design.md)
   - [From TCP to HTTP](software/from_tcp_to_http.md)
   - [Bevy](software/bevy.md)
+  - **Procedural Animation & Generation**
+    - [Overview](software/procedural/README.md)
+    - **Animation**
+      - [Foundations: Verlet & Constraints](software/procedural/foundations.md)
+      - [Kinematic Chains & IK](software/procedural/chains-and-ik.md)
+      - [Creature Rigging](software/procedural/creature-rigging.md)
+      - [Soft Bodies](software/procedural/soft-bodies.md)
+    - **Generation**
+      - [Noise, fBm & Heightmaps](software/procedural/generation-noise.md)
+      - [Grammars & Systems](software/procedural/generation-grammars.md)
+    - [Synthesis & Reference](software/procedural/synthesis.md)
   - **System Design Interview**
     - [Overview](software/system-design-interview/README.md)
     - [Summary](software/system-design-interview/summary.md)
