@@ -51,7 +51,7 @@ Accept any format. Extract to readable text under `tmp/<book-slug>/`.
 
 | Format | Method |
 |--------|--------|
-| `.epub` | `unzip -o <file> -d tmp/<book-slug>/` → HTML in `text/` |
+| `.epub` | `unzip -o <file> -d tmp/<book-slug>/` → HTML content files (location varies by publisher: `text/`, `OEBPS/`, `EPUB/`) |
 | `.pdf` | Install poppler (`brew install poppler`), `pdftotext <file> tmp/<book-slug>/book.txt`. For scanned/image-heavy PDFs where pdftotext produces garbage, fall back to `pdftoppm -png -r 200 <file> tmp/<book-slug>/pages/page` for PNG page images |
 | `.txt`/`.md` | Copy directly to `tmp/<book-slug>/` |
 
@@ -254,8 +254,10 @@ Written only after Phase 4 converges (all chapter summaries clean). Uses the aud
 - **Standard intro blockquote** immediately after H1, verbatim across every book:
 
   ```markdown
-  > **Read time: ~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
+  > **Read time: \~15–30 minutes.** This page is a single-sitting narrative summary of the book's key ideas. For a detailed chapter-by-chapter reference with the author's definitions and concrete examples, see the chapter entries in the sidebar.
   ```
+
+  The `\~` escape is deliberate — bare `~` violates `md-standards` and fails `scripts/check_tildes.py`.
 - `## Table of Contents` after the intro (follow `md-standards`)
 - H2–H4 numbered per `md-standards`
 - Organize by **theme/argument**, not by chapter order. The narrative should flow as an essay, weaving related chapters together under shared headings. Chapter numbers are an implementation detail of the source, not of the summary.
@@ -317,7 +319,7 @@ Because this is a single file, parallelization doesn't apply — one audit agent
 1. Mark all chapters `done` in progress tracker
 2. Verify `book_summary.md` is present and audited clean
 3. Verify sidebar renders correctly (`docsify serve docs`)
-4. Confirm collapsible sections work for new book's chapters and the Book Summary link appears last
+4. Confirm collapsible sections work for new book's chapters and the Book Summary link appears first (directly under the book-title link, per Phase 5.4; topical summaries last)
 5. Report completion to user
 
 ## Key files

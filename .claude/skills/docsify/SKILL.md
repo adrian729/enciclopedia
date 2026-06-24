@@ -1,6 +1,6 @@
 ---
 name: docsify
-description: Docsify conventions for this project. Use when editing docs/ files (index.html, _sidebar.md, _coverpage.md, _navbar.md) or adding new pages.
+description: Docsify conventions for this project. Use when editing docs/ files (index.html, _sidebar.md) or adding/linking pages.
 ---
 
 # Docsify
@@ -12,6 +12,7 @@ description: Docsify conventions for this project. Use when editing docs/ files 
 - Homepage: `docs/README.md`
 - Sidebar: `docs/_sidebar.md` (manual, `loadSidebar: true`)
 - `.nojekyll` required for GitHub Pages (files starting with `_`)
+- Live config: `loadSidebar: true`, `auto2top: true`, `subMaxLevel: 0`, `sidebarDisplayLevel: 1`, two custom inline plugins (`fixHeadingIds`, `katexMath`). No navbar, no coverpage.
 
 ## Routing
 
@@ -23,6 +24,13 @@ docs/guide.md        => /#/guide
 docs/sub/README.md   => /#/sub/
 docs/sub/page.md     => /#/sub/page
 ```
+
+## Links
+
+- Every `.md` link target is **root-relative to `docs/`**: `[text](software/procedural/foundations.md)`, `[text](cooking/recipes/banana-bread.md)` — even when the target is a sibling of the current page.
+- The project keeps Docsify's default `relativePath: false`, so targets resolve from the docs root regardless of which page contains the link. `./`, `../`, and bare sibling filenames inside subdirectories are defects.
+- Cross-page anchors use the docsify slug with the `_` digit-prefix stripped (see fixHeadingIds below): `page.md#11-my-title`.
+- Verify: `python3 scripts/check_docs.py <paths>` confirms every link target and anchor resolves.
 
 ## Sidebar (`_sidebar.md`)
 
@@ -48,13 +56,14 @@ docs/sub/page.md     => /#/sub/page
 
 1. Create `docs/page_name.md`.
 2. Add entry to `docs/_sidebar.md`.
-3. Link between pages with relative paths: `[text](other_page.md)`.
+3. Link between pages with paths root-relative to `docs/` (see Links above).
 
 ## Plugins
 
 - **search** — full-text search, loaded via `<script>` tag.
 - **docsify-sidebar-collapse** — collapses nested sidebar items by default. Controlled by `sidebarDisplayLevel`. External CSS + JS from CDN.
-- **fixHeadingIds** — custom inline plugin; strips the `_` prefix docsify adds to heading IDs starting with a digit, patches sidebar links to match. Needed because the project uses numbered headings with digit-prefixed IDs. See `md-standards` for heading ID convention.
+- **fixHeadingIds** — custom inline plugin; strips the `_` prefix docsify adds to heading IDs starting with a digit, patches sidebar links to match, and fixes click/load scrolling for digit-leading IDs (`querySelector('#1-xxx')` is invalid CSS). Needed because the project uses numbered headings with digit-prefixed IDs. See `md-standards` for heading ID convention.
+- **katexMath** — custom inline plugin; extracts `\( \)` (inline) and `\[ \]` (display) math from the RAW markdown in `beforeEach` — before marked can eat backslashes or mangle underscores — and injects `katex.renderToString` output in `afterEach`. KaTeX CSS + JS pinned at `0.16.11` from CDN. Consequences: math MUST use `\( \)` / `\[ \]`, never `$` (many docs lines use `$` as currency), and `\(`/`\[` must never appear inside code fences (extraction sees raw markdown, fences included). Verify with `node scripts/check_katex.mjs` — it renders every snippet with the index.html-pinned KaTeX version.
 
 ## Configuration (`window.$docsify`)
 
@@ -74,5 +83,5 @@ docs/sub/page.md     => /#/sub/page
 | `routerMode` | String | `hash` | `hash` or `history` |
 | `alias` | Object | - | Route aliases (regex supported) |
 | `notFoundPage` | Bool/String | `false` | Custom 404 page |
-| `sidebarDisplayLevel` | Number | `1` | Initial sidebar nesting depth (collapse plugin) |
+| `sidebarDisplayLevel` | Number | — | Initial sidebar nesting depth (collapse plugin option; this project sets `1`) |
 | `plugins` | Array | - | Inline plugin functions |

@@ -90,11 +90,11 @@ Applies to every slug (recipes, categories, traits, books):
 - Words separated by single `-`. No underscores, no spaces, no double dashes (`--` is reserved for the collision suffix).
 - Numbers as digits, not words: `30-min`, not `thirty-min`.
 - No trailing punctuation, no parentheses, no apostrophes (drop them: `devil's-food` → `devils-food`).
-- No leading numbers unless they are part of the dish identity (see "Recipe-name strip-list" below).
+- No leading numbers unless they are part of the dish identity (see `### Recipe-name strip-list`).
 
 ### Singular by default
 
-Category and trait slugs are singular forms unless the term is naturally plural in English. The lexicons below already encode the chosen form; agents do not re-decide. Plural exceptions present in the lexicons: `mixes`, `noodles` (collapsed into `pasta`), `greens`. Singular: `dessert`, `soup`, `main`, `salad`, `snack`.
+Category and trait slugs are singular forms unless the term is naturally plural in English. The lexicons below already encode the chosen form; agents do not re-decide. All current canonical slugs are singular (`dessert`, `soup`, `main`, `salad`, `snack`, `mix`, …); plural source terms (`mixes`, `noodles`, `sweets`, `mains`, `snacks`) appear only in alias lists and collapse to their singular canonical (`mix`, `pasta`, `dessert`, `main`, `snack`).
 
 ### Lexicon-first rule
 
@@ -216,7 +216,7 @@ The canonical tables in `docs/cooking/macronutrients/README.md`, `minerals/READM
 
 ### Ingredient-info append-only rule
 
-`docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells use display names from `## Nutrient lexicons` with per-100g amount estimates (see "Cell content rules" in `## Ingredient → nutrient mapping`); entries are sorted alphabetically inside each cell — never reorder them into "frequency" or "priority" order. Empty cells are a single em-dash (`—`, U+2014), never blank, never `none`, never `N/A`.
+`docs/cooking/ingredients-info.md` grows monotonically. Existing rows are never deleted by agents; they may be corrected only on explicit user instruction. New rows are inserted in alphabetical position. Cells use display names from `## Nutrient lexicons` with per-100g amount estimates (see the cell content rules in `## Ingredient → nutrient mapping`); entries are sorted alphabetically inside each cell — never reorder them into "frequency" or "priority" order. Empty cells are a single em-dash (`—`, U+2014), never blank, never `none`, never `N/A`.
 
 ### Formatting conventions
 
@@ -326,7 +326,7 @@ The four nutrient axes — macronutrients, minerals, vitamins, soft-essentials �
 | Category | Requirement | Function | Example Sources |
 ```
 
-No table uses a different column name (`Top Sources`, `Best Bioavailable Sources`, `Why You Can't Skip It`, `Main Focus`, `Mineral`, `Type`, etc.). Empty cells are a single em-dash (`—`, U+2014). Rows are alphabetized within each table per the alphabetical sort key.
+No table uses a different column name (`Top Sources`, `Best Bioavailable Sources`, `Why You Can't Skip It`, `Main Focus`, `Mineral`, `Type`, etc.). Empty cells are a single em-dash (`—`, U+2014). Rows are alphabetized within each table (see `### Alphabetical sort key`).
 
 **The `Example Sources` column is examples only, NOT an exhaustive list.** This is repeated in the column-name itself (`Example Sources`, not `Top Sources` or `Best Sources`) so the framing survives at every glance. An ingredient not appearing in any cell may still be a meaningful source of the nutrient. Use the column as orientation; derive each ingredient's actual nutrient profile from established nutritional knowledge.
 
@@ -623,7 +623,7 @@ To compute per-recipe nutrient totals, each `## Ingredients` row's quantity must
 - **All other current items** (every entry besides eggs and mushrooms — `1 medium onion`, `1 medium carrot`, `1 stalk celery`, `1 clove garlic`, `1 slice bread`, `1 cherry tomato`, etc.) have only one row in the table and therefore fall through to the **Single-variant items** rule below. There is no choice to make.
 - **Forward-compatibility:** if a future revision adds multiple non-egg, non-mushroom size rows for some item, those default to the `medium` entry. (No such item exists in the current table.)
 
-**Single-variant items.** When the table lists only one row for an item (whether tagged `medium` or untagged — e.g., `1 medium onion`, `1 stalk celery`, `1 clove garlic`, `1 slice bread`), the single listed weight applies **regardless of any size qualifier in the source**. The skill deliberately avoids size-scaling for single-row items because it would require per-ingredient density judgments that drift across runs. If a recipe truly hinges on a non-default size (`1 large butternut squash` ≈ 1500g vs. medium ≈ 1000g), the agent estimates from established culinary knowledge per the "ingredients/forms not in either table" rule below — but this is the exception, not the default behavior.
+**Single-variant items.** When the table lists only one row for an item (whether tagged `medium` or untagged — e.g., `1 medium onion`, `1 stalk celery`, `1 clove garlic`, `1 slice bread`), the single listed weight applies **regardless of any size qualifier in the source**. The skill deliberately avoids size-scaling for single-row items because it would require per-ingredient density judgments that drift across runs. If a recipe truly hinges on a non-default size (`1 large butternut squash` ≈ 1500g vs. medium ≈ 1000g), the agent estimates from established culinary knowledge (see the fallback rule for ingredients/forms not in either table, below) — but this is the exception, not the default behavior.
 
 For ingredients/forms not in either table (`1 medium butternut squash` ≈ 1000g, `1 small head of broccoli` ≈ 400g, `1 head of garlic` ≈ 50g), estimate from established culinary knowledge. For canned/jarred items: prefer the drained weight when "drained" is mentioned (typically ~60% of the can's gross weight); otherwise use the source's stated total weight.
 
@@ -634,7 +634,7 @@ Writing the four nutrient sections of any recipe page:
 1. For each `## Ingredients` row, compute canonical name + mass in grams (see `### Quantity → grams conversion`). Skip 0g entries.
 2. Look up the canonical name in `ingredients-info.md`. **Exact canonical match only — do not invent or fuzzy-match.** Sub-recipe rows match against the link text only, ignoring `[...](...)` syntax.
 3. **If found:** for each cell entry `<Display Name> (<X><unit>/100g)`, compute `contribution = X × mass_g / 100` and add to the recipe-level running total. Qualitative entries record presence only.
-4. **If not found:** determine the per-100g profile from established nutritional knowledge, append a new alphabetical row with the four cells filled per the Cell content rules above, then apply step 3.
+4. **If not found:** determine the per-100g profile from established nutritional knowledge, append a new alphabetical row with the four cells filled (see the cell content rules above), then apply step 3.
 5. After all ingredients: apply the recipe drop threshold to each quantitative sum and presence to qualitative entries (see `### Threshold model`). Convert surviving display names to slugs via the **Display name → slug mapping**. Write per `### Recipe-page rendering`; omit empty sections (see `### Section-omission rule`).
 
 **Dedup + sort:** within each section, each slug appears at most once; sort as in `### Recipe-page rendering`. Bullets link to the slug's canonical row file (e.g., `cooking/minerals/iron.md`).
@@ -692,7 +692,7 @@ Format rules:
 
 - Bullet shape: `- [<Bullet Link Text>](cooking/<group>/<slug>.md) — <amount><unit>`. Separator ` — `, no space between number and unit (see `### Formatting conventions`).
 - **Bullet link text is the humanized slug** (Title Case, hyphens → spaces, B-vitamins keep their digit; `omega-3` carve-out — `Omega-3`, hyphen-digit retained — see `### Formatting conventions`). For 26 of 27 v1 entries this equals the lexicon `Category` display name. The one exception is `Omega-3`: lexicon Category `Omega-3 (EPA/DHA)` and `ingredients-info.md` cells use the full form (`Omega-3 (EPA/DHA) (200mg/100g)`), but the recipe-page bullet drops the parenthetical so the link text matches the slug's H1: `- [Omega-3](cooking/soft-essentials/omega-3.md) — 200mg`.
-- Amount unit is the canonical unit (see `### Canonical units and inclusion thresholds per nutrient`; same as `ingredients-info.md`). Quick reference: `g` for macros and Dietary Fiber; `mg` or `µg` per the table; `mg` for Omega-3.
+- Amount unit is the canonical unit (see `### Canonical units and inclusion thresholds per nutrient`; same as `ingredients-info.md`). Quick reference: `g` for macros and Dietary Fiber; `mg` or `µg` as that table assigns; `mg` for Omega-3.
 - **Vitamin D is always reported in `µg`, never IU.** The IU form in the lexicon's Requirement column is informational only; recipe-page bullets AND `ingredients-info.md` cells use `µg`.
 - **Threshold drop FIRST, then rounding.** Drop any quantitative bullet whose **unrounded** recipe-level sum is below the per-nutrient **recipe drop threshold** (see `### Threshold model`). Apply rounding only to values that passed.
 - **Rounding** (apply by magnitude band of the *value*, regardless of unit; bands are half-open at the upper end so a value of exactly 10 falls into `[10, 100)`, not `[1, 10)`):
@@ -745,7 +745,7 @@ Back to [Cooking](cooking/README.md)
 
 - **30 columns, fixed order**: `Recipe | Categories | Traits | <macronutrients> | <minerals> | <vitamins> | <soft-essentials>`. Within each nutrient group the columns are alphabetical (B-vitamins by numeric value: `B1 … B12`). The 27 nutrient columns are the 27 v1 slugs from `## Nutrient lexicons`. The header label is the canonical lexicon display name **except** `Omega-3` (parenthetical dropped — matches the recipe-page bullet link text rule).
 - **Rows sorted alphabetically by recipe display name** using the standard sort key (case-insensitive, strip leading `the`/`a`/`an`, numeric tokens by value).
-- **`Recipe` cell**: `[<H1 title>](cooking/recipes/<slug>.md)` — absolute path per the link path convention.
+- **`Recipe` cell**: `[<H1 title>](cooking/recipes/<slug>.md)` — absolute path (see `### Link path convention`).
 - **`Categories` cell**: comma-separated category **slugs** (not display names), alphabetical, e.g. `breakfast, main`. `—` when empty (won't happen in practice — every recipe has ≥1 category, but the empty form is defined for completeness).
 - **`Traits` cell**: comma-separated trait **slugs**, alphabetical, e.g. `easy, fast, vegan`. `—` when the recipe has zero traits.
 - **Quantitative nutrient cells**: the **exact `<amount><unit>` printed in the recipe page bullet** (e.g. `158g`, `1.4µg`, `370µg`). No space between number and unit. No rounding here — the recipe page is the source of truth and this cell mirrors it byte-for-byte. `—` when the bullet is absent from that recipe (i.e. the nutrient was below its recipe drop threshold or the section was omitted).
@@ -962,7 +962,7 @@ Add the following block to `docs/_sidebar.md` under a top-level `**Cooking**` gr
     - [All Recipes](cooking/recipes/README.md)
     - [<Recipe Name>](cooking/recipes/<recipe-slug>.md)
     - [<Recipe Name>](cooking/recipes/<recipe-slug>.md)
-    - ... (every recipe, alphabetical by display name per the standard sort key)
+    - ... (every recipe, alphabetical by display name — see `### Alphabetical sort key`)
   - [Categories](cooking/categories/README.md)
   - [Traits](cooking/traits/README.md)
   - [Macronutrients](cooking/macronutrients/README.md)
@@ -981,7 +981,7 @@ The `**Recipes**` subgroup begins with `[All Recipes]` (the index) and then list
 
 A recipe's body (typically the `## Notes` section, occasionally a `## Preparation` step) may reference another recipe.
 
-- **In-corpus**: `[<Recipe Name>](cooking/recipes/<slug>.md)` — absolute path from the docs root, per the link path convention.
+- **In-corpus**: `[<Recipe Name>](cooking/recipes/<slug>.md)` — absolute path from the docs root (see `### Link path convention`).
 - **Out-of-corpus** (recipe not in any summarized book): leave as plain text and append `<!-- TODO: not in corpus -->`. Do not fabricate links.
 - Look up target slugs from the in-flight progress tracker or by listing `docs/cooking/recipes/`.
 
@@ -1039,7 +1039,7 @@ For each recipe:
 
 For each recipe, walk its `## Ingredients` and apply the **lookup-extend protocol** from `## Ingredient → nutrient mapping`. Specifically:
 
-1. For each ingredient, compute (a) the canonical name per the normalization rules and (b) the mass in grams via `### Quantity → grams conversion`. Skip 0g entries.
+1. For each ingredient, compute (a) the canonical name (see the normalization rules in `## Ingredient → nutrient mapping`) and (b) the mass in grams via `### Quantity → grams conversion`. Skip 0g entries.
 2. Look up the canonical name in `docs/cooking/ingredients-info.md`. If absent, append a new alphabetical row with the four nutrient cells filled from established nutritional knowledge.
 3. For each entry in the ingredient's four cells, multiply the per-100g amount by `mass_g / 100` and add to the recipe-level running total for that display name (per group). Qualitative entries (`Phytochemicals`, `Probiotics`) are recorded as presence with no amount.
 4. After all ingredients are processed: apply the recipe drop threshold to each quantitative sum and presence to qualitative entries (see `### Threshold model`). Convert surviving display names to slugs via the **Display name → slug mapping**. Alphabetize within each group (B-vitamins by numeric value).
@@ -1096,7 +1096,7 @@ Split the remaining recipes across agents (6–10 each). Each agent:
 1. Reads this skill.
 2. Reads the calibration recipe(s) as a style reference.
 3. Reads its assigned source files.
-4. For each assigned recipe, writes `docs/cooking/recipes/<slug>.md` per the template, using the slug / categories / traits already decided in Phase 2 (read from the progress tracker).
+4. For each assigned recipe, writes `docs/cooking/recipes/<slug>.md` matching the template (see `## Page templates`), using the slug / categories / traits already decided in Phase 2 (read from the progress tracker).
 5. Does NOT update the progress tracker, indexes, or category/trait/book pages.
 6. **Reports under 100 words**: a list of files written, one per line. No recap.
 
@@ -1165,7 +1165,7 @@ Every file under `recipes/`, `categories/`, `traits/`, and `books/` (excluding `
 for d in docs/cooking/recipes docs/cooking/categories docs/cooking/traits docs/cooking/books; do
   for f in $d/*.md; do
     [ "$(basename $f)" = "README.md" ] && continue
-    grep -q "$(basename $f)" $d/README.md || echo "MISSING in index: $f"
+    grep -qF "$(basename $f)" $d/README.md || echo "MISSING in index: $f"
   done
 done
 
@@ -1183,7 +1183,8 @@ Every Markdown link inside `docs/cooking/**` resolves to an existing file and is
 
 ```bash
 # Find any link that violates the absolute-from-docs-root rule
-rg -n '\]\((?:\.\./|\./|[a-z][^/)]*\.md\))' docs/cooking/ && echo "FOUND non-absolute link(s)"
+# (bare filename = any .md target with no '/', e.g. `salad.md`, `README.md`, `7-layer-dip.md`)
+rg -n '\]\((?:\.\./|\./|[^/)]+\.md[)#])' docs/cooking/ && echo "FOUND non-absolute link(s)"
 
 # Verify every link target resolves
 rg -o '\]\((cooking/[^)]+\.md)\)' docs/cooking/ -r '$1' --no-filename | sort -u | while read link; do
@@ -1283,7 +1284,7 @@ Named invariants (a failure will surface as a diff; stating them aids debugging)
 - **Qualitative nutrient cells**: `yes` ↔ recipe-page bullet present; `—` ↔ bullet absent. Anything else (`y`, `Y`, `✓`, `true`, blank) is a defect. 5.16 checks only the cell value form; bullet-format defects (malformed qualitative bullet with illegal suffix, slug-form display name) are caught by `### 5.13` / `### 5.14`. The script emits `[WARN]` to stderr for the structural subset it can detect (unparseable bullet, qualitative bullet with an amount, quantitative bullet missing its amount).
 - **Alphabetical row order** (see `### Alphabetical sort key`).
 
-**Auditors fix the recipe page, not cells in the README.** (Or the script's column list, on user-approved addition of a new v1 lexicon row.) Then rerun the script.
+**Auditors fix the recipe page, not cells in the README.** (Or the script's column list, on user-approved addition of a new v1 lexicon row — see the lexicon-expansion bullet in `## What is dropped` for the full file list.) Then rerun the script.
 
 ### Audit reports
 
@@ -1302,7 +1303,7 @@ Repeat audit rounds until every recipe reports clean on first iteration of a rou
 
 ## Phase 6: Finalize
 
-1. Update `docs/_sidebar.md` per the Sidebar shape section. If the `**Cooking**` block already exists: (a) insert each new recipe into the `**Recipes**` subgroup in alphabetical position (preserving the leading `[All Recipes]` entry), (b) ensure all four nutrient indexes and `[Ingredients Info]` are listed, and (c) add the new book to `**Books**` in alphabetical position.
+1. Update `docs/_sidebar.md` (see `## Sidebar shape`). If the `**Cooking**` block already exists: (a) insert each new recipe into the `**Recipes**` subgroup in alphabetical position (preserving the leading `[All Recipes]` entry), (b) ensure all four nutrient indexes and `[Ingredients Info]` are listed, and (c) add the new book to `**Books**` in alphabetical position.
 2. Mark every recipe `done` in the progress tracker.
 3. Run `docsify serve docs` and spot-check (a) the cooking landing page, (b) a recipe, (c) a category page, (d) a trait page, (e) a book page. Confirm sidebar collapsibles work.
 4. Report completion to the user, surfacing any decisions called out in Phase 2.8 (unmapped section names, dropped traits, slug collisions).
@@ -1330,4 +1331,4 @@ Repeat audit rounds until every recipe reports clean on first iteration of a rou
 - **Phase 5 "Narrative"** from `book-summary` does not apply. Cookbooks don't get a whole-book narrative summary.
 - **Per-book folders** under `docs/cooking/books/<book-slug>/<category>/<recipe>.md`. Recipes are global; books are flat reference pages.
 - **`md-standards` H2 numbering and TOC.** The cooking templates above are the authoritative shape.
-- **Lexicon expansion without explicit user approval.** The four nutrient lexicons (3 macronutrients, 7 minerals, 13 vitamins, 4 soft-essentials = 27 slugs) are **closed at v1**, mirroring the trait lexicon's closed status. The standard "lexicon-first rule" applies: agents do not invent rows, do not add columns, do not rename slugs, and do not silently fix table content. Unmapped concepts are surfaced to the user in the Phase 2.8 / Phase 6 completion report.
+- **Lexicon expansion without explicit user approval.** The four nutrient lexicons (3 macronutrients, 7 minerals, 13 vitamins, 4 soft-essentials = 27 slugs) are **closed at v1**, mirroring the trait lexicon's closed status. The standard "lexicon-first rule" applies: agents do not invent rows, do not add columns, do not rename slugs, and do not silently fix table content. Unmapped concepts are surfaced to the user in the Phase 2.8 / Phase 6 completion report. A user-approved addition MUST also update the hardcoded slug lists in `.claude/skills/cooking-book-summary/scripts/build_recipes_table.py` (`NUTRIENT_COLUMNS`) and `scripts/export_recipes_bincode.py` (`NUTRIENT_SLUGS`, which validates against the README header row), then regenerate `recipes/README.md`.
