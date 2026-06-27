@@ -1,0 +1,47 @@
+# Ch 33: Reverberation
+
+## Table of Contents
+
+- [1. Properties of Reverberation](#1-properties-of-reverberation)
+- [2. Schroeder Algorithmic Reverberation](#2-schroeder-algorithmic-reverberation)
+- [3. Convolving Reverberators](#3-convolving-reverberators)
+- [4. Physical Models and Feedback Delay Networks](#4-physical-models-and-feedback-delay-networks)
+- [5. Fictional Effects and De-reverberation](#5-fictional-effects-and-de-reverberation)
+
+## 1. Properties of Reverberation
+
+- **Reverberation** — a naturally occurring effect in which a sound is reinforced by thousands of closely spaced echoes bouncing off ceiling, walls, and floors; the ear distinguishes reflected from *direct* sound because reflections are delayed, lower in amplitude, and lowpass-filtered by air/surface absorption
+- **What determines it** — large rooms with reflective surfaces give long reverberation; smooth hard surfaces (glass, marble) reflect all frequencies while absorptive surfaces (curtains, carpet) soak up highs; non-parallel walls and irregularities (columns, statues) scatter wave fronts and raise echo density. Wallace Sabine pioneered the science (Boston Symphony Hall, 1900), deriving a formula from room volume, geometry, and surface reflectivity, and noted humidity darkens reverberation by absorbing highs
+- **Impulse response (IR)** — measured by triggering an *impulse* and plotting the room's amplitude over time; a natural IR builds quasi-exponentially to a peak within \~0.5 s then decays. Irregular spacing between peaks is desirable — regularly spaced peaks indicate annoying *ringing* (resonant frequencies)
+- **RT60** — *reverberation decay time*: the time for reverberation to fall 60 dB (1/1,000 of peak energy) from its peak; typical concert halls range 1.5–3 seconds
+- **Three parts of reverberation** — *direct (unreflected) sound* (arrives first), *discrete early reflections* (just after), and *late/fused reverberation* (thousands of closely spaced echoes that build up then fade exponentially). The *wet/dry* ratio balances effect vs direct sound; *predelay* is the delay before early reflections
+
+## 2. Schroeder Algorithmic Reverberation
+
+- **Schroeder's model** — Manfred Schroeder (Bell Labs, 1961–62) built the first computational *algorithmic reverberator*; it took over twelve hours to process ten seconds of sound. Freeverb is an open-source variant
+- **Echo density** — fused late reverberation needs high echo density; real halls have \~10,000 echoes/second while early digital reverberators managed as few as 30, though the ear tolerates fewer. Sparse early reflections are simulated with a *tapped delay line* sampled at multiple points
+- **Unit reverberators** — two building blocks: *recursive (IIR) comb filters* (delay \(D\) samples, multiply by gain \(g\), feed back; small \(D\) gives spectral peaks/dips, large \(D\) gives decaying echoes) and *allpass filters* (pass all steady-state frequencies but ring on transients with a period equal to the delay). Comb decay: \( decay\_time = (60 / -loopGain) \times loopDelay \)
+- **Reverberation patches** — *parallel* unit reverberators add their echoes; *series* connection multiplies echo density (four allpass stages of four echoes each → 1,024 echoes). Schroeder connected comb filters in parallel (minimizing spectral cancellation) and allpass filters in series. Delay-line lengths must be *mutually prime* and span orders of magnitude (e.g., 113, 337, 1051 samples); non-coprime lengths make echoes coincide periodically, producing audible "bumps"
+- **Extensions** — Schroeder's model is a *tapped recirculating delay* (TRD) model, efficient but generic. A 1970 multitap delay line added measured early reflections to graft a specific hall onto the global reverberator; *oscillatory allpass* filters model a slightly undulating "good-sounding" room; David Griesinger's famous Lexicon algorithms used low-frequency modulation of delay parameters at decorrelated rates plus *tank diffusers* that recirculate
+- **Multiple-stream reverberation** — a compromise between detailed and generic approaches: splits reverberation into *streams*, each a TRD network modeling a spatial region, then a *directionalizer* filters each stream to impose 3D positional cues (Kendall, Martens, Decker 1989)
+
+## 3. Convolving Reverberators
+
+- **Convolution reverb** — imprints the acoustic signature of a real or imaginary space onto any sound; usually starts from a sampled room IR (recorded via an impulse, noise burst, or swept sine), then convolves it with the signal — replacing every sample with a scaled, delayed copy of the IR. Raw output is 100% wet, so it is blended with the dry signal (wet at least 15 dB lower)
+- **Practice and products** — the first commercial real-time convolving reverberator was the $10,000 Sony DRE-S777 (1999); products compete on GUIs and libraries of proprietary IRs (halls, cathedrals, stadiums, plus vintage units like the EMT 140 plate). Direct convolution is costly, so *fast convolution* uses the FFT on successive sample blocks (Gardner 1995 mixes direct-form and block methods to manage latency); GPUs also accelerate it
+- **Velvet noise convolution** — an efficient artificial reverberation using *velvet noise* (sample values of only −1, 0, and 1; a randomly jittered impulse train of random sign; \~600–2000 pulses/second), which gives a smoother response than white noise. Its samples are *sparse FIR* coefficients: multiplications by zero are skipped and non-zero values are ±1, so it reduces to a multiplication-free sparse convolution (Karjalainen and Järveläinen 2007)
+- **Spatial convolution beyond reverberation** — the IRs of loudspeakers, megaphones, telephones, microphones, and any object with an acoustic response can be sampled and convolved, localizing sounds inside tin cans, cardboard boxes, or airplane cockpits
+
+## 4. Physical Models and Feedback Delay Networks
+
+- **Finite-difference time-domain (FDTD)** — the most accurate physical model, solving the wave equation on a 3D grid; extremely costly (a 0.6 cm-accurate small hall needs > three quadrillion ops/second), so recent work accelerates it on GPUs. Also applied to *virtual analog* (VA) models of spring and plate reverberators
+- **Geometric acoustics (GA)** — faster, less accurate ray-tracing; enables *auralization* (hearing a hall before it is built) and serves game/VR rendering. Each source is a vector; an algorithm traces hundreds of rays/beams/cones of reflections. Often used only for early *specular* reflections combined with an algorithmic tail; better models add diffuse scattering, diffraction, and material differences
+- **Waveguide models** — built from bidirectional delay lines where waves propagate and reflect; interconnecting them into a network models acoustic media. Different line lengths simulate different echo times, and energy scatters at junctions for a diffusion effect Schroeder TRD handles poorly. Efficient (\(N\) junctions need \(N\) multiplies, \(2N-1\) additions) and free of overflow/oscillation; the *Digital Waveguide Mesh* fills a space as a grid (its K-mesh form equals an FDTD model)
+- **Feedback delay networks (FDN)** — proposed by Jot and Chaigne (1991), giving independent control over energy, damping (decay time), and diffusion. A bank of parallel comb filters routes into a *feedback matrix* (equivalent to a waveguide network meeting at one scattering junction). The matrix should have no null coefficients, ideally all equal magnitude (*unitary matrices*); 8–16 delay units of 1–2 s ensure dense reverberation. A *tone corrector* \(E(z)\) equalizes energy across bands; a *lossless* infinite-decay FDN is a useful starting point. Alary et al. (2019) added directional properties for Ambisonic projection
+
+## 5. Fictional Effects and De-reverberation
+
+- **Fictional reverberation** — in the virtual world the morphology of space is fully malleable, so reverberation goes beyond realism; as Griesinger noted, he sought perceptually optimal patterns "whether a room could do that or not." Eventide's Blackhole creates "spaces that could never exist in reality"
+- **Specific fictional effects** — *gated reverberation* (explodes in density then cuts off suddenly); *sizzling* (highpass-filtered) and *muffled* (lowpass-filtered) reverberation; weird combinations like a tiny room with a long decay; *infinite reverberation*/*freeze* (grabs and sustains a reverberation tail); and pitch-shifted *chordal reverberation* (e.g., Valhalla Shimmer's granular pitch-shifted reverberation, Zynaptiq Adaptiverb's source-separated tonal tail). The Erbe-Verb module emphasizes real-time interactive parameter control
+- **Granular reverberation** — particle synthesis generates artificial IRs; convolving a sound with a cloud of grains (from *asynchronous granular synthesis*) produces a *time-splattered* effect, each grain contributing an irregularly spaced, locally time-smeared and filtered echo. The reverberation's color comes from the grains' duration, envelope, and waveform
+- **De-reverberation** — attempts to remove reverberation from a recording (prominent for teleconferencing), mainly for speech. Strategies: *beamforming* with microphone arrays, *speech enhancement* (LPC-based models), and *blind deconvolution* (statistically identifying the room IR to build an inverse filter). Zynaptiq's Unveil uses recurrent neural networks to separate reverberation from the direct signal
