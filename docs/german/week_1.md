@@ -14,8 +14,8 @@
   - [2.5. Adverbs of Place & Manner (10)](#25-adverbs-of-place-manner-10)
   - [2.6. Common Phrases & Particles (10)](#26-common-phrases-particles-10)
 - [3. Numbers & Calendar](#3-numbers-calendar)
-  - [3.1. Cardinal Numbers 0–100](#31-cardinal-numbers-0-100)
-  - [3.2. Cardinal Numbers 100–1,000,000](#32-cardinal-numbers-100-1000000)
+  - [3.1. Cardinal Numbers 0–100](#31-cardinal-numbers-0100)
+  - [3.2. Cardinal Numbers 100–1,000,000](#32-cardinal-numbers-1001000000)
   - [3.3. Ordinal Numbers](#33-ordinal-numbers)
   - [3.4. Days of the Week](#34-days-of-the-week)
   - [3.5. Months](#35-months)
@@ -36,7 +36,7 @@
   - [6.3. Recognizing Direct Objects: "wen?" / "was?"](#63-recognizing-direct-objects-wen-was)
 - [7. Word Order — The V2 Rule & Questions](#7-word-order-the-v2-rule-questions)
   - [7.1. Verb-Second in Main Clauses](#71-verb-second-in-main-clauses)
-  - [7.2. Subject-Verb Inversion When Position 1 ≠ Subject](#72-subject-verb-inversion-when-position-1-subject)
+  - [7.2. Subject-Verb Inversion When Position 1 ≠ Subject](#72-subject-verb-inversion-when-position-1-≠-subject)
   - [7.3. Yes/No Questions — V1](#73-yesno-questions-v1)
   - [7.4. W-Questions](#74-w-questions)
 - [8. Negation](#8-negation)
@@ -118,9 +118,9 @@ Compare: **Hunde** [ˈhʊndə] (voiced — d before vowel) vs. **Hund** [hʊnt] 
 
 ### 2.1. Nouns (40) — with Gender (der/die/das) & Plural
 
-Every German noun has a grammatical gender (masculine, feminine, or neuter) and must be learned with its article. Plural forms are shown in parentheses.
+Every German noun has a grammatical gender (masculine, feminine, or neuter) and must be learned with its article. Plural forms are shown in parentheses: a suffix like (-e) or (Äpfel) attaches to or replaces the stem; (—) means the plural is identical to the singular (e.g. das Fenster → die Fenster); (no pl.) means the noun is a mass/substance noun not normally pluralized at this level (e.g. die Milch).
 
-##### Family & People
+**Family & People**
 1. der Vater (Väter) — father
 2. die Mutter (Mütter) — mother
 3. der Bruder (Brüder) — brother
@@ -132,19 +132,19 @@ Every German noun has a grammatical gender (masculine, feminine, or neuter) and 
 9. die Freundin (-nen) — friend (female)
 10. das Baby (-s) — baby
 
-##### Food & Drink
+**Food & Drink**
 11. das Brot (-e) — bread
 12. die Milch (no pl.) — milk
-13. das Wasser (—) — water
+13. das Wasser (no pl.) — water
 14. der Kaffee (-s) — coffee
 15. der Tee (-s) — tea
 16. der Apfel (Äpfel) — apple
 17. das Ei (-er) — egg
 18. das Fleisch (no pl.) — meat
-19. der Käse (—) — cheese
+19. der Käse (no pl.) — cheese
 20. die Suppe (-n) — soup
 
-##### Home & Objects
+**Home & Objects**
 21. das Haus (Häuser) — house
 22. die Tür (-en) — door
 23. das Fenster (—) — window
@@ -156,7 +156,7 @@ Every German noun has a grammatical gender (masculine, feminine, or neuter) and 
 29. die Uhr (-en) — clock, watch
 30. der Schlüssel (—) — key
 
-##### Places & Nature
+**Places & Nature**
 31. die Schule (-n) — school
 32. die Stadt (Städte) — city
 33. der Park (-s) — park
@@ -172,7 +172,7 @@ Every German noun has a grammatical gender (masculine, feminine, or neuter) and 
 
 Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have) — the two most fundamental verbs — are covered with full conjugation charts in Sections 4.2–4.3. Irregular conjugation patterns for other verbs are covered in Section 4.5.
 
-##### Daily Routine
+**Daily Routine**
 1. aufstehen — to get up
 2. essen — to eat
 3. schlafen — to sleep
@@ -184,7 +184,7 @@ Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have
 9. kaufen — to buy
 10. brauchen — to need
 
-##### Communication
+**Communication**
 11. sprechen — to speak
 12. fragen — to ask
 13. antworten — to answer
@@ -196,7 +196,7 @@ Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have
 19. geben — to give
 20. helfen — to help
 
-##### Movement
+**Movement**
 21. gehen — to go, walk
 22. kommen — to come
 23. laufen — to run, walk
@@ -208,7 +208,7 @@ Verbs are listed in the infinitive form. **sein** (to be) and **haben** (to have
 29. liegen — to lie (position)
 30. nehmen — to take
 
-##### Cognitive
+**Cognitive**
 31. denken — to think
 32. wissen — to know (fact)
 33. glauben — to believe
@@ -224,7 +224,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 
 ### 2.3. Adjectives (35)
 
-##### Description (10)
+**Description (10)**
 1. groß — big, tall
 2. klein — small, little
 3. alt — old
@@ -236,7 +236,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 9. heiß — hot
 10. kalt — cold
 
-##### Emotion & State (10)
+**Emotion & State (10)**
 11. gut — good
 12. schlecht — bad
 13. müde — tired
@@ -248,7 +248,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 19. gesund — healthy
 20. glücklich — happy, lucky
 
-##### Size & Quantity (8)
+**Size & Quantity (8)**
 21. viel — much, a lot
 22. wenig — little, few
 23. mehr — more
@@ -258,7 +258,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 27. leer — empty
 28. voll — full
 
-##### Quality (7)
+**Quality (7)**
 29. schnell — fast
 30. langsam — slow
 31. schwer — heavy, difficult
@@ -321,7 +321,7 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 
 ### 3.1. Cardinal Numbers 0–100
 
-##### 0–12 (memorize individually)
+**0–12 (memorize individually)**
 
 | # | German | # | German | # | German |
 |---|--------|---|--------|---|--------|
@@ -331,15 +331,15 @@ Note: *aufstehen* (#1) is a **separable verb** — its prefix splits off in conj
 | 3 | drei | 8 | acht | | |
 | 4 | vier | 9 | neun | | |
 
-##### 13–19 (ones + zehn)
+**13–19 (ones + zehn)**
 
 dreizehn (13), vierzehn (14), fünfzehn (15), **sechzehn** (16, not ~~sechszehn~~), **siebzehn** (17, not ~~siebenzehn~~), achtzehn (18), neunzehn (19)
 
-##### Tens 20–100
+**Tens 20–100**
 
 zwanzig (20), **dreißig** (30, not ~~dreizig~~ — the only tens form with -ßig), vierzig (40), fünfzig (50), **sechzig** (60, not ~~sechszig~~), **siebzig** (70, not ~~siebenzig~~), achtzig (80), neunzig (90), (ein)hundert (100)
 
-##### 21–99 pattern: ones + und + tens
+**21–99 pattern: ones + und + tens**
 
 Read right to left: **einundzwanzig** (21, lit. "one-and-twenty"), zweiunddreißig (32), dreiundvierzig (43), vierundfünfzig (54), fünfundsechzig (65), sechsundsiebzig (76), siebenundachtzig (87), achtundneunzig (98).
 
@@ -814,7 +814,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 
 ### 10.8. Answer Key
 
-##### 10.2. Conjugation Drill
+**10.2. Conjugation Drill**
 
 1. Ich **bin** Student. (I am a student.)
 2. Du **hast** ein Buch. (You have a book.)
@@ -832,7 +832,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 14. Du **hilfst** gern. (You help gladly.)
 15. Ihr **habt** einen Hund. (You all have a dog.)
 
-##### 10.3. Case Identification
+**10.3. Case Identification**
 
 1. **Der** Mann (Nom) sieht **das** Kind (Acc). (The man sees the child.)
 2. **Die** Frau (Nom) kauft **einen** Apfel (Acc). (The woman buys an apple.)
@@ -847,7 +847,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 11. **Eine** Freundin (Nom) sieht **den** Baum (Acc). (A friend sees the tree.)
 12. **Die** Frau (Nom) nimmt **das** Brot (Acc). (The woman takes the bread.)
 
-##### 10.4. Word Order Drill
+**10.4. Word Order Drill**
 
 1. Das Kind spielt Fußball. (The child plays soccer.)
 2. Das Buch ist gut. (The book is good.)
@@ -858,7 +858,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 7. Jetzt bist du müde. (Now are you tired.)
 8. Oft spielt sie hier. (Often plays she here.)
 
-##### 10.5. Question Formation
+**10.5. Question Formation**
 
 **A. Yes/No Questions:**
 1. Spielt er Fußball? (Plays he soccer?)
@@ -874,7 +874,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 4. Warum lernt sie Deutsch? (Why learns she German?)
 5. Woher kommt er? (Where-from comes he?)
 
-##### 10.6. Negation Transformation
+**10.6. Negation Transformation**
 
 1. Ich habe **kein** Buch. (I have no book.) — *ein → kein*
 2. Er spielt **nicht** gut. (He plays not well.) — *adverb → nicht*
@@ -887,7 +887,7 @@ Translate each sentence into German using only Week 1 grammar and vocabulary.
 9. Sie hat **keinen** Freund. (She has no friend.) — *einen → keinen*
 10. Wir spielen heute **nicht**. (We play today not.) — *verb → nicht at end*
 
-##### 10.7. Translation Exercises
+**10.7. Translation Exercises**
 
 1. **Der Mann sieht das Kind.** (The man sees the child.)
 2. **Ich bin müde.** (I am tired.)

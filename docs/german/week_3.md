@@ -20,19 +20,22 @@
   - [3.2. jemand / niemand](#32-jemand-niemand)
   - [3.3. etwas / nichts](#33-etwas-nichts)
   - [3.4. alle, jeder, manche, einige](#34-alle-jeder-manche-einige)
-- [4. Full Adjective Declension — All Cases, All Types](#4-full-adjective-declension-all-cases-all-types)
+- [4. Adjective Declension — Nominative, Accusative & Dative, All Types](#4-adjective-declension-nominative-accusative-dative-all-types)
   - [4.1. Weak Endings After der-Words — Complete Table](#41-weak-endings-after-der-words-complete-table)
   - [4.2. Mixed Endings After ein-Words — Complete Table](#42-mixed-endings-after-ein-words-complete-table)
   - [4.3. Strong Endings Without Article — Complete Table](#43-strong-endings-without-article-complete-table)
   - [4.4. The Signal Concept Summarized](#44-the-signal-concept-summarized)
-  - [4.5. 12 Worked Examples](#45-12-worked-examples)
-- [5. Vocabulary Expansion (200 New Words → 500 Cumulative)](#5-vocabulary-expansion-200-new-words-500-cumulative)
+  - [4.5. 10 Worked Examples](#45-10-worked-examples)
+- [5. Vocabulary Expansion (200 New Words → 500 Cumulative)](#5-vocabulary-expansion-200-new-words-→-500-cumulative)
   - [5.1. Feelings & Emotions (25)](#51-feelings-emotions-25)
   - [5.2. Health & Body (25)](#52-health-body-25)
   - [5.3. Weather (20)](#53-weather-20)
   - [5.4. Hobbies & Free Time (25)](#54-hobbies-free-time-25)
   - [5.5. Travel & Directions (25)](#55-travel-directions-25)
-  - [5.6. Word Formation: Verb → Noun Patterns (10 Pairs)](#56-word-formation-verb-noun-patterns-10-pairs)
+  - [5.6. Word Formation: Verb → Noun Patterns (10 Pairs)](#56-word-formation-verb-→-noun-patterns-10-pairs)
+  - [5.7. Colors & Shapes (20)](#57-colors-shapes-20)
+  - [5.8. Food & Cooking Expansion (25)](#58-food-cooking-expansion-25)
+  - [5.9. Extended Family Vocabulary (25)](#59-extended-family-vocabulary-25)
 - [6. Applied Skills](#6-applied-skills)
   - [6.1. Reading: Short A2 Narrative](#61-reading-short-a2-narrative)
   - [6.2. Writing Prompt: "Mein letzter Urlaub"](#62-writing-prompt-mein-letzter-urlaub)
@@ -372,11 +375,12 @@ Declension example with **jeder** (like der-word):
 | Nom | jeder | jede | jedes |
 | Acc | jeden | jede | jedes |
 | Dat | jedem | jeder | jedem |
-| Gen | jedes | jeder | jedes |
 
-## 4. Full Adjective Declension — All Cases, All Types
+> **Genitive of jeder:** jedes (masc/neut), jeder (fem) — not shown above since the genitive case itself isn't introduced until Week 4.
 
-In Week 2, you learned weak and strong adjective endings for **nominative and accusative** only. Now we complete the system with all **four cases** (Nom, Acc, Dat, Gen) and all **three types** (weak, mixed, strong). We also introduce the **mixed** type (after ein-words) for the first time.
+## 4. Adjective Declension — Nominative, Accusative & Dative, All Types
+
+In Week 2, you learned weak and strong adjective endings for **nominative and accusative** only. Now we extend the system to **dative** as well (Nom, Acc, Dat) and all **three types** (weak, mixed, strong). We also introduce the **mixed** type (after ein-words) for the first time. The genitive case itself — and the genitive row of these same tables — isn't introduced until Week 4, once you've learned what the genitive case actually means.
 
 ### 4.1. Weak Endings After der-Words — Complete Table
 
@@ -387,15 +391,13 @@ Used after: **der, die, das, dieser, jeder, welcher, alle, manche**
 | Nom | -**e** | -**e** | -**e** | -**en** |
 | Acc | -**en** | -**e** | -**e** | -**en** |
 | Dat | -**en** | -**en** | -**en** | -**en** |
-| Gen | -**en** | -**en** | -**en** | -**en** |
 
-**Pattern:** Only **5 slots** get **-e** (Nom masc/fem/neut + Acc fem/neut). Everything else is **-en**.
+**Pattern:** Only **5 slots** get **-e** (Nom masc/fem/neut + Acc fem/neut). Everything else is **-en**. (A genitive row completes this table in Week 4.)
 
 Examples:
 - Nom: **der** alt**e** Mann, **die** klein**e** Frau, **das** groß**e** Kind, **die** neu**en** Bücher
 - Acc: **den** alt**en** Mann, **die** klein**e** Frau, **das** groß**e** Kind, **die** neu**en** Bücher
 - Dat: **dem** alt**en** Mann, **der** klein**en** Frau, **dem** groß**en** Kind, **den** neu**en** Bücher**n**
-- Gen: **des** alt**en** Mann**es**, **der** klein**en** Frau, **des** groß**en** Kind**es**, **der** neu**en** Bücher
 
 ### 4.2. Mixed Endings After ein-Words — Complete Table
 
@@ -406,9 +408,8 @@ Used after: **ein, kein, mein, dein, sein, ihr, unser, euer, Ihr**
 | Nom | -**er** | -**e** | -**es** | -**en** |
 | Acc | -**en** | -**e** | -**es** | -**en** |
 | Dat | -**en** | -**en** | -**en** | -**en** |
-| Gen | -**en** | -**en** | -**en** | -**en** |
 
-**Key difference from weak:** In **Nom masc** (-er), and **Nom/Acc neut** (-es), the adjective carries the **case signal** because **ein** has no ending in these slots (ein __ Mann, ein __ Kind). Everywhere else, the endings match weak.
+**Key difference from weak:** In **Nom masc** (-er), and **Nom/Acc neut** (-es), the adjective carries the **case signal** because **ein** has no ending in these slots (ein __ Mann, ein __ Kind). Everywhere else, the endings match weak. (A genitive row completes this table in Week 4.)
 
 > **ein** has no plural form, but **kein** and all possessives (mein, dein, sein...) do — their plural follows the same pattern.
 
@@ -416,7 +417,6 @@ Examples:
 - Nom: **ein** alt**er** Mann, **eine** klein**e** Frau, **ein** groß**es** Kind, **keine** neu**en** Bücher
 - Acc: **einen** alt**en** Mann, **eine** klein**e** Frau, **ein** groß**es** Kind, **keine** neu**en** Bücher
 - Dat: **einem** alt**en** Mann, **einer** klein**en** Frau, **einem** groß**en** Kind, **keinen** neu**en** Bücher**n**
-- Gen: **eines** alt**en** Mann**es**, **einer** klein**en** Frau, **eines** groß**en** Kind**es**, **keiner** neu**en** Bücher
 
 ### 4.3. Strong Endings Without Article — Complete Table
 
@@ -427,15 +427,13 @@ Used when there is **no article** before the adjective. The adjective itself mus
 | Nom | -**er** | -**e** | -**es** | -**e** |
 | Acc | -**en** | -**e** | -**es** | -**e** |
 | Dat | -**em** | -**er** | -**em** | -**en** |
-| Gen | -**en** | -**er** | -**en** | -**er** |
 
-> These endings are almost identical to the definite article endings (der/die/das/den/dem/des) — with the exception of **Gen masc** and **Gen neut**, which use **-en** instead of **-es**.
+> These endings are almost identical to the definite article endings (der/die/das/den/dem/des). (A genitive row — with its **-en** exception for masc/neut — completes this table in Week 4.)
 
 Examples:
 - Nom: alt**er** Wein, kalt**e** Milch, frisch**es** Brot, grün**e** Äpfel
 - Acc: alt**en** Wein, kalt**e** Milch, frisch**es** Brot, grün**e** Äpfel
 - Dat: mit alt**em** Wein, mit kalt**er** Milch, mit frisch**em** Brot, mit grün**en** Äpfeln
-- Gen: trotz alt**en** Weines, trotz kalt**er** Milch, trotz frisch**en** Brotes, trotz grün**er** Äpfel
 
 ### 4.4. The Signal Concept Summarized
 
@@ -455,9 +453,9 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 
 **Quick check:** Look at what comes before the adjective. If it already shows gender/case clearly → adjective relaxes to -e/-en. If not → adjective steps up with a strong ending.
 
-### 4.5. 12 Worked Examples
+### 4.5. 10 Worked Examples
 
-##### Weak (after der-words)
+**Weak (after der-words)**
 
 **Example 1:** "the old man" in nominative
 - der-word present (der) → **weak**
@@ -474,58 +472,48 @@ Every German noun phrase needs a **case signal** — a marker that shows the gen
 - Dat pl → ending: **-en**
 - Result: **den neuen Büchern**
 
-**Example 4:** "every young woman" in genitive
-- der-word present (jeder) → **weak**
-- Gen fem → ending: **-en**
-- Result: **jeder jungen Frau**
+**Mixed (after ein-words)**
 
-##### Mixed (after ein-words)
-
-**Example 5:** "a good man" in nominative
+**Example 4:** "a good man" in nominative
 - ein-word present (ein) → **mixed**
 - ein has no ending here (ein ___) → adjective carries signal
 - Nom masc signal → **-er**
 - Result: **ein guter Mann**
 
-**Example 6:** "my new car" in nominative
+**Example 5:** "my new car" in nominative
 - ein-word present (mein) → **mixed**
 - mein has no ending here (mein ___) → adjective carries signal
 - Nom neut signal → **-es**
 - Result: **mein neues Auto**
 
-**Example 7:** "a beautiful woman" in accusative
+**Example 6:** "a beautiful woman" in accusative
 - ein-word present (eine) → **mixed**
 - eine shows the signal (-e) → adjective relaxes
 - Acc fem → **-e**
 - Result: **eine schöne Frau**
 
-**Example 8:** "no cold drinks" in dative
+**Example 7:** "no cold drinks" in dative
 - ein-word present (keinen) → **mixed**
 - keinen shows the signal (-en) → adjective relaxes
 - Dat pl → **-en**
 - Result: **keinen kalten Getränken**
 
-##### Strong (no article)
+**Strong (no article)**
 
-**Example 9:** "fresh bread" in nominative
+**Example 8:** "fresh bread" in nominative
 - No article → **strong**
 - Nom neut signal → **-es**
 - Result: **frisches Brot**
 
-**Example 10:** "cold water" in accusative
+**Example 9:** "cold water" in accusative
 - No article → **strong**
 - Acc neut → **-es**
 - Result: **kaltes Wasser**
 
-**Example 11:** "with warm milk" in dative
+**Example 10:** "with warm milk" in dative
 - No article → **strong**
 - Dat fem → **-er**
 - Result: **mit warmer Milch**
-
-**Example 12:** "green apples" in genitive
-- No article → **strong**
-- Gen pl → **-er**
-- Result: **grüner Äpfel**
 
 ## 5. Vocabulary Expansion (200 New Words → 500 Cumulative)
 
@@ -700,6 +688,91 @@ German frequently creates nouns from verbs. Common patterns:
 
 > **Rule:** Nouns ending in **-ung** are always **feminine** (die).
 
+### 5.7. Colors & Shapes (20)
+
+| German | English | Example |
+|--------|---------|---------|
+| rot | red | Der Apfel ist rot. |
+| blau | blue | Der Himmel ist blau. |
+| grün | green | Das Gras ist grün. |
+| gelb | yellow | Die Banane ist gelb. |
+| schwarz | black | Die Katze ist schwarz. |
+| weiß | white | Der Schnee ist weiß. |
+| braun | brown | Das Brot ist braun. |
+| orange | orange | Die Orange ist orange. |
+| rosa | pink | Das Kleid ist rosa. |
+| lila | purple | Die Blume ist lila. |
+| grau | gray | Der Himmel ist grau. |
+| bunt | colorful | Das Bild ist bunt. |
+| die Farbe (-n) | color | Welche Farbe magst du? |
+| rund | round | Der Ball ist rund. |
+| eckig | angular, cornered | Der Tisch ist eckig. |
+| quadratisch | square (adj.) | Das Zimmer ist quadratisch. |
+| rechteckig | rectangular | Das Buch ist rechteckig. |
+| der Kreis (-e) | circle | Er zeichnet einen Kreis. |
+| das Quadrat (-e) | square (shape) | Das ist ein Quadrat. |
+| das Dreieck (-e) | triangle | Das Dreieck hat drei Seiten. |
+
+### 5.8. Food & Cooking Expansion (25)
+
+| German | English | Example |
+|--------|---------|---------|
+| das Gemüse (no pl.) | vegetable(s) | Ich esse gern Gemüse. |
+| das Obst (no pl.) | fruit | Das Obst ist frisch. |
+| die Kartoffel (-n) | potato | Ich koche Kartoffeln. |
+| die Tomate (-n) | tomato | Die Tomate ist rot. |
+| die Zwiebel (-n) | onion | Die Suppe hat Zwiebeln. |
+| die Karotte (-n) | carrot | Ich schneide eine Karotte. |
+| der Reis (no pl.) | rice | Wir essen Reis. |
+| die Nudel (-n) | noodle, pasta | Ich mag Nudeln. |
+| das Huhn (Hühner) | chicken | Das Huhn ist lecker. |
+| das Rindfleisch (no pl.) | beef | Ich esse kein Rindfleisch. |
+| der Zucker (no pl.) | sugar | Der Kaffee braucht Zucker. |
+| das Salz (no pl.) | salt | Die Suppe braucht Salz. |
+| der Pfeffer (no pl.) | pepper | Ich mag Pfeffer. |
+| das Öl (-e) | oil | Das Öl ist in der Pfanne. |
+| die Butter (no pl.) | butter | Ich brauche Butter. |
+| der Kuchen (-) | cake | Der Kuchen ist süß. |
+| die Schokolade (-n) | chocolate | Ich liebe Schokolade. |
+| schneiden | to cut | Ich schneide das Brot. |
+| braten | to fry, roast | Sie brät das Huhn. |
+| rühren | to stir | Er rührt die Suppe. |
+| probieren | to try, taste | Ich probiere die Suppe. |
+| lecker | delicious | Das Essen ist lecker. |
+| die Mahlzeit (-en) | meal | Die Mahlzeit war gut. |
+| der Geschmack (Geschmäcker) | taste, flavor | Der Geschmack ist stark. |
+| würzen | to season, spice | Ich würze die Suppe. |
+
+### 5.9. Extended Family Vocabulary (25)
+
+| German | English | Example |
+|--------|---------|---------|
+| die Großmutter (Großmütter) | grandmother | Meine Großmutter ist nett. |
+| der Großvater (Großväter) | grandfather | Mein Großvater ist alt. |
+| die Großeltern (pl.) | grandparents | Meine Großeltern wohnen hier. |
+| die Tante (-n) | aunt | Meine Tante kocht gut. |
+| der Onkel (-) | uncle | Mein Onkel arbeitet viel. |
+| die Cousine (-n) | cousin (female) | Meine Cousine ist lustig. |
+| der Cousin (-s) | cousin (male) | Mein Cousin spielt Fußball. |
+| die Eltern (pl.) | parents | Meine Eltern sind zu Hause. |
+| die Geschwister (pl.) | siblings | Ich habe zwei Geschwister. |
+| der Sohn (Söhne) | son | Ihr Sohn ist klein. |
+| die Tochter (Töchter) | daughter | Seine Tochter lernt Deutsch. |
+| der Ehemann (Ehemänner) | husband | Ihr Ehemann arbeitet viel. |
+| die Ehefrau (-en) | wife | Seine Ehefrau ist Ärztin. |
+| der Enkel (-) | grandson | Der Enkel besucht die Großeltern. |
+| die Enkelin (-nen) | granddaughter | Die Enkelin ist süß. |
+| der Neffe (-n) | nephew | Mein Neffe ist fünf Jahre alt. |
+| die Nichte (-n) | niece | Meine Nichte wohnt in Berlin. |
+| die Schwiegermutter (Schwiegermütter) | mother-in-law | Die Schwiegermutter kommt zu Besuch. |
+| der Schwiegervater (Schwiegerväter) | father-in-law | Der Schwiegervater ist freundlich. |
+| der Partner (-) | partner (male) | Mein Partner kocht gern. |
+| die Partnerin (-nen) | partner (female) | Meine Partnerin arbeitet viel. |
+| die Familie (-n) | family | Meine Familie ist groß. |
+| verwandt | related (family) | Wir sind verwandt. |
+| heiraten | to marry | Sie wollen heiraten. |
+| sich verloben | to get engaged | Sie haben sich verlobt. |
+
 ## 6. Applied Skills
 
 ### 6.1. Reading: Short A2 Narrative
@@ -811,7 +884,7 @@ Supply the correct adjective ending. The type and case are indicated.
 1. der alt___ Mann (Nom masc)
 2. die klein___ Frau (Acc fem)
 3. dem groß___ Kind (Dat neut)
-4. des neu___ Buches (Gen neut)
+4. den neu___ Tisch (Acc masc)
 5. den jung___ Männern (Dat pl)
 
 **Mixed (after ein-words):**
@@ -819,14 +892,14 @@ Supply the correct adjective ending. The type and case are indicated.
 7. eine schön___ Frau (Nom fem)
 8. mein neu___ Auto (Nom neut)
 9. einen alt___ Tisch (Acc masc)
-10. keiner jung___ Frau (Gen fem)
+10. meiner best___ Freundin (Dat fem)
 
 **Strong (no article):**
 11. kalt___ Kaffee (Nom masc)
 12. frisch___ Milch (Acc fem)
 13. mit warm___ Wasser (Dat neut)
 14. grün___ Äpfel (Nom pl)
-15. trotz schlecht___ Wetters (Gen neut)
+15. mit gut___ Wein (Dat masc)
 
 **Mixed contexts (figure out the type):**
 16. dieser groß___ Hund (Nom masc)
@@ -854,7 +927,7 @@ Translate into German using Week 3 grammar and vocabulary.
 
 ### 7.7. Answer Key
 
-##### 7.1. Präteritum Conjugation Drill
+**7.1. Präteritum Conjugation Drill**
 
 1. Ich **war** müde. (I was tired.)
 2. Er **hatte** ein Buch. (He had a book.)
@@ -872,7 +945,7 @@ Translate into German using Week 3 grammar and vocabulary.
 14. Sie **kamen** aus Berlin. (They came from Berlin.)
 15. Ich **sah** den Mann. (I saw the man.)
 
-##### 7.2. Perfekt vs. Präteritum Choice
+**7.2. Perfekt vs. Präteritum Choice**
 
 1. **Perfekt** (spoken): Ich **bin** ins Kino **gegangen**. (I went to the cinema.) — *Spoken German → Perfekt*
 2. **Präteritum** (fairy tale): Der König **lebte** in einem großen Schloss. (The king lived in a big castle.) — *Written narrative → Präteritum*
@@ -885,7 +958,7 @@ Translate into German using Week 3 grammar and vocabulary.
 9. **Präteritum** (modal in speech): Wir **mussten** warten. (We had to wait.) — *Modal always Präteritum*
 10. **Präteritum** (report): Er **fand** das Buch. (He found the book.) — *Written → Präteritum*
 
-##### 7.3. Reflexive Verb Translation
+**7.3. Reflexive Verb Translation**
 
 1. Ich wasche **mich** jeden Morgen. (I wash myself every morning.) — *Acc: no other object*
 2. Sie setzt **sich** auf den Stuhl. (She sits herself on the chair.) — *Acc*
@@ -898,7 +971,7 @@ Translate into German using Week 3 grammar and vocabulary.
 9. Er wünscht **sich** ein neues Auto. (He wishes to-himself a new car.) — *Dat: "ein neues Auto" is the Acc object*
 10. Wir machen **uns** Sorgen um die Kinder. (We make ourselves worries about the children.) — *Dat: "Sorgen" is the Acc object*
 
-##### 7.4. Indefinite Pronoun Gap-Fill
+**7.4. Indefinite Pronoun Gap-Fill**
 
 1. In Deutschland trinkt **man** viel Kaffee. (In Germany one drinks a-lot-of coffee.)
 2. **Jemand** hat an der Tür geklopft. (Someone has at the door knocked.)
@@ -909,13 +982,13 @@ Translate into German using Week 3 grammar and vocabulary.
 7. **Manche** Leute sprechen drei Sprachen. (Some people speak three languages.)
 8. Er hat **nichts** Interessantes gesagt. (He has nothing interesting said.)
 
-##### 7.5. Adjective Ending Gap-Fill
+**7.5. Adjective Ending Gap-Fill**
 
 **Weak:**
 1. der alt**e** Mann (weak Nom masc → -e)
 2. die klein**e** Frau (weak Acc fem → -e)
 3. dem groß**en** Kind (weak Dat neut → -en)
-4. des neu**en** Buches (weak Gen neut → -en)
+4. den neu**en** Tisch (weak Acc masc → -en)
 5. den jung**en** Männern (weak Dat pl → -en)
 
 **Mixed:**
@@ -923,14 +996,14 @@ Translate into German using Week 3 grammar and vocabulary.
 7. eine schön**e** Frau (mixed Nom fem → -e — eine shows signal)
 8. mein neu**es** Auto (mixed Nom neut → -es — mein has no ending, adjective carries signal)
 9. einen alt**en** Tisch (mixed Acc masc → -en — einen shows signal)
-10. keiner jung**en** Frau (mixed Gen fem → -en — keiner shows signal)
+10. meiner best**en** Freundin (mixed Dat fem → -en — meiner shows signal)
 
 **Strong:**
 11. kalt**er** Kaffee (strong Nom masc → -er)
 12. frisch**e** Milch (strong Acc fem → -e)
 13. mit warm**em** Wasser (strong Dat neut → -em)
 14. grün**e** Äpfel (strong Nom pl → -e)
-15. trotz schlecht**en** Wetters (strong Gen neut → -en)
+15. mit gut**em** Wein (strong Dat masc → -em)
 
 **Mixed contexts:**
 16. dieser groß**e** Hund (der-word → weak Nom masc → -e)
@@ -939,7 +1012,7 @@ Translate into German using Week 3 grammar and vocabulary.
 19. alt**es** Brot (no article → strong Nom neut → -es)
 20. welche neu**en** Schuhe (der-word → weak Acc pl → -en)
 
-##### 7.6. Mixed Translation
+**7.6. Mixed Translation**
 
 1. Ich **war** letztes Jahr in Hamburg. (I was last year in Hamburg.)
 2. Sie **hatte** gestern keine Zeit. (She had yesterday no time.)
@@ -954,7 +1027,7 @@ Translate into German using Week 3 grammar and vocabulary.
 11. Ich habe kalt**es** Wasser getrunken. (I have cold water drunk.) — *strong Acc neut: -es*
 12. **Alle** Studenten **waren** froh. (All students were happy.)
 
-##### 6.1. Reading Comprehension Answers
+**6.1. Reading Comprehension Answers**
 
 1. Lisa war in **Hamburg**.
 2. Sie sahen **den Hafen**. (They saw the harbor.)

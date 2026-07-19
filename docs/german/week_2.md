@@ -20,7 +20,7 @@
   - [4.1. Structure: haben/sein + Partizip II](#41-structure-habensein-partizip-ii)
   - [4.2. Partizip II of Weak (Regular) Verbs](#42-partizip-ii-of-weak-regular-verbs)
   - [4.3. Partizip II of Strong (Irregular) Verbs](#43-partizip-ii-of-strong-irregular-verbs)
-  - [4.4. Verbs Without ge-](#44-verbs-without-ge)
+  - [4.4. Verbs Without ge-](#44-verbs-without-ge-)
   - [4.5. haben vs. sein as Auxiliary](#45-haben-vs-sein-as-auxiliary)
   - [4.6. 30 Essential Strong Verb Participles](#46-30-essential-strong-verb-participles)
 - [5. Prepositions](#5-prepositions)
@@ -43,7 +43,7 @@
   - [8.2. Subordinating Conjunctions](#82-subordinating-conjunctions)
   - [8.3. Main Clause After Subordinate Clause](#83-main-clause-after-subordinate-clause)
   - [8.4. man as Impersonal Subject](#84-man-as-impersonal-subject)
-- [9. Vocabulary Expansion (150 New Words → 300 Cumulative)](#9-vocabulary-expansion-150-new-words-300-cumulative)
+- [9. Vocabulary Expansion (150 New Words → 300 Cumulative)](#9-vocabulary-expansion-150-new-words-→-300-cumulative)
   - [9.1. Daily Routines (20)](#91-daily-routines-20)
   - [9.2. School & Work (20)](#92-school-work-20)
   - [9.3. Transport & City (20)](#93-transport-city-20)
@@ -51,6 +51,8 @@
   - [9.5. Time Expressions (15)](#95-time-expressions-15)
   - [9.6. Collocations & Fixed Expressions (10)](#96-collocations-fixed-expressions-10)
   - [9.7. Word Formation: Compound Nouns](#97-word-formation-compound-nouns)
+  - [9.8. Numbers, Quantities & Measurements (20)](#98-numbers-quantities-measurements-20)
+  - [9.9. Home & Furniture Expansion (20)](#99-home-furniture-expansion-20)
 - [10. Practice Exercises](#10-practice-exercises)
   - [10.1. Dative Case Drill](#101-dative-case-drill)
   - [10.2. Der-Word & Possessive Drill](#102-der-word-possessive-drill)
@@ -177,7 +179,7 @@ The pattern is identical for *jeder* and *welcher*.
 
 ### 2.4. Examples Using Possessives & Der-Words in All Three Cases
 
-##### Possessive articles
+**Possessive articles**
 
 | Case | Example |
 |------|---------|
@@ -188,7 +190,7 @@ The pattern is identical for *jeder* and *welcher*.
 | Dat | Ich helfe **meinem** Freund. (I help my friend.) |
 | Dat | Er gibt **seiner** Schwester das Buch. (He gives his sister the book.) |
 
-##### Der-words
+**Der-words**
 
 | Case | Example |
 |------|---------|
@@ -321,7 +323,7 @@ These must be memorized. 20 high-frequency examples:
 
 Two groups of verbs form the Partizip II **without** the ge- prefix:
 
-##### Verbs ending in -ieren (always weak: stem + -t)
+**Verbs ending in -ieren (always weak: stem + -t)**
 
 | Infinitiv | Partizip II |
 |-----------|-------------|
@@ -330,7 +332,7 @@ Two groups of verbs form the Partizip II **without** the ge- prefix:
 | fotografieren | fotografiert |
 | reparieren | repariert |
 
-##### Inseparable prefix verbs (be-, emp-, ent-, er-, ge-, miss-, ver-, zer-)
+**Inseparable prefix verbs (be-, emp-, ent-, er-, ge-, miss-, ver-, zer-)**
 
 | Infinitiv | Partizip II |
 |-----------|-------------|
@@ -384,6 +386,8 @@ Quick test: Does the verb describe moving from A to B, or changing from state A 
 | 28 | werden | geworden | sein | to become |
 | 29 | bleiben | geblieben | sein | to stay |
 | 30 | sein | gewesen | sein | to be |
+
+> **Note on #15–16:** *denken* (gedacht) and *wissen* (gewusst) are technically **mixed verbs** (gemischte Verben) — they change their stem vowel like strong verbs but still take the weak **-t** ending, not **-en**. They're included here for frequency, not because they follow the -en pattern taught in §4.3.
 
 ## 5. Prepositions
 
@@ -529,7 +533,7 @@ A third pattern (**mixed endings**, after ein/kein/mein/dein) exists and is cove
 
 ### 7.4. 10 Example Noun Phrases
 
-##### With der-word (weak endings)
+**With der-word (weak endings)**
 
 | # | Phrase | Case/Gender | Ending |
 |---|--------|-------------|--------|
@@ -539,7 +543,7 @@ A third pattern (**mixed endings**, after ein/kein/mein/dein) exists and is cove
 | 4 | den alt**en** Tisch | Acc masc | -en |
 | 5 | die gut**en** Bücher | Nom/Acc pl | -en |
 
-##### Without article (strong endings)
+**Without article (strong endings)**
 
 | # | Phrase | Case/Gender | Ending |
 |---|--------|-------------|--------|
@@ -747,6 +751,52 @@ German builds nouns by joining two or more words. The **last noun determines the
 
 Note: Some compounds insert a linking letter (Fugenzeichen): Woche**n**ende, Straße**n**bahn, Geburt**s**tag. There are no strict rules — learn each compound as vocabulary.
 
+### 9.8. Numbers, Quantities & Measurements (20)
+
+1. das Kilo (-) — kilogram
+2. das Gramm (-) — gram
+3. der Liter (-) — liter
+4. die Menge (-n) — amount, quantity
+5. ein paar — a few, a couple
+6. mehrere — several
+7. die Hälfte (-n) — half
+8. das Viertel (-) — quarter
+9. das Dutzend (-e) — dozen
+10. ungefähr — approximately
+11. genau — exactly
+12. mindestens — at least
+13. höchstens — at most
+14. das Stück (-e) — piece
+15. die Packung (-en) — pack, package
+16. die Flasche (-n) — bottle
+17. die Dose (-n) — can, tin
+18. die Tüte (-n) — bag
+19. das Gewicht (-e) — weight
+20. die Größe (-n) — size
+
+### 9.9. Home & Furniture Expansion (20)
+
+1. der Schrank (Schränke) — cupboard, wardrobe
+2. das Sofa (-s) — sofa
+3. der Teppich (-e) — carpet, rug
+4. die Wand (Wände) — wall
+5. die Decke (-n) — ceiling, blanket
+6. der Boden (Böden) — floor
+7. der Balkon (-e) — balcony
+8. der Garten (Gärten) — garden
+9. die Treppe (-n) — stairs
+10. das Regal (-e) — shelf
+11. der Spiegel (-) — mirror
+12. die Heizung (-en) — heating
+13. der Herd (-e) — stove
+14. der Kühlschrank (Kühlschränke) — refrigerator
+15. die Waschmaschine (-n) — washing machine
+16. der Fernseher (-) — television
+17. die Steckdose (-n) — electrical outlet
+18. das Licht (-er) — light
+19. der Keller (-) — basement, cellar
+20. das Dach (Dächer) — roof
+
 ## 10. Practice Exercises
 
 ### 10.1. Dative Case Drill
@@ -872,7 +922,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 
 ### 10.9. Answer Key
 
-##### 10.1. Dative Case Drill
+**10.1. Dative Case Drill**
 
 1. Ich gebe **dem** Mann das Buch. (I give the man the book.)
 2. Sie zeigt **der** Frau den Weg. (She shows the woman the way.)
@@ -885,7 +935,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 9. Er empfiehlt **seinem** Bruder einen Film. (He recommends his brother a film.)
 10. Ich gebe **den** Kinder**n** Milch. (I give the children milk.)
 
-##### 10.2. Der-Word & Possessive Drill
+**10.2. Der-Word & Possessive Drill**
 
 1. **Dieses** Buch ist gut. (This book is good.)
 2. **Meine** Mutter kocht gut. (My mother cooks well.)
@@ -896,7 +946,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 7. Mit **welchem** Bus fährst du? (With which bus do you travel?)
 8. **Diese** Frau ist meine Lehrerin. (This woman is my teacher.)
 
-##### 10.3. Modal Verb Translation
+**10.3. Modal Verb Translation**
 
 1. **Ich kann schwimmen.** (I can swim.)
 2. **Sie will Deutsch lernen.** (She wants German to-learn.)
@@ -909,7 +959,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 9. **Du darfst hier nicht rauchen.** (You may here not smoke.)
 10. **Sie muss in die Schule gehen.** (She must into the school go.)
 
-##### 10.4. Perfekt Transformation
+**10.4. Perfekt Transformation**
 
 1. Ich **habe** Fußball **gespielt**. (I played soccer.)
 2. Er **hat** die Hausaufgabe **gemacht**. (He did the homework.)
@@ -924,7 +974,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 11. Wir **sind** nach Berlin **gefahren**. (We drove to Berlin.) — *sein: movement*
 12. Das Kind **hat** **geschlafen**. (The child slept.) — *haben: no movement*
 
-##### 10.5. Preposition Gap-Fill
+**10.5. Preposition Gap-Fill**
 
 1. Ich gehe **durch** den Park. (I walk through the park.)
 2. Das Geschenk ist **für** dich. (The gift is for you.)
@@ -939,7 +989,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 11. Das Bild hängt **an** der Wand. (The picture hangs on the wall.) — *Wo? → Dativ*
 12. Ich hänge das Bild **an** die Wand. (I hang the picture on the wall.) — *Wohin? → Akkusativ*
 
-##### 10.6. Time Telling
+**10.6. Time Telling**
 
 1. 08:00 → Formal: Es ist acht Uhr. / Informal: Es ist acht.
 2. 14:30 → Formal: Es ist vierzehn Uhr dreißig. / Informal: Es ist halb drei.
@@ -948,7 +998,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 5. 09:05 → Formal: Es ist neun Uhr fünf. / Informal: Es ist fünf nach neun.
 6. 23:50 → Formal: Es ist dreiundzwanzig Uhr fünfzig. / Informal: Es ist zehn vor zwölf.
 
-##### 10.7. Adjective Ending Drill
+**10.7. Adjective Ending Drill**
 
 1. der groß**e** Mann (weak Nom masc → -e)
 2. die klein**e** Frau (weak Nom fem → -e)
@@ -961,7 +1011,7 @@ Join the two sentences using the conjunction in parentheses. Apply the correct w
 9. kalt**en** Kaffee (strong Acc masc → -en)
 10. alt**e** Häuser (strong Nom pl → -e)
 
-##### 10.8. Clause Linking
+**10.8. Clause Linking**
 
 1. Ich gehe schlafen, **weil** ich müde **bin**. (I go to sleep because I am tired.) — *verb to end*
 2. Er lernt Deutsch, **denn** er will in Berlin arbeiten. (He learns German because he wants to work in Berlin.) — *no change (coordinating)*
