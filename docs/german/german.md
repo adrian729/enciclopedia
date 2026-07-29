@@ -86,6 +86,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Express possession with the genitive case (including proper names), master genitive prepositions, complete the adjective declension system with genitive endings (extending Week 3's weak/mixed/strong tables), form comparisons with comparative and superlative adjectives (regular and irregular), and correctly decline weak masculine nouns (N-Deklination).
 
+**Generated lesson:** [Week 4](german/week_4.md)
+
 **The Prompt:**
 
 > Act as a German grammar specialist. Generate a comprehensive Week 4 lesson covering:

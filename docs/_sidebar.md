@@ -573,6 +573,7 @@
     - [Week 1](german/week_1.md)
     - [Week 2](german/week_2.md)
     - [Week 3](german/week_3.md)
+    - [Week 4](german/week_4.md)
 
 - **Life**
   - **Learning**
