@@ -574,6 +574,14 @@
     - [Week 2](german/week_2.md)
     - [Week 3](german/week_3.md)
     - [Week 4](german/week_4.md)
+    - [Week 5](german/week_5.md)
+    - [Week 6](german/week_6.md)
+    - [Week 7](german/week_7.md)
+    - [Week 8](german/week_8.md)
+    - [Week 9](german/week_9.md)
+    - [Week 10](german/week_10.md)
+    - [Week 11](german/week_11.md)
+    - [Week 12](german/week_12.md)
 
 - **Life**
   - **Learning**

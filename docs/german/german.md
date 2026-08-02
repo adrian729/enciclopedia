@@ -104,6 +104,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Handle separable and inseparable prefix verbs across all learned tenses, form commands with the imperative, construct indirect questions with ob and W-words, use expanded subordinating conjunctions, and apply coordinating adverbs with inversion.
 
+**Generated lesson:** [Week 5](german/week_5.md)
+
 **The Prompt:**
 
 > Act as a German grammar tutor. Generate a comprehensive Week 5 lesson covering:
@@ -122,6 +124,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Express future intentions with Futur I, distinguish werden's three functions (become/future/passive), build infinitive constructions with zu, and add descriptive detail to nouns using relative clauses with pronouns in all four cases.
 
+**Generated lesson:** [Week 6](german/week_6.md)
+
 **The Prompt:**
 
 > Act as a German B1 grammar instructor. Generate a comprehensive Week 6 lesson covering:
@@ -139,6 +143,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Narrate sequenced past events with Plusquamperfekt, express hypothetical/polite statements with Konjunktiv II (würde-form, wäre/hätte, modal synthetics), form basic process passive constructions, and use impersonal passive.
 
+**Generated lesson:** [Week 7](german/week_7.md)
+
 **The Prompt:**
 
 > Act as a German B1 grammar tutor. Generate a comprehensive Week 7 lesson covering:
@@ -154,6 +160,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 ## 8. Week 8: Double Infinitive, Verb/Adjective-Preposition Combos, Adverbial Clauses & Two-Part Conjunctions (B1)
 
 **Goal:** Master the double infinitive construction with modals in Perfekt, use verbs and adjectives with fixed prepositions and their da-/wo-compound replacements, form adverbial clauses with indem, and link ideas with two-part conjunctions.
+
+**Generated lesson:** [Week 8](german/week_8.md)
 
 **The Prompt:**
 
@@ -173,6 +181,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Report what others have said using basic Konjunktiv I, express completed future actions with Futur II, understand verb valency patterns, develop paragraph-level writing with discourse connectors, and review the complete six-tense system.
 
+**Generated lesson:** [Week 9](german/week_9.md)
+
 **The Prompt:**
 
 > Act as a German B1 grammar tutor. Generate a comprehensive Week 9 lesson covering:
@@ -190,6 +200,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 ## 10. Week 10: Zustandspassiv, Passive Alternatives, Participial Constructions & Konjunktiv II Past (B2)
 
 **Goal:** Distinguish process vs. state passive, form passive with modals and use passive alternatives (man, sich lassen, sein + zu), create participial adjectives and extended participial phrases, and express past counterfactuals with Konjunktiv II.
+
+**Generated lesson:** [Week 10](german/week_10.md)
 
 **The Prompt:**
 
@@ -209,6 +221,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 
 **Goal:** Master the complete Konjunktiv I paradigm for extended indirect speech (Präsens, Perfekt, Futur), review N-declension comprehensively, and convert between verbal and nominal style for formal/academic register.
 
+**Generated lesson:** [Week 11](german/week_11.md)
+
 **The Prompt:**
 
 > Act as a German B2 grammar specialist. Generate a comprehensive Week 11 lesson covering:
@@ -224,6 +238,8 @@ This is an intensive 12-week roadmap designed to take a learner from absolute ze
 ## 12. Week 12: Advanced Structures & Full System Integration (B2)
 
 **Goal:** Handle all remaining advanced structures — nested clauses, als ob, brauchen + zu, lassen + Infinitiv, subjective modals — and demonstrate full A1–B2 command through integrated production exercises (essay, formal letter, argumentation, reading comprehension).
+
+**Generated lesson:** [Week 12](german/week_12.md)
 
 **The Prompt:**
 
